@@ -1,0 +1,845 @@
+
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+	-->
+	</style>
+
+<h1>Introduction</h1>
+<p>About the class.</p>
+<h2 class="western">Copyright</h2>
+<p>Original Text in this document is Copyrighted 2010 by Thomas Kent.
+ Significant portions of this document were created by other people
+and used under various Creative Commons and Open Source licenses. 
+See the references section at the end for attribution.</p>
+<p>This document is freely available under a Creative Commons
+Attribution-ShareAlike 3.0 license.</p><p style="text-align: center;"><a href="cc-by-sa.svg"><img src="cc-by-sa.png" alt="cc-by-sa.png"></a></p>
+
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p align="center"><a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a></p>
+<h2 class="western">About this Material</h2>
+<p>This material was originally developed for the Instituto San Jose
+in Montero, Bolivia for a course covering an introduction to
+multimedia design.  The original course was in Spanish, but as the
+teacher was a native English speaker, the materials were first
+prepared in English, then translated to Spanish.  
+</p>
+<h2 class="western">Free Software</h2>
+<p>Why free software is important.  
+</p>
+<p>Tools we'll be using</p><p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p>Other interesting tools</p>
+<p><br><br>
+</p>
+<p>References for Spanish Doc</p>
+<p><a href="http://es.wikipedia.org/wiki/Archivo:Mapa_conceptual_del_software_libre.svg">http://es.wikipedia.org/wiki/Archivo:Mapa_conceptual_del_software_libre.svg</a></p>
+<p><a href="http://es.wikipedia.org/wiki/Software_libre">http://es.wikipedia.org/wiki/Software_libre</a>
+</p>
+<p><a href="http://es.wikipedia.org/wiki/Codigo_abierto">http://es.wikipedia.org/wiki/Codigo_abierto</a>
+</p>
+</p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu Sans"; font-size: 16pt }
+	-->
+	</style>
+
+<h2 class="western"></h2>
+<h2 class="western">English and Spanish Usage (only in Spanish
+document)</h2>
+<p>Because all of the tools we will be using in this course are
+written and primarily used by English speaking people, many important
+resources in print and on the Internet are only available in English.
+ For this reason, we will make a concerted effort to teach the
+english vocabulary for these tools along side the spanish as we go
+through the course.   
+</p>
+<h1 class="western">Unit One  Photos</h1>
+<p style="margin-bottom: 0in;">Tools: Gimp, Photoshop, Picasa</p>
+<p style="margin-bottom: 0in;">Goals: Cropping/Re-sizing, Red-Eye
+removal, Layers, Image Contrast, Skin Corrections</p>
+<p style="margin-bottom: 0in;">Time: 15hrs</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;">For this unit we will learn some basics
+about digital images and photos, then some simple photo editing in
+the GNU Image Manipulation Program (Gimp), finally we will explore
+Photoshop to see how to do the same things, where available.  
+</p>
+<h2 class="western">Photos</h2>
+<p>Photo files are stored in what is called a raster format. 
+This means that the image is composed of a grid of points (in rows
+and columns).  These points are called pixels, and they contain the
+color for that point.  The number of rows and columns that make up
+the grid are called the dimensions.  A picture that has 33 Columns
+(width) and 22 Rows (height) has dimensions of 33x22, and has a total
+of 726 pixels.  In general the dimensions of digital images are
+always written in the form of width x height.</p>
+<img src="RasterGraphics/SmileDimensions.png" alt="SmileDimensions.png"><br>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</style>
+
+<p>Modern digital cameras have much, much higher dimensions.  They
+are often referred based on how many <b>millions</b><span style="font-weight: normal;">
+of pixels or megapixels they have.  Some examples are:</span></p>
+<p style="font-weight: normal;">640x480 = 307200 pixels = 0.3
+megapixels<br>1024x768 = 786432 pixels = 0.8 megapixels<br>1280x960 =
+1228800 pixels = 1.2 megapixels <br>1600x1200 = 1920000 pixels = 1.9
+megapixels<br>2842x2136 = 6070512 pixels = 6 megapixels<br>4000x3000
+= 12000000 pixels = 12 megapixels</p>
+<p style="font-weight: normal;">Looking at all these, they have
+something in common, if the first number is divided by the second
+number, they all approximately equal 1.33.  The lowest ratio that
+equals 1.33 is 4/3, so this format of images is said to have a 4:3
+ratio.  
+</p>
+<img src="RasterGraphics/FourThirdsFormula.png" alt="FourThirdsFormula.png"><br>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p style="font-weight: normal;">This is usually the standard for
+photography, other resolutions will be looked at more in the video
+unit.  
+</p>
+<p><a href="http://en.wikipedia.org/wiki/2D_computer_graphics">http://en.wikipedia.org/wiki/2D_computer_graphics</a></p>
+<p>The reason that cameras have grown the number of megapixels they
+use, is because that (with everything else being equal) larger
+dimensions make the image look better, especially when you print it
+out.  A good printer can print photographs at 4800 dots per inch or
+dpi. In this case inches (1in = 2.45cm) and dots (equal
+to a pixel) are used because of their history in the printing
+industry.  
+</p>
+<p>This means that a 12 megapixel image (4000x3000) could be printed
+out to a 2.1x1.6cm image and every pixel would be visible.  
+</p>
+<img src="RasterGraphics/WidthDPIFormula.png" alt="WidthDPIFormula.png"><img src="RasterGraphics/HeightDPIFormula.png" alt="HeightDPIFormula.png"><br>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</style>
+
+<p>However, if it were printed to a 4.2x3.2cm image, then every pixel
+would be represented by four dots on the paper.  If the sizes were
+doubled again to 8.4x6.4cm then every pixel would be represented by
+16 dots on the paper.  This starts to become a problem when you have
+an image without that many pixels in it and want to print (or display
+it on a screen) as a large image.  At some point, the individual
+pixels become easily visible on the printed image, and that can give
+it a very blocky and unnatural feeling.  
+</p>
+<p>The pictures below are both the same piece of an large image taken
+of a tortoise.  The photo on the top is from the full size 12
+megapixel (4000x3000) image.  The photo on the bottom was taken at a
+much lower dimension of 640x480.  Notice how the pixels of the image
+are clearly visible in the lower image and it doesn't look clear.</p>
+<div style="text-align: center;"><img src="RasterGraphics/LargeTortoise-cropped.jpg" alt="LargeTortoise-cropped.jpg"><br><br><img src="RasterGraphics/LargeTortoise-small-cropped.jpg" alt="LargeTortoise-small-cropped.jpg"><br><div style="text-align: left;">
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H3 { margin-bottom: 0.08in }
+		H3.western { font-family: "Arial", sans-serif }
+	-->
+	</style>
+
+<p>As a rule of thumb, it is important to keep the best possible
+image (most pixels), at least while working with it to edit.  The
+section on cropping and re-sizing will cover more of the trade-offs
+that can be made when getting a picture ready to print or put on the
+Internet. 
+</p>
+<h3 class="western">Channels</h3>
+<p>In a photograph, one pixel can represent many different colors. 
+To express this in a computer, pixels are represented with different 
+channels for the different colors.  A typical image will have
+three channels: Red, Green, and Blue, for images without color, they
+will have a single channel (different shades of grey).  Each channel
+states how strong that color is, for example a pixel that has very
+strong red channel and very weak green and blue channels would show
+up as red.  A pixel where all three channels are very strong would be
+close to white, and where they are all weak, close to black. <br></p><br><p style="text-align: center;"><img src="RasterGraphics/200px-AdditiveColor.svg.png" alt="200px-AdditiveColor.svg.png"></p><p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</style>
+
+<p>The following image is an example of pixels and color channels.
+The original image is the tiny face in the upper left corner.  In the
+second, enlarged version of the face, you can see the individual
+pixels of the image, arranged in rows and columns, that make up the
+image.  Then in the bottom, even more enlarged segment, you can see
+three pixels that make up a small area in the bottom-left corner of
+the image.  This segment has the values for the Red, Green, and Blue
+channels written over the top of each pixel.</p><br><p style="text-align: center;"><img src="RasterGraphics/Rgb-raster-en.png" alt="Rgb-raster-en.png"></p><p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H3 { margin-bottom: 0.08in }
+		H3.western { font-family: "Arial", sans-serif }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p>In this case we can see that to make a medium-grey color we turn
+the Red channel up to 80% of its full intensity, the Green channel
+also up to 80%, and the Blue channel to 77%.  Notice that all three
+of these are above 50%, so in all the channel is fairly
+bright....this grey color is a lot closer to white than it is to
+black.  Next, to get a dingy brown, we would put the red and green
+channels to 36% and the blue channel only to 13%.  Because all these
+are significantly less than 50%, the overall color is dark and
+getting closer to black.  Finally, to get a yellow, we turn the red
+and green channels almost all the way up (if we wanted a true
+yellow we would turn them all the way up) and leave the blue set at
+zero.  
+</p>
+<p><br><br>
+</p>
+<p>Try out for yourself adjusting the amounts of Red Green and Blue
+in each channel and see what colors you can come up with.</p>
+<p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
+<p><br><br>
+</p>
+<p>Some raster formats also have a channel called Alpha that
+specifies how bright the pixel is.  If the alpha channel is low, then
+it would be possible for an image that is stacked behind the one
+being show to show through.  This is called transparency.  If there
+is nothing behind the image, then the default is usually black.  
+</p>
+<h3 class="western">File Types</h3>
+<p><b>An Aside  Bits and Bytes</b></p>
+<p>In computer terminology the basic unit of data is the bit.  It is
+either a 1 or a 0, and enough bits put together can represent any
+data in the computer.  
+</p>
+<p>A byte is a collection of bits, 8 bits to be precise.  This is the
+standard unit that will be used to say how much space a piece of data
+takes up.  (e.g. that text file is 300 Bytes large, that picture is 2
+million bytes, etc)</p>
+<p>Because computers can use HUGE numbers of bytes for different
+things, we have a set of prefixes that we use to talk about groups of
+bytes:</p>
+<p>1 Byte</p>
+<p>100 Bytes</p>
+<p>1,000 Bytes = 1 Kilo Byte (KB)</p>
+<p>1,000,000 Bytes = 1,000 KB = 1 Mega Byte (MB)</p>
+<p>1,000,000,000 Bytes = 1,000 MB = 1 Giga Byte (GB)</p>
+<p>1,000,000,000,000 Bytes = 1,000 GB = 1 Tera Byte (TB)</p>
+<p>1,000,000,000,000,000 Bytes = 1,000 TB = 1 Peta Byte (PB)</p>
+<p>However, it is important to note that computers don't think of
+things in terms of even powers of 10.  Instead the computer uses
+powers of two, and it just so happens that 2^10 (two to the power of
+10) is approximately equal to 1,000 (actually 1024) and 2^20 is
+approximately equal to 1,000,000 (actually 1,048,576).  Although for
+our human heads, its generally easy to think in the simple powers of
+ten, just remember that these are not exact!</p>
+<p><b>Photo Size</b></p>
+<p>For a typical photograph, each of the three (Red, Green, and Blue)
+channels are represented by one byte of data for each pixel.  This
+means that it requires three bytes of data for each pixel, this is
+often referred to as 24 bit color (24 bits, because 8 bits equals 1
+byte and there are three bytes).  Because each byte can hold 2^8 or
+256 different values, each channel can have 256 different levels of
+that color (1/256 or 0.39% change per level if everything is done
+evenly).  You may have noticed that the R G and B values on the
+demonstration we used in the channels section only had 256 different
+options, if you don't remember, go back and check it out now:</p>
+<p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
+<p>Because there are three different channels, that means each pixel
+can represent 256x256x256 colors or over 16 million different color
+combinations.  That's a lot more than even the largest box of
+crayons. 
+</p>
+<p>For an 12 megapixel image from a modern camera, this means that it
+would require 36 Megabytes (MB) of storage space!  That's a lot when
+you go out with your camera and want to take a bunch of pictures.  If
+you have a 1 Gigabyte (GB) memory card for your camera, that would
+only allow you to store about 30 images.  
+</p>
+<p>Because of the huge size of files that just contain the pixels,
+people have come up with various ways of compressing images into
+smaller files.  These can be put into two different groups: Lossless
+and Lossy.  
+</p>
+<p><b>Lossless Compression </b>
+</p>
+<p>Lossless compression takes the files and finds ways to
+mathematically make them smaller, in a way that can be completely
+un-done.  The easiest way to do this is to run the image through a
+general compression tool like zip.  Zip is a tool that is available
+on all computers, that goes through any file (not just images) and
+finds ways to make it smaller.  One simple way this is done is if
+there are many pixels in an area that are the same color, there can
+be an instruction that when the image is drawn to color that whole
+area in the correct color.  That instruction telling what the
+computer to do can be hundreds of times smaller than the amount of
+space it would require to store all the pixels in the area.  There
+are many other ways to do this, but they are generally very
+complicated and beyond the scope of this material.</p>
+<p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
+<p><b>Lossy Compression </b>
+</p>
+<p>Lossy compression is different in that once a file is compressed
+there is no way to get back the exact same file, some detail is
+always lost.  Since images are made of millions of pixels each
+possible of representing millions of different colors, there is some
+room for removing detail before the human eye would notice any
+difference.  This can be done with a combination of the lossless
+compression methods, as well as things like assuming that a color of
+one pixel is similar to the pixels surrounding it, and many more
+complicated methods.  Also beyond the scope of this material.  
+</p>
+<p>Below are three examples which illustrate lossy compression.  The
+example on the left is the original and was compressed with loss-less
+compression.  The middle picture was compressed with lossy
+compression, which was set to not loose very much data.  The image on
+the right used lossy compression with very aggressive settings.  It
+made a much smaller file size than the middle one (1.1KB vs 9.4 KB)
+but obviously the compression removed parts of the image that are
+important for making it look good.&nbsp; <br></p><br><p style="text-align: center;">&nbsp;<img src="RasterGraphics/LossyDemonstration-Original.png" alt="LossyDemonstration-Original.png"><img src="RasterGraphics/LossyDemonstration-84less.jpg" alt="LossyDemonstration-84less.jpg"><img src="RasterGraphics/LossyDemonstration-98less.jpg" alt="LossyDemonstration-98less.jpg"></p><p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+		H3 { margin-bottom: 0.08in }
+		H3.western { font-family: "Arial", sans-serif }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu Sans"; font-size: 16pt }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p><a href="http://en.wikipedia.org/wiki/Lossy_compression">http://en.wikipedia.org/wiki/Lossy_compression</a></p>
+<p><b>File Storage</b></p>
+<p>There are many different types of files that are used for images,
+most of which support one or more specific lossless or lossy
+compression methods.  Below is an overview of them, there are many
+less-used formats in addition that aren't listed here. See:
+<a href="http://en.wikipedia.org/wiki/Image_file_formats">http://en.wikipedia.org/wiki/Image_file_formats</a>
+(verified at:
+<a href="http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331">http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331</a>
+) or <a href="http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats</a>
+(verified at:
+<a href="http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069">http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069</a>)
+for more information.</p>
+<p><b>Bitmap</b> (.bmp, others)  Contains all the pixels of the
+image, without compression.  The .bmp format specifically is used by
+Microsoft in their programs for displaying images, but similar
+methods are used in all types of computers.  As it stores all the
+pixels, this is a lossless format, in fact by default it is not
+compressed at all.</p>
+<p><b>JPEG</b> (.jpg, .jpeg)  Stands for Joint Photographic
+Experts Group, was developed specifically for storing images taken by
+digital cameras, and is by far the most used format for digital
+photographs.  This is a lossy format, however with typical settings
+it is very difficult to detect and image degradation.</p>
+<p><b>PNG</b> (.png)  Portable Network Graphics is better at
+storing images that don't have a lot of detail, such as graphics on
+websites.  This is a lossless format.  
+</p>
+<p><b>GIF</b> (.gif)  Graphics Interchange Format is similar to
+but older than PNG.  In general PNG should be used instead, however
+there is one feature that it has that PNG currently does not, which
+is to be able to have multiple images stored inside it, which can be
+played back as a simple animation.  
+</p>
+<p><b>JPEG2000</b> (.jp2)  This was an attempt at creating a
+better version of the JPEG format, however it has not been very
+successful, and is mostly used in professional situations such as
+medical imaging.  This format has options that can make it lossless
+or lossy.  
+</p>
+<p><b>JPEG XR/HD Photo</b> (.jxr)  This is another attempt at
+creating a better version of the JPEG format, originally developed by
+Microsoft as HD Photo it was submitted to the Joint
+Photographic Experts Group who accepted it as a new standard.  It has
+not yet caught on in mainstream use.  This format has options that
+can make it lossless or lossy.  
+</p>
+<p><b>WebP</b> (.webp)  This is a new format developed by Google
+that is designed for replacing JPEG (and some PNG) for use in images
+on the web.  It is not currently supported by all web browsers, but
+work is ongoing on it.  This format is lossy.  
+</p>
+<p><b>TIFF</b> (.tif, .tiff)  Tagged Image File Format is used
+mostly for images of documents (such as scans).  It has support for
+multiple pages of images, as well as metadata such as where the image
+was collected, who wrote it, etc.  Usually it is used as a lossless
+format, but it has the ability to use JPEG or other types of
+compression inside it. 
+</p>
+<p><b>Raw</b> (.raw, .cr2, .crw, .nef, .nrw, dng, and more)  Raw
+images are not a specific format, but a grouping of many different
+formats, all of which are built from cameras.  By default cameras
+usually produce JPEG images, which are lossy and don't contain all
+the basic data that the camera recorded about the image.  When a
+photographer gets a raw image, he or she gets all the data that the
+camera collected, which can be useful when doing advanced processing
+of the images on a computer.  
+</p>
+<p><b>XCF</b> (.xcf)  eXperimental Computing Facility is the name
+of the file format used to store projects in the Gimp photo editor. 
+It stores photographs losslessly, and can store multiple layers of
+photos and other data such as text, lines, selections and more.</p>
+<p><b>PSD</b> (.psd)  PhotoShop Document very similar to the XCF
+format, but used by photoshop.  It is also lossless, and can store
+multiple layers of photographs and data.  
+</p>
+<p><br><br>
+</p>
+<p>Bonus, non raster-image formats:</p>
+<p><b>EXIF</b> - Exchangeable Image File Format is used for metadata
+about the image, it is not a file on its own, but is encorporated
+into other files such as JPEG.  It can contain a huge number of
+different data fields including: date the image was taken, camera
+settings, exposure time, apature size, zoom level, GPS coordinates of
+the camera, direction the camera was facing, and many more. 
+</p>
+<p><b>SVG</b> (.svg)  Scalable Vector Graphics files are used to
+store images generated on a computer, not photographs.  These files
+do not store any pixels, but rather store information about where
+lines, circles, text, and other components are in relationship to
+each other (referred to with vectors).  It is called scalable because
+the instructions for creating the image can be given any unit of
+length and make the entire image based on that.  In addition the
+instructions for generating the image can include references to
+amounts of time, so the image can change as it is drawn making an
+animation.  Because there are no pixels to be calculated, this is an
+inherently lossless format. 
+</p>
+<p><b>EPS</b> (.eps)  Encapsulated Post Script files as similar to
+SVG files, but somewhat older and has more limited features, such as
+not being able to do animation.  
+</p>
+<h2 class="western">Gimp</h2>
+<p style="margin-bottom: 0in;">TODO: Get example images for Cropping,
+Redeye, High-Contrast for selection, ???  For each category, get one
+image that I will use as the in-class example and one or more images
+that the students can attempt to do the same thing on themselves.  
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;">What is the Gimp?  (Copy in
+introduction from manual)</p>
+<p style="margin-bottom: 0in;">Resources: 
+</p>
+<p style="margin-bottom: 0in;">Manual  - <a href="http://docs.gimp.org/">http://docs.gimp.org/</a>
+(en for 2.6 or 2.4, es only for 2.4)</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<h3 class="western">Cropping, Re-sizing</h3>
+<p style="margin-bottom: 0in;">Pick an image with a face in it, have
+the students crop it so that only the face is showing.  Select fixed
+aspect ratio during the selection and  have them crop it to 3:4
+aspect ratio. Then have them re-size it to be a decent scale for a
+web image.  
+</p>
+<p style="margin-bottom: 0in;"><br>Rule of thirds when cropping.</p>
+<h3 class="western">Redeye</h3>
+<p style="margin-bottom: 0in;">Select the eyes from a photo with red
+eye.  Don't select the whole picture, etc.  Go to
+Filters-&gt;Enhance-&gt;Red Eye Removal... and run it.</p>
+<h3 class="western">Layers and Selection</h3>
+<p style="margin-bottom: 0in;">Layers are used for photo organization.
+ Selection can be done lots of different ways.</p>
+<h3 class="western">Skin Corrections</h3>
+<p>How to smooth out blemishes, wrinkles, etc</p>
+<h3 class="western">Adjusting lighting</h3>
+<p><br><br>
+</p>
+<h2 class="western">Photoshop</h2>
+<p style="margin-bottom: 0in;">Cropping/Resizing</p>
+<p style="margin-bottom: 0in;">Redeye</p>
+<p style="margin-bottom: 0in;">Layers and Selection</p>
+<p style="margin-bottom: 0in;">Skin Corrections</p>
+<p style="margin-bottom: 0in;">Adjusting Lighting</p>
+<h2 class="western">Other Photo Editing Tools</h2>
+<p><b>Picasa</b>  Photo manager built and distributed by google. 
+It is more for storing photo collections, and managing them online
+and offlline, but also has some photo editing ability, like cropping,
+redeye removal and more. Available for Linux, Windows and Mac. -
+<a href="http://picasa.google.com/">http://picasa.google.com</a> 
+</p>
+<p><b>Paint.NET</b>  Similar, but less powerful than Gimp and
+Photoshop.  Only available for Windows, but is free, libre, and open
+source software.  - <a href="http://www.getpaint.net/">http://www.getpaint.net/</a>
+</p>
+<p><b>Corel Paint Shop Photo Pro</b>  Almost as powerful as Gimp
+and Photoshop, but a substantially different interface from them.  -
+<a href="http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081">http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081</a></p>
+<p><b>Microsoft Paint</b>  Comes built in with windows, but is
+very basic.  Even things like cropping and re-sizing are very
+difficult.  It is usable if you want to add a little text to an
+image, or draw over something so that others can't see it (like
+blanking out a screen name or IP address in a screenshot), but not
+much beyond that.</p>
+<p><b>Microsoft Photo Editor </b>or <b>Photo Manager </b> Tools
+from Microsoft that come with Microsoft Office.  Useful for basic
+editing, such as cropping and re-sizing.  
+</p>
+<p><b>ImageMagick</b>  A command line based tool (there are also
+various graphical user interfaces for it) that instead of editing an
+image by click on it edits the image by specifying commands that can
+be done to it (e.g. -resize 30%, -crop 120x120, convert image.jpg
+image.png and lots more).  This is really great if you have a lot of
+images and want to do the same thing to all of them.  For instance
+you can easily resize hundreds of images in a few seconds instead of
+opening them up in the Gimp and resizing them one by one. Image magic
+is free, libre, and open source software and runs on Linux, Windows,
+and Mac. - <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a>
+</p>
+<h1 class="western">Unit Two  Graphics</h1>
+<h2 class="western">Vector Graphics</h2>
+<p>Unlike raster images (photos, covered in Unit One) vector graphics
+do not consist of pixels arranged on a grid with different values. 
+Instead vector graphics are stored as sets of instructions that a
+computer can run to re-create a graphic.  
+</p>
+<p>A simplistic example of these instructions could be:</p>
+<ol><li><p>Create a circle with a center 3 units above the center, and a
+	radius of 2 units.  
+	</p>
+	</li><li><p>Fill circle with yellow</p>
+	</li><li><p>Create a line from 2 units below the center to 3 units above
+	and two units left of the center.</p>
+	</li><li><p>Create a line from 2 units below the center to 3 units above
+	and two units right of the center.</p>
+</li></ol>
+<p>If there were a program that could run this very simple script, it
+might draw to the screen the following:</p><p style="text-align: center;"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"></p><p>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H3 { margin-bottom: 0.08in }
+		H3.western { font-family: "Arial", sans-serif }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu Sans"; font-size: 16pt }
+		A:link { so-language: zxx }
+	-->
+	</style>
+
+<p>The good thing about this is that you'll most likely never have to
+actually look at the script the computer creates, just like you never
+have to look at the array of pixels and channels that are stored in a
+photograph.  However, if you want to get advanced, that would be
+possible (and quite a bit easier than editing a raster image). 
+Instead, we will be using tools that convert the things we draw with
+the mouse and keyboard into one of these scripts that the computer
+can follow when it wants to re-produce an image to view on the screen
+(the screen is really just a raster graphic viewer).  Then when we
+are all done, we can have it run the script again to produce another
+raster graphic that can be saved into a PNG file.  
+</p>
+<p>It is also possible for this script to include a certain amount of
+time to wait before something happens.  This allows for animations
+some simple examples would be having a stick figure move across the
+image or having a ball bounce.</p>
+<h3 class="western">File Formats</h3>
+<p>The primary file format currently in use is SVG or Scalable Vector
+Graphics (see: <a href="http://en.wikipedia.org/wiki/Svg">http://en.wikipedia.org/wiki/Svg</a>
+) which is a type of human readable file called XML.  Although XML
+and SVG are human-readable, we will not be reading them directly as
+part of this material.  SVG is supported in most vector drawing
+programs, however it is not yet supported by all web browsers (though
+this is rapidly changing).  If you simply want to use your images on
+web pages, it is best to convert them to Portable Network Graphics
+(PNG) which is a lossless raster format.  
+</p>
+<p>The other major format for Vector Graphics is the EPS or
+Encapsulated Post Script.  Post Script itself is a file type used for
+printing (especially industrial printing), and EPS images are built
+to be easily put inside of a Post Script document.  This format has
+been around a lot longer than SVG, and is supported by many more
+tools (especially the old ones).  Likewise, it is not recommended for
+use with web browsers.  
+</p>
+<h2 class="western">Inkscape</h2>
+<h2 class="western">Illustrator</h2>
+<h2 class="western">Publishing Layout??</h2>
+<h2 class="western">Scribus</h2>
+<h2 class="western">Diagrams</h2>
+<h2 class="western">Dia</h2>
+<h1 class="western">Unit Three  Audio 
+</h1>
+<h2 class="western">Introduction to Audio Storage</h2>
+<p>samples per second, bits per sample</p>
+<h3 class="western">Codec and Container Overview</h3>
+<p>Codecs</p>
+<p>WAV</p>
+<p>MP2</p>
+<p>MP3</p>
+<p>FLAC</p>
+<p>AAC</p>
+<p>AC3</p>
+<p>Vorbis</p>
+<p>Speex</p>
+<p>PPM?</p>
+<p>Containers</p>
+<p>MP3</p>
+<p>Ogg</p>
+<p>Video</p>
+<h1 class="western">Unit Four  Video</h1>
+<h2 class="western">Introduction to Video Storage</h2>
+<p>Digital Video  raster pictures presented in rapid succession</p>
+<p>Analog Video  Pixel at a time, scan down the image (possibly
+with alternating lines)</p>
+<h3 class="western">Formats</h3>
+<p>PAL</p>
+<p>NTSC</p>
+<h3 class="western">Codecs and Containers</h3>
+<p>Codecs</p>
+<p>MPEG 2</p>
+<p>MPEG 4 (?)</p>
+<p>H.264/AVC</p>
+<p>XVID</p>
+<p>Theora</p>
+<p>VP8</p>
+<p>Containers</p>
+<p>MPEG TS, PS</p>
+<p>MPEG 4</p>
+<p>AVI</p>
+<p>FLV</p>
+<p>MKV</p>
+<p>OGV</p>
+<h2 class="western"><font color="#c90016">TODO: </font>
+</h2>
+<p style="margin-bottom: 0in;">Get video clips from open source
+blender projects: Elephants Dream, Big Buck Bunny, Sintel, others?</p>
+<p style="margin-bottom: 0in;">http://www.doom9.org</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<h1 class="western">Web Pages</h1>
+<h2 class="western">Web Architecture</h2>
+<p><br><br>
+</p>
+<h1 class="western">Attribution</h1>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;">Gimp Icon  GPL -
+<a href="http://en.wikipedia.org/wiki/File:The_GIMP_icon_-_gnome.svg">http://en.wikipedia.org/wiki/File:The_GIMP_icon_-_gnome.svg</a>
+</p>
+<p style="margin-bottom: 0in;">Inkscape Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:Inkscape_OS_X.png">http://commons.wikimedia.org/wiki/File:Inkscape_OS_X.png</a></p>
+<p style="margin-bottom: 0in;">Scribus Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:Scribus_logo.svg">http://commons.wikimedia.org/wiki/File:Scribus_logo.svg</a></p>
+<p style="margin-bottom: 0in;">Audacity Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:Audacity.png">http://commons.wikimedia.org/wiki/File:Audacity.png</a>
+</p>
+<p style="margin-bottom: 0in;">VLC Icon  GNU FDL -
+<a href="http://commons.wikimedia.org/wiki/File:VLC_Icon.svg">http://commons.wikimedia.org/wiki/File:VLC_Icon.svg</a></p>
+<p style="margin-bottom: 0in;">HandBrake Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:HandBrake.png">http://commons.wikimedia.org/wiki/File:HandBrake.png</a>
+</p>
+<p style="margin-bottom: 0in;">Kdenlive Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:Logo-kdenlive.png">http://commons.wikimedia.org/wiki/File:Logo-kdenlive.png</a></p>
+<p style="margin-bottom: 0in;">Kompozer Icon  LGPL -
+<a href="http://commons.wikimedia.org/wiki/File:KompoZerLogo.svg">http://commons.wikimedia.org/wiki/File:KompoZerLogo.svg</a></p>
+<p style="margin-bottom: 0in;">Bluefish Icon  GPL -
+<a href="http://commons.wikimedia.org/wiki/File:Bluefish-icon.svg">http://commons.wikimedia.org/wiki/File:Bluefish-icon.svg</a></p>
+<p style="margin-bottom: 0in;">Ubuntu Icon  Public Domain -
+<a href="http://commons.wikimedia.org/wiki/File:UbuntuCoF.svg">http://commons.wikimedia.org/wiki/File:UbuntuCoF.svg</a>
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;">Pixel Value Image  Public Domain -
+<a href="http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png">http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png</a></p>
+<p style="margin-bottom: 0in;">Additive Color  Public Domain -
+<a href="http://commons.wikimedia.org/wiki/File:AdditiveColor.svg">http://commons.wikimedia.org/wiki/File:AdditiveColor.svg</a></p>
+<p style="margin-bottom: 0in;">Lossy Demonstration Lossless 
+CC-BY-SA -
+<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png">http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png</a>
+</p>
+<p style="margin-bottom: 0in;">Lossy Demonstration Medium  CC-BY-SA
+- <a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg</a>
+</p>
+<p style="margin-bottom: 0in;">Lossy Demonstration High  CC-BY-SA -
+<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg</a>
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<ul><li><p style="margin-bottom: 0in;"><b>Unit One  Photos</b>
+	(15hrs)<br>Tools: Gimp, Photoshop?, Picasa?</p>
+	<ul><li><p style="margin-bottom: 0in;">Cropping/Re-sizing</p>
+		</li><li><p style="margin-bottom: 0in;">Red-Eye</p>
+		</li><li><p style="margin-bottom: 0in;">Image Contrast</p>
+	</li></ul>
+	</li><li><p style="margin-bottom: 0in;"><b>Unit Two  Graphics</b>
+	(15hrs)<br>Tools: Inkscape, Illustrator?, Dia?, Open Office Draw?,
+	Scribus, Page Maker?, Quark?</p>
+	<ul><li><p style="margin-bottom: 0in;">Fancy Text</p>
+		</li><li><p style="margin-bottom: 0in;">Basic Animation?</p>
+		</li><li><p style="margin-bottom: 0in;">Page Layout</p>
+		</li><li><p style="margin-bottom: 0in;">Large Format (Banners, Posters)</p>
+	</li></ul>
+	</li><li><p style="margin-bottom: 0in;"><b>Unit Three  Audio</b>
+	(20hrs)<br>Tools: Audacity</p>
+	<ul><li><p style="margin-bottom: 0in;">Introduction to Audio Storage</p>
+		<ul><li><p style="margin-bottom: 0in;">Codec/Container Overview</p>
+		</li></ul>
+		</li><li><p style="margin-bottom: 0in;">Wave properties</p>
+		</li><li><p style="margin-bottom: 0in;">Cutting</p>
+		</li><li><p style="margin-bottom: 0in;">Filtering</p>
+	</li></ul>
+	</li><li><p style="margin-bottom: 0in;"><b>Unit Four  Video</b>
+	(40hrs)<br>Tools: VLC, FFMpeg (GUI?), Handbrake, Avidemux, DVDStyler
+	(or equalivent), PiTiVi/Kino/Primere/MovieMaker</p>
+	<ul><li><p style="margin-bottom: 0in;">Introduction to Video Storage</p>
+		<ul><li><p style="margin-bottom: 0in;">Codec/Container Overview</p>
+			</li><li><p style="margin-bottom: 0in;">Typical Formats (NTSC/PAL/DV)</p>
+		</li></ul>
+		</li><li><p style="margin-bottom: 0in;">Compression</p>
+		</li><li><p style="margin-bottom: 0in;">Cutting</p>
+		</li><li><p style="margin-bottom: 0in;">Multi-Track Editing</p>
+		</li><li><p style="margin-bottom: 0in;">DVD Creation</p>
+		</li><li><p style="margin-bottom: 0in;">YouTube Creation</p>
+	</li></ul>
+	</li><li><p style="margin-bottom: 0in;"><b>Unit Five  Web Pages</b>
+	(60hrs)<br>Tools: Kompozer, Dreamweaver/Other Adobe?</p>
+	<ul><li><p style="margin-bottom: 0in;">Architecture Overview</p>
+		<ul><li><p style="margin-bottom: 0in;">Servers</p>
+			</li><li><p style="margin-bottom: 0in;">Structured Documents</p>
+		</li></ul>
+		</li><li><p style="margin-bottom: 0in;">Basic Page: pictures/links</p>
+		</li><li><p style="margin-bottom: 0in;">Basic HTML</p>
+	</li></ul>
+	</li><li><p style="margin-bottom: 0in;"><b>Unit Six  Advanced Web</b>
+	(50hrs)<br>Tools: Bluefish, ?</p>
+	<ul><li><p style="margin-bottom: 0in;">Basic Javascript</p>
+		</li><li><p style="margin-bottom: 0in;">Basic PHP/Python</p>
+		</li><li><p style="margin-bottom: 0in;">Security</p>
+	</li></ul>
+</li></ul>
+<p style="margin-bottom: 0in;"><br>
+</p>
+</p>
+</p>
+  
+</p>
+</p>
+</div>
+</div>
