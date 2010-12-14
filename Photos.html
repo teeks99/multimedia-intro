@@ -1,4 +1,6 @@
-<h1 class="western">Unit One - Photos</h1><p style="margin-bottom: 0in;">For this unit we will learn some basics
+
+<h1 class="western">Unit One - Photos</h1>
+<p style="margin-bottom: 0in;">For this unit we will learn some basics
 about digital images and photos, then some simple photo editing in
 the GNU Image Manipulation Program (Gimp), finally we will explore
 Photoshop to see how to do the same things, where available. </p>
@@ -402,7 +404,7 @@ distributions include The <acronym class="acronym">GIMP</acronym> as a
 standard application. The <acronym class="acronym">GIMP</acronym> is
 also available for other operating systems such as <span class="productname">Microsoft Windows</span>" or Apple's <span class="productname">Mac OS X</span>" (<span class="application">Darwin</span>).
 The <acronym class="acronym">GIMP</acronym> is a Free Software
-application covered by the General Public License<a class="xref" href="../../../../mnt/fs/local/Centro/ClassMaterial/2.6-en/bibliography.html#bibliography-online-gpl" title="General Public License (GPL)"></a>.
+application covered by the General Public License.
 The <acronym class="acronym">GPL</acronym> provides users with the
 freedom to access and alter the source code that makes up computer
 programs. <br>
@@ -965,25 +967,684 @@ rotated, cropped, and re-sized.&nbsp; <br>
 <a href="PhotoExamples/PhotoCrop-A-orig.jpg">PhotoCrop-A-orig.jpg</a><br>
 <a href="PhotoExamples/PhotoCrop-B-orig.jpg">PhotoCrop-B-orig.jpg</a><br>
 <a href="PhotoExamples/PhotoCrop-C-orig.jpg">PhotoCrop-C-orig.jpg</a><br>
-<h3 class="western">Selection and Redeye Correction<br></h3>We have all seen photos in the past where the eyes of the subject(s) are not their normal color but bright red.&nbsp; There can be various levels of this ranging from barely detectable to very bright red.&nbsp; This is caused by light from the flash on the camera reflecting off the blood vessels on the back of the eye and back to the camera.<br>For more info, see: <a href="http://en.wikipedia.org/wiki/Red-eye_effect">http://en.wikipedia.org/wiki/Red-eye_effect</a><br><br>Since this is such a common problem in photographs, the GIMP has a built in tool for removing it which we will work with in this section.&nbsp; <br><br>First, lets save <a href="PhotoExamples/Redeye-Ex-orig.jpg">this</a> file to your disk, and open it with the GIMP.<br><img src="PhotoExamples/Redeye-Ex-small.jpg" alt="Redeye-Ex-small.jpg"><br><br>You can see that there are three examples of red eye here.&nbsp; Two (the woman on the left and the man) have a large amount, and the woman in the middle just has a little showing.&nbsp; <br><br>To correct the red eye, we will run the red eye removal tool.&nbsp; You can find it under Filters-&gt;Enhance-&gt;Red Eye Removal.&nbsp; <br><img src="PhotoScreen/RedeyeDialog.jpg" alt="RedeyeDialog.jpg"><br>If all works well, you should be able to just click the button and have it remove all the red eye.&nbsp; Go ahead and try it now.&nbsp; <br><br>Ahhhh!&nbsp; What happened!!!&nbsp; It looks like the people have mold growing on them, this is terrible.<br><img src="PhotoExamples/Redeye-Ex-fail.jpg" alt="Redeye-Ex-fail.jpg"><br><br>What the tool did was go through the whole photo and find all the spots where there was a lot of red, and try to remove it.&nbsp; Unfortunatley this photo had lots of spots like that...the people's lips, the woman on the left's face, the wall in the background, etc.&nbsp; You could try using the slider to lower the threshold so it doesn't pickup as much, but that doesn't work very well for this image either, but lets try it anyway.&nbsp; <br><br>This time lets use the preview window to zoom in on the face of the woman on the left.&nbsp; As you move the slider around, you will see that before most of the red from her eyes is gone, there are strange artifacts showing up on her lips.<br><br><img src="PhotoScreen/RedeyeThresholdFail.jpg" alt="RedeyeThresholdFail.jpg"><br><br>Instead of just using this tool, we're going to have to try a different tactic to fix this image.&nbsp; We're going to use the selection tool to select just her eyes, then run the red eye tool on just that selected area.&nbsp; We will soon find that using the selection tool is very powerful and the ability to select certain areas of photos make almost all the things that you can do with the GIMP possible.&nbsp; Even the cropping that we did in the last section is just a set of special functionality layered over the selection tool, in fact you can do all the things we did in the last section by simply making a selection and then clicking Image -&gt; Crop to selection.<br><br>Lets start by selecting the Rectangle Select Tool from the toolbox.<br><img src="PhotoScreen/SelectionTool.png" alt="SelectionTool.png"><br><br>Using this tool is almost exactly the same as using the crop tool, except when you are done you have a selection of the image, not a smaller image.&nbsp; Lets use it to create a rectangle around one of the woman on the left's eyes.&nbsp; Zoom in if you need to, so you don't select too much else.<br><br><img src="PhotoScreen/SelectionOneEye.jpg" alt="SelectionOneEye.jpg"><br><br>If you now click inside the selection (or hit Enter) the selection will stick, but you don't need to do this, you can run tools on it even before it sticks. <br><br>Now lets go back and run the Red eye reduction filter again.&nbsp; This time we can turn the threshold up a bit higher, because there isn't much else that is very red in the image.&nbsp; <br><img src="PhotoScreen/RedEyeOneEye.jpg" alt="RedEyeOneEye.jpg"><br><br>Now that we've got that down, we can go ahead and do it to the other five eyes in the image.&nbsp; <br><br><img src="PhotoExamples/Redeye-Ex-final-small.jpg" alt="Redeye-Ex-final-small.jpg"><br><br>I'd say they are looking much better!&nbsp; Its still not a great photograph, but at least they don't look like they are possessed by the devil.&nbsp; <br><br><span style="font-weight: bold;">Exercises </span><br>These images are all examples of red eye that can be removed by selecting the eyes and running the red eye removal tool on them.<br><br><a href="PhotoExamples/Redeye-A-orig.jpg">Redeye-A-orig.jpg</a><br><a href="PhotoExamples/Redeye-B-orig.jpg">Redeye-B-orig.jpg</a><br>
-<a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br><h3 class="western">Advanced Selection and Layers<br></h3>
-<p style="margin-bottom: 0in;">Now that we have some of the basics like resizing and selecting down, we're going to get a little more advanced.&nbsp; In this section we are going to combine two separate pictures into one photo-like image that could conceivable been taken by a person with a camera, but wasn't.&nbsp; This is a powerful tool that can be used to deceive others by making them think that something really happened when in actuality it didn't.&nbsp; Many people have tried to deceive others with this, and many have been found, such as Iran, trying to show that it launched four missiles when it only launched three: http://boingboing.net/2008/07/10/iran-you-suck-at-pho.html.&nbsp; As a photo editor, it is your job to use these tools responsibly. <br></p><p style="margin-bottom: 0in;">We're going to start by taking a picture of an <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">airplane</a> putting it into the background of a picture of the <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Statue of Liberty</a>.&nbsp; <br></p><br><a href="PhotoExamples/LayerForeground-Ex-orig.jpg">An Airplane<br><img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerForeground-Ex-orig.jpg" alt="LayerForeground-Ex-orig.jpg"></a><br><br><a href="PhotoExamples/LayerBackground-Ex-orig.jpg">The Statue of Liberty<br><img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br><p style="margin-bottom: 0in;"></p>Go ahead and save those to files to your disk, then open them up in the GIMP.&nbsp; Since this is a more complicated project than our past ones, we're going to save the Statue of Liberty picture into a separate file that GIMP uses to store all the data about the project.&nbsp; This is an XCF (eXperimental Computing Facility) file, and it stores all the image data in a lossless format, as well as data about layer and channels which we will be using for this project.&nbsp; To save as this type of file, in the Statue of Liberty image go to File -&gt; Save As, then in the name box, change the extension from .jpg to .xcf and click the save button.<br><br>The basic premise of how we are going to add the airplane into the Statue photo is that we are going to select just the airplane (without any of the sky background) from its photo, then copy and paste that into the statue of liberty.&nbsp; Then we'll get on to another trick to make it look even better. <br><br>There are several different ways to do the selection.&nbsp; We could do the rectangular selection like we did in the last image, but then you'll end up with all the sky from the airplane picture that was in the box in the statue picture.&nbsp; <br><img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>It doesn't look very natural.&nbsp; We'll need to use one of the selection tools that will get us <span style="font-style: italic;">just</span> the airplane.&nbsp; <br><br>The most basic tool for selecting a specific area, of an arbitrary shape is the "Free Select" or Lasso tool.&nbsp; This tool will let us draw whatever shape we want on the screen, and when we connect the line back to the start, it selects that area.&nbsp; <br><br>Lets pick the "Free Select" tool.<br><img src="PhotoScreen/LayerFreeSelectTool.jpg" alt="LayerFreeSelectTool.jpg"><br>Now that we have the tool selected, we can start to outline the airplane.&nbsp; It will be much easier to find the correct points to select if you zoom in, I use 400%.&nbsp; Just find a spot on the border between the airplane and the sky, and click to make your first point.&nbsp; Then move the mouse cursor either clockwise or counter clockwise to another nearby pixel that separates that airplane and the sky.&nbsp; You will see a line extend between the first point and your cursor.&nbsp; Adjust your cursor so that the line follows the edge between the airplane and the sky.&nbsp; If you chose the complicated area with the landing gear and engines, this could be a very short line.&nbsp; On the other had, if you started on the top, this line will be quite a bit longer.&nbsp; <br><br>Here's my line that started on the top, went over a little bump (an antenna) around the cockpit and is currently at the nose:<br><br><img src="PhotoScreen/LayerFreeSelect.jpg" alt="LayerFreeSelect.jpg"><br><br>This is going well, but when you keep going and get into the more complex parts of the picture, this will start to get <span style="font-style: italic;">very</span> tedious.&nbsp; There are so many small parts that it would take hundreds of clicks to make lines that accurately separate them out.&nbsp; <br><br>A better tool for getting all this complex stuff, is the Intelligent Scissors tool.&nbsp; Lets go pick that.<br><img src="PhotoScreen/LayerIntelSciTool.jpg" alt="LayerIntelSciTool.jpg"><br>The Intelligent Scissors tool is an interesting piece of equipment: it has
-    some features in common with the Lasso, some features in common with the
-    Path tool, and some features all its own. It is useful when you are trying
-    to select a region defined by strong color-changes at the edges. To use
-    the Scissors, you click to create a set of "control nodes", also referred to
-    as anchors or control points, at the edges of
-    the region you are trying to select. The tool produces a continuous curve
-    passing through these control nodes, following any high-contrast edges it
-    can find. If you are lucky, the path that the tool finds will correspond
-    to the contour you are trying to select.
-  <br><br>We can start using it similarly to the Free Select tool, put down a point on the edge of the border between the airplane and the sky.&nbsp; Then move along that border and place another point.&nbsp; Although, this time you won't see a line from the previous point to the cursor, you just have to pick a point.&nbsp; Then when you click the computer will try to determine what the natural border is that both the points are on, and make a line that matches that border.&nbsp; If you are still zoomed in to 400%, this will look a bit jagged, that is usually because we're dealing with individual pixels at this level and they don't follow a very clean border.&nbsp; Don't worry too much about it, when we shrink this airplane down to put it in the statue picture, you won't be able to tell.&nbsp; <br><img src="PhotoScreen/LayerIntelPoints.jpg" alt="LayerIntelPoints.jpg"><br><br>Sometimes the computer won't guess correctly where the line should go, as in this case<br><img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>For some reason, it decided on a line through the engines, instead of between the engines an the sky, but don't despair, its easy to fix.&nbsp; We're just going to add another point in between those to to make it work out better.&nbsp; Any place you don't like where the computer though the line should go, you can easily add a new point.&nbsp; Just click the existing line to make the point.&nbsp; <br><img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>Then click and drag that new point down to the correct place for it.&nbsp; <br><img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>You may have to click and drag more than once for the computer to find a line that is good enough for what you're trying to do.&nbsp; Also, you don't have to add a new point to move it, you can click and drag any point you've created to get it in a better location.&nbsp; The GIMP will automatically re-draw the line when you let go.<br><br>As you go under the airplane, you probably don't have to worry about every tiny little area.&nbsp; When we shrink this picture down, most of the details won't be that easy to see.&nbsp; <br><img src="PhotoScreen/LayerIntelNotPerfect.jpg" alt="LayerIntelNotPerfect.jpg"><br><br>Once you've made it all the way around the airplane, <br><img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>just click inside of your selection to complete it.&nbsp; <br><br>Now lets see what just the area we've selected looks like.&nbsp; First we're going to copy the selection by hitting the Ctrl+C key combination. Then without doing anything to the image window we're going to paste it back in there by hitting the Ctrl+V key combination.&nbsp; Now if you look at the layers dialog, you will see that there is a new Floating Selection listed there. <br><img src="PhotoScreen/LayerPasteFloat.jpg" alt="LayerPasteFloat.jpg"><br>We're going to go ahead and make this into a full-fledge layer in the image by right clicking on it and selecting "New Layer".&nbsp; Once we're done with that, we can see both layers in the layers dialog.&nbsp; <br><img src="PhotoScreen/LayerPasteNew.jpg" alt="LayerPasteNew.jpg"><br><br>Now that we're using layers, we should probably have a quick explanation of what they are.<br><br>It is probably easiest to think of layers as a stack of transparencies, where the content of what is on each layer is combined together to make up the image that we see.&nbsp; It is possible to have a layer that is completely colored in, in which case nothing from the layers below that can be seen. Likewise, it is possible to use the alpha channel to control how transparent something is to the layers below it.&nbsp; For instance if we had a bright orange (not transparent) layer on top of an image of car, you wouldn't be able to see the car.&nbsp; However, if you turned the alpha level of the orange layer down so it was more transparent, you could see the car, but it would have an orange tint to it.&nbsp; <br><img src="PhotoScreen/LayerDemo-None.jpg" alt="LayerDemo-None.jpg"><br><img src="PhotoScreen/LayerDemo-Full.jpg" alt="LayerDemo-Full.jpg"><br><img src="PhotoScreen/LayerDemo-Half.jpg" alt="LayerDemo-Half.jpg"><br><br>In addition, a layer doesn't have to take up the whole area of the image.&nbsp; For example, when we pasted the airplane back in to the same picture, the layer that was created only consisted of a box big enough to contain the selection.&nbsp; You can see its outline above in the screen shots where it was pasted.&nbsp; Another example of layers that aren't the size of the full image is text.&nbsp; Any time you use the text tool to write on an image, it will automatically create a new layer that the text is in, and that layer will be a rectangle just large enough for the text to fit in to.<br><br>But back to our airplane picture. Now that we have a layer that just contains the pasted image of the airplane, we can hide the layer with everything in it and see just what we pasted.&nbsp; Just click the eye icon next to the background image to hide it.&nbsp; <br><img src="PhotoScreen/LayerPasteOnly.jpg" alt="LayerPasteOnly.jpg"><br>Now we've got the airplane that we selected (and copy/pasted) and the default GIMP background telling us that everything else in the image is transparent.&nbsp; <br><br>If we zoom in, we can see that our selection wasn't perfect.&nbsp; There is a bit of sky remaining around the main landing gear, and a triangle between the front landing gear and the wing that extends down to the left.<br><img src="PhotoScreen/LayerSkyScraps.jpg" alt="LayerSkyScraps.jpg"><br>This isn't going to be a problem, since it will be very small in our final image, but we can clean it up just for the practice.&nbsp;&nbsp; We're going to use the erase tool to go in and remove those pieces of sky.<br><br>First lets select the erase tool.&nbsp; <br><img src="PhotoScreen/LayerEraseTool.jpg" alt="LayerEraseTool.jpg"><br><br>The eraser is one of the tools that has a brush associated with it.&nbsp; A brush is simply the pattern that the tool operates on, the most common brushes are circular like, with varying sizes.&nbsp; For this I would recommend using a Circle (03) brush, or possibly Circle (01) for some of the smaller, more detailed areas.&nbsp; The (03) and (01) refer to the size of the brush, so the (01) is smaller.&nbsp; To select the correct brush, click the brush picture next to the word "Brush:" in the Eraser Tool Options dialog.<br><br><img src="PhotoScreen/LayerBrushSelection.jpg" alt="LayerBrushSelection.jpg"><br><br>Now that we have a decent brush, we can use the eraser to remove parts of the image that we don't want.&nbsp; Just click once to remove the exact amount under the brush, or click and drag around to remove wherever you drag the brush.&nbsp; You'll notice that when you remove something, you see the gray checkered background.&nbsp; This indicates that this layer is now completely transparent in that spot.&nbsp; <br><img src="PhotoScreen/LayerEraseComplete.jpg" alt="LayerEraseComplete.jpg"><br><br>Now that we've cleaned up the airplane, its time to import it into the photo of the Statue of Liberty.&nbsp; To do that, first we want to re-select the cleaned up airplane.&nbsp; Since that is all that is current layer (this only works on the current layer, even if the other layers are visible) we will only get the airplane when we simply select everything.&nbsp; To select everything simply enter the Ctrl+A key combination (also the menu Select -&gt; All works).&nbsp; Now you will see a line around the whole layer's area.&nbsp; Once again, we're going to copy this by hitting Ctrl+C. <br><br>Now we have the airplane copied to the clipboard, lets bring up the image window for the Statue of Liberty photo and paste it there using Ctrl+V.&nbsp; <br><img src="PhotoScreen/LayerAirplaneImport.jpg" alt="LayerAirplaneImport.jpg"><br><br>Woah!&nbsp; Its huge!&nbsp; If we go back and look at it, the picture of the airplane was 640x480, and the picture of the Statue of Liberty was the same dimensions 640x480.&nbsp; That means that something that takes up half of the area in the first picture will also take up half of the area in the second picture.&nbsp; It is important to understand that the zoom level that you have each picture set to doesn't impact how big the item you are pasting is, only the number of pixels it takes up.&nbsp; <br><br>Don't worry though, we can easily re-size the airplane to make it fit better.&nbsp; First, lets make the airplane that we just pasted into the image its own layer.&nbsp; In the layers dialog right click on the layer that says "Floating Selection (Pasted Layer)" and click "New Layer...".&nbsp; Now we have a seperate layer we can play around with.&nbsp; <br><br>To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp; Setting it to about 30% should look right.&nbsp; Do it just like in the section on re-sizing pictures, change the dropdown to say "percent" then put 30% into <span style="font-style: italic;">one</span> of the boxes and click the "Scale" button.<br><br><img src="PhotoScreen/LayerAirplaneCentered.jpg" alt="LayerAirplaneCentered.jpg"><br><br>Now we should have an appropriately sized airplane, but it is right in the middle of the picture, in front of the statue...not a very realistic location for an airplane.&nbsp; It would be nice if we could move it up into the sky.&nbsp; <br><br>To move it, we'll just use the move tool.&nbsp; Pick it from the toolbox<br><img src="PhotoScreen/LayerMoveTool.jpg" alt="LayerMoveTool.jpg"><br>then just click inside the selection box with the airplane, and drag it to a nice spot in the sky.&nbsp; <br><br><img src="PhotoScreen/LayerMove.jpg" alt="LayerMove.jpg"><br><br>That looks pretty good, but what would really sell the picture is if it were flying behind the statue of liberty.&nbsp; Anyone can copy and paste an airplane on top of a picture, but to hide it behind something...that's really going to take a professional!<br><br>To do this, we're going to select an area of the statue, without any of the sky behind it, using our intelligent scissors tool.&nbsp; Then we'll paste that selection into a new layer.&nbsp; Finally we'll put the airplane layer in-between the background layer, and the new layer with part of the statue.<br><br>We don't need to select the whole statue, just enough to get the airplane behind.&nbsp; I think part of the arm should work well.&nbsp; First, be sure to make sure the background layer is the active layer (it will be the highlighted one) by clicking on it.&nbsp; Then use the intelligent scissors tool to select the area.<br><img src="PhotoScreen/LayerArmSelect.jpg" alt="LayerArmSelect.jpg"><br>When you have a good area click inside it (or hit the Enter key) to make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and Ctrl+V to paste.&nbsp; Now you should have a floating selection layer.&nbsp; Right click on it and select new layer to make this part of the arm a new layer.&nbsp; <br><br>Now we have three layers in the image, its getting tough to keep track of which one is which.&nbsp; To make it easier the GIMP will let you set the name of the layer to whatever you want.&nbsp; Just double click on the layer name and type something descriptive like "arm" or "airplane".<br><br><img src="PhotoScreen/LayerNames.png" alt="LayerNames.png"><br><br>Okay, now we have all the pieces in place.&nbsp; All we have left to do is to move the airplane behind the arm of the statue.&nbsp; To do this, make the airplane layer the active one and go click on the move tool.&nbsp; Now just drag the airplane over to the correct spot behind the arm.&nbsp; <br><br><img src="PhotoExamples/Layer-Ex-final.jpg" alt="Layer-Ex-final.jpg"><br><br>I'd say that looks pretty good!<br><br><span style="font-weight: bold;">Exercise</span><br>Here are some more pairs of images you can try this out with.<br><br><a href="PhotoExamples/LayerBackground-A-orig.jpg">LayerBackground-A-orig.jpg</a><br><a href="PhotoExamples/LayerForeground-A-orig.jpg">LayerForeground-A-orig.jpg</a><br><br><a href="PhotoExamples/LayerBackground-B-orig.jpg">LayerBackground-B-orig.jpg</a><br>
+<h3 class="western">Selection and Redeye Correction<br>
+</h3>
+We have all seen photos in the past where the eyes of the subject(s)
+are not their normal color but bright red.&nbsp; There can be various
+levels of this ranging from barely detectable to very bright red.&nbsp;
+This is caused by light from the flash on the camera reflecting off the
+blood vessels on the back of the eye and back to the camera.<br>
+For more info, see: <a href="http://en.wikipedia.org/wiki/Red-eye_effect">http://en.wikipedia.org/wiki/Red-eye_effect</a><br>
+<br>
+Since this is such a common problem in photographs, the GIMP has a
+built in tool for removing it which we will work with in this
+section.&nbsp; <br>
+<br>
+First, lets save <a href="PhotoExamples/Redeye-Ex-orig.jpg">this</a>
+file to your disk, and open it with the GIMP.<br>
+<img src="PhotoExamples/Redeye-Ex-small.jpg" alt="Redeye-Ex-small.jpg"><br>
+<br>
+You can see that there are three examples of red eye here.&nbsp; Two
+(the woman on the left and the man) have a large amount, and the woman
+in the middle just has a little showing.&nbsp; <br>
+<br>
+To correct the red eye, we will run the red eye removal tool.&nbsp; You
+can find it under Filters-&gt;Enhance-&gt;Red Eye Removal.&nbsp; <br>
+<img src="PhotoScreen/RedeyeDialog.jpg" alt="RedeyeDialog.jpg"><br>
+If all works well, you should be able to just click the button and have
+it remove all the red eye.&nbsp; Go ahead and try it now.&nbsp; <br>
+<br>
+Ahhhh!&nbsp; What happened!!!&nbsp; It looks like the people have mold
+growing on them, this is terrible.<br>
+<img src="PhotoExamples/Redeye-Ex-fail.jpg" alt="Redeye-Ex-fail.jpg"><br>
+<br>
+What the tool did was go through the whole photo and find all the spots
+where there was a lot of red, and try to remove it.&nbsp; Unfortunatley
+this photo had lots of spots like that...the people's lips, the woman
+on the left's face, the wall in the background, etc.&nbsp; You could
+try using the slider to lower the threshold so it doesn't pickup as
+much, but that doesn't work very well for this image either, but lets
+try it anyway.&nbsp; <br>
+<br>
+This time lets use the preview window to zoom in on the face of the
+woman on the left.&nbsp; As you move the slider around, you will see
+that before most of the red from her eyes is gone, there are strange
+artifacts showing up on her lips.<br>
+<br>
+<img src="PhotoScreen/RedeyeThresholdFail.jpg" alt="RedeyeThresholdFail.jpg"><br>
+<br>
+Instead of just using this tool, we're going to have to try a different
+tactic to fix this image.&nbsp; We're going to use the selection tool
+to select just her eyes, then run the red eye tool on just that
+selected area.&nbsp; We will soon find that using the selection tool is
+very powerful and the ability to select certain areas of photos make
+almost all the things that you can do with the GIMP possible.&nbsp;
+Even the cropping that we did in the last section is just a set of
+special functionality layered over the selection tool, in fact you can
+do all the things we did in the last section by simply making a
+selection and then clicking Image -&gt; Crop to selection.<br>
+<br>
+Lets start by selecting the Rectangle Select Tool from the toolbox.<br>
+<img src="PhotoScreen/SelectionTool.png" alt="SelectionTool.png"><br>
+<br>
+Using this tool is almost exactly the same as using the crop tool,
+except when you are done you have a selection of the image, not a
+smaller image.&nbsp; Lets use it to create a rectangle around one of
+the woman on the left's eyes.&nbsp; Zoom in if you need to, so you
+don't select too much else.<br>
+<br>
+<img src="PhotoScreen/SelectionOneEye.jpg" alt="SelectionOneEye.jpg"><br>
+<br>
+If you now click inside the selection (or hit Enter) the selection will
+stick, but you don't need to do this, you can run tools on it even
+before it sticks. <br>
+<br>
+Now lets go back and run the Red eye reduction filter again.&nbsp; This
+time we can turn the threshold up a bit higher, because there isn't
+much else that is very red in the image.&nbsp; <br>
+<img src="PhotoScreen/RedEyeOneEye.jpg" alt="RedEyeOneEye.jpg"><br>
+<br>
+Now that we've got that down, we can go ahead and do it to the other
+five eyes in the image.&nbsp; <br>
+<br>
+<img src="PhotoExamples/Redeye-Ex-final-small.jpg" alt="Redeye-Ex-final-small.jpg"><br>
+<br>
+I'd say they are looking much better!&nbsp; Its still not a great
+photograph, but at least they don't look like they are possessed by the
+devil.&nbsp; <br>
+<br>
+<span style="font-weight: bold;">Exercises </span><br>
+These images are all examples of red eye that can be removed by
+selecting the eyes and running the red eye removal tool on them.<br>
+<br>
+<a href="PhotoExamples/Redeye-A-orig.jpg">Redeye-A-orig.jpg</a><br>
+<a href="PhotoExamples/Redeye-B-orig.jpg">Redeye-B-orig.jpg</a><br>
+<a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br>
+<h3 class="western">Advanced Selection and Layers<br>
+</h3>
+<p style="margin-bottom: 0in;">Now that we have some of the basics like
+resizing and selecting down, we're going to get a little more
+advanced.&nbsp; In this section we are going to combine two separate
+pictures into one photo-like image that could conceivable been taken by
+a person with a camera, but wasn't.&nbsp; This is a powerful tool that
+can be used to deceive others by making them think that something
+really happened when in actuality it didn't.&nbsp; Many people have
+tried to deceive others with this, and many have been found, such as
+Iran, trying to show that it launched four missiles when it only
+launched three:
+http://boingboing.net/2008/07/10/iran-you-suck-at-pho.html.&nbsp; As a
+photo editor, it is your job to use these tools responsibly. <br>
+</p>
+<p style="margin-bottom: 0in;">We're going to start by taking a picture
+of an <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">airplane</a>
+putting it into the background of a picture of the <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Statue of Liberty</a>.&nbsp;
+<br>
+</p>
+<br>
+<a href="PhotoExamples/LayerForeground-Ex-orig.jpg">An Airplane<br>
+<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerForeground-Ex-orig.jpg" alt="LayerForeground-Ex-orig.jpg"></a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-Ex-orig.jpg">The Statue of
+Liberty<br>
+<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br>
+
+Go ahead and save those to files to your disk, then open them up in the
+GIMP.&nbsp; Since this is a more complicated project than our past
+ones, we're going to save the Statue of Liberty picture into a separate
+file that GIMP uses to store all the data about the project.&nbsp; This
+is an XCF (eXperimental Computing Facility) file, and it stores all the
+image data in a lossless format, as well as data about layer and
+channels which we will be using for this project.&nbsp; To save as this
+type of file, in the Statue of Liberty image go to File -&gt; Save As,
+then in the name box, change the extension from .jpg to .xcf and click
+the save button.<br>
+<br>
+The basic premise of how we are going to add the airplane into the
+Statue photo is that we are going to select just the airplane (without
+any of the sky background) from its photo, then copy and paste that
+into the statue of liberty.&nbsp; Then we'll get on to another trick to
+make it look even better. <br>
+<br>
+There are several different ways to do the selection.&nbsp; We could do
+the rectangular selection like we did in the last image, but then
+you'll end up with all the sky from the airplane picture that was in
+the box in the statue picture.&nbsp; <br>
+<img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>
+It doesn't look very natural.&nbsp; We'll need to use one of the
+selection tools that will get us <span style="font-style: italic;">just</span>
+the airplane.&nbsp; <br>
+<br>
+The most basic tool for selecting a specific area, of an arbitrary
+shape is the "Free Select" or Lasso tool.&nbsp; This tool will let us
+draw whatever shape we want on the screen, and when we connect the line
+back to the start, it selects that area.&nbsp; <br>
+<br>
+Lets pick the "Free Select" tool.<br>
+<img src="PhotoScreen/LayerFreeSelectTool.jpg" alt="LayerFreeSelectTool.jpg"><br>
+Now that we have the tool selected, we can start to outline the
+airplane.&nbsp; It will be much easier to find the correct points to
+select if you zoom in, I use 400%.&nbsp; Just find a spot on the border
+between the airplane and the sky, and click to make your first
+point.&nbsp; Then move the mouse cursor either clockwise or counter
+clockwise to another nearby pixel that separates that airplane and the
+sky.&nbsp; You will see a line extend between the first point and your
+cursor.&nbsp; Adjust your cursor so that the line follows the edge
+between the airplane and the sky.&nbsp; If you chose the complicated
+area with the landing gear and engines, this could be a very short
+line.&nbsp; On the other had, if you started on the top, this line will
+be quite a bit longer.&nbsp; <br>
+<br>
+Here's my line that started on the top, went over a little bump (an
+antenna) around the cockpit and is currently at the nose:<br>
+<br>
+<img src="PhotoScreen/LayerFreeSelect.jpg" alt="LayerFreeSelect.jpg"><br>
+<br>
+This is going well, but when you keep going and get into the more
+complex parts of the picture, this will start to get <span style="font-style: italic;">very</span> tedious.&nbsp; There are so
+many small parts that it would take hundreds of clicks to make lines
+that accurately separate them out.&nbsp; <br>
+<br>
+A better tool for getting all this complex stuff, is the Intelligent
+Scissors tool.&nbsp; Lets go pick that.<br>
+<img src="PhotoScreen/LayerIntelSciTool.jpg" alt="LayerIntelSciTool.jpg"><br>
+The Intelligent Scissors tool is an interesting piece of equipment: it
+has some features in common with the Lasso, some features in common
+with the Path tool, and some features all its own. It is useful when
+you are trying to select a region defined by strong color-changes at
+the edges. To use the Scissors, you click to create a set of "control
+nodes", also referred to as anchors or control points, at the edges of
+the region you are trying to select. The tool produces a continuous
+curve passing through these control nodes, following any high-contrast
+edges it can find. If you are lucky, the path that the tool finds will
+correspond to the contour you are trying to select. <br>
+<br>
+We can start using it similarly to the Free Select tool, put down a
+point on the edge of the border between the airplane and the sky.&nbsp;
+Then move along that border and place another point.&nbsp; Although,
+this time you won't see a line from the previous point to the cursor,
+you just have to pick a point.&nbsp; Then when you click the computer
+will try to determine what the natural border is that both the points
+are on, and make a line that matches that border.&nbsp; If you are
+still zoomed in to 400%, this will look a bit jagged, that is usually
+because we're dealing with individual pixels at this level and they
+don't follow a very clean border.&nbsp; Don't worry too much about it,
+when we shrink this airplane down to put it in the statue picture, you
+won't be able to tell.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelPoints.jpg" alt="LayerIntelPoints.jpg"><br>
+<br>
+Sometimes the computer won't guess correctly where the line should go,
+as in this case<br>
+<img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>
+For some reason, it decided on a line through the engines, instead of
+between the engines an the sky, but don't despair, its easy to
+fix.&nbsp; We're just going to add another point in between those to to
+make it work out better.&nbsp; Any place you don't like where the
+computer though the line should go, you can easily add a new
+point.&nbsp; Just click the existing line to make the point.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>
+Then click and drag that new point down to the correct place for
+it.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>
+You may have to click and drag more than once for the computer to find
+a line that is good enough for what you're trying to do.&nbsp; Also,
+you don't have to add a new point to move it, you can click and drag
+any point you've created to get it in a better location.&nbsp; The GIMP
+will automatically re-draw the line when you let go.<br>
+<br>
+As you go under the airplane, you probably don't have to worry about
+every tiny little area.&nbsp; When we shrink this picture down, most of
+the details won't be that easy to see.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelNotPerfect.jpg" alt="LayerIntelNotPerfect.jpg"><br>
+<br>
+Once you've made it all the way around the airplane, <br>
+<img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>
+just click inside of your selection to complete it.&nbsp; <br>
+<br>
+Now lets see what just the area we've selected looks like.&nbsp; First
+we're going to copy the selection by hitting the Ctrl+C key
+combination. Then without doing anything to the image window we're
+going to paste it back in there by hitting the Ctrl+V key
+combination.&nbsp; Now if you look at the layers dialog, you will see
+that there is a new Floating Selection listed there. <br>
+<img src="PhotoScreen/LayerPasteFloat.jpg" alt="LayerPasteFloat.jpg"><br>
+We're going to go ahead and make this into a full-fledge layer in the
+image by right clicking on it and selecting "New Layer".&nbsp; Once
+we're done with that, we can see both layers in the layers
+dialog.&nbsp; <br>
+<img src="PhotoScreen/LayerPasteNew.jpg" alt="LayerPasteNew.jpg"><br>
+<br>
+Now that we're using layers, we should probably have a quick
+explanation of what they are.<br>
+<br>
+It is probably easiest to think of layers as a stack of transparencies,
+where the content of what is on each layer is combined together to make
+up the image that we see.&nbsp; It is possible to have a layer that is
+completely colored in, in which case nothing from the layers below that
+can be seen. Likewise, it is possible to use the alpha channel to
+control how transparent something is to the layers below it.&nbsp; For
+instance if we had a bright orange (not transparent) layer on top of an
+image of car, you wouldn't be able to see the car.&nbsp; However, if
+you turned the alpha level of the orange layer down so it was more
+transparent, you could see the car, but it would have an orange tint to
+it.&nbsp; <br>
+<img src="PhotoScreen/LayerDemo-None.jpg" alt="LayerDemo-None.jpg"><br>
+<img src="PhotoScreen/LayerDemo-Full.jpg" alt="LayerDemo-Full.jpg"><br>
+<img src="PhotoScreen/LayerDemo-Half.jpg" alt="LayerDemo-Half.jpg"><br>
+<br>
+In addition, a layer doesn't have to take up the whole area of the
+image.&nbsp; For example, when we pasted the airplane back in to the
+same picture, the layer that was created only consisted of a box big
+enough to contain the selection.&nbsp; You can see its outline above in
+the screen shots where it was pasted.&nbsp; Another example of layers
+that aren't the size of the full image is text.&nbsp; Any time you use
+the text tool to write on an image, it will automatically create a new
+layer that the text is in, and that layer will be a rectangle just
+large enough for the text to fit in to.<br>
+<br>
+But back to our airplane picture. Now that we have a layer that just
+contains the pasted image of the airplane, we can hide the layer with
+everything in it and see just what we pasted.&nbsp; Just click the eye
+icon next to the background image to hide it.&nbsp; <br>
+<img src="PhotoScreen/LayerPasteOnly.jpg" alt="LayerPasteOnly.jpg"><br>
+Now we've got the airplane that we selected (and copy/pasted) and the
+default GIMP background telling us that everything else in the image is
+transparent.&nbsp; <br>
+<br>
+If we zoom in, we can see that our selection wasn't perfect.&nbsp;
+There is a bit of sky remaining around the main landing gear, and a
+triangle between the front landing gear and the wing that extends down
+to the left.<br>
+<img src="PhotoScreen/LayerSkyScraps.jpg" alt="LayerSkyScraps.jpg"><br>
+This isn't going to be a problem, since it will be very small in our
+final image, but we can clean it up just for the practice.&nbsp;&nbsp;
+We're going to use the erase tool to go in and remove those pieces of
+sky.<br>
+<br>
+First lets select the erase tool.&nbsp; <br>
+<img src="PhotoScreen/LayerEraseTool.jpg" alt="LayerEraseTool.jpg"><br>
+<br>
+The eraser is one of the tools that has a brush associated with
+it.&nbsp; A brush is simply the pattern that the tool operates on, the
+most common brushes are circular like, with varying sizes.&nbsp; For
+this I would recommend using a Circle (03) brush, or possibly Circle
+(01) for some of the smaller, more detailed areas.&nbsp; The (03) and
+(01) refer to the size of the brush, so the (01) is smaller.&nbsp; To
+select the correct brush, click the brush picture next to the word
+"Brush:" in the Eraser Tool Options dialog.<br>
+<br>
+<img src="PhotoScreen/LayerBrushSelection.jpg" alt="LayerBrushSelection.jpg"><br>
+<br>
+Now that we have a decent brush, we can use the eraser to remove parts
+of the image that we don't want.&nbsp; Just click once to remove the
+exact amount under the brush, or click and drag around to remove
+wherever you drag the brush.&nbsp; You'll notice that when you remove
+something, you see the gray checkered background.&nbsp; This indicates
+that this layer is now completely transparent in that spot.&nbsp; <br>
+<img src="PhotoScreen/LayerEraseComplete.jpg" alt="LayerEraseComplete.jpg"><br>
+<br>
+Now that we've cleaned up the airplane, its time to import it into the
+photo of the Statue of Liberty.&nbsp; To do that, first we want to
+re-select the cleaned up airplane.&nbsp; Since that is all that is
+current layer (this only works on the current layer, even if the other
+layers are visible) we will only get the airplane when we simply select
+everything.&nbsp; To select everything simply enter the Ctrl+A key
+combination (also the menu Select -&gt; All works).&nbsp; Now you will
+see a line around the whole layer's area.&nbsp; Once again, we're going
+to copy this by hitting Ctrl+C. <br>
+<br>
+Now we have the airplane copied to the clipboard, lets bring up the
+image window for the Statue of Liberty photo and paste it there using
+Ctrl+V.&nbsp; <br>
+<img src="PhotoScreen/LayerAirplaneImport.jpg" alt="LayerAirplaneImport.jpg"><br>
+<br>
+Woah!&nbsp; Its huge!&nbsp; If we go back and look at it, the picture
+of the airplane was 640x480, and the picture of the Statue of Liberty
+was the same dimensions 640x480.&nbsp; That means that something that
+takes up half of the area in the first picture will also take up half
+of the area in the second picture.&nbsp; It is important to understand
+that the zoom level that you have each picture set to doesn't impact
+how big the item you are pasting is, only the number of pixels it takes
+up.&nbsp; <br>
+<br>
+Don't worry though, we can easily re-size the airplane to make it fit
+better.&nbsp; First, lets make the airplane that we just pasted into
+the image its own layer.&nbsp; In the layers dialog right click on the
+layer that says "Floating Selection (Pasted Layer)" and click "New
+Layer...".&nbsp; Now we have a seperate layer we can play around
+with.&nbsp; <br>
+<br>
+To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp;
+Setting it to about 30% should look right.&nbsp; Do it just like in the
+section on re-sizing pictures, change the dropdown to say "percent"
+then put 30% into <span style="font-style: italic;">one</span> of the
+boxes and click the "Scale" button.<br>
+<br>
+<img src="PhotoScreen/LayerAirplaneCentered.jpg" alt="LayerAirplaneCentered.jpg"><br>
+<br>
+Now we should have an appropriately sized airplane, but it is right in
+the middle of the picture, in front of the statue...not a very
+realistic location for an airplane.&nbsp; It would be nice if we could
+move it up into the sky.&nbsp; <br>
+<br>
+To move it, we'll just use the move tool.&nbsp; Pick it from the toolbox<br>
+<img src="PhotoScreen/LayerMoveTool.jpg" alt="LayerMoveTool.jpg"><br>
+then just click inside the selection box with the airplane, and drag it
+to a nice spot in the sky.&nbsp; <br>
+<br>
+<img src="PhotoScreen/LayerMove.jpg" alt="LayerMove.jpg"><br>
+<br>
+That looks pretty good, but what would really sell the picture is if it
+were flying behind the statue of liberty.&nbsp; Anyone can copy and
+paste an airplane on top of a picture, but to hide it behind
+something...that's really going to take a professional!<br>
+<br>
+To do this, we're going to select an area of the statue, without any of
+the sky behind it, using our intelligent scissors tool.&nbsp; Then
+we'll paste that selection into a new layer.&nbsp; Finally we'll put
+the airplane layer in-between the background layer, and the new layer
+with part of the statue.<br>
+<br>
+We don't need to select the whole statue, just enough to get the
+airplane behind.&nbsp; I think part of the arm should work well.&nbsp;
+First, be sure to make sure the background layer is the active layer
+(it will be the highlighted one) by clicking on it.&nbsp; Then use the
+intelligent scissors tool to select the area.<br>
+<img src="PhotoScreen/LayerArmSelect.jpg" alt="LayerArmSelect.jpg"><br>
+When you have a good area click inside it (or hit the Enter key) to
+make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and
+Ctrl+V to paste.&nbsp; Now you should have a floating selection
+layer.&nbsp; Right click on it and select new layer to make this part
+of the arm a new layer.&nbsp; <br>
+<br>
+Now we have three layers in the image, its getting tough to keep track
+of which one is which.&nbsp; To make it easier the GIMP will let you
+set the name of the layer to whatever you want.&nbsp; Just double click
+on the layer name and type something descriptive like "arm" or
+"airplane".<br>
+<br>
+<img src="PhotoScreen/LayerNames.png" alt="LayerNames.png"><br>
+<br>
+Okay, now we have all the pieces in place.&nbsp; All we have left to do
+is to move the airplane behind the arm of the statue.&nbsp; To do this,
+make the airplane layer the active one and go click on the move
+tool.&nbsp; Now just drag the airplane over to the correct spot behind
+the arm.&nbsp; <br>
+<br>
+<img src="PhotoExamples/Layer-Ex-final.jpg" alt="Layer-Ex-final.jpg"><br>
+<br>
+I'd say that looks pretty good!<br>
+<br>
+<span style="font-weight: bold;">Exercise</span><br>
+Here are some more pairs of images you can try this out with.<br>
+<br>
+<a href="PhotoExamples/LayerBackground-A-orig.jpg">LayerBackground-A-orig.jpg</a><br>
+<a href="PhotoExamples/LayerForeground-A-orig.jpg">LayerForeground-A-orig.jpg</a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-B-orig.jpg">LayerBackground-B-orig.jpg</a><br>
 <a href="PhotoExamples/LayerForeground-B-orig.jpg">LayerForeground-B-orig.jpg</a><br>
-<br><a href="PhotoExamples/LayerBackground-C-orig.jpg">LayerBackground-C-orig.jpg</a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-C-orig.jpg">LayerBackground-C-orig.jpg</a><br>
 <a href="PhotoExamples/LayerForeground-C-orig.jpg">LayerForeground-C-orig.jpg</a><br>
-<br><h3 class="western">Adjusting lighting</h3>
-Good lighting is the single most important element needed to take a good photograph.&nbsp; Unfortunately the lighting conditions aren't always good for a photographer.&nbsp; There are&nbsp; some things that can be done by the photographer to work with bad conditions, for example indoors at very close distances they can use a flash, but often the photographer will end up with an image that doesn't have correct lighting. <br><br>Typical results are overexposed (when too much light is picked up by the camera sensor), underexposed (when not enough light is picked up by the camera sensor), and an image where parts are simultaneously over and under exposed.&nbsp; (Right-click the link for each picture and save it to your disk)<br><br><a href="PhotoExamples/Overexposed-Ex-orig.jpg">Overexposed<br><img src="PhotoExamples/Overexposed-Ex-small.jpg" alt="Overexposed-Ex-small.jpg"></a><br><a href="PhotoExamples/Underexposed-Ex-orig.jpg">Underexposed<br><img src="PhotoExamples/Underexposed-Ex-small.jpg" alt="Underexposed-Ex-small.jpg"></a><br><a href="PhotoExamples/Levels-Ex-small.jpg">Parts are over and under exposed.<br><img src="PhotoExamples/Levels-Ex-small.jpg" alt="Levels-Ex-small.jpg"></a><br><br>We are going to go through these three images and try to fix some of the lighting issues with them.&nbsp; Lets start by opening the overexposed photo in the GIMP.<br><br>There are three tools we will look at to fix lighting issues with these image, the first one is by far the simpelest.&nbsp; It it is the Brightness-Contrast tool.&nbsp; You can open it by clicking the menu Color -&gt; Brightness-Contrast... <br><br><img src="PhotoScreen/LevelsBrightTool.jpg" alt="LevelsBrightTool.jpg"><br><br>You can see there are two sliders that adjust brightness and contrast of the image.&nbsp; A way to think of brightness is the average of all the pixels, the closer they all are to white, the brighter the picture is <a href="http://en.wikipedia.org/wiki/Brightness">http://en.wikipedia.org/wiki/Brightness</a>.&nbsp; Contrast represents how much difference there is between the pixels in the image.&nbsp; <a href="http://en.wikipedia.org/wiki/Contrast_%28vision%29">http://en.wikipedia.org/wiki/Contrast_(vision)</a><br>The above image is very bright and rather low contrast.&nbsp; To try to remedy this, lets use the brightness slider to lower the brightness, and then the contrast slider to raise the contrast.<br><img src="PhotoScreen/LevelsBCAdjust.jpg" alt="LevelsBCAdjust.jpg"><br>As you can see, modifying the image in this manner will really bring out the color of the image.&nbsp;&nbsp; Also, you can see more detail, like the features of the snow-covered mountains in the background.&nbsp; When you like how it looks, hit OK for the changes to be written to the image.<br><br>For a simple picture such as this, that might be enough, but sometimes you need a little more control over the picture than just the brightness and contrast.&nbsp; First, lets re-set the picture, to get back to the un-altered version we can just undo (Ctrl+Z) enough times to remove all the changes we've made, or we can simply click File -&gt; Revert to get all the way back.&nbsp; <br>Once we're back to the begeinning, we will modify the image again, with a higher level of control this time.<br>To get to this next level of control, we'll use the Levels dialog, by selecting the Colors -&gt; Levels menu.<br><br><img src="PhotoScreen/LevelsLvlTool.jpg" alt="LevelsLvlTool.jpg"><br>There are three important parts of this tool that we will focus on.&nbsp; The first is the "Channel" drop down.&nbsp; If you click this you will see the options for "Value", "Red", "Green", "Blue", and "Alpha" which is greyed out.&nbsp; We won't be using the R, G, B, or A channels here, but just be aware that you can do the same thing we are going to learn about in a moment to any of the color channels by themselves.&nbsp; <br>Here, we're going to focus on the value channel.&nbsp; Selecting the value channel causes the tool combine all three color channels into one and work with it in that manner, this value channel can be though of as the same image if it was converted to 8-bit black and white.&nbsp; This mode is really called "greyscale" because there can be 256 different levels of grey.&nbsp; Here's the image actually converted to greyscale as an example. <br><img src="PhotoExamples/Overexposed-Ex-grey-small.jpg" alt="Overexposed-Ex-grey-small.jpg"><br>Notice how the image is very bright, almost white.&nbsp; Even the dark areas are only very light grey, definately not black.&nbsp; <br>Looking back at the previous example with the brightness-contrast dialog, we can now get a clearer understanding of what it was doing.&nbsp; The decreasing the brightness changed the all the different shades of the above image to a darker shade of grey and increasing the contrast made the darkest part of the image more dark while leaving the lightest part alone.&nbsp; The only difference is that the GIMP didn't need to have a greyscale image to do this, it could mathematically determine the levels that would correspond to the grey image for the different colors, called the values.&nbsp; <br><br>In the box below the channel selection under the title "Input Levels" is a graph that is called a histogram.&nbsp; This histogram tells us the number of pixels in the image that correspond with each value.&nbsp; Below the histogram is a gradient from black (left) to white (right), this gradient is actually the scale for that axis of the graph.&nbsp; So, the height of the graph over a particular value along that gradient corresponds with the number of pixels that have that value.&nbsp; Because this image is so overexposed, the graph shows that almost all the pixels are to the very far right (white) part of the graph.&nbsp; <br><br>Before we move on, lets look at a picture with a more normal histogram.&nbsp; <br><br><img src="PhotoExamples/LevelsHistogramExample-small.jpg" alt="LevelsHistogramExample-small.jpg"><br>As you can see from the greyscale image on the right, a lot of the image, where there is the grass background, is rather dark, but not quite black.&nbsp; Most of the birds is rather light, but only a tiny section of them is really white.&nbsp; Thus we see a huge part of the graph in the dark section, about a quarter of the way up the graph.&nbsp; We see another peak towards the right where the birds' bodies are, and just a tiny amount trailing off to the completely black and white sections at either end of the graph.&nbsp; <br><br>Getting back to our overexposed picture from the mountains, we can see that the histogram shows that it is almost all completely to the right (white) side of the graph.<br><img src="PhotoScreen/LevelsOverexposedHistogram.png" alt="LevelsOverexposedHistogram.png"><br>In fact, the true white (value of 255) has quite a few pixels.&nbsp; That means that these pixels are completely over exposed (also known as burned), and the areas where there are a lot of these can never be corrected to add more detail.&nbsp; Any information that the camera may have found about them was lost because they are at the maximum value.&nbsp; That is just the limit of the 0-255 scale.&nbsp; However, we can use our tools to bring out some more detail on all those other pixels.<br>For more details about histograms, check out this great website: <a href="http://www.cambridgeincolour.com/tutorials/histograms1.htm">http://www.cambridgeincolour.com/tutorials/histograms1.htm</a><br><br>You will notice under the histogram there are three triangles.&nbsp; We can use these triangles to set the darkest color in the image, the brightest color in the image, and the middle color in the image.&nbsp; To help fix this image, we are going to move the darkest color up.&nbsp; This will cause all the pixels represented in the histogram to the left of where we move the arrow to have their value to set to zero or true black.&nbsp; Every other pixel else in the image will have its value reset so that they take up the entire range from 0 to 255 while keeping their existing relationship to all the other pixels.&nbsp; <br><br><img src="PhotoScreen/LevelsSetLowLevel.jpg" alt="LevelsSetLowLevel.jpg"><br>There, that looks a lot better, we can see all the color of the foreground and make out some features on the mountains in the background.&nbsp; There's one last adjustment we can make here, and that is to change the mid level to tone down some of the bright brown/red colors that have taken on an almost unnatural appearance.&nbsp; Just slide the middle, grey triangle a bit back to the left and check the results.<br><br><img src="PhotoScreen/LevelsSetMidLevel.jpg" alt="LevelsSetMidLevel.jpg"><br>There, that looks pretty good.&nbsp; When you're happy with your settings, click OK to write them to the image.<br><br>Now there's one more tool that we can use that will give us even more control over those colors in the middle, that is the curves tool.&nbsp; After re-setting the image back to the begenning (either use Ctrl+Z or Revert) click Color -&gt; Curves to bring up the dialogue.<br><img src="PhotoScreen/LevelsCurvesTool.jpg" alt="LevelsCurvesTool.jpg"><br>You can see in the background that it has a histogram on it.&nbsp; The only difference is now there is also a gradient on the vertical axis, that corresponds to the line running across the graph.&nbsp; This line is the curve that we will be manipulating.&nbsp; The end of the curve that is on the bottom side of the window corresponds to the dark triangle from the levels dialog, and the end of the curve that is on the upper side corresponds to the white triangle from the levels dialogue.&nbsp; The whole curve in the middle is a much more complicated version of the grey triangle from the levels dialogue.&nbsp; <br><br>We can go ahead and set the low end back up to where we had the dark triangle in the previous example.&nbsp; Once that is done, we can click and drag any point on the line going through the graph to create curves in it.&nbsp; This allows different values in the image to be raised and lowered differently.&nbsp; You can drag multiple parts of the curve to make complex systems of lightening and darkening different original values.<br><img src="PhotoScreen/LevelsCurvesUse.jpg" alt="LevelsCurvesUse.jpg"><br>Here I have moved the low end value up about two thirds of the way across the graph, then the curve jumps a little bit and then levels off giving a dark (but not completely black) value to the pixels near that end.&nbsp; The then increases in the lighter pixels keeping them increasing in lightness up to white.<br><br>From the curves dialog you can quickly and easily play around with lots of different values for the image until you have exactly what you want.&nbsp; Then just click OK to write the change to the image.<br><br>Now that we've got all the tools in hand, lets go and try this on the underexposed example.&nbsp; Lets open it up in the GIMP and jump strait to the curves dialog.<br><img src="PhotoScreen/LevelsUnderexposedCurves.jpg" alt="LevelsUnderexposedCurves.jpg"><br>Here we can see that the histogram is quite a bit broader than it was for the overexposed image.&nbsp; This would have held us back a bit if we were just using the brightness-contrast or levels dialogs, but not in the curves dialog.&nbsp; The first thing we should do is lower the highest value down a bit, to about where the histogram starts trailing off.&nbsp; Just click on the circle along the top and drag it left keeping it on the top until it is over the end of the histogram.&nbsp; The next step is to bring out some of the color in the dark shadows.&nbsp; We can do this by increasing the brightness of the curve while it is in the further left areas of the graph.&nbsp; <br>Continue to experiment with this until you find something that looks good to you, then hit the OK button.&nbsp; <br><br>Finally, lets open up the image that has parts both over and under exposed.&nbsp; When we've got it open, we can see that there is a section on the left, in the trees that is almost completely dark, while at the same time the mountains on the right are too bright and washed out.<br><br>If we go and open the curves dialog we can try to lower the brighness on the bright parts, and raise it on the dark parts, that makes it a little better, but still doesn't make the image look that great.&nbsp; <br><img src="PhotoScreen/LayersOverUnderCurveFail.jpg" alt="LayersOverUnderCurveFail.jpg"><br><br>Instead, what we need to do is lower the highest possible brightness for the dark parts, and raise the lowest possible dark for the bright parts.&nbsp; But how can we do that all in the same image?&nbsp; The trick is that you can use the curves (and levels and brightness-contrast) tool on <span style="font-style: italic;">selections</span> of an image instead of the whole image.&nbsp; So all we have to do is select the dark part, perform a correction there, then select the bright parts and perform a different correction there.<br><br>To do these selections we'll give the fuzzy select tool a try.&nbsp; <br><br><br><br><br><br><h3 class="western">Skin Corrections</h3>
-<p>How to smooth out blemishes, wrinkles, etc</p><br><p><br>
+<br>
+<h3 class="western">Adjusting lighting</h3>
+Good lighting is the single most important element needed to take a
+good photograph.&nbsp; Unfortunately the lighting conditions aren't
+always good for a photographer.&nbsp; There are&nbsp; some things that
+can be done by the photographer to work with bad conditions, for
+example indoors at very close distances they can use a flash, but often
+the photographer will end up with an image that doesn't have correct
+lighting. <br>
+<br>
+Typical results are overexposed (when too much light is picked up by
+the camera sensor), underexposed (when not enough light is picked up by
+the camera sensor), and an image where parts are simultaneously over
+and under exposed.&nbsp; (Right-click the link for each picture and
+save it to your disk)<br>
+<br>
+<a href="PhotoExamples/Overexposed-Ex-orig.jpg">Overexposed<br>
+<img src="PhotoExamples/Overexposed-Ex-small.jpg" alt="Overexposed-Ex-small.jpg"></a><br>
+<a href="PhotoExamples/Underexposed-Ex-orig.jpg">Underexposed<br>
+<img src="PhotoExamples/Underexposed-Ex-small.jpg" alt="Underexposed-Ex-small.jpg"></a><br>
+<a href="PhotoExamples/Levels-Ex-small.jpg">Parts are over and under
+exposed.<br>
+<img src="PhotoExamples/Levels-Ex-small.jpg" alt="Levels-Ex-small.jpg"></a><br>
+<br>
+We are going to go through these three images and try to fix some of
+the lighting issues with them.&nbsp; Lets start by opening the
+overexposed photo in the GIMP.<br>
+<br>
+There are three tools we will look at to fix lighting issues with these
+image, the first one is by far the simplest.&nbsp; It it is the
+Brightness-Contrast tool.&nbsp; You can open it by clicking the menu
+Color -&gt; Brightness-Contrast... <br>
+<br>
+<img src="PhotoScreen/LevelsBrightTool.jpg" alt="LevelsBrightTool.jpg"><br>
+<br>
+You can see there are two sliders that adjust brightness and contrast
+of the image.&nbsp; A way to think of brightness is the average of all
+the pixels, the closer they all are to white, the brighter the picture
+is <a href="http://en.wikipedia.org/wiki/Brightness">http://en.wikipedia.org/wiki/Brightness</a>.&nbsp;
+Contrast represents how much difference there is between the pixels in
+the image.&nbsp; <a href="http://en.wikipedia.org/wiki/Contrast_%28vision%29">http://en.wikipedia.org/wiki/Contrast_(vision)</a><br>
+The above image is very bright and rather low contrast.&nbsp; To try to
+remedy this, lets use the brightness slider to lower the brightness,
+and then the contrast slider to raise the contrast.<br>
+<img src="PhotoScreen/LevelsBCAdjust.jpg" alt="LevelsBCAdjust.jpg"><br>
+As you can see, modifying the image in this manner will really bring
+out the color of the image.&nbsp;&nbsp; Also, you can see more detail,
+like the features of the snow-covered mountains in the
+background.&nbsp; When you like how it looks, hit OK for the changes to
+be written to the image.<br>
+<br>
+For a simple picture such as this, that might be enough, but sometimes
+you need a little more control over the picture than just the
+brightness and contrast.&nbsp; First, lets re-set the picture, to get
+back to the unaltered version we can just undo (Ctrl+Z) enough times
+to remove all the changes we've made, or we can simply click File -&gt;
+Revert to get all the way back.&nbsp; <br>
+Once we're back to the beginning, we will modify the image again, with
+a higher level of control this time.<br>
+To get to this next level of control, we'll use the Levels dialog, by
+selecting the Colors -&gt; Levels menu.<br>
+<br>
+<img src="PhotoScreen/LevelsLvlTool.jpg" alt="LevelsLvlTool.jpg"><br>
+There are three important parts of this tool that we will focus
+on.&nbsp; The first is the "Channel" drop down.&nbsp; If you click this
+you will see the options for "Value", "Red", "Green", "Blue", and
+"Alpha" which is grayed out.&nbsp; We won't be using the R, G, B, or A
+channels here, but just be aware that you can do the same thing we are
+going to learn about in a moment to any of the color channels by
+themselves.&nbsp; <br>
+Here, we're going to focus on the value channel.&nbsp; Selecting the
+value channel causes the tool combine all three color channels into one
+and work with it in that manner, this value channel can be though of as
+the same image if it was converted to 8-bit black and white.&nbsp; This
+mode is really called "grayscale" because there can be 256 different
+levels of gray.&nbsp; Here's the image actually converted to grayscale
+as an example. <br>
+<img src="PhotoExamples/Overexposed-Ex-grey-small.jpg" alt="Overexposed-Ex-grey-small.jpg"><br>
+Notice how the image is very bright, almost white.&nbsp; Even the dark
+areas are only very light gray, definitely not black.&nbsp; <br>
+Looking back at the previous example with the brightness-contrast
+dialog, we can now get a clearer understanding of what it was
+doing.&nbsp; The decreasing the brightness changed the all the
+different shades of the above image to a darker shade of gray and
+increasing the contrast made the darkest part of the image more dark
+while leaving the lightest part alone.&nbsp; The only difference is
+that the GIMP didn't need to have a grayscale image to do this, it
+could mathematically determine the levels that would correspond to the gray image for the different colors, called the values.&nbsp; <br>
+<br>
+In the box below the channel selection under the title "Input Levels"
+is a graph that is called a histogram.&nbsp; This histogram tells us
+the number of pixels in the image that correspond with each
+value.&nbsp; Below the histogram is a gradient from black (left) to
+white (right), this gradient is actually the scale for that axis of the
+graph.&nbsp; So, the height of the graph over a particular value along
+that gradient corresponds with the number of pixels that have that
+value.&nbsp; Because this image is so overexposed, the graph shows that
+almost all the pixels are to the very far right (white) part of the
+graph.&nbsp; <br>
+<br>
+Before we move on, lets look at a picture with a more normal
+histogram.&nbsp; <br>
+<br>
+<img src="PhotoExamples/LevelsHistogramExample-small.jpg" alt="LevelsHistogramExample-small.jpg"><br>
+As you can see from the grayscale image on the right, a lot of the
+image, where there is the grass background, is rather dark, but not
+quite black.&nbsp; Most of the birds is rather light, but only a tiny
+section of them is really white.&nbsp; Thus we see a huge part of the
+graph in the dark section, about a quarter of the way up the
+graph.&nbsp; We see another peak towards the right where the birds'
+bodies are, and just a tiny amount trailing off to the completely black
+and white sections at either end of the graph.&nbsp; <br>
+<br>
+Getting back to our overexposed picture from the mountains, we can see
+that the histogram shows that it is almost all completely to the right
+(white) side of the graph.<br>
+<img src="PhotoScreen/LevelsOverexposedHistogram.png" alt="LevelsOverexposedHistogram.png"><br>
+In fact, the true white (value of 255) has quite a few pixels.&nbsp;
+That means that these pixels are completely over exposed (also known as
+burned), and the areas where there are a lot of these can never be
+corrected to add more detail.&nbsp; Any information that the camera may
+have found about them was lost because they are at the maximum
+value.&nbsp; That is just the limit of the 0-255 scale.&nbsp; However,
+we can use our tools to bring out some more detail on all those other
+pixels.<br>
+For more details about histograms, check out this great website: <a href="http://www.cambridgeincolour.com/tutorials/histograms1.htm">http://www.cambridgeincolour.com/tutorials/histograms1.htm</a><br>
+<br>
+You will notice under the histogram there are three triangles.&nbsp; We
+can use these triangles to set the darkest color in the image, the
+brightest color in the image, and the middle color in the image.&nbsp;
+To help fix this image, we are going to move the darkest color
+up.&nbsp; This will cause all the pixels represented in the histogram
+to the left of where we move the arrow to have their value to set to
+zero or true black.&nbsp; Every other pixel else in the image will have
+its value reset so that they take up the entire range from 0 to 255
+while keeping their existing relationship to all the other
+pixels.&nbsp; <br>
+<br>
+<img src="PhotoScreen/LevelsSetLowLevel.jpg" alt="LevelsSetLowLevel.jpg"><br>
+There, that looks a lot better, we can see all the color of the
+foreground and make out some features on the mountains in the
+background.&nbsp; There's one last adjustment we can make here, and
+that is to change the mid level to tone down some of the bright
+brown/red colors that have taken on an almost unnatural
+appearance.&nbsp; Just slide the middle, gray triangle a bit back to
+the left and check the results.<br>
+<br>
+<img src="PhotoScreen/LevelsSetMidLevel.jpg" alt="LevelsSetMidLevel.jpg"><br>
+There, that looks pretty good.&nbsp; When you're happy with your
+settings, click OK to write them to the image.<br>
+<br>
+Now there's one more tool that we can use that will give us even more
+control over those colors in the middle, that is the curves tool.&nbsp;
+After re-setting the image back to the beginning (either use Ctrl+Z or
+Revert) click Color -&gt; Curves to bring up the dialogue.<br>
+<img src="PhotoScreen/LevelsCurvesTool.jpg" alt="LevelsCurvesTool.jpg"><br>
+You can see in the background that it has a histogram on it.&nbsp; The
+only difference is now there is also a gradient on the vertical axis,
+that corresponds to the line running across the graph.&nbsp; This line
+is the curve that we will be manipulating.&nbsp; The end of the curve
+that is on the bottom side of the window corresponds to the dark
+triangle from the levels dialog, and the end of the curve that is on
+the upper side corresponds to the white triangle from the levels
+dialogue.&nbsp; The whole curve in the middle is a much more
+complicated version of the gray triangle from the levels
+dialogue.&nbsp; <br>
+<br>
+We can go ahead and set the low end back up to where we had the dark
+triangle in the previous example.&nbsp; Once that is done, we can click
+and drag any point on the line going through the graph to create curves
+in it.&nbsp; This allows different values in the image to be raised and
+lowered differently.&nbsp; You can drag multiple parts of the curve to
+make complex systems of lightening and darkening different original
+values.<br>
+<img src="PhotoScreen/LevelsCurvesUse.jpg" alt="LevelsCurvesUse.jpg"><br>
+Here I have moved the low end value up about two thirds of the way
+across the graph, then the curve jumps a little bit and then levels off
+giving a dark (but not completely black) value to the pixels near that
+end.&nbsp; The then increases in the lighter pixels keeping them
+increasing in lightness up to white.<br>
+<br>
+From the curves dialog you can quickly and easily play around with lots
+of different values for the image until you have exactly what you
+want.&nbsp; Then just click OK to write the change to the image.<br>
+<br>
+Now that we've got all the tools in hand, lets go and try this on the
+underexposed example.&nbsp; Lets open it up in the GIMP and jump strait
+to the curves dialog.<br>
+<img src="PhotoScreen/LevelsUnderexposedCurves.jpg" alt="LevelsUnderexposedCurves.jpg"><br>
+Here we can see that the histogram is quite a bit broader than it was
+for the overexposed image.&nbsp; This would have held us back a bit if
+we were just using the brightness-contrast or levels dialogs, but not
+in the curves dialog.&nbsp; The first thing we should do is lower the
+highest value down a bit, to about where the histogram starts trailing
+off.&nbsp; Just click on the circle along the top and drag it left
+keeping it on the top until it is over the end of the histogram.&nbsp;
+The next step is to bring out some of the color in the dark
+shadows.&nbsp; We can do this by increasing the brightness of the curve
+while it is in the further left areas of the graph.&nbsp; <br>
+Continue to experiment with this until you find something that looks
+good to you, then hit the OK button.&nbsp; <br>
+<br>
+Finally, lets open up the image that has parts both over and under
+exposed.&nbsp; When we've got it open, we can see that there is a
+section on the left, in the trees that is almost completely dark, while
+at the same time the mountains on the right are too bright and washed
+out.<br>
+<br>
+If we go and open the curves dialog we can try to lower the brightness
+on the bright parts, and raise it on the dark parts, that makes it a
+little better, but still doesn't make the image look that great.&nbsp; <br>
+<img src="PhotoScreen/OverUnderCurveFail.jpg" alt="OverUnderCurveFail.jpg"><br>
+<br>
+Instead, what we need to do is lower the highest possible brightness
+for the dark parts, and raise the lowest possible dark for the bright
+parts.&nbsp; But how can we do that all in the same image?&nbsp; The
+trick is that you can use the curves (and levels and
+brightness-contrast) tool on <span style="font-style: italic;">selections</span>
+of an image instead of the whole image.&nbsp; So all we have to do is
+select the dark part, perform a correction there, then select the
+bright parts and perform a different correction there.<br>
+<br>
+To do these selections we'll give the fuzzy select tool a try.&nbsp; <br>
+<img src="PhotoScreen/OverUnderFuzzySelect.jpg" alt="OverUnderFuzzySelect.jpg"><br>
+<br>
+Once we have it selected, we click on a pixel in the area we want to
+select, then while holding the mouse button down, move the mouse down
+and left to grow the area.&nbsp; The Fuzzy Select tool will
+automatically grow the area in a way where it selects other nearby
+pixels that have a similar color or value.&nbsp; One tweak that we can
+make to this tool is to enable the "Feather Edges" option in the fuzzy
+select tool options.&nbsp; This will cause the area that it selects to
+blur the line between what is and isn't selected.&nbsp; Doing this will
+cause the level adjustments that we are going to make to decrease
+around the edges so that you don't get sharp differences between
+sections.<br>
+<br>
+So, lets go ahead and pick a pixel in the dark area behind the
+trees.&nbsp; While holding the mouse button down, move the mouse down
+and to the left, you will see the selected area grow.&nbsp; Keep it
+going until you have the dark area in the trees selected, then let go
+of the mouse button.<br>
+<img src="PhotoScreen/OverUnderFuzzySlectDark.jpg" alt="OverUnderFuzzySlectDark.jpg"><br>
+<br>
+Now that we have our selection made, we can go ahead and bring up the
+curves dialog and work our magic.<br>
+<img src="PhotoScreen/OverUnderDarkCurve.jpg" alt="OverUnderDarkCurve.jpg"><br>
+Here I moved the maximum white value down to right where the histogram
+trailed off.&nbsp; I also lowered the dark a little bit at the bottom.
+Click OK, when you're set.<br>
+<br>
+The next step is to select the bright areas.&nbsp; Again we will use
+the fuzzy select tool to select the appropriate area.<br>
+<img src="PhotoScreen/OverUnderOverSelect.jpg" alt="OverUnderOverSelect.jpg"><br>
+Once we have the selection, we'll open up the curves dialog again, and make our correction on this area.<br><img src="PhotoScreen/OverUnderOverCurve.jpg" alt="OverUnderOverCurve.jpg"><br>
+This time I simply moved the lowest dark point up to the bottom of this histogram.&nbsp; When you're happy with your settings click OK.<br><br>And here we have the final image:<br><img src="PhotoExamples/Levels-Ex-final-small.jpg" alt="Levels-Ex-final-small.jpg"><br>Nice and crisp, with lots of details throught the image.&nbsp; <br><br><span style="font-weight: bold;">Exercises</span><br>Here are some more examples of complex images with areas over and under exposed.<br><a href="PhotoExamples/Levels-A-orig.jpg">Levels-A-orig.jpg</a><br><a href="PhotoExamples/Levels-B-orig.jpg">Levels-B-orig.jpg</a><br><a href="PhotoExamples/Levels-C-orig.jpg">Levels-C-orig.jpg</a><br>
+<h3 class="western">Skin Corrections</h3>
+<p>How to smooth out blemishes, wrinkles, etc</p>
+<br>
+<p><br>
 <br>
 </p>
 <h2 class="western">Photoshop</h2>
@@ -1061,10 +1722,12 @@ Channel - The different red-green-blue-alpha components<br>
 Lossless Compression - Storing a file so that it can be perfectly
 re-created<br>
 Lossy Compression - Storing a file so that it is smaller, but loses
-some amount of detail<br>Rotate - Change the orientation of the image.<br>Crop - Cut off the an area around the image. <br>Re-Size - Change the number of pixels that the image is without cutting off any parts of the image.<br>
-
+some amount of detail<br>
+Rotate - Change the orientation of the image.<br>
+Crop - Cut off the an area around the image. <br>
+Re-Size - Change the number of pixels that the image is without cutting
+off any parts of the image.<br>
 Layer - <br>
-
 Selection - <br>
 <br>
 <h2>Attribution</h2>
@@ -1094,5 +1757,56 @@ GNU FDL<br>
 Image Window Descirption, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-image-window.html">http://docs.gimp.org/2.6/en/gimp-image-window.html</a>,
 GNU FDL<br>
 Great Egret Nest, Mike Baird, <a href="http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg">http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg</a>,
-CC-BY<br>Three Friends, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1467377710/">http://www.flickr.com/photos/rharrison/1467377710/</a>, CC-BY-SA<br>Two Dancers, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1551648804/">http://www.flickr.com/photos/rharrison/1551648804/</a>, CC-BY-SA<br>Voo Doo Music Fest, Katrina Szela, <a href="http://www.flickr.com/photos/93017934@N00/287761814/">http://www.flickr.com/photos/93017934@N00/287761814/</a>, CC-BY<br>Mike Roe with Julie and Audrey Quinn, James Emery, <a href="http://www.flickr.com/photos/emeryjl/891366632/">http://www.flickr.com/photos/emeryjl/891366632/</a>, CC-BY<br>Statue of Liberty, Gavcos, <a href="http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg">http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg</a>, CC-BY<br>El Al 747-200, Przemyslaw "Blueshade" Idzkiewicz, <a href="http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg">http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg</a>, CC-BY-SA<br>Intelligent Scissors Tool, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html">http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html</a>, GNU FDL<br>Stock Car Brazil Pace Car, Morio, <a href="http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg">http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg</a>, CC-BY-SA<br>Chicago from UIC, Hied5, <a href="http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG">http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG</a>, CC-BY<br>
-Airplane over Autobahn, poolie, <a href="http://www.flickr.com/photos/poolie/2611727104/">http://www.flickr.com/photos/poolie/2611727104/</a>, CC-BY<br>Chicago skyscrapers, Stephen Hanafin, <a href="http://www.flickr.com/photos/shanafin/3539282102/">http://www.flickr.com/photos/shanafin/3539282102/</a>, CC-BY-SA<br>2007/10/10 EC-HFP, Javier Pedreira, <a href="http://www.flickr.com/photos/wicho/1789307019/">http://www.flickr.com/photos/wicho/1789307019/</a>, CC-BY<br>Frankfurt skyscrapers, Danilo Paissan, <a href="http://www.flickr.com/photos/danilopaissan/2732030140/">http://www.flickr.com/photos/danilopaissan/2732030140/</a>, CC-BY-SA<br>Lufthansa Boeing 737-300, daspaddy, <a href="http://www.flickr.com/photos/daspaddy/3375583143/">http://www.flickr.com/photos/daspaddy/3375583143/</a>, CC-BY<br>Overexposed Mountains, avry xvx, <a href="http://www.flickr.com/photos/kimclit/4438966573/">http://www.flickr.com/photos/kimclit/4438966573/</a>, CC-BY-SA<br>Dark Cloud Over Kota Kinabalu, thienzieyung, <a href="http://www.flickr.com/photos/thienzieyung/4829364637/">http://www.flickr.com/photos/thienzieyung/4829364637/</a>, CC-BY<br>Colchuck Lake, Mahalie Stackpole, <a href="http://www.flickr.com/photos/mahalie/253842823/">http://www.flickr.com/photos/mahalie/253842823/</a>, CC-BY-SA<br>P5290060, Steve Broomfield, <a href="http://www.flickr.com/photos/spikycircle/18070686/">http://www.flickr.com/photos/spikycircle/18070686/</a>, CC-BY<br>Large Rock, Homini:), <a href="http://www.flickr.com/photos/homini/4327478688/">http://www.flickr.com/photos/homini/4327478688/</a>, CC-BY<br>Antler Lake 2, Holly Lawrence, <a href="http://www.flickr.com/photos/goat_girl_photos/228884109/">http://www.flickr.com/photos/goat_girl_photos/228884109/</a>, CC-BY-SA<br>Curly Hair Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870001120/">http://www.flickr.com/photos/seeminglee/870001120/</a>, CC-BY-SA<br>Blue Eyed Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870028244/">http://www.flickr.com/photos/seeminglee/870028244/</a>, CC-BY-SA<br>Circle Glasses Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870005490/">http://www.flickr.com/photos/seeminglee/870005490/</a>, CC-BY-SA<br>Dark Skinned Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/869124633/">http://www.flickr.com/photos/seeminglee/869124633/</a>, CC-BY-SA<br><br><br><br><br>
+CC-BY<br>
+Three Friends, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1467377710/">http://www.flickr.com/photos/rharrison/1467377710/</a>,
+CC-BY-SA<br>
+Two Dancers, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1551648804/">http://www.flickr.com/photos/rharrison/1551648804/</a>,
+CC-BY-SA<br>
+Voo Doo Music Fest, Katrina Szela, <a href="http://www.flickr.com/photos/93017934@N00/287761814/">http://www.flickr.com/photos/93017934@N00/287761814/</a>,
+CC-BY<br>
+Mike Roe with Julie and Audrey Quinn, James Emery, <a href="http://www.flickr.com/photos/emeryjl/891366632/">http://www.flickr.com/photos/emeryjl/891366632/</a>,
+CC-BY<br>
+Statue of Liberty, Gavcos, <a href="http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg">http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg</a>,
+CC-BY<br>
+El Al 747-200, Przemyslaw "Blueshade" Idzkiewicz, <a href="http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg">http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg</a>,
+CC-BY-SA<br>
+Intelligent Scissors Tool, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html">http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html</a>,
+GNU FDL<br>
+Stock Car Brazil Pace Car, Morio, <a href="http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg">http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg</a>,
+CC-BY-SA<br>
+Chicago from UIC, Hied5, <a href="http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG">http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG</a>,
+CC-BY<br>
+Airplane over Autobahn, poolie, <a href="http://www.flickr.com/photos/poolie/2611727104/">http://www.flickr.com/photos/poolie/2611727104/</a>,
+CC-BY<br>
+Chicago skyscrapers, Stephen Hanafin, <a href="http://www.flickr.com/photos/shanafin/3539282102/">http://www.flickr.com/photos/shanafin/3539282102/</a>,
+CC-BY-SA<br>
+2007/10/10 EC-HFP, Javier Pedreira, <a href="http://www.flickr.com/photos/wicho/1789307019/">http://www.flickr.com/photos/wicho/1789307019/</a>,
+CC-BY<br>
+Frankfurt skyscrapers, Danilo Paissan, <a href="http://www.flickr.com/photos/danilopaissan/2732030140/">http://www.flickr.com/photos/danilopaissan/2732030140/</a>,
+CC-BY-SA<br>
+Lufthansa Boeing 737-300, daspaddy, <a href="http://www.flickr.com/photos/daspaddy/3375583143/">http://www.flickr.com/photos/daspaddy/3375583143/</a>,
+CC-BY<br>
+Overexposed Mountains, avry xvx, <a href="http://www.flickr.com/photos/kimclit/4438966573/">http://www.flickr.com/photos/kimclit/4438966573/</a>,
+CC-BY-SA<br>
+Dark Cloud Over Kota Kinabalu, thienzieyung, <a href="http://www.flickr.com/photos/thienzieyung/4829364637/">http://www.flickr.com/photos/thienzieyung/4829364637/</a>,
+CC-BY<br>
+Colchuck Lake, Mahalie Stackpole, <a href="http://www.flickr.com/photos/mahalie/253842823/">http://www.flickr.com/photos/mahalie/253842823/</a>,
+CC-BY-SA<br>
+P5290060, Steve Broomfield, <a href="http://www.flickr.com/photos/spikycircle/18070686/">http://www.flickr.com/photos/spikycircle/18070686/</a>,
+CC-BY<br>
+Large Rock, Homini:), <a href="http://www.flickr.com/photos/homini/4327478688/">http://www.flickr.com/photos/homini/4327478688/</a>,
+CC-BY<br>
+Antler Lake 2, Holly Lawrence, <a href="http://www.flickr.com/photos/goat_girl_photos/228884109/">http://www.flickr.com/photos/goat_girl_photos/228884109/</a>,
+CC-BY-SA<br>
+Curly Hair Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870001120/">http://www.flickr.com/photos/seeminglee/870001120/</a>,
+CC-BY-SA<br>
+Blue Eyed Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870028244/">http://www.flickr.com/photos/seeminglee/870028244/</a>,
+CC-BY-SA<br>
+Circle Glasses Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870005490/">http://www.flickr.com/photos/seeminglee/870005490/</a>,
+CC-BY-SA<br>
+Dark Skinned Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/869124633/">http://www.flickr.com/photos/seeminglee/869124633/</a>,
+CC-BY-SA<br>
+<br>
+<br>
+<br>
+<br>
