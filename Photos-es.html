@@ -1,0 +1,1809 @@
+<h1 class="western">Unit One - Photos</h1>
+<p style="margin-bottom: 0in;">For this unit we will learn some basics
+about digital images and photos, then some simple photo editing in
+the GNU Image Manipulation Program (Gimp), finally we will explore
+Photoshop to see how to do the same things, where available. </p>
+<h2 class="western">Photos</h2>
+<p>Photo files are stored in what is called a "raster" format. This
+means that the image is composed of a grid of points (in rows
+and columns). These points are called pixels, and they contain the
+color for that point. The number of rows and columns that make up
+the grid are called the dimensions. A picture that has 33 Columns
+(width) and 22 Rows (height) has dimensions of 33x22, and has a total
+of 726 pixels. In general the dimensions of digital images are
+always written in the form of "width x height".</p>
+<img src="RasterGraphics/SmileDimensions.png" alt="SmileDimensions.png"><br>
+<p>Modern digital cameras have much, much higher dimensions. They
+are often referred based on how many <b>millions</b><span style="font-weight: normal;">
+of pixels or "megapixels" they have. Some examples are:</span></p>
+<p style="font-weight: normal;">640x480 = 307200 pixels = 0.3
+megapixels<br>
+1024x768 = 786432 pixels = 0.8 megapixels<br>
+1280x960 =
+1228800 pixels = 1.2 megapixels <br>
+1600x1200 = 1920000 pixels = 1.9
+megapixels<br>
+2842x2136 = 6070512 pixels = 6 megapixels<br>
+4000x3000
+= 12000000 pixels = 12 megapixels</p>
+<p style="font-weight: normal;">Looking at all these, they have
+something in common, if the first number is divided by the second
+number, they all approximately equal 1.33. The lowest ratio that
+equals 1.33 is 4/3, so this format of images is said to have a 4:3
+ratio. </p>
+<img src="RasterGraphics/FourThirdsFormula.png" alt="FourThirdsFormula.png"><br>
+<p style="font-weight: normal;">This is usually the standard for
+photography, when the camera is held normally - this is also known as a
+"landscape" orientation. When the camera is held rotated to the side,
+this ratio changes to 3:4 and is called "portrait" orientation.&nbsp;
+Other resolutions will be looked at more in the video
+unit. </p>
+<p><a href="http://en.wikipedia.org/wiki/2D_computer_graphics">http://en.wikipedia.org/wiki/2D_computer_graphics</a></p>
+<p>The reason that cameras have grown the number of megapixels they
+use, is because that (with everything else being equal) larger
+dimensions make the image look better, especially when you print it
+out. A good printer can print photographs at 4800 dots per inch or
+dpi. In this case "inches" (1in = 2.45cm) and "dots" (equal
+to a pixel) are used because of their history in the printing
+industry. </p>
+<p>This means that a 12 megapixel image (4000x3000) could be printed
+out to a 2.1x1.6cm image and every pixel would be visible. </p>
+<img src="RasterGraphics/WidthDPIFormula.png" alt="WidthDPIFormula.png"><img src="RasterGraphics/HeightDPIFormula.png" alt="HeightDPIFormula.png"><br>
+<p>However, if it were printed to a 4.2x3.2cm image, then every pixel
+would be represented by four dots on the paper. If the sizes were
+doubled again to 8.4x6.4cm then every pixel would be represented by
+16 dots on the paper. This starts to become a problem when you have
+an image without that many pixels in it and want to print (or display
+it on a screen) as a large image. At some point, the individual
+pixels become easily visible on the printed image, and that can give
+it a very blocky and unnatural feeling. </p>
+<p>The pictures below are both the same piece of an large image taken
+of a tortoise. The photo on the top is from the full size 12
+megapixel (4000x3000) image. The photo on the bottom was taken at a
+much lower dimension of 640x480. Notice how the pixels of the image
+are clearly visible in the lower image and it doesn't look clear.</p>
+<img src="RasterGraphics/LargeTortoise-cropped.jpg" alt="LargeTortoise-cropped.jpg"><br>
+<br>
+<img src="RasterGraphics/LargeTortoise-small-cropped.jpg" alt="LargeTortoise-small-cropped.jpg"><br>
+<p>As a rule of thumb, it is important to keep the best possible
+image (most pixels), at least while working with it to edit. The
+section on cropping and re-sizing will cover more of the trade-offs
+that can be made when getting a picture ready to print or put on the
+Internet. </p>
+<h3 class="western">Channels</h3>
+<p>In a photograph, one pixel can represent many different colors. To
+express this in a computer, pixels are represented with different
+"channels" for the different colors. A typical image will have
+three channels: Red, Green, and Blue, for images without color, they
+will have a single channel (different shades of gray). Each channel
+states how strong that color is, for example a pixel that has very
+strong red channel and very weak green and blue channels would show
+up as red. A pixel where all three channels are very strong would be
+close to white, and where they are all weak, close to black. <br>
+</p>
+<br>
+<p style="text-align: center;"> see <span class="link">Dot for Dot</span>
+for more information.<img src="RasterGraphics/200px-AdditiveColor.svg.png" alt="200px-AdditiveColor.svg.png"></p>
+<p> </p>
+<p>The following image is an example of pixels and color channels.
+The original image is the tiny face in the upper left corner. In the
+second, enlarged version of the face, you can see the individual
+pixels of the image, arranged in rows and columns, that make up the
+image. Then in the bottom, even more enlarged segment, you can see
+three pixels that make up a small area in the bottom-left corner of
+the image. This segment has the values for the Red, Green, and Blue
+channels written over the top of each pixel.</p>
+<br>
+<p style="text-align: center;"><img src="RasterGraphics/Rgb-raster-en.png" alt="Rgb-raster-en.png"></p>
+<p> </p>
+<p>In this case we can see that to make a medium-gray color we turn
+the Red channel up to 80% of its full intensity, the Green channel
+also up to 80%, and the Blue channel to 77%. Notice that all three
+of these are above 50%, so in all the channel is fairly
+bright....this gray color is a lot closer to white than it is to
+black. Next, to get a dingy brown, we would put the red and green
+channels to 36% and the blue channel only to 13%. Because all these
+are significantly less than 50%, the overall color is dark and
+getting closer to black. Finally, to get a yellow, we turn the red
+and green channels almost all the way up (if we wanted a "true"
+yellow we would turn them all the way up) and leave the blue set at
+zero. </p>
+<p><br>
+<br>
+</p>
+<p>Try out for yourself adjusting the amounts of Red Green and Blue
+in each channel and see what colors you can come up with.</p>
+<p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
+<p><br>
+<br>
+</p>
+<p>Some raster formats also have a channel called "Alpha" that
+specifies how bright the pixel is. If the alpha channel is low, then
+it would be possible for an image that is stacked behind the one
+being show to show through. This is called transparency. If there
+is nothing behind the image, then the default is usually black. </p>
+<h3 class="western">File Types</h3>
+<b>Photo Size</b>
+<p>For a typical photograph, each of the three (Red, Green, and Blue)
+channels are represented by one byte of data for each pixel. This
+means that it requires three bytes of data for each pixel, this is
+often referred to as 24 bit color (24 bits, because 8 bits equals 1
+byte and there are three bytes). Because each byte can hold 2^8 or
+256 different values, each channel can have 256 different levels of
+that color (1/256 or 0.39% change per level if everything is done
+evenly). You may have noticed that the R G and B values on the
+demonstration we used in the channels section only had 256 different
+options, if you don't remember, go back and check it out now:</p>
+<p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
+<p>Because there are three different channels, that means each pixel
+can represent 256x256x256 colors or over 16 million different color
+combinations. That's a lot more than even the largest box of
+crayons. </p>
+<p>For a 12 megapixel image from a modern camera, this means that it
+would require 36 Megabytes (MB) of storage space! That's a lot when
+you go out with your camera and want to take a bunch of pictures. If
+you have a 1 Gigabyte (GB) memory card for your camera, that would
+only allow you to store about 30 images. </p>
+<p>Because of the huge size of files that just contain the pixels,
+people have come up with various ways of compressing images into
+smaller files. These can be put into two different groups: Lossless
+and Lossy. </p>
+<p><b>Lossless Compression </b>
+</p>
+<p>Lossless compression takes the files and finds ways to
+mathematically make them smaller, in a way that can be completely
+un-done. The easiest way to do this is to run the image through a
+general compression tool like zip. Zip is a tool that is available
+on all computers, that goes through any file (not just images) and
+finds ways to make it smaller. One simple way this is done is if
+there are many pixels in an area that are the same color, there can
+be an instruction that when the image is drawn to color that whole
+area in the correct color. That instruction telling what the
+computer to do can be hundreds of times smaller than the amount of
+space it would require to store all the pixels in the area. There
+are many other ways to do this, but they are generally very
+complicated and beyond the scope of this material.</p>
+<p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
+<p><b>Lossy Compression </b>
+</p>
+<p>Lossy compression is different in that once a file is compressed
+there is no way to get back the exact same file, some detail is
+always lost. Since images are made of millions of pixels each
+possible of representing millions of different colors, there is some
+room for removing detail before the human eye would notice any
+difference. This can be done with a combination of the lossless
+compression methods, as well as things like assuming that a color of
+one pixel is similar to the pixels surrounding it, and many more
+complicated methods. Also beyond the scope of this material. </p>
+<p>Below are three examples which illustrate lossy compression. The
+example on the left is the original and was compressed with loss-less
+compression. The middle picture was compressed with lossy
+compression, which was set to not loose very much data. The image on
+the right used lossy compression with very aggressive settings. It
+made a much smaller file size than the middle one (1.1KB vs 9.4 KB)
+but obviously the compression removed parts of the image that are
+important for making it look good.&nbsp; <br>
+</p>
+<br>
+<p style="text-align: center;">&nbsp;<img src="RasterGraphics/LossyDemonstration-Original.png" alt="LossyDemonstration-Original.png"><img src="RasterGraphics/LossyDemonstration-84less.jpg" alt="LossyDemonstration-84less.jpg"><img src="RasterGraphics/LossyDemonstration-98less.jpg" alt="LossyDemonstration-98less.jpg"></p>
+<p> </p>
+<p><a href="http://en.wikipedia.org/wiki/Lossy_compression">http://en.wikipedia.org/wiki/Lossy_compression</a></p>
+<p><b>File Storage</b></p>
+<p>There are many different types of files that are used for images,
+most of which support one or more specific lossless or lossy
+compression methods. Below is an overview of them, there are many
+less-used formats in addition that aren't listed here. See:
+<a href="http://en.wikipedia.org/wiki/Image_file_formats">http://en.wikipedia.org/wiki/Image_file_formats</a>
+(verified at:
+<a href="http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331">http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331</a>
+) or <a href="http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats</a>
+(verified at:
+<a href="http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069">http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069</a>)
+for more information.</p>
+<p><b>Bitmap</b> (.bmp, others) -- Contains all the pixels of the
+image, without compression. The .bmp format specifically is used by
+Microsoft in their programs for displaying images, but similar
+methods are used in all types of computers. As it stores all the
+pixels, this is a lossless format, in fact by default it is not
+compressed at all.</p>
+<p><b>JPEG</b> (.jpg, .jpeg) -- Stands for Joint Photographic
+Experts Group, was developed specifically for storing images taken by
+digital cameras, and is by far the most used format for digital
+photographs. This is a lossy format, however with typical settings
+it is very difficult to detect any image degradation.</p>
+<p><b>PNG</b> (.png) -- Portable Network Graphics is better at
+storing images that don't have a lot of detail, such as graphics on
+websites. This is a lossless format. </p>
+<p><b>GIF</b> (.gif) -- Graphics Interchange Format is similar to
+but older than PNG. In general PNG should be used instead, however
+there is one feature that it has that PNG currently does not, which
+is to be able to have multiple images stored inside it, which can be
+played back as a simple animation. </p>
+<p><b>JPEG2000</b> (.jp2) -- This was an attempt at creating a
+better version of the JPEG format, however it has not been very
+successful, and is mostly used in professional situations such as
+medical imaging. This format has options that can make it lossless
+or lossy. </p>
+<p><b>JPEG XR/HD Photo</b> (.jxr) -- This is another attempt at
+creating a better version of the JPEG format, originally developed by
+Microsoft as "HD Photo" it was submitted to the Joint
+Photographic Experts Group who accepted it as a new standard. It has
+not yet caught on in mainstream use. This format has options that
+can make it lossless or lossy. </p>
+<p><b>WebP</b> (.webp) -- This is a new format developed by Google
+that is designed for replacing JPEG (and some PNG) for use in images
+on the web. It is not currently supported by all web browsers, but
+work is ongoing on it. This format is lossy. </p>
+<p><b>TIFF</b> (.tif, .tiff) -- Tagged Image File Format is used
+mostly for images of documents (such as scans). It has support for
+multiple pages of images, as well as metadata such as where the image
+was collected, who wrote it, etc. Usually it is used as a lossless
+format, but it has the ability to use JPEG or other types of
+compression inside it. </p>
+<p><b>Raw</b> (.raw, .cr2, .crw, .nef, .nrw, dng, and more) -- Raw
+images are not a specific format, but a grouping of many different
+formats, all of which are built from cameras. By default cameras
+usually produce JPEG images, which are lossy and don't contain all
+the basic data that the camera recorded about the image. When a
+photographer gets a raw image, he or she gets all the data that the
+camera collected, which can be useful when doing advanced processing
+of the images on a computer. </p>
+<p><b>XCF</b> (.xcf) -- eXperimental Computing Facility is the name
+of the file format used to store projects in the Gimp photo editor. It
+stores photographs losslessly, and can store multiple layers of
+photos and other data such as text, lines, selections and more.</p>
+<p><b>PSD</b> (.psd) -- PhotoShop Document very similar to the XCF
+format, but used by photoshop. It is also lossless, and can store
+multiple layers of photographs and data. </p>
+<p><br>
+<br>
+</p>
+<p><big>Bonus, non raster-image formats:</big></p>
+<p><b>EXIF</b> - Exchangeable Image File Format is used for metadata
+about the image, it is not a file on its own, but is incorporated
+into other files such as JPEG. It can contain a huge number of
+different data fields including: date the image was taken, camera
+settings, exposure time, aperture size, zoom level, GPS coordinates of
+the camera, direction the camera was facing, and many more. </p>
+<p><b>SVG</b> (.svg) -- Scalable Vector Graphics files are used to
+store images generated on a computer, not photographs. These files
+do not store any pixels, but rather store information about where
+lines, circles, text, and other components are in relationship to
+each other (referred to with vectors). It is called scalable because
+the instructions for creating the image can be given any unit of
+length and make the entire image based on that. In addition the
+instructions for generating the image can include references to
+amounts of time, so the image can change as it is drawn making an
+animation. Because there are no pixels to be calculated, this is an
+inherently lossless format. </p>
+<p><b>EPS</b> (.eps) -- Encapsulated Post Script files are similar to
+SVG files, but somewhat older and has more limited features, such as
+not being able to do animation.</p>
+<h3>Exercises</h3>
+<p>1- Select all of the following image resolutions that are in a 4:3
+ratio?&nbsp; (A typical landscape picture)<br>
+</p>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">1920x1080<br>
+      </td>
+      <td style="vertical-align: top;">1600x1200<br>
+      </td>
+      <td style="vertical-align: top;">640x480<br>
+      </td>
+      <td style="vertical-align: top;">720x480<br>
+      </td>
+      <td style="vertical-align: top;">1280x720<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1000x750<br>
+      </td>
+      <td style="vertical-align: top;">750x1000<br>
+      </td>
+      <td style="vertical-align: top;">720x640<br>
+      </td>
+      <td style="vertical-align: top;">1844x1383<br>
+      </td>
+      <td style="vertical-align: top;">1152x768<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1024x600<br>
+      </td>
+      <td style="vertical-align: top;">3000x4000<br>
+      </td>
+      <td style="vertical-align: top;">1400x1050<br>
+      </td>
+      <td style="vertical-align: top;">8x6<br>
+      </td>
+      <td style="vertical-align: top;">4000x3000<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+2- How many color channels does a 24-bit photograph have?<br>
+A)
+24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B)
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C)
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D) 6<br>
+<br>
+3- What color to you get from a pixel that has the following components
+(8-bit) Red:200, Green:50, Blue:200 ?<br>
+A)
+Orange&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B)
+Brown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C)
+Purple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D) Red<br>
+<br>
+4- What pixel components (8-bit) make the color yellow?<br>
+A) R:255 G:0
+B:255&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B) R:200 G:200
+B:200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C) R:255 G:255 B:
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D) R:100 G:50 B: 220 <br>
+<br>
+5- What is the un-compressed size of a 24-bit, 1600x1200 photo?<br>
+A) 5,760
+KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B) 1,920,000
+B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C) 1,024
+MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D) 576 KB
+<p>6- Lossless images are good for websites where it is important to
+have quick downloads.<br>
+True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+False</p>
+<p>7- Lossless images are good for editing images, where it is
+important to not lose any quality while editing.<br>
+True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+False<br>
+</p>
+8- Which image format is most used by consumer cameras?<br>
+A)
+JPEG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B)
+PNG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C)
+SVG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D)
+TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E) PSD<br>
+<br>
+<h2 class="western">The Gimp</h2>
+<p><acronym class="acronym">GIMP</acronym> is a multi-platform photo
+manipulation tool. <acronym class="acronym">GIMP</acronym> is an
+acronym for <acronym class="acronym">GNU</acronym> Image Manipulation
+Program. The <acronym class="acronym">GIMP</acronym> is suitable for a
+variety of image manipulation tasks, including photo retouching, image
+composition, and image construction. </p>
+<p> <acronym class="acronym">GIMP</acronym> has many capabilities. It
+can be used as a simple paint program, an expert quality photo
+retouching program, an online batch processing system, a mass
+production image renderer, an image format converter, etc. </p>
+<p> <acronym class="acronym">GIMP</acronym> is expandable and
+extensible. It is designed to be augmented with plug-ins and extensions
+to do just about anything. The advanced scripting interface allows
+everything from the simplest task to the most complex image
+manipulation procedures to be easily scripted. </p>
+<p> One of The <acronym class="acronym">GIMP</acronym>'s strengths is
+its free availability from many sources for many operating systems.
+Most <acronym class="acronym">GNU</acronym>/<span class="application">Linux</span>
+distributions include The <acronym class="acronym">GIMP</acronym> as a
+standard application. The <acronym class="acronym">GIMP</acronym> is
+also available for other operating systems such as <span class="productname">Microsoft Windows</span>" or Apple's <span class="productname">Mac OS X</span>" (<span class="application">Darwin</span>).
+The <acronym class="acronym">GIMP</acronym> is a Free Software
+application covered by the General Public License.
+The <acronym class="acronym">GPL</acronym> provides users with the
+freedom to access and alter the source code that makes up computer
+programs. <br>
+</p>
+<p style="margin-bottom: 0in;">Resources: </p>
+<p style="margin-bottom: 0in;">Manual - <a href="http://docs.gimp.org/">http://docs.gimp.org/2.6/en/<br>
+http://docs.gimp.org/2.6/en/</a> - most current version in english<br>
+<a href="http://docs.gimp.org/">http://docs.gimp.org/2.6/es/</a> - most
+current version in spanish, but parts are not yet translated<br>
+<a href="http://docs.gimp.org/2.4/es/">http://docs.gimp.org/2.4/es/</a>
+- Previous version in spanish, complete translation, but some parts are
+out of date<br>
+<a href="http://docs.gimp.org/2.4/en/">http://docs.gimp.org/2.4/en/</a>
+- Previous version in english, some parts are out of date<br>
+</p>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<h3>The Interface</h3>
+<span style="font-weight: bold;">Overview</span><br>
+<img alt="Screenshot of the GIMP in action" src="PhotoScreen/GimpScreenshot.jpg">
+<div class="orderedlist">
+<p> The screenshot above shows the most basic arrangement of <acronym class="acronym">GIMP</acronym> windows that can be used effectively. </p>
+<ol type="1">
+  <li>
+    <p> <span class="emphasis"><em>The Main Toolbox:</em></span>
+Contains a set of icon buttons used to select tools. It may also contain
+the foreground and background colors; brush, pattern, and Gradient; and
+an icon of the active image. Use <span class="guimenu">Edit</span>
+-&gt; <span class="guisubmenu">Preferences</span> -&gt; <span class="guisubmenu">Toolbox</span> to enable, or disable the extra
+items. </p>
+  </li>
+  <li>
+    <p> <span class="emphasis"><em>Tool options:</em></span> Docked
+below the main Toolbox is a Tool Options dialog, showing options for
+the currently selected tool (in this case, the paintbrush tool). </p>
+  </li>
+  <li>
+    <p> <span class="emphasis"><em>An image window:</em></span> Each
+image open in <acronym class="acronym">GIMP</acronym> is displayed in
+a separate window. Many images can be open at the same time, limited by
+only the system resources. Before you can do anything useful in <acronym class="acronym">GIMP</acronym>, you need to have at least one image
+window open. The image window holds the Menu of the main commands of <acronym class="acronym">GIMP</acronym> (File, Edit, Select...), which you can
+also get by right-clicking on the window. </p>
+  </li>
+  <li>
+    <p> The <span class="emphasis"><em>Layers, Channels, Paths</em></span>
+dock with the Layers Dialog open; note that there are several tabs at
+the top of area, each of these is a different dialog. This dialog
+window that is open shows the layer structure of the currently active
+image, and allows it to be manipulated in a variety of ways. It is
+possible to do a few very basic things without using the Layers dialog,
+but even moderately sophisticated <acronym class="acronym">GIMP</acronym>
+users find it indispensable to have the Layers dialog available at all
+times. </p>
+  </li>
+  <li>
+    <p> <span class="emphasis"><em>Brushes/Patterns/Gradients:</em></span>
+The docked dialog below the layer dialog shows the dialogs (tabs) for
+managing brushes, patterns and gradients. </p>
+  </li>
+</ol>
+</div>
+<p> This is a minimal setup. There are over a dozen other types of
+dialogs used by <acronym class="acronym">GIMP</acronym> for various
+purposes, but users typically open them when they need them and close
+them when they are done. Knowledgeable users generally keep the Toolbox
+(with Tool Options) and Layers dialog open at all times. The Toolbox is
+essential to many <acronym class="acronym">GIMP</acronym> operations;
+in fact, if you close it, <acronym class="acronym">GIMP</acronym> will
+exit after confirming that that is actually what you want to do. The
+Tool Options section is actually a separate dialog, shown docked to the
+Main Toolbox in the screenshot. Knowledgeable users almost always have
+it set up this way: it is very difficult to use tools effectively
+without being able to see how their options are set. The Layers dialog
+comes into play when you work with an image with multiple layers: after
+you advance beyond the most basic stages of <acronym class="acronym">GIMP</acronym>
+expertise, this means <span class="emphasis"><em>almost always</em></span>.
+And of course it helps to display the images you're editing on the
+screen; if you close the image window before saving your work, <acronym class="acronym">GIMP</acronym> will ask you whether you want to close
+the file. <br>
+</p>
+<p><span style="font-weight: bold;">The Image Window</span><br>
+</p>
+<p><img src="PhotoScreen/imagewindow-description.png" alt="GIMP Image Window"></p>
+<br>
+<div class="orderedlist">
+<p> An image window exists, even if no image is open. The Title Bar in
+an image window without an image reads <span class="quote">"<span class="quote">GNU Image Manipulating Program</span>"</span>. An image
+window with an image displays the image name and its specifications in
+the title bar according to the settings in <span class="link">Preference
+Dialog</span>. Each window displays exactly one image, or no image if
+no image is open. Each image is displayed in one or more image windows;
+it is unusual to display the same image in more than one window. We
+will begin with a brief description of the components that are present
+by default in an ordinary image window. Some of the components can be
+removed by using commands in the <span class="link">View</span> menu. </p>
+<ol class="orderedlist" type="1">
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Title Bar:</em></span> The top of
+the image window typically displays a Title Bar with the name of the
+image and some basic information about the image. The Title Bar is
+provided by the operating system, not by <acronym class="acronym">GIMP</acronym>,
+so its appearance is likely to vary with the operating system, window
+manager, and/or theme. Use the <span class="link">Preferences dialog</span>
+to customize the information that appears in the Title Bar. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Image Menu:</em></span> Directly
+below the Title Bar appears the Image Menu (unless it has been
+suppressed). The Image Menu provides access to nearly every operation
+you can perform on an image. You can also right-click on an image to
+display a pop-up image menu, or by left-clicking on the little&nbsp;<span class="quote"><span class="quote">arrow</span></span> symbol in the
+upper left corner, called the <span class="emphasis"><em>Menu Button:</em></span>,
+if for some reason you find one of these more convenient. Many menu
+commands are also associated with keyboard <span class="emphasis"><em>shortcuts</em></span>
+as shown in the menu. You can define your own custom shortcuts for menu
+actions, if you enable <span class="link"> Use Dynamic Keyboard
+Shortcuts</span> in the Preferences dialog. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Menu Button:</em></span> Click the
+Menu Button to display the Image Menu in a column. If you like to use
+keyboard shortcuts, use <span class="keycap"><strong>Shift</strong></span>+<span class="keycap"><strong>F10</strong></span> to open the menu. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Ruler:</em></span> In the default
+layout, rulers are shown above and to the left of the image. Use the
+rulers to determine coordinates within the image. The default unit for
+rulers is pixels; use the settings described below to use a unit other
+than pixels. </p>
+    <p> One of the most important uses of rulers is to create <span class="emphasis"><em>guides</em></span>. Click and drag a ruler into
+the image to create a guide. A guide is a line that helps you
+accurately position things or verify that another line is truly
+horizontal or vertical. Click and drag a guide to move it. Drag a guide
+out of the image to delete it; you can always drag another guide into
+the image. You can even use multiple guides at the same time. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>QuickMask Toggle:</em></span> The
+small button in the lower left corner of the image toggles the Quick
+Mask on and off. When the Quick Mask is on, the button is outlined in
+red. See <span class="link">QuickMask</span> in the GIMP manual for
+more details on this highly useful tool. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Pointer Coordinates:</em></span>
+When the pointer (mouse cursor, if you are using a mouse) is within the
+image boundaries, the rectangular area in the lower left corner of the
+window displays the current pointer coordinates. The units are the same
+as for the rulers. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Units Menu:</em></span> Use the
+Units Menu to change the units used for rulers and several other
+purposes. The default unit is pixels, but you can quickly change to
+inches, cm, or several other possibilities using this menu. Note that
+the setting of <span class="quote">"<span class="quote">Dot for dot"</span></span>
+in the View menu affects how the display is scaled: see <span class="link">Dot for Dot</span> in the GIMP manual for more
+information. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Zoom Button:</em></span> There are
+a number of ways to zoom the image in or out, but the Zoom Button is
+perhaps the simplest. With GIMP-2.6, you can directly enter a zoom
+level in the text box for very fine control. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Status Area:</em></span> The Status
+Area is at the bottom of the image window. By default, the Status Area
+displays the active part of the image, and the amount of system memory
+used by the image. Use <span class="guimenu">Edit</span> -&gt; <span class="guisubmenu">Preferences</span> -&gt; <span class="guimenuitem">Image
+Windows</span> -&gt; <span class="guimenuitem">Title &amp; Status</span>
+to customize the information displayed in the Status Area. During
+time-consuming operations, the status area temporarily shows the
+running operation and how complete the operation is.<br>
+    <br>
+Note that the memory used by the image is very different from the image
+file size. For instance, a 70Kb .PNG image may occupy 246Kb in memory
+when displayed. There are two primary reasons the difference in memory
+usage. First, a .PNG file is compressed format, and the image is
+reconstituted in memory in uncompressed form. Second, <acronym class="acronym">GIMP</acronym> uses extra memory, and copies of the
+image, for use by the Undo command.</p>
+  </li>
+  <li class="listitem">
+    <p><span class="emphasis"><em>Cancel Button:</em></span> During
+complex time-consuming operations, usually a plug-in, a Cancel button
+temporarily appears in the lower right corner of the window. Use the
+Cancel button to stop the operation.</p>
+  </li>
+  <li class="listitem">
+    <p><span class="emphasis"><em>Navigation Control:</em></span> This
+is a small cross-shaped button at the lower right corner of the image
+display. Click and hold (do not release the mouse button) on the
+navigation control to display the Navigation Preview. The Navigation
+Preview has a miniature view of the image with the displayed area
+outlined. Use the Navigation Preview To quickly pan to a different part
+of the image move the mouse while keeping the button depressed. The
+Navigation Window is often the most convenient way to quickly navigate
+around a large image with only a small portion displayed. (See <span class="link">Navigation Dialog</span> for other ways to access the
+Navigation Window). (If your mouse has a middle-button, click-drag with
+it to pan across the image). </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Inactive Padding Area:</em></span>
+This padding area separates the active image display and the inactive
+padding area, so you're able to distinguish between them. You cannot
+apply any Filters or Operations in general to the inactive area. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Image Display:</em></span> The most
+important part of the image window is, of course, the image display or
+canvas. It occupies the central area of the window, surrounded by a
+yellow dotted line showing the image boundary, against a neutral gray
+background. You can change the zoom level of the image display in a
+variety of ways, including the Zoom setting described below. </p>
+  </li>
+  <li class="listitem">
+    <p> <span class="emphasis"><em>Image Window Resize Toggle:</em></span>
+Without enabling this feature, if you change the size of the image
+window, the image size and zoom does not change. If you make the window
+larger, for example, then you will see more of the image. If this
+button is pressed, however, the image resizes when the window resizes
+so that (mostly) the same portion of the image is displayed before and
+after the window is resized.</p>
+  </li>
+</ol>
+</div>
+Drag and drop an image into the Toolbox window to open the image in its
+own Image window. This is very different than dragging an image into an
+existing Image window, which adds it to the currently open image in a
+new layer usually not what you want.<br>
+<br>
+<span style="font-weight: bold;">Undoing</span><span style="font-weight: bold;"><br>
+</span>
+<p> Almost anything you do to an image in <acronym class="acronym">GIMP</acronym>
+can be undone. You can undo the most recent action by choosing <span class="guimenu">Edit</span> -&gt; <span class="guimenuitem">Undo</span>
+from the image menu, but this is done so frequently that you really
+should memorize the keyboard shortcut, <span class="keycap"><strong>Ctrl</strong></span>+<span class="keycap"><strong>Z</strong></span>. </p>
+<p> Undoing can itself be undone. After having undone an action, you
+can <span class="emphasis"><em>redo</em></span> it by choosing <span class="guimenu">Edit</span> -&gt; <span class="guimenuitem">Redo</span>
+from the image menu, or use the keyboard shortcut, <span class="keycap"><strong>Ctrl</strong></span>+<span class="keycap"><strong>Y</strong></span>. It is often helpful to judge
+the effect of an action by repeatedly undoing and redoing it. This is
+usually very quick, and does not consume any extra resources or alter
+the undo history, so there is never any harm in it.</p>
+<p> If you undo one or more actions and then operate on the image in
+any way except by using Undo or Redo, it will no longer be possible to
+redo those actions: they are lost forever. The solution to this, if it
+creates a problem for you, is to duplicate the image and then test on
+the copy. ( Do <span class="emphasis"><em>Not</em></span> test the
+original, because the undo/redo history is not copied when you
+duplicate an image.)</p>
+<p>If you often find yourself undoing and redoing many steps at a time,
+it may be more convenient to work with the <span class="link">Undo
+History dialog</span>, a dockable dialog that shows you a small sketch
+of each point in the Undo History, allowing you to go back or forward
+to that point by clicking. </p>
+Undo is performed on an image-specific basis: the "Undo History" is one
+of the components of an image. <acronym class="acronym">GIMP</acronym>
+allocates a certain amount of memory to each image for this purpose.
+You can customize your Preferences to increase or decrease the amount,
+using the <span class="link">Environment</span> page of the
+Preferences dialog. There are two important variables: the <span class="emphasis"><em>minimal number of undo levels</em></span>, which <acronym class="acronym">GIMP</acronym> will maintain regardless of how much
+memory they consume, and the <span class="emphasis"><em>maximum undo
+memory</em></span>, beyond which <acronym class="acronym">GIMP</acronym>
+will begin to delete the oldest items from the Undo History.
+<p><acronym class="acronym">GIMP</acronym>'s implementation of Undo is
+rather sophisticated. Many operations require very little Undo memory
+(e.g., changing visibility of a layer), so you can perform long
+sequences of them before they drop out of the Undo History. Some
+operations, such as changing layer visibility, are <span class="emphasis"><em>compressed</em></span>, so that doing them
+several times in a row produces only a single point in the Undo
+History. However, there are other operations that may consume a lot of
+undo memory. Most filters are implemented by plug-ins, so the <acronym class="acronym">GIMP</acronym> core has no efficient way of knowing
+what changed. As such, there is no way to implement Undo except by
+memorizing the entire contents of the affected layer before and after
+the operation. You might only be able to perform a few such operations
+before they drop out of the Undo History. </p>
+Most actions that alter an image can be undone. Actions that do not
+alter the image generally cannot be undone. Examples include saving the
+image to a file, duplicating the image, copying part of the image to
+the clipboard, etc. It also includes most actions that affect the image
+display without altering the underlying image data. The most important
+example is zooming. There are, however, exceptions: toggling QuickMask
+on or off can be undone, even though it does not alter the image data.
+<p> There are a few important actions that do alter an image but cannot
+be undone, specifically: Closing the Image, Reverting the Image, and
+"Pieces" of Actions. </p>
+<span style="font-weight: bold;">Opening and Saving an Image</span><br>
+Here we will use the GIMP to open, modify and save our image.&nbsp; For
+starters, lets grab an image, right click on <a href="PhotoExamples/Open-Ex-small.jpg">this image link</a>, and
+select the option to save it to the disk. <br>
+<br>
+Now, lets open up the GIMP program.&nbsp; Once it is open, use the
+File-&gt;Open... command to bring up the File Open dialog.&nbsp; Select
+the file that you just saved to the disk an click the "Open"
+button.&nbsp; <br>
+<br>
+Your screen should now look something like this.<br>
+<br>
+<img src="PhotoScreen/OpenImage.jpg" alt="OpenImage.jpg"><br>
+<br>
+Congratulations...you're successfully using the GIMP!<br>
+<br>
+Now, lets do something to the image, and save it as a different file.<br>
+<br>
+Click the paintbrush button:<br>
+<img src="PhotoScreen/SelectPaint.jpg" alt="SelectPaint.jpg"><br>
+<br>
+Now go ahead and draw something on top of the image...don't worry about
+what it looks like.&nbsp; If you want to start over, use the "Revert"
+command.&nbsp; Simply click File -&gt; Revert.&nbsp; <br>
+<br>
+<img src="PhotoExamples/Open-Ex-color.jpg" alt="Open-Ex-color.jpg"><br>
+<br>
+Now that we're done drawing, we want to save it, but we don't want to
+overwrite the original file.&nbsp; So, we're going to go to File -&gt;
+Save As... and pick a new name and a location to save to on the
+disk.&nbsp; Be sure that the file name ends in .jpg (or .jpeg) so that
+the GIMP knows how to save it correctly.&nbsp; Then click the save
+button.&nbsp; <br>
+<br>
+Now you will see a dialog asking what quality you want your image to be
+saved at. The higher the number, the less data is lost during the lossy
+compression and the larger the file.&nbsp; Lower numbers will give you
+smaller files, but will cause the image to look bad!&nbsp; To help
+figure out what kind of trade-off between size and quality you should
+make, click the box for "Show preview in image window".&nbsp; You may
+have to drag that dialog or the "Save Image" dialog out of the way to
+see your image as the preview is applied.&nbsp; When you're happy with
+it, click the save button.<br>
+<br>
+Here's an example of setting the quality very low, which makes the
+preview image look terrible....I didn't save it like this!<br>
+<br>
+<img src="PhotoScreen/SaveOptions.jpg" alt="SaveOptions.jpg"><br>
+<br>
+Congratulations, you're well on your way to working with photos in the
+GIMP!<br>
+<br>
+<h3 class="western">Rotation, Cropping, Re-sizing<br>
+</h3>
+Rotating, cropping, and re-sizing are three of the most basic, and
+easiest ways you can transform an image to make it match what you need
+from it.&nbsp;&nbsp;
+<p style="margin-bottom: 0in;">For the activities in this section, we
+will work with the image you can get from <a href="PhotoExamples/PhotoCrop-Ex-orig.jpg">this link here</a>, right
+click on the link and save it to your disk.&nbsp; <br>
+</p>
+<p style="margin-bottom: 0in;"><span style="font-weight: bold;">Rotation</span><br>
+</p>
+<p style="margin-bottom: 0in;">When working with photographs, you will
+often come across ones where the photographer wasn't holding the camera
+perfectly level while they took the image.&nbsp; This is easy to
+correct in the GIMP by rotating the image back in to level.&nbsp;&nbsp;
+Once we have the image open, we will select the rotate tool from the
+toolbox.</p>
+<p style="margin-bottom: 0in;"><img src="PhotoScreen/RotateSelect.jpg" alt="RotateSelect.jpg"></p>
+<p style="margin-bottom: 0in;">Once you are in the rotate tool, simply
+click on the picture and while you are still holding down the mouse
+button, move the mouse.&nbsp; This will spin the image around, just
+spin it to an orientation that looks correct.&nbsp; The post that the
+subject is leaning against should be vertical and the light/shadow line
+just under her should be horizontal, but it doesn't have to be exact,
+just close enough to look good.&nbsp; If it helps, you can use the zoom
+button at the bottom of the image window to zoom in closer on the
+subject.<br>
+</p>
+<p style="margin-bottom: 0in;"><img src="PhotoScreen/RotateInProgress.jpg" alt="RotateInProgress.jpg"></p>
+<p style="margin-bottom: 0in;">When you are done moving it, and you
+like how it looks, click the Rotate button. The GIMP will process the
+image for a moment, and then you will have your new, rotated
+image!&nbsp; (You can save now to make sure you don't loose your work)<br>
+</p>
+<p style="margin-bottom: 0in;"><img src="PhotoScreen/RotationComplete.jpg" alt="RotationComplete.jpg"></p>
+<p style="margin-bottom: 0in;">But now we have a bit of a
+problem!&nbsp; The image has gray checkered borders!&nbsp; (This gray
+checkered pattern is what the GIMP displays when there is nothing
+there, it means that those pixels of the image are completely
+blank.)&nbsp; Since we took a rectangular image and rotated it while
+continuing to display it in a rectangular area, we had gaps appear (and
+other areas disappeared).&nbsp; This usually isn't a big problem, if
+you are otherwise happy with the image, you can just use the cropping
+tool to cut the image down a little bit.&nbsp; However, we're not happy
+with the image yet, so we're going to do some other things first...</p>
+<p style="margin-bottom: 0in;"><span style="font-weight: bold;">Cropping</span><br>
+</p>
+<p style="margin-bottom: 0in;">First, the word.&nbsp; In general the
+word to "crop" is used in all kinds of publishing, art, graphic design,
+photography, etc., it just means to cut the edges off of
+something.&nbsp; <br>
+</p>
+<p style="margin-bottom: 0in;">There are two main reasons to crop a
+photo.&nbsp; The first is the subject only takes up a small area of the
+photo.&nbsp; In this case, you can crop the photo down so that the
+subject is the majority of what is being shown.&nbsp; The second
+important reason to crop an image is to improve the spacing between
+various elements in the image.&nbsp; This is a little more complicated
+than the first reason.&nbsp; Most amateurs who take photos
+incorrectly believe that the picture will look the best when the
+subject of the image is directly in the center.&nbsp; However, over the
+years artists have figured out that this isn't correct.&nbsp; It is
+more pleasing to the human eye when subjects are 1/3 or 2/3 of the way
+across or down an image.&nbsp; <br>
+<br>
+Think of your image in terms of a grid. The ideal locations for a
+subject are at the intersections of the lines, represented on this
+diagram by gray dots.&nbsp; If that isn't possible, or feasible, then
+you can try to line up large features under the vertical and horizontal
+lines. <br>
+</p>
+<img style="width: 310px; height: 231px;" src="PhotoExamples/ThirdsGrid.png" alt="ThirdsGrid.png"><br>
+It can often be tricky to figure out what are the subjects, or fit all
+the important features in a photo and still use the rule of
+thirds.&nbsp;
+Don't worry!&nbsp; This isn't an exact science, its just a good rule of
+thumb to keep in mind. <br>
+<br>
+For an example, there are two images below.&nbsp; The one on the right
+has the large rock outcrop centered in the middle of the image.&nbsp;
+The one on the right uses the rule of thirds to put the rock outcrop
+1/3 of the way over from the left side.&nbsp; Additionally, the horizon
+(where the rocks meet the sky) is 1/3 of the way up from the top and
+the parallel clouds take up the top 1/3 of the image.&nbsp; <br>
+<img style="width: 100%;" src="PhotoExamples/ThirdsSideBySideAnimation.gif" alt="ThirdsSideBySideAnimation.gif">
+<p style="margin-bottom: 0in;">You may notice that the one on the left
+feels somewhat more open, and less crowded.&nbsp; It is generally
+better to not have crowded photos.&nbsp; Additionally, notice that to
+get this less crowded feeling, the size of the features didn't have to
+be changed.&nbsp; The rock and the background are the same size in both
+images.&nbsp; <br>
+</p>
+<br>
+Lets continue with the image we were working on before.&nbsp; To crop,
+we will select the crop tool from the toolbox:<br>
+<img src="PhotoScreen/CropTool.jpg" alt="CropTool.jpg"><br>
+<br>
+We can go ahead and crop the picture down so that just the interesting
+stuff in the center around the subject is visible.&nbsp; Move the mouse
+to
+the upper-left corner of the area you want to be visible.&nbsp; Then
+click
+the mouse button, and while you are holding it down, move the mouse to
+the lower-right corner of the area you want.&nbsp; The GIMP darkens the
+area that will be cut-off, so that the clear area will be what remains
+after the crop.&nbsp; When you are happy with the area, let go of the
+mouse button. <br>
+<br>
+<img src="PhotoScreen/CropSimple.jpg" alt="CropSimple.jpg"><br>
+If you then decide you want to change the area some how, you can hover
+your mouse button over the area near the edges.&nbsp; It will pop up a
+box indicating that you are going to change that edge (works with
+corners also, then two edges will move). In the above example, I have
+the box up for the right edge of the crop area.&nbsp; To move this
+edge, just hold down the mouse button and move it until you are happy
+with the new area.&nbsp; When you are done click the mouse button once
+somewhere inside the clear area to complete the crop.&nbsp; <br>
+<br>
+But hang on, as was discussed previously, 4:3 is generally a good ratio
+for photographs, so it would be nice if the image we had when we were done
+was still 4:3.&nbsp; Luckily the GIMP crop tool has an option that can
+be set for just this purpose.&nbsp; We do this in the "Tool Options"
+dialog below the toolbox.&nbsp; You may have noticed that when we
+selected the crop tool, this dialog automatically changed to the
+options for the crop tool.&nbsp; This will happen whenever you select a
+new tool, so that the options displayed here always match the tool you
+are working with.<br>
+We're going to go ahead and check the box in front of "Fixed:" and
+select the "Aspect Ratio" option from the box.&nbsp; Then in the text
+field just below that line, we will put in the ratio of 4:3.&nbsp; <br>
+<br>
+<img src="PhotoScreen/CropAspect.jpg" alt="CropAspect.jpg"><br>
+<br>
+Now, try cropping the image again, to get back to the image one step
+before hit the buttons "Ctrl" + "z" one time to undo your previous
+crop.&nbsp; (You can also do this in the menu Edit-&gt;Undo Crop Image)
+You notice that when you move your mouse to select the area that will
+be kept, the box is a bit more rigid.&nbsp; With the fixed aspect
+ratio, it is not possible to increase one of the sides without
+increasing one of the adjacent ones.&nbsp; <br>
+<br>
+Alas, we're not quite done...we haven't used our rule-of-thirds yet on
+the area that we're going to crop.&nbsp; Again, The GIMP is there to
+help us with this.&nbsp; The crop tool has an option for displaying a
+"Guide" that puts lines for the rule of thirds up in your window as you
+select your area.&nbsp; To activate it simply select "Rule of thirds"
+from the guides selection drop-down in the Crop tool box.&nbsp; (It
+probably currently says "No guides" in your tool options)<br>
+<img src="PhotoScreen/CropThirdsGuide.jpg" alt="CropThirdsGuide.jpg"><br>
+<br>
+Alright, now we're set for our final try at cropping.&nbsp; If you
+currently have an already cropped image on your screen, hit Ctrl+Z
+until you get back to the image you had after you rotated it.&nbsp; Now
+select an area that has the subject occupying a large part of the area,
+is in 4:3 ratio, and uses the rule of thirds and crop it!<br>
+<img src="PhotoScreen/CropFinal.jpg" alt="CropFinal.jpg"><br>
+<br>
+And now we get our final, cropped image:<br>
+<img src="PhotoExamples/PhotoCrop-Ex-cropped.jpg" alt="PhotoCrop-Ex-cropped.jpg"><br>
+<br>
+<span style="font-weight: bold;">Re-Sizing</span><br>
+You may have noticed that the image that we just finished with took up
+most of your browser window, even after we cropped off a huge part of
+it.&nbsp; Since digital cameras these days are capable of taking such
+large, high-resolution pictures, this is a fairly common problem when
+pictures are used on the web.&nbsp; It is possible to have the site
+tell the web browser to shrink the picture and not display it at full
+size, but then you still have to transfer the whole picture.&nbsp;
+Because the picture is so big, it has to store all those pixels, and
+the file size is also big.&nbsp; The above image is 131KB, which isn't
+huge, but it can make the site slow to load, especially if you have
+lots of pictures like that.&nbsp; Instead, what should be done, is the
+image should be re-sized down to be the correct size for
+displaying.&nbsp; Changing the size in this manner will not change what
+it looks like on the web site (if displayed at the same
+resolution).&nbsp; This is different from using the quality selector
+when saving the image, as that does change how the image looks (just
+hopefully not so the eye can make it out).&nbsp; <br>
+<br>
+A quick note, there is almost never a good reason to re-size a picture
+to something larger.&nbsp; When you make it smaller, the program doing
+the shrinking can easily take out pixels to make it the correct
+size.&nbsp; However, if you were to try to make it larger, it doesn't
+know what the pixels in between the current pixels should be to add
+in.&nbsp; So what it does is it just guesses, based on what pixels are
+around it.&nbsp; This will indeed make it larger, but will also
+increase the file size of the image.&nbsp; If you want a larger image
+on your web site, that is when it is better for the site to tell the
+web browser how big the image should be.&nbsp; <br>
+<br>
+Re-sizing in the GIMP is easy.&nbsp; Just go to Image -&gt; Scale
+Image.&nbsp; You will see the Scale Image dialog on the screen.&nbsp;
+Now you can input the size you want for an image.&nbsp; <br>
+If you have a web site, you may already know exactly how many pixels you
+want the image to be.&nbsp; To do this, you can select "pixels" in the
+first drop down box, then put the number of pixels you want for the
+width or height.&nbsp; You only have to put one of the values in, and
+the GIMP will automatically calculate the other.&nbsp; It is possible
+to change them independently (by clicking the little chain between them
+to un-link them), but this should almost never be done because it will
+cause the image to distort and make it look stretched out.&nbsp; <br>
+If you don't already know the exact dimensions you need your image to
+be, it is generally easier to re-size it to a percentage of the
+original.&nbsp; To do this select "percent" from the first drop down
+box, then enter your best get at what percent of the original you want
+your new image to be.&nbsp; <br>
+<br>
+<img src="PhotoScreen/Scale.jpg" alt="Scale.jpg"><br>
+<br>
+If you're happy with your image, you can go ahead and save it.&nbsp; If
+you're trying to make it small for a web site, don't forget to adjust
+the quality selector to make it as small as you can.&nbsp; <br>
+<br>
+After all that rotating, cropping, and re-sizing, here's the final
+image.&nbsp; Its only 24KB, when we started with a 3900KB original!<br>
+<img src="PhotoExamples/PhotoCrop-Ex-scaled-quality.jpg" alt="PhotoCrop-Ex-scaled-quality.jpg"><br>
+<br>
+<span style="font-weight: bold;">Exercise</span><br>
+These three images are quite similar to the original, they can all be
+rotated, cropped, and re-sized.&nbsp; <br>
+<a href="PhotoExamples/PhotoCrop-A-orig.jpg">PhotoCrop-A-orig.jpg</a><br>
+<a href="PhotoExamples/PhotoCrop-B-orig.jpg">PhotoCrop-B-orig.jpg</a><br>
+<a href="PhotoExamples/PhotoCrop-C-orig.jpg">PhotoCrop-C-orig.jpg</a><br>
+<h3 class="western">Selection and Redeye Correction<br>
+</h3>
+We have all seen photos in the past where the eyes of the subject(s)
+are not their normal color but bright red.&nbsp; There can be various
+levels of this ranging from barely detectable to very bright red.&nbsp;
+This is caused by light from the flash on the camera reflecting off the
+blood vessels on the back of the eye and back to the camera.<br>
+For more info, see: <a href="http://en.wikipedia.org/wiki/Red-eye_effect">http://en.wikipedia.org/wiki/Red-eye_effect</a><br>
+<br>
+Since this is such a common problem in photographs, the GIMP has a
+built in tool for removing it which we will work with in this
+section.&nbsp; <br>
+<br>
+First, lets save <a href="PhotoExamples/Redeye-Ex-orig.jpg">this</a>
+file to your disk, and open it with the GIMP.<br>
+<img src="PhotoExamples/Redeye-Ex-small.jpg" alt="Redeye-Ex-small.jpg"><br>
+<br>
+You can see that there are three examples of red eye here.&nbsp; Two
+(the woman on the left and the man) have a large amount, and the woman
+in the middle just has a little showing.&nbsp; <br>
+<br>
+To correct the red eye, we will run the red eye removal tool.&nbsp; You
+can find it under Filters-&gt;Enhance-&gt;Red Eye Removal.&nbsp; <br>
+<img src="PhotoScreen/RedeyeDialog.jpg" alt="RedeyeDialog.jpg"><br>
+If all works well, you should be able to just click the button and have
+it remove all the red eye.&nbsp; Go ahead and try it now.&nbsp; <br>
+<br>
+Ahhhh!&nbsp; What happened!!!&nbsp; It looks like the people have mold
+growing on them, this is terrible.<br>
+<img src="PhotoExamples/Redeye-Ex-fail.jpg" alt="Redeye-Ex-fail.jpg"><br>
+<br>
+What the tool did was go through the whole photo and find all the spots
+where there was a lot of red, and try to remove it.&nbsp; Unfortunately
+this photo had lots of spots like that...the people's lips, the woman
+on the left's face, the wall in the background, etc.&nbsp; You could
+try using the slider to lower the threshold so it doesn't pickup as
+much, but that doesn't work very well for this image either, but lets
+try it anyway.&nbsp; <br>
+<br>
+This time lets use the preview window to zoom in on the face of the
+woman on the left.&nbsp; As you move the slider around, you will see
+that before most of the red from her eyes is gone, there are strange
+artifacts showing up on her lips.<br>
+<br>
+<img src="PhotoScreen/RedeyeThresholdFail.jpg" alt="RedeyeThresholdFail.jpg"><br>
+<br>
+Instead of just using this tool, we're going to have to try a different
+tactic to fix this image.&nbsp; We're going to use the selection tool
+to select just her eyes, then run the red eye tool on just that
+selected area.&nbsp; We will soon find that using the selection tool is
+very powerful and the ability to select certain areas of photos makes
+almost all the things that you can do with the GIMP possible.&nbsp;
+Even the cropping that we did in the last section is just a set of
+special functionality layered over the selection tool, in fact you can
+do all the things we did in the last section by simply making a
+selection and then clicking Image -&gt; Crop to selection.<br>
+<br>
+Lets start by selecting the Rectangle Select Tool from the toolbox.<br>
+<img src="PhotoScreen/SelectionTool.png" alt="SelectionTool.png"><br>
+<br>
+Using this tool is almost exactly the same as using the crop tool,
+except when you are done you have a selection of the image, not a
+smaller image.&nbsp; Lets use it to create a rectangle around one of
+the woman on the left's eyes.&nbsp; Zoom in if you need to, so you
+don't select too much else.<br><br>There are several ways to zoom in (and out) in the GIMP, but the easiest on is probably just to click the zoom box in the bottom bar of the image window and select the size you want.&nbsp; <br><br><img src="PhotoScreen/RedEyeZoom.jpg" alt="RedEyeZoom.jpg"><br>
+<br>
+<img src="PhotoScreen/SelectionOneEye.jpg" alt="SelectionOneEye.jpg"><br>
+<br>
+If you now click inside the selection (or hit Enter) the selection will
+stick, but you don't need to do this, you can run tools on it even
+before it sticks. <br>
+<br>
+Now lets go back and run the Red eye reduction filter again (Filters -&gt; Enhance -&gt; Red Eye Removal).&nbsp; This
+time we can turn the threshold up a bit higher, because there isn't
+much else that is very red in the image.&nbsp; <br>
+<img src="PhotoScreen/RedEyeOneEye.jpg" alt="RedEyeOneEye.jpg"><br>
+<br>
+Now that we've got that down, we can go ahead and do it to the other
+five eyes in the image.&nbsp; <br>
+<br>
+<img src="PhotoExamples/Redeye-Ex-final-small.jpg" alt="Redeye-Ex-final-small.jpg"><br>
+<br>
+I'd say they are looking much better!&nbsp; Its still not a great
+photograph, but at least they don't look like they are possessed by the
+devil.&nbsp; <br>
+<br>
+<span style="font-weight: bold;">Exercises </span><br>
+These images are all examples of red eye that can be removed by
+selecting the eyes and running the red eye removal tool on them.<br>
+<br>
+<a href="PhotoExamples/Redeye-A-orig.jpg">Redeye-A-orig.jpg</a><br>
+<a href="PhotoExamples/Redeye-B-orig.jpg">Redeye-B-orig.jpg</a><br>
+<a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br>
+<h3 class="western">Advanced Selection and Layers<br>
+</h3>
+<p style="margin-bottom: 0in;">Now that we have some of the basics like
+resizing and selecting down, we're going to get a little more
+advanced.&nbsp; In this section we are going to combine two separate
+pictures into one photo-like image that could conceivable been taken by
+a person with a camera, but wasn't.&nbsp; This is a powerful tool that
+can be used to deceive others by making them think that something
+really happened when in actuality it didn't.&nbsp; Many people have
+tried to deceive others with this, and many have been found, such as
+Iran, trying to show that it launched four missiles when it only
+launched three:
+http://boingboing.net/2008/07/10/iran-you-suck-at-pho.html.&nbsp; As a
+photo editor, it is your job to use these tools responsibly. <br>
+</p>
+<p style="margin-bottom: 0in;">We're going to start by taking a picture
+of an <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">airplane</a>
+putting it into the background of a picture of the <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Statue of Liberty</a>.&nbsp;
+<br>
+</p>
+<br>
+<a href="PhotoExamples/LayerForeground-Ex-orig.jpg">An Airplane<br>
+<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerForeground-Ex-orig.jpg" alt="LayerForeground-Ex-orig.jpg"></a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-Ex-orig.jpg">The Statue of
+Liberty<br>
+<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br>
+
+Go ahead and save those to files to your disk, then open them up in the
+GIMP.&nbsp; Since this is a more complicated project than our past
+ones, we're going to save the Statue of Liberty picture into a separate
+file that GIMP uses to store all the data about the project.&nbsp; This
+is an XCF (eXperimental Computing Facility) file, and it stores all the
+image data in a lossless format, as well as data about layer and
+channels which we will be using for this project.&nbsp; To save as this
+type of file, in the Statue of Liberty image go to File -&gt; Save As,
+then in the name box, change the extension from .jpg to .xcf and click
+the save button.&nbsp; You can change the name to something completely different or leave it the same, as long as you have the .xcf extension.&nbsp; This will leave the original .jpg file alone, so you could go back and re-open it if you need to later, without having to re-download it.<br>
+<br>
+The basic premise of how we are going to add the airplane into the
+Statue photo is that we are going to select just the airplane (without
+any of the sky background) from its photo, then copy and paste that
+into the statue of liberty.&nbsp; Then we'll get on to another trick to
+make it look even better. <br>
+<br>
+There are several different ways to do the selection.&nbsp; We could do
+the rectangular selection like we did in the last image, but then
+you'll end up with all the sky from the airplane picture that was in
+the box in the statue picture.&nbsp; <br>
+<img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>
+It doesn't look very natural.&nbsp; We'll need to use one of the
+selection tools that will get us <span style="font-style: italic;">just</span>
+the airplane.&nbsp; <br>
+<br>
+The most basic tool for selecting a specific area, of an arbitrary
+shape is the "Free Select" or Lasso tool.&nbsp; This tool will let us
+draw whatever shape we want on the screen, and when we connect the line
+back to the start, it selects that area.&nbsp; <br>
+<br>
+Lets pick the "Free Select" tool.<br>
+<img src="PhotoScreen/LayerFreeSelectTool.jpg" alt="LayerFreeSelectTool.jpg"><br>
+Now that we have the tool selected, we can start to outline the
+airplane.&nbsp; It will be much easier to find the correct points to
+select if you zoom in, I use 400%.&nbsp; Just find a spot on the border
+between the airplane and the sky, and click to make your first
+point.&nbsp; Then move the mouse cursor either clockwise or counter
+clockwise to another nearby pixel that separates that airplane and the
+sky.&nbsp; You will see a line extend between the first point and your
+cursor.&nbsp; Adjust your cursor so that the line follows the edge
+between the airplane and the sky.&nbsp; If you chose the complicated
+area with the landing gear and engines, this could be a very short
+line.&nbsp; On the other had, if you started on the top, this line will
+be quite a bit longer.&nbsp; <br>
+<br>
+Here's my line that started on the top, went over a little bump (an
+antenna) around the cockpit and is currently at the nose:<br>
+<br>
+<img src="PhotoScreen/LayerFreeSelect.jpg" alt="LayerFreeSelect.jpg"><br>
+<br>
+This is going well, but when you keep going and get into the more
+complex parts of the picture, this will start to get <span style="font-style: italic;">very</span> tedious.&nbsp; There are so
+many small parts that it would take hundreds of clicks to make lines
+that accurately separate them out.&nbsp; <br>
+<br>
+A better tool for getting all this complex stuff, is the Intelligent
+Scissors tool.&nbsp; Lets go pick that.<br>
+<img src="PhotoScreen/LayerIntelSciTool.jpg" alt="LayerIntelSciTool.jpg"><br>
+The Intelligent Scissors tool is an interesting piece of equipment: it
+has some features in common with the Lasso, some features in common
+with the Path tool, and some features all its own. It is useful when
+you are trying to select a region defined by strong color-changes at
+the edges. To use the Scissors, you click to create a set of "control
+nodes", also referred to as anchors or control points, at the edges of
+the region you are trying to select. The tool produces a continuous
+curve passing through these control nodes, following any high-contrast
+edges it can find. If you are lucky, the path that the tool finds will
+correspond to the contour you are trying to select. <br>
+<br>
+We can start using it similarly to the Free Select tool, put down a
+point on the edge of the border between the airplane and the sky.&nbsp;
+Then move along that border and place another point.&nbsp; Although,
+this time you won't see a line from the previous point to the cursor,
+you just have to pick a point.&nbsp; Then when you click the computer
+will try to determine what the natural border is that both the points
+are on, and make a line that matches that border.&nbsp; If you are
+still zoomed in to 400%, this will look a bit jagged, that is usually
+because we're dealing with individual pixels at this level and they
+don't follow a very clean border.&nbsp; Don't worry too much about it,
+when we shrink this airplane down to put it in the statue picture, you
+won't be able to tell.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelPoints.jpg" alt="LayerIntelPoints.jpg"><br>
+<br>
+Sometimes the computer won't guess correctly where the line should go,
+as in this case<br>
+<img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>
+For some reason, it decided on a line through the engines, instead of
+between the engines and the sky, but don't despair, its easy to
+fix.&nbsp; We're just going to add another point in between those two to
+make it work out better.&nbsp; Any place you don't like where the
+computer thought the line should go, you can easily add a new
+point.&nbsp; Just click the existing line to make the point.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>
+Then click and drag that new point down to the correct place for
+it.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>
+You may have to click and drag more than once for the computer to find
+a line that is good enough for what you're trying to do.&nbsp; Also,
+you don't have to add a new point to move it, you can click and drag
+any point you've created to get it in a better location.&nbsp; The GIMP
+will automatically re-draw the line when you let go.<br>
+<br>
+As you go under the airplane, you probably don't have to worry about
+every tiny little area.&nbsp; When we shrink this picture down, most of
+the details won't be that easy to see.&nbsp; <br>
+<img src="PhotoScreen/LayerIntelNotPerfect.jpg" alt="LayerIntelNotPerfect.jpg"><br>
+<br>
+Once you've made it all the way around the airplane, <br>
+<img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>
+just click inside of your selection to complete it.&nbsp; <br>
+<br>
+Now lets see what just the area we've selected looks like.&nbsp; First
+we're going to copy the selection by hitting the Ctrl+C key
+combination. Then without doing anything to the image window we're
+going to paste it back in there by hitting the Ctrl+V key
+combination.&nbsp; Now if you look at the layers dialog, you will see
+that there is a new Floating Selection listed there. <br>
+<img src="PhotoScreen/LayerPasteFloat.jpg" alt="LayerPasteFloat.jpg"><br>
+We're going to go ahead and make this into a full-fledge layer in the
+image by right clicking on the Floating Selection in the layers dialog and selecting "New Layer".&nbsp; Once
+we're done with that, we can see both layers in the layers
+dialog.&nbsp; <br>
+<img src="PhotoScreen/LayerPasteNew.jpg" alt="LayerPasteNew.jpg"><br>
+<br>
+Now that we're using layers, we should probably have a quick
+explanation of what they are.<br>
+<br>
+It is probably easiest to think of layers as a stack of transparencies,
+where the content of what is on each layer is combined together to make
+up the image that we see.&nbsp; It is possible to have a layer that is
+completely colored in, in which case nothing from the layers below that
+can be seen. Likewise, it is possible to use the alpha channel to
+control how transparent something is to the layers below it.&nbsp; For
+instance if we had a bright orange (not transparent) layer on top of an
+image of car, you wouldn't be able to see the car.&nbsp; However, if
+you turned the alpha level of the orange layer down so it was more
+transparent, you could see the car, but it would have an orange tint to
+it.&nbsp; <br>
+<img src="PhotoScreen/LayerDemo-None.jpg" alt="LayerDemo-None.jpg"><br>
+<img src="PhotoScreen/LayerDemo-Full.jpg" alt="LayerDemo-Full.jpg"><br>
+<img src="PhotoScreen/LayerDemo-Half.jpg" alt="LayerDemo-Half.jpg"><br>
+<br>
+In addition, a layer doesn't have to take up the whole area of the
+image.&nbsp; For example, when we pasted the airplane back in to the
+same picture, the layer that was created only consisted of a box big
+enough to contain the selection.&nbsp; You can see its outline above in
+the screen shots where it was pasted.&nbsp; Another example of layers
+that aren't the size of the full image is text.&nbsp; Any time you use
+the text tool to write on an image, it will automatically create a new
+layer that the text is in, and that layer will be a rectangle just
+large enough for the text to fit in to.<br>
+<br>
+But back to our airplane picture. Now that we have a layer that just
+contains the pasted image of the airplane, we can hide the layer with
+everything in it and see just what we pasted.&nbsp; Just click the eye
+icon next to the background image to hide it.&nbsp; <br>
+<img src="PhotoScreen/LayerPasteOnly.jpg" alt="LayerPasteOnly.jpg"><br>
+Now we've got the airplane that we selected (and copy/pasted) and the
+default GIMP background telling us that everything else in the image is
+transparent.&nbsp; <br>
+<br>
+If we zoom in, we can see that our selection wasn't perfect.&nbsp;
+There is a bit of sky remaining around the main landing gear, and a
+triangle between the front landing gear and the wing that extends down
+to the left.<br>
+<img src="PhotoScreen/LayerSkyScraps.jpg" alt="LayerSkyScraps.jpg"><br>
+This isn't going to be a problem, since it will be very small in our
+final image, but we can clean it up just for the practice.&nbsp;&nbsp;
+We're going to use the erase tool to go in and remove those pieces of
+sky.<br>
+<br>
+First lets select the erase tool.&nbsp; <br>
+<img src="PhotoScreen/LayerEraseTool.jpg" alt="LayerEraseTool.jpg"><br>
+<br>
+The eraser is one of the tools that has a brush associated with
+it.&nbsp; A brush is simply the pattern that the tool operates on, the
+most common brushes are circular like, with varying sizes.&nbsp; For
+this I would recommend using a Circle (03) brush, or possibly Circle
+(01) for some of the smaller, more detailed areas.&nbsp; The (03) and
+(01) refer to the size of the brush, so the (01) is smaller.&nbsp; To
+select the correct brush, click the brush picture next to the word
+"Brush:" in the Eraser Tool Options dialog.<br>
+<br>
+<img src="PhotoScreen/LayerBrushSelection.jpg" alt="LayerBrushSelection.jpg"><br>
+<br>
+Now that we have a decent brush, we can use the eraser to remove parts
+of the image that we don't want.&nbsp; Just click once to remove the
+exact amount under the brush, or click and drag around to remove
+wherever you drag the brush.&nbsp; You'll notice that when you remove
+something, you see the gray checkered background.&nbsp; This indicates
+that this layer is now completely transparent in that spot.&nbsp; <br>
+<img src="PhotoScreen/LayerEraseComplete.jpg" alt="LayerEraseComplete.jpg"><br>
+<br>
+Now that we've cleaned up the airplane, its time to import it into the
+photo of the Statue of Liberty.&nbsp; To do that, first we want to
+re-select the cleaned up airplane.&nbsp; Since that is all that is
+current layer (this only works on the current layer, even if the other
+layers are visible) we will only get the airplane when we simply select
+everything.&nbsp; To select everything simply enter the Ctrl+A key
+combination (also the menu Select -&gt; All works).&nbsp; Now you will
+see a line around the whole layer's area.&nbsp; Once again, we're going
+to copy this by hitting Ctrl+C. <br>
+<br>
+Now we have the airplane copied to the clipboard, lets bring up the
+image window for the Statue of Liberty photo and paste it there using
+Ctrl+V.&nbsp; <br>
+<img src="PhotoScreen/LayerAirplaneImport.jpg" alt="LayerAirplaneImport.jpg"><br>
+<br>
+Woah!&nbsp; Its huge!&nbsp; If we go back and look at it, the picture
+of the airplane was 640x480, and the picture of the Statue of Liberty
+was the same dimensions 640x480.&nbsp; That means that something that
+takes up half of the area in the first picture will also take up half
+of the area in the second picture.&nbsp; It is important to understand
+that the zoom level that you have each picture set to doesn't impact
+how big the item you are pasting is, only the number of pixels it takes
+up.&nbsp; <br>
+<br>
+Don't worry though, we can easily re-size the airplane to make it fit
+better.&nbsp; First, lets make the airplane that we just pasted into
+the image its own layer.&nbsp; In the layers dialog right click on the
+layer that says "Floating Selection (Pasted Layer)" and click "New
+Layer...".&nbsp; Now we have a separate layer we can play around
+with.&nbsp; <br>
+<br>
+To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp;
+Setting it to about 30% should look right.&nbsp; Do it just like in the
+section on re-sizing pictures, change the dropdown to say "percent"
+then put a value you think is good into <span style="font-style: italic;">one</span> of the
+boxes and click the "Scale" button.&nbsp; I have found 20-30% works well for this image.<br>
+<br>
+<img src="PhotoScreen/LayerAirplaneCentered.jpg" alt="LayerAirplaneCentered.jpg"><br>
+<br>
+Now we should have an appropriately sized airplane, but it is right in
+the middle of the picture, in front of the statue...not a very
+realistic location for an airplane.&nbsp; It would be nice if we could
+move it up into the sky.&nbsp; <br>
+<br>
+To move it, we'll just use the move tool.&nbsp; Pick it from the toolbox<br>
+<img src="PhotoScreen/LayerMoveTool.jpg" alt="LayerMoveTool.jpg"><br>
+then just click inside the selection box with the airplane, and drag it
+to a nice spot in the sky.&nbsp; <br>
+<br>
+<img src="PhotoScreen/LayerMove.jpg" alt="LayerMove.jpg"><br>
+<br>
+That looks pretty good, but what would really sell the picture is if it
+were flying behind the statue of liberty.&nbsp; Anyone can copy and
+paste an airplane on top of a picture, but to hide it behind
+something...that's really going to take a professional!<br>
+<br>
+To do this, we're going to select an area of the statue, without any of
+the sky behind it, using our intelligent scissors tool.&nbsp; Then
+we'll paste that selection into a new layer.&nbsp; Finally we'll put
+the airplane layer in-between the background layer, and the new layer
+with part of the statue.<br>
+<br>
+We don't need to select the whole statue, just enough to get the
+airplane behind.&nbsp; I think part of the arm should work well.&nbsp;
+First, be sure to make sure the background layer is the active layer
+(it will be the highlighted one) by clicking on it.&nbsp; Then use the
+intelligent scissors tool to select the area.<br>
+<img src="PhotoScreen/LayerArmSelect.jpg" alt="LayerArmSelect.jpg"><br>
+When you have a good area click inside it (or hit the Enter key) to
+make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and
+Ctrl+V to paste.&nbsp; Now you should have a floating selection
+layer in the layers dialog box.&nbsp; Right click on it and select new layer to make this part
+of the arm a new layer.&nbsp; <br>
+<br>
+Now we have three layers in the image, its getting tough to keep track
+of which one is which.&nbsp; To make it easier the GIMP will let you
+set the name of the layer to whatever you want.&nbsp; Just double click
+on the layer name and type something descriptive like "arm" or
+"airplane".<br>
+<br>
+<img src="PhotoScreen/LayerNames.png" alt="LayerNames.png"><br>
+<br>
+Okay, now we have all the pieces in place.&nbsp; All we have left to do
+is to move the airplane behind the arm of the statue.&nbsp; To do this,
+make the airplane layer the active one and go click on the move
+tool.&nbsp; Now just drag the airplane over to the correct spot behind
+the arm.&nbsp; <br>
+<br>
+<img src="PhotoExamples/Layer-Ex-final.jpg" alt="Layer-Ex-final.jpg"><br>
+<br>
+I'd say that looks pretty good!<br>
+<br>
+<span style="font-weight: bold;">Exercise</span><br>
+Here are some more pairs of images you can try this out with.<br>
+<br>
+<a href="PhotoExamples/LayerBackground-A-orig.jpg">LayerBackground-A-orig.jpg</a><br>
+<a href="PhotoExamples/LayerForeground-A-orig.jpg">LayerForeground-A-orig.jpg</a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-B-orig.jpg">LayerBackground-B-orig.jpg</a><br>
+<a href="PhotoExamples/LayerForeground-B-orig.jpg">LayerForeground-B-orig.jpg</a><br>
+<br>
+<a href="PhotoExamples/LayerBackground-C-orig.jpg">LayerBackground-C-orig.jpg</a><br>
+<a href="PhotoExamples/LayerForeground-C-orig.jpg">LayerForeground-C-orig.jpg</a><br>
+<br>
+<h3 class="western">Adjusting lighting</h3>
+Good lighting is the single most important element needed to take a
+good photograph.&nbsp; Unfortunately the lighting conditions aren't
+always good for a photographer.&nbsp; There are&nbsp; some things that
+can be done by the photographer to work with bad conditions, for
+example indoors at very close distances they can use a flash, but often
+the photographer will end up with an image that doesn't have correct
+lighting. <br>
+<br>
+Typical results are overexposed (when too much light is picked up by
+the camera sensor), underexposed (when not enough light is picked up by
+the camera sensor), and an image where parts are simultaneously over
+and under exposed.&nbsp; (Right-click the link for each picture and
+save it to your disk)<br>
+<br>
+<a href="PhotoExamples/Overexposed-Ex-orig.jpg">Overexposed<br>
+<img src="PhotoExamples/Overexposed-Ex-small.jpg" alt="Overexposed-Ex-small.jpg"></a><br>
+<a href="PhotoExamples/Underexposed-Ex-orig.jpg">Underexposed<br>
+<img src="PhotoExamples/Underexposed-Ex-small.jpg" alt="Underexposed-Ex-small.jpg"></a><br>
+<a href="PhotoExamples/Levels-Ex-small.jpg">Parts are over and under
+exposed.<br>
+<img src="PhotoExamples/Levels-Ex-small.jpg" alt="Levels-Ex-small.jpg"></a><br>
+<br>
+We are going to go through these three images and try to fix some of
+the lighting issues with them.&nbsp; Lets start by opening the
+overexposed photo in the GIMP.<br>
+<br>
+There are three tools we will look at to fix lighting issues with these
+image, the first one is by far the simplest.&nbsp; It it is the
+Brightness-Contrast tool.&nbsp; You can open it by clicking the menu
+Color -&gt; Brightness-Contrast... <br>
+<br>
+<img src="PhotoScreen/LevelsBrightTool.jpg" alt="LevelsBrightTool.jpg"><br>
+<br>
+You can see there are two sliders that adjust brightness and contrast
+of the image.&nbsp; A way to think of brightness is the average of all
+the pixels, the closer they all are to white, the brighter the picture
+is <a href="http://en.wikipedia.org/wiki/Brightness">http://en.wikipedia.org/wiki/Brightness</a>.&nbsp;
+Contrast represents how much difference there is between the pixels in
+the image.&nbsp; <a href="http://en.wikipedia.org/wiki/Contrast_%28vision%29">http://en.wikipedia.org/wiki/Contrast_(vision)</a><br>
+The above image is very bright and rather low contrast.&nbsp; To try to
+remedy this, lets use the brightness slider to lower the brightness,
+and then the contrast slider to raise the contrast.<br>
+<img src="PhotoScreen/LevelsBCAdjust.jpg" alt="LevelsBCAdjust.jpg"><br>
+As you can see, modifying the image in this manner will really bring
+out the color of the image.&nbsp;&nbsp; Also, you can see more detail,
+like the features of the snow-covered mountains in the
+background.&nbsp; When you like how it looks, hit OK for the changes to
+be written to the image.<br>
+<br>
+For a simple picture such as this, that might be enough, but sometimes
+you need a little more control over the picture than just the
+brightness and contrast.&nbsp; First, lets re-set the picture, to get
+back to the unaltered version we can just undo (Ctrl+Z) enough times
+to remove all the changes we've made, or we can simply click File -&gt;
+Revert to get all the way back.&nbsp; <br>
+Once we're back to the beginning, we will modify the image again, with
+a higher level of control this time.<br>
+To get to this next level of control, we'll use the Levels dialog, by
+selecting the Colors -&gt; Levels menu.<br>
+<br>
+<img src="PhotoScreen/LevelsLvlTool.jpg" alt="LevelsLvlTool.jpg"><br>
+There are three important parts of this tool that we will focus
+on.&nbsp; The first is the "Channel" drop down.&nbsp; If you click this
+you will see the options for "Value", "Red", "Green", "Blue", and
+"Alpha" which is grayed out.&nbsp; We won't be using the R, G, B, or A
+channels here, but just be aware that you can do the same thing we are
+going to learn about in a moment to any of the color channels by
+themselves.&nbsp; <br>
+Here, we're going to focus on the value channel.&nbsp; Selecting the
+value channel causes the tool to combine all three color channels into one
+and work with it in that manner. This value channel can be thought of as
+the same image if it was converted to 8-bit black and white.&nbsp; This
+mode is really called "grayscale" because there can be 256 different
+levels of gray.&nbsp; Here's the image actually converted to grayscale
+as an example. <br>
+<img src="PhotoExamples/Overexposed-Ex-grey-small.jpg" alt="Overexposed-Ex-grey-small.jpg"><br>
+Notice how the image is very bright, almost white.&nbsp; Even the dark
+areas are only very light gray, definitely not black.&nbsp; <br>
+Looking back at the previous example with the brightness-contrast
+dialog, we can now get a clearer understanding of what it was
+doing.&nbsp; The decreasing the brightness changed the all the
+different shades of the above image to a darker shade of gray and
+increasing the contrast made the darkest part of the image more dark
+while leaving the lightest part alone.&nbsp; The only difference is
+that the GIMP didn't need to have a grayscale image to do this, it
+could mathematically determine the levels that would correspond to the gray image for the different colors, called the values.&nbsp; <br>
+<br>
+In the box below the channel selection under the title "Input Levels"
+is a graph that is called a histogram.&nbsp; This histogram tells us
+the number of pixels in the image that correspond with each
+value.&nbsp; Below the histogram is a gradient from black (left) to
+white (right), this gradient is actually the scale for that axis of the
+graph.&nbsp; So, the height of the graph over a particular value along
+that gradient corresponds with the number of pixels that have that
+value.&nbsp; Because this image is so overexposed, the graph shows that
+almost all the pixels are to the very far right (white) part of the
+graph.&nbsp; <br>
+<br>
+Before we move on, lets look at a picture with a more normal
+histogram.&nbsp; <br>
+<br>
+<img src="PhotoExamples/LevelsHistogramExample-small.jpg" alt="LevelsHistogramExample-small.jpg"><br>
+As you can see from the grayscale image on the right, a lot of the
+image, where there is the grass background, is rather dark, but not
+quite black.&nbsp; Most of the birds is rather light, but only a tiny
+section of them is really white.&nbsp; Thus we see a huge part of the
+graph in the dark section, about a quarter of the way up the
+graph.&nbsp; We see another peak towards the right where the birds'
+bodies are, and just a tiny amount trailing off to the completely black
+and white sections at either end of the graph.&nbsp; <br>
+<br>
+Getting back to our overexposed picture from the mountains, we can see
+that the histogram shows that it is almost all completely to the right
+(white) side of the graph.<br>
+<img src="PhotoScreen/LevelsOverexposedHistogram.png" alt="LevelsOverexposedHistogram.png"><br>
+In fact, the true white (value of 255) has quite a few pixels.&nbsp;
+That means that these pixels are completely over exposed (also known as
+burned), and the areas where there are a lot of these can never be
+corrected to add more detail.&nbsp; Any information that the camera may
+have found about them was lost because they are at the maximum
+value.&nbsp; That is just the limit of the 0-255 scale.&nbsp; However,
+we can use our tools to bring out some more detail on all those other
+pixels.<br>
+For more details about histograms, check out this great website: <a href="http://www.cambridgeincolour.com/tutorials/histograms1.htm">http://www.cambridgeincolour.com/tutorials/histograms1.htm</a><br>
+<br>
+You will notice under the histogram there are three triangles.&nbsp; We
+can use these triangles to set the darkest color in the image, the
+brightest color in the image, and the middle color in the image.&nbsp;
+To help fix this image, we are going to move the darkest color
+up.&nbsp; This will cause all the pixels represented in the histogram
+to the left of where we move the arrow to have their value to set to
+zero or true black.&nbsp; Every other pixel everywhere else in the image will have
+its value reset so that they take up the entire range from 0 to 255
+while keeping their existing relationship to all the other
+pixels.&nbsp; <br>
+<br>
+<img src="PhotoScreen/LevelsSetLowLevel.jpg" alt="LevelsSetLowLevel.jpg"><br>
+There, that looks a lot better, we can see all the color of the
+foreground and make out some features on the mountains in the
+background.&nbsp; There's one last adjustment we can make here, and
+that is to change the mid level to tone down some of the bright
+brown/red colors that have taken on an almost unnatural
+appearance.&nbsp; Just slide the middle, gray triangle a bit back to
+the left and check the results.<br>
+<br>
+<img src="PhotoScreen/LevelsSetMidLevel.jpg" alt="LevelsSetMidLevel.jpg"><br>
+There, that looks pretty good.&nbsp; When you're happy with your
+settings, click OK to write them to the image.<br>
+<br>
+Now there's one more tool that we can use that will give us even more
+control over those colors in the middle, that is the curves tool.&nbsp;
+After re-setting the image back to the beginning (either use Ctrl+Z or
+Revert) click Color -&gt; Curves to bring up the dialogue.<br>
+<img src="PhotoScreen/LevelsCurvesTool.jpg" alt="LevelsCurvesTool.jpg"><br>
+You can see in the background that it has a histogram on it.&nbsp; The
+only difference is now there is also a gradient on the vertical axis,
+that corresponds to the line running across the graph.&nbsp; This line
+is the curve that we will be manipulating.&nbsp; The end of the curve
+that is on the bottom side of the window corresponds to the dark
+triangle from the levels dialog, and the end of the curve that is on
+the upper side corresponds to the white triangle from the levels
+dialogue.&nbsp; The whole curve in the middle is a much more
+complicated version of the gray triangle from the levels
+dialogue.&nbsp; <br>
+<br>
+We can go ahead and set the low end back up to where we had the dark
+triangle in the previous example.&nbsp; Once that is done, we can click
+and drag any point on the line going through the graph to create curves
+in it.&nbsp; This allows different values in the image to be raised and
+lowered differently.&nbsp; You can drag multiple parts of the curve to
+make complex systems of lightening and darkening different original
+values.<br>
+<img src="PhotoScreen/LevelsCurvesUse.jpg" alt="LevelsCurvesUse.jpg"><br>
+Here I have moved the low end value up about two thirds of the way
+across the graph, then the curve jumps a little bit and then levels off
+giving a dark (but not completely black) value to the pixels near that
+end.&nbsp; The curve then increases in the lighter pixel values keeping them steadily
+increasing in lightness up to white.<br>
+<br>
+From the curves dialog you can quickly and easily play around with lots
+of different values for the image until you have exactly what you
+want.&nbsp; Then just click OK to write the change to the image.<br>
+<br>
+Now that we've got all the tools in hand, lets go and try this on the
+underexposed example.&nbsp; Lets open it up in the GIMP and jump straight
+to the curves dialog.<br>
+<img src="PhotoScreen/LevelsUnderexposedCurves.jpg" alt="LevelsUnderexposedCurves.jpg"><br>
+Here we can see that the histogram is quite a bit broader than it was
+for the overexposed image.&nbsp; This would have held us back a bit if
+we were just using the brightness-contrast or levels dialogs, but not
+in the curves dialog.&nbsp; The first thing we should do is lower the
+highest value down a bit, to about where the histogram starts trailing
+off.&nbsp; Just click on the circle along the top and drag it left
+keeping it on the top until it is over the end of the histogram.&nbsp;
+The next step is to bring out some of the color in the dark
+shadows.&nbsp; We can do this by increasing the brightness of the curve
+while it is in the further left areas of the graph.&nbsp; <br>
+Continue to experiment with this until you find something that looks
+good to you, then hit the OK button.&nbsp; <br>
+<br>
+Finally, lets open up the image that has parts both over and under
+exposed.&nbsp; When we've got it open, we can see that there is a
+section on the left, in the trees that is almost completely dark, while
+at the same time the mountains on the right are too bright and washed
+out.<br>
+<br>
+If we go and open the curves dialog we can try to lower the brightness
+on the bright parts, and raise it on the dark parts, that makes it a
+little better, but still doesn't make the image look that great.&nbsp; <br>
+<img src="PhotoScreen/OverUnderCurveFail.jpg" alt="OverUnderCurveFail.jpg"><br>
+<br>
+Instead, what we need to do is lower the highest possible brightness
+for the dark parts, and raise the lowest possible dark for the bright
+parts.&nbsp; But how can we do that all in the same image?&nbsp; The
+trick is that you can use the curves (and levels and
+brightness-contrast) tool on <span style="font-style: italic;">selections</span>
+of an image instead of the whole image.&nbsp; So all we have to do is
+select the dark part, perform a correction there, then select the
+bright parts and perform a different correction there.<br>
+<br>
+To do these selections we'll give the fuzzy select tool a try.&nbsp; <br>
+<img src="PhotoScreen/OverUnderFuzzySelect.jpg" alt="OverUnderFuzzySelect.jpg"><br>
+<br>
+Once we have it selected, we click on a pixel in the area we want to
+select, then while holding the mouse button down, move the mouse down
+and left to grow the area.&nbsp; The Fuzzy Select tool will
+automatically grow the area in a way where it selects other nearby
+pixels that have a similar color or value.&nbsp; One tweak that we can
+make to this tool is to enable the "Feather Edges" option in the fuzzy
+select tool options.&nbsp; This will cause the area that it selects to
+blur the line between what is and isn't selected.&nbsp; Doing this will
+cause the level adjustments that we are going to make to decrease
+around the edges so that you don't get sharp differences between
+sections.<br>
+<br>
+So, lets go ahead and pick a pixel in the dark area behind the
+trees.&nbsp; While holding the mouse button down, move the mouse down
+and to the left, you will see the selected area grow.&nbsp; Keep it
+going until you have the dark area in the trees selected, then let go
+of the mouse button.<br>
+<img src="PhotoScreen/OverUnderFuzzySlectDark.jpg" alt="OverUnderFuzzySlectDark.jpg"><br>
+<br>
+Now that we have our selection made, we can go ahead and bring up the
+curves dialog and work our magic.<br>
+<img src="PhotoScreen/OverUnderDarkCurve.jpg" alt="OverUnderDarkCurve.jpg"><br>
+Here I moved the maximum white value down to right where the histogram
+trailed off.&nbsp; I also lowered the dark a little bit at the bottom.
+Click OK, when you're set.<br>
+<br>
+The next step is to select the bright areas.&nbsp; Again we will use
+the fuzzy select tool to select the appropriate area.<br>
+<img src="PhotoScreen/OverUnderOverSelect.jpg" alt="OverUnderOverSelect.jpg"><br>
+Once we have the selection, we'll open up the curves dialog again, and make our correction on this area.<br><img src="PhotoScreen/OverUnderOverCurve.jpg" alt="OverUnderOverCurve.jpg"><br>
+This time I simply moved the lowest dark point up to the bottom of this histogram.&nbsp; When you're happy with your settings click OK.<br><br>And here we have the final image:<br><img src="PhotoExamples/Levels-Ex-final-small.jpg" alt="Levels-Ex-final-small.jpg"><br>Nice and crisp, with lots of details throughout the image.&nbsp; <br><br><span style="font-weight: bold;">Exercises</span><br>Here are some more examples of complex images with areas over and under exposed.<br><a href="PhotoExamples/Levels-A-orig.jpg">Levels-A-orig.jpg</a><br><a href="PhotoExamples/Levels-B-orig.jpg">Levels-B-orig.jpg</a><br><a href="PhotoExamples/Levels-C-orig.jpg">Levels-C-orig.jpg</a><br>
+<h3 class="western">Minor Corrections</h3>
+<p>For our final section on photo editing using the GIMP we will look at a couple tools that allow us to correct minor issues with the image or even the person being photographed.&nbsp; Some of these are: areas of shadow, pixel noise, blemishes, wrinkles, and more.&nbsp; <br></p>
+Lets get started by opening up a picture of a subject with a few minor imperfections.<br><a href="PhotoExamples/Face-Ex-orig.jpg">Subject<br><img src="PhotoExamples/Face-Ex-small.jpg" alt="Face-Ex-small.jpg"></a><br>
+<p>Now that we have that open lets create a new layer, identical to the background layer.&nbsp; This way, when we make changes in the new layer, we can quickly go back to the original by just clicking the eye in front of the new layer to hide it.&nbsp; To make the new layer, just right click on the "Background" layer and select "Duplicate Layer".&nbsp; This will create an identical copy of the original for you to work with.&nbsp; <br></p><p>
+Now we will meet the first of our tools, the Heal tool.&nbsp; <br><img src="PhotoScreen/FaceHealTool.jpg" alt="FaceHealTool.jpg"><br>The heal tool allows you to choose one spot (by holding down Ctrl while you click that spot) then copy that spot to a new area (the size and shape of the spot will vary depending on the brush you have selected).&nbsp; When it puts that spot in the new area, it will mathematically merge the new spot with what was already there.&nbsp; This is great for getting rid of imperfections in a way the incorporates the existing background, so it looks natural. <br></p><p>If you zoom in to the cheek below the subjects left eye, you will see that there is an errant hair running across her face.&nbsp; Lets do a Ctrl+Click just below this hair to select a part of the cheek that is a good match for what we want there.<br> <img src="PhotoScreen/FaceHealSelect.jpg" alt="FaceHealSelect.jpg"></p><p>Once we have the source selected, we just need to go up and click on a spot on the hair.&nbsp; Once that spot is done, you can move to the next spot and click again.&nbsp; You may need to make sure your brush size is large enough to see it working.&nbsp; It should be at least 10 for this, I have found that circle 13 works well. <br><img src="PhotoScreen/FaceHealClick.jpg" alt="FaceHealClick.jpg"><br></p><p>If you look at the above image, you can see the area above and left of the cursor has had this applied to it, and the hair is gone!&nbsp; Now we just need to keep doing this to the rest of the unsightly hair. <br></p><p>It is probably easier to click and drag across a good section of the hair than to go through the whole thing clicking, but beware, as you move the mouse your selection spot will move in the same direction that the mouse moves as long as the button is held down.&nbsp; When you let go, the selection spot will re-set to the original.&nbsp; If you picked a spot close to the hair, for example just below where you first click it, then you should be alright because the selection will just follow the mouse and keep getting the area right below the hair, which is fairly similar.&nbsp; However, if you had a selection near the top (to the left of the eye) and started at the bottom and worked your way up, your selection would soon end up in her hair, and then instead of making the hair disappear it would make all sorts of new problems show up in that spot.<br><img src="PhotoScreen/FaceClickDragFail.jpg" alt="FaceClickDragFail.jpg"><br>The best thing to do is to drag the mouse in such a way that the selection follows very close to the mouse, then you keep the same general color and lighting conditions from that part of the face.&nbsp; However, if this isn't feasible, it is possible to hold the selection position fixed so it won't move.&nbsp; Simply select "Fixed" from the alignment drop down box in the Heal tool properties dialog. <br></p><p>The next tool we will use to fix up this image is the smudge tool.&nbsp; Lets select it from the toolbox.<br><img src="PhotoScreen/FaceSmudgeTool.jpg" alt="FaceSmudgeTool.jpg"><br>The smudge tool will take the colors from one area and as you drag your mouse move some of that color into the area you are dragging too.&nbsp; It is very similar to if the picture were made of wet paint and your ran your finger across it.<br></p><p>Here's a blunt example of smudge at work.<br><img src="PhotoScreen/FaceSmudgeFailBefore.jpg" alt="FaceSmudgeFailBefore.jpg">&nbsp;&nbsp;&nbsp; <img src="PhotoScreen/FaceSmudgeFail.jpg" alt="FaceSmudgeFail.jpg"></p><p>As you can see, the smudge took can really alter an area drastically.&nbsp; However, this is not what we will use it for.&nbsp; Instead, when you use the smudge tool, be sure not to accidentally run over areas of the picture that are borders between important areas.&nbsp; If you do slip and smudge somewhere you didn't mean to, you can always undo the last smudge by using the Ctrl+Z key combination.</p><p>Lets go down to the subjects chin and use the smudge tool to remove a blemish there.<br><img src="PhotoScreen/FaceSmudgeBefore.jpg" alt="FaceSmudgeBefore.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="PhotoScreen/FaceSmudge.jpg" alt="FaceSmudge.jpg">&nbsp;&nbsp;&nbsp;&nbsp; </p>To remove these blemishes, I simply took my brush and moved down from the top to the bottom, then went back up from the bottom to the top to even things out.&nbsp; I was careful not to get it into the mouth, or into the ridge just above and to the left of the area in question.&nbsp; <br>One other thing to try, if you still want it to blend in better, you can try using one of the fuzzy brushes instead of a plain circle.&nbsp; A fuzzy brush is one where when you click to apply it, the edges are not strong and the effect of the bush action fades out over several pixels.&nbsp; This is different from clicking with the circle brush where one pixel is completely affected and the pixel next to it is un-affected.&nbsp; This way, the edges of the smudge will be almost untouched.&nbsp; It isn't as strong as a circle brush though, so you may have to go over the area more than once.<br><p></p>The final tool we will work with today doesn't actually change the color of anything, but simply lightens or darkens it.&nbsp; This is called the Dodge/Burn tool.&nbsp; In photo editing, to dodge something means to make that area lighter, and to burn it means to make it darker.&nbsp; <br><br>Lets go ahead and select that tool.&nbsp; Also, if you haven't already done so, go ahead and select a fuzzy brush.&nbsp; When you use the Dodge/Burn tool you will see a very distinct line where the pixels brighten or darken if you use a circle brush.&nbsp; Also, I would recommend lowering the exposure down to something low (in the 10-15 range) for beginners.&nbsp; This just means that everywhere you move the cursor will only be lightened a little.&nbsp; This will make things go slower, as you'll have to drag the cursor over an area more than once, but it gives you more control as to how quickly parts of the image change.<br><img src="PhotoScreen/FaceDodgeTool.jpg" alt="FaceDodgeTool.jpg"><br><br>Once you're all set with the tool, lets zoom in on the right side of the face.&nbsp; When this picture was taken, the light source was off to the left, so the right side of the face has some shadow on it.&nbsp; That's not always a bad thing, but in this case we will try to correct it.<br><br>We're just going to drag the mouse cursor over the dark area, Especially moving up and down through the two shaded depressions.&nbsp;&nbsp;  <br><img style="width: 320px; height: 456px;" src="PhotoScreen/FaceDodgeBefore.jpg" alt="FaceDodgeBefore.jpg">&nbsp; <img style="width: 320px; height: 460px;" src="PhotoScreen/FaceDodge.jpg" alt="FaceDodge.jpg">&nbsp; <br><br>Looking good so far.&nbsp; Now take an opportunity to go around the image and use these three tools to clean up the rest of it.&nbsp; You may end up with something like this:&nbsp;&nbsp;&nbsp;&nbsp; <br><img style="width: 320px; height: 480px;" src="PhotoExamples/Face-Ex-small.jpg" alt="Face-Ex-small.jpg">&nbsp;&nbsp; <img src="PhotoExamples/Face-Ex-final-small.jpg" alt="Face-Ex-final-small.jpg"><br><br><span style="font-weight: bold;">Excercises</span><br>Here are some more faces with some small imperfections to try the tools out on.<br><br><a href="PhotoExamples/Face-A-orig.jpg">Face-A-orig.jpg</a><br><a href="PhotoExamples/Face-B-orig.jpg">Face-B-orig.jpg</a><br><a href="PhotoExamples/Face-C-orig.jpg">Face-C-orig.jpg</a><br>&nbsp; <h2 class="western">Photoshop</h2>
+<p style="margin-bottom: 0in;">Cropping/Resizing/Rotation</p>
+<p style="margin-bottom: 0in;">Redeye</p>
+<p style="margin-bottom: 0in;">Layers and Selection</p>
+<p style="margin-bottom: 0in;">Skin Corrections</p>
+<p style="margin-bottom: 0in;">Adjusting Lighting</p>
+<h2 class="western">Other Photo Editing Tools</h2>
+<p><b>Picasa</b> -- Photo manager built and distributed by google. It
+is more for storing photo collections, and managing them online
+and offlline, but also has some photo editing ability, like cropping,
+redeye removal and more. Available for Linux, Windows and Mac. -
+<a href="http://picasa.google.com/">http://picasa.google.com</a> </p>
+<p><b>Paint.NET</b> -- Similar, but less powerful than Gimp and
+Photoshop. Only available for Windows, but is free, libre, and open
+source software. - <a href="http://www.getpaint.net/">http://www.getpaint.net/</a>
+</p>
+<p><b>Corel Paint Shop Photo Pro</b> -- Almost as powerful as Gimp
+and Photoshop, but a substantially different interface from them. -
+<a href="http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081">http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081</a></p>
+<p><b>Microsoft Paint</b> -- Comes built in with windows, but is
+very basic. Even things like cropping and re-sizing are very
+difficult. It is usable if you want to add a little text to an
+image, or draw over something so that others can't see it (like
+blanking out a screen name or IP address in a screenshot), but not
+much beyond that.</p>
+<p><b>Microsoft Photo Editor </b>or <b>Photo Manager </b>-- Tools
+from Microsoft that come with Microsoft Office. Useful for basic
+editing, such as cropping and re-sizing. </p>
+<p><b>ImageMagick</b> -- A command line based tool (there are also
+various graphical user interfaces for it) that instead of editing an
+image by click on it edits the image by specifying commands that can
+be done to it (e.g. -resize 30%, -crop 120x120, convert image.jpg
+image.png and lots more). This is really great if you have a lot of
+images and want to do the same thing to all of them. For instance
+you can easily resize hundreds of images in a few seconds instead of
+opening them up in the Gimp and resizing them one by one. Image magic
+is free, libre, and open source software and runs on Linux, Windows,
+and Mac. - <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a>
+</p>
+<p><span style="font-weight: bold;">Hugin</span> -- This is a tool that
+will create a very high resolution panoramic photography by stitching
+together multiple, overlapping photographs.&nbsp; When you have a
+large, stationary (at least for a minute) scene like mountains, lakes,
+etc., you can take several pictures where each one overlaps ~1/3 of the
+one next to it.&nbsp; Then feed all these images into Hugin, and it
+will give you an output image that combines all of the input images
+into one.&nbsp; <a href="http://hugin.sourceforge.net/">http://hugin.sourceforge.net/</a><br>
+</p>
+<p><span style="font-weight: bold;">UFRaw</span> -- Some, more
+advanced, cameras will allow you to get your images out of them in a
+format generally called "Raw".&nbsp; This keeps any of the data that
+might have been lost in the JPEG compression, as well as more data that
+came from the sensors about the image.&nbsp; This extra data is useful
+for professionals, as it allows them better control over
+color/brightness corrections.&nbsp; UFRaw is a program that will work
+with this raw images, it also has a plugin for GIMP that will let you
+work with them in the GIMP.&nbsp; <a href="http://ufraw.sourceforge.net/">http://ufraw.sourceforge.net/</a><br>
+</p>
+<p><span style="font-weight: bold;">FSpot</span> -- A photo manager,
+similar to Picasa, but open source (unfortunately, only runs under
+linux). <a href="http://f-spot.org/">http://f-spot.org/</a><br>
+</p>
+<p><span style="font-weight: bold;">Shotwell</span> -- A photo manager,
+similar to Picasa, but open source (unfortunately, only runs under
+linux). <a href="http://yorba.org/shotwell/">http://yorba.org/shotwell/</a><br>
+</p>
+<br>
+<h2>Vocabulary</h2>
+Pixel - One dot in the image, composed of Red Green and Blue components
+(and possibly Alpha for indicating if it has transparency)<br>
+Dimensions - The size of the picture, indicated by Width X Height.<br>
+Channel - The different red-green-blue-alpha components<br>
+Lossless Compression - Storing a file so that it can be perfectly
+re-created<br>
+Lossy Compression - Storing a file so that it is smaller, but loses
+some amount of detail<br>
+Rotate - Change the orientation of the image.<br>
+Crop - Cut off the an area around the image. <br>
+Re-Size - Change the number of pixels that the image is without cutting
+off any parts of the image.<br>
+Layer - <br>
+Selection - <br>
+<br>
+<h2>Attribution</h2>
+Pixel Value Image, Daniel G et al.,
+<a href="http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png">http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png</a>,
+Public Domain<br>
+Additive Color, Webaware,
+<a href="http://commons.wikimedia.org/wiki/File:AdditiveColor.svg">http://commons.wikimedia.org/wiki/File:AdditiveColor.svg</a>,
+Public Domain<br>
+Lossy Demonstration Lossless, <span class="comment">Shlomi Tal</span>,
+<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png">http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png</a>
+, CC-BY-SA<br>
+Lossy Demonstration Medium, <span class="comment">Shlomi Tal,</span> <a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg</a>,
+CC-BY-SA<br>
+Lossy Demonstration High, <span class="comment">Shlomi Tal,</span>
+<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg</a>,
+CC-BY-SA<br>
+Gimp Introduction, Gimp Documentation
+Team, <a href="http://docs.gimp.org/2.6/en/introduction.html#introduction-gimp">http://docs.gimp.org/2.6/en/introduction.html#introduction-gimp</a>,
+GNU FDL<br>
+Gimp Main Window Overview, Gimp
+Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-concepts-main-windows.html">http://docs.gimp.org/2.6/en/gimp-concepts-main-windows.html</a>,
+GNU FDL<br>
+Image Window Description Graphic, Gimp
+Documentation Team, <a href="http://docs.gimp.org/2.6/en/images/using/imagewindow-description.png">http://docs.gimp.org/2.6/en/images/using/imagewindow-description.png</a>,
+GNU FDL<br>
+Image Window Descirption, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-image-window.html">http://docs.gimp.org/2.6/en/gimp-image-window.html</a>,
+GNU FDL<br>
+Great Egret Nest, Mike Baird, <a href="http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg">http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg</a>,
+CC-BY<br>
+Three Friends, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1467377710/">http://www.flickr.com/photos/rharrison/1467377710/</a>,
+CC-BY-SA<br>
+Two Dancers, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1551648804/">http://www.flickr.com/photos/rharrison/1551648804/</a>,
+CC-BY-SA<br>
+Voo Doo Music Fest, Katrina Szela, <a href="http://www.flickr.com/photos/93017934@N00/287761814/">http://www.flickr.com/photos/93017934@N00/287761814/</a>,
+CC-BY<br>
+Mike Roe with Julie and Audrey Quinn, James Emery, <a href="http://www.flickr.com/photos/emeryjl/891366632/">http://www.flickr.com/photos/emeryjl/891366632/</a>,
+CC-BY<br>
+Statue of Liberty, Gavcos, <a href="http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg">http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg</a>,
+CC-BY<br>
+El Al 747-200, Przemyslaw "Blueshade" Idzkiewicz, <a href="http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg">http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg</a>,
+CC-BY-SA<br>
+Intelligent Scissors Tool, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html">http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html</a>,
+GNU FDL<br>
+Stock Car Brazil Pace Car, Morio, <a href="http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg">http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg</a>,
+CC-BY-SA<br>
+Chicago from UIC, Hied5, <a href="http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG">http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG</a>,
+CC-BY<br>
+Airplane over Autobahn, poolie, <a href="http://www.flickr.com/photos/poolie/2611727104/">http://www.flickr.com/photos/poolie/2611727104/</a>,
+CC-BY<br>
+Chicago skyscrapers, Stephen Hanafin, <a href="http://www.flickr.com/photos/shanafin/3539282102/">http://www.flickr.com/photos/shanafin/3539282102/</a>,
+CC-BY-SA<br>
+2007/10/10 EC-HFP, Javier Pedreira, <a href="http://www.flickr.com/photos/wicho/1789307019/">http://www.flickr.com/photos/wicho/1789307019/</a>,
+CC-BY<br>
+Frankfurt skyscrapers, Danilo Paissan, <a href="http://www.flickr.com/photos/danilopaissan/2732030140/">http://www.flickr.com/photos/danilopaissan/2732030140/</a>,
+CC-BY-SA<br>
+Lufthansa Boeing 737-300, daspaddy, <a href="http://www.flickr.com/photos/daspaddy/3375583143/">http://www.flickr.com/photos/daspaddy/3375583143/</a>,
+CC-BY<br>
+Overexposed Mountains, avry xvx, <a href="http://www.flickr.com/photos/kimclit/4438966573/">http://www.flickr.com/photos/kimclit/4438966573/</a>,
+CC-BY-SA<br>
+Dark Cloud Over Kota Kinabalu, thienzieyung, <a href="http://www.flickr.com/photos/thienzieyung/4829364637/">http://www.flickr.com/photos/thienzieyung/4829364637/</a>,
+CC-BY<br>
+Colchuck Lake, Mahalie Stackpole, <a href="http://www.flickr.com/photos/mahalie/253842823/">http://www.flickr.com/photos/mahalie/253842823/</a>,
+CC-BY-SA<br>
+P5290060, Steve Broomfield, <a href="http://www.flickr.com/photos/spikycircle/18070686/">http://www.flickr.com/photos/spikycircle/18070686/</a>,
+CC-BY<br>
+Large Rock, Homini:), <a href="http://www.flickr.com/photos/homini/4327478688/">http://www.flickr.com/photos/homini/4327478688/</a>,
+CC-BY<br>
+Antler Lake 2, Holly Lawrence, <a href="http://www.flickr.com/photos/goat_girl_photos/228884109/">http://www.flickr.com/photos/goat_girl_photos/228884109/</a>,
+CC-BY-SA<br>
+Curly Hair Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870001120/">http://www.flickr.com/photos/seeminglee/870001120/</a>,
+CC-BY-SA<br>
+Blue Eyed Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870028244/">http://www.flickr.com/photos/seeminglee/870028244/</a>,
+CC-BY-SA<br>
+Circle Glasses Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870005490/">http://www.flickr.com/photos/seeminglee/870005490/</a>,
+CC-BY-SA<br>
+Dark Skinned Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/869124633/">http://www.flickr.com/photos/seeminglee/869124633/</a>,
+CC-BY-SA<br>
+<br>
+<br>
+<br>
+<br>
