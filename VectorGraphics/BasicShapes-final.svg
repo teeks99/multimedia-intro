@@ -43,6 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,28 +57,40 @@
        width="118.94517"
        height="100.21097"
        x="48.743252"
-       y="81.527382" />
+       y="81.527382"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <rect
        style="fill:none"
        id="rect2987"
        width="100"
        height="60"
        x="305.71429"
-       y="140.93361" />
+       y="140.93361"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:6"
        id="rect2989"
        width="110.45201"
        height="93.5774"
        x="196.35912"
-       y="85.907112" />
+       y="85.907112"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <rect
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
        id="rect3765"
        width="113.52012"
        height="95.11145"
        x="335.95816"
-       y="87.441162" />
+       y="87.441162"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <rect
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
        id="rect3767"
@@ -85,7 +98,10 @@
        height="72.100616"
        x="467.88696"
        y="102.78174"
-       ry="24.544891" />
+       ry="24.544891"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <rect
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
        id="rect3769"
@@ -94,7 +110,10 @@
        x="604.41791"
        y="102.78174"
        ry="24.544891"
-       rx="53.691952" />
+       rx="53.691952"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="arc"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -104,7 +123,10 @@
        sodipodi:rx="54.458977"
        sodipodi:ry="35.283279"
        d="m 250.05108,454.08047 a 54.458977,35.283279 0 1 1 -108.91795,0 54.458977,35.283279 0 1 1 108.91795,0 z"
-       transform="translate(-39.885448,-161.07585)" />
+       transform="translate(-39.885448,-161.07585)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="arc"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -116,7 +138,10 @@
        d="m 314.22512,423.76796 a 57.527088,32.982197 0 1 1 -17.09801,51.66872 l 42.66622,-22.12323 z"
        sodipodi:start="4.251823"
        sodipodi:end="8.6895412"
-       transform="translate(-38.351392,-162.6099)" />
+       transform="translate(-38.351392,-162.6099)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="arc"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -129,7 +154,10 @@
        sodipodi:start="4.3074971"
        sodipodi:end="8.6895412"
        sodipodi:open="true"
-       transform="translate(-44.487614,-161.07584)" />
+       transform="translate(-44.487614,-161.07584)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -147,7 +175,10 @@
        d="m 217.8359,589.07736 -43.88266,8.24142 -21.39855,-39.18816 30.65764,-32.46103 40.34601,19.12614 z"
        inkscape:transform-center-x="2.1663846"
        inkscape:transform-center-y="-1.5042315"
-       transform="translate(-96.645507,-105.84984)" />
+       transform="translate(-96.645507,-105.84984)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -165,7 +196,10 @@
        d="m 337.49225,586.00924 -21.00732,-11.69295 -22.21431,15.95642 4.62904,-23.59247 -22.04005,-16.19626 23.86822,-2.88799 8.59281,-25.96626 10.12233,21.80759 27.3507,0.14823 -17.61228,16.36582 z"
        inkscape:transform-center-x="0.44352832"
        inkscape:transform-center-y="-0.45187051"
-       transform="translate(-4.6021674,-95.111452)" />
+       transform="translate(-4.6021674,-95.111452)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -183,7 +217,10 @@
        d="m 446.4102,589.07736 -18.56125,-18.93758 -33.14043,34.87283 12.27497,-23.50483 -43.40699,-20.74213 26.1476,4.4108 6.31343,-47.69217 3.88514,26.23085 47.3089,-8.73326 -23.74645,11.80077 z"
        inkscape:transform-center-x="4.1888289"
        inkscape:transform-center-y="-0.21591041"
-       transform="translate(12.272445,-99.713623)" />
+       transform="translate(12.272445,-99.713623)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -201,7 +238,10 @@
        d="m 510.84055,584.47524 -31.42556,2.23334 -23.80044,-20.64201 -2.23335,-31.42557 20.64201,-23.80044 31.42557,-2.23335 23.80044,20.64202 2.23335,31.42556 z"
        inkscape:transform-center-x="-0.27247825"
        inkscape:transform-center-y="-3.8443089"
-       transform="translate(-294.53869,-93.577395)" />
+       transform="translate(-294.53869,-93.577395)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="spiral"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -214,7 +254,10 @@
        sodipodi:argument="-18.125305"
        sodipodi:t0="0"
        d="m 98.179565,593.67957 c 1.999795,1.76904 -1.398016,3.56846 -2.940275,3.32378 -4.179429,-0.66307 -5.165643,-5.90402 -3.707295,-9.20434 2.608643,-5.90349 10.251445,-7.0443 15.468395,-4.0908 7.65609,4.33438 8.97427,14.65627 4.47432,21.73246 -5.99773,9.43145 -19.081263,10.92583 -27.996524,4.85782 -11.218945,-7.63596 -12.888509,-23.51581 -5.241331,-34.26058 9.261757,-13.01336 27.955735,-14.85762 40.524645,-5.62484 14.81201,10.88051 16.83076,32.39901 6.00835,46.7887 -12.49491,16.61347 -36.84453,18.8066 -53.052767,6.39186 -18.416829,-14.10642 -20.78432,-41.29161 -6.775368,-59.31682 15.715926,-20.22157 45.739835,-22.76341 65.580885,-7.15888 22.02732,17.32398 24.74352,50.18893 7.54239,71.84495"
-       transform="translate(65.964393,13.806501)" />
+       transform="translate(65.964393,13.806501)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="spiral"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -227,7 +270,10 @@
        sodipodi:argument="-18.595882"
        sodipodi:t0="0"
        d="m 210.16562,589.07739 c 2.07671,0.53841 0.29881,3.06499 -0.89486,3.45163 -3.2348,1.04775 -5.85047,-2.34643 -6.00839,-5.24135 -0.28248,-5.17835 4.77555,-8.77977 9.58784,-8.56515 7.06224,0.31496 11.76672,7.22708 11.12191,13.93433 -0.85943,8.9397 -9.6852,14.77649 -18.28082,13.67867 -10.81671,-1.3815 -17.79771,-12.14611 -16.23543,-22.62731 1.89212,-12.69414 14.60852,-20.82549 26.97379,-18.79219 10.03236,1.64967 18.16311,9.40831 20.81004,19.14765"
-       transform="translate(76.702783,16.874612)" />
+       transform="translate(76.702783,16.874612)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        transform="translate(313.13711,9.0128533)"
        sodipodi:type="spiral"
@@ -240,7 +286,10 @@
        sodipodi:radius="53.251842"
        sodipodi:argument="-18.125305"
        sodipodi:t0="0.43290716"
-       d="m 78.411691,605.54029 c -8.633448,-11.07006 -5.307263,-27.24695 5.623998,-35.43386 13.159744,-9.85592 32.074891,-5.84743 41.522261,7.14611 11.08403,15.24452 6.39021,36.9069 -8.6682,47.61067 -17.326269,12.3158 -41.741645,6.93475 -53.699086,-10.19031 -13.550091,-19.406 -7.480527,-46.57832 11.712411,-59.78749 21.484329,-14.78618 51.416425,-8.02721 65.875905,13.23451 12.54113,18.44091 11.06682,43.49307 -2.71399,60.84296" />
+       d="m 78.411691,605.54029 c -8.633448,-11.07006 -5.307263,-27.24695 5.623998,-35.43386 13.159744,-9.85592 32.074891,-5.84743 41.522261,7.14611 11.08403,15.24452 6.39021,36.9069 -8.6682,47.61067 -17.326269,12.3158 -41.741645,6.93475 -53.699086,-10.19031 -13.550091,-19.406 -7.480527,-46.57832 11.712411,-59.78749 21.484329,-14.78618 51.416425,-8.02721 65.875905,13.23451 12.54113,18.44091 11.06682,43.49307 -2.71399,60.84296"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        transform="translate(422.05505,12.080965)"
        sodipodi:type="spiral"
@@ -253,7 +302,10 @@
        sodipodi:radius="53.251842"
        sodipodi:argument="-18.125305"
        sodipodi:t0="0"
-       d="m 98.179565,593.67957 c 0.185856,0.16441 -0.261691,0.38859 -0.3557,0.40209 -0.875897,0.12574 -1.222397,-1.02333 -1.093853,-1.68439 0.358355,-1.84293 2.629521,-2.34732 4.164478,-1.78675 3.07172,1.12181 3.77724,4.98679 2.51072,7.69174 -2.1398,4.57002 -8.054646,5.50607 -12.210839,3.2736 -6.334648,-3.40261 -7.526555,-11.80481 -4.078717,-17.68362 4.903245,-8.36036 16.215896,-9.83206 24.081046,-4.92767 10.64201,6.63592 12.41677,21.27078 5.82132,31.37981 -8.5957,13.17488 -26.955261,15.27558 -39.560501,6.76007 -15.954791,-10.7783 -18.403997,-33.25722 -7.744113,-48.60652 13.179955,-18.97799 40.166144,-21.79802 58.503434,-8.77349 22.24108,15.7973 25.45403,47.67273 9.84815,69.23844" />
+       d="m 98.179565,593.67957 c 0.185856,0.16441 -0.261691,0.38859 -0.3557,0.40209 -0.875897,0.12574 -1.222397,-1.02333 -1.093853,-1.68439 0.358355,-1.84293 2.629521,-2.34732 4.164478,-1.78675 3.07172,1.12181 3.77724,4.98679 2.51072,7.69174 -2.1398,4.57002 -8.054646,5.50607 -12.210839,3.2736 -6.334648,-3.40261 -7.526555,-11.80481 -4.078717,-17.68362 4.903245,-8.36036 16.215896,-9.83206 24.081046,-4.92767 10.64201,6.63592 12.41677,21.27078 5.82132,31.37981 -8.5957,13.17488 -26.955261,15.27558 -39.560501,6.76007 -15.954791,-10.7783 -18.403997,-33.25722 -7.744113,-48.60652 13.179955,-18.97799 40.166144,-21.79802 58.503434,-8.77349 22.24108,15.7973 25.45403,47.67273 9.84815,69.23844"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -271,7 +323,10 @@
        d="m 211.42748,582.73413 -46.79642,21.64292 -11.65996,-37.29365 24.82317,-49.46979 51.87809,19.91089 z"
        inkscape:transform-center-x="2.1663846"
        inkscape:transform-center-y="-1.5042315"
-       transform="translate(443.97441,-102.81153)" />
+       transform="translate(443.97441,-102.81153)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
     <path
        sodipodi:type="star"
        style="fill:#0000ff;stroke:#000000;stroke-width:6"
@@ -289,6 +344,9 @@
        d="m 217.8359,589.07736 c -6.4381,6.81682 -35.41,12.25791 -43.88266,8.24142 -8.47267,-4.01649 -22.60026,-29.88902 -21.39855,-39.18816 1.20171,-9.29915 21.44228,-30.73034 30.65764,-32.46103 9.21536,-1.7307 35.85232,10.89662 40.34601,19.12614 4.49369,8.22951 0.71567,37.46481 -5.72244,44.28163 z"
        inkscape:transform-center-x="2.1663846"
        inkscape:transform-center-y="-1.5042315"
-       transform="translate(333.52241,-96.675312)" />
+       transform="translate(333.52241,-96.675312)"
+       inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BasicShapes-final.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
   </g>
 </svg>
