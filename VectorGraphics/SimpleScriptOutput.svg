@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.48.0 r9654"
    sodipodi:docname="SimpleScriptOutput.svg"
-   inkscape:export-filename="/home/tomkent/Documents/Projects/Bolivia/Multimedia/VectorGraphics/SimpleScriptOutput.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/SimpleScriptOutput-Vector10.png"
+   inkscape:export-xdpi="900"
+   inkscape:export-ydpi="900">
   <defs
      id="defs3791" />
   <sodipodi:namedview
@@ -73,7 +73,7 @@
        sodipodi:cy="932.36218"
        sodipodi:rx="20"
        sodipodi:ry="20"
-       d="m 120,932.36218 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       d="m 120,932.36218 c 0,11.0457 -8.95431,20 -20,20 -11.045695,0 -20,-8.9543 -20,-20 0,-11.04569 8.954305,-20 20,-20 11.04569,0 20,8.95431 20,20 z"
        transform="translate(-49.854848,42.005332)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
