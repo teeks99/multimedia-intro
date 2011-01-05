@@ -1,18 +1,30 @@
+
 <h1 class="western">Unit One - Photos</h1>
-<p style="margin-bottom: 0in;">Durante los dos últimos décadas las cámaras digitales han pasado de ser un artículo que sólo los grupos de investigación científicia y el gobierno podía darse el lujo, a un artículo que la majoría de la gente tiene o conoce a alguien que lo ha hecho.&nbsp; Incluso han vuelto tan pequeño y portátil que se encajan en la mejoría de los móviles modernos.&nbsp; Con el auge de las cámaras digitales y fotografías digitales ha llegado la capacidad, que no era fácil de obtener con las fotografías en el pasado, para modificarlos después de ser capturado.&nbsp; Esto tiene por el primera vez habilitado no profesionales para mejorar la calidad de sus fotos con herramientas baratas y simples hasta el punto que puede coincidir con lo que se hace por muchos profesionales.</p><p style="margin-bottom: 0in;">Para esta unidad vamos a aprender algunos conceptos básicos sobre imágenes digitales y fotos.&nbsp; A continuación, aprenderá a utilizar el software de edición de fotos para mejorar las fotos.&nbsp; Para este vamos a utilizar principalmente la GNU Programa de Manipulación de Imagenes (GNU Image Manipulation Program) o la GIMP, pero también vamos a mirar las herramientas disponsibles en el programa de Adobe Photoshop para ver la forma de hacer las mismas cosas, cuando estén disponsibles. </p>
+<p style="margin-bottom: 0in;">Durante los dos últimos décadas las
+cámaras digitales (digital cameras) han pasado de ser un artículo que sólo los grupos de
+investigación científicia y el gobierno podía darse el lujo, a un
+artículo que la majoría de la gente tiene o conoce a alguien que lo ha
+hecho.&nbsp; Incluso han vuelto tan pequeño y portátil que se encajan
+en la mejoría de los móviles modernos.&nbsp; Con el auge de las cámaras
+digitales y fotografías digitales ha llegado la capacidad, que no era
+fácil de obtener con las fotografías en el pasado, para modificarlos
+después de ser capturado.&nbsp; Esto tiene por el primera vez
+habilitado no profesionales para mejorar la calidad de sus fotos con
+herramientas baratas y simples hasta el punto que puede coincidir con
+lo que se hace por muchos profesionales.</p>
+<p style="margin-bottom: 0in;">Para esta unidad vamos a aprender
+algunos conceptos básicos sobre imágenes digitales y fotos.&nbsp; A
+continuación, aprenderá a utilizar el software de edición de fotos para
+mejorar las fotos.&nbsp; Para este vamos a utilizar principalmente la
+GNU Programa de Manipulación de Imagenes (GNU Image Manipulation
+Program) o la GIMP, pero también vamos a mirar las herramientas
+disponsibles en el programa de Adobe Photoshop para ver la forma de
+hacer las mismas cosas, cuando estén disponsibles. </p>
 <h2 class="western">Photos</h2>
-<p>Photo files are stored in what is called a "raster" format. This
-means that the image is composed of a grid of points (in rows
-and columns). These points are called pixels, and they contain the
-color for that point. The number of rows and columns that make up
-the grid are called the dimensions. A picture that has 33 Columns
-(width) and 22 Rows (height) has dimensions of 33x22, and has a total
-of 726 pixels. In general the dimensions of digital images are
-always written in the form of "width x height".</p>
+<p>Los archivos
+de fotos se almacenan en lo que se llama un formato "trama".&nbsp; Esto significa que la imagen se compone de una retícula de puntos (en filas y columnas).&nbsp; Esto puntos se llaman píxeles (pixels), y que contienen el color de ese punto.&nbsp; El número de filas y columnas que constituyen la red se llaman dimensiones.&nbsp; Un imagen que tiene 33 columnas (ancho - width) y 22 filas (altura - height) tiene unas dimensiones de 33x22, y cuenta conun total de 726 píxeles.&nbsp; En general las dimensiones de las imágenes digitales simpre se escriben en forma de "ancho x altura".</p>
 <img style="width: 640px; height: 480px;" src="RasterGraphics/SmileDimensions-es.png" alt="SmileDimensions.png"><br>
-<p>Modern digital cameras have much, much higher dimensions. They
-are often referred based on how many <b>millions</b><span style="font-weight: normal;">
-of pixels or "megapixels" they have. Some examples are:</span></p>
+<p>Las cámaras digitales modernas tienen una dimensión mucho, mucho, mas alto.&nbsp;&nbsp; A menudo se hace referencia sobre la base de cuantos milliones de píxeles o "megapíxeles" (megapixels) que tiene.&nbsp; Algunos ejemplos son:<span style="font-weight: normal;"></span></p>
 <p style="font-weight: normal;">640x480 = 307200 pixels = 0.3
 megapixels<br>
 1024x768 = 786432 pixels = 0.8 megapixels<br>
@@ -23,50 +35,19 @@ megapixels<br>
 2842x2136 = 6070512 pixels = 6 megapixels<br>
 4000x3000
 = 12000000 pixels = 12 megapixels</p>
-<p style="font-weight: normal;">Looking at all these, they have
-something in common, if the first number is divided by the second
-number, they all approximately equal 1.33. The lowest ratio that
-equals 1.33 is 4/3, so this format of images is said to have a 4:3
-ratio. </p>
+<p style="font-weight: normal;">En cuanto a todas estas, que tiene algo en común, si el primer número se divide por el número de segundos, todos ellos aproximadamente iguals 1.33.&nbsp; La proporción más baja que es igual a 1.33 es 4/3, por lo que este formato de imágenes se dice que tiene una proporción de 4:3. </p>
 <img src="RasterGraphics/FourThirdsFormula.png" alt="FourThirdsFormula.png"><br>
-<p style="font-weight: normal;">This is usually the standard for
-photography, when the camera is held normally - this is also known as a
-"landscape" orientation. When the camera is held rotated to the side,
-this ratio changes to 3:4 and is called "portrait" orientation.&nbsp;
-Other resolutions will be looked at more in the video
-unit. </p>
-<p><a href="http://en.wikipedia.org/wiki/2D_computer_graphics">http://en.wikipedia.org/wiki/2D_computer_graphics</a></p>
-<p>The reason that cameras have grown the number of megapixels they
-use, is because that (with everything else being equal) larger
-dimensions make the image look better, especially when you print it
-out. A good printer can print photographs at 4800 dots per inch or
-dpi. In this case "inches" (1in = 2.45cm) and "dots" (equal
-to a pixel) are used because of their history in the printing
-industry. </p>
-<p>This means that a 12 megapixel image (4000x3000) could be printed
-out to a 2.1x1.6cm image and every pixel would be visible. </p>
+<p style="font-weight: normal;">Este es usualmente el estándar para la fotografía, cunado la cámara se lleva a cabo normalmente - esto también es conocido como un "paisaje" (landscape) orientación.&nbsp; Cuando la cámara se lleva a cabo gira al lado, esta relación cambia a 3:4 y se llama "retrato" orientación.&nbsp; Otra resoluciones se observó a mas en la unidad de video. </p>
+
+<p><a href="http://es.wikipedia.org/wiki/Computaci%C3%B3n_gr%C3%A1fica">http://en.wikipedia.org/wiki/2D_computer_graphics<br>http://es.wikipedia.org/wiki/Computación_gráfica</a></p><p>La razón por la que las cámaras han crecido el numero de megapíxeles que utilizan, se debe la que las (con todo lo demás es igaul) dimensiones más grande que la imagen se vea mejor, especialmente cuando lo imprima.&nbsp; Un buena impresora puede imprimir fotografias a 4800 puntos por pulgada (4800 Dots Per Inch - DPI).&nbsp; En este casa pulgadas (1in = 2.45cm) y puntos (equivalente a un píxele) se utilizan debido a su historia en la industria de impresión. </p>
+<p>Esto significa que un imagen de 12 megapíxeles (4000x3000) podria ser impresos en un imagen de 2.1x1.6cm y cada píxel sería visible.&nbsp;&nbsp;<br> </p>
 <img src="RasterGraphics/WidthDPIFormula.png" alt="WidthDPIFormula.png"><img src="RasterGraphics/HeightDPIFormula.png" alt="HeightDPIFormula.png"><br>
-<p>However, if it were printed to a 4.2x3.2cm image, then every pixel
-would be represented by four dots on the paper. If the sizes were
-doubled again to 8.4x6.4cm then every pixel would be represented by
-16 dots on the paper. This starts to become a problem when you have
-an image without that many pixels in it and want to print (or display
-it on a screen) as a large image. At some point, the individual
-pixels become easily visible on the printed image, and that can give
-it a very blocky and unnatural feeling. </p>
-<p>The pictures below are both the same piece of an large image taken
-of a tortoise. The photo on the top is from the full size 12
-megapixel (4000x3000) image. The photo on the bottom was taken at a
-much lower dimension of 640x480. Notice how the pixels of the image
-are clearly visible in the lower image and it doesn't look clear.</p>
+<p>Sin embargo, si se imprime a una imagen 4.2x3.2cm, entonces cada píxel estaría representada por cuatro puntos en papel.&nbsp; Si el tamaño se duplicó de nuevo a 8.4x6.4 luego cada píxel estaría representada por 16 puntos en papel.&nbsp; Esto empieza a convertirse en un problema cuando se tiene una imagen&nbsp; sin que muchos píxeles en ella y desea imprimir (o visualizar en una pantalla) como una imagen de gran tamaño.&nbsp; En algún momento, los píxeles individuales convierten fácilmente visible en la imagen impresa, y que puede darle una sensación muy bloques y antinatural.&nbsp;<br> </p>
+<p>Las imágenes debajo son la misma pieza de un gran imagne tomada de un tortuga.&nbsp; La foto en la parte superior es del tamaño completo de 12 megapixels (4000x3000) de la imagen.&nbsp; La foto en la parte inferior fue tomado en un dimensión mucho menor de 640x480.&nbsp; Observe como los píxeles de la imagen son claramente visibles en la imagen inferior y no se ve claro. <br></p>
 <img src="RasterGraphics/LargeTortoise-cropped.jpg" alt="LargeTortoise-cropped.jpg"><br>
 <br>
 <img src="RasterGraphics/LargeTortoise-small-cropped.jpg" alt="LargeTortoise-small-cropped.jpg"><br>
-<p>As a rule of thumb, it is important to keep the best possible
-image (most pixels), at least while working with it to edit. The
-section on cropping and re-sizing will cover more of the trade-offs
-that can be made when getting a picture ready to print or put on the
-Internet. </p>
+<p>Como regla general, es importante para mantener lo mejor imagen posible (la mayoría de píxeles), por lo menos mientros se trabaja con él para editar.&nbsp; La sección sobre recorte y el cambio de tamaño que cubren más de las ventajas y desventajas que se puden hacer al conseguir una imagen lista par imprimir o poner en Internet. </p>
 <h3 class="western">Channels</h3>
 <p>In a photograph, one pixel can represent many different colors. To
 express this in a computer, pixels are represented with different
@@ -426,7 +407,8 @@ out of date<br>
 <ol type="1">
   <li>
     <p> <span class="emphasis"><em>The Main Toolbox:</em></span>
-Contains a set of icon buttons used to select tools. It may also contain
+Contains a set of icon buttons used to select tools. It may also
+contain
 the foreground and background colors; brush, pattern, and Gradient; and
 an icon of the active image. Use <span class="guimenu">Edit</span>
 -&gt; <span class="guisubmenu">Preferences</span> -&gt; <span class="guisubmenu">Toolbox</span> to enable, or disable the extra
@@ -859,7 +841,8 @@ with the new area.&nbsp; When you are done click the mouse button once
 somewhere inside the clear area to complete the crop.&nbsp; <br>
 <br>
 But hang on, as was discussed previously, 4:3 is generally a good ratio
-for photographs, so it would be nice if the image we had when we were done
+for photographs, so it would be nice if the image we had when we were
+done
 was still 4:3.&nbsp; Luckily the GIMP crop tool has an option that can
 be set for just this purpose.&nbsp; We do this in the "Tool Options"
 dialog below the toolbox.&nbsp; You may have noticed that when we
@@ -933,7 +916,8 @@ web browser how big the image should be.&nbsp; <br>
 Re-sizing in the GIMP is easy.&nbsp; Just go to Image -&gt; Scale
 Image.&nbsp; You will see the Scale Image dialog on the screen.&nbsp;
 Now you can input the size you want for an image.&nbsp; <br>
-If you have a web site, you may already know exactly how many pixels you
+If you have a web site, you may already know exactly how many pixels
+you
 want the image to be.&nbsp; To do this, you can select "pixels" in the
 first drop down box, then put the number of pixels you want for the
 width or height.&nbsp; You only have to put one of the values in, and
@@ -1029,8 +1013,9 @@ smaller image.&nbsp; Lets use it to create a rectangle around one of
 the woman on the left's eyes.&nbsp; Zoom in if you need to, so you
 don't select too much else.<br>
 <br>
-There are several ways to zoom in (and out) in the GIMP, but the easiest on is probably just to click the zoom box in the bottom bar of the image window and select the size you want.&nbsp; 
-<br>
+There are several ways to zoom in (and out) in the GIMP, but the
+easiest on is probably just to click the zoom box in the bottom bar of
+the image window and select the size you want.&nbsp; <br>
 <br>
 <img style="width: 512px; height: 515px;" src="PhotoScreen/RedEyeZoom-es.jpg" alt="RedEyeZoom.jpg"><br>
 <br>
@@ -1040,7 +1025,8 @@ If you now click inside the selection (or hit Enter) the selection will
 stick, but you don't need to do this, you can run tools on it even
 before it sticks. <br>
 <br>
-Now lets go back and run the Red eye reduction filter again (Filters -&gt; Enhance -&gt; Red Eye Removal).&nbsp; This
+Now lets go back and run the Red eye reduction filter again (Filters
+-&gt; Enhance -&gt; Red Eye Removal).&nbsp; This
 time we can turn the threshold up a bit higher, because there isn't
 much else that is very red in the image.&nbsp; <br>
 <img style="width: 456px; height: 362px;" src="PhotoScreen/RedEyeOneEye-es.jpg" alt="RedEyeOneEye.jpg"><br>
@@ -1181,7 +1167,8 @@ as in this case<br>
 <img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>
 For some reason, it decided on a line through the engines, instead of
 between the engines and the sky, but don't despair, its easy to
-fix.&nbsp; We're just going to add another point in between those two to
+fix.&nbsp; We're just going to add another point in between those two
+to
 make it work out better.&nbsp; Any place you don't like where the
 computer thought the line should go, you can easily add a new
 point.&nbsp; Just click the existing line to make the point.&nbsp; <br>
@@ -1212,7 +1199,8 @@ combination.&nbsp; Now if you look at the layers dialog, you will see
 that there is a new Floating Selection listed there. <br>
 <img style="width: 750px; height: 524px;" src="PhotoScreen/LayerPasteFloat-es.jpg" alt="LayerPasteFloat.jpg"><br>
 We're going to go ahead and make this into a full-fledge layer in the
-image by right clicking on the Floating Selection in the layers dialog and selecting "New Layer".&nbsp; Once
+image by right clicking on the Floating Selection in the layers dialog
+and selecting "New Layer".&nbsp; Once
 we're done with that, we can see both layers in the layers
 dialog.&nbsp; <br>
 <img style="width: 750px; height: 518px;" src="PhotoScreen/LayerPasteNew-es.jpg" alt="LayerPasteNew.jpg"><br>
@@ -1321,7 +1309,8 @@ To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp;
 Setting it to about 25% should look right.&nbsp; Do it just like in the
 section on re-sizing pictures, change the dropdown to say "percent"
 then put a value you think is good into <span style="font-style: italic;">one</span> of the
-boxes and click the "Scale" button.&nbsp; I have found 20-30% works well for this image.<br>
+boxes and click the "Scale" button.&nbsp; I have found 20-30% works
+well for this image.<br>
 <br>
 <img style="width: 751px; height: 532px;" src="PhotoScreen/LayerAirplaneCentered-es.jpg" alt="LayerAirplaneCentered.jpg"><br>
 <br>
@@ -1357,7 +1346,8 @@ intelligent scissors tool to select the area.<br>
 When you have a good area click inside it (or hit the Enter key) to
 make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and
 Ctrl+V to paste.&nbsp; Now you should have a floating selection
-layer in the layers dialog box.&nbsp; Right click on it and select new layer to make this part
+layer in the layers dialog box.&nbsp; Right click on it and select new
+layer to make this part
 of the arm a new layer.&nbsp; <br>
 <br>
 Now we have three layers in the image, its getting tough to keep track
@@ -1460,8 +1450,10 @@ channels here, but just be aware that you can do the same thing we are
 going to learn about in a moment to any of the color channels by
 themselves.&nbsp; <br>
 Here, we're going to focus on the value channel.&nbsp; Selecting the
-value channel causes the tool to combine all three color channels into one
-and work with it in that manner. This value channel can be thought of as
+value channel causes the tool to combine all three color channels into
+one
+and work with it in that manner. This value channel can be thought of
+as
 the same image if it was converted to 8-bit black and white.&nbsp; This
 mode is really called "grayscale" because there can be 256 different
 levels of gray.&nbsp; Here's the image actually converted to grayscale
@@ -1476,7 +1468,8 @@ different shades of the above image to a darker shade of gray and
 increasing the contrast made the darkest part of the image more dark
 while leaving the lightest part alone.&nbsp; The only difference is
 that the GIMP didn't need to have a grayscale image to do this, it
-could mathematically determine the levels that would correspond to the gray image for the different colors, called the values.&nbsp; <br>
+could mathematically determine the levels that would correspond to the
+gray image for the different colors, called the values.&nbsp; <br>
 <br>
 In the box below the channel selection under the title "Input Levels"
 is a graph that is called a histogram.&nbsp; This histogram tells us
@@ -1568,7 +1561,8 @@ values.<br>
 Here I have moved the low end value up about two thirds of the way
 across the graph, then the curve jumps a little bit and then levels off
 giving a dark (but not completely black) value to the pixels near that
-end.&nbsp; The curve then increases in the lighter pixel values keeping them steadily
+end.&nbsp; The curve then increases in the lighter pixel values keeping
+them steadily
 increasing in lightness up to white.<br>
 <br>
 From the curves dialog you can quickly and easily play around with lots
@@ -1576,7 +1570,8 @@ of different values for the image until you have exactly what you
 want.&nbsp; Then just click OK to write the change to the image.<br>
 <br>
 Now that we've got all the tools in hand, lets go and try this on the
-underexposed example.&nbsp; Lets open it up in the GIMP and jump straight
+underexposed example.&nbsp; Lets open it up in the GIMP and jump
+straight
 to the curves dialog.<br>
 <img style="width: 659px; height: 657px;" src="PhotoScreen/LevelsUnderexposedCurves-es.jpg" alt="LevelsUnderexposedCurves.jpg"><br>
 Here we can see that the histogram is quite a bit broader than it was
@@ -1760,7 +1755,6 @@ where one pixel is completely affected and the pixel next to it is
 un-affected.&nbsp; This way, the edges of the smudge will be almost
 untouched.&nbsp; It isn't as strong as a circle brush though, so you
 may have to go over the area more than once.<br>
-
 The final tool we will work with today doesn't actually change the
 color of anything, but simply lightens or darkens it.&nbsp; This is
 called the Dodge/Burn tool.&nbsp; In photo editing, to dodge something
