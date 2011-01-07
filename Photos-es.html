@@ -64,13 +64,13 @@ megapixels<br>
 
 <p>Algunos formatos rasterizada también un canal llamado "Alfa" (Alpha), que especifica el brillo del píxel.&nbsp; Si el canal alfa es baja, entonces sería posible para una imagen que se amontona detrás de la serie uno de ellos para mostrar a través.&nbsp;&nbsp; Esto se llama transparencia.&nbsp; Si no hay nada detrás de la imagen, el valor por defecto suele ser negro.&nbsp;<br> </p>
 <h3 class="western">Tipos de Archivo</h3>
-<b>Tamaño de las fotos</b>
+<h4><b>Tamaño de las fotos</b></h4>
 <p>Para una fotografía normal, cada uno de los tres (rojo - Red, verde - Green, y azul - Blue) los canales están representados por un byte de datos para cada píxel.&nbsp; Esto significa que se requiere de tres bytes de datos para cada píxel, esto se refiere a menudo como el color de 24 bits (24 bits, ya que 8 bits es igual a 1 byte y hay tres bytes).&nbsp; Debido a que cada byte puede teer 2^8 o 256 valores diferentes, cada canal puede tener 256 niveles diferentes de ese color (1/256 o 0.39% de variación por nivel, si todo se hace de manera uniforme).&nbsp; Puede haber notado que la R G y B los valores en la demostración se utilizó en la sección de los canales sólo tenía 256 opciones diferentes, si no recuerdo, volver atrás y comprobar que funciona ahora:</p>
 <p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
 <p>Debido a que hay tres canales diferentes, eso significa que cada p'ixel puede representar 256x256x256 colores o más de 16 millones de combinaciones de color diferentes.&nbsp; Eso es mucho más de lo que la mayor caja de lápices de colores. </p>
 <p>Para una imagen de 12 megapíxeles de una cámara moderna, esto significa que se requeriría 36 megabytes (MB) de espacio de almacenamiento!&nbsp; Eso es mucho cuando sale con su cámara y quiere tomar un montón de fotos.&nbsp; Si usted tiene un 1 gigabyte (GB) tarjeta de memoria para su cámara, que sólo le permiten almacenar aproximadamente 30 imágenes.&nbsp;<br> </p>
 <p>Debio al enorme tamaño de los archivos que contienen sólo los píxeles, la gente ha venido con diversas formas de compresión de imágenes en archivos más pequeños.&nbsp; Estos se pueden poner en dos grupos diferentes: sin pérdidas (Lossless) y con pérdida (Lossy).<br> </p>
-<p><b>Compresión Sin Pérdidas </b>
+<h4><b>Compresión Sin Pérdidas </b></h4><p>
 </p>
 <p>La compresión sin pérdidas (lossless compression) toma los archivos y encuentra maneras matemáticamente de hacer que más pequeños, de una manera que puede ser completamente des-hecho. La manera más fácil de hacer esto es ejecutar la imagen a través de una herramienta de compresión general como Zip.&nbsp; Zip es una herramienta que está disponible en todos los equipos, que pasa a través de cualquier archivo (no sólo imágenes) y encuentra la manera de hacerlo más pequeño.&nbsp; Una manera simple de hacer esto es si hay muchos píxeles en un área que son del mismo color, no puede haber una instrucción que cuando la imagen se dibuja con el color que toda la zona en el color correcto.&nbsp; La misma está diciendo lo que la computadora se puede hacer cientos de veces más pequeña que la cantidad de espacio que requeriría para almacenar todos los píxeles de la zona.&nbsp; Hay muchas otras maneras de hacer esto, pero en general son muy complicados y más allá del ámbito de aplicación de este material. <br></p>
 <p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://es.wikipedia.org/wiki/Compresión_sin_pérdida<br>http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
@@ -79,100 +79,31 @@ megapixels<br>
 <p>La compresión con pérdia (lossy compression) es diferente ya que una vez que un archivo comprimido no hay forma de volver exactamente el mismo archivo, algún detalle siempre se pierde.&nbsp; Dado que las imágenes están hechas de millones de píxeles cada posible de representar a millones de colores diferentes, hay margen para la eliminación de los detalles antes de que el ojo humano se notará ninguna diferencia.&nbsp; Esto se puede hacer con una combinación de los métodos de compresión sim pérdidas, al igual que cosas como el supuesto de que un color de un píxel es similar a los píxeles que lo rodean, y los métodos complicados muchos más.&nbsp; También más allá del alcance de este material. &nbsp;<br> </p>
 <br><p>Abajo son tres ejemplos que ilustran la compresión con pérdida. El ejemplo de la izquierda es el original y se comprimió con compresión sin pérdidas.&nbsp; La imagen central se comprimió con compresión con pérdida, que fue creado para no perder datos mucho.&nbsp; La imagen de la derecha usa compresión con pérdida, con ajustes muy agresivos.&nbsp; Hizo un tamaño de archivo mucho más pequeño que el del medio (1.1KB frente a 9.4KB) pero obviamente la compresión elimina partes de la imagen que son importantes para hacer que se vea bien.</p><p style="text-align: center;"> <img src="RasterGraphics/LossyDemonstration-Original.png" alt="LossyDemonstration-Original.png"><img src="RasterGraphics/LossyDemonstration-84less.jpg" alt="LossyDemonstration-84less.jpg"><img src="RasterGraphics/LossyDemonstration-98less.jpg" alt="LossyDemonstration-98less.jpg"></p><p> </p>
 <p><a href="http://en.wikipedia.org/wiki/Lossy_compression">http://es.wikipedia.org/wiki/Compresión_con_pérdidas<br>http://en.wikipedia.org/wiki/Lossy_compression</a></p>
-<p><b>File Storage</b></p>
-<p>There are many different types of files that are used for images,
-most of which support one or more specific lossless or lossy
-compression methods. Below is an overview of them, there are many
-less-used formats in addition that aren't listed here. See:
+<h3><b>Almacenamiento de Archivos<br></b></h3>
+<p>Hay muchos tipos diferentes de archivos (files) que se utilizan para las imágenes, la mayoría de los cuales el apoyo de uno o más métodos específicos de compresión sin pérdida o con pérdida.&nbsp; Abajo se muestra una visión general de ellos, hay muchos formatos menos utilizados, además, no que no figuran en esta lista.&nbsp; Ver:&nbsp;
 <a href="http://en.wikipedia.org/wiki/Image_file_formats">http://en.wikipedia.org/wiki/Image_file_formats</a>
-(verified at:
-<a href="http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331">http://en.wikipedia.org/w/index.php?title=Image_file_formats&amp;oldid=396980331</a>
-) or <a href="http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats</a>
-(verified at:
-<a href="http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069">http://en.wikipedia.org/w/index.php?title=Comparison_of_graphics_file_formats&amp;oldid=392146069</a>)
-for more information.</p>
-<p><b>Bitmap</b> (.bmp, others) -- Contains all the pixels of the
-image, without compression. The .bmp format specifically is used by
-Microsoft in their programs for displaying images, but similar
-methods are used in all types of computers. As it stores all the
-pixels, this is a lossless format, in fact by default it is not
-compressed at all.</p>
-<p><b>JPEG</b> (.jpg, .jpeg) -- Stands for Joint Photographic
-Experts Group, was developed specifically for storing images taken by
-digital cameras, and is by far the most used format for digital
-photographs. This is a lossy format, however with typical settings
-it is very difficult to detect any image degradation.</p>
-<p><b>PNG</b> (.png) -- Portable Network Graphics is better at
-storing images that don't have a lot of detail, such as graphics on
-websites. This is a lossless format. </p>
-<p><b>GIF</b> (.gif) -- Graphics Interchange Format is similar to
-but older than PNG. In general PNG should be used instead, however
-there is one feature that it has that PNG currently does not, which
-is to be able to have multiple images stored inside it, which can be
-played back as a simple animation. </p>
-<p><b>JPEG2000</b> (.jp2) -- This was an attempt at creating a
-better version of the JPEG format, however it has not been very
-successful, and is mostly used in professional situations such as
-medical imaging. This format has options that can make it lossless
-or lossy. </p>
-<p><b>JPEG XR/HD Photo</b> (.jxr) -- This is another attempt at
-creating a better version of the JPEG format, originally developed by
-Microsoft as "HD Photo" it was submitted to the Joint
-Photographic Experts Group who accepted it as a new standard. It has
-not yet caught on in mainstream use. This format has options that
-can make it lossless or lossy. </p>
-<p><b>WebP</b> (.webp) -- This is a new format developed by Google
-that is designed for replacing JPEG (and some PNG) for use in images
-on the web. It is not currently supported by all web browsers, but
-work is ongoing on it. This format is lossy. </p>
-<p><b>TIFF</b> (.tif, .tiff) -- Tagged Image File Format is used
-mostly for images of documents (such as scans). It has support for
-multiple pages of images, as well as metadata such as where the image
-was collected, who wrote it, etc. Usually it is used as a lossless
-format, but it has the ability to use JPEG or other types of
-compression inside it. </p>
-<p><b>Raw</b> (.raw, .cr2, .crw, .nef, .nrw, dng, and more) -- Raw
-images are not a specific format, but a grouping of many different
-formats, all of which are built from cameras. By default cameras
-usually produce JPEG images, which are lossy and don't contain all
-the basic data that the camera recorded about the image. When a
-photographer gets a raw image, he or she gets all the data that the
-camera collected, which can be useful when doing advanced processing
-of the images on a computer. </p>
-<p><b>XCF</b> (.xcf) -- eXperimental Computing Facility is the name
-of the file format used to store projects in the Gimp photo editor. It
-stores photographs losslessly, and can store multiple layers of
-photos and other data such as text, lines, selections and more.</p>
-<p><b>PSD</b> (.psd) -- PhotoShop Document very similar to the XCF
-format, but used by photoshop. It is also lossless, and can store
-multiple layers of photographs and data. </p>
-<p><br>
+o <a href="http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats</a> para más información.</p>
+<p><b>Bitmap/Mapa de bits</b> (.bmp, otros) -- Contiene todos los píxeles de la imagen, sin compresión.&nbsp; El formato .bmp concreto es utilizado por Microsoft en sus programas para la visualización de imágenes, pero los métodos similares se utilizan en todo tipo de computadoras.&nbsp; Ya que almacena todos los píxeles, este es un formato sin pérdidas, de hecho por defecto no se comprime en absoluto.</p>
+<p><b>JPEG</b> (.jpg, .jpeg) -- Soportes de Joint Photographic
+Experts Group (grupo conjunto de expertos fotográficos), se desarrolló específicamente para el almacenamiento de imágenes tomadas por cámaras digitales, y es con muho, el formato más utilizado para las fotografías digitales.&nbsp; Se trata de un formato con pérdida, sin embargo con la configuración típica es muy difícil de detectar cualquier degradación de la imagen.</p>
+<p><b>PNG</b> (.png) -- Portable Network Graphics (gráfico de la red portátil) es mejor para el almacenamiento de imágenes que no tienen muchos detalles, tales como gráficos en las páginas web.&nbsp; Este es un formato sin pérdidas. </p>
+<p><b>GIF</b> (.gif) -- Graphics Interchange Format (formato de intercambio de gráficos) es similar pero más viejo de PNG.&nbsp; En general PNG se debe utilizar en su lugar, sim embargo hay una característica que tiene que PNG no tiene actualmente, que es poder tener varias imágenes almacenadas en su interior, que se pueden reproducir como una animación sencilla. </p>
+<p><b>JPEG2000</b> (.jp2) -- Este fue un intento de crear una mejor versión del formato JPEG. Sin embargo no ha tenido mucho éxito y se utiliza sobre todo en situaciones profesionales, tales como imágenes médicas.&nbsp; Este formato tiene opciones que pueden hacer sin pérdida o con pérdida. </p>
+<p><b>JPEG XR/HD Photo</b> (.jxr) -- Este es otro intento de crear una mejor versión del formato JPEG, originalmente desarrollado por Microsoft como "HD Photo" que se presentó a la Joint Photographic Experts Group (grupo conjunto de expertos fotográficos), que lo aceptó como un nuevo estándar.&nbsp; Aún no ha prendido en el uso corriente.&nbsp; Este formato tiene opciones que pueden hacer sin pérdida o con pérdida. </p>
+<p><b>WebP</b> (.webp) -- Este es un nuevo formato desarrollado por Google que está diseñado para reemplazar JPEG (y algunos PNG) para su uso en las imágenes en la web.&nbsp; No es en la actualidad con el apoyo de todos los navegadores web, pero se está trabajando en él.&nbsp; Este formato es con pérdida. </p>
+<p><b>TIFF</b> (.tif, .tiff) -- Tagged Image File Format (etiquetado formato de archivo de imagen) se usa principalmente para imágenes de documentos (como exploraciones).&nbsp; Tiene soporte para múltiples páginas de imágenes, así como los metadatos, como en la imagen se recogió, que lo escribió, etc.&nbsp; Por lo general, se utiliza como un formato sin pérdida, pero tiene la habilidad de usar JPEG o otro tipo de compresión en el interior. </p>
+<p><b>RAW</b> (.raw, .cr2, .crw, .nef, .nrw, dng, y más) -- Las imágenes RAW no es un formato específico, sino una agrupación de diferentes formatos, todos los cuales se construyen las cámaras.&nbsp; Por las cámaras por defecto suelen producir imágenes JPEG, que están en pérdidas y no contienen todos los datos básicos que la cámara registró sobre la imagen.&nbsp; Cuando un fotógrafo recibe una imagen en bruto, él or ella recibe todos los datos recogidos que la cámara que puede ser útil cuando se hace el procesamiento avanzado de las imágenes en una computadora. </p>
+<p><b>XCF</b> (.xcf) -- eXperimental Computing Facility (facilidad que computa experimental) es el nombre del formato de archivo usado para almacenar los proyectos en el editor de imágenes GIMP.&nbsp; Almacena fotografías sin pérdidas y puede almacenar varias capas de fotos y otros datos tales como texto, líneas, selecciones, y mas.</p>
+
+<p><b>PSD</b> (.psd) -- PhotoShop Documento muy similar al formato XCF, pero utilizado por Photoshop.&nbsp; También es sin pérdidas y puede almacenar varias capas de fotografías y datos.<br>
 <br>
 </p>
-<p><big>Bonus, non raster-image formats:</big></p>
-<p><b>EXIF</b> - Exchangeable Image File Format is used for metadata
-about the image, it is not a file on its own, but is incorporated
-into other files such as JPEG. It can contain a huge number of
-different data fields including: date the image was taken, camera
-settings, exposure time, aperture size, zoom level, GPS coordinates of
-the camera, direction the camera was facing, and many more. </p>
-<p><b>SVG</b> (.svg) -- Scalable Vector Graphics files are used to
-store images generated on a computer, not photographs. These files
-do not store any pixels, but rather store information about where
-lines, circles, text, and other components are in relationship to
-each other (referred to with vectors). It is called scalable because
-the instructions for creating the image can be given any unit of
-length and make the entire image based on that. In addition the
-instructions for generating the image can include references to
-amounts of time, so the image can change as it is drawn making an
-animation. Because there are no pixels to be calculated, this is an
-inherently lossless format. </p>
-<p><b>EPS</b> (.eps) -- Encapsulated Post Script files are similar to
-SVG files, but somewhat older and has more limited features, such as
-not being able to do animation.</p>
-<h3>Exercises</h3>
-<p>1- Select all of the following image resolutions that are in a 4:3
-ratio?&nbsp; (A typical landscape picture)<br>
+<p><big>Bono, no los formatos de imagen raster:</big></p>
+<p><b>EXIF</b> - Exchangeable Image File Format (formato de archivo de imagen intercambiable) se utiliza para los metadatos de la imagen, no es un archivo por su cuenta, pero se incorpora en otros archivos como JPEG.&nbsp; Puede contener un gran número de campos de datos diferentes, incluyendo: la fecha se tomó la imagen, ajustes de la cámara, el tiempo de exposición, tamaño de la abertura, nivel de zoom, coordenadas GPS de la cámara, en dirección a la cámara estaba enfrentando, y muchos más. </p>
+<p><b>SVG</b> (.svg) -- Scalable Vector Graphics (gráficos vectoriales escalables) archivos se utilizan para almacenar las imágenes generadas en un equipo, no fotografías.&nbsp; Estos archivos no almacena los píxeles, sino que almacenan información sobre donde las líneas, círculos, texto y otros componentes están en relación entre ellos (se refiere con vectores).&nbsp; Se llama escalable porque las instrucciones para la creación de la imagen se puede dar cualquier unidad de longitud y que toda la imagen basada en eso.&nbsp; Además de las instrucciones para generar la imagen pueden incluir referencias a cantidades de tiempo, por lo que la imagen se puede cambiar a medida que se dibuja hacer una animación.&nbsp; Porque no hay píxeles que se calcula, se trata de un formato sin pérdida inherente. </p>
+<p><b>EPS</b> (.eps) -- Encapsulado Post Script archivos son similares a los archivos SVG, pero algo mayor y tiene más funciones limitadas, como no ser capaz de hacer la animación.</p>
+<h3>Ejercicios</h3>
+<p>1- Seleccione todas las resoluciones de la siguiente imagen que se encuentran en una proporción de 4:3.&nbsp; (Una imagen típica del paisaje)<br>
 </p>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
@@ -215,7 +146,7 @@ ratio?&nbsp; (A typical landscape picture)<br>
   </tbody>
 </table>
 <br>
-2- How many color channels does a 24-bit photograph have?<br>
+2- ¿Cuántos canales de color es una fotografía de 24 bits tiene? <br>
 A)
 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B)
@@ -224,17 +155,13 @@ C)
 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) 6<br>
 <br>
-3- What color to you get from a pixel that has the following components
-(8-bit) Red:200, Green:50, Blue:200 ?<br>
-A)
-Orange&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-B)
-Brown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-C)
-Purple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-D) Red<br>
+3- ¿De qué color par ir de un píxel que tiene los siguientes componentes (8-bit)&nbsp; R:200, G:50, B:200 ?<br>
+A) Naranja &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B) Café &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C) Púrpura &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D) Rojo<br>
 <br>
-4- What pixel components (8-bit) make the color yellow?<br>
+4- ¿Qué componentes de pixel (8-bit) que el color amarillo?<br>
 A) R:255 G:0
 B:255&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B) R:200 G:200
@@ -243,7 +170,7 @@ C) R:255 G:255 B:
 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) R:100 G:50 B: 220 <br>
 <br>
-5- What is the un-compressed size of a 24-bit, 1600x1200 photo?<br>
+5- ¿Cuál es el tamaño sin comprimir de 24-bit, 1600x1200 foto?<br>
 A) 5,760
 KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B) 1,920,000
@@ -251,16 +178,13 @@ B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 C) 1,024
 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) 576 KB
-<p>6- Lossless images are good for websites where it is important to
-have quick downloads.<br>
-True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-False</p>
-<p>7- Lossless images are good for editing images, where it is
-important to not lose any quality while editing.<br>
-True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-False<br>
+<p>6- Las imágenes sin pérdidas son buenos para los sitios web donde es importante tener una rápida descarga.<br>Verdad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Falso</p>
+<p>7- Las imágenes sin pérdidas son buenos para la edición de imágenes, donde es importante no perder la calidad durante la edición.<br>
+Verdad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Falso<br>
 </p>
-8- Which image format is most used by consumer cameras?<br>
+8- ¿Qué formato de imagen es la más utilizada por las cámaras de los consumidores?<br>
 A)
 JPEG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B)
