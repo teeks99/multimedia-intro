@@ -48,7 +48,7 @@ megapixels<br>
 <img src="RasterGraphics/LargeTortoise-small-cropped.jpg" alt="LargeTortoise-small-cropped.jpg"><br>
 <p>Como regla general, es importante para mantener lo mejor imagen posible (la mayoría de píxeles), por lo menos mientros se trabaja con él para editar.&nbsp; La sección sobre recorte y el cambio de tamaño que cubren más de las ventajas y desventajas que se puden hacer al conseguir una imagen lista par imprimir o poner en Internet. </p>
 <h3 class="western">Canales (Channels)<br></h3>
-<p>En una fotografía, un píxel puede representar muchos colores diferentes.&nbsp; Para expresar esto en un computadora, los píxeles se representan con diferentes "canales" (channels) para los diferentes colores.&nbsp; Un imagen típica tendrá canales: rojo, verde y azul, para las imágenes sin color, tendrán un solo canal (diferentes tonalidades de gris).&nbsp; Cada canal dice qué tan fuerte que el color es, por ejemplo, un píxel que tiene canal rojo muy fuerte y los canales verde y azul muy débil se mostraría como el rojo.&nbsp; Un píxel, donde los tres canales son muy fuertes estaría cerca de blanco, y donde todos son débiles, cerca de negro.<br>
+<p>En una fotografía, un píxel puede representar muchos colores diferentes.&nbsp; Para expresar esto en un computadora, los píxeles se representan con diferentes "canales" (channels) para los diferentes colores.&nbsp; Un imagen típica tendrá canales: rojo, verde y azul (Red, Green, and Blue - juntos RGB), para las imágenes sin color, tendrán un solo canal (diferentes tonalidades de gris).&nbsp; Cada canal dice qué tan fuerte que el color es, por ejemplo, un píxel que tiene canal rojo muy fuerte y los canales verde y azul muy débil se mostraría como el rojo.&nbsp; Un píxel, donde los tres canales son muy fuertes estaría cerca de blanco, y donde todos son débiles, cerca de negro.<br>
 </p>
 
 <p style="text-align: center;"><img src="RasterGraphics/200px-AdditiveColor.svg.png" alt="200px-AdditiveColor.svg.png"></p>
@@ -63,32 +63,13 @@ megapixels<br>
 <p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
 
 <p>Algunos formatos rasterizada también un canal llamado "Alfa" (Alpha), que especifica el brillo del píxel.&nbsp; Si el canal alfa es baja, entonces sería posible para una imagen que se amontona detrás de la serie uno de ellos para mostrar a través.&nbsp;&nbsp; Esto se llama transparencia.&nbsp; Si no hay nada detrás de la imagen, el valor por defecto suele ser negro.&nbsp;<br> </p>
-<h3 class="western">File Types</h3>
-<b>Photo Size</b>
-<p>For a typical photograph, each of the three (Red, Green, and Blue)
-channels are represented by one byte of data for each pixel. This
-means that it requires three bytes of data for each pixel, this is
-often referred to as 24 bit color (24 bits, because 8 bits equals 1
-byte and there are three bytes). Because each byte can hold 2^8 or
-256 different values, each channel can have 256 different levels of
-that color (1/256 or 0.39% change per level if everything is done
-evenly). You may have noticed that the R G and B values on the
-demonstration we used in the channels section only had 256 different
-options, if you don't remember, go back and check it out now:</p>
+<h3 class="western">Tipos de Archivo</h3>
+<b>Tamaño de las fotos</b>
+<p>Para una fotografía normal, cada uno de los tres (rojo - Red, verde - Green, y azul - Blue) los canales están representados por un byte de datos para cada píxel.&nbsp; Esto significa que se requiere de tres bytes de datos para cada píxel, esto se refiere a menudo como el color de 24 bits (24 bits, ya que 8 bits es igual a 1 byte y hay tres bytes).&nbsp; Debido a que cada byte puede teer 2^8 o 256 valores diferentes, cada canal puede tener 256 niveles diferentes de ese color (1/256 o 0.39% de variación por nivel, si todo se hace de manera uniforme).&nbsp; Puede haber notado que la R G y B los valores en la demostración se utilizó en la sección de los canales sólo tenía 256 opciones diferentes, si no recuerdo, volver atrás y comprobar que funciona ahora:</p>
 <p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
-<p>Because there are three different channels, that means each pixel
-can represent 256x256x256 colors or over 16 million different color
-combinations. That's a lot more than even the largest box of
-crayons. </p>
-<p>For a 12 megapixel image from a modern camera, this means that it
-would require 36 Megabytes (MB) of storage space! That's a lot when
-you go out with your camera and want to take a bunch of pictures. If
-you have a 1 Gigabyte (GB) memory card for your camera, that would
-only allow you to store about 30 images. </p>
-<p>Because of the huge size of files that just contain the pixels,
-people have come up with various ways of compressing images into
-smaller files. These can be put into two different groups: Lossless
-and Lossy. </p>
+<p>Debido a que hay tres canales diferentes, eso significa que cada p'ixel puede representar 256x256x256 colores o más de 16 millones de combinaciones de color diferentes.&nbsp; Eso es mucho más de lo que la mayor caja de lápices de colores. </p>
+<p>Para una imagen de 12 megapíxeles de una cámara moderna, esto significa que se requeriría 36 megabytes (MB) de espacio de almacenamiento!&nbsp; Eso es mucho cuando sale con su cámara y quiere tomar un montón de fotos.&nbsp; Si usted tiene un 1 gigabyte (GB) tarjeta de memoria para su cámara, que sólo le permiten almacenar aproximadamente 30 imágenes.&nbsp;<br> </p>
+<p>Debio al enorme tamaño de los archivos que contienen sólo los píxeles, la gente ha venido con diversas formas de compresión de imágenes en archivos más pequeños.&nbsp; Estos se pueden poner en dos grupos diferentes: sin pérdidas (Lossless) y con pérdida (Lossy).<br> </p>
 <p><b>Lossless Compression </b>
 </p>
 <p>Lossless compression takes the files and finds ways to
