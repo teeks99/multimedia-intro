@@ -70,46 +70,15 @@ megapixels<br>
 <p>Debido a que hay tres canales diferentes, eso significa que cada p'ixel puede representar 256x256x256 colores o más de 16 millones de combinaciones de color diferentes.&nbsp; Eso es mucho más de lo que la mayor caja de lápices de colores. </p>
 <p>Para una imagen de 12 megapíxeles de una cámara moderna, esto significa que se requeriría 36 megabytes (MB) de espacio de almacenamiento!&nbsp; Eso es mucho cuando sale con su cámara y quiere tomar un montón de fotos.&nbsp; Si usted tiene un 1 gigabyte (GB) tarjeta de memoria para su cámara, que sólo le permiten almacenar aproximadamente 30 imágenes.&nbsp;<br> </p>
 <p>Debio al enorme tamaño de los archivos que contienen sólo los píxeles, la gente ha venido con diversas formas de compresión de imágenes en archivos más pequeños.&nbsp; Estos se pueden poner en dos grupos diferentes: sin pérdidas (Lossless) y con pérdida (Lossy).<br> </p>
-<p><b>Lossless Compression </b>
+<p><b>Compresión Sin Pérdidas </b>
 </p>
-<p>Lossless compression takes the files and finds ways to
-mathematically make them smaller, in a way that can be completely
-un-done. The easiest way to do this is to run the image through a
-general compression tool like zip. Zip is a tool that is available
-on all computers, that goes through any file (not just images) and
-finds ways to make it smaller. One simple way this is done is if
-there are many pixels in an area that are the same color, there can
-be an instruction that when the image is drawn to color that whole
-area in the correct color. That instruction telling what the
-computer to do can be hundreds of times smaller than the amount of
-space it would require to store all the pixels in the area. There
-are many other ways to do this, but they are generally very
-complicated and beyond the scope of this material.</p>
-<p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
-<p><b>Lossy Compression </b>
+<p>La compresión sin pérdidas (lossless compression) toma los archivos y encuentra maneras matemáticamente de hacer que más pequeños, de una manera que puede ser completamente des-hecho. La manera más fácil de hacer esto es ejecutar la imagen a través de una herramienta de compresión general como Zip.&nbsp; Zip es una herramienta que está disponible en todos los equipos, que pasa a través de cualquier archivo (no sólo imágenes) y encuentra la manera de hacerlo más pequeño.&nbsp; Una manera simple de hacer esto es si hay muchos píxeles en un área que son del mismo color, no puede haber una instrucción que cuando la imagen se dibuja con el color que toda la zona en el color correcto.&nbsp; La misma está diciendo lo que la computadora se puede hacer cientos de veces más pequeña que la cantidad de espacio que requeriría para almacenar todos los píxeles de la zona.&nbsp; Hay muchas otras maneras de hacer esto, pero en general son muy complicados y más allá del ámbito de aplicación de este material. <br></p>
+<p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://es.wikipedia.org/wiki/Compresión_sin_pérdida<br>http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
+<p><b>Compresión Con Pérdida </b>
 </p>
-<p>Lossy compression is different in that once a file is compressed
-there is no way to get back the exact same file, some detail is
-always lost. Since images are made of millions of pixels each
-possible of representing millions of different colors, there is some
-room for removing detail before the human eye would notice any
-difference. This can be done with a combination of the lossless
-compression methods, as well as things like assuming that a color of
-one pixel is similar to the pixels surrounding it, and many more
-complicated methods. Also beyond the scope of this material. </p>
-<p>Below are three examples which illustrate lossy compression. The
-example on the left is the original and was compressed with loss-less
-compression. The middle picture was compressed with lossy
-compression, which was set to not loose very much data. The image on
-the right used lossy compression with very aggressive settings. It
-made a much smaller file size than the middle one (1.1KB vs 9.4 KB)
-but obviously the compression removed parts of the image that are
-important for making it look good.&nbsp; <br>
-</p>
-<br>
-<p style="text-align: center;">&nbsp;<img src="RasterGraphics/LossyDemonstration-Original.png" alt="LossyDemonstration-Original.png"><img src="RasterGraphics/LossyDemonstration-84less.jpg" alt="LossyDemonstration-84less.jpg"><img src="RasterGraphics/LossyDemonstration-98less.jpg" alt="LossyDemonstration-98less.jpg"></p>
-<p> </p>
-<p><a href="http://en.wikipedia.org/wiki/Lossy_compression">http://en.wikipedia.org/wiki/Lossy_compression</a></p>
+<p>La compresión con pérdia (lossy compression) es diferente ya que una vez que un archivo comprimido no hay forma de volver exactamente el mismo archivo, algún detalle siempre se pierde.&nbsp; Dado que las imágenes están hechas de millones de píxeles cada posible de representar a millones de colores diferentes, hay margen para la eliminación de los detalles antes de que el ojo humano se notará ninguna diferencia.&nbsp; Esto se puede hacer con una combinación de los métodos de compresión sim pérdidas, al igual que cosas como el supuesto de que un color de un píxel es similar a los píxeles que lo rodean, y los métodos complicados muchos más.&nbsp; También más allá del alcance de este material. &nbsp;<br> </p>
+<br><p>Abajo son tres ejemplos que ilustran la compresión con pérdida. El ejemplo de la izquierda es el original y se comprimió con compresión sin pérdidas.&nbsp; La imagen central se comprimió con compresión con pérdida, que fue creado para no perder datos mucho.&nbsp; La imagen de la derecha usa compresión con pérdida, con ajustes muy agresivos.&nbsp; Hizo un tamaño de archivo mucho más pequeño que el del medio (1.1KB frente a 9.4KB) pero obviamente la compresión elimina partes de la imagen que son importantes para hacer que se vea bien.</p><p style="text-align: center;"> <img src="RasterGraphics/LossyDemonstration-Original.png" alt="LossyDemonstration-Original.png"><img src="RasterGraphics/LossyDemonstration-84less.jpg" alt="LossyDemonstration-84less.jpg"><img src="RasterGraphics/LossyDemonstration-98less.jpg" alt="LossyDemonstration-98less.jpg"></p><p> </p>
+<p><a href="http://en.wikipedia.org/wiki/Lossy_compression">http://es.wikipedia.org/wiki/Compresión_con_pérdidas<br>http://en.wikipedia.org/wiki/Lossy_compression</a></p>
 <p><b>File Storage</b></p>
 <p>There are many different types of files that are used for images,
 most of which support one or more specific lossless or lossy
