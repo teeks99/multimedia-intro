@@ -658,327 +658,77 @@ selection and then clicking Image -&gt; Crop to selection.<br>
 <a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br>
 <h3 class="western">Advanced Selection and Layers<br>
 </h3>
-<p style="margin-bottom: 0in;">Now that we have some of the basics like
-resizing and selecting down, we're going to get a little more
-advanced.&nbsp; In this section we are going to combine two separate
-pictures into one photo-like image that could conceivable been taken by
-a person with a camera, but wasn't.&nbsp; This is a powerful tool that
-can be used to deceive others by making them think that something
-really happened when in actuality it didn't.&nbsp; Many people have
-tried to deceive others with this, and many have been found, such as
-Iran, trying to show that it launched four missiles when it only
-launched three:
-http://boingboing.net/2008/07/10/iran-you-suck-at-pho.html.&nbsp; As a
-photo editor, it is your job to use these tools responsibly. <br>
+<p style="margin-bottom: 0in;">Ahora que tenemos algunos de los fundamentos como cambiar el tamaño y la selección de abajo, vamos a ser un poco más avanzado.&nbsp; En esta sección vamos a combinar dos imágenes distintas en una sola imagen de como un foto la que podría imaginar sido adquirido por una persona con una cámara, pero no fue.&nbsp; Esta es una herramienta poderosa que puede usarse para engañar a los demás, haciéndoles pensar que algo que realmente sucedió cuando en realidad no fue así.&nbsp; Muchas personas han tratado de engañar a los demás con esto, y muchos se han encontrado, como el pais de Irán, tratando de demostrar que lanzó cuatro misiles cuando sólo lanzó tres: <a href="http://mangasverdes.es/2008/07/11/iran-lanza-misiles-con-photoshop/">http://mangasverdes.es/2008/07/11/iran-lanza-misiles-con-photoshop/</a>.&nbsp; Como editor de fotos, es su trabajo para utilizar estas herramientas de manera responsable.<br>
 </p>
-<p style="margin-bottom: 0in;">We're going to start by taking a picture
-of an <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">airplane</a>
-putting it into the background of a picture of the <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Statue of Liberty</a>.&nbsp;
-<br>
+<p style="margin-bottom: 0in;">Vamos a empezar por tomar una foto de un <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">avión</a> de ponerla en ul fondo de una imagen de la <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Estatua de la Libertad</a>.&nbsp; <br>
 </p>
 <br>
-<a href="PhotoExamples/LayerForeground-Ex-orig.jpg">An Airplane<br>
+<a href="PhotoExamples/LayerForeground-Ex-orig.jpg">Un Avión<br>
 <img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerForeground-Ex-orig.jpg" alt="LayerForeground-Ex-orig.jpg"></a><br>
-<br>
-<a href="PhotoExamples/LayerBackground-Ex-orig.jpg">The Statue of
-Liberty<br>
-<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br>
-Go ahead and save those to files to your disk, then open them up in the
-GIMP.&nbsp; Since this is a more complicated project than our past
-ones, we're going to save the Statue of Liberty picture into a separate
-file that GIMP uses to store all the data about the project.&nbsp; This
-is an XCF (eXperimental Computing Facility) file, and it stores all the
-image data in a lossless format, as well as data about layer and
-channels which we will be using for this project.&nbsp; To save as this
-type of file, in the Statue of Liberty image go to File -&gt; Save As,
-then in the name box, change the extension from .jpg to .xcf and click
-the save button.&nbsp; You can change the name to something completely
-different or leave it the same, as long as you have the .xcf
-extension.&nbsp; This will leave the original .jpg file alone, so you
-could go back and re-open it if you need to later, without having to
-re-download it.<br>
-<br>
-The basic premise of how we are going to add the airplane into the
-Statue photo is that we are going to select just the airplane (without
-any of the sky background) from its photo, then copy and paste that
-into the statue of liberty.&nbsp; Then we'll get on to another trick to
-make it look even better. <br>
-<br>
-There are several different ways to do the selection.&nbsp; We could do
-the rectangular selection like we did in the last image, but then
-you'll end up with all the sky from the airplane picture that was in
-the box in the statue picture.&nbsp; <br>
-<img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>
-It doesn't look very natural.&nbsp; We'll need to use one of the
-selection tools that will get us <span style="font-style: italic;">just</span>
-the airplane.&nbsp; <br>
-<br>
-The most basic tool for selecting a specific area, of an arbitrary
-shape is the "Free Select" or Lasso tool.&nbsp; This tool will let us
-draw whatever shape we want on the screen, and when we connect the line
-back to the start, it selects that area.&nbsp; <br>
-<br>
-Lets pick the "Free Select" tool.<br>
-<img style="width: 410px; height: 318px;" src="PhotoScreen/LayerFreeSelectTool-es.jpg" alt="LayerFreeSelectTool.jpg"><br>
-Now that we have the tool selected, we can start to outline the
-airplane.&nbsp; It will be much easier to find the correct points to
-select if you zoom in, I use 400%.&nbsp; Just find a spot on the border
-between the airplane and the sky, and click to make your first
-point.&nbsp; Then move the mouse cursor either clockwise or counter
-clockwise to another nearby pixel that separates that airplane and the
-sky.&nbsp; You will see a line extend between the first point and your
-cursor.&nbsp; Adjust your cursor so that the line follows the edge
-between the airplane and the sky.&nbsp; If you chose the complicated
-area with the landing gear and engines, this could be a very short
-line.&nbsp; On the other had, if you started on the top, this line will
-be quite a bit longer.&nbsp; <br>
-<br>
-Here's my line that started on the top, went over a little bump (an
-antenna) around the cockpit and is currently at the nose:<br>
+<br><span style="text-decoration: underline;"></span><a href="PhotoExamples/LayerBackground-Ex-orig.jpg">La Estatua de la Libertad<br>
+<img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br>Vaya por delante y guardar esos archivos en el disco, y luego abrirlos en el GIMP.&nbsp; Como se trata de un proyecto más complicado de lo que nuestros seres pasado, vamos a guardar la imagen Estatua de la Libertad en un archivo separado que el GIMP utiliza para almacenar todos los datos sobre el proyecto.&nbsp; Este es un XCF (eXperimental Computing Facility - facilidad que computa experimental) archivo, y almacena todos los datos de la imagen en un formato sin pérdida, así como datos sobre la capa y los canales que vamos a utilizar para este proyecto.&nbsp; Para guardar como este tipo de archivo, en la imagen de la estatua, vaya a Archivo -&gt; Guardar como... y, a continuación, en el cuadro nombre, cambie la extensión de .jpg a .xcf a haga clic el botón Guardar.&nbsp; Puede cambiar el nomber algo completamente diferente o salir de lo mismo, siemmpre y cuando tengan la extensión .xcf.&nbsp; Esto dejará el original .jpg solo, por lo que podría volver atrás y volver a abrirlo si necesita más, sin tener que volver a descargarlo.<br>
+<br>La premisa básica de cómo vamos a agregar el avión en la foto de la estatua es que vamos a seleccionar sólo el avión (sin ningún tipo de fondo del cielo) a partir de su foto, y luego copiar y pegar eso en la estatua de la libertad.&nbsp; A continuación nos pondermos en contacto a otro truco para hacer que se vea aún mejor.<br>
+<br>Hay varias formas diferentes de hacer la selección.&nbsp; Podríamos hacer la selección rectangular como lo hicimos en la última imagen, pero luego se va a terminar con todo el cielo de la imagen del avión que había en la caja en la foto estatua.<br>
+<img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>No se ve muy natural.&nbsp; Tendremos que utilizar una de las herramientas de selección que nos acaba de llegar el avión.<br>
+<br>La herramienta más básica para la selección de un área específica, de una forma arbitraria es la "Selección Libre" (Free Select) o Lasso herramienta.&nbsp; Esta herramienta nos permitirá extraer cualquier forma que desee en la pantalla, y cuando conecte la línea de regreso al inicio, selecciona la zona. <br>
+<br>Vamos a escoger la herramienta "Selección Libre".<br>
+<img style="width: 410px; height: 318px;" src="PhotoScreen/LayerFreeSelectTool-es.jpg" alt="LayerFreeSelectTool.jpg"><br>Ahora que tenemos la herramieta seleccionada, podemos empezar a esbozar el avión.&nbsp; Será mucho más fácil encontrar los puntos correctos para seleccionar si se captura, uso del 400%.&nbsp; Sólo tiene que encontrar un lugar en la frontera entre el avión y el cielo, y haga clic en para hacer su primer punto.&nbsp; A continuación, mueva el cursor del ratón ya sea horario o antihorario a otro píxel cerca que separa ese avión y el cielo.&nbsp; Verá una línea se extienden entre el primer punto y el cursor.&nbsp; Ajuste el cursor para que la línea sigue el borde entre el avión y el cielo.&nbsp; Si elige la zona complicada con el tren de aterrizaje y los motores, esto podría ser una línea muy corta.&nbsp; En el otro tenía si comenzó el la parte superior, esta línea será un poco más.<br><br>Aquí está mi línea que se inició en la parte superior, se acercó un pequeño bulto (una antena) alrededor de la cabina y se encuentra actualmente en la nariz:<br>
 <br>
 <img style="width: 522px; height: 518px;" src="PhotoScreen/LayerFreeSelect-es.jpg" alt="LayerFreeSelect.jpg"><br>
-<br>
-This is going well, but when you keep going and get into the more
-complex parts of the picture, this will start to get <span style="font-style: italic;">very</span> tedious.&nbsp; There are so
-many small parts that it would take hundreds of clicks to make lines
-that accurately separate them out.&nbsp; <br>
-<br>
-A better tool for getting all this complex stuff, is the Intelligent
-Scissors tool.&nbsp; Lets go pick that.<br>
-<img style="width: 388px; height: 456px;" src="PhotoScreen/LayerIntelSciTool-es.jpg" alt="LayerIntelSciTool.jpg"><br>
-The Intelligent Scissors tool is an interesting piece of equipment: it
-has some features in common with the Lasso, some features in common
-with the Path tool, and some features all its own. It is useful when
-you are trying to select a region defined by strong color-changes at
-the edges. To use the Scissors, you click to create a set of "control
-nodes", also referred to as anchors or control points, at the edges of
-the region you are trying to select. The tool produces a continuous
-curve passing through these control nodes, following any high-contrast
-edges it can find. If you are lucky, the path that the tool finds will
-correspond to the contour you are trying to select. <br>
-<br>
-We can start using it similarly to the Free Select tool, put down a
-point on the edge of the border between the airplane and the sky.&nbsp;
-Then move along that border and place another point.&nbsp; Although,
-this time you won't see a line from the previous point to the cursor,
-you just have to pick a point.&nbsp; Then when you click the computer
-will try to determine what the natural border is that both the points
-are on, and make a line that matches that border.&nbsp; If you are
-still zoomed in to 400%, this will look a bit jagged, that is usually
-because we're dealing with individual pixels at this level and they
-don't follow a very clean border.&nbsp; Don't worry too much about it,
-when we shrink this airplane down to put it in the statue picture, you
-won't be able to tell.&nbsp; <br>
+<br>esto va bien, pero cuando usted seguir adelante y entrar en las partes más complejas de la imagen, esta empezando a ser <span style="font-style: italic;">muy</span> tedioso.&nbsp; Hay tantas piezas pequeñas que se necesitarían cientos de clics para realizar con precisión las líneas que separarlos.<br>
+<br>Una herramienta más para conseguir todas estas cosas complejas, es la herramienta tijeras inteligentes (Intelligent Scissors).&nbsp; Vamos a ir a buscar eso.<br>
+<img style="width: 388px; height: 456px;" src="PhotoScreen/LayerIntelSciTool-es.jpg" alt="LayerIntelSciTool.jpg"><br>Las tijeras inteligentes es una pieza interesante: tiene algunas características en común con el lasso, algunas características en común con la herramienta rutas, y algunas características propias.&nbsp; Es útil cuando usted está tratando de seleccionar una región definida por los fuertes cambios de color en los bordes.&nbsp; Para emplear las tijeras, se hace clic para crear un conjunto de "nodos de control" (Control Nodes), también conocido como anclas o puntos de control, en los bordes de la región que está tratando de seleccionar.&nbsp; La herramienta produce una curva continua que pasa por los nodos de control, siguiendo el borde de alto contraste que puede encontrar.&nbsp; Si tienes suerte, el camino que encuentra la herramienta se corresponderá con el contorno que está tratando de seleccionar.<br>
+<br>Podemos empezar a usarlo de manera similar a la herramienta de selección libre, ponga un punto en el borde de la límite entre el avión y el cielo.&nbsp; A continuación, se mueven a lo largo de que bordean y colocar otro punto.&nbsp; Aunque, esta vez no va a ver una línea del punto anterior al cursor, sólo tiene que escoger un punto.&nbsp; Luego al hacer clic en el equipo tratará de determinar cuál es la borde natural es que tanto lo puntos están en, y hacer una línea que coincide con la borde.&nbsp; Si sigue el zoom a 400%, esto se verá un poco irregular, que suele ser debido a que estamos tratando con los píxeles individuales en este nivel y no siguen un borde muy limpio.&nbsp; No se preocupe demasiado acerca de él, cuando contraerá este avión, hasta ponerlo en la foto estatua, que no podrá contar.<br>
 <img src="PhotoScreen/LayerIntelPoints.jpg" alt="LayerIntelPoints.jpg"><br>
-<br>
-Sometimes the computer won't guess correctly where the line should go,
-as in this case<br>
-<img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>
-For some reason, it decided on a line through the engines, instead of
-between the engines and the sky, but don't despair, its easy to
-fix.&nbsp; We're just going to add another point in between those two
-to
-make it work out better.&nbsp; Any place you don't like where the
-computer thought the line should go, you can easily add a new
-point.&nbsp; Just click the existing line to make the point.&nbsp; <br>
-<img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>
-Then click and drag that new point down to the correct place for
-it.&nbsp; <br>
-<img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>
-You may have to click and drag more than once for the computer to find
-a line that is good enough for what you're trying to do.&nbsp; Also,
-you don't have to add a new point to move it, you can click and drag
-any point you've created to get it in a better location.&nbsp; The GIMP
-will automatically re-draw the line when you let go.<br>
-<br>
-As you go under the airplane, you probably don't have to worry about
-every tiny little area.&nbsp; When we shrink this picture down, most of
-the details won't be that easy to see.&nbsp; <br>
+<br>A veces el equipo no va a adivinar correctamente que la línea debe ir, como en este caso.<br>
+<img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>Por alguna razón, se decidió en una línea a través de los motores, en lugar de entre los motores y el cielo, pero no se desespere, es fácil de arreglar.&nbsp; Simplemente vamos a añadir otro punto entre esos dos para que funcione a mejor.&nbsp; Cualquier lugar que no le gusta que el equipo pensaba que la línea debe ir, usted puede agregar fácilmente un nuevo punto.&nbsp; Simplemente hax clic en la línea existente para hacer el punto.<br>
+<img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>A continuación, haga clic y arrastre el nuevo punto de que hasta el lugar adecuado para ello.<br>
+<img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>Puede que tenga que hacer clic y arrastrar más de una vez para el equipo para encontrar una línea que es bastante bueno para lo que estamos tratando de hacer.&nbsp; Además, no es necesario agregar un nuevo punto para moverlo, puede hacer clic y arrastrar cualquier punto en el que hemos creado para hacerlo en un lugar mejor.&nbsp; El GIMP automáticamente volverá a dibujar la línea cuando lo dejas ir.&nbsp; <br><br>Como usted vaya debajo del avión, es probable que no tiene que preocuparse de cada área diminuta.&nbsp; Cuando reducir esta imagen hacia abajo, la mayoría de los detalles no serán tan fáciles de ver.&nbsp; <br>
 <img src="PhotoScreen/LayerIntelNotPerfect.jpg" alt="LayerIntelNotPerfect.jpg"><br>
-<br>
-Once you've made it all the way around the airplane, <br>
-<img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>
-just click inside of your selection to complete it.&nbsp; <br>
-<br>
-Now lets see what just the area we've selected looks like.&nbsp; First
-we're going to copy the selection by hitting the Ctrl+C key
-combination. Then without doing anything to the image window we're
-going to paste it back in there by hitting the Ctrl+V key
-combination.&nbsp; Now if you look at the layers dialog, you will see
-that there is a new Floating Selection listed there. <br>
-<img style="width: 750px; height: 524px;" src="PhotoScreen/LayerPasteFloat-es.jpg" alt="LayerPasteFloat.jpg"><br>
-We're going to go ahead and make this into a full-fledge layer in the
-image by right clicking on the Floating Selection in the layers dialog
-and selecting "New Layer".&nbsp; Once
-we're done with that, we can see both layers in the layers
-dialog.&nbsp; <br>
+<br>Una vez que hemos hecho todo el camino alrededor del avión, <br>
+<img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>solo haga clic en el interior de su selección para completarlo.<br>
+<br>Ahorar vamos a ver lo que sólo el área que hemos seleccionado parece.&nbsp; En primer lugar vamos a copiar la selección pulsando las teclas Ctrl+c combinación.&nbsp; Luego, sin hacer nada a la ventana de la imagen que vamos a volver a pegarla allí pulsando las teclas Ctrl+v combinación.&nbsp; Ahora si usted mira en el diálogo de capas, verás que hay una nueva selección flotante (floating selection) que figuran allí.<br>
+<img style="width: 750px; height: 524px;" src="PhotoScreen/LayerPasteFloat-es.jpg" alt="LayerPasteFloat.jpg"><br>Vamos a seguir adelante y hacer esto en una capa completa de la imagen haciendo clic derecho sobre la selección flotante en las capas de diálogo y seleccionar "capa nueva".&nbsp; Una vez que hayas terminado con eso, podemos ver las dos capas en el diálogo de capas.<br>
 <img style="width: 750px; height: 518px;" src="PhotoScreen/LayerPasteNew-es.jpg" alt="LayerPasteNew.jpg"><br>
-<br>
-Now that we're using layers, we should probably have a quick
-explanation of what they are.<br>
-<br>
-It is probably easiest to think of layers as a stack of transparencies,
-where the content of what is on each layer is combined together to make
-up the image that we see.&nbsp; It is possible to have a layer that is
-completely colored in, in which case nothing from the layers below that
-can be seen. Likewise, it is possible to use the alpha channel to
-control how transparent something is to the layers below it.&nbsp; For
-instance if we had a bright orange (not transparent) layer on top of an
-image of car, you wouldn't be able to see the car.&nbsp; However, if
-you turned the alpha level of the orange layer down so it was more
-transparent, you could see the car, but it would have an orange tint to
-it.&nbsp; <br>
+<br>Ahora que estamos usando capas, que probablemente debería haber una explicación rápida de lo que son.<br>
+<br>es probablemente más fácil pensar en capas como una pila de transparencias, donde se combina el contenido de lo que hay en cada capa juntos para hacer que la imagen que vemos.&nbsp; Es posible tener una capa que está completamente en color, en el que nada de caso de las capas inferiores que se pueden ver.&nbsp; Del mismo modo, es posible utilizar el canal alfa (alpha) para controlar la transparencia de algo es de las capas inferiores.&nbsp; Por ejemplo, si teníamos un color naranja brillante (no transparente) en la capa superior de una imagen del auto, no sería capaz de ver el auto.&nbsp; Sin embargo, si se volvío el nivel alfa de la capa de color naranja por lo que era más transparente, se podía ver el coche, pero tendría un tinte de color naranja a la misma.<br>
 <img style="width: 787px; height: 406px;" src="PhotoScreen/LayerDemo-None-es.jpg" alt="LayerDemo-None.jpg"><br>
 <img style="width: 792px; height: 401px;" src="PhotoScreen/LayerDemo-Full-es.jpg" alt="LayerDemo-Full.jpg"><br>
 <img style="width: 791px; height: 404px;" src="PhotoScreen/LayerDemo-Half-es.jpg" alt="LayerDemo-Half.jpg"><br>
 <br>
-In addition, a layer doesn't have to take up the whole area of the
-image.&nbsp; For example, when we pasted the airplane back in to the
-same picture, the layer that was created only consisted of a box big
-enough to contain the selection.&nbsp; You can see its outline above in
-the screen shots where it was pasted.&nbsp; Another example of layers
-that aren't the size of the full image is text.&nbsp; Any time you use
-the text tool to write on an image, it will automatically create a new
-layer that the text is in, and that layer will be a rectangle just
-large enough for the text to fit in to.<br>
-<br>
-But back to our airplane picture. Now that we have a layer that just
-contains the pasted image of the airplane, we can hide the layer with
-everything in it and see just what we pasted.&nbsp; Just click the eye
-icon next to the background image to hide it.&nbsp; <br>
-<img style="width: 751px; height: 522px;" src="PhotoScreen/LayerPasteOnly-es.jpg" alt="LayerPasteOnly.jpg"><br>
-Now we've got the airplane that we selected (and copy/pasted) and the
-default GIMP background telling us that everything else in the image is
-transparent.&nbsp; <br>
-<br>
-If we zoom in, we can see that our selection wasn't perfect.&nbsp;
-There is a bit of sky remaining around the main landing gear, and a
-triangle between the front landing gear and the wing that extends down
-to the left.<br>
-<img style="width: 636px; height: 515px;" src="PhotoScreen/LayerSkyScraps-es.jpg" alt="LayerSkyScraps.jpg"><br>
-This isn't going to be a problem, since it will be very small in our
-final image, but we can clean it up just for the practice.&nbsp;&nbsp;
-We're going to use the erase tool to go in and remove those pieces of
-sky.<br>
-<br>
-First lets select the erase tool.&nbsp; <br>
+Además, una capa no tiene que asumir toda la zona de la imagen.&nbsp; Por ejemplo, cuando pega el avión de nuevo a la misma imagen, la capa que se creó sólo consistía en una caja lo suficientemente grande como para contener la selección.&nbsp; Puedes ver su contorno por encima de las capturas de pantalla en la que se pega.&nbsp; Otro ejemplo de las capas que no son del tamaño de la imagen completa de texto.&nbsp; Cada vez que utilice la herramienta de texto para escribir sobre una imagen, se creará automáticamente una nueva capa que el texto se encuentra, y esa capa será un rectángulo lo suficientemente grande para el texto para ajustarlo.&nbsp; <br>
+<br>Pero vovamos a nuestra imagen avión.&nbsp; Ahora que tenemos una capa que sólo contiene la imagen pegada del avión, podemos ocultar la capa con todo su contenido y ver lo que hemos pegado.&nbsp; Basta con hacer clic en el icono de ojo situado junto a la imagen de fondo para ocultarla.<br>
+<img style="width: 751px; height: 522px;" src="PhotoScreen/LayerPasteOnly-es.jpg" alt="LayerPasteOnly.jpg"><br>Ahora tenemos el avión que hemos seleccionado (y copiar y pegar) y el fondo predeterminado GIMP nos dice que todo lo demás en la imagen es transparente.<br><br>Si nos zoom, podemos ver que nuestra selección no era perfecto.&nbsp; Hay un poco de cielo restante de todo el tren de aterrizaje principal, y un triángulo entre el tren de aterrizaje delantero y el ala que se extiende hacia abajo a la izquierda.&nbsp; <img style="width: 636px; height: 515px;" src="PhotoScreen/LayerSkyScraps-es.jpg" alt="LayerSkyScraps.jpg"><br>Esto no va a ser un problema, ya que será muy pequeño en nuestra imagen final, pero podemos limpiar sólo para la práctica.&nbsp; Vamos a utilizar la herramienta de borrar para entrar y sacar los pedazos de cielo.&nbsp; <br>
+<br>Primero vamos a seleccionar la herramienta de borrar (eraser).<br>
 <img style="width: 446px; height: 381px;" src="PhotoScreen/LayerEraseTool-es.jpg" alt="LayerEraseTool.jpg"><br>
-<br>
-The eraser is one of the tools that has a brush associated with
-it.&nbsp; A brush is simply the pattern that the tool operates on, the
-most common brushes are circular like, with varying sizes.&nbsp; For
-this I would recommend using a Circle (03) brush, or possibly Circle
-(01) for some of the smaller, more detailed areas.&nbsp; The (03) and
-(01) refer to the size of the brush, so the (01) is smaller.&nbsp; To
-select the correct brush, click the brush picture next to the word
-"Brush:" in the Eraser Tool Options dialog.<br>
-<br>
+<br>El borrador es una de las herramientas que tiene un pincel (brush) asociados a ella.&nbsp; Un pincel es simplemente el modelo que la herramienta funciona, los pinceles más comunes son circulares con tamaños que verían.&nbsp; Para esto se recomienda usar un círculo (03) pincel, o, posiblemente, círculo (01) para algunos de los más pequeños, las áreas más detallada.&nbsp; El (03) y (01) se refieren al tamaño de la brocha, por lo que el (01) es menor.&nbsp; Para seleccionar el pincel correcto, haga clic en la foto junto al pincel de la palabra "pincel" en el cuadro de diálogo opciones de goma de borrar.<br>
 <img style="width: 266px; height: 614px;" src="PhotoScreen/LayerBrushSelection-es.jpg" alt="LayerBrushSelection.jpg"><br>
-<br>
-Now that we have a decent brush, we can use the eraser to remove parts
-of the image that we don't want.&nbsp; Just click once to remove the
-exact amount under the brush, or click and drag around to remove
-wherever you drag the brush.&nbsp; You'll notice that when you remove
-something, you see the gray checkered background.&nbsp; This indicates
-that this layer is now completely transparent in that spot.&nbsp; <br>
+<br>Ahora que tenemos un pincel decente, podemos usar la borrar para eliminar partes de la imagen que no queremos.&nbsp; Basta con hacer clic una vez para eliminar la cantidad exacta en el pincel, o haga clic y arrastre alrededor de quitar cualquier lugar al que arrastra el pincel.&nbsp; Se dará cuenta de que cuando se quita algo, que vea el fondo de cuadros grises.&nbsp; Esto indica que esta capa es ahora completamente transparente en ese lugar. <br>
 <img style="width: 1024px; height: 589px;" src="PhotoScreen/LayerEraseComplete-es.jpg" alt="LayerEraseComplete.jpg"><br>
-<br>
-Now that we've cleaned up the airplane, its time to import it into the
-photo of the Statue of Liberty.&nbsp; To do that, first we want to
-re-select the cleaned up airplane.&nbsp; Since that is all that is
-current layer (this only works on the current layer, even if the other
-layers are visible) we will only get the airplane when we simply select
-everything.&nbsp; To select everything simply enter the Ctrl+A key
-combination (also the menu Select -&gt; All works).&nbsp; Now you will
-see a line around the whole layer's area.&nbsp; Once again, we're going
-to copy this by hitting Ctrl+C. <br>
-<br>
-Now we have the airplane copied to the clipboard, lets bring up the
-image window for the Statue of Liberty photo and paste it there using
-Ctrl+V.&nbsp; <br>
+<br>Ahora que hemos limpiado el avión, es hora de que la importación en la foto de la Estatua de la Libertad.&nbsp; Para ello, primero queremos volver a seleccionar el limpiado avión.&nbsp; Dado que es todo lo que es la capa actual (esto sólo funciona en la capa actual, incluso si las otras capas son visibles) que sólo recibirá el avión en que sólo tiene que seleccionar todo.&nbsp; Para seleccionar todo lo que entra las teclas Ctrl+a combinación (también en el menú Seleccionar -&gt; Todo).&nbsp; Ahora podrás ver una línea alrededor del área de la capa entera.&nbsp; Una vez más, vamos a copiar este pulsando Ctrl+c.&nbsp; <br>
+<br>Ahora tenemos el avión copiado al portapapeles, vamos a abrir la ventana de la imagen de la foto estatua y pegarlo allí usando Ctrl+v.<br>
 <img style="width: 852px; height: 664px;" src="PhotoScreen/LayerAirplaneImport-es.jpg" alt="LayerAirplaneImport.jpg"><br>
-<br>
-Woah!&nbsp; Its huge!&nbsp; If we go back and look at it, the picture
-of the airplane was 640x480, and the picture of the Statue of Liberty
-was the same dimensions 640x480.&nbsp; That means that something that
-takes up half of the area in the first picture will also take up half
-of the area in the second picture.&nbsp; It is important to understand
-that the zoom level that you have each picture set to doesn't impact
-how big the item you are pasting is, only the number of pixels it takes
-up.&nbsp; <br>
-<br>
-Don't worry though, we can easily re-size the airplane to make it fit
-better.&nbsp; First, lets make the airplane that we just pasted into
-the image its own layer.&nbsp; In the layers dialog right click on the
-layer that says "Floating Selection (Pasted Layer)" and click "New
-Layer...".&nbsp; Now we have a separate layer we can play around
-with.&nbsp; <br>
-<br>
-To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp;
-Setting it to about 25% should look right.&nbsp; Do it just like in the
-section on re-sizing pictures, change the dropdown to say "percent"
-then put a value you think is good into <span style="font-style: italic;">one</span> of the
-boxes and click the "Scale" button.&nbsp; I have found 20-30% works
-well for this image.<br>
+<br>Woah!&nbsp; Su enorme!&nbsp; Si vamos hacia atrás y mire, la imagen del avión fue 640x480, y la imagen de la estatua fue las mismas dimensiones 640x480.&nbsp; Eso significa que algo que ocupa la mitad de la zona en la primera foto también se ocupará de la mitad de la zona en la segunda imagen.&nbsp; Es importante entender que el nivel de zoom que tiene cada imagen fijada en no afecta el tamaño del elemento que está pegando es decir, sólo el número de píxeles que ocupa.<br>
+<br>Pero no te preocupes, que puede fácilmente cambiar el tamaño del avión que nos acaba de pegar en la imagen de su propia capa.&nbsp; En las capas de diálogo haga clic derecho sobre la capa que dice "Selección flotante (Capa pegada)" y haga clic en "Capa nueva".&nbsp; Ahora tenemos una capa separada que puede jugar.<br>
+<br>Para cambiar el tamaño de ella, vamos a utilizar el menú Capa -&gt; Escalar capa...&nbsp; Si se establece en un 25% se ve bien.&nbsp; Hágalo igual que en la sección de imágenes de tamaño de nuevo, cambie el menú desplegable que decir "por ciento" y luego poner un valor crees que es bueno en una de las cuadros y haga clic en la "Escala" botón.&nbsp;&nbsp; He encontrado un 20-30% trabaja bien para esta imagen.<br>
 <br>
 <img style="width: 751px; height: 532px;" src="PhotoScreen/LayerAirplaneCentered-es.jpg" alt="LayerAirplaneCentered.jpg"><br>
-<br>
-Now we should have an appropriately sized airplane, but it is right in
-the middle of the picture, in front of the statue...not a very
-realistic location for an airplane.&nbsp; It would be nice if we could
-move it up into the sky.&nbsp; <br>
-<br>
-To move it, we'll just use the move tool.&nbsp; Pick it from the toolbox<br>
-<img style="width: 423px; height: 346px;" src="PhotoScreen/LayerMoveTool-es.jpg" alt="LayerMoveTool.jpg"><br>
-then just click inside the selection box with the airplane, and drag it
-to a nice spot in the sky.&nbsp; <br>
+<br>Ahora deberíamos tener un avión del tamaño adecuado, pero es justo en el centro de la imagen, delante de la estatua...no es un lugar muy realista de un avión.&nbsp; Sería bueno si pudiéramos subir al cielo.&nbsp; <br><br>Para moverlo, sólo tendremos que utilizar la herramienta de mover.&nbsp; Recogida desde la caja de herramientas<br>
+<img style="width: 423px; height: 346px;" src="PhotoScreen/LayerMoveTool-es.jpg" alt="LayerMoveTool.jpg"><br>luego haga clic dentro del cuadro de selección con el avión, y arrastra a un buen lugar en el cielo.<br>
 <br>
 <img style="width: 1024px; height: 610px;" src="PhotoScreen/LayerMove-es.jpg" alt="LayerMove.jpg"><br>
-<br>
-That looks pretty good, but what would really sell the picture is if it
-were flying behind the statue of liberty.&nbsp; Anyone can copy and
-paste an airplane on top of a picture, but to hide it behind
-something...that's really going to take a professional!<br>
-<br>
-To do this, we're going to select an area of the statue, without any of
-the sky behind it, using our intelligent scissors tool.&nbsp; Then
-we'll paste that selection into a new layer.&nbsp; Finally we'll put
-the airplane layer in-between the background layer, and the new layer
-with part of the statue.<br>
-<br>
-We don't need to select the whole statue, just enough to get the
-airplane behind.&nbsp; I think part of the arm should work well.&nbsp;
-First, be sure to make sure the background layer is the active layer
-(it will be the highlighted one) by clicking on it.&nbsp; Then use the
-intelligent scissors tool to select the area.<br>
-<img style="width: 850px; height: 532px;" src="PhotoScreen/LayerArmSelect-es.jpg" alt="LayerArmSelect.jpg"><br>
-When you have a good area click inside it (or hit the Enter key) to
-make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and
-Ctrl+V to paste.&nbsp; Now you should have a floating selection
-layer in the layers dialog box.&nbsp; Right click on it and select new
-layer to make this part
-of the arm a new layer.&nbsp; <br>
-<br>
-Now we have three layers in the image, its getting tough to keep track
-of which one is which.&nbsp; To make it easier the GIMP will let you
-set the name of the layer to whatever you want.&nbsp; Just double click
-on the layer name and type something descriptive like "arm" or
-"airplane".<br>
+<br>Eso se ve muy buen, pero lo que realmente se vende la imagen es si se tratara de volar detrás de la estatua. Cualquier persona puede copiar y pegar un avión en la parte superior de una imagen, sino para esconderse detrás de algo...que realmente va a tener un profesional!<br>
+<br>Para hacerlo, vamos a seleccionar un área de la estatua, sin que ninguno de el cielo detrás de él, utilizando nuestra herramienta tijeras inteligentes.&nbsp; A continuación, vamos a pegar la selección en una nueva capa.&nbsp; Por último vamos a poner la capa de avión en entre la capa de fondo, y la nueva capa con una parte de la estatua. <br>
+<br>No es necesario seleccionar la imagen entera, solo lo suficiente para conseguir el avión atrás.&nbsp; creo que parte del brazo debería funcionar bien.&nbsp; En primer lugar, asegúrese de hacer que la capa de fondo es la capa activa (que será al resaltado) haciendo clic en él.&nbsp; A continuación, utilice la herramienta tijeras inteligentes para seleccionar el área.<br>
+<img style="width: 850px; height: 532px;" src="PhotoScreen/LayerArmSelect-es.jpg" alt="LayerArmSelect.jpg"><br>Quando usted tiene una buena zona, haga clic en su interior (o pulse la tecla Enter) para hacer el área una selección real.&nbsp; A continuación, pulse Ctrl+c para copiar y Ctrl+v para pegar.&nbsp; Ahora usted debería tener una capa de selección flotante en el cuadro de diálogo de capas.&nbsp; Haga clic derecho sobre él seleccione nueva capa para hacer esta parte del brazo de una nueva capa.<br>
+<br>Ahora tenemos tres capas en la imagen, su mano dura para no perder de vista cuál es cuál.&nbsp; Para facilitar el GIMP le permitirá establecer el nombre de la capa a lo que quieras.&nbsp; Sólo haga doble clic en el nombre de la capa y escriba algo descriptivo, como "brazo" o "avión".&nbsp; <br>
 <br>
 <img style="width: 318px; height: 496px;" src="PhotoScreen/LayerNames-es.png" alt="LayerNames.png"><br>
-<br>
-Okay, now we have all the pieces in place.&nbsp; All we have left to do
-is to move the airplane behind the arm of the statue.&nbsp; To do this,
-make the airplane layer the active one and go click on the move
-tool.&nbsp; Now just drag the airplane over to the correct spot behind
-the arm.&nbsp; <br>
-<br>
+<br>Bien, ahora tenemos todas las piezas en su lugar.&nbsp; Todo lo que tenemos que hacer es mover el avión detrás del brazo de la estatua.&nbsp; Para hacer esto, hacer que la capa activa un avión y ir haz clic en la herramienta de movimiento.&nbsp; Ahora sólo tienes que arrastrar el avión hacia el lugar correcto detrás del brazo.<br>
 <img src="PhotoExamples/Layer-Ex-final.jpg" alt="Layer-Ex-final.jpg"><br>
+<br>Yo diría que se ve muy bien!<br>
 <br>
-I'd say that looks pretty good!<br>
-<br>
-<span style="font-weight: bold;">Exercise</span><br>
-Here are some more pairs of images you can try this out with.<br>
+<span style="font-weight: bold;">Ejercicio</span><br>Éstos son algunos pares más de imágenes que puede probar esto con.<br>
 <br>
 <a href="PhotoExamples/LayerBackground-A-orig.jpg">LayerBackground-A-orig.jpg</a><br>
 <a href="PhotoExamples/LayerForeground-A-orig.jpg">LayerForeground-A-orig.jpg</a><br>
