@@ -1,0 +1,87 @@
+<h3 class="western">Selección y Corrección de Ojos Rojos<br>
+</h3>Todos hemos visto fotos en el pasado en los ojos del sujeto(s) no
+son normales, pero su color rojo brillante. &nbsp; Puede haber various
+niveles de este que van desde apenas detectable al rojo muy brillante.&nbsp;
+Esto es causado por la luz del flash de la cámara se refleja en los
+vasos sanguíneos en la parte posterior del ojo y de nuevo a la cámara. <br>Para obtener más información, consulte: <a href="http://es.wikipedia.org/wiki/Efecto_de_ojos_rojos">http://es.wikipedia.org/wiki/Efecto_de_ojos_rojos</a>, <a href="http://en.wikipedia.org/wiki/Red-eye_effect">http://en.wikipedia.org/wiki/Red-eye_effect</a><br>
+<br>
+Como se trata de un problema tan común en las fotografías, el GIMP se
+ha construido en un herramienta para la eliminación de lo que vamos a
+trabajar en esta sección. <br>
+<br>En primer lugar, vamos guardar <a href="PhotoExamples/Redeye-Ex-orig.jpg">este</a> archivo en el disco, y ábralo con el GIMP.&nbsp; <br>
+<img src="PhotoExamples/Redeye-Ex-small.jpg" alt="Redeye-Ex-small.jpg"><br>
+<br>Se puede ver que hay tres ejeplos de los ojos rojos (Redeye o Red
+Eye) aquí.&nbsp; Dos (la mujer de la izquierda y el hombre) tiene una gran
+cantidad, y la mujer en el centro sólo cuenta con un muestra pequeña.<br><br>Para
+corregir los ojos rojos, vamos a ejecutar la herramienta de eliminación
+de ojos rojos.&nbsp; Lo puedes encontrar en Filtros (Filters) -&gt; Realzar
+(Enhance) -&gt; Quitar ojos rojos...<br>
+<img style="width: 568px; height: 689px;" src="PhotoScreen/RedeyeDialog-es.jpg" alt="RedeyeDialog.jpg"><br>Si
+todo funciona bien, debe ser capaz de hacer clic simplemente el botón y
+hacer que eliminar todos los ojos rojos.&nbsp; Seguir adelante y tratar
+ahora.<br>
+<br>
+Ahhhh!&nbsp; ¿Qué ha pasado!?&nbsp; Parece que la gente tiene moho que crece en ellos, esto es terrible.<br>
+<img src="PhotoExamples/Redeye-Ex-fail.jpg" alt="Redeye-Ex-fail.jpg"><br>
+<br>Utilidad de la herramienta que hice fue ir a través de toda la foto
+y encontrar todos los lugares donde había una gran cantidad de rojo, y
+tratar de eliminarlo.&nbsp; Lamentablemente esta foto había un montón de
+lugares así...los labios de la gente, la mujer en la cara de la
+izquierda, la pared en el fondo, etc.&nbsp; Usted podría tratar de usar el
+control deslizante para reducir el umbral para que no se de recogida
+tanto, pero que no funciona muy bien para esta imagen tampoco, pero
+vamos a tratar de todos modos.<br><br>Esta vez le vamos utilizar la
+ventana de previsualización de la captura de la cara de la mujer a la
+izquierda.&nbsp; Al mover el cursor alrededor, verás que antes que mayoría
+de la rojos de sus ojos se ha ido, hay artefactos extraños a aparecer
+en los labios.<br>
+<br>
+<img style="width: 436px; height: 414px;" src="PhotoScreen/RedeyeThresholdFail-es.jpg" alt="RedeyeThresholdFail.jpg"><br>
+<br>En lugar de simplemente utilizar esta herramienta, vamos a tener
+que intentar una táctica diferente para fijar esta imagen.&nbsp; Vamos a
+utilizar la herramienta de selección para seleccionar sólo los ojos, a
+continuación, ejecute la herramienta de ojos rojos sólo en la zona
+seleccionada.&nbsp; Pronto encontrará que el uso de la herramienta de
+selección es uy potente y la posibilidad de seleccionar determinadas
+zonas de fotos hace que casi todas las cosas que usted puede hacer
+posible con el GIMP.&nbsp; Incluso el recorte que hicimos en la última
+sección es sólo un conjunto de funciones especiales en capas sobre la
+herramienta de selección, de hecho, usted puede hacer todas las cosas
+que hicimos en la última sección, simplemente haciendo una selección y
+luego hacer clic en la Imagen -&gt; Recortar a la selección.&nbsp; Instead
+of just using this tool, we're going to have to try a different
+tactic to fix this image.&nbsp; We're going to use the selection tool
+to select just her eyes, then run the red eye tool on just that
+selected area.&nbsp; We will soon find that using the selection tool is
+very powerful and the ability to select certain areas of photos makes
+almost all the things that you can do with the GIMP possible.&nbsp;
+Even the cropping that we did in the last section is just a set of
+special functionality layered over the selection tool, in fact you can
+do all the things we did in the last section by simply making a
+selection and then clicking Image -&gt; Crop to selection.<br>
+<br>Vamos a empezar por seleccionar la herramienta de selección rectangular de la caja de herramientas.<br>
+<img style="width: 282px; height: 348px;" src="PhotoScreen/SelectionTool-es.png" alt="SelectionTool.png"><br>
+<br>Con esta herramienta es casi exactamente lo mismo que usar la
+herramienta de recorte, excepto cuando haya terminado usted tiene una
+selección de la imagen, no una image más pequeña.&nbsp; Vamos a utilizar
+para crear un rectángulo alrededor de una de los ojos de la mujere de
+la izquierda.&nbsp; Zoom si es necesario, por lo que no selecciona mucho más.<br>
+<br>Hay varias formas de zoom en (y fuera) en el GIMP, pero la más
+fácil de es probablemente sólo hacer clic en el cuadro de zoom en la
+barra inferior de la ventana de la imagen y seleccionar el tamaño que
+desee.<br>
+<img style="width: 512px; height: 515px;" src="PhotoScreen/RedEyeZoom-es.jpg" alt="RedEyeZoom.jpg"><br>
+<br>
+<img style="width: 792px; height: 619px;" src="PhotoScreen/SelectionOneEye-es.jpg" alt="SelectionOneEye.jpg"><br>
+<br>Si ahora hace clic dentro de la selección (o pulsa Intro) la
+selección se pegue, pere no es necesario hacer esto, puede ejecutar las
+herramientas en él incluso antes de que se pega.<br>
+<br>Ahora vamos a regresar y ejecutar la reducción de ojos rojos filtro
+nuevo (Filtros -&gt; Realzar -&gt; Quitar ojos rojos...).&nbsp; Esta vez
+podemos camiar el umbral de un poco más alto, porque no hay mucho más
+que es muy rojo en la imagen.<br>
+<img style="width: 456px; height: 362px;" src="PhotoScreen/RedEyeOneEye-es.jpg" alt="RedEyeOneEye.jpg"><br>
+<br>Ahora que tenemos que bajar, podemos ir adelante y hacerlo a las otras cinco ojos en la imagen.<br>
+<img src="PhotoExamples/Redeye-Ex-final-small.jpg" alt="Redeye-Ex-final-small.jpg"><br>
+<br>Yo diría que se ve mucho mejor! No es todavía una gran fotografía,
+pero al menos no se ven como si estuvieran poseídos por el demonio.
