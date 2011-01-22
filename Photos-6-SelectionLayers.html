@@ -1,5 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Photos - 6 - Selection and Layers</title>
+
+  
+</head><body>
 <h3 class="western">Advanced Selection and Layers<br>
 </h3>
+
 <p style="margin-bottom: 0in;">Now that we have some of the basics like
 resizing and selecting down, we're going to get a little more
 advanced.&nbsp; In this section we are going to combine two separate
@@ -13,18 +20,24 @@ launched three:
 http://boingboing.net/2008/07/10/iran-you-suck-at-pho.html.&nbsp; As a
 photo editor, it is your job to use these tools responsibly. <br>
 </p>
+
 <p style="margin-bottom: 0in;">We're going to start by taking a picture
 of an <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">airplane</a>
 putting it into the background of a picture of the <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">Statue of Liberty</a>.&nbsp;
 <br>
 </p>
+
 <br>
+
 <a href="PhotoExamples/LayerForeground-Ex-orig.jpg">An Airplane<br>
 <img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerForeground-Ex-orig.jpg" alt="LayerForeground-Ex-orig.jpg"></a><br>
+
 <br>
+
 <a href="PhotoExamples/LayerBackground-Ex-orig.jpg">The Statue of
 Liberty<br>
 <img style="border: 0px solid ; width: 640px; height: 480px;" src="PhotoExamples/LayerBackground-Ex-orig.jpg" alt="LayerBackground-Ex-orig.jpg"></a><br>
+
 Go ahead and save those to files to your disk, then open them up in the
 GIMP.&nbsp; Since this is a more complicated project than our past
 ones, we're going to save the Statue of Liberty picture into a separate
@@ -39,29 +52,41 @@ different or leave it the same, as long as you have the .xcf
 extension.&nbsp; This will leave the original .jpg file alone, so you
 could go back and re-open it if you need to later, without having to
 re-download it.<br>
+
 <br>
+
 The basic premise of how we are going to add the airplane into the
 Statue photo is that we are going to select just the airplane (without
 any of the sky background) from its photo, then copy and paste that
 into the statue of liberty.&nbsp; Then we'll get on to another trick to
 make it look even better. <br>
+
 <br>
+
 There are several different ways to do the selection.&nbsp; We could do
 the rectangular selection like we did in the last image, but then
 you'll end up with all the sky from the airplane picture that was in
 the box in the statue picture.&nbsp; <br>
+
 <img src="PhotoExamples/Layer-Ex-RectangleSelect.jpg" alt="Layer-Ex-RectangleSelect.jpg"><br>
+
 It doesn't look very natural.&nbsp; We'll need to use one of the
 selection tools that will get us <span style="font-style: italic;">just</span>
 the airplane.&nbsp; <br>
+
 <br>
+
 The most basic tool for selecting a specific area, of an arbitrary
 shape is the "Free Select" or Lasso tool.&nbsp; This tool will let us
 draw whatever shape we want on the screen, and when we connect the line
 back to the start, it selects that area.&nbsp; <br>
+
 <br>
+
 Let's pick the "Free Select" tool.<br>
+
 <img src="PhotoScreen/LayerFreeSelectTool.jpg" alt="LayerFreeSelectTool.jpg"><br>
+
 Now that we have the tool selected, we can start to outline the
 airplane.&nbsp; It will be much easier to find the correct points to
 select if you zoom in, I use 400%.&nbsp; Just find a spot on the border
@@ -74,20 +99,30 @@ between the airplane and the sky.&nbsp; If you chose the complicated
 area with the landing gear and engines, this could be a very short
 line.&nbsp; On the other had, if you started on the top, this line will
 be quite a bit longer.&nbsp; <br>
+
 <br>
+
 Here's my line that started on the top, went over a little bump (an
 antenna) around the cockpit and is currently at the nose:<br>
+
 <br>
+
 <img src="PhotoScreen/LayerFreeSelect.jpg" alt="LayerFreeSelect.jpg"><br>
+
 <br>
+
 This is going well, but when you keep going and get into the more
 complex parts of the picture, this will start to get <span style="font-style: italic;">very</span> tedious.&nbsp; There are so
 many small parts that it would take hundreds of clicks to make lines
 that accurately separate them out.&nbsp; <br>
+
 <br>
+
 A better tool for getting all this complex stuff, is the Intelligent
 Scissors tool.&nbsp; Let's go pick that.<br>
+
 <img src="PhotoScreen/LayerIntelSciTool.jpg" alt="LayerIntelSciTool.jpg"><br>
+
 The Intelligent Scissors tool is an interesting piece of equipment: it
 has some features in common with the Lasso, some features in common
 with the Path tool, and some features all its own. It is useful when
@@ -98,7 +133,9 @@ the region you are trying to select. The tool produces a continuous
 curve passing through these control nodes, following any high-contrast
 edges it can find. If you are lucky, the path that the tool finds will
 correspond to the contour you are trying to select. <br>
+
 <br>
+
 We can start using it similarly to the Free Select tool, put down a
 point on the edge of the border between the airplane and the sky.&nbsp;
 Then move along that border and place another point.&nbsp; Although,
@@ -111,11 +148,16 @@ because we're dealing with individual pixels at this level and they
 don't follow a very clean border.&nbsp; Don't worry too much about it,
 when we shrink this airplane down to put it in the statue picture, you
 won't be able to tell.&nbsp; <br>
+
 <img src="PhotoScreen/LayerIntelPoints.jpg" alt="LayerIntelPoints.jpg"><br>
+
 <br>
+
 Sometimes the computer won't guess correctly where the line should go,
 as in this case<br>
+
 <img src="PhotoScreen/LayerIntelBadGuess.jpg" alt="LayerIntelBadGuess.jpg"><br>
+
 For some reason, it decided on a line through the engines, instead of
 between the engines and the sky, but don't despair, its easy to
 fix.&nbsp; We're just going to add another point in between those two
@@ -123,42 +165,62 @@ to
 make it work out better.&nbsp; Any place you don't like where the
 computer thought the line should go, you can easily add a new
 point.&nbsp; Just click the existing line to make the point.&nbsp; <br>
+
 <img src="PhotoScreen/LayerIntelInsertPoint.jpg" alt="LayerIntelInsertPoint.jpg"><br>
+
 Then click and drag that new point down to the correct place for
 it.&nbsp; <br>
+
 <img src="PhotoScreen/LayerIntelMovePoint.jpg" alt="LayerIntelMovePoint.jpg"><br>
+
 You may have to click and drag more than once for the computer to find
 a line that is good enough for what you're trying to do.&nbsp; Also,
 you don't have to add a new point to move it, you can click and drag
 any point you've created to get it in a better location.&nbsp; The GIMP
 will automatically re-draw the line when you let go.<br>
+
 <br>
+
 As you go under the airplane, you probably don't have to worry about
 every tiny little area.&nbsp; When we shrink this picture down, most of
 the details won't be that easy to see.&nbsp; <br>
+
 <img src="PhotoScreen/LayerIntelNotPerfect.jpg" alt="LayerIntelNotPerfect.jpg"><br>
+
 <br>
+
 Once you've made it all the way around the airplane, <br>
+
 <img src="PhotoScreen/LayerIntelFinalSelect.jpg" alt="LayerIntelFinalSelect.jpg"><br>
+
 just click inside of your selection to complete it.&nbsp; <br>
+
 <br>
+
 Now let's see what just the area we've selected looks like.&nbsp; First
 we're going to copy the selection by hitting the Ctrl+C key
 combination. Then without doing anything to the image window we're
 going to paste it back in there by hitting the Ctrl+V key
 combination.&nbsp; Now if you look at the layers dialog, you will see
 that there is a new Floating Selection listed there. <br>
+
 <img src="PhotoScreen/LayerPasteFloat.jpg" alt="LayerPasteFloat.jpg"><br>
+
 We're going to go ahead and make this into a full-fledge layer in the
 image by right clicking on the Floating Selection in the layers dialog
 and selecting "New Layer".&nbsp; Once
 we're done with that, we can see both layers in the layers
 dialog.&nbsp; <br>
+
 <img src="PhotoScreen/LayerPasteNew.jpg" alt="LayerPasteNew.jpg"><br>
+
 <br>
+
 Now that we're using layers, we should probably have a quick
 explanation of what they are.<br>
+
 <br>
+
 It is probably easiest to think of layers as a stack of transparencies,
 where the content of what is on each layer is combined together to make
 up the image that we see.&nbsp; It is possible to have a layer that is
@@ -170,10 +232,15 @@ image of car, you wouldn't be able to see the car.&nbsp; However, if
 you turned the alpha level of the orange layer down so it was more
 transparent, you could see the car, but it would have an orange tint to
 it.&nbsp; <br>
+
 <img src="PhotoScreen/LayerDemo-None.jpg" alt="LayerDemo-None.jpg"><br>
+
 <img src="PhotoScreen/LayerDemo-Full.jpg" alt="LayerDemo-Full.jpg"><br>
+
 <img src="PhotoScreen/LayerDemo-Half.jpg" alt="LayerDemo-Half.jpg"><br>
+
 <br>
+
 In addition, a layer doesn't have to take up the whole area of the
 image.&nbsp; For example, when we pasted the airplane back in to the
 same picture, the layer that was created only consisted of a box big
@@ -183,29 +250,42 @@ that aren't the size of the full image is text.&nbsp; Any time you use
 the text tool to write on an image, it will automatically create a new
 layer that the text is in, and that layer will be a rectangle just
 large enough for the text to fit in to.<br>
+
 <br>
+
 But back to our airplane picture. Now that we have a layer that just
 contains the pasted image of the airplane, we can hide the layer with
 everything in it and see just what we pasted.&nbsp; Just click the eye
 icon next to the background image to hide it.&nbsp; <br>
+
 <img src="PhotoScreen/LayerPasteOnly.jpg" alt="LayerPasteOnly.jpg"><br>
+
 Now we've got the airplane that we selected (and copy/pasted) and the
 default GIMP background telling us that everything else in the image is
 transparent.&nbsp; <br>
+
 <br>
+
 If we zoom in, we can see that our selection wasn't perfect.&nbsp;
 There is a bit of sky remaining around the main landing gear, and a
 triangle between the front landing gear and the wing that extends down
 to the left.<br>
+
 <img src="PhotoScreen/LayerSkyScraps.jpg" alt="LayerSkyScraps.jpg"><br>
+
 This isn't going to be a problem, since it will be very small in our
 final image, but we can clean it up just for the practice.&nbsp;&nbsp;
 We're going to use the erase tool to go in and remove those pieces of
 sky.<br>
+
 <br>
+
 First let's select the erase tool.&nbsp; <br>
+
 <img src="PhotoScreen/LayerEraseTool.jpg" alt="LayerEraseTool.jpg"><br>
+
 <br>
+
 The eraser is one of the tools that has a brush associated with
 it.&nbsp; A brush is simply the pattern that the tool operates on, the
 most common brushes are circular like, with varying sizes.&nbsp; For
@@ -214,17 +294,24 @@ this I would recommend using a Circle (03) brush, or possibly Circle
 (01) refer to the size of the brush, so the (01) is smaller.&nbsp; To
 select the correct brush, click the brush picture next to the word
 "Brush:" in the Eraser Tool Options dialog.<br>
+
 <br>
+
 <img src="PhotoScreen/LayerBrushSelection.jpg" alt="LayerBrushSelection.jpg"><br>
+
 <br>
+
 Now that we have a decent brush, we can use the eraser to remove parts
 of the image that we don't want.&nbsp; Just click once to remove the
 exact amount under the brush, or click and drag around to remove
 wherever you drag the brush.&nbsp; You'll notice that when you remove
 something, you see the gray checkered background.&nbsp; This indicates
 that this layer is now completely transparent in that spot.&nbsp; <br>
+
 <img src="PhotoScreen/LayerEraseComplete.jpg" alt="LayerEraseComplete.jpg"><br>
+
 <br>
+
 Now that we've cleaned up the airplane, its time to import it into the
 photo of the Statue of Liberty.&nbsp; To do that, first we want to
 re-select the cleaned up airplane.&nbsp; Since that is all that is
@@ -234,12 +321,17 @@ everything.&nbsp; To select everything simply enter the Ctrl+A key
 combination (also the menu Select -&gt; All works).&nbsp; Now you will
 see a line around the whole layer's area.&nbsp; Once again, we're going
 to copy this by hitting Ctrl+C. <br>
+
 <br>
+
 Now we have the airplane copied to the clipboard, let's bring up the
 image window for the Statue of Liberty photo and paste it there using
 Ctrl+V.&nbsp; <br>
+
 <img src="PhotoScreen/LayerAirplaneImport.jpg" alt="LayerAirplaneImport.jpg"><br>
+
 <br>
+
 Woah!&nbsp; Its huge!&nbsp; If we go back and look at it, the picture
 of the airplane was 640x480, and the picture of the Statue of Liberty
 was the same dimensions 640x480.&nbsp; That means that something that
@@ -248,73 +340,142 @@ of the area in the second picture.&nbsp; It is important to understand
 that the zoom level that you have each picture set to doesn't impact
 how big the item you are pasting is, only the number of pixels it takes
 up.&nbsp; <br>
+
 <br>
+
 Don't worry though, we can easily re-size the airplane to make it fit
 better.&nbsp; First, let's make the airplane that we just pasted into
 the image its own layer.&nbsp; In the layers dialog right click on the
 layer that says "Floating Selection (Pasted Layer)" and click "New
 Layer...".&nbsp; Now we have a separate layer we can play around
 with.&nbsp; <br>
+
 <br>
+
 To re-size it, we will use the menu Layer -&gt; Scale Layer...&nbsp;
 Setting it to about 25% should look right.&nbsp; Do it just like in the
 section on re-sizing pictures, change the dropdown to say "percent"
 then put a value you think is good into <span style="font-style: italic;">one</span> of the
 boxes and click the "Scale" button.&nbsp; I have found 20-30% works
 well for this image.<br>
+
 <br>
+
 <img src="PhotoScreen/LayerAirplaneCentered.jpg" alt="LayerAirplaneCentered.jpg"><br>
+
 <br>
+
 Now we should have an appropriately sized airplane, but it is right in
 the middle of the picture, in front of the statue...not a very
 realistic location for an airplane.&nbsp; It would be nice if we could
 move it up into the sky.&nbsp; <br>
+
 <br>
+
 To move it, we'll just use the move tool.&nbsp; Pick it from the toolbox<br>
+
 <img src="PhotoScreen/LayerMoveTool.jpg" alt="LayerMoveTool.jpg"><br>
+
 then just click inside the selection box with the airplane, and drag it
 to a nice spot in the sky.&nbsp; <br>
+
 <br>
+
 <img src="PhotoScreen/LayerMove.jpg" alt="LayerMove.jpg"><br>
+
 <br>
+
 That looks pretty good, but what would really sell the picture is if it
 were flying behind the statue of liberty.&nbsp; Anyone can copy and
 paste an airplane on top of a picture, but to hide it behind
 something...that's really going to take a professional!<br>
+
 <br>
+
 To do this, we're going to select an area of the statue, without any of
 the sky behind it, using our intelligent scissors tool.&nbsp; Then
 we'll paste that selection into a new layer.&nbsp; Finally we'll put
 the airplane layer in-between the background layer, and the new layer
 with part of the statue.<br>
+
 <br>
+
 We don't need to select the whole statue, just enough to get the
 airplane behind.&nbsp; I think part of the arm should work well.&nbsp;
 First, be sure to make sure the background layer is the active layer
 (it will be the highlighted one) by clicking on it.&nbsp; Then use the
 intelligent scissors tool to select the area.<br>
+
 <img src="PhotoScreen/LayerArmSelect.jpg" alt="LayerArmSelect.jpg"><br>
+
 When you have a good area click inside it (or hit the Enter key) to
 make the area an actual selection.&nbsp; Then hit Ctrl+C to copy and
 Ctrl+V to paste.&nbsp; Now you should have a floating selection
 layer in the layers dialog box.&nbsp; Right click on it and select new
 layer to make this part
 of the arm a new layer.&nbsp; <br>
+
 <br>
+
 Now we have three layers in the image, its getting tough to keep track
 of which one is which.&nbsp; To make it easier the GIMP will let you
 set the name of the layer to whatever you want.&nbsp; Just double click
 on the layer name and type something descriptive like "arm" or
 "airplane".<br>
+
 <br>
+
 <img src="PhotoScreen/LayerNames.png" alt="LayerNames.png"><br>
+
 <br>
+
 Okay, now we have all the pieces in place.&nbsp; All we have left to do
 is to move the airplane behind the arm of the statue.&nbsp; To do this,
 make the airplane layer the active one and go click on the move
 tool.&nbsp; Now just drag the airplane over to the correct spot behind
 the arm.&nbsp; <br>
+
 <br>
+
 <img src="PhotoExamples/Layer-Ex-final.jpg" alt="Layer-Ex-final.jpg"><br>
+
 <br>
-I'd say that looks pretty good!
+
+I'd say that looks pretty good!<br>
+
+<br>
+
+<h2>Attribution</h2>
+
+Statue of Liberty, Gavcos, <a href="http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg">http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg</a>,
+CC-BY<br>
+
+El Al 747-200, Przemyslaw "Blueshade" Idzkiewicz, <a href="http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg">http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg</a>,
+CC-BY-SA<br>
+
+Intelligent Scissors Tool, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html">http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html</a>,
+GNU FDL<br>
+
+Stock Car Brazil Pace Car, Morio, <a href="http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg">http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg</a>,
+CC-BY-SA<br>
+
+Chicago from UIC, Hied5, <a href="http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG">http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG</a>,
+CC-BY<br>
+
+Airplane over Autobahn, poolie, <a href="http://www.flickr.com/photos/poolie/2611727104/">http://www.flickr.com/photos/poolie/2611727104/</a>,
+CC-BY<br>
+
+Chicago skyscrapers, Stephen Hanafin, <a href="http://www.flickr.com/photos/shanafin/3539282102/">http://www.flickr.com/photos/shanafin/3539282102/</a>,
+CC-BY-SA<br>
+
+2007/10/10 EC-HFP, Javier Pedreira, <a href="http://www.flickr.com/photos/wicho/1789307019/">http://www.flickr.com/photos/wicho/1789307019/</a>,
+CC-BY<br>
+
+Frankfurt skyscrapers, Danilo Paissan, <a href="http://www.flickr.com/photos/danilopaissan/2732030140/">http://www.flickr.com/photos/danilopaissan/2732030140/</a>,
+CC-BY-SA<br>
+
+Lufthansa Boeing 737-300, daspaddy, <a href="http://www.flickr.com/photos/daspaddy/3375583143/">http://www.flickr.com/photos/daspaddy/3375583143/</a>,
+CC-BY<br>
+
+<br>
+</body></html>

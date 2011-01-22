@@ -1,4 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Photos - 7 - Lighting</title>
+
+  
+</head><body>
 <h3 class="western">Adjusting lighting</h3>
+
 Good lighting is the single most important element needed to take a
 good photograph.&nbsp; Unfortunately the lighting conditions aren't
 always good for a photographer.&nbsp; There are&nbsp; some things that
@@ -6,60 +13,84 @@ can be done by the photographer to work with bad conditions, for
 example indoors at very close distances they can use a flash, but often
 the photographer will end up with an image that doesn't have correct
 lighting. <br>
+
 <br>
+
 Typical results are overexposed (when too much light is picked up by
 the camera sensor), underexposed (when not enough light is picked up by
 the camera sensor), and an image where parts are simultaneously over
 and under exposed.&nbsp; (Right-click the link for each picture and
 save it to your disk)<br>
+
 <br>
+
 <a href="PhotoExamples/Overexposed-Ex-orig.jpg">Overexposed<br>
 <img src="PhotoExamples/Overexposed-Ex-small.jpg" alt="Overexposed-Ex-small.jpg"></a><br>
+
 <a href="PhotoExamples/Underexposed-Ex-orig.jpg">Underexposed<br>
 <img src="PhotoExamples/Underexposed-Ex-small.jpg" alt="Underexposed-Ex-small.jpg"></a><br>
+
 <a href="PhotoExamples/Levels-Ex-small.jpg">Parts are over and under
 exposed.<br>
 <img src="PhotoExamples/Levels-Ex-small.jpg" alt="Levels-Ex-small.jpg"></a><br>
+
 <br>
+
 We are going to go through these three images and try to fix some of
 the lighting issues with them.&nbsp; Let's start by opening the
 overexposed photo in the GIMP.<br>
+
 <br>
+
 There are three tools we will look at to fix lighting issues with these
 image, the first one is by far the simplest.&nbsp; It it is the
 Brightness-Contrast tool.&nbsp; You can open it by clicking the menu
 Color -&gt; Brightness-Contrast... <br>
+
 <br>
+
 <img src="PhotoScreen/LevelsBrightTool.jpg" alt="LevelsBrightTool.jpg"><br>
+
 <br>
+
 You can see there are two sliders that adjust brightness and contrast
 of the image.&nbsp; A way to think of brightness is the average of all
 the pixels, the closer they all are to white, the brighter the picture
 is <a href="http://en.wikipedia.org/wiki/Brightness">http://en.wikipedia.org/wiki/Brightness</a>.&nbsp;
 Contrast represents how much difference there is between the pixels in
 the image.&nbsp; <a href="http://en.wikipedia.org/wiki/Contrast_%28vision%29">http://en.wikipedia.org/wiki/Contrast_(vision)</a><br>
+
 The above image is very bright and rather low contrast.&nbsp; To try to
 remedy this, let's use the brightness slider to lower the brightness,
 and then the contrast slider to raise the contrast.<br>
+
 <img src="PhotoScreen/LevelsBCAdjust.jpg" alt="LevelsBCAdjust.jpg"><br>
+
 As you can see, modifying the image in this manner will really bring
 out the color of the image.&nbsp;&nbsp; Also, you can see more detail,
 like the features of the snow-covered mountains in the
 background.&nbsp; When you like how it looks, hit OK for the changes to
 be written to the image.<br>
+
 <br>
+
 For a simple picture such as this, that might be enough, but sometimes
 you need a little more control over the picture than just the
 brightness and contrast.&nbsp; First, let's re-set the picture, to get
 back to the unaltered version we can just undo (Ctrl+Z) enough times
 to remove all the changes we've made, or we can simply click File -&gt;
 Revert to get all the way back.&nbsp; <br>
+
 Once we're back to the beginning, we will modify the image again, with
 a higher level of control this time.<br>
+
 To get to this next level of control, we'll use the Levels dialog, by
 selecting the Colors -&gt; Levels menu.<br>
+
 <br>
+
 <img src="PhotoScreen/LevelsLvlTool.jpg" alt="LevelsLvlTool.jpg"><br>
+
 There are three important parts of this tool that we will focus
 on.&nbsp; The first is the "Channel" drop down.&nbsp; If you click this
 you will see the options for "Value", "Red", "Green", "Blue", and
@@ -67,6 +98,7 @@ you will see the options for "Value", "Red", "Green", "Blue", and
 channels here, but just be aware that you can do the same thing we are
 going to learn about in a moment to any of the color channels by
 themselves.&nbsp; <br>
+
 Here, we're going to focus on the value channel.&nbsp; Selecting the
 value channel causes the tool to combine all three color channels into
 one
@@ -76,9 +108,12 @@ the same image if it was converted to 8-bit black and white.&nbsp; This
 mode is really called "grayscale" because there can be 256 different
 levels of gray.&nbsp; Here's the image actually converted to grayscale
 as an example. <br>
+
 <img src="PhotoExamples/Overexposed-Ex-grey-small.jpg" alt="Overexposed-Ex-grey-small.jpg"><br>
+
 Notice how the image is very bright, almost white.&nbsp; Even the dark
 areas are only very light gray, definitely not black.&nbsp; <br>
+
 Looking back at the previous example with the brightness-contrast
 dialog, we can now get a clearer understanding of what it was
 doing.&nbsp; The decreasing the brightness changed the all the
@@ -88,7 +123,9 @@ while leaving the lightest part alone.&nbsp; The only difference is
 that the GIMP didn't need to have a grayscale image to do this, it
 could mathematically determine the levels that would correspond to the
 gray image for the different colors, called the values.&nbsp; <br>
+
 <br>
+
 In the box below the channel selection under the title "Input Levels"
 is a graph that is called a histogram.&nbsp; This histogram tells us
 the number of pixels in the image that correspond with each
@@ -99,11 +136,16 @@ that gradient corresponds with the number of pixels that have that
 value.&nbsp; Because this image is so overexposed, the graph shows that
 almost all the pixels are to the very far right (white) part of the
 graph.&nbsp; <br>
+
 <br>
+
 Before we move on, let's look at a picture with a more normal
 histogram.&nbsp; <br>
+
 <br>
+
 <img src="PhotoExamples/LevelsHistogramExample-small.jpg" alt="LevelsHistogramExample-small.jpg"><br>
+
 As you can see from the grayscale image on the right, a lot of the
 image, where there is the grass background, is rather dark, but not
 quite black.&nbsp; Most of the birds is rather light, but only a tiny
@@ -112,11 +154,15 @@ graph in the dark section, about a quarter of the way up the
 graph.&nbsp; We see another peak towards the right where the birds'
 bodies are, and just a tiny amount trailing off to the completely black
 and white sections at either end of the graph.&nbsp; <br>
+
 <br>
+
 Getting back to our overexposed picture from the mountains, we can see
 that the histogram shows that it is almost all completely to the right
 (white) side of the graph.<br>
+
 <img src="PhotoScreen/LevelsOverexposedHistogram.png" alt="LevelsOverexposedHistogram.png"><br>
+
 In fact, the true white (value of 255) has quite a few pixels.&nbsp;
 That means that these pixels are completely over exposed (also known as
 burned), and the areas where there are a lot of these can never be
@@ -125,8 +171,11 @@ have found about them was lost because they are at the maximum
 value.&nbsp; That is just the limit of the 0-255 scale.&nbsp; However,
 we can use our tools to bring out some more detail on all those other
 pixels.<br>
+
 For more details about histograms, check out this great website: <a href="http://www.cambridgeincolour.com/tutorials/histograms1.htm">http://www.cambridgeincolour.com/tutorials/histograms1.htm</a><br>
+
 <br>
+
 You will notice under the histogram there are three triangles.&nbsp; We
 can use these triangles to set the darkest color in the image, the
 brightest color in the image, and the middle color in the image.&nbsp;
@@ -138,8 +187,11 @@ image will have
 its value reset so that they take up the entire range from 0 to 255
 while keeping their existing relationship to all the other
 pixels.&nbsp; <br>
+
 <br>
+
 <img src="PhotoScreen/LevelsSetLowLevel.jpg" alt="LevelsSetLowLevel.jpg"><br>
+
 There, that looks a lot better, we can see all the color of the
 foreground and make out some features on the mountains in the
 background.&nbsp; There's one last adjustment we can make here, and
@@ -147,16 +199,23 @@ that is to change the mid level to tone down some of the bright
 brown/red colors that have taken on an almost unnatural
 appearance.&nbsp; Just slide the middle, gray triangle a bit back to
 the left and check the results.<br>
+
 <br>
+
 <img src="PhotoScreen/LevelsSetMidLevel.jpg" alt="LevelsSetMidLevel.jpg"><br>
+
 There, that looks pretty good.&nbsp; When you're happy with your
 settings, click OK to write them to the image.<br>
+
 <br>
+
 Now there's one more tool that we can use that will give us even more
 control over those colors in the middle, that is the curves tool.&nbsp;
 After re-setting the image back to the beginning (either use Ctrl+Z or
 Revert) click Color -&gt; Curves to bring up the dialogue.<br>
+
 <img src="PhotoScreen/LevelsCurvesTool.jpg" alt="LevelsCurvesTool.jpg"><br>
+
 You can see in the background that it has a histogram on it.&nbsp; The
 only difference is now there is also a gradient on the vertical axis,
 that corresponds to the line running across the graph.&nbsp; This line
@@ -167,7 +226,9 @@ the upper side corresponds to the white triangle from the levels
 dialogue.&nbsp; The whole curve in the middle is a much more
 complicated version of the gray triangle from the levels
 dialogue.&nbsp; <br>
+
 <br>
+
 We can go ahead and set the low end back up to where we had the dark
 triangle in the previous example.&nbsp; Once that is done, we can click
 and drag any point on the line going through the graph to create curves
@@ -175,23 +236,31 @@ in it.&nbsp; This allows different values in the image to be raised and
 lowered differently.&nbsp; You can drag multiple parts of the curve to
 make complex systems of lightening and darkening different original
 values.<br>
+
 <img src="PhotoScreen/LevelsCurvesUse.jpg" alt="LevelsCurvesUse.jpg"><br>
+
 Here I have moved the low end value up about two thirds of the way
 across the graph, then the curve jumps a little bit and then levels off
 giving a dark (but not completely black) value to the pixels near that
 end.&nbsp; The curve then increases in the lighter pixel values keeping
 them steadily
 increasing in lightness up to white.<br>
+
 <br>
+
 From the curves dialog you can quickly and easily play around with lots
 of different values for the image until you have exactly what you
 want.&nbsp; Then just click OK to write the change to the image.<br>
+
 <br>
+
 Now that we've got all the tools in hand, let's go and try this on the
 underexposed example.&nbsp; Let's open it up in the GIMP and jump
 straight
 to the curves dialog.<br>
+
 <img src="PhotoScreen/LevelsUnderexposedCurves.jpg" alt="LevelsUnderexposedCurves.jpg"><br>
+
 Here we can see that the histogram is quite a bit broader than it was
 for the overexposed image.&nbsp; This would have held us back a bit if
 we were just using the brightness-contrast or levels dialogs, but not
@@ -202,20 +271,28 @@ keeping it on the top until it is over the end of the histogram.&nbsp;
 The next step is to bring out some of the color in the dark
 shadows.&nbsp; We can do this by increasing the brightness of the curve
 while it is in the further left areas of the graph.&nbsp; <br>
+
 Continue to experiment with this until you find something that looks
 good to you, then hit the OK button.&nbsp; <br>
+
 <br>
+
 Finally, let's open up the image that has parts both over and under
 exposed.&nbsp; When we've got it open, we can see that there is a
 section on the left, in the trees that is almost completely dark, while
 at the same time the mountains on the right are too bright and washed
 out.<br>
+
 <br>
+
 If we go and open the curves dialog we can try to lower the brightness
 on the bright parts, and raise it on the dark parts, that makes it a
 little better, but still doesn't make the image look that great.&nbsp; <br>
+
 <img src="PhotoScreen/OverUnderCurveFail.jpg" alt="OverUnderCurveFail.jpg"><br>
+
 <br>
+
 Instead, what we need to do is lower the highest possible brightness
 for the dark parts, and raise the lowest possible dark for the bright
 parts.&nbsp; But how can we do that all in the same image?&nbsp; The
@@ -224,10 +301,15 @@ brightness-contrast) tool on <span style="font-style: italic;">selections</span>
 of an image instead of the whole image.&nbsp; So all we have to do is
 select the dark part, perform a correction there, then select the
 bright parts and perform a different correction there.<br>
+
 <br>
+
 To do these selections we'll give the fuzzy select tool a try.&nbsp; <br>
+
 <img src="PhotoScreen/OverUnderFuzzySelect.jpg" alt="OverUnderFuzzySelect.jpg"><br>
+
 <br>
+
 Once we have it selected, we click on a pixel in the area we want to
 select, then while holding the mouse button down, move the mouse down
 and left to grow the area.&nbsp; The Fuzzy Select tool will
@@ -239,30 +321,75 @@ blur the line between what is and isn't selected.&nbsp; Doing this will
 cause the level adjustments that we are going to make to decrease
 around the edges so that you don't get sharp differences between
 sections.<br>
+
 <br>
+
 So, let's go ahead and pick a pixel in the dark area behind the
 trees.&nbsp; While holding the mouse button down, move the mouse down
 and to the left, you will see the selected area grow.&nbsp; Keep it
 going until you have the dark area in the trees selected, then let go
 of the mouse button.<br>
+
 <img src="PhotoScreen/OverUnderFuzzySlectDark.jpg" alt="OverUnderFuzzySlectDark.jpg"><br>
+
 <br>
+
 Now that we have our selection made, we can go ahead and bring up the
 curves dialog and work our magic.<br>
+
 <img src="PhotoScreen/OverUnderDarkCurve.jpg" alt="OverUnderDarkCurve.jpg"><br>
+
 Here I moved the maximum white value down to right where the histogram
 trailed off.&nbsp; I also lowered the dark a little bit at the bottom.
 Click OK, when you're set.<br>
+
 <br>
+
 The next step is to select the bright areas.&nbsp; Again we will use
 the fuzzy select tool to select the appropriate area.<br>
+
 <img src="PhotoScreen/OverUnderOverSelect.jpg" alt="OverUnderOverSelect.jpg"><br>
+
 Once we have the selection, we'll open up the curves dialog again, and
 make our correction on this area.<br>
+
 <img src="PhotoScreen/OverUnderOverCurve.jpg" alt="OverUnderOverCurve.jpg"><br>
+
 This time I simply moved the lowest dark point up to the bottom of this
 histogram.&nbsp; When you're happy with your settings click OK.<br>
+
 <br>
+
 And here we have the final image:<br>
+
 <img src="PhotoExamples/Levels-Ex-final-small.jpg" alt="Levels-Ex-final-small.jpg"><br>
-Nice and crisp, with lots of details throughout the image.&nbsp; 
+
+Nice and crisp, with lots of details throughout the image. <br>
+
+<br>
+
+<h2>Attribution</h2>
+
+Overexposed Mountains, avry xvx, <a href="http://www.flickr.com/photos/kimclit/4438966573/">http://www.flickr.com/photos/kimclit/4438966573/</a>,
+CC-BY-SA<br>
+
+Dark Cloud Over Kota Kinabalu, thienzieyung, <a href="http://www.flickr.com/photos/thienzieyung/4829364637/">http://www.flickr.com/photos/thienzieyung/4829364637/</a>,
+CC-BY<br>
+
+Colchuck Lake, Mahalie Stackpole, <a href="http://www.flickr.com/photos/mahalie/253842823/">http://www.flickr.com/photos/mahalie/253842823/</a>,
+CC-BY-SA<br>
+
+P5290060, Steve Broomfield, <a href="http://www.flickr.com/photos/spikycircle/18070686/">http://www.flickr.com/photos/spikycircle/18070686/</a>,
+CC-BY<br>
+
+Large Rock, Homini:), <a href="http://www.flickr.com/photos/homini/4327478688/">http://www.flickr.com/photos/homini/4327478688/</a>,
+CC-BY<br>
+
+Antler Lake 2, Holly Lawrence, <a href="http://www.flickr.com/photos/goat_girl_photos/228884109/">http://www.flickr.com/photos/goat_girl_photos/228884109/</a>,
+CC-BY-SA<br>
+
+<br>
+
+<br>
+
+</body></html>

@@ -1,34 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Photos - 5 - Red Eye</title>
+
+  
+</head><body>
 <h3 class="western">Selection and Redeye Correction<br>
 </h3>
+
 We have all seen photos in the past where the eyes of the subject(s)
 are not their normal color but bright red.&nbsp; There can be various
 levels of this ranging from barely detectable to very bright red.&nbsp;
 This is caused by light from the flash on the camera reflecting off the
 blood vessels on the back of the eye and back to the camera.<br>
+
 For more info, see: <a href="http://en.wikipedia.org/wiki/Red-eye_effect">http://en.wikipedia.org/wiki/Red-eye_effect</a><br>
+
 <br>
+
 Since this is such a common problem in photographs, the GIMP has a
 built in tool for removing it which we will work with in this
 section.&nbsp; <br>
+
 <br>
+
 First, let's save <a href="PhotoExamples/Redeye-Ex-orig.jpg">this</a>
 file to your disk, and open it with the GIMP.<br>
+
 <img src="PhotoExamples/Redeye-Ex-small.jpg" alt="Redeye-Ex-small.jpg"><br>
+
 <br>
+
 You can see that there are three examples of red eye here.&nbsp; Two
 (the woman on the left and the man) have a large amount, and the woman
 in the middle just has a little showing.&nbsp; <br>
+
 <br>
+
 To correct the red eye, we will run the red eye removal tool.&nbsp; You
 can find it under Filters-&gt;Enhance-&gt;Red Eye Removal.&nbsp; <br>
+
 <img src="PhotoScreen/RedeyeDialog.jpg" alt="RedeyeDialog.jpg"><br>
+
 If all works well, you should be able to just click the button and have
 it remove all the red eye.&nbsp; Go ahead and try it now.&nbsp; <br>
+
 <br>
+
 Ahhhh!&nbsp; What happened!!!&nbsp; It looks like the people have mold
 growing on them, this is terrible.<br>
+
 <img src="PhotoExamples/Redeye-Ex-fail.jpg" alt="Redeye-Ex-fail.jpg"><br>
+
 <br>
+
 What the tool did was go through the whole photo and find all the spots
 where there was a lot of red, and try to remove it.&nbsp; Unfortunately
 this photo had lots of spots like that...the people's lips, the woman
@@ -36,14 +60,20 @@ on the left's face, the wall in the background, etc.&nbsp; You could
 try using the slider to lower the threshold so it doesn't pickup as
 much, but that doesn't work very well for this image either, but let's
 try it anyway.&nbsp; <br>
+
 <br>
+
 This time let's use the preview window to zoom in on the face of the
 woman on the left.&nbsp; As you move the slider around, you will see
 that before most of the red from her eyes is gone, there are strange
 artifacts showing up on her lips.<br>
+
 <br>
+
 <img src="PhotoScreen/RedeyeThresholdFail.jpg" alt="RedeyeThresholdFail.jpg"><br>
+
 <br>
+
 Instead of just using this tool, we're going to have to try a different
 tactic to fix this image.&nbsp; We're going to use the selection tool
 to select just her eyes, then run the red eye tool on just that
@@ -54,39 +84,83 @@ Even the cropping that we did in the last section is just a set of
 special functionality layered over the selection tool, in fact you can
 do all the things we did in the last section by simply making a
 selection and then clicking Image -&gt; Crop to selection.<br>
+
 <br>
+
 Let's start by selecting the Rectangle Select Tool from the toolbox.<br>
+
 <img src="PhotoScreen/SelectionTool.png" alt="SelectionTool.png"><br>
+
 <br>
+
 Using this tool is almost exactly the same as using the crop tool,
 except when you are done you have a selection of the image, not a
 smaller image.&nbsp; Let's use it to create a rectangle around one of
 the woman on the left's eyes.&nbsp; Zoom in if you need to, so you
 don't select too much else.<br>
+
 <br>
+
 There are several ways to zoom in (and out) in the GIMP, but the
 easiest on is probably just to click the zoom box in the bottom bar of
 the image window and select the size you want.&nbsp; <br>
+
 <br>
+
 <img src="PhotoScreen/RedEyeZoom.jpg" alt="RedEyeZoom.jpg"><br>
+
 <br>
+
 <img src="PhotoScreen/SelectionOneEye.jpg" alt="SelectionOneEye.jpg"><br>
+
 <br>
+
 If you now click inside the selection (or hit Enter) the selection will
 stick, but you don't need to do this, you can run tools on it even
 before it sticks. <br>
+
 <br>
+
 Now let's go back and run the Red eye reduction filter again (Filters
 -&gt; Enhance -&gt; Red Eye Removal).&nbsp; This
 time we can turn the threshold up a bit higher, because there isn't
 much else that is very red in the image.&nbsp; <br>
+
 <img src="PhotoScreen/RedEyeOneEye.jpg" alt="RedEyeOneEye.jpg"><br>
+
 <br>
+
 Now that we've got that down, we can go ahead and do it to the other
 five eyes in the image.&nbsp; <br>
+
 <br>
+
 <img src="PhotoExamples/Redeye-Ex-final-small.jpg" alt="Redeye-Ex-final-small.jpg"><br>
+
 <br>
+
 I'd say they are looking much better!&nbsp; Its still not a great
 photograph, but at least they don't look like they are possessed by the
-devil.&nbsp; 
+devil. <br>
+
+<br>
+
+<h2>Attribution</h2>
+
+Three Friends, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1467377710/">http://www.flickr.com/photos/rharrison/1467377710/</a>,
+CC-BY-SA<br>
+
+Two Dancers, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1551648804/">http://www.flickr.com/photos/rharrison/1551648804/</a>,
+CC-BY-SA<br>
+
+Voo Doo Music Fest, Katrina Szela, <a href="http://www.flickr.com/photos/93017934@N00/287761814/">http://www.flickr.com/photos/93017934@N00/287761814/</a>,
+CC-BY<br>
+
+Mike Roe with Julie and Audrey Quinn, James Emery, <a href="http://www.flickr.com/photos/emeryjl/891366632/">http://www.flickr.com/photos/emeryjl/891366632/</a>,
+CC-BY<br>
+
+<br>
+
+<br>
+
+</body></html>

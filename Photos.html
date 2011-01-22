@@ -1,7 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Unit One - Photos</title>
+
+  
+</head><body>
 <h1 class="western">Unit One - Photos</h1>
+
+<p style="margin-bottom: 0in;">TODO: <br>Photoshop Section<br>
+Move attribution to each page - ES<br>Translate final project</p>
+<br>
 <p style="margin-bottom: 0in;">Over the last two decades digital
 cameras have gone from being an item
-that only scientific research groups and the government could afford, to
+that only scientific research groups and the government could afford,
+to
 an item that most people have or know someone who has.&nbsp; They have
 even
 gotten so small and portable that they are embedded in most modern cell
@@ -13,16 +24,246 @@ the
 first time enabled non-professionals to improve the quality of their
 photos using cheap and simple tools to the point that they can match
 what is done by many professionals.</p>
+
 <p style="margin-bottom: 0in;">For this unit we will learn some basics
 about digital images and photos.&nbsp; We will then learn how to use
 photo editing software to improve photos.&nbsp; For this we will
 primarily be using the GNU Image Manipulation Program (Gimp), but we
 will also look at the tools available in Adobe's
-Photoshop program to see how to do the same things, where available. </p><br><a href="Photos-1-Intro.html">Section 1 - Introduction</a><br><a href="Photos-2-FileTypes.html">Section 2 - File Types</a><br><a href="Photos-3-Gimp.html">Section 3 - The Gimp</a><br><a href="Photos-4-BasicManipulation.html">Section 4 - Basic Manipulations</a><br><a href="Photos-5-RedEye.html">Section 5 - Red Eye Correction</a><br><a href="Photos-6-SelectionLayers.html">Section 6 - Selection and Layers</a><br><a href="Photos-7-Lighting.html">Section 7 - Lighting</a><br><a href="Photos-8-Touchup.html">Section 8 - Touchup</a><br><br><h3>Exercises</h3>
+Photoshop program to see how to do the same things, where available. </p>
+
+<br>
+
+<a href="Photos-1-Intro.html">Section 1 - Introduction</a><br>
+
+<a href="Photos-2-FileTypes.html">Section 2 - File Types</a><br>
+
+<a href="Photos-3-Gimp.html">Section 3 - The Gimp</a><br>
+
+<a href="Photos-4-BasicManipulation.html">Section 4 - Basic
+Manipulations</a><br>
+
+<a href="Photos-5-RedEye.html">Section 5 - Red Eye Correction</a><br>
+
+<a href="Photos-6-SelectionLayers.html">Section 6 - Selection and Layers</a><br>
+
+<a href="Photos-7-Lighting.html">Section 7 - Lighting</a><br>
+
+<a href="Photos-8-Touchup.html">Section 8 - Touchup</a><br>
+
+<br>
+
+<h2 class="western">Photoshop</h2>
+
+
+<p style="margin-bottom: 0in;">This section will give a quick overview
+of how to do the things we have learned about in the GIMP, inside
+Adobe's Photoshop Program.<br>
+</p>
+
+
+<p style="margin-bottom: 0in;">Cropping/Resizing/Rotation</p>
+
+
+<p style="margin-bottom: 0in;">Redeye</p>
+
+
+<p style="margin-bottom: 0in;">Layers and Selection</p>
+
+
+<p style="margin-bottom: 0in;">Skin Corrections</p>
+
+
+<p style="margin-bottom: 0in;">Adjusting Lighting</p>
+
+<h2><br>
+</h2>
+<h2>Vocabulary</h2>
+
+Pixel - One dot in the image, composed of Red Green and Blue components
+(and possibly Alpha for indicating if it has transparency)<br>
+
+Dimensions - The size of the picture, indicated by Width X Height.<br>
+
+Raster - An image made up of pixels arranged in a grid measured by the
+dimensions.<br>
+
+Resolution - How fine of detail you can see in a picture, related to
+the number of pixels in an image.&nbsp; <br>
+
+Megapixels - The number of pixels in the image, in millions.<br>
+
+Aspect Ratio - The ratio of the width of the image to the height of the
+image.&nbsp; For photographs this is usually 4:3.<br>
+
+Landscape Orientation - When a photo is in the direction where it is
+wider than it is tall (4:3)<br>
+
+Portrait Orientation - When a photo is in the direction where it is
+taller than it is wide (3:4)<br>
+
+Channel - The different red-green-blue-alpha components<br>
+
+Lossless Compression - Storing a file so that it can be perfectly
+re-created<br>
+
+Lossy Compression - Storing a file so that it is smaller, but loses
+some amount of detail<br>
+
+Undo - The ability to go back to the state of a file before you made a
+previous change to it<br>
+
+Rotate - Change the orientation of the image.<br>
+
+Crop - Cut off the an area around the image. <br>
+
+Re-Size - Change the number of pixels that the image is without cutting
+off any parts of the image.<br>
+
+Scale - Another word for re-sizing, when you change how large the image
+is.&nbsp; <br>
+
+Red Eye - A artifact caused by the flash in a camera that causes the
+eyes of a subject to look unnaturally red.<br>
+
+Selection - An area of the image that has been designated to be used
+for something else.&nbsp; It can be copied to the clipboard or can have
+an
+action directly applied to it.<br>
+
+Node
+- A point on an irregular selection that defines the boundary of the
+selection.&nbsp; These can be modified or moved to change the selection.<br>
+
+Layer
+- One of possibly many levels of data in the image, these are all
+applied to the image simultaneously, but in order, to produce the final
+image.<br>
+
+Transparency - The ability of pixels to be seen through to
+the next layer.&nbsp; The channel that stores the data for this is
+called
+the "Alpha" channel.<br>
+
+Overexposed - When too much light has been
+absorbed by the camera's sensor.&nbsp; This causes the colors in the
+image
+to look washed out.<br>
+
+Underexposed - When not enough light has been absorbed by the camera's
+sensor.&nbsp; This causes the image to look dark.<br>
+
+Brightness
+- The amount of light that the image has.&nbsp; On an absolute level
+(for
+24-bit images) the closer the pixels are to 255 the brighter the image
+is.<br>
+
+Contrast - The amount of variation between pixels in an image.&nbsp;
+If many of the pixels are close to the maximum value and another large
+group is close to the minimum value, then the image is said to have
+high contrast.<br>
+
+Levels - The amount of brightness (or a sepcific color) that pixels
+have.&nbsp; <br>
+
+Histogram - A graph that shows the number of pixels at each level in
+the image.<br>
+
+Grayscale - When an image uses only black, white, and shades of gray
+instead of color.<br>
+
+Brush - The shape of the tool that applies various effects (heal,
+erase, paint, dodge, burn, and more) to an image.&nbsp; <br>
+
+Dodge - Increase the brightness of part of a photo.<br>
+
+Burn - Decrease the brightness of part of a photo.<br>
+
+<br>
+
+<h2 class="western">Other Photo Editing Tools</h2>
+
+<p><b>Picasa</b> -- Photo manager built and distributed by google. It
+is more for storing photo collections, and managing them online
+and offlline, but also has some photo editing ability, like cropping,
+redeye removal and more. Available for Linux, Windows and Mac. -
+<a href="http://picasa.google.com/">http://picasa.google.com</a> </p>
+
+<p><b>Paint.NET</b> -- Similar, but less powerful than Gimp and
+Photoshop. Only available for Windows, but is free, libre, and open
+source software. - <a href="http://www.getpaint.net/">http://www.getpaint.net/</a>
+</p>
+
+<p>Histogram - A graph that shows the number of pixels <br>
+<b>Corel Paint Shop Photo Pro</b> -- Almost as powerful as Gimp
+and Photoshop, but a substantially different interface from them. -
+<a href="http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081">http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081</a></p>
+
+<p><b>Microsoft Paint</b> -- Comes built in with windows, but is
+very basic. Even things like cropping and re-sizing are very
+difficult. It is usable if you want to add a little text to an
+image, or draw over something so that others can't see it (like
+blanking out a screen name or IP address in a screenshot), but not
+much beyond that.</p>
+
+<p><b>Microsoft Photo Editor </b>or <b>Photo Manager </b>-- Tools
+from Microsoft that come with Microsoft Office. Useful for basic
+editing, such as cropping and re-sizing. </p>
+
+<p><b>ImageMagick</b> -- A command line based tool (there are also
+various graphical user interfaces for it) that instead of editing an
+image by click on it edits the image by specifying commands that can
+be done to it (e.g. -resize 30%, -crop 120x120, convert image.jpg
+image.png and lots more). This is really great if you have a lot of
+images and want to do the same thing to all of them. For instance
+you can easily resize hundreds of images in a few seconds instead of
+opening them up in the Gimp and resizing them one by one. Image magic
+is free, libre, and open source software and runs on Linux, Windows,
+and Mac. - <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a>
+</p>
+
+<p><span style="font-weight: bold;">Hugin</span> -- This is a tool that
+will create a very high resolution panoramic photography by stitching
+together multiple, overlapping photographs.&nbsp; When you have a
+large, stationary (at least for a minute) scene like mountains, lakes,
+etc., you can take several pictures where each one overlaps ~1/3 of the
+one next to it.&nbsp; Then feed all these images into Hugin, and it
+will give you an output image that combines all of the input images
+into one.&nbsp; <a href="http://hugin.sourceforge.net/">http://hugin.sourceforge.net/</a><br>
+</p>
+
+<p><span style="font-weight: bold;">UFRaw</span> -- Some, more
+advanced, cameras will allow you to get your images out of them in a
+format generally called "Raw".&nbsp; This keeps any of the data that
+might have been lost in the JPEG compression, as well as more data that
+came from the sensors about the image.&nbsp; This extra data is useful
+for professionals, as it allows them better control over
+color/brightness corrections.&nbsp; UFRaw is a program that will work
+with this raw images, it also has a plugin for GIMP that will let you
+work with them in the GIMP.&nbsp; <a href="http://ufraw.sourceforge.net/">http://ufraw.sourceforge.net/</a><br>
+</p>
+
+<p><span style="font-weight: bold;">FSpot</span> -- A photo manager,
+similar to Picasa, but open source (unfortunately, only runs under
+linux). <a href="http://f-spot.org/">http://f-spot.org/</a><br>
+</p>
+
+<p><span style="font-weight: bold;">Shotwell</span> -- A photo manager,
+similar to Picasa, but open source (unfortunately, only runs under
+linux). <a href="http://yorba.org/shotwell/">http://yorba.org/shotwell/</a><br>
+</p>
+
+<h2>Exercises</h2>
+
+<h3>Photos and File Types</h3>
+
 <p>1- Select all of the following image resolutions that are in a 4:3
 ratio?&nbsp; (A typical landscape picture)<br>
 </p>
+
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
   <tbody>
     <tr>
       <td style="vertical-align: top;">1920x1080<br>
@@ -62,8 +303,11 @@ ratio?&nbsp; (A typical landscape picture)<br>
     </tr>
   </tbody>
 </table>
+
 <br>
+
 2- How many color channels does a 24-bit photograph have?<br>
+
 A)
 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B)
@@ -71,9 +315,12 @@ B)
 C)
 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) 6<br>
+
 <br>
+
 3- What color to you get from a pixel that has the following components
 (8-bit) Red:200, Green:50, Blue:200 ?<br>
+
 A)
 Orange&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B)
@@ -81,17 +328,47 @@ Brown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 C)
 Purple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) Red<br>
+
 <br>
+
 4- What pixel components (8-bit) make the color yellow?<br>
+
 A) R:255 G:0
-B:255&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B:255&nbsp;&nbsp; <br>
+<h2 class="western">Photoshop</h2>
+
+
+<p style="margin-bottom: 0in;">This section will give a quick overview
+of how to do the things we have learned about in the GIMP, inside
+Adobe's Photoshop Program.<br>
+</p>
+
+
+<p style="margin-bottom: 0in;">Cropping/Resizing/Rotation</p>
+
+
+<p style="margin-bottom: 0in;">Redeye</p>
+
+
+<p style="margin-bottom: 0in;">Layers and Selection</p>
+
+
+<p style="margin-bottom: 0in;">Skin Corrections</p>
+
+
+<p style="margin-bottom: 0in;">Adjusting Lighting</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B) R:200 G:200
 B:200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 C) R:255 G:255 B:
 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 D) R:100 G:50 B: 220 <br>
+
 <br>
+
 5- What is the un-compressed size of a 24-bit, 1600x1200 photo?<br>
+
 A) 5,760
 KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B) 1,920,000
@@ -103,12 +380,15 @@ D) 576 KB
 have quick downloads.<br>
 True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 False</p>
+
 <p>7- Lossless images are good for editing images, where it is
 important to not lose any quality while editing.<br>
 True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 False<br>
 </p>
+
 8- Which image format is most used by consumer cameras?<br>
+
 A)
 JPEG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 B)
@@ -118,218 +398,123 @@ SVG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 D)
 TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 E) PSD<br>
-<br><br>
-<br><br>
+
 <br>
-<span style="font-weight: bold;">Exercise</span><br>
-These three images are quite similar to the original, they can all be
+
+<h3>Basic Manipulation</h3>
+
+<span style="font-weight: bold;"></span>These three images are quite
+similar to the original, they can all be
 rotated, cropped, and re-sized.&nbsp; <br>
+
 <a href="PhotoExamples/PhotoCrop-A-orig.jpg">PhotoCrop-A-orig.jpg</a><br>
+
 <a href="PhotoExamples/PhotoCrop-B-orig.jpg">PhotoCrop-B-orig.jpg</a><br>
-<a href="PhotoExamples/PhotoCrop-C-orig.jpg">PhotoCrop-C-orig.jpg</a><br><br>
-<br>
-<span style="font-weight: bold;">Exercises </span><br>
+
+<a href="PhotoExamples/PhotoCrop-C-orig.jpg">PhotoCrop-C-orig.jpg</a><br>
+
+<h3><span style="font-weight: bold;">Red Eye Reduction</span></h3>
+
 These images are all examples of red eye that can be removed by
 selecting the eyes and running the red eye removal tool on them.<br>
+
 <br>
+
 <a href="PhotoExamples/Redeye-A-orig.jpg">Redeye-A-orig.jpg</a><br>
+
 <a href="PhotoExamples/Redeye-B-orig.jpg">Redeye-B-orig.jpg</a><br>
-<a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br><br>
-<br>
-<span style="font-weight: bold;">Exercise</span><br>
+
+<a href="PhotoExamples/Redeye-C-orig.jpg">Redeye-C-orig.jpg</a><br>
+
+<h3>Seleccion and Layers</h3>
+
 Here are some more pairs of images you can try this out with.<br>
+
 <br>
+
 <a href="PhotoExamples/LayerBackground-A-orig.jpg">LayerBackground-A-orig.jpg</a><br>
+
 <a href="PhotoExamples/LayerForeground-A-orig.jpg">LayerForeground-A-orig.jpg</a><br>
+
 <br>
+
 <a href="PhotoExamples/LayerBackground-B-orig.jpg">LayerBackground-B-orig.jpg</a><br>
+
 <a href="PhotoExamples/LayerForeground-B-orig.jpg">LayerForeground-B-orig.jpg</a><br>
+
 <br>
+
 <a href="PhotoExamples/LayerBackground-C-orig.jpg">LayerBackground-C-orig.jpg</a><br>
+
 <a href="PhotoExamples/LayerForeground-C-orig.jpg">LayerForeground-C-orig.jpg</a><br>
-<br><br>
-<br>
-<span style="font-weight: bold;">Exercises</span><br>
+
+<h3>Lighting<span style="font-weight: bold;"></span></h3>
+
 Here are some more examples of complex images with areas over and under
 exposed.<br>
+
 <a href="PhotoExamples/Levels-A-orig.jpg">Levels-A-orig.jpg</a><br>
+
 <a href="PhotoExamples/Levels-B-orig.jpg">Levels-B-orig.jpg</a><br>
-<a href="PhotoExamples/Levels-C-orig.jpg">Levels-C-orig.jpg</a><br><br>
+
+<a href="PhotoExamples/Levels-C-orig.jpg">Levels-C-orig.jpg</a><br>
+
 <br>
-<span style="font-weight: bold;">Excercises</span><br>
+
+<h3><span style="font-weight: bold;"></span>Touch Up</h3>
+
 Here are some more faces with some small imperfections to try the tools
 out on.<br>
+
 <br>
+
 <a href="PhotoExamples/Face-A-orig.jpg">Face-A-orig.jpg</a><br>
+
 <a href="PhotoExamples/Face-B-orig.jpg">Face-B-orig.jpg</a><br>
+
 <a href="PhotoExamples/Face-C-orig.jpg">Face-C-orig.jpg</a><br>
-&nbsp;
-<h2 class="western">Photoshop</h2>
-<p style="margin-bottom: 0in;">This section will give a quick overview
-of how to do the things we have learned about in the GIMP, inside
-Adobe's Photoshop Program.<br>
-</p>
-<p style="margin-bottom: 0in;">Cropping/Resizing/Rotation</p>
-<p style="margin-bottom: 0in;">Redeye</p>
-<p style="margin-bottom: 0in;">Layers and Selection</p>
-<p style="margin-bottom: 0in;">Skin Corrections</p>
-<p style="margin-bottom: 0in;">Adjusting Lighting</p>
-<h2 class="western">Project</h2>
-For the final project in this section we will....<br>
+<h2 class="western">Unit Project</h2>
+
+For the final project in this unit, you will need to go out onto the
+internet and find two (or more) seperate photos that can be combined
+together.&nbsp; This should be similar to the section on selection and
+layers.&nbsp; However, you will receive more points if the images
+require the use of other techniques that we have gone over such as
+changes to lighting or rotation.<br>
+
 <br>
-<h2 class="western">Other Photo Editing Tools</h2>
-<p><b>Picasa</b> -- Photo manager built and distributed by google. It
-is more for storing photo collections, and managing them online
-and offlline, but also has some photo editing ability, like cropping,
-redeye removal and more. Available for Linux, Windows and Mac. -
-<a href="http://picasa.google.com/">http://picasa.google.com</a> </p>
-<p><b>Paint.NET</b> -- Similar, but less powerful than Gimp and
-Photoshop. Only available for Windows, but is free, libre, and open
-source software. - <a href="http://www.getpaint.net/">http://www.getpaint.net/</a>
-</p>
-<p>Histogram - A graph that shows the number of pixels <br><b>Corel Paint Shop Photo Pro</b> -- Almost as powerful as Gimp
-and Photoshop, but a substantially different interface from them. -
-<a href="http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081">http://www.corel.com/servlet/Satellite/us/en/Product/1208716806081</a></p>
-<p><b>Microsoft Paint</b> -- Comes built in with windows, but is
-very basic. Even things like cropping and re-sizing are very
-difficult. It is usable if you want to add a little text to an
-image, or draw over something so that others can't see it (like
-blanking out a screen name or IP address in a screenshot), but not
-much beyond that.</p>
-<p><b>Microsoft Photo Editor </b>or <b>Photo Manager </b>-- Tools
-from Microsoft that come with Microsoft Office. Useful for basic
-editing, such as cropping and re-sizing. </p>
-<p><b>ImageMagick</b> -- A command line based tool (there are also
-various graphical user interfaces for it) that instead of editing an
-image by click on it edits the image by specifying commands that can
-be done to it (e.g. -resize 30%, -crop 120x120, convert image.jpg
-image.png and lots more). This is really great if you have a lot of
-images and want to do the same thing to all of them. For instance
-you can easily resize hundreds of images in a few seconds instead of
-opening them up in the Gimp and resizing them one by one. Image magic
-is free, libre, and open source software and runs on Linux, Windows,
-and Mac. - <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a>
-</p>
-<p><span style="font-weight: bold;">Hugin</span> -- This is a tool that
-will create a very high resolution panoramic photography by stitching
-together multiple, overlapping photographs.&nbsp; When you have a
-large, stationary (at least for a minute) scene like mountains, lakes,
-etc., you can take several pictures where each one overlaps ~1/3 of the
-one next to it.&nbsp; Then feed all these images into Hugin, and it
-will give you an output image that combines all of the input images
-into one.&nbsp; <a href="http://hugin.sourceforge.net/">http://hugin.sourceforge.net/</a><br>
-</p>
-<p><span style="font-weight: bold;">UFRaw</span> -- Some, more
-advanced, cameras will allow you to get your images out of them in a
-format generally called "Raw".&nbsp; This keeps any of the data that
-might have been lost in the JPEG compression, as well as more data that
-came from the sensors about the image.&nbsp; This extra data is useful
-for professionals, as it allows them better control over
-color/brightness corrections.&nbsp; UFRaw is a program that will work
-with this raw images, it also has a plugin for GIMP that will let you
-work with them in the GIMP.&nbsp; <a href="http://ufraw.sourceforge.net/">http://ufraw.sourceforge.net/</a><br>
-</p>
-<p><span style="font-weight: bold;">FSpot</span> -- A photo manager,
-similar to Picasa, but open source (unfortunately, only runs under
-linux). <a href="http://f-spot.org/">http://f-spot.org/</a><br>
-</p>
-<p><span style="font-weight: bold;">Shotwell</span> -- A photo manager,
-similar to Picasa, but open source (unfortunately, only runs under
-linux). <a href="http://yorba.org/shotwell/">http://yorba.org/shotwell/</a><br>
-</p>
+
+<h3>Preliminary Review</h3>
+
+Before starting work on the editing of the images, your concept should
+be submitted for review.&nbsp; It should include:<br>
+
+<ul>
+
+  <li>The attribution line for each of the images being used.<br>
+  </li>
+  <li>A written description of what operations you plan to perform on
+these images, listed out step-by-step.<br>
+  </li>
+</ul>
+
+<h3>Final Submission</h3>
+
+When you have completed your project, you need to submit it for
+grading.&nbsp; Please include:<br>
+
+<ul>
+
+  <li>The final image.</li>
+  <li>The attribution line for each of your sources.</li>
+  <li>A written description of what operations you performed to get to
+the final image, listed out step-by-step.<br>
+  </li>
+</ul>
+
+
 <br>
-<h2>Vocabulary</h2>
-Pixel - One dot in the image, composed of Red Green and Blue components
-(and possibly Alpha for indicating if it has transparency)<br>Dimensions - The size of the picture, indicated by Width X Height.<br>Raster - An image made up of pixels arranged in a grid measured by the dimensions.<br>Resolution - How fine of detail you can see in a picture, related to the number of pixels in an image.&nbsp; <br>Megapixels - The number of pixels in the image, in millions.<br>Aspect Ratio - The ratio of the width of the image to the height of the image.&nbsp; For photographs this is usually 4:3.<br>Landscape Orientation - When a photo is in the direction where it is wider than it is tall (4:3)<br>Portrait Orientation - When a photo is in the direction where it is taller than it is wide (3:4)<br>
-Channel - The different red-green-blue-alpha components<br>
-Lossless Compression - Storing a file so that it can be perfectly
-re-created<br>
-Lossy Compression - Storing a file so that it is smaller, but loses
-some amount of detail<br>Undo - The ability to go back to the state of a file before you made a previous change to it<br>
-Rotate - Change the orientation of the image.<br>
-Crop - Cut off the an area around the image. <br>
-Re-Size - Change the number of pixels that the image is without cutting
-off any parts of the image.<br>Scale - Another word for re-sizing, when you change how large the image is.&nbsp; <br>Red Eye - A artifact caused by the flash in a camera that causes the eyes of a subject to look unnaturally red.<br>Selection - An area of the image that has been designated to be used
-for something else.&nbsp; It can be copied to the clipboard or can have an
-action directly applied to it.<br>Node - A point on an irregular selection that defines the boundary of the selection.&nbsp; These can be modified or moved to change the selection.<br>Layer - One of possibly many levels of data in the image, these are all applied to the image simultaneously, but in order, to produce the final image.<br>Transparency - The ability of pixels to be seen through to the next layer.&nbsp; The channel that stores the data for this is called the "Alpha" channel.<br>Overexposed - When too much light has been absorbed by the camera's sensor.&nbsp; This causes the colors in the image to look washed out.<br>Underexposed - When not enough light has been absorbed by the camera's sensor.&nbsp; This causes the image to look dark.<br>Brightness - The amount of light that the image has.&nbsp; On an absolute level (for 24-bit images) the closer the pixels are to 255 the brighter the image is.<br>Contrast - The amount of variation between pixels in an image.&nbsp; If many of the pixels are close to the maximum value and another large group is close to the minimum value, then the image is said to have high contrast.<br>Levels - The amount of brightness (or a sepcific color) that pixels have.&nbsp; <br>Histogram - A graph that shows the number of pixels at each level in the image.<br>Grayscale - When an image uses only black, white, and shades of gray instead of color.<br>Brush - The shape of the tool that applies various effects (heal, erase, paint, dodge, burn, and more) to an image.&nbsp; <br>Dodge - Increase the brightness of part of a photo.<br>Burn - Decrease the brightness of part of a photo.<br>
+
 <br>
-<h2>Attribution</h2>
-Pixel Value Image, Daniel G et al.,
-<a href="http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png">http://commons.wikimedia.org/wiki/File:Rgb-raster-image.png</a>,
-Public Domain<br>
-Additive Color, Webaware,
-<a href="http://commons.wikimedia.org/wiki/File:AdditiveColor.svg">http://commons.wikimedia.org/wiki/File:AdditiveColor.svg</a>,
-Public Domain<br>
-Lossy Demonstration Lossless, <span class="comment">Shlomi Tal</span>,
-<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png">http://en.wikipedia.org/wiki/File:LossyDemonstration-Original.png</a>
-, CC-BY-SA<br>
-Lossy Demonstration Medium, <span class="comment">Shlomi Tal,</span> <a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-84less.jpg</a>,
-CC-BY-SA<br>
-Lossy Demonstration High, <span class="comment">Shlomi Tal,</span>
-<a href="http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg">http://en.wikipedia.org/wiki/File:LossyDemonstration-98less.jpg</a>,
-CC-BY-SA<br>
-Gimp Introduction, Gimp Documentation
-Team, <a href="http://docs.gimp.org/2.6/en/introduction.html#introduction-gimp">http://docs.gimp.org/2.6/en/introduction.html#introduction-gimp</a>,
-GNU FDL<br>
-Gimp Main Window Overview, Gimp
-Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-concepts-main-windows.html">http://docs.gimp.org/2.6/en/gimp-concepts-main-windows.html</a>,
-GNU FDL<br>
-Image Window Description Graphic, Gimp
-Documentation Team, <a href="http://docs.gimp.org/2.6/en/images/using/imagewindow-description.png">http://docs.gimp.org/2.6/en/images/using/imagewindow-description.png</a>,
-GNU FDL<br>
-Image Window Descirption, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-image-window.html">http://docs.gimp.org/2.6/en/gimp-image-window.html</a>,
-GNU FDL<br>
-Great Egret Nest, Mike Baird, <a href="http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg">http://commons.wikimedia.org/wiki/File:Ardea_alba;_3_chicks,_Morro_Bay_Heron_Rookery_2_-_by_Mike_Baird.jpg</a>,
-CC-BY<br>
-Three Friends, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1467377710/">http://www.flickr.com/photos/rharrison/1467377710/</a>,
-CC-BY-SA<br>
-Two Dancers, Russell Harrison, <a href="http://www.flickr.com/photos/rharrison/1551648804/">http://www.flickr.com/photos/rharrison/1551648804/</a>,
-CC-BY-SA<br>
-Voo Doo Music Fest, Katrina Szela, <a href="http://www.flickr.com/photos/93017934@N00/287761814/">http://www.flickr.com/photos/93017934@N00/287761814/</a>,
-CC-BY<br>
-Mike Roe with Julie and Audrey Quinn, James Emery, <a href="http://www.flickr.com/photos/emeryjl/891366632/">http://www.flickr.com/photos/emeryjl/891366632/</a>,
-CC-BY<br>
-Statue of Liberty, Gavcos, <a href="http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg">http://commons.wikimedia.org/wiki/File:Statue_of_liberty.jpg</a>,
-CC-BY<br>
-El Al 747-200, Przemyslaw "Blueshade" Idzkiewicz, <a href="http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg">http://commons.wikimedia.org/wiki/File:ELAL_747-200_4X-AHQ_EPWA_24_08_2004.jpg</a>,
-CC-BY-SA<br>
-Intelligent Scissors Tool, Gimp Documentation Team, <a href="http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html">http://docs.gimp.org/2.6/en/gimp-tool-iscissors.html</a>,
-GNU FDL<br>
-Stock Car Brazil Pace Car, Morio, <a href="http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg">http://commons.wikimedia.org/wiki/File:Stock_Car_Brazil_Pace_Car.jpg</a>,
-CC-BY-SA<br>
-Chicago from UIC, Hied5, <a href="http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG">http://commons.wikimedia.org/wiki/File:Chicago_from_UIC.JPG</a>,
-CC-BY<br>
-Airplane over Autobahn, poolie, <a href="http://www.flickr.com/photos/poolie/2611727104/">http://www.flickr.com/photos/poolie/2611727104/</a>,
-CC-BY<br>
-Chicago skyscrapers, Stephen Hanafin, <a href="http://www.flickr.com/photos/shanafin/3539282102/">http://www.flickr.com/photos/shanafin/3539282102/</a>,
-CC-BY-SA<br>
-2007/10/10 EC-HFP, Javier Pedreira, <a href="http://www.flickr.com/photos/wicho/1789307019/">http://www.flickr.com/photos/wicho/1789307019/</a>,
-CC-BY<br>
-Frankfurt skyscrapers, Danilo Paissan, <a href="http://www.flickr.com/photos/danilopaissan/2732030140/">http://www.flickr.com/photos/danilopaissan/2732030140/</a>,
-CC-BY-SA<br>
-Lufthansa Boeing 737-300, daspaddy, <a href="http://www.flickr.com/photos/daspaddy/3375583143/">http://www.flickr.com/photos/daspaddy/3375583143/</a>,
-CC-BY<br>
-Overexposed Mountains, avry xvx, <a href="http://www.flickr.com/photos/kimclit/4438966573/">http://www.flickr.com/photos/kimclit/4438966573/</a>,
-CC-BY-SA<br>
-Dark Cloud Over Kota Kinabalu, thienzieyung, <a href="http://www.flickr.com/photos/thienzieyung/4829364637/">http://www.flickr.com/photos/thienzieyung/4829364637/</a>,
-CC-BY<br>
-Colchuck Lake, Mahalie Stackpole, <a href="http://www.flickr.com/photos/mahalie/253842823/">http://www.flickr.com/photos/mahalie/253842823/</a>,
-CC-BY-SA<br>
-P5290060, Steve Broomfield, <a href="http://www.flickr.com/photos/spikycircle/18070686/">http://www.flickr.com/photos/spikycircle/18070686/</a>,
-CC-BY<br>
-Large Rock, Homini:), <a href="http://www.flickr.com/photos/homini/4327478688/">http://www.flickr.com/photos/homini/4327478688/</a>,
-CC-BY<br>
-Antler Lake 2, Holly Lawrence, <a href="http://www.flickr.com/photos/goat_girl_photos/228884109/">http://www.flickr.com/photos/goat_girl_photos/228884109/</a>,
-CC-BY-SA<br>
-Curly Hair Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870001120/">http://www.flickr.com/photos/seeminglee/870001120/</a>,
-CC-BY-SA<br>
-Blue Eyed Girl, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870028244/">http://www.flickr.com/photos/seeminglee/870028244/</a>,
-CC-BY-SA<br>
-Circle Glasses Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/870005490/">http://www.flickr.com/photos/seeminglee/870005490/</a>,
-CC-BY-SA<br>
-Dark Skinned Guy, See-Ming Lee, <a href="http://www.flickr.com/photos/seeminglee/869124633/">http://www.flickr.com/photos/seeminglee/869124633/</a>,
-CC-BY-SA<br>
-<br>
-<br>
-<br>
-<br>
+
+</body></html>
