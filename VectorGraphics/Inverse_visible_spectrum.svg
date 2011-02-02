@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="605"
+   height="115"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="spectrum_inverse.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs4">
+<linearGradient id="spectrumGradient">
+  <stop id="stop750nm" offset="0.000000" style="stop-color:#040100;" />
+  <stop id="stop745nm" offset="0.006893" style="stop-color:#060100;" />
+  <stop id="stop740nm" offset="0.013879" style="stop-color:#080100;" />
+  <stop id="stop735nm" offset="0.020960" style="stop-color:#0C0100;" />
+  <stop id="stop730nm" offset="0.028138" style="stop-color:#100100;" />
+  <stop id="stop725nm" offset="0.035415" style="stop-color:#130100;" />
+  <stop id="stop720nm" offset="0.042793" style="stop-color:#170200;" />
+  <stop id="stop715nm" offset="0.050274" style="stop-color:#1A0300;" />
+  <stop id="stop710nm" offset="0.057861" style="stop-color:#1E0400;" />
+  <stop id="stop705nm" offset="0.065555" style="stop-color:#210600;" />
+  <stop id="stop700nm" offset="0.073359" style="stop-color:#270801;" />
+  <stop id="stop695nm" offset="0.081276" style="stop-color:#2E0A01;" />
+  <stop id="stop690nm" offset="0.089307" style="stop-color:#370C01;" />
+  <stop id="stop685nm" offset="0.097455" style="stop-color:#420E02;" />
+  <stop id="stop680nm" offset="0.105723" style="stop-color:#4D1103;" />
+  <stop id="stop675nm" offset="0.114114" style="stop-color:#591303;" />
+  <stop id="stop670nm" offset="0.122630" style="stop-color:#671504;" />
+  <stop id="stop665nm" offset="0.131274" style="stop-color:#771805;" />
+  <stop id="stop660nm" offset="0.140049" style="stop-color:#871B06;" />
+  <stop id="stop655nm" offset="0.148958" style="stop-color:#981F07;" />
+  <stop id="stop650nm" offset="0.158004" style="stop-color:#A92309;" />
+  <stop id="stop645nm" offset="0.167190" style="stop-color:#BF2318;" />
+  <stop id="stop640nm" offset="0.176520" style="stop-color:#D42215;" />
+  <stop id="stop635nm" offset="0.185997" style="stop-color:#EA220D;" />
+  <stop id="stop630nm" offset="0.195624" style="stop-color:#F7300F;" />
+  <stop id="stop625nm" offset="0.205405" style="stop-color:#FC471F;" />
+  <stop id="stop620nm" offset="0.215344" style="stop-color:#FD5B2E;" />
+  <stop id="stop615nm" offset="0.225445" style="stop-color:#FB6C39;" />
+  <stop id="stop610nm" offset="0.235711" style="stop-color:#FA7B42;" />
+  <stop id="stop605nm" offset="0.246147" style="stop-color:#F98848;" />
+  <stop id="stop600nm" offset="0.256757" style="stop-color:#F7944B;" />
+  <stop id="stop595nm" offset="0.267545" style="stop-color:#F69F49;" />
+  <stop id="stop590nm" offset="0.278516" style="stop-color:#F5AB42;" />
+  <stop id="stop585nm" offset="0.289674" style="stop-color:#F2B735;" />
+  <stop id="stop580nm" offset="0.301025" style="stop-color:#ECC420;" />
+  <stop id="stop575nm" offset="0.312573" style="stop-color:#DCCE20;" />
+  <stop id="stop570nm" offset="0.324324" style="stop-color:#CBD621;" />
+  <stop id="stop565nm" offset="0.336283" style="stop-color:#B9DC22;" />
+  <stop id="stop560nm" offset="0.348456" style="stop-color:#A5E221;" />
+  <stop id="stop555nm" offset="0.360847" style="stop-color:#8FE722;" />
+  <stop id="stop550nm" offset="0.373464" style="stop-color:#73EB22;" />
+  <stop id="stop545nm" offset="0.386313" style="stop-color:#50ED28;" />
+  <stop id="stop540nm" offset="0.399399" style="stop-color:#36E842;" />
+  <stop id="stop535nm" offset="0.412730" style="stop-color:#23E054;" />
+  <stop id="stop530nm" offset="0.426313" style="stop-color:#21D662;" />
+  <stop id="stop525nm" offset="0.440154" style="stop-color:#22CB6B;" />
+  <stop id="stop520nm" offset="0.454262" style="stop-color:#20C070;" />
+  <stop id="stop515nm" offset="0.468643" style="stop-color:#1DB273;" />
+  <stop id="stop510nm" offset="0.483307" style="stop-color:#1DA375;" />
+  <stop id="stop505nm" offset="0.498261" style="stop-color:#1A9574;" />
+  <stop id="stop500nm" offset="0.513514" style="stop-color:#178672;" />
+  <stop id="stop495nm" offset="0.529075" style="stop-color:#177970;" />
+  <stop id="stop490nm" offset="0.544953" style="stop-color:#146E6F;" />
+  <stop id="stop485nm" offset="0.561159" style="stop-color:#11636D;" />
+  <stop id="stop480nm" offset="0.577703" style="stop-color:#10596C;" />
+  <stop id="stop475nm" offset="0.594595" style="stop-color:#0E4F6A;" />
+  <stop id="stop470nm" offset="0.611846" style="stop-color:#0C4667;" />
+  <stop id="stop465nm" offset="0.629468" style="stop-color:#0A3E66;" />
+  <stop id="stop460nm" offset="0.647474" style="stop-color:#09376C;" />
+  <stop id="stop455nm" offset="0.665875" style="stop-color:#132E74;" />
+  <stop id="stop450nm" offset="0.684685" style="stop-color:#1F237B;" />
+  <stop id="stop445nm" offset="0.703917" style="stop-color:#291380;" />
+  <stop id="stop440nm" offset="0.723587" style="stop-color:#2B0E6F;" />
+  <stop id="stop435nm" offset="0.743709" style="stop-color:#290A5C;" />
+  <stop id="stop430nm" offset="0.764299" style="stop-color:#25084B;" />
+  <stop id="stop425nm" offset="0.785374" style="stop-color:#1F053A;" />
+  <stop id="stop420nm" offset="0.806950" style="stop-color:#17032A;" />
+  <stop id="stop415nm" offset="0.829046" style="stop-color:#11021F;" />
+  <stop id="stop410nm" offset="0.851681" style="stop-color:#0C0117;" />
+  <stop id="stop405nm" offset="0.874875" style="stop-color:#080110;" />
+  <stop id="stop400nm" offset="0.898649" style="stop-color:#06000D;" />
+  <stop id="stop395nm" offset="0.923024" style="stop-color:#04000A;" />
+  <stop id="stop390nm" offset="0.948025" style="stop-color:#030008;" />
+  <stop id="stop385nm" offset="0.973675" style="stop-color:#020006;" />
+  <stop id="stop380nm" offset="1.000000" style="stop-color:#020005;" />
+</linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#spectrumGradient"
+       id="linearGradient3161"
+       x1="192.78572"
+       y1="378.07645"
+       x2="652.92859"
+       y2="378.07645"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3103125,0,0,0.3393939,-252.07501,-49.316842)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2316667"
+     inkscape:cx="414.7253"
+     inkscape:cy="99.952637"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1166"
+     inkscape:window-height="662"
+     inkscape:window-x="91"
+     inkscape:window-y="19" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Blended inverse spectrum</dc:title>
+        <dc:date>2008-Aug-27</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Hall (gringer)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:description>An inverse representation (linear by frequency) of the visible light spectrum. Values are frequency in THz.</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>colour spectrum</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:url(#linearGradient3161);fill-opacity:1.0;stroke:#000000;stroke-width:0.99999987999999995;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2383"
+       width="599"
+       height="64"
+       x="2.5"
+       y="47" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.5,3.99989 L 0.5,43"
+       id="path3208" />
+    <path
+       id="path3210"
+       d="M 132.5,3.99989 L 132.5,43"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 168.5,3.999478 L 168.5,42.999588"
+       id="path3212" />
+    <path
+       id="path3214"
+       d="M 192.5,3.99989 L 192.5,43"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 318.5,3.99989 L 318.5,43"
+       id="path3216" />
+    <path
+       id="path3218"
+       d="M 408.5,3.99989 L 408.5,43"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 600.5,3.99989 L 600.5,43"
+       id="path3220" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="66.006561"
+       y="30.789946"
+       id="text3270"><tspan
+         sodipodi:role="line"
+         id="tspan3272"
+         x="66.006561"
+         y="30.789946">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="145.31345"
+       y="30.679945"
+       id="text3274"><tspan
+         sodipodi:role="line"
+         id="tspan3276"
+         x="145.31345"
+         y="30.679945">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="180.43968"
+       y="30.789534"
+       id="text3278"><tspan
+         sodipodi:role="line"
+         id="tspan3280"
+         x="180.43968"
+         y="30.789534">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="255.74344"
+       y="30.679945"
+       id="text3282"><tspan
+         sodipodi:role="line"
+         id="tspan3284"
+         x="255.74344"
+         y="30.679945">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="363.1597"
+       y="30.789946"
+       id="text3286"><tspan
+         sodipodi:role="line"
+         id="tspan3288"
+         x="363.1597"
+         y="30.789946">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="504.42969"
+       y="30.789946"
+       id="text3290"><tspan
+         sodipodi:role="line"
+         id="tspan3292"
+         x="504.42969"
+         y="30.789946">V</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.411741"
+       y="596.77002"
+       id="text3320"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3322"
+         x="-23.411741"
+         y="596.77002">790</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.391331"
+       y="404.76999"
+       id="text3324"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3326"
+         x="-23.391331"
+         y="404.76999">665</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.421741"
+       y="314.76999"
+       id="text3328"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3330"
+         x="-23.421741"
+         y="314.76999">605</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.426331"
+       y="203.09"
+       id="text3332"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3334"
+         x="-23.426331"
+         y="203.09">525</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.426743"
+       y="164.77"
+       id="text3336"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="-23.426743"
+         y="164.77">510</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.466742"
+       y="128.77"
+       id="text3340"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3342"
+         x="-23.466742"
+         y="128.77">485</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+       x="-23.481741"
+       y="11.09"
+       id="text3344"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3346"
+         x="-23.481741"
+         y="11.09">400</tspan></text>
+  </g>
+</svg>
