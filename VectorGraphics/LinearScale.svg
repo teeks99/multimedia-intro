@@ -14,7 +14,10 @@
    id="svg5076"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="LinearScale.svg">
+   sodipodi:docname="LinearScale.svg"
+   inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/LinearScale.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs5078" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.5442748"
      inkscape:cx="268.57707"
-     inkscape:cy="441.42857"
+     inkscape:cy="440.13054"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -111,5 +114,16 @@
          x="96.922188"
          y="470.23029"
          style="font-size:80px">Fourth Text</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#0000ad;stroke-opacity:1;font-family:Sans"
+       x="223.26469"
+       y="805.72205"
+       id="text2990"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2992"
+         x="223.26469"
+         y="805.72205">Doubling Sizes</tspan></text>
   </g>
 </svg>

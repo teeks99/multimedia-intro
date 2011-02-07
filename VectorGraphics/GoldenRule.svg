@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6959892"
-     inkscape:cx="367.28833"
-     inkscape:cy="737.66118"
+     inkscape:cx="429.17944"
+     inkscape:cy="643.32096"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -109,5 +109,16 @@
          x="186.41634"
          y="210.30202"
          style="font-size:60px">Fourth Text</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#0000ad;stroke-opacity:1;font-family:Sans"
+       x="252.36008"
+       y="551.76935"
+       id="text2990"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2992"
+         x="252.36008"
+         y="551.76935">Fibonacci Sizes</tspan></text>
   </g>
 </svg>
