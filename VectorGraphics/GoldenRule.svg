@@ -14,7 +14,10 @@
    id="svg5033"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="GoldenRule.svg">
+   sodipodi:docname="GoldenRule.svg"
+   inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/GoldenRule.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs5035" />
   <sodipodi:namedview
@@ -43,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
