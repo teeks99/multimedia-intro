@@ -1,15 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  <title>Fotos - 2 - Tipos de Archivo</title>
-
-  
-</head><body>
+<html><head><title>Fotos - 2 - Tipos de Archivo</title></head><body>
 <h3 class="western">Tipos de Archivo</h3>
 
 <h4><b>Tamaño de las fotos</b></h4>
 
-<p>Para una fotografía normal, cada uno de los tres (rojo - Red, verde
-- Green, y azul - Blue) los canales están representados por un byte de
+<p>Para una fotografía normal, cada uno de los tres canales (rojo - Red, verde
+- Green, y azul - Blue) están representados por un byte de
 datos para cada píxel.&nbsp; Esto significa que se requiere de tres
 bytes de
 datos para cada píxel, esto se refiere a menudo como el color de 24
@@ -18,29 +14,29 @@ Debido a que cada byte puede teer 2^8 o 256 valores diferentes, cada
 canal puede tener 256 niveles diferentes de ese color (1/256 o 0.39% de
 variación por nivel, si todo se hace de manera uniforme).&nbsp; Puede
 haber
-notado que la R G y B los valores en la demostración se utilizó en la
-sección de los canales sólo tenía 256 opciones diferentes, si no
-recuerdo, volver atrás y comprobar que funciona ahora:</p>
+notado que los valores R, G, y B en la demostración que hicimos en la
+sección de canales sólo tenían 256 opciones diferentes -- si no
+recuerdas, vuelva atrás y compruébelo ahora:</p>
 
 <p><a href="http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html">http://developer.yahoo.com/yui/examples/slider/slider-rgb_clean.html</a></p>
 
 <p>Debido a que hay tres canales diferentes, eso significa que cada
-p'ixel puede representar 256x256x256 colores o más de 16 millones de
-combinaciones de color diferentes.&nbsp; Eso es mucho más de lo que la
-mayor
-caja de lápices de colores. </p>
+píxel puede representar 256x256x256 colores o más de 16 millones de
+combinaciones de color diferentes.&nbsp; Eso es mucho más que aún la más grande
+caja de crayones de cera. </p>
 
 <p>Para una imagen de 12 megapíxeles de una cámara moderna, esto
 significa que se requeriría 36 megabytes (MB) de espacio de
 almacenamiento!&nbsp; Eso es mucho cuando sale con su cámara y quiere
 tomar
-un montón de fotos.&nbsp; Si usted tiene un 1 gigabyte (GB) tarjeta de
-memoria para su cámara, que sólo le permiten almacenar aproximadamente
+un montón de fotos.&nbsp; Si usted tiene una tarjeta de memmoria de un
+1 gigabyte (GB) para su cámara, sólo le permitiría almacenar
+aproximadamente
 30 imágenes.&nbsp;<br>
 </p>
 
 <p>Debio al enorme tamaño de los archivos que contienen sólo los
-píxeles, la gente ha venido con diversas formas de compresión de
+píxeles, con el tiempo se han creado diversas formas de comprimir (to compress)
 imágenes en archivos más pequeños.&nbsp; Estos se pueden poner en dos
 grupos
 diferentes: sin pérdidas (Lossless) y con pérdida (Lossy).<br>
@@ -50,23 +46,24 @@ diferentes: sin pérdidas (Lossless) y con pérdida (Lossy).<br>
 
 
 <p>La compresión sin pérdidas (lossless compression) toma los archivos
-y encuentra maneras matemáticamente de hacer que más pequeños, de una
-manera que puede ser completamente des-hecho. La manera más fácil de
+y encuentra maneras para hacerlos más pequeños matemáticamente, de una
+manera que puede ser completamente reversible. La manera más fácil de
 hacer esto es ejecutar la imagen a través de una herramienta de
 compresión general como Zip.&nbsp; Zip es una herramienta que está
-disponible en todos los equipos, que pasa a través de cualquier archivo
+disponible en todos los equipos, que toma cualquier archivo
 (no sólo imágenes) y encuentra la manera de hacerlo más pequeño.&nbsp;
 Una
 manera simple de hacer esto es si hay muchos píxeles en un área que son
-del mismo color, no puede haber una instrucción que cuando la imagen se
-dibuja con el color que toda la zona en el color correcto.&nbsp; La
-misma
-está diciendo lo que la computadora se puede hacer cientos de veces más
-pequeña que la cantidad de espacio que requeriría para almacenar todos
-los píxeles de la zona.&nbsp; Hay muchas otras maneras de hacer esto,
+del mismo color, el Zip puede crear una instrucción (una línea de
+código dentro del archivo) para que cuando la computadora dibuje la
+imagen, que esa zona completa se cubra con dicho color.&nbsp; El tamaño
+del texto de esa instrucción dentro del archivo puede ser cientos de
+veces menor que la cantidad de espacio que requeriría almacenar cada
+uno de
+los píxeles de esa zona.&nbsp; Hay muchas otras maneras de comprimir
+archivos,
 pero
-en general son muy complicados y más allá del ámbito de aplicación de
-este material. <br>
+en general son muy complicados y más allá del ámbito este curso. <br>
 </p>
 
 <p><a href="http://en.wikipedia.org/wiki/Lossless_data_compression">http://es.wikipedia.org/wiki/Compresión_sin_pérdida<br>
@@ -75,30 +72,30 @@ http://en.wikipedia.org/wiki/Lossless_data_compression</a></p>
 <p><b>Compresión Con Pérdida </b>
 </p>
 
-<p>La compresión con pérdia (lossy compression) es diferente ya que una
-vez que un archivo comprimido no hay forma de volver exactamente el
+<p>La compresión con pérdia (lossy compression) es diferente en que una
+vez que un archivo se haya comprimido no hay forma de volver
+exactamente al
 mismo archivo, algún detalle siempre se pierde.&nbsp; Dado que las
 imágenes
-están hechas de millones de píxeles cada posible de representar a
-millones de colores diferentes, hay margen para la eliminación de los
-detalles antes de que el ojo humano se notará ninguna diferencia.&nbsp;
+están hechas de millones de píxeles, cada uno capaz de representar a
+millones de colores diferentes, hay margen para eliminar
+detalles sin de que el ojo humano note la diferencia.&nbsp;
 Esto
-se puede hacer con una combinación de los métodos de compresión sim
-pérdidas, al igual que cosas como el supuesto de que un color de un
-píxel es similar a los píxeles que lo rodean, y los métodos complicados
-muchos más.&nbsp; También más allá del alcance de este material. &nbsp;<br>
+se puede hacer con una combinación de métodos de compresión sin
+pérdidas, al igual que cosas como suponer que el color de un
+píxel es similar a los píxeles que lo rodean, y otros métodos mucho mas
+complicados, también más allá del alcance de este material. &nbsp;<br>
 </p>
 
 <br>
 
-<p>Abajo son tres ejemplos que ilustran la compresión con pérdida.
+<p>Abajo hay tres ejemplos que ilustran la compresión con pérdida.
 El ejemplo de la izquierda es el original y se comprimió con compresión
 sin pérdidas.&nbsp; La imagen central se comprimió con compresión con
-pérdida, que fue creado para no perder datos mucho.&nbsp; La imagen de
+pérdida, hecha para no perder mucho datos.&nbsp; La imagen de
 la
-derecha usa compresión con pérdida, con ajustes muy agresivos.&nbsp;
-Hizo un
-tamaño de archivo mucho más pequeño que el del medio (1.1KB frente a
+derecha usa compresión con pérdida, con ajustes muy agresivos.&nbsp; Esa última imagen hizo un
+tamaño de archivo mucho más pequeño que la del medio (1.1KB comparado con
 9.4KB) pero obviamente la compresión elimina partes de la imagen que
 son importantes para hacer que se vea bien.</p>
 
@@ -113,11 +110,11 @@ http://en.wikipedia.org/wiki/Lossy_compression</a></p>
 </b></h3>
 
 <p>Hay muchos tipos diferentes de archivos (files) que se utilizan para
-las imágenes, la mayoría de los cuales el apoyo de uno o más métodos
-específicos de compresión sin pérdida o con pérdida.&nbsp; Abajo se
-muestra
-una visión general de ellos, hay muchos formatos menos utilizados,
-además, no que no figuran en esta lista.&nbsp; Ver:&nbsp;
+imágenes, la mayoría de los cuales soportan uno o más métodos
+específicos de compresión sin pérdida o con pérdida.&nbsp; El siguiente
+es un resumen general de estos tipos de archivos; hay muchos otros
+formatos menos utilizados que no figuran en esta lista.&nbsp;
+Ver:&nbsp;
 <a href="http://en.wikipedia.org/wiki/Image_file_formats">http://en.wikipedia.org/wiki/Image_file_formats</a>
 o <a href="http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">http://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats</a>
 para más información.</p>
@@ -125,37 +122,37 @@ para más información.</p>
 <p><b>Bitmap/Mapa de bits</b> (.bmp, otros) -- Contiene todos los
 píxeles de la imagen, sin compresión.&nbsp; El formato .bmp concreto es
 utilizado por Microsoft en sus programas para la visualización de
-imágenes, pero los métodos similares se utilizan en todo tipo de
+imágenes, pero métodos similares se utilizan en todo tipo de
 computadoras.&nbsp; Ya que almacena todos los píxeles, este es un
 formato
 sin pérdidas, de hecho por defecto no se comprime en absoluto.</p>
 
-<p><b>JPEG</b> (.jpg, .jpeg) -- Soportes de Joint Photographic
+<p><b>JPEG</b> (.jpg, .jpeg) -- Significa Joint Photographic
 Experts Group (grupo conjunto de expertos fotográficos), se desarrolló
 específicamente para el almacenamiento de imágenes tomadas por cámaras
-digitales, y es con muho, el formato más utilizado para las fotografías
+digitales, y es por mucho, el formato más utilizado para fotografías
 digitales.&nbsp; Se trata de un formato con pérdida, sin embargo con la
 configuración típica es muy difícil de detectar cualquier degradación
 de la imagen.</p>
 
-<p><b>PNG</b> (.png) -- Portable Network Graphics (gráfico de la red
-portátil) es mejor para el almacenamiento de imágenes que no tienen
+<p><b>PNG</b> (.png) -- Portable Network Graphics (gráficas
+portátiles para la red) es mejor para el almacenamiento de imágenes que no tienen
 muchos detalles, tales como gráficos en las páginas web.&nbsp; Este es
 un
 formato sin pérdidas. </p>
 
 <p><b>GIF</b> (.gif) -- Graphics Interchange Format (formato de
-intercambio de gráficos) es similar pero más viejo de PNG.&nbsp; En
+intercambio de gráficos) es similar pero más viejo que el PNG.&nbsp; En
 general
-PNG se debe utilizar en su lugar, sim embargo hay una característica
-que tiene que PNG no tiene actualmente, que es poder tener varias
+PNG se debe utilizar en su lugar, sin embargo hay una característica
+que el GIF tiene que PNG no tiene, que es poder tener varias
 imágenes almacenadas en su interior, que se pueden reproducir como una
 animación sencilla. </p>
 
 <p><b>JPEG2000</b> (.jp2) -- Este fue un intento de crear una mejor
 versión del formato JPEG. Sin embargo no ha tenido mucho éxito y se
 utiliza sobre todo en situaciones profesionales, tales como imágenes
-médicas.&nbsp; Este formato tiene opciones que pueden hacer sin pérdida
+médicas.&nbsp; Este formato tiene opciones que pueden hacerlo sin pérdida
 o
 con pérdida. </p>
 
@@ -163,81 +160,88 @@ con pérdida. </p>
 mejor versión del formato JPEG, originalmente desarrollado por
 Microsoft como "HD Photo" que se presentó a la Joint Photographic
 Experts Group (grupo conjunto de expertos fotográficos), que lo aceptó
-como un nuevo estándar.&nbsp; Aún no ha prendido en el uso
+como un nuevo estándar.&nbsp; Aún no ha prendido en uso
 corriente.&nbsp; Este
-formato tiene opciones que pueden hacer sin pérdida o con pérdida. </p>
+formato tiene opciones que pueden hacerlo un formato sin pérdida o con pérdida. </p>
 
 <p><b>WebP</b> (.webp) -- Este es un nuevo formato desarrollado por
 Google que está diseñado para reemplazar JPEG (y algunos PNG) para su
-uso en las imágenes en la web.&nbsp; No es en la actualidad con el
-apoyo de
+uso en las imágenes en la web.&nbsp; Actualmente no es soportado por
 todos los navegadores web, pero se está trabajando en él.&nbsp; Este
 formato
 es con pérdida. </p>
 
-<p><b>TIFF</b> (.tif, .tiff) -- Tagged Image File Format (etiquetado
-formato de archivo de imagen) se usa principalmente para imágenes de
-documentos (como exploraciones).&nbsp; Tiene soporte para múltiples
+<p><b>TIFF</b> (.tif, .tiff) -- Tagged Image File Format (formato etiquetado de
+archivo de imagen) se usa principalmente para imágenes de
+documentos (como imágenes escaneadas).&nbsp; Tiene soporte para
+múltiples
 páginas
-de imágenes, así como los metadatos, como en la imagen se recogió, que
-lo escribió, etc.&nbsp; Por lo general, se utiliza como un formato sin
+de imágenes, así como metadatos como de dónde la imagen se capturó,
+quíene la tomó, etc.&nbsp; Por lo general, se utiliza como un formato
+sin
 pérdida, pero tiene la habilidad de usar JPEG o otro tipo de compresión
-en el interior. </p>
+interiormente. </p>
 
 <p><b>RAW</b> (.raw, .cr2, .crw, .nef, .nrw, dng, y más) -- Las
-imágenes RAW no es un formato específico, sino una agrupación de
-diferentes formatos, todos los cuales se construyen las cámaras.&nbsp;
-Por
-las cámaras por defecto suelen producir imágenes JPEG, que están en
+imágenes RAW no son de un formato específico, sino una agrupación de
+diferentes formatos, construidos por diferentes modelos de
+cámaras.&nbsp; Las cámaras por defecto suelen producir imágenes JPEG,
+que son con
 pérdidas y no contienen todos los datos básicos que la cámara registró
-sobre la imagen.&nbsp; Cuando un fotógrafo recibe una imagen en bruto,
+sobre la imagen.&nbsp; Cuando un fotógrafo recibe una imagen "raw",
 él or
-ella recibe todos los datos recogidos que la cámara que puede ser útil
-cuando se hace el procesamiento avanzado de las imágenes en una
+ella recibe todos los datos recogidos por la cámara, lo que puede ser
+útil
+cuando se hace procesamiento avanzado de las imágenes en una
 computadora. </p>
 
-<p><b>XCF</b> (.xcf) -- eXperimental Computing Facility (facilidad que
-computa experimental) es el nombre del formato de archivo usado para
-almacenar los proyectos en el editor de imágenes GIMP.&nbsp; Almacena
+<p><b>XCF</b> (.xcf) -- eXperimental Computing Facility (facilidad de
+computación experimental) es el nombre del formato de archivo usado
+para
+almacenar proyectos en el editor de imágenes GIMP.&nbsp; Almacena
 fotografías sin pérdidas y puede almacenar varias capas de fotos y
 otros datos tales como texto, líneas, selecciones, y mas.</p>
 
-<p><b>PSD</b> (.psd) -- PhotoShop Documento muy similar al formato XCF,
-pero utilizado por Photoshop.&nbsp; También es sin pérdidas y puede
+<p><b>PSD</b> (.psd) -- PhotoShop Document (Documento PhotoShop) muy similar al formato XCF,
+pero utilizado por Adobe Photoshop.&nbsp; También es sin pérdidas y puede
 almacenar varias capas de fotografías y datos.<br>
 <br>
 </p>
 
-<p><big>Bono, no los formatos de imagen raster:</big></p>
+<p><big>Bono, los formatos de imagenes no-rasterizadas:</big></p>
 
 <p><b>EXIF</b> - Exchangeable Image File Format (formato de archivo de
-imagen intercambiable) se utiliza para los metadatos de la imagen, no
-es un archivo por su cuenta, pero se incorpora en otros archivos como
+imagen intercambiable) se utiliza para los metadatos sobre una imagen, no
+es un archivo en sí mismo, sino que se incorpora en otros archivos como
 JPEG.&nbsp; Puede contener un gran número de campos de datos
 diferentes,
 incluyendo: la fecha se tomó la imagen, ajustes de la cámara, el tiempo
 de exposición, tamaño de la abertura, nivel de zoom, coordenadas GPS de
-la cámara, en dirección a la cámara estaba enfrentando, y muchos más. </p>
+la cámara, dirección en que la cámara estaba mirando, y muchos más. </p>
 
 <p><b>SVG</b> (.svg) -- Scalable Vector Graphics (gráficos vectoriales
-escalables) archivos se utilizan para almacenar las imágenes generadas
-en un equipo, no fotografías.&nbsp; Estos archivos no almacena los
+escalables) Estos archivos se utilizan para almacenar las imágenes
+generadas
+en una computadora, no fotografías.&nbsp; Estos archivos no almacenan
 píxeles,
 sino que almacenan información sobre donde las líneas, círculos, texto
-y otros componentes están en relación entre ellos (se refiere con
-vectores).&nbsp; Se llama escalable porque las instrucciones para la
-creación de la imagen se puede dar cualquier unidad de longitud y que
-toda la imagen basada en eso.&nbsp; Además de las instrucciones para
+y otros componentes están en relación con cada uno (estas relaciones se
+refieren usando vectores).&nbsp; Se llama escalable porque las
+instrucciones para la
+creación de la imagen se pueden dar usando cualquier unidad de longitud
+y
+toda la imagen se genera basada en esa unidad.&nbsp; Además las
+instrucciones para
 generar
 la imagen pueden incluir referencias a cantidades de tiempo, por lo que
-la imagen se puede cambiar a medida que se dibuja hacer una
-animación.&nbsp;
-Porque no hay píxeles que se calcula, se trata de un formato sin
+la imagen se puede cambiar a medida que se dibuja para hacer una
+animación.&nbsp; Ya que no hay píxeles para calcularse, se trata de un
+formato sin
 pérdida inherente. </p>
 
-<p><b>EPS</b> (.eps) -- Encapsulado Post Script archivos son similares
-a los archivos SVG, pero algo mayor y tiene más funciones limitadas,
-como no ser capaz de hacer la animación.</p>
+<p><b>EPS</b> (.eps) -- Archivos Encapsulated Post Script (Encapsulados Post Script) son similares
+a los archivos SVG, pero algo mas antiguos, y tiene funciones&nbsp; más limitadas,
+como no ser capaz de hacer animaciónes.</p>
 
 <h2>Reconocimiento</h2>
 
