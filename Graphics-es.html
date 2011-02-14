@@ -1,1 +1,180 @@
-Introduccion a Adobe Illustrator CS4 Espacio de trabajo basico <br>http://www.youtube.com/watch?v=ymowxhyaLNw<br><br><br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Unidad Dos - Graficos</title></head><body>
+<h1 class="western">Unidad Dos -- Graficos</h1>
+Esta unidad se centra en trabajar con imágenes que, a diferencia de las
+fotografías, no fueron creados con una cámara, pero en vez crea
+directamente en el equipo.&nbsp; Estos tipos de gráficos (graphics) son
+útiles para cosas como folletos, portadas de revistas, logotipos de
+empreza, publicidad, o su tarjeta de Navidad de la familia.<br>
+
+<br>
+Sin embargo, hay una parte muy importante de los gráficos que este
+curso sólo tocar un poco...los elementos artísticos.&nbsp; Para hacer
+buenos gráficos, usted debe entender lo que las imágenes son más
+agradables a la vista.&nbsp; Aunque esta sección se ofrecen algunas
+indicaciones en el camino, para entender realmente esto toma varios
+cursos de estudio, años de práctica y un montón de trabajo duro.&nbsp;
+En su lugar, este curso se centrará en algunos de los fundamentos de
+cómo los gráficos de trabajo, y cómo utilizar algunas herramientas para
+llegar a algunos diseños muy básicos.<br>
+
+<br>Si desea obtener más información sobre el lado más artístico del
+diseño gráfico, puede comenzar por la lectura a través de estos
+artículos:<br><a href="http://es.wikipedia.org/wiki/Composici%F3n_%28artes_visuales%29">
+
+http://es.wikipedia.org/wiki/Composición_(artes_visuales)</a><br><a href="http://es.wikipedia.org/wiki/Teor%EDa_del_color">
+http://es.wikipedia.org/wiki/Teoría_del_color</a><br><a href="http://es.wikipedia.org/wiki/Est%E9tica">
+http://es.wikipedia.org/wiki/Estética</a><br>
+<a href="http://en.wikipedia.org/wiki/Aesthetics"></a><a href="http://es.wikipedia.org/wiki/Color">http://es.wikipedia.org/wiki/Color</a><br>
+
+<br>
+
+<h2 class="western">Gráficos Vectoriales</h2>
+
+<p>A diferencia de las imágenes raster (fotografías, cubierta en la
+Unidad Uno) gráficos vectoriales no se trata de píxeles dispuestos en
+una cuadrícula con valores diferentes.&nbsp; En vez de gráficos
+vectoriales se almacenan como conjuntos de instrucciones que una
+computadora puede ejecutar para volver a crear un gráfico. </p>
+
+<p>Un ejemplo simple de estas instrucciones pueden ser: <br>
+</p>
+
+<ol>
+
+  <li>
+    <p>Crear un círculo con un centro de 3 unidades por encima del centro, y un radio de 2 unidades. </p>
+  </li>
+  <li>
+    <p>Rellene el círculo de color amarillo.</p>
+  </li>
+  <li>
+    <p>Crear una línea de 2 unidades por debajo del centro de 3 unidades por encima y por dos unidades a la izquierda del centro.</p>
+  </li>
+  <li>
+    <p>Crear una línea de 2 unidades por debajo del centro de 3 unidades por encima y por dos unidades a la derecha del centro.</p>
+  </li>
+</ol>
+
+<p>Si hubiera un programa que podría ejecutar este cript muy sencillo, puede llamar a la pantalla el texto siguiente:</p>
+
+<p style="text-align: center;"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"></p>
+
+<p> </p>
+
+<p>Lo bueno de esto es que nunca lo más probable es que mirar realmente
+en la secuencia de comandos de la computadora crea, al igual que usted
+no tendrá&nbsp; que ir a la matriz de píxeles y los canales que se
+almacenan en una fotografía.&nbsp; Sin embargo, si usted desea
+conseguir avanzada, que sería posible (y un poco más fácil de editar
+una imagen de mapa bits).&nbsp; En su lugar, vamos a utilizar las
+herramientas que convierten las cosas que dibujar con el ratón y el
+teclado en una de estas secuencias de comandos que el equipo puede
+seguir cuando se quiere volver a producir una imagen para ver en la
+pantalla (la&nbsp; pantalla es en realidad un mapa de bits). Entonces,
+cuando todos se hacen, podemos hacer que se ejecute el secuencia de
+comandos de nuevo para producir otra trama gráficos que se pueden
+guardar en un archivo PNG. </p>
+
+<p>También es posible que esta secuencia de comandos para incluir una
+cierta cantidad de tiempo que debe transcurrir antes de que algo
+sucede.&nbsp; Esto permite que para las animaciones, y algunos ejemplos
+sencillos sería tener un moviemiento palo cifra a través de la imagen o
+tener un rebote de la pelota.</p>Una de las beneficios muy importantes
+de las imágenes vectoriales es que todos los comandos de la imagen son
+relativos.&nbsp; Si usted necesita para aumentar el tamaño de la
+imagen, sólo tiene que cambiar las unidades que todos los comandos se
+aplican.&nbsp; En el ejemplo anterior, una unidad equivale a
+aproximadamete 10 píxeles, pere esto podría ser fácilmente modificado
+para que un píxel es igual a 20 píxeles o incluso 100 píxeles.&nbsp; La
+imagen automáticamente escala hasta el nuevo tamaño sin perder calidad,
+la imagen se quedará crujiente y no podrás ver los artefactors de
+píxeles.&nbsp; Esto es lo contrario de la cantidad de fotos de trabajo,
+allí si usted fuera a tratar de escala de la foto hasta el doble o diez
+veces el tamaño original, verá problemas aparecen en la imagen.<br>
+
+<br>He aquí un ejemplo con nuestra imagen simple.&nbsp; En cada caso,
+el gráfico vectoral está a la izquierda y la trama es el gráfico de la
+derecha.&nbsp; <br>
+
+<br>Una unidad equivale a 10 pixeles.<br>
+
+<img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"> <br>Una unidad equivale a 20 pixeles.<br>
+
+<img src="VectorGraphics/SimpleScriptOutput-Vector2.png" alt="SimpleScriptOutput-Vector2.png"><img src="VectorGraphics/SimpleScriptOutput-RasterScale2.png" alt="SimpleScriptOutput-RasterScale2.png"><br>Una
+unidad equivale a 100 pixeles.&nbsp; (Este se redjo a una sola unidad
+equivale a 40 píxeles por el navegador web para adaptarse a la
+pantalla, si quieres verlo como botón derecho del ratón de tamaño
+completo en él y verlo por separado.) <br>
+
+<img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-Vector10.png" alt="SimpleScriptOutput-Vector10.png"><img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-RasterScale10.png" alt="SimpleScriptOutput-RasterScale10.png"><br>Usted
+puede ver que a medida que hablamos en la sección de fotos, el mapa de
+bits gráficos no se escala hasta el tamaño grande muy bien.&nbsp; Sin
+embargo, el gráfico vectorial sigue buscando lisa y limpia en cualquier
+tamaño.<br>
+<br>
+
+In addition to cleanly scaling, vector graphics usually take up less
+space.&nbsp; In a raster image, data needs to be stored for every pixel
+(in three or four channels).&nbsp; If you have large images, this can
+be millions of bytes.&nbsp; Vector graphics on the other hand only
+store the information necessary to make the shapes and color them
+in.&nbsp; For the above example, this is just four commands, each one
+taking only a few bytes.&nbsp; There are things you can do to make very
+complicated vector graphics, but typically they will be much smaller
+than their raster counterparts.<br>
+
+<br>
+
+The other very nice thing about vector graphics is that when you are
+using graphical programs like Inkscape or Illustrator to edit them, it
+is very easy to select objects.&nbsp; For photos we had some real
+challenges in selecting different objects (like the airplane and the
+statue's arm).&nbsp; However, since in vector graphics the commands to
+create each object are stored, when you click on an object, it is easy
+for the program to guess which object you are trying to select.&nbsp;
+You can then easily modify that object by resizing it, rotating it, or
+moving it. <br>
+
+<h3 class="western">File Formats</h3>
+
+<p>The primary file format currently in use is SVG or Scalable Vector
+Graphics (see: <a href="http://en.wikipedia.org/wiki/Svg">http://en.wikipedia.org/wiki/Svg</a>
+) which is a type of human readable file called XML (eXtensible Markup
+Language see: <a href="http://en.wikipedia.org/wiki/XML">http://en.wikipedia.org/wiki/XML</a>).
+Although XML
+and SVG are human-readable, we will not be reading them directly as
+part of this material. SVG is supported in most vector drawing
+programs, however it is not yet supported by all web browsers (though
+this is rapidly changing). If you simply want to use your images on
+web pages, it is best to convert them to Portable Network Graphics
+(PNG) which is a lossless raster format. </p>
+
+<p>The other major format for Vector Graphics is the EPS or
+Encapsulated Post Script. Post Script itself is a file type used for
+printing (especially industrial printing), and EPS images are built
+to be easily put inside of a Post Script document. This format has
+been around a lot longer than SVG, and is supported by many more
+tools (especially the old ones). Likewise, it is not recommended for
+use with web browsers.</p>
+
+<h2 class="western"><br>
+</h2>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+Introduccion a Adobe Illustrator CS4 Espacio de trabajo basico <br>
+
+http://www.youtube.com/watch?v=ymowxhyaLNw<br>
+
+<br>
+
+<br>
+
+</body></html>
