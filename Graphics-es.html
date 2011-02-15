@@ -32,7 +32,7 @@ http://es.wikipedia.org/wiki/Estética</a><br>
 <h2 class="western">Gráficos Vectoriales</h2>
 
 <p>A diferencia de las imágenes raster (fotografías, cubierta en la
-Unidad Uno) gráficos vectoriales no se trata de píxeles dispuestos en
+Unidad Uno) gráficos vectoriales (vector graphics) no se trata de píxeles dispuestos en
 una cuadrícula con valores diferentes.&nbsp; En vez de gráficos
 vectoriales se almacenan como conjuntos de instrucciones que una
 computadora puede ejecutar para volver a crear un gráfico. </p>
@@ -112,51 +112,48 @@ puede ver que a medida que hablamos en la sección de fotos, el mapa de
 bits gráficos no se escala hasta el tamaño grande muy bien.&nbsp; Sin
 embargo, el gráfico vectorial sigue buscando lisa y limpia en cualquier
 tamaño.<br>
-<br>
+<br>Además de la amplicación limpia, gráficos vectoriales generalmente
+ocupan menos espacio.&nbsp; En una imagen de mapa de bits, los datos
+necesitan ser almacenados por cada píxel (en tres o cuatro
+canales).&nbsp; Si usted tiene imágenes de gran tamaño, esto puede ser
+de millones de bytes.&nbsp; Los gráficos vectoriales en cambio sólo
+almacenan la información necesaria para tomar las formas y poner color
+en ellos.&nbsp; Para el ejemplo anterior, esto es sólo cuatro comandos,
+cada uno tomando sólo unos pocos bytes.&nbsp; Hay cosas que usted puede
+hacer para crear gráficos vectoriales muy complicado, pero por lo
+general van a ser mucho más pequeños que sus contrapartes de la trama.<br>
 
-In addition to cleanly scaling, vector graphics usually take up less
-space.&nbsp; In a raster image, data needs to be stored for every pixel
-(in three or four channels).&nbsp; If you have large images, this can
-be millions of bytes.&nbsp; Vector graphics on the other hand only
-store the information necessary to make the shapes and color them
-in.&nbsp; For the above example, this is just four commands, each one
-taking only a few bytes.&nbsp; There are things you can do to make very
-complicated vector graphics, but typically they will be much smaller
-than their raster counterparts.<br>
+<br>La otra cosa muy bueno de gráficos vectoriales es que cuando se
+está utilizando programas gráficos como Inkscape o Illustrator para
+editar, es muy fácil para seleccionar objetos.&nbsp; Para las fotos
+hemos tenido algunos problemas reales en la selección de diferentes
+objetos (como el avión y el brazo de la estatua).&nbsp; Sin embargo, ya
+que en gráficos vectoriales para crear los comandos de cada objeto se
+almacenan, al hacer clic sobre un objeto, es fácil para el programa de
+adivinar qué objeto que está tratando de seleccionar.&nbsp; A
+continuación, puede modificar fácilmente que el objeto de cambiar el
+tamaño, rotar, o e moverlo.<br>
 
-<br>
+<h3 class="western">Formatos de Archivo</h3>
 
-The other very nice thing about vector graphics is that when you are
-using graphical programs like Inkscape or Illustrator to edit them, it
-is very easy to select objects.&nbsp; For photos we had some real
-challenges in selecting different objects (like the airplane and the
-statue's arm).&nbsp; However, since in vector graphics the commands to
-create each object are stored, when you click on an object, it is easy
-for the program to guess which object you are trying to select.&nbsp;
-You can then easily modify that object by resizing it, rotating it, or
-moving it. <br>
+<p>El formato de archivo principal actualmente en uso es SVG o Scaleable Vector Graphics (Gráficos Vectorales Escalables, ver: <a href="http://es.wikipedia.org/wiki/SVG">http://es.wikipedia.org/wiki/SVG</a>) que es un tipo de archivo legible por humanos llamado XML (eXtensible Markup Language - lenguaje de marcas extesible, ver: <a href="http://es.wikipedia.org/wiki/XML">http://es.wikipedia.org/wiki/XML</a>).&nbsp;
+A pesar de XML y SVG son legibles, no se los lee directamente como
+parte de este material.&nbsp; SVG es compatible con la mayoría de
+programas de dibujo vectorial, sin embargo, todavía no es soportado por
+todos de los navegadores web (aunque esto está cambiando
+rápidamente).&nbsp; Si sólo desea utilizar las imágenes en páginas web,
+lo mejor es convertirlos a formato Portable Network Graphics (PNG), que
+es un formato de mapa de bits sin pérdidas. </p>
 
-<h3 class="western">File Formats</h3>
-
-<p>The primary file format currently in use is SVG or Scalable Vector
-Graphics (see: <a href="http://en.wikipedia.org/wiki/Svg">http://en.wikipedia.org/wiki/Svg</a>
-) which is a type of human readable file called XML (eXtensible Markup
-Language see: <a href="http://en.wikipedia.org/wiki/XML">http://en.wikipedia.org/wiki/XML</a>).
-Although XML
-and SVG are human-readable, we will not be reading them directly as
-part of this material. SVG is supported in most vector drawing
-programs, however it is not yet supported by all web browsers (though
-this is rapidly changing). If you simply want to use your images on
-web pages, it is best to convert them to Portable Network Graphics
-(PNG) which is a lossless raster format. </p>
-
-<p>The other major format for Vector Graphics is the EPS or
-Encapsulated Post Script. Post Script itself is a file type used for
-printing (especially industrial printing), and EPS images are built
-to be easily put inside of a Post Script document. This format has
-been around a lot longer than SVG, and is supported by many more
-tools (especially the old ones). Likewise, it is not recommended for
-use with web browsers.</p>
+<p>El formato de otros grandes de gráficos vectoriales es la EPS o
+Encapsulated Post Script (Post Script encapsulado).&nbsp; Post Scrit es
+un tipo de archivo utilizado para la impresión (en especial impresión
+industrial), y las imágenes EPS están diseñados para ser fácilmente
+colocado dentro de un documento Post Script.&nbsp; Este formato ha sido
+todo mucho más tiempo que SVG, y es compatible con muchas más
+herramientas (sobre todo los de edad).&nbsp; Del mismo modo, no se
+recomienda para su uso con los navegadores web.&nbsp; <br>
+</p>
 
 <h2 class="western"><br>
 </h2>
