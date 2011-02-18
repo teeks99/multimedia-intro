@@ -1,22 +1,561 @@
-<h1 class="western">Unit Three -- Video </h1>Video, especiall digital video, is becoming increasingly more ubuitiquous in our lives.&nbsp; Television, both the older analog form and new digital/HD TV, are hugely popular.&nbsp; There are an enormous number of movies coming out ever year.&nbsp; And over the last few years, video has started to explode onto the web, led by sites like YouTube, Vimeo, Metacafe, and many more.&nbsp; While it is very difficult to get into the Televison or Movie industries, anyone can quickly and easily upload a video to one of those websites and, if the content and quality are good, get thousands or even millions of people to see their video.&nbsp; This has opened up huge new oppertunities for sharing with family and friends, marketing to an audience, and even creating a new show or film.&nbsp; <br><br>In this unit we will talk about how video works as well as how to convert, trim, edit, and create it.&nbsp; We will focus on digital video, that could be easily uploaded to one of the online sites, but what we will learn could also easily apply to the television or movie industries.&nbsp; <br>
-<h2 class="western">Introduction to Video Storage<br></h2>
-Digital video is made up of many "frames" of video, where each frame is basically a photograph or image, displayed in rapid succession.&nbsp; In addition, there is usually one or more tracks of audio that is synchronized with the video, and possibly subsitle tracks as well.&nbsp; There are a nearly innumerable different number of ways to format it, store it, and transmit it.&nbsp; Here we will break it down into the different aspects and components and cover some of the basics behind how it works.&nbsp; <br><h3>Aspect Ratio and Resolution<br></h3><p>Video typically comes in two different aspect ratios: 4:3 (the same as typical photographs), and 16:9.&nbsp; 4:3 was a common standard for televison, but it is being replaced with HD TV which uses the 16:9 aspect ratio.&nbsp; The wider 16:9 ratio is generally considered better for humas to watch.&nbsp; The reason for this is that our eyes are towards the side of our head, and this gives us a much wider field of view to the sides than it does up and down.&nbsp; The wider aspect ratio does a better job at filling that natural field of view.&nbsp; <br></p>Here are some of the common resolutions used for video and some of the names that go with them.<br><br>16:9 formats - HD TV and Internet Video<br>1920x1080 - 1080p, 1080i, hd1080<br>1280x720 - 720p, hd720<br>1024x576 - 576p, WSVGA<br>854:480 - 480p, hd480<br>640:360 - 360p<br>463:240 - 240p<br><br>4:3 formats - old TV and Internet Video<br>768:576 - 576i, PAL<br>640:480 - VGA, 480i, NTSC<br>320:240 - QVGA<br><br>17:9 formats - specifically for movies in theaters and film editing<br>4096x2160 - 4k<br>
-2048x1080 - 2k<br><h3>Interlacing</h3>You may notice that many of the numeric representations for the formats have a p or i after the number of lines of resolution.&nbsp; This indicates that the video is Progressive scan or Interlaced scan.&nbsp; Old, analog televisons used interlaced scan to cut in half the amount of data they needed to send.&nbsp; This is commonly called interlacing and it works by alternating which lines are broadcast.&nbsp; In one frame of video all the odd numbered lines would be broadcast, then in the next frame of video, all the even numbered lines would be broadcast.&nbsp; If this interlacing of frames happens fast enough it tricks the human eye into thinking that they are full frames.&nbsp; With one single exception (1080i), all the modern video formats are progressive scan.&nbsp; The 1080i format was really just used as a marketing gimmick to tell people that they are getting 1080 quality video on their TVs without having to processes full 1080p video.&nbsp; In reality, 720p video will look just as good if not better than 1080i video, especially for high-motion action scenes.&nbsp; When creating videos, interlacing should only be used if the video is primairly targeting a analog broadcast television.&nbsp; Digital video should always be progressive scan (it helps it compress better).<br><h3>Frame Rates</h3>The number of frames shown per second, also known as the "Frame Rate" is another variable when creating video.&nbsp;&nbsp; Typically in this course we will be using 30fps (Frames Per Second), unless the source material is something different.<br><p>24 - Typical for film<br>25 - PAL television<br>29.97 - NTSC television<br>30 - Digital Video<br>60 - Digital Video<br></p><h3>Pixel Formats</h3><p>There are a lot of different formats used to store the pixels (it can also be referred to as the color space) and it gets very complicated, so we're not going to go too far into it.&nbsp; A quick overview, when we worked on the photo unit, we assumed that everything was represented in terms of its RGB values (8 bits each, for a total of 24 bits).&nbsp; That format is also common in video, however there are many more.&nbsp; Most are defined in terms of YUV, this defines a Luminance (brightness and darkness) channel and two different chroma (color) channels, this can roughly re-produce all the colors of the 24 bit RGB.&nbsp; However, when the human eye sees an image, it is mostly looking at the lightness and darkness (luminance) of it, and though the color is important it doesn't take a large amount of color to make it seem fully colored.&nbsp; Because the color information isn't as important to the eye, some of these formats take out some of that information to save space.&nbsp; Common formats you will see are YUV4:2:2 (16 bits), YUV4:1:1 (12 bits), and YUV4:2:0 (12 bits).&nbsp; Don't worry about what the numbers mean, just be aware that they are out there.&nbsp; <br></p><h3 class="western">Codec and Container Overview</h3>
-<h4>Containers</h4>Video cannot generally be distributed as a raw stream of bytes, compressed with its codec.&nbsp; It needs to be encapsulated into a file or stream that allows it to be fast-forwarded, rewinded, and synchronized with the audio and/or subtitle track(s).&nbsp; To do all this organization, several types of "Containers" have been developed.&nbsp; As this is the outermost layer of the file that the user will interact with, these are sometimes called "Formats", however this is generally not accurate because to know the format you would need to know the type of the audio, video, and subtitle codecs contained within the file, and most of these containers are capable of supporting more than one of each of these types.&nbsp; <br><br><span style="font-weight: bold;"></span><span style="font-weight: bold;">MPEG-PS</span> - Motion Picture Experts Group - Program Stream, is used for storing video data for use on DVDs and Blue-Ray discs.&nbsp; It is compatible with MPEG 1, 2, and 4 video, several types of MPEG audio, and subtitles.&nbsp; <br><span style="font-weight: bold;">MPEG-TS</span> - Motion Picture
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Unit Three - Video</title>
+
+  
+</head><body>
+<h1 class="western">Unit Three -- Video </h1>
+
+Video, especiall digital video, is becoming increasingly more
+ubuitiquous in our lives.&nbsp; Television, both the older analog form
+and new digital/HD TV, are hugely popular.&nbsp; There are an enormous
+number of movies coming out ever year.&nbsp; And over the last few
+years, video has started to explode onto the web, led by sites like
+YouTube, Vimeo, Metacafe, and many more.&nbsp; While it is very
+difficult to get into the Televison or Movie industries, anyone can
+quickly and easily upload a video to one of those websites and, if the
+content and quality are good, get thousands or even millions of people
+to see their video.&nbsp; This has opened up huge new oppertunities for
+sharing with family and friends, marketing to an audience, and even
+creating a new show or film.&nbsp; <br>
+
+<br>
+
+In this unit we will talk about how video works as well as how to
+convert, trim, edit, and create it.&nbsp; We will focus on digital
+video, that could be easily uploaded to one of the online sites, but
+what we will learn could also easily apply to the television or movie
+industries.&nbsp; <br>
+
+<h2 class="western">Introduction to Video Storage<br>
+</h2>
+
+Digital video is made up of many "frames" of video, where each frame is
+basically a photograph or image, displayed in rapid succession.&nbsp;
+In addition, there is usually one or more tracks of audio that is
+synchronized with the video, and possibly subsitle tracks as
+well.&nbsp; There are a nearly innumerable different number of ways to
+format it, store it, and transmit it.&nbsp; Here we will break it down
+into the different aspects and components and cover some of the basics
+behind how it works.&nbsp; <br>
+
+<h3>Aspect Ratio and Resolution<br>
+</h3>
+
+<p>Video typically comes in two different aspect ratios: 4:3 (the same
+as typical photographs), and 16:9.&nbsp; 4:3 was a common standard for
+televison, but it is being replaced with HD TV which uses the 16:9
+aspect ratio.&nbsp; The wider 16:9 ratio is generally considered better
+for humas to watch.&nbsp; The reason for this is that our eyes are
+towards the side of our head, and this gives us a much wider field of
+view to the sides than it does up and down.&nbsp; The wider aspect
+ratio does a better job at filling that natural field of view.&nbsp; <br>
+</p>
+
+Here are some of the common resolutions used for video and some of the
+names that go with them.<br>
+
+<br>
+
+16:9 formats - HD TV and Internet Video<br>
+
+1920x1080 - 1080p, 1080i, hd1080<br>
+
+1280x720 - 720p, hd720<br>
+
+1024x576 - 576p, WSVGA<br>
+
+854:480 - 480p, hd480<br>
+
+640:360 - 360p<br>
+
+463:240 - 240p<br>
+
+<br>
+
+4:3 formats - old TV and Internet Video<br>
+
+768:576 - 576i, PAL<br>
+
+640:480 - VGA, 480i, NTSC<br>
+
+320:240 - QVGA<br>
+
+<br>
+
+17:9 formats - specifically for movies in theaters and film editing<br>
+
+4096x2160 - 4k<br>
+
+2048x1080 - 2k<br>
+
+<br>
+
+<a href="http://en.wikipedia.org/wiki/Aspect_ratio_%28image%29">http://en.wikipedia.org/wiki/Aspect_ratio_(image)</a><br>
+
+<a href="http://es.wikipedia.org/wiki/Relaci%F3n_de_aspecto">http://es.wikipedia.org/wiki/Relación_de_aspecto</a><br>
+
+<h3>Interlacing</h3>
+
+You may notice that many of the numeric representations for the formats
+have a p or i after the number of lines of resolution.&nbsp; This
+indicates that the video is Progressive scan or Interlaced scan.&nbsp;
+Old, analog televisons used interlaced scan to cut in half the amount
+of data they needed to send.&nbsp; This is commonly called interlacing
+and it works by alternating which lines are broadcast.&nbsp; In one
+frame of video all the odd numbered lines would be broadcast, then in
+the next frame of video, all the even numbered lines would be
+broadcast.&nbsp; If this interlacing of frames happens fast enough it
+tricks the human eye into thinking that they are full frames.&nbsp;
+With one single exception (1080i), all the modern video formats are
+progressive scan.&nbsp; The 1080i format was really just used as a
+marketing gimmick to tell people that they are getting 1080 quality
+video on their TVs without having to processes full 1080p video.&nbsp;
+In reality, 720p video will look just as good if not better than 1080i
+video, especially for high-motion action scenes.&nbsp; When creating
+videos, interlacing should only be used if the video is primairly
+targeting a analog broadcast television.&nbsp; Digital video should
+always be progressive scan (it helps it compress better).<br>
+<br>
+<a href="http://en.wikipedia.org/wiki/Interlaced_video">http://en.wikipedia.org/wiki/Interlaced_video</a><br>
+<a href="http://es.wikipedia.org/wiki/Exploraci%F3n_entrelazada">http://es.wikipedia.org/wiki/Exploración_entrelazada</a><br>
+
+<h3>Frame Rates</h3>
+
+The number of frames shown per second, also known as the "Frame Rate"
+is another variable when creating video.&nbsp;&nbsp; Typically in this
+course we will be <br>
+
+using 30fps (Frames Per Second), unless the source material is
+something different.<br>
+
+<br>
+
+The faster the frame rate is, the more smoothly it will seem that the
+video is.&nbsp; (Example with 30fps and same video at 5fps...action
+sequence)<br>
+
+<br>
+
+Here are some common frame rates in use, in frames per second:<br>
+
+<p>23.976 - NTSC film (24/1.001)<br>
+24 - Typical for film<br>
+25 - PAL television/film<br>
+29.97 - NTSC television (30/1.001)<br>
+30 - Digital Video<br>
+60 - Digital Video</p>
+<p><a href="http://en.wikipedia.org/wiki/Frame_rate">http://en.wikipedia.org/wiki/Frame_rate</a><br>
+<a href="http://es.wikipedia.org/wiki/Im%E1genes_por_segundo">http://es.wikipedia.org/wiki/Imágenes_por_segundo</a><br>
+</p>
+
+<h3>Pixel Formats</h3>
+
+<p>There are a lot of different formats used to store the pixels (it
+can also be referred to as the color space) and it gets very
+complicated, so we're not going to go too far into it.&nbsp; A quick
+overview, when we worked on the photo unit, we assumed that everything
+was represented in terms of its RGB values (8 bits each, for a total of
+24 bits).&nbsp; That format is also common in video, however there are
+many more.&nbsp; Most are defined in terms of YUV, this defines a
+Luminance (brightness and darkness) channel and two different chroma
+(color) channels, this can roughly re-produce all the colors of the 24
+bit RGB.&nbsp; However, when the human eye sees an image, it is mostly
+looking at the lightness and darkness (luminance) of it, and though the
+color is important it doesn't take a large amount of color to make it
+seem fully colored.&nbsp; Because the color information isn't as
+important to the eye, some of these formats take out some of that
+information to save space.&nbsp; Common formats you will see are
+YUV4:2:2 (16 bits), YUV4:1:1 (12 bits), and YUV4:2:0 (12 bits).&nbsp;
+Don't worry about what the numbers mean, just be aware that they are
+out there.&nbsp; <br>
+</p>
+<p><a href="http://en.wikipedia.org/wiki/YUV">http://en.wikipedia.org/wiki/YUV</a><br>
+<a href="http://es.wikipedia.org/wiki/YUV">http://es.wikipedia.org/wiki/YUV</a><br>
+</p>
+<h3 class="western">Codec and Container Overview</h3>
+
+<h4>Containers</h4>
+
+Video cannot generally be distributed as a raw stream of bytes,
+compressed with its codec.&nbsp; It needs to be encapsulated into a
+file or stream that allows it to be fast-forwarded, rewinded, and
+synchronized with the audio and/or subtitle track(s).&nbsp; To do all
+this organization, several types of "Containers" have been
+developed.&nbsp; As this is the outermost layer of the file that the
+user will interact with, these are sometimes called "Formats", however
+this is generally not accurate because to know the format you would
+need to know the type of the audio, video, and subtitle codecs
+contained within the file, and most of these containers are capable of
+supporting more than one of each of these types.&nbsp; <br>
+
+<a href="http://en.wikipedia.org/wiki/Container_format_%28digital%29">http://en.wikipedia.org/wiki/Container_format_(digital)</a><br>
+
+<a href="http://en.wikipedia.org/wiki/Comparison_of_container_formats">http://en.wikipedia.org/wiki/Comparison_of_container_formats</a><br>
+
+<a href="http://es.wikipedia.org/wiki/Formato_contenedor">http://es.wikipedia.org/wiki/Formato_contenedor</a><br>
+
+<br>
+
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">MPEG-PS</span>
+- Motion Picture Experts Group - Program Stream, is used for storing
+video data for use on DVDs and Blue-Ray discs.&nbsp; It is compatible
+with MPEG 1, 2, and 4 video, several types of MPEG audio, and
+subtitles.&nbsp; <a href="http://en.wikipedia.org/wiki/MPEG_program_stream">http://en.wikipedia.org/wiki/MPEG_program_stream</a>
+<a href="http://es.wikipedia.org/wiki/Program_Stream">http://es.wikipedia.org/wiki/Program_Stream</a><br>
+
+<span style="font-weight: bold;">MPEG-TS</span> - Motion Picture
 Experts Group - Transport Stream, is used for transmitting video data,
-especially in cases where some of it may be lost in transit.&nbsp; In addition to raw streams of data, it can contain Program Streams.&nbsp; <br><span style="font-weight: bold;"></span><span style="font-weight: bold;">AVI</span> - Despite some technical limitations, Microsoft's Audio Video Interleave (AVI) format has been very common for videos available for download off the internet, especially those encoded with DivX or Xvid codecs.&nbsp; Its popularity is starting to fade as use of MKV and MP4 picks up, but it is still common to find videos in this container.<br><span style="font-weight: bold;">MOV</span> - This is the container that is used with Apple's QuickTime movies, it has been superseeded in Apple's iTunes and QuickTime by the MP4 container.<br><span style="font-weight: bold;">WMV (aka ASF)</span> - This is Microsoft's main container format, capable of supporting all the microsoft codecs as well as some others.&nbsp; Generally the .wmv extension implies that one of the WMV video codecs is being used with the WMA audio codec.&nbsp; If other codecs are being used, Microsoft's guidance is to use the .asf extension.<br><span style="font-weight: bold;">FLV</span> - Flash Video is common on websites that show video clips (like YouTube).&nbsp; There are several video codecs that are compatible with this, with the most common being H.263.&nbsp; The most recent versions of the Flash player are also able to work with MP4 or WebM, so this container is no longer required to work with the Flash player.<br><span style="font-weight: bold;">Ogg</span> - This is the first major open source container that was in major use.&nbsp; It was primarily compatible with the Theora video codec and Vorbis audio.&nbsp; This has generally been superseeded by the open source MKV container.<br>
-<span style="font-weight: bold;">MP4 (aka M4V)</span> - This is the standard file format that the MPEG group came up with for MPEG 4 video, although it is not limited to MPEG 4 video.&nbsp; This container is extremely similar to Apple's Quick Time MOV container, and is used by iTunes for videos.&nbsp; The most typical format for this container is to contain MPEG4-AVC/H.264 video and AAC audio.&nbsp; It is supported by the Flash player in web browsers, and by the Internet Explorer and Safari web browsers for HTML 5 video.<br><span style="font-weight: bold;">MKV</span>
-- This is an open source, multi-purpose container format.&nbsp; This format
-can store almost any type of video, audio, and subtitles.&nbsp; It can also
+especially in cases where some of it may be lost in transit.&nbsp; In
+addition to raw streams of data, it can contain Program Streams.&nbsp; <a href="http://en.wikipedia.org/wiki/MPEG_transport_stream">http://en.wikipedia.org/wiki/MPEG_transport_stream
+</a>
+<a href="http://es.wikipedia.org/wiki/Transport_Stream">http://es.wikipedia.org/wiki/Transport_Stream</a><br>
+
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">Microsoft
+Audio Video Interleave (AVI)</span>
+- Despite some technical limitations, Microsoft's Audio Video
+Interleave (AVI) format has been very common for videos available for
+download off the internet, especially those encoded with DivX or Xvid
+codecs.&nbsp; Its popularity is starting to fade as use of MKV and MP4
+picks up, but it is still common to find videos in this
+container.&nbsp; <a href="http://en.wikipedia.org/wiki/Audio_Video_Interleave">http://en.wikipedia.org/wiki/Audio_Video_Interleave</a> &nbsp;
+<a href="http://es.wikipedia.org/wiki/Avi">http://es.wikipedia.org/wiki/Avi</a><br>
+
+<span style="font-weight: bold;">Quick Time (MOV)</span> - This is the
+container
+that is used with Apple's QuickTime movies, it has been superseeded in
+Apple's iTunes and QuickTime by the MP4 container. <a href="http://en.wikipedia.org/wiki/.mov">http://en.wikipedia.org/wiki/.mov</a><br>
+
+<span style="font-weight: bold;">Windows Media Video (</span><span style="font-weight: bold;">WMV </span><span style="font-weight: bold;">aka
+ASF)</span> - This is
+Microsoft's main container format, capable of supporting all the
+microsoft codecs as well as some others.&nbsp; Generally the .wmv
+extension implies that one of the WMV video codecs is being used with
+the WMA audio codec.&nbsp; If other codecs are being used, Microsoft's
+guidance is to use the .asf extension. <a href="http://en.wikipedia.org/wiki/Windows_Media_Video">http://en.wikipedia.org/wiki/Windows_Media_Video</a>
+<a href="http://es.wikipedia.org/wiki/Wmv">http://es.wikipedia.org/wiki/Wmv<br>
+</a><span style="font-weight: bold;">Flash Video (FLV)</span> - Flash
+Video is common on
+websites that show video clips (like YouTube).&nbsp; There are several
+video codecs that are compatible with this, with the most common being
+H.263.&nbsp; The most recent versions of the Flash player are also able
+to work with MP4 or WebM, so this container is no longer required to
+work with the Flash player. <a href="http://en.wikipedia.org/wiki/Flash_Video">http://en.wikipedia.org/wiki/Flash_Video</a>
+<a href="http://es.wikipedia.org/wiki/Flv">http://es.wikipedia.org/wiki/Flv</a><br>
+
+<span style="font-weight: bold;">Ogg</span> - This is the first major
+open source container that was in major use.&nbsp; It was primarily
+compatible with the Theora video codec and Vorbis audio.&nbsp; This has
+generally been superseeded by the open source MKV container. <a href="http://en.wikipedia.org/wiki/Ogg">http://en.wikipedia.org/wiki/Ogg</a>
+<a href="http://es.wikipedia.org/wiki/Ogg">http://es.wikipedia.org/wiki/Ogg</a><br>
+
+<span style="font-weight: bold;">MPEG-4 (MP4 aka M4V)</span> - This is
+the
+standard file format that the MPEG group came up with for MPEG 4 video,
+although it is not limited to MPEG 4 video.&nbsp; This container is
+extremely similar to Apple's Quick Time MOV container, and is used by
+iTunes for videos.&nbsp; The most typical format for this container is
+to contain MPEG4-AVC/H.264 video and AAC audio.&nbsp; It is supported
+by the Flash player in web browsers, and by the Internet Explorer and
+Safari web browsers for HTML 5 video. <a href="http://en.wikipedia.org/wiki/MPEG-4_Part_14">http://en.wikipedia.org/wiki/MPEG-4_Part_14</a>
+<a href="http://es.wikipedia.org/wiki/MPEG-4_Parte_14">http://es.wikipedia.org/wiki/MPEG-4_Parte_14</a><br>
+
+<span style="font-weight: bold;">Matroska (MKV)</span>
+- This is an open source, multi-purpose container format.&nbsp; This
+format
+can store almost any type of video, audio, and subtitles.&nbsp; It can
+also
 store multiple different tracks of any of those, enabling a movie to
 have multiple different languages of audio built in to it, or something
-like a director's commentary track.&nbsp; <br><span style="font-weight: bold;">WebM</span> - This is simply a
-trimmed down version of MKV that only supports the VP8 video codec and
-the Vorbis audio codec.&nbsp; This was created by Google for royalty-free
-use on the interent in web video.&nbsp; It is supported in the HTML 5 video
-standard by Firefox and Chrome, with support in Internet Explorer
-available as a plugin.&nbsp; It is also supported in web browsers by the
-Flash player. <br><h4>Codecs</h4>Codec stands for [co]der/[dec]oder.&nbsp; <br><p>Frames, Keyframes<br></p>
+like a director's commentary track.&nbsp; <a href="http://en.wikipedia.org/wiki/Matroska">http://en.wikipedia.org/wiki/Matroska</a>
+<a href="http://es.wikipedia.org/wiki/Mkv">http://es.wikipedia.org/wiki/Mkv</a><br>
 
-<br>TODO: Get rough compression ratio for each codec.<br><br><span style="font-weight: bold;">Raw</span> - Not compressed with a codec.&nbsp; There are still various types of raw formatting, the most common probably being DV Video, which often comes from digital camcorders.<br><span style="font-weight: bold;"><span style="font-weight: bold;"><span style="font-weight: bold;"></span></span>MJPEG</span> - Uses the JPEG format for fotographs to compress every frame of video.&nbsp; This results in a very low compression ratio (large files), but is realitively easy to do.&nbsp; Many digital cameras that also capture video use this to encode their video.<br><span style="font-weight: bold;">MPEG 2 (aka H.262)</span> - This is the successor to the Motion Picture Experts Group (MPEG) first video standard, MPEG 1.&nbsp; When DVDs were first created, this was one of the most advanced codecs, and was selected for use as the only codec universally supported for DVDs.&nbsp; Since then newer and better codecs have been created but the DVD standard is not able to be changed, so DVDs still use this.<br><span style="font-weight: bold;">VP3 (aka Theora)</span> - This is an older codec but is significant in that it was the first video codec to be released under an open source license, and was named Theora.&nbsp; This codec is free to implement for anyone in software or hardware.&nbsp; However, as it is older the performance of the codec doesn't match some of the modern equilivants.&nbsp; Theora's performance is substantially better than MPEG 2, but a touch worse than most MPEG 4 Part 2 implementations.<br><span style="font-weight: bold;">
-H.263 (aka Flash4)</span> - This <span style="text-decoration: line-through;">is</span> was the most widely used codec for flash video that can be watched in browsers on website.&nbsp; This is currently being superseded by MPEG 4 AVC/H.264 in flash.&nbsp; Also, HTML 5 is starting to replace flash video altogether, and it uses H.264 or WebM/VP8<br><span style="font-weight: bold;">MPEG 4 Part 2 (aka DivX, XVID, MS MPEG4v3)</span> - This was the first major use of the MPEG 4 standard.&nbsp; The original implementation was done by Microsoft and is called Microsoft MPEG 4 Version 3, however it wasn't actually compatible with the basline MPEG 4 Part 2.&nbsp; However, that didn't stop a project called DivX from copying this codec and giving it away freely.&nbsp; Between using it and the open source version of the same thing (TODO: lookup Xvid history on website) called Xvid, many of the videos that were available for download on the internet were (and a good number still are) encoded in MPEG 4 Part 2.&nbsp; The reason for its popularity is that it was a large step up (approximately 50% smaller files) from MPEG 2.<br><span style="font-weight: bold;">MPEG 4 Part 10 (aka MPEG 4 - AVC, H.264)</span> - This codec is currently widely considered the highest-performance codec available.&nbsp; It will generate file sizes that are approximately 50% smaller than MPEG 4 Part 2 codecs.&nbsp; This codec is now widely available as it is distributed with iTunes on Mac and comes built in with Windows 7.&nbsp; It is also available for playing video on the web with the current version of the Flash plugin.&nbsp; It is also being supported with HTML 5 video in Internet Explorer (version 9) and Safari.&nbsp; There are also plugins to get it working in Firefox.&nbsp; In addition to its consumer use, there is a lossless option to H.264, which is useful for storing video during editing or for archival purposes.<br><span style="font-weight: bold;">VP8</span> - VP8 was released by Google (which bought the company that created it) into the public domain, for use as a royalty-free codec.&nbsp; It is available by itself for use inside many different formats/containers, but is also the only video codec supported by the WebM video format.&nbsp; This format is almost as powerful as H.264, and is generally viewed as competitive with it.&nbsp; This codec is available natively for use in HTML 5 video in Firefox, Chrome, and Opera web browsers, and can be run in Internet Explorer with a plugin.&nbsp; It will also be available in the next major release of the Flash plugin.<br><span style="font-weight: bold;">VC-1 (aka WMV3)</span> - This is Microsofts latest codec in the Windows Media series.&nbsp; Its performance falls somewhere between MPEG 4 Part 2 and MPEG 4 Part 10.&nbsp; It is generally only available on windows platforms. <br><span style="font-weight: bold;">Dirac (aka VC-2)</span> - Dirac and its most popular implementation, Schroedinger, is a codec developed with a completely different, very high performance compression technology.&nbsp; Unfortunately this technology is not completly finished and takes a huge amount of computing power to encode and decode video in it.&nbsp; Because of these limitations, it is only used as a format for storing video during editing and for archival purposes, and in studios with powerful computers.&nbsp; <br><br><h4>Audio in Videos</h4>MP3<br>AAC<br>Vorbis<br>WMA<br><h2>Handbrake <br></h2><h3>Compression</h3><h2>FFMpeg</h2>List all container formats: ffmpeg -formats<br>List all codecs: ffmpeg -codecs<br>List all pixel types: ffmpeg -pix_fmts<br>List all filters that can be applied: ffmpeg -filters<br><br>ffmpeg [input] [video options] [audio options] [output]<br>ffmpeg -i InputVideo.mpg -vcodec mpeg2 -vb 4000k -acodec mp2 -ab 192k OutputVideo.mpg<br>ffmpeg -i InputVideo.mpg -vcodec libx264 -vpre normal -vb 800k -acodec libfaac -ab 128k OutputVideo.mkv<br><h2>Cutting (Avidemux?)</h2><h2>Kdenlive</h2><br><h3>Multi-Track Editing</h3><br><h2>DVD Creation</h2><br><h2>You Tube Creation</h2><br><br><h2>Screen Capture</h2><br>Other<br>PiTiVi - Ubuntu standard, not as full-feature<br>Cinelera - Very full featured, complicated to use<br>K9copy - Great for making images of DVDs<br>Kino - Useful for working with DV cameras<br><br><br>Possible Video Clips:<br>Elephant's Dream, Big Buck Bunny, Sintel - ton@blender.org<br>Valkaama - info@valkaama.com<br><h2>Attribution</h2><p>Blue Sky, Taurus Media Technik, <a href="http://media.xiph.org/video/derf/">http://media.xiph.org/video/derf/</a>, Public Domain<br>Riverbed, Taurus Media Technik, <a href="http://media.xiph.org/video/derf/">http://media.xiph.org/video/derf/</a>, Public Domain<br>Sintel Trailer, The Durian Open Movie Project, <a href="http://media.xiph.org/">http://media.xiph.org/</a>, CC-BY<br></p>
+<span style="font-weight: bold;">WebM</span> - This is simply a
+trimmed down version of MKV that only supports the VP8 video codec and
+the Vorbis audio codec.&nbsp; This was created by Google for
+royalty-free
+use on the interent in web video.&nbsp; It is supported in the HTML 5
+video
+standard by Firefox and Chrome, with support in Internet Explorer
+available as a plugin.&nbsp; It is also supported in web browsers by
+the
+Flash player. <a href="http://en.wikipedia.org/wiki/WebM">http://en.wikipedia.org/wiki/WebM</a>
+<a href="http://es.wikipedia.org/wiki/WebM">http://es.wikipedia.org/wiki/WebM</a>
+<h4>Video Compression and Codecs<br>
+</h4>
+
+Video is HUGE.&nbsp; If we have a 1080p (1920x1080) stream of video
+using YUV4:2:2 (16 bits/pixel = 2 bytes/pixel), at 30fps (Frames Per
+Second), that would be 124MB/sec (1920*1080*2*30) or 7.5GB/min or
+almost 0.5TB/hr!&nbsp; We wouldn't get too many movies if we needed a
+1TB hard disk for ever two hour long movie that we wanted to
+watch.&nbsp; Fortunately, video is highly compressible.&nbsp; Video
+compression is done using coders and decoders or for short CODECs
+(COder/DECoder).<br>
+
+<br>
+
+There are many different types of video compression codecs.&nbsp; Some
+of the simplest take standard image compression (like JPEG) and apply
+it to each frame of video.&nbsp; This by itself can drastically cut
+down on the amount of storage space that is needed.&nbsp; When we did
+the section on photos, we saw that with decent JPEG compression, we
+could compress a 30MB image down into about 3MB.&nbsp; If we applied
+that same ratio to our raw video (1080p, YUV4:2:2, 30fps), we would get
+about 12MB/sec, 750MB/min, 50GB/hr.&nbsp; Just for comparison 12MB/sec
+is approximately the speed that a typical hard disk can run at, so that
+would at least be possible to store on a normal computer.&nbsp; If
+you're working with video that is smaller (480p, YUV4:1:1, 30fps), this
+would be down around 1.8MB/sec, very doable. In fact, because this is
+realitively easy to do, many digital cameras that also record video use
+this method to compress their video.&nbsp; <br>
+
+<br>
+
+However, video has another advantage that allows for vastly higher
+compression ratios.&nbsp; The trick is that almost all the frames of
+video are very similar to the one before it, and the one after
+it.&nbsp; The exceptions to this are when the camera is panning very
+quickly, or there is a cut in the video and a different scene is
+shown.&nbsp; To utilize this all modern codecs utilize interframe
+compression.&nbsp; For instance, a frame will tell the decoder that
+"this group of pixels is the same as the previous frame", or "this
+group is the same, except it is a little bit darker", or "this group is
+the same as the group that was 10 pixels above it in the previous
+frame".&nbsp; Sometimes there is enough changes to the frame (or a cut
+in the video) that it isn't efficient to try to explain the new frame
+in terms of the old frame.&nbsp; In that case, the codec just forgets
+about the previous frame all together, and grabs a whole new frame
+(probably with something similar to JPEG compression) that has values
+for all the pixels.&nbsp; Then the next frame can start referencing
+this again.&nbsp; This brand-new frame is called a "Keyframe", because
+it essential to making the stream of frames work smoothly.<br>
+
+<p>There are a lot of complicated methods used for doing interframe
+compression and using keyframes.&nbsp; We won't go into any of the
+specifics here, but it is the details of how a codec does this that
+seperates each of the modern codecs from its peers, and these details
+are very complicated.&nbsp; Just to give one example, the list of
+patents that are used in the (fairly old) MPEG-2 standard for
+interframe compression is several pages long.&nbsp; <br>
+</p>
+
+<a href="http://en.wikipedia.org/wiki/Video_compression">http://en.wikipedia.org/wiki/Video_compression</a><br>
+
+<a href="http://en.wikipedia.org/wiki/Video_compression_picture_types">http://en.wikipedia.org/wiki/Video_compression_picture_types</a><br>
+
+<a href="http://en.wikipedia.org/wiki/Video_codec">http://en.wikipedia.org/wiki/Video_codec</a><br>
+
+<br>
+
+<a href="http://es.wikipedia.org/wiki/C%F3dec_de_v%EDdeo">http://es.wikipedia.org/wiki/Códec_de_vídeo</a><br>
+
+<br>
+
+TODO: Get rough compression ratio for each codec.<br>
+
+<br>
+
+<span style="font-weight: bold;">Raw</span> - Not compressed with a
+codec.&nbsp; There are still various types of raw formatting, the most
+common probably being DV Video, which often comes from digital
+camcorders.<br>
+
+<span style="font-weight: bold;"><span style="font-weight: bold;"><span style="font-weight: bold;"></span></span>MJPEG</span> - Uses the JPEG
+format for fotographs to compress every frame of video.&nbsp; This
+results in a very low compression ratio (large files), but is
+realitively easy to do.&nbsp; Many digital cameras that also capture
+video use this to encode their video. <a href="http://en.wikipedia.org/wiki/Motion_JPEG">http://en.wikipedia.org/wiki/Motion_JPEG</a>
+<a href="http://es.wikipedia.org/wiki/MJPEG">http://es.wikipedia.org/wiki/MJPEG</a><br>
+
+<span style="font-weight: bold;">MPEG 2 (aka H.262)</span> - This is
+the successor to the Motion Picture Experts Group (MPEG) first video
+standard, MPEG 1.&nbsp; When DVDs were first created, this was one of
+the most advanced codecs, and was selected for use as the only codec
+universally supported for DVDs.&nbsp; Since then newer and better
+codecs have been created but the DVD standard is not able to be
+changed, so DVDs still use this. <a href="http://en.wikipedia.org/wiki/MPEG-2">http://en.wikipedia.org/wiki/MPEG-2</a>
+<a href="http://es.wikipedia.org/wiki/MPEG-2">http://es.wikipedia.org/wiki/MPEG-2</a><br>
+
+<span style="font-weight: bold;">VP3 (aka Theora)</span> - This is an
+older codec but is significant in that it was the first video codec to
+be released under an open source license, and was named Theora.&nbsp;
+This codec is free to implement for anyone in software or
+hardware.&nbsp; However, as it is older the performance of the codec
+doesn't match some of the modern equilivants.&nbsp; Theora's
+performance is substantially better than MPEG 2, but a touch worse than
+most MPEG 4 Part 2 implementations. <a href="http://en.wikipedia.org/wiki/Theora">http://en.wikipedia.org/wiki/Theora</a>
+<a href="http://es.wikipedia.org/wiki/Theora">http://es.wikipedia.org/wiki/Theora</a>
+<br>
+
+<span style="font-weight: bold;">H.263 (aka Flash4)</span> - This <span style="text-decoration: line-through;">is</span> was the most widely
+used codec for flash video that can be watched in browsers on
+website.&nbsp; This is currently being superseded by MPEG 4 AVC/H.264
+in flash.&nbsp; Also, HTML 5 is starting to replace flash video
+altogether, and it uses H.264 or WebM/VP8<br>
+
+<span style="font-weight: bold;">MPEG 4 Part 2 (aka DivX, XVID, MS
+MPEG4v3)</span> - This was the first major use of the MPEG 4
+standard.&nbsp; The original implementation was done by Microsoft and
+is called Microsoft MPEG 4 Version 3, however it wasn't actually
+compatible with the basline MPEG 4 Part 2.&nbsp; However, that didn't
+stop a project called DivX from copying this codec and giving it away
+freely.&nbsp; Between using it and the open source version of the same
+thing (TODO: lookup Xvid history on website) called Xvid, many of the
+videos that were available for download on the internet were (and a
+good number still are) encoded in MPEG 4 Part 2.&nbsp; The reason for
+its popularity is that it was a large step up (approximately 50%
+smaller files) from MPEG 2. <a href="http://en.wikipedia.org/wiki/MPEG-4_Part_2">http://en.wikipedia.org/wiki/MPEG-4_Part_2</a>
+<a href="http://es.wikipedia.org/wiki/MPEG-4_Parte_2">http://es.wikipedia.org/wiki/MPEG-4_Parte_2</a><br>
+
+<span style="font-weight: bold;">MPEG 4 Part 10 (aka MPEG 4 - AVC,
+H.264)</span> - This codec is currently widely considered the
+highest-performance codec available.&nbsp; It will generate file sizes
+that are approximately 50% smaller than MPEG 4 Part 2 codecs.&nbsp;
+This codec is now widely available as it is distributed with iTunes on
+Mac and comes built in with Windows 7.&nbsp; It is also available for
+playing video on the web with the current version of the Flash
+plugin.&nbsp; It is also being supported with HTML 5 video in Internet
+Explorer (version 9) and Safari.&nbsp; There are also plugins to get it
+working in Firefox.&nbsp; In addition to its consumer use, there is a
+lossless option to H.264, which is useful for storing video during
+editing or for archival purposes. <a href="http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC</a>
+<a href="http://es.wikipedia.org/wiki/H.264/MPEG-4_AVC">http://es.wikipedia.org/wiki/H.264/MPEG-4_AVC</a><br>
+
+<span style="font-weight: bold;">VP8</span> - VP8 was released by
+Google (which bought the company that created it) into the public
+domain, for use as a royalty-free codec.&nbsp; It is available by
+itself for use inside many different formats/containers, but is also
+the only video codec supported by the WebM video format.&nbsp; This
+format is almost as powerful as H.264, and is generally viewed as
+competitive with it.&nbsp; This codec is available natively for use in
+HTML 5 video in Firefox, Chrome, and Opera web browsers, and can be run
+in Internet Explorer with a plugin.&nbsp; It will also be available in
+the next major release of the Flash plugin. <a href="http://en.wikipedia.org/wiki/VP8">http://en.wikipedia.org/wiki/VP8</a>
+<a href="http://es.wikipedia.org/wiki/VP8">http://es.wikipedia.org/wiki/VP8</a><br>
+
+<span style="font-weight: bold;">VC-1 (aka WMV3)</span> - This is
+Microsofts latest codec in the Windows Media series.&nbsp; Its
+performance falls somewhere between MPEG 4 Part 2 and MPEG 4 Part
+10.&nbsp; It is generally only available on windows platforms. <a href="http://en.wikipedia.org/wiki/VC-1">http://en.wikipedia.org/wiki/VC-1</a>
+<a href="http://es.wikipedia.org/wiki/VC-1">http://es.wikipedia.org/wiki/VC-1</a><br>
+
+<span style="font-weight: bold;">Dirac (aka VC-2)</span> - Dirac and
+its most popular implementation, Schroedinger, is a codec developed
+with a completely different, very high performance compression
+technology.&nbsp; Unfortunately this technology is not completly
+finished and takes a huge amount of computing power to encode and
+decode video in it.&nbsp; Because of these limitations, it is only used
+as a format for storing video during editing and for archival purposes,
+and in studios with powerful computers.&nbsp; <a href="http://en.wikipedia.org/wiki/Dirac_%28video_compression_format%29">http://en.wikipedia.org/wiki/Dirac_(video_compression_format)</a>
+<a href="http://es.wikipedia.org/wiki/Dirac_%28c%F3dec%29">http://es.wikipedia.org/wiki/Dirac_(códec)</a><br>
+
+<br>
+
+<h4>Audio in Videos</h4>
+
+AC3<br>
+
+AAC<br>
+
+MP3<br>
+
+Vorbis<br>
+
+WMA<br>
+
+FLAC<br>
+
+<h2>Handbrake&nbsp;</h2>
+
+Open Big Buck Bunny .iso and show DVD -&gt; File options<br>
+
+Add subtitles to elephants dream?<br>
+
+<h3>Compression</h3>
+
+One pass vs. two pass<br>
+
+Open a segment of the movie in a lossless format, and show how it can
+be used for simple compression<br>
+
+<br>
+
+<h2>FFMpeg</h2>
+
+List all container formats: ffmpeg -formats<br>
+
+List all codecs: ffmpeg -codecs<br>
+
+List all pixel types: ffmpeg -pix_fmts<br>
+
+List all filters that can be applied: ffmpeg -filters<br>
+
+<br>
+
+ffmpeg [input] [video options] [audio options] [output]<br>
+
+ffmpeg -i InputVideo.mpg -vcodec mpeg2 -vb 4000k -acodec mp2 -ab 192k
+OutputVideo.mpg<br>
+
+ffmpeg -i InputVideo.mpg -vcodec libx264 -vpre normal -vb 800k -acodec
+libfaac -ab 128k OutputVideo.mkv<br>
+
+<br>
+
+Two pass conversion?<br>
+
+<h2>Cutting (Avidemux?)</h2>
+
+<h2>Kdenlive</h2>
+
+<br>
+
+<h3>Multi-Track Editing</h3>
+
+<br>
+
+<h2>DVD Creation</h2>
+
+<br>
+
+<h2>You Tube Creation</h2>
+
+<br>
+
+<br>
+
+<h2>Screen Capture</h2>
+
+<br>
+
+Other<br>
+
+PiTiVi - Ubuntu standard, not as full-feature<br>
+
+Cinelera - Very full featured, complicated to use<br>
+
+K9copy - Great for making images of DVDs<br>
+
+Kino - Useful for working with DV cameras<br>
+
+<br>
+
+<br>
+
+Possible Video Clips:<br>
+
+Elephant's Dream, Big Buck Bunny, Sintel - ton@blender.org<br>
+
+Valkaama - info@valkaama.com<br>
+
+<h2>Attribution</h2>
+
+<p>Blue Sky, Taurus Media Technik, <a href="http://media.xiph.org/video/derf/">http://media.xiph.org/video/derf/</a>,
+Public Domain<br>
+Riverbed, Taurus Media Technik, <a href="http://media.xiph.org/video/derf/">http://media.xiph.org/video/derf/</a>,
+Public Domain<br>
+Sintel Trailer, The Durian Open Movie Project, <a href="http://media.xiph.org/">http://media.xiph.org/</a>, CC-BY<br>
+</p>
+
+</body></html>
