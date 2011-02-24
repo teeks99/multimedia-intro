@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Graphics - 1 - Vector Graphics</title>
+
+  
+</head><body>
+<h2 class="western">Vector Graphics</h2>
+
+<p>Unlike raster images (photos, covered in Unit One) vector graphics
+do not consist of pixels arranged on a grid with different values.
+Instead vector graphics are stored as sets of instructions that a
+computer can run to re-create a graphic. </p>
+
+<p>A simplistic example of these instructions could be:</p>
+
+<ol>
+
+  <li>
+    <p>Create a circle with a center 3 units above the center of the
+image, and a
+radius of 2 units. </p>
+  </li>
+  <li>
+    <p>Fill circle with yellow</p>
+  </li>
+  <li>
+    <p>Create a line from 2 units below the center of the image to 3
+units above and
+two units left of the center of the image.</p>
+  </li>
+  <li>
+    <p>Create a line from 2 units below the center of the image to 3
+units above and
+two units right of the center of the image.</p>
+  </li>
+</ol>
+
+<p>If there were a program that could run this very simple script, it
+might draw to the screen the following:</p>
+
+<p style="text-align: center;"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"></p>
+
+<p> </p>
+
+<p>The good thing about this is that you'll most likely never have to
+actually look at the script the computer creates, just like you never
+have to look at the array of pixels and channels that are stored in a
+photograph. However, if you want to get advanced, that would be
+possible (and quite a bit easier than editing a raster image). Instead,
+we will be using tools that convert the things we draw with
+the mouse and keyboard into one of these scripts that the computer
+can follow when it wants to re-produce an image to view on the screen
+(the screen is really just a raster graphic viewer). Then when we
+are all done, we can have it run the script again to produce another
+raster graphic that can be saved into a PNG file. </p>
+
+<p>It is also possible for this script to include a certain amount of
+time to wait before something happens. This allows for animations;
+some simple examples would be having a stick figure move across the
+image or having a ball bounce.</p>
+
+One of the very important benefits of vector images is that all the
+commands for the image are relative.&nbsp; If you need to increase the
+size of the image, you just need to change the units that all the
+commands are applied to.&nbsp; In the above example, one unit equals
+approximately 10 pixels, but this could easily be modified so that one
+unit equals 20 pixels or even 100 pixels.&nbsp; The image would
+automatically scale up to the new size without losing any quality, the
+image will stay crisp and you won't see any pixel artifacts.&nbsp; This
+is the opposite of how photos work, there if you were to try to scale
+the photo up to double or ten times the original size, you would see
+problems show up in the image.&nbsp; <br>
+
+<br>
+
+Here is an example using our simple image.&nbsp; In each case, the
+vector graphic is on the left and the raster graphic is on the right.<br>
+
+<br>
+
+One unit equals 10 pixels.<br>
+
+<img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"> <br>
+
+One unit equals 20 pixels.<br>
+
+<img src="VectorGraphics/SimpleScriptOutput-Vector2.png" alt="SimpleScriptOutput-Vector2.png"><img src="VectorGraphics/SimpleScriptOutput-RasterScale2.png" alt="SimpleScriptOutput-RasterScale2.png"><br>
+
+One unit equals 100 pixels. &nbsp; (This one is being scaled back
+down&nbsp; to one unit equals 40 pixels by the web-browser to fit to
+the screen, if you want to see it as full-sized right click on it and
+view it separately.)<br>
+
+<br>
+
+<img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-Vector10.png" alt="SimpleScriptOutput-Vector10.png"><img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-RasterScale10.png" alt="SimpleScriptOutput-RasterScale10.png"><br>
+
+You can see that as we talked about in the photos section, the raster
+graphic doesn't scale up to the large size very well.&nbsp;&nbsp;
+However, the vector graphic continues to look smooth and clean at any
+size.&nbsp; <br>
+
+<br>
+
+In addition to cleanly scaling, vector graphics usually take up less
+space.&nbsp; In a raster image, data needs to be stored for every pixel
+(in three or four channels).&nbsp; If you have large images, this can
+be millions of bytes.&nbsp; Vector graphics on the other hand only
+store the information necessary to make the shapes and color them
+in.&nbsp; For the above example, this is just four commands, each one
+taking only a few bytes.&nbsp; There are things you can do to make very
+complicated vector graphics, but typically they will be much smaller
+than their raster counterparts.<br>
+
+<br>
+
+The other very nice thing about vector graphics is that when you are
+using graphical programs like Inkscape or Illustrator to edit them, it
+is very easy to select objects.&nbsp; For photos we had some real
+challenges in selecting different objects (like the airplane and the
+statue's arm).&nbsp; However, since in vector graphics the commands to
+create each object are stored, when you click on an object, it is easy
+for the program to guess which object you are trying to select.&nbsp;
+You can then easily modify that object by resizing it, rotating it, or
+moving it. <br>
+
+<h3 class="western">File Formats</h3>
+
+<p>The primary file format currently in use is SVG or Scalable Vector
+Graphics (see: <a href="http://en.wikipedia.org/wiki/Svg">http://en.wikipedia.org/wiki/Svg</a>
+) which is a type of human readable file called XML (eXtensible Markup
+Language see: <a href="http://en.wikipedia.org/wiki/XML">http://en.wikipedia.org/wiki/XML</a>).
+Although XML
+and SVG are human-readable, we will not be reading them directly as
+part of this material. SVG is supported in most vector drawing
+programs, however it is not yet supported by all web browsers (though
+this is rapidly changing). If you simply want to use your images on
+web pages, it is best to convert them to Portable Network Graphics
+(PNG) which is a lossless raster format. </p>
+
+<p>The other major format for Vector Graphics is the EPS or
+Encapsulated Post Script. Post Script itself is a file type used for
+printing (especially industrial printing), and EPS images are built
+to be easily put inside of a Post Script document. This format has
+been around a lot longer than SVG, and is supported by many more
+tools (especially the old ones). Likewise, it is not recommended for
+use with web browsers.</p>
+
+</body></html>
