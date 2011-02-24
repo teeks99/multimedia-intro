@@ -1,222 +1,229 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Unit Two - Graphics</title></head><body>
-<h1 class="western">Unit Two -- Graphics</h1>
+<html><head><title>Unidad Dos - Graficos</title></head><body style="margin-left: 8px; width: 974px;">
+<h1 class="western">Unidad Dos -- Graficos</h1>
 
-This unit focuses on working with images that, unlike photos, were not
-created with a camera, but instead created directly on the
-computer.&nbsp; These types of graphics are useful in things like
-flyers, magazine covers, company logos, advertisements, or your family
-christmas card.&nbsp;&nbsp; <br>
-
-<br>
-
-However, there is a very important part of graphics that this course
-will only touch on a little...the artistic elements.&nbsp; To make good
-graphics, you must understand what images are most pleasing to the
-eye.&nbsp; Although this section will provide a few pointers along the
-way, to really understand this takes several courses of study, years of
-practice and a lot of hard work.&nbsp; Instead, this course will focus
-on some of the basics of how graphics work, and how to use a few tools
-to come up with some very basic designs.&nbsp; <br>
+Esta unidad se centra en trabajar con imágenes que, a diferencia de las
+fotografías, no fueron creados con una cámara, pero en vez crea
+directamente en el equipo.&nbsp; Estos tipos de gráficos (graphics) son
+útiles para cosas como folletos, portadas de revistas, logotipos de
+empreza, publicidad, o su tarjeta de Navidad de la familia.<br>
 
 <br>
 
-If you want more information about the more artistic side of graphic
-design, you can start by reading through these articles:<br>
+Sin embargo, hay una parte muy importante de los gráficos que este
+curso sólo tocar un poco...los elementos artísticos.&nbsp; Para hacer
+buenos gráficos, usted debe entender lo que las imágenes son más
+agradables a la vista.&nbsp; Aunque esta sección se ofrecen algunas
+indicaciones en el camino, para entender realmente esto toma varios
+cursos de estudio, años de práctica y un montón de trabajo duro.&nbsp;
+En su lugar, este curso se centrará en algunos de los fundamentos de
+cómo los gráficos de trabajo, y cómo utilizar algunas herramientas para
+llegar a algunos diseños muy básicos.<br>
 
-<a href="http://en.wikipedia.org/wiki/Design_principles_and_elements">http://en.wikipedia.org/wiki/Design_principles_and_elements</a><br>
+<br>
 
-<a href="http://en.wikipedia.org/wiki/Composition_%28visual_arts%29">http://en.wikipedia.org/wiki/Composition_(visual_arts)</a><br>
+Si desea obtener más información sobre el lado más artístico del
+diseño gráfico, puede comenzar por la lectura a través de estos
+artículos:<br>
 
-<a href="http://en.wikipedia.org/wiki/Color_theory">http://en.wikipedia.org/wiki/Color_theory</a><br>
+<a href="http://es.wikipedia.org/wiki/Composici%F3n_%28artes_visuales%29">http://es.wikipedia.org/wiki/Composición_(artes_visuales)</a><br>
 
-<a href="http://en.wikipedia.org/wiki/Aesthetics">http://en.wikipedia.org/wiki/Aesthetics</a><br>
+<a href="http://es.wikipedia.org/wiki/Teor%EDa_del_color">http://es.wikipedia.org/wiki/Teoría_del_color</a><br>
 
-<h2 class="western">Vector Graphics</h2>
+<a href="http://es.wikipedia.org/wiki/Est%E9tica">http://es.wikipedia.org/wiki/Estética</a><br>
 
-<p>Unlike raster images (photos, covered in Unit One) vector graphics
-do not consist of pixels arranged on a grid with different values.
-Instead vector graphics are stored as sets of instructions that a
-computer can run to re-create a graphic. </p>
+<a href="http://es.wikipedia.org/wiki/Color">http://es.wikipedia.org/wiki/Color</a><br>
 
-<p>A simplistic example of these instructions could be:</p>
+<br>
+
+<h2 class="western">Gráficos Vectoriales</h2>
+
+<p>A diferencia de las imágenes raster (fotografías, cubierta en la
+Unidad Uno) gráficos vectoriales (vector graphics) no se trata de
+píxeles dispuestos en
+una cuadrícula con valores diferentes.&nbsp; En vez de gráficos
+vectoriales se almacenan como conjuntos de instrucciones que una
+computadora puede ejecutar para volver a crear un gráfico. </p>
+
+<p>Un ejemplo simple de estas instrucciones pueden ser: <br>
+</p>
 
 <ol>
 
   <li>
-    <p>Create a circle with a center 3 units above the center of the image, and a
-radius of 2 units. </p>
+    <p>Crear un círculo con un centro de 3 unidades por encima del
+centro, y un radio de 2 unidades. </p>
   </li>
   <li>
-    <p>Fill circle with yellow</p>
+    <p>Rellene el círculo de color amarillo.</p>
   </li>
   <li>
-    <p>Create a line from 2 units below the center of the image to 3 units above and
-two units left of the center of the image.</p>
+    <p>Crear una línea de 2 unidades por debajo del centro de 3
+unidades por encima y por dos unidades a la izquierda del centro.</p>
   </li>
   <li>
-    <p>Create a line from 2 units below the center  of the image to 3 units above and
-two units right of the center of the image.</p>
+    <p>Crear una línea de 2 unidades por debajo del centro de 3
+unidades por encima y por dos unidades a la derecha del centro.</p>
   </li>
 </ol>
 
-<p>If there were a program that could run this very simple script, it
-might draw to the screen the following:</p>
+<p>Si hubiera un programa que podría ejecutar este cript muy sencillo,
+puede llamar a la pantalla el texto siguiente:</p>
 
 <p style="text-align: center;"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"></p>
 
 <p> </p>
 
-<p>The good thing about this is that you'll most likely never have to
-actually look at the script the computer creates, just like you never
-have to look at the array of pixels and channels that are stored in a
-photograph. However, if you want to get advanced, that would be
-possible (and quite a bit easier than editing a raster image). Instead,
-we will be using tools that convert the things we draw with
-the mouse and keyboard into one of these scripts that the computer
-can follow when it wants to re-produce an image to view on the screen
-(the screen is really just a raster graphic viewer). Then when we
-are all done, we can have it run the script again to produce another
-raster graphic that can be saved into a PNG file. </p>
+<p>Lo bueno de esto es que nunca lo más probable es que mirar realmente
+en la secuencia de comandos de la computadora crea, al igual que usted
+no tendrá&nbsp; que ir a la matriz de píxeles y los canales que se
+almacenan en una fotografía.&nbsp; Sin embargo, si usted desea
+conseguir avanzada, que sería posible (y un poco más fácil de editar
+una imagen de mapa bits).&nbsp; En su lugar, vamos a utilizar las
+herramientas que convierten las cosas que dibujar con el ratón y el
+teclado en una de estas secuencias de comandos que el equipo puede
+seguir cuando se quiere volver a producir una imagen para ver en la
+pantalla (la&nbsp; pantalla es en realidad un mapa de bits). Entonces,
+cuando todos se hacen, podemos hacer que se ejecute el secuencia de
+comandos de nuevo para producir otra trama gráficos que se pueden
+guardar en un archivo PNG. </p>
 
-<p>It is also possible for this script to include a certain amount of
-time to wait before something happens. This allows for animations;
-some simple examples would be having a stick figure move across the
-image or having a ball bounce.</p>
-One of the very important benefits of vector images is that all the
-commands for the image are relative.&nbsp; If you need to increase the
-size of the image, you just need to change the units that all the
-commands are applied to.&nbsp; In the above example, one unit equals
-approximately 10 pixels, but this could easily be modified so that one
-unit equals 20 pixels or even 100 pixels.&nbsp; The image would
-automatically scale up to the new size without losing any quality, the
-image will stay crisp and you won't see any pixel artifacts.&nbsp; This
-is the opposite of how photos work, there if you were to try to scale
-the photo up to double or ten times the original size, you would see
-problems show up in the image.&nbsp; <br>
+<p>También es posible que esta secuencia de comandos para incluir una
+cierta cantidad de tiempo que debe transcurrir antes de que algo
+sucede.&nbsp; Esto permite que para las animaciones, y algunos ejemplos
+sencillos sería tener un moviemiento palo cifra a través de la imagen o
+tener un rebote de la pelota.</p>
+
+Una de las beneficios muy importantes
+de las imágenes vectoriales es que todos los comandos de la imagen son
+relativos.&nbsp; Si usted necesita para aumentar el tamaño de la
+imagen, sólo tiene que cambiar las unidades que todos los comandos se
+aplican.&nbsp; En el ejemplo anterior, una unidad equivale a
+aproximadamete 10 píxeles, pere esto podría ser fácilmente modificado
+para que un píxel es igual a 20 píxeles o incluso 100 píxeles.&nbsp; La
+imagen automáticamente escala hasta el nuevo tamaño sin perder calidad,
+la imagen se quedará crujiente y no podrás ver los artefactors de
+píxeles.&nbsp; Esto es lo contrario de la cantidad de fotos de trabajo,
+allí si usted fuera a tratar de escala de la foto hasta el doble o diez
+veces el tamaño original, verá problemas aparecen en la imagen.<br>
 
 <br>
 
-Here is an example using our simple image.&nbsp; In each case, the
-vector graphic is on the left and the raster graphic is on the right.<br>
+He aquí un ejemplo con nuestra imagen simple.&nbsp; En cada caso,
+el gráfico vectoral está a la izquierda y la trama es el gráfico de la
+derecha.&nbsp; <br>
 
 <br>
 
-One unit equals 10 pixels.<br>
+Una unidad equivale a 10 pixeles.<br>
 
 <img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"> <br>
 
-One unit equals 20 pixels.<br>
+Una unidad equivale a 20 pixeles.<br>
 
 <img src="VectorGraphics/SimpleScriptOutput-Vector2.png" alt="SimpleScriptOutput-Vector2.png"><img src="VectorGraphics/SimpleScriptOutput-RasterScale2.png" alt="SimpleScriptOutput-RasterScale2.png"><br>
 
-One unit equals 100 pixels. &nbsp; (This one is being scaled back
-down&nbsp; to one unit equals 40 pixels by the web-browser to fit to
-the screen, if you want to see it as full-sized right click on it and
-view it separately.)<br>
-
-<br>
+Una
+unidad equivale a 100 pixeles.&nbsp; (Este se redjo a una sola unidad
+equivale a 40 píxeles por el navegador web para adaptarse a la
+pantalla, si quieres verlo como botón derecho del ratón de tamaño
+completo en él y verlo por separado.) <br>
 
 <img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-Vector10.png" alt="SimpleScriptOutput-Vector10.png"><img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-RasterScale10.png" alt="SimpleScriptOutput-RasterScale10.png"><br>
 
-You can see that as we talked about in the photos section, the raster
-graphic doesn't scale up to the large size very well.&nbsp;&nbsp;
-However, the vector graphic continues to look smooth and clean at any
-size.&nbsp; <br>
+Usted
+puede ver que a medida que hablamos en la sección de fotos, el mapa de
+bits gráficos no se escala hasta el tamaño grande muy bien.&nbsp; Sin
+embargo, el gráfico vectorial sigue buscando lisa y limpia en cualquier
+tamaño.<br>
 
 <br>
 
-In addition to cleanly scaling, vector graphics usually take up less
-space.&nbsp; In a raster image, data needs to be stored for every pixel
-(in three or four channels).&nbsp; If you have large images, this can
-be millions of bytes.&nbsp; Vector graphics on the other hand only
-store the information necessary to make the shapes and color them
-in.&nbsp; For the above example, this is just four commands, each one
-taking only a few bytes.&nbsp; There are things you can do to make very
-complicated vector graphics, but typically they will be much smaller
-than their raster counterparts.<br>
+Además de la amplicación limpia, gráficos vectoriales generalmente
+ocupan menos espacio.&nbsp; En una imagen de mapa de bits, los datos
+necesitan ser almacenados por cada píxel (en tres o cuatro
+canales).&nbsp; Si usted tiene imágenes de gran tamaño, esto puede ser
+de millones de bytes.&nbsp; Los gráficos vectoriales en cambio sólo
+almacenan la información necesaria para tomar las formas y poner color
+en ellos.&nbsp; Para el ejemplo anterior, esto es sólo cuatro comandos,
+cada uno tomando sólo unos pocos bytes.&nbsp; Hay cosas que usted puede
+hacer para crear gráficos vectoriales muy complicado, pero por lo
+general van a ser mucho más pequeños que sus contrapartes de la trama.<br>
 
 <br>
 
-The other very nice thing about vector graphics is that when you are
-using graphical programs like Inkscape or Illustrator to edit them, it
-is very easy to select objects.&nbsp; For photos we had some real
-challenges in selecting different objects (like the airplane and the
-statue's arm).&nbsp; However, since in vector graphics the commands to
-create each object are stored, when you click on an object, it is easy
-for the program to guess which object you are trying to select.&nbsp;
-You can then easily modify that object by resizing it, rotating it, or
-moving it. <br>
+La otra cosa muy bueno de gráficos vectoriales es que cuando se
+está utilizando programas gráficos como Inkscape o Illustrator para
+editar, es muy fácil para seleccionar objetos.&nbsp; Para las fotos
+hemos tenido algunos problemas reales en la selección de diferentes
+objetos (como el avión y el brazo de la estatua).&nbsp; Sin embargo, ya
+que en gráficos vectoriales para crear los comandos de cada objeto se
+almacenan, al hacer clic sobre un objeto, es fácil para el programa de
+adivinar qué objeto que está tratando de seleccionar.&nbsp; A
+continuación, puede modificar fácilmente que el objeto de cambiar el
+tamaño, rotar, o e moverlo.<br>
 
-<h3 class="western">File Formats</h3>
+<h3 class="western">Formatos de Archivo</h3>
 
-<p>The primary file format currently in use is SVG or Scalable Vector
-Graphics (see: <a href="http://en.wikipedia.org/wiki/Svg">http://en.wikipedia.org/wiki/Svg</a>
-) which is a type of human readable file called XML (eXtensible Markup Language see: <a href="http://en.wikipedia.org/wiki/XML">http://en.wikipedia.org/wiki/XML</a>). Although XML
-and SVG are human-readable, we will not be reading them directly as
-part of this material. SVG is supported in most vector drawing
-programs, however it is not yet supported by all web browsers (though
-this is rapidly changing). If you simply want to use your images on
-web pages, it is best to convert them to Portable Network Graphics
-(PNG) which is a lossless raster format. </p>
+<p>El formato de archivo principal actualmente en uso es SVG o
+Scaleable Vector Graphics (Gráficos Vectorales Escalables, ver: <a href="http://es.wikipedia.org/wiki/SVG">http://es.wikipedia.org/wiki/SVG</a>)
+que es un tipo de archivo legible por humanos llamado XML (eXtensible
+Markup Language - lenguaje de marcas extesible, ver: <a href="http://es.wikipedia.org/wiki/XML">http://es.wikipedia.org/wiki/XML</a>).&nbsp;
+A pesar de XML y SVG son legibles, no se los lee directamente como
+parte de este material.&nbsp; SVG es compatible con la mayoría de
+programas de dibujo vectorial, sin embargo, todavía no es soportado por
+todos de los navegadores web (aunque esto está cambiando
+rápidamente).&nbsp; Si sólo desea utilizar las imágenes en páginas web,
+lo mejor es convertirlos a formato Portable Network Graphics (PNG), que
+es un formato de mapa de bits sin pérdidas. </p>
 
-<p>The other major format for Vector Graphics is the EPS or
-Encapsulated Post Script. Post Script itself is a file type used for
-printing (especially industrial printing), and EPS images are built
-to be easily put inside of a Post Script document. This format has
-been around a lot longer than SVG, and is supported by many more
-tools (especially the old ones). Likewise, it is not recommended for
-use with web browsers.</p>
+<p>El formato de otros grandes de gráficos vectoriales es la EPS o
+Encapsulated Post Script (Post Script encapsulado).&nbsp; Post Scrit es
+un tipo de archivo utilizado para la impresión (en especial impresión
+industrial), y las imágenes EPS están diseñados para ser fácilmente
+colocado dentro de un documento Post Script.&nbsp; Este formato ha sido
+todo mucho más tiempo que SVG, y es compatible con muchas más
+herramientas (sobre todo los de edad).&nbsp; Del mismo modo, no se
+recomienda para su uso con los navegadores web.&nbsp; <br>
+</p>
 
-<h2 class="western">Inkscape</h2>
-
-Inkscape will be the vector editor that we do the majority of our work
-in, once we have learned the fundamentals here, we will move on to
-trying the same concepts out in Adobe Illustrator, which is the other
-major vector graphics editor on the market.&nbsp; If you don't have Inkscape on your computer, you can get it from our <a href="DownloadSoftware.html">software downloads page</a>.<br>
-
+<h2 class="western">Inkscape<br>
+</h2>Inkscape será el editor de vectores que hacemos la mayoría de
+nuestro trabajo, una vez que han&nbsp; aprendido los fundamentos de
+aquí, vamos a pasar a tratar los mismos conceptos en Adobe Illustrator,
+que es el otro editor de gráficos en el mercado.<br>
 <br>
+Para empezar con Inkscape, hay tres tutoriales interactivos que están
+integradas en el programa que son muy buenos, y porqe son interactivos,
+son más que palabras en el papel, así que en vez de leer lo que tengan
+que decir aquí, permite abrir Inkscape y darles una oportunidad.<br>
 
-To start with Inkscape, there are three interactive tutorials that are
-built in to the program that are very good, and because they are
-interactive, they are better than just words on paper, so instead of
-reading what they have to tell you here, lets open up Inkscape and give
-them a try.&nbsp; <br>
+<img style="width: 614px; height: 664px;" src="VectorScreen/InkscapeStartup-es.png" alt="InkscapeStartup.png"><br>
 
-<img src="VectorScreen/InkscapeStartup.png" alt="InkscapeStartup.png"><br>
+Cuando haya abierto Inkscape...<br>
+<h3>Básico de Inkscape<br>
+</h3>Vaya al menú Ayuda -&gt; Tutoriales -&gt; Inkscape: Básico.&nbsp;
+Que se abrirá en una ventana nueva y se puede leer todo de (y probar!)
+paneo (pan), zoom, las herramientas, documentos, mover (move), escalar
+(scale), rotar (rotate), teclas (keys) importantes, selecciones
+(selection), rellenos (fill), trazos (stroke), la duplicación, las
+capas, y la profundidad (depth).<br>
 
-Once you have Inkscape open...<br>
-
-<br>
-
-<h3>Inkscape Basics</h3>
-
-Go to the menu Help -&gt; Tutorials -&gt; Inkscape: Basics.&nbsp; That
-will open in a new window and you can read all about (and try out!)
-panning, zooming, the tools, documents, moving, scaling, rotating,
-important keys, selections, fills, strokes, duplication, layers, and
-depth.<br>
-
-<br>
-
-Now that we have a grasp on the basics, lets go do an example.&nbsp; I
-have prepared a .svg file that can be opened in Inkscape with all the
-material that we'll need.<br>
+<br>Ahora que tenemos una comprensión sobre los conceptos básicos,
+vamos a hacer un ejemplo.&nbsp; Hay una archivo .svg, que puede abrir
+en Inkscape con todo el material que vamos a necesitar.<br>
 
 <a href="VectorGraphics/BasicScene-orig.svg">BasicScene-orig.svg<br>
-<img style="width: 338px; height: 256px;" src="VectorGraphics/BasicScene-orig.png" alt="BasicScene-orig.png"></a><br>
+<img style="width: 338px; height: 256px;" src="VectorGraphics/BasicScene-orig.png" alt="BasicScene-orig.png"></a><br>En
+este archivo SVG, hay un fondo (background) configurado (se compone de
+dos partes: el primer plano (foreground) con todos los árboles, tierra
+y agua, y el fondo con el cielo).&nbsp; También hay tres componentes
+diferentes que deben ser añadir.&nbsp; El fuego y la tienda debe ser
+reducido y puesto en el área vacía entre los árboles.&nbsp; Las
+montañas deben ser ampliadas y se puso detrás de la tierra y los
+árboles, pere en frente del cielo.&nbsp; <br>
 
-In this one SVG file there is a background all setup (made up of two
-parts: the foreground with all the trees, ground, and water; and the
-background with the sky).&nbsp; There are also three different
-components that need to be added in.&nbsp; The fire and tent need to be
-scaled down and put in the empty area between the trees.&nbsp; The
-mountains need to be scaled up and be put behind the ground and trees
-but in front of the sky.&nbsp; <br>
-
-<br>
-
-Here's what the finished result will look like.<br>
+<br>Esto es lo que el resultado final se verá así.<br>
 
 <img src="VectorGraphics/BasicScene-final.png" alt="BasicScene-final.png"><br>
 
@@ -224,135 +231,107 @@ Here's what the finished result will look like.<br>
 
 <br>
 
-<h3>Working with Shapes</h3>
+<h3>Trabajar con Formas</h3>Una vez que hayas dominado los fundamentos, vamos a pasar a la siguente tutorial: Formas (Shapes)<br>
+Ayuda -&gt; Tutoriales -&gt; Inkscape: Formas<br>Aquí vamos a conocer y probar: <br>
+Rectángulos (con redondeo), elipses y círculos, estrellas y polígonos, y espirales.<br>
 
-Once you've mastered those basics, we'll move on to the next tutorial:<br>
+<br>Ahora vamos a probar todas las herramientas de forma y muchos de
+sus diferentes opciones.&nbsp; En una página de Inkscape, señalar a la
+siguente.<br>Rectángulo: Relleno de no trazo, trazo sin relleno, relleno y trazo, esquinas redondeadas, esquinas redondeadas y bordes.<br>
 
-Help -&gt; Tutorials -&gt; Inkscape: Shapes<br>
+Ellipse: Ellipse, corte, el arco.<br>
+Polígono/Estrella: Polígono, polígono con diferente número de lados,
+estrella, estrellas con puntos de compensación, polígono con esquinas
+redondeadas, polígono con aleatoriedad.<br>Espiral: Espiral, Espiral con menos vueltas, espiral que no se inicia desde el centro, espiral con más rápido divergencia.<br>
 
-Here we will learn about and try out: <br>
-
-Rectangles (with rounding), ellipses and circles, stars and polygons,
-and spirals.<br>
-
-<br>
-
-Now lets go and try out all the shape tools and many of their different
-options.&nbsp; In one Inkscape page, draw the following.<br>
-
-Rectangle: Filled with no stroke, stroke with no fill, fill and stroke,
-rounded corners, rounded corners and edges.<br>
-
-Ellipse: Ellipse, slice, arc.<br>
-
-Polygon/Star: Polygon, polygon with different number of sides, star,
-star with offset points, polygon with rounded corners, polygon with
-randomizer.<br>
-
-Spiral: Spiral, spiral with less turns, spiral that doesn't start from
-the middle, spiral with faster divergence.<br>
-
-<br>
-
-Your page may look something like this:<br>
+<br>Su página puede ser algo como esto:<br>
 
 <img src="VectorGraphics/BasicShapes-final.png" alt="BasicShapes-final.png"><br>
 
-<br>
-Creative Exercise 1:<br>
-Use only the basic shapes (and various fill/stroke colors) to create an image of abstract art.<br>
-<br>
-Creative Exercise 2: <br>
-Use the star tool to create a unique pattern.<br>
-<br>
+<br><span style="font-weight: bold;">Ejercicio Creativo 1:</span><br>Use solamente las formas básicas (y llenar varios colores relleno/trazo) para crear una imagen del arte abstracto.<br>
 
-<h3>Paths and Text</h3>
-
-Finally, we have one last tutorial that introduces some of the most
-important concepts:<br>
-
-Help -&gt; Tutorials -&gt; Inkscape: Advanced<br>
-
-Here we will learn about:<br>
-
-Cutting and pasting, free hand drawing, bezier curves, paths and text.<br>
+<br><span style="font-weight: bold;">Ejercicio Creativo </span><span style="font-weight: bold;">2: </span><br style="font-weight: bold;">Utilice la herramienta estrella para crear un patrón único.<br>
 
 <br>
 
-One of the most important parts of this section is working with bezier
-curves.&nbsp; To get a little practice, we're going to turn a simple
-rectangle into a piece of paper that is starting to curl
-up.&nbsp;&nbsp; Here's what the end result will look like:<br>
+<h3>Trayectos y Texto</h3>Por último, tenmos una última tutorial que introduce algunos de los conceptos más importantes:<br>Ayuda -&gt; Tutoriales -&gt; Inkscape: Avanzado<br>Aquí vamos a aprender sobre:<br>Cortar y pegar, dibujo (drawing) a mano alzada, curvas bezier, caminos y texto.<br>
 
-<img src="VectorGraphics/BezierRectangle-final.png" alt="BezierRectangle-final.png"><br>
+<br>Una de las partes más importantes de esta sección está trabajando
+con curvas bezier.&nbsp; Para obtener un poco de práctica, vamos a
+convertir un simple rectángulo en una hoja de papel que está comenzando
+a acurrucarse.&nbsp; Esto es lo que el resultado final se verá así:<br>
 
-<br>
+<img style="width: 167px; height: 231px;" src="VectorGraphics/BezierRectangle-final-es.png" alt="BezierRectangle-final.png"><br>
 
-First, download the <a href="VectorGraphics/BezierRectangle-orig.svg">.svg
-file</a> of the starting rectangle.<br>
+<br>Primero, descarga el <a href="VectorGraphics/BezierRectangle-orig.svg">archivo .svg</a> del rectángulo de partida.<br>
 
-<br>
+<br>Usted notará que hay un par de nodos mano a mitad de camino por los
+lados del rectángulo.&nbsp; Vamos a seguir adelante y tirar tanto de
+los nodos a la derecha (con el modo de edición de nodo).<br>
 
-You'll notice that there are a couple of handy nodes about half way
-down the sides of the rectangle. Let's go ahead and pull both of those
-nodes to the right (using the node-editing mode).&nbsp; <br>
-
-<br>
-
-Once we've got them out there, we will add some bezier curves into the
-strait lines.&nbsp; To do this, hold down shift as you click on one of
-the nodes, and drag out from it.&nbsp; That should create a handle for
-the curve coming out of that point.&nbsp; Go ahead and do that for both
-sides of the middle points, and then also to the lines coming down from
-the two top points.<br>
+<br>Una vez que los tenemos ahí, vamos a añadir algunas curvas bezier
+en las líneas de fuerza.&nbsp; Para ello, mantenga pulsada la tecla
+Mayús (Shift) mientras hace clic en uno de los nodos, y arrastre hacia
+fuera de él.&nbsp; Esto debería crear un controlador para la curva que
+sale de ese punto.&nbsp; Seguir adelante y hacer eso por los dos lados
+de los puntos medios, y luego también a las líneas que bajan de los dos
+puntos superiores.<br>
 
 <br>
+Una vez que tenemos el papel suavemente rizado, permite añadir un texto
+ejemplo.&nbsp; Para ello, vamos a cambiar a la herramienta de
+texto.&nbsp; A continuación, haga clic cerca del centro del papel y el
+tipo de texto que desee ver.&nbsp; Puede cambiar el tamaño de fuente,
+centrado, y la fuente para que se vea como quieras. <span style="font-weight: bold;"><br>
+<br>Texto en un Trayecto</span><br>Ahora que tenemos los fundamentos
+abajo, permite utilizar la herramienta de trayecto para que el texto
+siga una trayectoria irregular a través de nuestro dibujo.<br>
 
-Once we've got the paper gently curling, lets add some example
-text.&nbsp; To do that, we'll switch to the text tool.&nbsp; Then click
-near the center of the paper and type whatever text you want to
-see.&nbsp; You can change the font size, centering, and font to make it
-look any way you like.<br>
-<br>
-Now that we've got those basics down, lets use the path tool to make text follow an irregular path through our drawing.<br>
-<br>
-We'll start out by making a simple path with the Bezier Curve Tool.<br>
+<br>Vamos a comenzar por hacer una trayecto simples con la herramienta Curvas Beizer<br>
 
 <img src="VectorScreen/TextPath-Curve.png" alt="TextPath-Curve.png"><br>
+
 <br>
-Once we've got the basic shape in, we'll manipulate the curve's handles to smooth it out.<br>
+
+Una vez que tenemos la forma básica, vamos a manipular la curva de las controladoras para suavizar.<br>
+
 <img src="VectorScreen/TextPath-Handles.png" alt="TextPath-Handles.png"><br>
-<br>
-Then we'll switch to the text tool and type in some text.<br>
-<img src="VectorScreen/TextPath-Text.png" alt="TextPath-Text.png"><br>
+
+<br>Entonces vamos a cambiar a la herramienta de texto y escriba algún texto.<br>
+
+<img style="width: 296px; height: 258px;" src="VectorScreen/TextPath-Text-es.png" alt="TextPath-Text.png"><br>
+
+<br>Ahora vamos a seleccionar la trayecto de acceso y el texto.<br>
+
+<img style="width: 316px; height: 295px;" src="VectorScreen/TextPath-Selection-es.png" alt="TextPath-Selection.png"><br>
+
+<br>Con ellos seleccionados, nos haga clic en Texto -&gt; Ponga en Trayecto<br>
+
+<img style="width: 238px; height: 270px;" src="VectorScreen/TextPath-Follow-es.png" alt="TextPath-Follow.png"><br>
+
+<br>Verse bien hasta el momento, ahora sólo tenemos que deshacernos de
+esa línea que tenemos allí.&nbsp; Para ello le permite seleccionar la
+línea y retire su trazo.<br>
+
+<img style="width: 630px; height: 468px;" src="VectorScreen/TextPath-Stroke-es.png" alt="TextPath-Stroke.png"><br>
+
+<br>Finalmente nos quedamos sólo con nuestro texto.<br>
+
+<img style="width: 176px; height: 263px;" src="VectorScreen/TextPath-Final-es.png" alt="TextPath-Final.png"><br>
 
 <br>
-Now we'll select both the path and the text.<br>
-<img src="VectorScreen/TextPath-Selection.png" alt="TextPath-Selection.png"><br>
-<br>
-With them selected, we'll click Text -&gt; Put on Path.<br>
-<img src="VectorScreen/TextPath-Follow.png" alt="TextPath-Follow.png"><br>
-<br>
-Looking good so far, now we just need to get rid of that line that we
-have in there.&nbsp; To do that lets select the line and remove its
-stroke.<br>
-<img src="VectorScreen/TextPath-Stroke.png" alt="TextPath-Stroke.png"><br>
-<br>
-Then finally we're left with just our text.<br>
-<img src="VectorScreen/TextPath-Final.png" alt="TextPath-Final.png"><br>
-<br>
+
 <br>
 
-<h2>Using&nbsp; Proportions and Space<br>
-
-</h2>
-
+<h3>Using&nbsp; Proportions and Space<br>
+</h3>
 
 One of the most important things to think about when creating graphics
 is if the proportions between the various components of your graphic
 are correct.&nbsp; <br>
 
 <br>
+
 The most important aspect of proportion is when you are working with a
 graphic that shows an image of a 3-Dimensional scene (such as the
 campsite example used above).&nbsp; When creating a 3-D scene in two
@@ -390,7 +369,9 @@ open area for our campsite.<br>
 <a href="VectorGraphics/Background-Empty.svg">Background-Empty.svg<br>
 <img style="width: 506px; height: 373px;" src="VectorGraphics/Background-Empty.png" alt="Background-Empty.png"></a><br>
 
-<br>Proportion is also used outside of 3-D scenes.&nbsp; When
+<br>
+
+Proportion is also used outside of 3-D scenes.&nbsp; When
 you simply have text and graphics you need to be aware of the relative
 sizes between the different objects.&nbsp; Also, the amount (and
 location) of open space in the image is very important.<br>
@@ -399,20 +380,24 @@ location) of open space in the image is very important.<br>
 
 The most common rule used for determining the relative sizes of
 objects and space is called the Golden Rule or Fibonacci
-Sequence.&nbsp; This was developed by the mathematician from Piza, Italy named
+Sequence.&nbsp; This was developed by the mathematician from Piza,
+Italy named
 Fibonacci.&nbsp; His sequence is simply made where the next number in
 the sequence is the sum of the previous two numbers.&nbsp; Starting
 from 0:1 the start of the sequence is 0:1:1:2:3:5:8:13:21
 etc.&nbsp;&nbsp; Over the years scientists and artists have found that
 this sequence is everywhere in nature from snail shells to tree
-leaves.&nbsp; In addition, the human eye has developed over thousands of
-years to readily identify this, and objects that are shown in that sequence seem smooth and natural.<br>
+leaves.&nbsp; In addition, the human eye has developed over thousands
+of
+years to readily identify this, and objects that are shown in that
+sequence seem smooth and natural.<br>
 
 <br>
 
 In this example on the left the sizes of the text and the spacing
 between them both follow the 1:1:2:3 ratio.&nbsp; In this case the font
-is 20:20:40:60 (from bottom to top) and the spacing is 46:92:138.&nbsp; In the other
+is 20:20:40:60 (from bottom to top) and the spacing is 46:92:138.&nbsp;
+In the other
 example,
 on the right, the size of the font simply has 20 added each time
 20:40:60:80.&nbsp;&nbsp;&nbsp; You may notice that the one on the left,
@@ -422,8 +407,8 @@ abrupt.&nbsp; <br>
 
 <br>
 
-<img alt="GoldenRule.png" src="VectorGraphics/GoldenRule.png" style="width: 327px; height: 388px;" hspace="2" vspace="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;<img style="width: 436px; height: 403px;" src="VectorGraphics/LinearScale.png" alt="LinearScale.png"> <br>
+<img alt="GoldenRule.png" src="VectorGraphics/GoldenRule-es.png" style="width: 372px; height: 386px;" hspace="2" vspace="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;<img style="width: 496px; height: 401px;" src="VectorGraphics/LinearScale-es.png" alt="LinearScale.png"> <br>
 
 <br>
 
@@ -438,11 +423,8 @@ Notice how all the empty space inside the box tends to draw your eye
 down to the red circle?&nbsp; This can be even more useful in more
 complicated images with many different objects in them.&nbsp; <br>
 
-<h2>Light and Color<br>
-</h2>
 <h3>Using Light<br>
 </h3>
-
 
 As was true with photos, getting the lighting correct is very important
 for graphics that look good.&nbsp; However, unlike photos where we had
@@ -452,7 +434,6 @@ affects the image.&nbsp; However, with all that control means that we
 need to plan ahead and determine what lighting we want, whereas in
 photos we could just look at what we were given and figure out how to
 make it as good as it could be.&nbsp; <br>
-
 
 <br>
 
@@ -468,6 +449,7 @@ And here is that same box, with lighting applied to it.<br>
 <br>
 
 <img style="width: 263px; height: 252px;" src="VectorGraphics/CardboardBox-lit.png" alt="CardboardBox-lit.png"><br>
+
 Its easy to see the difference!&nbsp; In this case, the author imagined
 the source of the light to be above and a little to the left of the
 box.&nbsp;&nbsp; So you can see the shadow coming down from it and to
@@ -488,7 +470,9 @@ super realistic, the audience isn't expecting that from graphics, but
 there still needs to be enough to be pleasing to the eye.<br>
 
 <br>
+
 <h3>Using Color</h3>
+
 When the human eye sees color, it is actually recording electronic
 waves of light hitting cells in the back of the eye.&nbsp; A single
 particle of light is called a photon, and each photon oscillates at a
@@ -496,20 +480,28 @@ specific frequency, which corresponds to a wavelength.&nbsp; Photons
 with a faster frequency (and shorter wavelength), are towards the
 violet end of the spectrum, while photons with a lower frequency (and
 longer wavelength) are towards the red end of the spectrum.&nbsp; <br>
+
 Below is a graphic depicting the spectrum of visible light.<br>
+
 <img style="width: 711px; height: 135px;" src="VectorGraphics/1000px-Inverse_visible_spectrum.svg.png" alt="1000px-Inverse_visible_spectrum.svg.png"><br>
+
 You may notice that the two ends are dark, these are actually not
 black, rather they glow just as brightly as all the areas in the
 middle, but in the infra-red and ultra-violet colors that the human eye
 cannot detect.&nbsp; <br>
+
 <br>
+
 The colors above are the only colors that the human eye can
 detect.&nbsp; You may notice that there are many colors missing: brown,
 purple, not to mention white, black, and gray.&nbsp; This is because
 these colors (and many more) don't actually exist, but we perceive them
 because of how the photons of light hit our eye.&nbsp; To learn more
-about the visible spectrum of light, see this page: <a href="http://en.wikipedia.org/wiki/Visible_spectrum">http://en.wikipedia.org/wiki/Visible_spectrum</a>&nbsp;&nbsp; <a href="http://es.wikipedia.org/wiki/Espectro_visible">http://es.wikipedia.org/wiki/Espectro_visible</a><br>
+about the visible spectrum of light, see this page: <a href="http://en.wikipedia.org/wiki/Visible_spectrum">http://en.wikipedia.org/wiki/Visible_spectrum</a>&nbsp;&nbsp;
+<a href="http://es.wikipedia.org/wiki/Espectro_visible">http://es.wikipedia.org/wiki/Espectro_visible</a><br>
+
 <br>
+
 When we see an area that is black, that is because very few or even no
 photons are hitting our eye from that direction.&nbsp; On the other
 hand, when we see the an area that is the color white, we are getting a
@@ -522,11 +514,15 @@ part of the eye at the same time.&nbsp; For instance, if we have two
 photons of red for every one photon of green (and no other colors),
 then we will see brown in that area.&nbsp; If we see one photon of red
 and one of blue, we will see purple.&nbsp; <br>
+
 <br>
+
 So, brightness of&nbsp; the color is determined by the total number of
 photons, and what color we see is determined by what frequency or
 combinations of frequencies the photons have when they strike our eye.<br>
+
 <br>
+
 As we learned in the photo section, when a computer monitor projects
 light out to our eyes, it is projecting Red, Green and Blue.&nbsp;
 These colors can be added together to make all the other colors.&nbsp;
@@ -543,12 +539,16 @@ light and don't reflect any, then we are left with black.&nbsp; For
 this reason, printers use the colors Cyan, Magenta, and Yellow for
 their printing.&nbsp; Cyan will absorb Red, Magenta will absorb Green,
 and Yellow will absorb Blue.&nbsp; <br>
+
 <img src="RasterGraphics/200px-AdditiveColor.svg.png" alt="200px-AdditiveColor.svg.png"><img src="VectorGraphics/200px-SubtractiveColor.svg.png" alt="200px-SubtractiveColor.svg.png"><br>
-For more on reflected or "subtractive" color, see: <a href="http://en.wikipedia.org/wiki/Subtractive_color">http://en.wikipedia.org/wiki/Subtractive_color</a> <a href="http://es.wikipedia.org/wiki/S%C3%ADntesis_sustractiva_de_color">http://es.wikipedia.org/wiki/Síntesis_sustractiva_de_color</a><br>
+
+For more on reflected or "subtractive" color, see: <a href="http://en.wikipedia.org/wiki/Subtractive_color">http://en.wikipedia.org/wiki/Subtractive_color</a>
+<a href="http://es.wikipedia.org/wiki/S%C3%ADntesis_sustractiva_de_color">http://es.wikipedia.org/wiki/Síntesis_sustractiva_de_color</a><br>
 
 <br>
 
-As you can see in the images of the box, in the previous section on lighting, the changes in lighting affected the
+As you can see in the images of the box, in the previous section on
+lighting, the changes in lighting affected the
 color of the image, and it is important that the colors you use match
 with the lighting that you are applying to your image.&nbsp; However,
 more general color choices also will affect your image.&nbsp; If you
@@ -597,8 +597,7 @@ together in your graphic.&nbsp; <br>
 
 <br>
 
-<h2>Creating a Rocket</h2>
-
+<h3>Creating a Rocket</h3>
 
 So now that we have the basics out of the way, lets try an example of
 creating a graphic.&nbsp; For this we will create a rocket using an
@@ -622,13 +621,13 @@ the first time.<br>
 So start Inkscape and draw a rectangle, which must be more tall than
 wide (we are drawing a rocket!) and have straight, not rounded corners.<br>
 
-<img src="VectorGraphics/Rocket/rocket-01.png" alt="rocket-01.png"><br>
+<img src="VectorGraphics/Rocket/rocket-01-es.png" alt="rocket-01.png"><br>
 
 <br>
 
 Then select it and convert to path, we will do node editing.<br>
 
-<img src="VectorGraphics/Rocket/rocket-02.png" alt="rocket-02.png"><br>
+<img src="VectorGraphics/Rocket/rocket-02-es.png" alt="rocket-02.png"><br>
 
 <br>
 
@@ -637,21 +636,21 @@ operation can be done (as far as I know) only from keyboard: press Ctrl
 + Alt + &gt; to enlarge the segment, the result should be a trapezium
 with the big side up.<br>
 
-<img src="VectorGraphics/Rocket/rocket-03.png" alt="rocket-03.png"><br>
+<img src="VectorGraphics/Rocket/rocket-03-es.png" alt="rocket-03.png"><br>
 
 <br>
 
 With the same two top nodes selected, add a new node in the middle of
 their segment.<br>
 
-<img src="VectorGraphics/Rocket/rocket-04.png" alt="rocket-04.png"><br>
+<img src="VectorGraphics/Rocket/rocket-04-es.png" alt="rocket-04.png"><br>
 
 <br>
 
 Select the new node (only it) and move it up (keep the Ctrl key pressed
 to limit the movement to vertical only).<br>
 
-<img src="VectorGraphics/Rocket/rocket-05.png" alt="rocket-05.png"><br>
+<img src="VectorGraphics/Rocket/rocket-05-es.png" alt="rocket-05.png"><br>
 
 <br>
 
@@ -659,7 +658,7 @@ Select back the two nodes that were the top corners of the rectangle
 and make them symmetric, for a shape starting to look like a
 bullet/rocket.<br>
 
-<img src="VectorGraphics/Rocket/rocket-06.png" alt="rocket-06.png"><br>
+<img src="VectorGraphics/Rocket/rocket-06-es.png" alt="rocket-06.png"><br>
 
 <br>
 
@@ -668,14 +667,14 @@ bottom edge rounded: select the two bottom corners, add a new node in
 the middle, select it, move a bit up and made it symmetric, now we have
 a bullet, an aerodynamic shape.<br>
 
-<img src="VectorGraphics/Rocket/rocket-07.png" alt="rocket-07.png"><br>
+<img src="VectorGraphics/Rocket/rocket-07-es.png" alt="rocket-07.png"><br>
 
 <br>
 
 A rocket needs some "wings", so we will create another rectangle, this
 time much smaller.<br>
 
-<img src="VectorGraphics/Rocket/rocket-08.png" alt="rocket-08.png"><br>
+<img src="VectorGraphics/Rocket/rocket-08-es.png" alt="rocket-08.png"><br>
 
 <br>
 
@@ -683,13 +682,13 @@ Select the rectangle and click on it once, this will put in in
 rotate/skew mode so we need to skew it a bit my dragging on the arrow
 on one of its edges.<br>
 
-<img src="VectorGraphics/Rocket/rocket-09.png" alt="rocket-09.png"><br>
+<img src="VectorGraphics/Rocket/rocket-09-es.png" alt="rocket-09.png"><br>
 
 <br>
 
 Move it in position, next to the rocket body.<br>
 
-<img src="VectorGraphics/Rocket/rocket-10.png" alt="rocket-10.png"><br>
+<img src="VectorGraphics/Rocket/rocket-10-es.png" alt="rocket-10.png"><br>
 
 <br>
 
@@ -698,13 +697,13 @@ arrows at the corners, until we like the alignment. Note: no worry if
 the alignment is not perfect, lower it under the body and when filled
 with color this won't be noticeable.<br>
 
-<img src="VectorGraphics/Rocket/rocket-11.png" alt="rocket-11.png"><br>
+<img src="VectorGraphics/Rocket/rocket-11-es.png" alt="rocket-11.png"><br>
 
 <br>
 
 Select the wing and duplicate it.<br>
 
-<img src="VectorGraphics/Rocket/rocket-12.png" alt="rocket-12.png"><br>
+<img src="VectorGraphics/Rocket/rocket-12-es.png" alt="rocket-12.png"><br>
 
 <br>
 
@@ -712,7 +711,8 @@ Flip the new (duplicate) wing horizontally and move it to the other
 side of the rocket body (keep Ctrl pressed to limit the movement to
 horizontal).<br>
 
-<img src="VectorGraphics/Rocket/rocket-13.png" alt="rocket-13.png"><br>
+<img src="VectorGraphics/Rocket/rocket-13-es.png" alt="rocket-13.png"><br>
+<br>
 
 <br>
 
@@ -723,7 +723,9 @@ to the rocket body, select it and the body, then use the Align and
 Distribute dialog to align them horizontally relative to the biggest
 item (the body).<br>
 
-<img src="VectorGraphics/Rocket/rocket-14.png" alt="rocket-14.png"><br>
+<img src="VectorGraphics/Rocket/rocket-13a-es.png" alt="rocket-13a-es.png"><br>
+<br>
+<img src="VectorGraphics/Rocket/rocket-14-es.png" alt="rocket-14.png"><br>
 
 <br>
 
@@ -733,26 +735,26 @@ which will be the windows frame (I think I am boring repeating this,
 but keep Ctrl pressed, so what you draw is a round circle not an
 ellipse).<br>
 
-<img src="VectorGraphics/Rocket/rocket-15.png" alt="rocket-15.png"><br>
+<img src="VectorGraphics/Rocket/rocket-15-es.png" alt="rocket-15.png"><br>
 
 <br>
 
 Select the circle and the rocket body and align vertically to the
 center of the body.<br>
 
-<img src="VectorGraphics/Rocket/rocket-16.png" alt="rocket-16.png"><br>
+<img src="VectorGraphics/Rocket/rocket-16-es.png" alt="rocket-16.png"><br>
 
 <br>
 
 Another smaller circle will be the real window.<br>
 
-<img src="VectorGraphics/Rocket/rocket-17.png" alt="rocket-17.png"><br>
+<img src="VectorGraphics/Rocket/rocket-17-es.png" alt="rocket-17.png"><br>
 
 <br>
 
 Select the two circles and align them horizontally and vertically.<br>
 
-<img src="VectorGraphics/Rocket/rocket-18.png" alt="rocket-18.png"><br>
+<img src="VectorGraphics/Rocket/rocket-18-es.png" alt="rocket-18.png"><br>
 
 <br>
 
@@ -761,43 +763,35 @@ Fill and Stroke button in the toolbar or any of the other possible ways
 (there are quite a few). A rocket is usually silverish, so use shades
 of gray.<br>
 
-<img src="VectorGraphics/Rocket/rocket-19.png" alt="rocket-19.png"><br>
-
-<br>
-
-If you want the rocket less realistic but screaming "Fedora", make
-those grays a bit bluish or go the extra mile and straightly use the
-Fedora colors (light and dark blue).<br>
-
-<img src="VectorGraphics/Rocket/rocket-20.png" alt="rocket-20.png"><br>
+<img src="VectorGraphics/Rocket/rocket-19-es.png" alt="rocket-19.png"><br>
 
 <br>
 
 Back to our rocket, let's make it fly. Take the Bezier tool (pen) and
 draw freely a few spikes, they will be the flame.<br>
 
-<img src="VectorGraphics/Rocket/rocket-21.png" alt="rocket-21.png"><br>
+<img src="VectorGraphics/Rocket/rocket-21-es.png" alt="rocket-21.png"><br>
 
 <br>
 
 Color the flame red or a redish orange and lower it under the rocket
 body.<br>
 
-<img src="VectorGraphics/Rocket/rocket-22.png" alt="rocket-22.png"><br>
+<img src="VectorGraphics/Rocket/rocket-22-es.png" alt="rocket-22.png"><br>
 
 <br>
 
 The core of the flame is supposed to be warmer, so let's draw a new set
 of smaller spikes in yellow.<br>
 
-<img src="VectorGraphics/Rocket/rocket-23.png" alt="rocket-23.png"><br>
+<img src="VectorGraphics/Rocket/rocket-23-es.png" alt="rocket-23.png"><br>
 
 <br>
 
 Optionally, if we want the rocket cruising, not just taking-off, select
 everything and rotate a bit.<br>
 
-<img src="VectorGraphics/Rocket/rocket-24.png" alt="rocket-24.png"><br>
+<img src="VectorGraphics/Rocket/rocket-24-es.png" alt="rocket-24.png"><br>
 
 <br>
 
@@ -811,26 +805,30 @@ the strokes (for example using the Fill and Stroke dialog) and use
 silver gradients for all metallic surfaces, do this by using the
 Gradient tool, dragging and editing colors.<br>
 
-<img src="VectorGraphics/Rocket/rocket-25.png" alt="rocket-25.png"><br>
+<img src="VectorGraphics/Rocket/rocket-25a-es.png" alt="rocket-25a-es.png"><br>
+<br>
+<img src="VectorGraphics/Rocket/rocket-25b-es.png" alt="rocket-25b-es.png"><br>
 
+<br>
+<img src="VectorGraphics/Rocket/rocket-25c-es.png" alt="rocket-25c-es.png"><br>
 <br>
 
 Fill everything with gradients, including the flames and the window.<br>
 
-<img src="VectorGraphics/Rocket/rocket-26.png" alt="rocket-26.png"><br>
+<img src="VectorGraphics/Rocket/rocket-26-es.png" alt="rocket-26.png"><br>
 
 <br>
 
 Select the inner (yellow) flame and using the Fill and Stroke dialog
 Blur it a bit for a more realistic (and prettier) look.<br>
 
-<img src="VectorGraphics/Rocket/rocket-27.png" alt="rocket-27.png"><br>
+<img src="VectorGraphics/Rocket/rocket-27-es.png" alt="rocket-27.png"><br>
 
 <br>
 
 Blur also the outer (red/orange) flame. And that's about all.<br>
 
-<img src="VectorGraphics/Rocket/rocket-28.png" alt="rocket-28.png"><br>
+<img src="VectorGraphics/Rocket/rocket-28-es.png" alt="rocket-28.png"><br>
 
 <br>
 
@@ -839,7 +837,7 @@ them!<br>
 
 http://es.lipsum.com/<br>
 
-<img src="VectorGraphics/Rocket/rocket-29.png" alt="rocket-29.png"><br>
+<img src="VectorGraphics/Rocket/rocket-29-es.png" alt="rocket-29.png"><br>
 
 <br>
 
@@ -852,30 +850,42 @@ Just as Photoshop has much in common with the GIMP, Illustrator has
 much in common with Inkscape.&nbsp; There are a few things that work
 better in one or the other, but all the important features are very
 similar.&nbsp; <br>
+
 <br>
+
 Unlike Photoshop, you do not right-click on the items in the toolbox
 (the ones with a small triangle in the lower right corner) to pop up
 the other tools.&nbsp; Instead, you left click and hold down.&nbsp;
 After enough time passes, the other tool options will come up.<br>
+
 <br>
+
 <h3>
 Lines</h3>
 
 <br>
-<img src="VectorScreen/ai-PenTools.png" alt="ai-PenTools.png"><br>
+
+<img style="width: 411px; height: 580px;" src="VectorScreen/ai-PenTools-es.png" alt="ai-PenTools.png"><br>
+
 The Pen tool works exactly the same as Inkscape's Bezier tool.&nbsp;
 When you click at a new point it makes a strait line, if you then drag
 it will manipulate the handles to curve it.&nbsp; <br>
+
 <img src="VectorScreen/ai-Pen.png" alt="ai-Pen.png"><br>
+
 <br>
+
 The pencil tool is also similar to the freehand lines too, in that you
 just click and hold the mouse, and the line follows it wherever it
 goes.&nbsp; However, the one in Illustrator is somewhat different
 because it will automatically make the line into a bezier curve by
 adding all the necessary nodes and putting their handles at the correct
 settings.&nbsp; <br>
+
 <img src="VectorScreen/ai-Pencil.png" alt="ai-Pencil.png"><br>
+
 <br>
+
 What the pencil tool doesn't do however, is make strait lines.&nbsp; In
 Inkscape you can use it by clicking in one point (and letting go of the
 mouse button), then going to a different point on the screen and click
@@ -883,9 +893,13 @@ again.&nbsp; Inkscape with create one solid, strait line between
 them.&nbsp; To do this in Illustrator you need to use the line segment
 tool.&nbsp; With the line segment tool, you click your start location
 and hold the mouse button down while you move to the finish location.<br>
+
 <img src="VectorScreen/ai-LineSegment.png" alt="ai-LineSegment.png"><br>
+
 <br>
+
 <br>
+
 <h3>
 Shapes</h3>
 
@@ -894,28 +908,49 @@ Star, Spiral) as Inkscape.&nbsp; The only real differences is that to
 get a square with rounded edges you use a separate tool, also for the
 arc you use a separate arc tool instead of just making a segment of an
 ellipse.<br>
-<img src="VectorScreen/ai-Shapes.png" alt="ai-Shapes.png"><br>
+
+<img style="width: 467px; height: 597px;" src="VectorScreen/ai-Shapes-es.png" alt="ai-Shapes.png"><br>
+
 <br>
-<img src="VectorScreen/ai-LineTools.png" alt="ai-LineTools.png"><br>
+
+<img style="width: 431px; height: 570px;" src="VectorScreen/ai-LineTools-es.png" alt="ai-LineTools.png"><br>
+
 <br>
+
 <h3>Stroke and Fill</h3>
+
 The concepts behind stroke and fill in Illustrator are the same as in
 Inkscape, however, here the tools are somewhat different.&nbsp; <br>
+
 <br>
+
 Here we have the stroke dialog open, and are changing its thickness. <br>
-<img src="VectorScreen/ai-Stroke.png" alt="ai-Stroke.png"><br>
+
+<img style="width: 720px; height: 617px;" src="VectorScreen/ai-Stroke-es.png" alt="ai-Stroke.png"><br>
+
 <br>
+
 To quickly change the fill (or the color of the stroke) you can click
 on the color chooser in the toolbox and it will open the colors dialog.<br>
+
 <img src="VectorScreen/ai-Color.png" alt="ai-Color.png"><br>
+
 <br>
-You can switch back and fourth from fill to stroke by clicking the two overlapping boxes.&nbsp; Then pick the color for each.<br>
+
+You can switch back and fourth from fill to stroke by clicking the two
+overlapping boxes.&nbsp; Then pick the color for each.<br>
+
 <img src="VectorScreen/ai-Fill.png" alt="ai-Fill.png"><br>
+
 <br>
+
 If you don't want to have a fill or stroke, select the white space with
 the red, diagonal line through it.&nbsp; This indicates none.<br>
+
 <img src="VectorScreen/ai-NoStroke.png" alt="ai-NoStroke.png"><br>
+
 <br>
+
 Just like with the GIMP and Photoshop, you will find that Inkscape and
 Illustrator have a ton in common, and you can easily apply your
 Inkscape skills if you ever have to sit down and work at a computer
@@ -927,7 +962,8 @@ Sometimes you need to create a graphic
 that is based on function, and how it looks isn't as important.&nbsp;
 Some
 examples of this might be a chart of an organization's structure or the
-work flow of a project.&nbsp; For these, special diagramming software is
+work flow of a project.&nbsp; For these, special diagramming software
+is
 available that is more suited to the task than a Vector diagram or
 print layout program.&nbsp; Two example of these functional diagram
 programs
@@ -943,13 +979,11 @@ several types of connecting lines.&nbsp; The simplest one can be a
 plain line, or it can have arrows at one or both ends.&nbsp; Lines also
 have different ways they can be connected between the shapes, they can
 go strait to the destination, they can curve, or they can be routed so
-that they only go up-do and left-right 
-
-with only 90 degree turns, they
+that they only go up-do and left-right with only 90 degree turns, they
 can also be some combinations thereof.&nbsp; Finally there is text, you
 can put text within a shape, or elsewhere on the diagram.&nbsp; <br>
 
-<img src="VectorGraphics/Connectors.png" alt="Connectors.png"><br>
+<img style="width: 323px; height: 322px;" src="VectorGraphics/Connectors-es.png" alt="Connectors.png"><br>
 
 <br>
 
@@ -963,7 +997,7 @@ An example orginizational chart.<br>
 
 An example flow chart.<br>
 
-<img src="VectorGraphics/Flowchart.png" alt="Flowchart.png"> <br>
+<img style="width: 307px; height: 371px;" src="VectorGraphics/Flowchart-es.png" alt="Flowchart.png"> <br>
 
 <br>
 
@@ -983,7 +1017,7 @@ made with it.&nbsp; <br>
 
 Here's a screenshot of it in action.<br>
 
-<img src="VectorScreen/DiaBasic.png" alt="DiaBasic.png"><br>
+<img style="width: 906px; height: 639px;" src="VectorScreen/DiaBasic-es.png" alt="DiaBasic.png"><br>
 
 The toolbox is on the left side of the screen, there are a few
 important things to note in there.&nbsp; There are four rows of buttons
@@ -1019,7 +1053,7 @@ different sets of symbols included in Dia, in this case we have the
 "Flowchart" symbols selected.&nbsp; You can change the set by clicking
 the dropdown box for the symbols.<br>
 
-<img src="VectorScreen/DiaShapes.png" alt="DiaShapes.png"><br>
+<img style="width: 906px; height: 766px;" src="VectorScreen/DiaShapes-es.png" alt="DiaShapes.png"><br>
 
 Once you have a shape selected, simply go over to the diagram window
 and click one spot to start it at the upper left corner of where you
@@ -1034,13 +1068,13 @@ size, etc) by double clicking on it.<br>
 
 Use Dia to re-create the example flow-chart.<br>
 
-<img src="VectorGraphics/Flowchart.png" alt="Flowchart.png"><br>
+<img style="width: 307px; height: 371px;" src="VectorGraphics/Flowchart-es.png" alt="Flowchart.png"><br>
 
 <br>
 
 <h2 class="western">Other Graphic Applications</h2>
-<h3>Publishing Layout</h3>
 
+<h3>Publishing Layout</h3>
 
 Once you've created a great graphic, you need to find a way to display
 it to the world.&nbsp; Sometimes that is done online, but often that
@@ -1059,7 +1093,9 @@ QuarkXPress, but Adobe also has its popular PageMaker and InDesign
 programs.&nbsp; In smaller companies and in personal use, tools such as
 Microsoft Publisher and the open source tool <a href="http://www.scribus.net/">Scribus</a> do this
 work.&nbsp;&nbsp; <br>
+
 <h3>3-D Creation</h3>
+
 In this section we only talked about creating graphics in two
 dimensions, although sometimes we talked about making it look like if
 it were in three dimensions.&nbsp; However, all our creations were made
@@ -1069,9 +1105,17 @@ graphic creation that involves creating things that are capable of
 being manipulated in three dimensions.&nbsp; When you have one of these
 objects, it is possible to spin it around and view it from all
 angles.&nbsp; <br>
+
 <br>
-The two biggest packages for creating 3-D graphics are <a href="http://www.blender.org/">Blender</a> (open source) and Maya (proprietary).&nbsp; They are often used to create characters in movies (like Toy Story or <a href="http://www.bigbuckbunny.org/index.php/download/">Big Buck Bunny</a>), video games, or advertisements.&nbsp; (<a href="http://www.blenderguru.com/27-inspiring-blender-animations-that-will-make-your-jaw-drop/">More animations</a> with Blender)<br>
+
+The two biggest packages for creating 3-D graphics are <a href="http://www.blender.org/">Blender</a> (open source) and Maya
+(proprietary).&nbsp; They are often used to create characters in movies
+(like Toy Story or <a href="http://www.bigbuckbunny.org/index.php/download/">Big Buck Bunny</a>),
+video games, or advertisements.&nbsp; (<a href="http://www.blenderguru.com/27-inspiring-blender-animations-that-will-make-your-jaw-drop/">More
+animations</a> with Blender)<br>
+
 <br>
+
 In a tangentially related category, are object creation programs.&nbsp;
 These can be used to create objects for things like automated milling
 or <a href="http://www.makerbot.com/">3-D printing</a>. or they can be
@@ -1080,16 +1124,21 @@ Earth.&nbsp; The most popular tool that people use for creating these
 objects is Google Sketchup, however, it is a simplified descendant of
 industrial strength Computer Aided Design (CAD) programs such as Auto
 CAD, Solidworks, and <a href="http://brlcad.org/">BRL CAD</a>.<br>
+
 <h3>Animation and Interaction<br>
 </h3>
+
 The use of computers to view graphics over the internet has allowed
 them to take on a whole new property of interactivity.&nbsp; Computer
 driven graphics are capable of performing actions in response to events
 by the user (clicking somewhere, pushing a key, etc) or simply based on
 a timer that started when the graphic was opened.&nbsp; By far the most
 common way of displaying this content on the internet is through
-Adobe's Flash Player plugin for web browsers (the <a href="http://www.gnu.org/software/gnash/">Gnash</a> program is a compatible, open source version).&nbsp; <br>
+Adobe's Flash Player plugin for web browsers (the <a href="http://www.gnu.org/software/gnash/">Gnash</a> program is a
+compatible, open source version).&nbsp; <br>
+
 <br>
+
 Because the Flash standard is controlled by the Adobe corporation,
 there have been two, somewhat joined, attempts to replace it with an
 open standard in the last couple years.&nbsp; The first was to build
@@ -1101,74 +1150,66 @@ abilities.&nbsp; It can deal with SVG files in more advanced ways, it
 also has what is called a "canvas" element, which creates an area on
 the page where all kinds of graphics and animation can be shown and
 manipulated.<br>
+
 <h2>Final Exercise<br>
 </h2>
-In this several part exercise, we will be creating an advertisement for an imaginary product.<br>
 
+In this several part exercise, we will be creating an advertisement for
+an imaginary product.<br>
 
 <br>
-
 
 Step One: Make up a product that you want to make an advertisement
 for.&nbsp; It can be similar to an existing product, but don't use an
 existing brand, we want to create something all our own.<br>
 
-
 <br>
-
 
 Step Two: Determine what message you want the advertisement to
 say.&nbsp; Do you want it simply to be a logo or an example of the
 product?&nbsp; Do you want to depict the product being used in a
 certain way?&nbsp; <br>
 
-
 <br>
-
 
 Step Three: Produce a layout of the advertisement.&nbsp; What
 components do you want where?&nbsp; Do you want text?&nbsp; Do you want
 use some other graphics in your advertisement (if so, find some
 now)?&nbsp; <br>
 
-
 <br>
-
 
 Step Four: Put together the rough advertisement.&nbsp; At the end of
 this stage, all the components should be in the correct location and
 the correct size.&nbsp; Basic colors should be determined.<br>
 
-
 <br>
-
 
 Step Five: Touch Up.&nbsp; How are the lighting effects?&nbsp; Do you
 need gradients to smooth things out?&nbsp; <br>
 
-
 <br>
-
 
 Step Six: Review.&nbsp; Have someone else look at your advertisement
 and tell you what they like and don't like about it.&nbsp; Go back to
 step five if necessary, but don't go back any further than that. <br>
 
-
 <br>
-
 
 Step Seven: Publish.&nbsp; Create a file that could be distributed on a
 web site, in print, or on other media.&nbsp; Possibly upload to
-openclipart.org.&nbsp; 
-<h2>Vocabulary</h2>Graphics - <br>
+openclipart.org.&nbsp;
+<h2>Vocabulary</h2>
+
+Graphics - <br>
+
 Vector Graphics - <br>
+
 Stroke - <br>
+
 Fill - <br>
 
-
 <h2>Attribution</h2>
-
 
 Mountains, nicubunu, <a href="http://www.openclipart.org/detail/9452">http://www.openclipart.org/detail/9452</a>,
 Public Domain<br>
@@ -1196,7 +1237,9 @@ Public Domain<br>
 
 Cardboard Box, molumen, <a href="http://www.openclipart.org/detail/1509">http://www.openclipart.org/detail/1509</a>,
 Public Domain<br>
-Subtractive Color, SharkD et. al., <a href="http://commons.wikimedia.org/wiki/File:SubtractiveColor.svg">http://commons.wikimedia.org/wiki/File:SubtractiveColor.svg</a>, Public Domain<br>
+
+Subtractive Color, SharkD et. al., <a href="http://commons.wikimedia.org/wiki/File:SubtractiveColor.svg">http://commons.wikimedia.org/wiki/File:SubtractiveColor.svg</a>,
+Public Domain<br>
 
 Gallery of soverign-state flags, wikipedia community, <a href="http://en.wikipedia.org/wiki/Gallery_of_sovereign-state_flags">http://en.wikipedia.org/wiki/Gallery_of_sovereign-state_flags</a>,
 CC-BY-SA<br>
@@ -1210,8 +1253,14 @@ http://howto.nicubunu.ro/ - Open Source Graphics Tutorials<br>
 
 https://inkscapetutorials.wordpress.com/ - Lots of Inkscape Tutorials<br>
 
-http://kalaalog.com/2007/09/27/how-to-illustrate-palm-tree/<br>Start of a series of inkscape tutorials - http://www.youtube.com/watch?v=h-zLZ6ilRRE<br>
-Start of a series of illustrator tutorials - http://www.youtube.com/watch?v=2uAzk_hLRow<br>
+http://kalaalog.com/2007/09/27/how-to-illustrate-palm-tree/<br>
+
+Start of a series of inkscape tutorials -
+http://www.youtube.com/watch?v=h-zLZ6ilRRE<br>
+
+Start of a series of illustrator tutorials -
+http://www.youtube.com/watch?v=2uAzk_hLRow<br>
+
 <br>
 
 TODO:<br>
@@ -1224,5 +1273,23 @@ Create exercise with light source<br>
 
 Create exercise with color<br>
 
+<h2 class="western">
+</h2>
+
 <br>
+
+<br>
+
+<br>
+
+<br>
+
+Introduccion a Adobe Illustrator CS4 Espacio de trabajo basico <br>
+
+http://www.youtube.com/watch?v=ymowxhyaLNw<br>
+
+<br>
+
+<br>
+
 </body></html>
