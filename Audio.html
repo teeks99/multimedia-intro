@@ -13,20 +13,32 @@ level) out from the source.&nbsp; In our ears there is a small membrane
 and a set of bones that is succeptible to these tiny (and very rapid)
 changes in pressure.&nbsp; Here is a graph of what the pressure
 recorded near by a set of hands clapping one time looks like (this was
-recorded by a microphone over 5/100ths of a second.&nbsp; Listen to the
+recorded by a microphone over 5/100ths of a second or 0.05 seconds.&nbsp; Listen to the
 <a href="Audio/Clap.flac">audio file</a>, save to your computer and
 open in VLC or Audacity):<br>
 <img style="width: 863px; height: 354px;" src="AudioScreen/Clap.png" alt="Clap.png"><br>
 As you can see, a sound that we think of as one instantaneous event, is
 actually composed of several different changes in pressure.&nbsp;
 Spikes above the middle of the graph indicate higher pressure, and
-below the graph indicate lower pressure.&nbsp; Because sound generally
+below the graph indicate lower pressure.&nbsp; We can use a microphone
+to record these changes in pressure.&nbsp; A microphone has a component
+that is succeptible to tiny differences in pressure (like a very small
+balloon) and couples that with a component that can change the amount
+of electrical voltage moving through a circut.&nbsp; There are many
+different methods for doing this, but the end result is that all
+microphones convert the changes in pressure that pass over them into
+changes in electrical voltage that can be sent down a wire into a
+recording device, in this case a computer. <br>
+</p>
+<p>Because sound generally
 doesn't move any air, it simply compresses/decompresses it to
 higher/lower pressure for a split second at a time, the pressure
-changes above and below the curve must balance out.&nbsp; In general,
-process when each time the pressure goes up above the curve, comes back
-down to the curve, continues below the curve and then comes back up to
-the curve, is called a cycle.&nbsp; The number of cycles per second
+changes above and below the curve must balance out.&nbsp; Each time the
+pressure goes through all the phases: go up above the curve, come back
+down to the curve, continue down below the curve, and finall come back
+up to
+the curve; making one complete loop, this is called a cycle.&nbsp; The
+number of cycles per second
 that the sound does this is is called the rate, the unit for which is
 Hertz, abbreviated Hz.&nbsp; So if a particular sound is at 500 cycles
 per second, we call that 500Hz.&nbsp; We can also use the standard
@@ -35,9 +47,10 @@ metric pre-fixes for it.&nbsp; A sound at 31,000 Hz could be written as
 approximately 20Hz up to 20kHz.&nbsp; <br>
 </p>
 
+
 The way we hear the frequency is as different tones.&nbsp; It is
 possible that we will have a tone with only a single frequency.&nbsp;
-An example of that is below (2kHz, 0.01 seconds):<br>
+An example of that is below with a 2kHz frequency and the lenght of the graph is only 0.01 seconds long:<br>
 
 <img src="AudioScreen/2kHz.png" alt="2kHz.png"><br>
 
@@ -69,7 +82,7 @@ correct duration, you can make any sound imaginable.<br>
 </p>
 
 <p>As we saw before, when we combine different frequencies, it changes
-the height of the waves, this hieght (both positive and negative) is
+the height of the waves, this height (both positive and negative) is
 called the amplitude, and represents how loud the sound is.&nbsp; The
 higher the waves go, the louder the sounnd you will hear.&nbsp; This
 scale is generally measured in decibles (dB).&nbsp; They range from
@@ -90,9 +103,50 @@ first, you can get that <a href="Audio/addmoviehere">here</a>.<br>
 
 <h3>Pulse Code Modulation - Wave Properties</h3>
 
+<p>When sound waves, or waves of change in air pressure, move through
+the air, they always vary smoothly.&nbsp; There are never any
+instantaneous jumps in pressure, just smooth changes in pressure that
+can happen in incredibly short amounts of time.&nbsp; If we zoom in to
+a small enough time, there will always be a nice and smooth curve, like
+the last few above.&nbsp;Mathematically this is called being continuous (in both time and frequency).&nbsp;  <br>
+</p>
+<p>For example, this is a possible (even typical) graph of sound:<br>
+<img src="Audio/ContinuousGraph.png" alt="ContinuousGraph.png"><br>
+</p>
+<p>This is inpossible, the pressure can not instantaneously jump from one value to another:<br>
+<img src="Audio/PressureJumpGraph.png" alt="PressureJumpGraph.png"><br>
+<br>
+This is inpossible, there is always some amount of pressure (even if that amount is zero), it can never not be there:<br>
+<img src="Audio/TimeJumpGraph.png" alt="TimeJumpGraph.png"><br>
+</p>
 <p><br>
 </p>
-
+<p>When we make an analog recording of a sound, say on a cassette tape
+or vinal record, we are recording the change in voltage output by the
+microphone of the continuous changes in the pressure.&nbsp; However,
+digital devices (Compact Disc (CD), computer, cell phone, etc.) are not
+capable of storing this continuous data.&nbsp; For a digital device,
+everything must be broken down into numbers (ones and zeros).&nbsp; So
+the digital device can record a number of the amount of voltage put off
+by the microphone.&nbsp; The catch is that it can't do it at every
+instant, it has a limited number of times per second that it can make a
+reading of the voltage and record its value as a number.&nbsp; The
+general term for this is an analog to digital conversion.&nbsp; Luckily
+modern electronics are very powerful, and can easily do one of these
+analog to digital conversions many thousands of times every
+second.&nbsp; In fact they are capable of recording so fast that the
+human ear can't even tell that is was ever made into a digital
+signal!&nbsp; The same thing happens when we play digital audio back
+out.&nbsp; The digital device does a digital to analog conversion to
+get the voltage numbers stored back to actual voltages of
+electricity.&nbsp; Then the voltage travels to a speaker (or very small
+speakers in headphones) which uses the change in voltage to run a
+device that can make rapid changes in air pressure...and we hear
+sound.&nbsp; <br>
+</p>
+This whole process involves a lot of data<br>
+<p></p>
+<br>
 <p>bits per sample</p>
 
 <h3 class="western"><br>
