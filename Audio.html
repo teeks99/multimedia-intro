@@ -4,8 +4,10 @@
 
 <h2 class="western">Introduction to Audio Storage</h2>
 
-<p style="font-weight: bold;">Sound<br>
-</p>
+<h3>Sound<br>
+
+</h3>
+
 
 <p>Sound moving through the air is composed of small changes in air
 pressure that move rapidly (at the speed of sound, 1,230 km/h at sea
@@ -121,6 +123,8 @@ This is inpossible, there is always some amount of pressure (even if that amount
 </p>
 <p><br>
 </p>
+<h4>Analog to Digital Conversion<br>
+</h4>
 <p>When we make an analog recording of a sound, say on a cassette tape
 or vinal record, we are recording the change in voltage output by the
 microphone of the continuous changes in the pressure.&nbsp; However,
@@ -131,38 +135,172 @@ the digital device can record a number of the amount of voltage put off
 by the microphone.&nbsp; The catch is that it can't do it at every
 instant, it has a limited number of times per second that it can make a
 reading of the voltage and record its value as a number.&nbsp; The
-general term for this is an analog to digital conversion.&nbsp; Luckily
+general term for this is an analog to digital conversion (A to D, A-D, ADC).
+Luckily
 modern electronics are very powerful, and can easily do one of these
 analog to digital conversions many thousands of times every
-second.&nbsp; In fact they are capable of recording so fast that the
+second, each individual conversion being called a "sample".&nbsp; In
+fact they are capable of recording so fast that the
 human ear can't even tell that is was ever made into a digital
 signal!&nbsp; The same thing happens when we play digital audio back
-out.&nbsp; The digital device does a digital to analog conversion to
+out.&nbsp; The digital device does a digital to analog conversion (D to
+A, D-A, DAC) to
 get the voltage numbers stored back to actual voltages of
 electricity.&nbsp; Then the voltage travels to a speaker (or very small
 speakers in headphones) which uses the change in voltage to run a
 device that can make rapid changes in air pressure...and we hear
-sound.&nbsp; <br>
+sound.&nbsp; These analog-to-digital and digital-to-analog conversions
+are absolutely essential for audio, but can also be applied to lots of
+other things as well.&nbsp; In fact anything that can be represented by
+an electrical voltage can be converted and used as a digital
+signal.&nbsp; These signals could be something as simple as setting the
+level of light in a room, or as complicated as controlling a car's
+engine when you push the gas pedal.&nbsp; <br>
 </p>
-This whole process involves a lot of data<br>
-<p></p>
+<p>TODO: picture of A-&gt;D-&gt;processing/storage-&gt;D-&gt;A cycle<br>
+</p>
+<p>For more on these A-D and D-A conversions check out these articles:<br>
+</p>
+<a href="http://en.wikipedia.org/wiki/Analog-to-digital_converter">http://en.wikipedia.org/wiki/Analog-to-digital_converter</a><br>
+<a href="http://es.wikipedia.org/wiki/Conversi%F3n_anal%F3gica-digital">http://es.wikipedia.org/wiki/Conversión_analógica-digital</a><br>
+<a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">http://en.wikipedia.org/wiki/Digital-to-analog_converter</a><br>
+<a href="http://es.wikipedia.org/wiki/Conversor_digital-anal%F3gico">http://es.wikipedia.org/wiki/Conversor_digital-analógico</a><br>
 <br>
-<p>bits per sample</p>
-
-<h3 class="western"><br>
-</h3>
-
-<p>What Sample Frequency</p>
-
+So once a digital recording device has done an analog to digital
+conversion on a voltage signal, it needs to store that data digitally,
+even if only for a moment while it is transfered to another device, in
+general this is called Quantization (<a href="http://en.wikipedia.org/wiki/Quantization_%28signal_processing%29">http://en.wikipedia.org/wiki/Quantization_(signal_processing)</a> <a href="http://es.wikipedia.org/wiki/Cuantificaci%F3n_digital">http://es.wikipedia.org/wiki/Cuantificación_digital</a>). There are many ways to do this, but the most comon one used for audio is called Pulse-Code-Modulation.&nbsp; <br>
+<a href="http://en.wikipedia.org/wiki/Pulse_code_modulation">http://en.wikipedia.org/wiki/Pulse_code_modulation</a><br>
+<a href="http://es.wikipedia.org/wiki/Modulaci%F3n_por_impulsos_codificados">http://es.wikipedia.org/wiki/Modulación_por_impulsos_codificados</a><br>
+Pulse code modulation works by taking a sample at a certian rate (a set
+of pulses every X microseconds) and storing the value as a "code" on a
+scale.&nbsp; <br>
+<img src="Audio/Pcm.png" alt="Pcm.png"><br>
+Here you can see an example voltage curve in red.&nbsp; The line in
+gray symbolizes the respective coding for the signal (on a scale from
+0-15, 4-bit).&nbsp; Each hash mark along the bottom is one time
+step.&nbsp; <br>
 <br>
+Here's another example, from the same 2kHz tone that we used
+above.&nbsp; This time the graph is only about 1/1000th of a second
+long (0.001 seconds). Each point that you see on the graph is where a
+sample of the audio was taken. <br>
+<img src="AudioScreen/2kHzPCM.png" alt="2kHzPCM.png"><br><br>
+<h4>Bits Per Sample</h4>
+One of the factors that determines how good a digital audio file sounds
+to a human ear is the numbre of bits used to store the value of the
+voltage that was converted to a digital signal.&nbsp; When we worked
+with images, we used 8-bits for each of our three color channels
+(24-bits color).&nbsp; Here the most comon format you will see is
+16-bit which gives you 2^16 or 65,536 different possible values for
+each A-D conversion.&nbsp; This is what is used in things like CDs and
+iPods, however when audio professionals work in recoring studios, they
+often use 24-bit values (2^24 or 16,777,216 possible values) for richer
+sounds.&nbsp; Using less bits will sometimes cause the audio to not
+re-produce the sounds very well because anything that falls outside the
+range of values will be clipped off.&nbsp; <br>
+<br>
+Here's an example of clipping:<br>
+<img src="Audio/500px-Clipping.svg.png" alt="500px-Clipping.svg.png"><br>
+You can see that that the data that falls outside the values that can
+be represented isn't correctly re-produced.&nbsp; This can then sound
+like noise or muted sounds in your audio recording. <br>
+<br>
+In addition to 16 and 24 bit storage, there a method of storage called
+"floating point".&nbsp; Floating point takes up 32-bits per sample, but
+is used differently.&nbsp; 24-bits of the data are used to store a
+value for the sample, the remaining 8 bits are used as an exponent.
+This means that floating point values can represent extremely tiny
+changes in value that are close to zero. It also means there is
+effectively no upper boundary on the scale (in either the positive or
+negative direction).&nbsp; As an example of this can be found in the
+image of the 2kHz tone above in the PCM section.&nbsp; Notice that on
+the left, the scale goes from -1.0 to +1.0, instead of something like 0
+to 65535.&nbsp;&nbsp; This is the typical way that floating point
+values are written.&nbsp; In floating point, the signal is free to go
+above those limits without loss.&nbsp; Because of this, floating point
+values are often used during the recording and/or editing process. <br>
+<h4>Sample Frequency</h4>
 
-<h3 class="western">Formats</h3>
 
+The other major component that affects how a digital audio recording
+sounds is the numbre of A to D samples that are taken every second,
+also know as the frequency.&nbsp; This number is usually denoted in
+Hertz (Hz) which simply means "cycles per second".&nbsp;&nbsp; The most
+important aspect to choosing a sample frequency is the Nyquist theorem,
+which states that the accurately re-produce a sound, you need to have a
+sample rate that is twice as high as the highest frequency you need to
+re-produce.&nbsp; As was explained before, the human ear can typicall
+hear frequencies up to about 20,000Hz or 20kHz.&nbsp; This means that
+the minimum frequency that we need to accurately re-produce sound is
+40kHz.&nbsp; However there also needs to be some extra room to filter
+out any stray (non-audible) frequencies, so the most common recording
+frequencies are 44.1kHz for CD audio, and 48kHz for typical digital
+audio.&nbsp; There are also some formats specially designed for
+recording that go to 96kHz or beyond, and this is to allow for the
+creation of even better filters for the non-audible freqiencies.&nbsp; <br>
+<br>
+Just because it takes at least 40kHz to accurately record everything
+the ear can hear doesn't mean that lesser frequencies are not in
+use.&nbsp; For example on&nbsp; telephones any time a land-line call
+goes outside the neighborhood or any time on a cell phone the audio is
+digitized at an 8kHz frequency. This sounds alright when you just need
+to hear what the person on the other end is saying, but would sound
+awful if you tried to listen to a musical performance digitized at
+8kHz.&nbsp; In this day and age however, and audio engineer would only
+look at using a sample frequency lower than 40kHz if there were serious
+bandwidth or storage constraints.&nbsp; For this course we will use at
+least 44.1kHz or 48kHz audio.<br>
+<h4>Endianess</h4>
+Endianess is an artifact of the growth of computer technoligies in
+different organizations at the same time.&nbsp; This refers to the way
+bytes are stored in a computers memory.&nbsp; The details of it aren't
+important for digital media creation, just know that there are two
+different formats: Big-Endian and Little-Endian.&nbsp; By themselves
+they aren't compatible, but it is trivial to convert between them.<br>
+<br>
+<h4>Channels</h4>
+The channels used in digital audio are different from how channels were
+used in images.&nbsp; In this case, each channel is a completely
+seperate recording, that just happens to be set to play back (and often
+recorded) at the same time.&nbsp; The channels are usually used to
+represent the direction that the audio can come from.&nbsp; <br>
+<br>
+Stereo audio has two channels, a left channel and a right
+channel.&nbsp; This allows for sounds that seem like they are coming
+from one direction or the other.&nbsp; CDs and FM radio use stereo
+sound.&nbsp; (<a href="http://en.wikipedia.org/wiki/Stereo_sound">http://en.wikipedia.org/wiki/Stereo_sound</a> <a href="http://es.wikipedia.org/wiki/Sonido_estereof%F3nico">http://es.wikipedia.org/wiki/Sonido_estereofónico</a>)<br>
+<br>
+The more advanced format is called surround sound, which is generally
+listed has having 5.1 channels.&nbsp; The five main channels are
+front-left and front-right (these same as stereo, and are used when
+there are only stereo outputs available), front-center, back-left, and
+back-right.&nbsp; The .1 channel, is called the Low Frequencey Effects
+channel and is designed for use with subwoofers that only produce
+sounds from 3-120Hz.&nbsp; Because of this low frequency, it is
+possible to use a much lower sample frequency with this channel.&nbsp;
+However most computer hardware just treats this as its own complete
+channel, hence computers that support surround sound are often said to
+have six channel sound instead of just 5.1.&nbsp; (<a href="http://en.wikipedia.org/wiki/Surround_sound">http://en.wikipedia.org/wiki/Surround_sound</a> <a href="http://es.wikipedia.org/wiki/Surround">http://es.wikipedia.org/wiki/Surround</a>)<br>
+
+
+<h2>Formats</h2>
+
+
+<h3>Uncompressed Formats</h3>
+<p>Digital audio has a few, very common uncompressed formats that it
+can use.&nbsp; They take PCM audio with the paramaters described above,
+and wrap it up into a neat file.&nbsp; The two main formats you will
+find are CD Audio and WAV.&nbsp;You will often find other formats that simply
+specify a PCM type (linear, mu-Law, A-Law), a size (8-bit, 16-bit, 24-bit,
+etc), signed or unsigned, a frequency (32, 44.1, 48), endianess (big or
+little), number of channels, and bit-rate.&nbsp;  </p>
 <p>CD Audio - The most common format you will find is CD audio, it is
 uncompressed audio.&nbsp; This format is 16-bit, Linear Pulse Code
 Modulation (L-PCM), signed data, running at a 44.1kHz sampling rate,
 with two channels of audio (stereo).&nbsp; It runs at 146KB/s.&nbsp; <br>
 </p>
+
 
 WAV - Unlike CD Audio, that specifies exact paramaters, WAV files are
 capable of contaning many different formats, however the most common
@@ -172,11 +310,21 @@ uncompressed data, however it is possible to use compression inside
 them.<br>
 
 <br>
+<h3>Compressed Formats</h3>
+Digital audio can take up quite a bit of space.&nbsp; Lets look at
+typical CD audio: 16-bit samples multiplied by 44.1kHz multiplied by
+two channels gives 1,411,200 bits/second.&nbsp; This is equal to
+176,400 Bytes/second or 176KB/s or 10.6MB/min or 635MB/hr.&nbsp; These
+numbers will look nice and tame when we get to the raw video rates in
+the next section, but they are still a lot to store, especially when a
+lot of that space is basically redundant.&nbsp; There are a few
+compression formats that use lossless compression, so that no
+information is lost.&nbsp; The leading one of these is called FLAC, but
+there are also others from Apple and Microsoft.&nbsp; However, the
+majority of audio formats are lossy formats.&nbsp; The are used for
+everything from the audio on your DVD and BluRay disk, to MP3 players
+like the iPod and cellphones, and even podcasts and skype. <br>
 
-Other uncompressed formats - You will often find formats that simply
-specify a type (PCM, mu-Law, A-Law), a size (8-bit, 16-bit, 24-bit,
-etc), signed or unsigned, a frequency (32, 44.1, 48), endianess (big or
-little), number of channels, and bit-rate.&nbsp; <br>
 
 
 <p>MP2 - Stands for MPEG-1 audio, layer 2.&nbsp; Often used in
@@ -225,14 +373,19 @@ human voices.&nbsp; It is not a high fidelity codec, and should not be
 used with music or sound effects, but is good at accurately
 re-producing the human voice.<br>
 
-<h2>Ripping a CD</h2>
+<h2>Converting Audio<br>
+</h2>
 
 Get audio into WAV format.<br>
+<br>
 
 Convert to FLAC.<br>
 
-Convert to Ogg-Vorbis and MP3.<br>
+Convert to Ogg-Vorbis<br>
+Convert to MP3.<br>
 <br>
+Bonus:<br>
+Rip a CD with Sound Juicer<br>
 Create a CD with Brasero<br>
 
 <h2>Audacity</h2>
@@ -321,9 +474,9 @@ directions.<br>
 
 <h3>Filtering</h3>
 
-<br>
+<br><span style="font-weight: bold;">
 
-Activity<br>
+Activity</span><br>
 
 For this activity, make a recording of yourself asking the questions
 (the same questions from the recording activity).&nbsp; Now that you
@@ -337,9 +490,8 @@ channels to give them their own unique, but still natural sound.&nbsp; <br>
 
 RSS Feed with enclosure.&nbsp; <br>
 
-<h2>Live Streaming</h2>
-
-Icecast/Shoutcast<br>
+<h2>Live Audio</h2>Streaming Icecast/Shoutcast....often with video.<br>
+Voice over IP - Skype/SIP<br>
 
 <br>
 
@@ -364,6 +516,8 @@ Attribution<br>
 
 Signal Sampling, Binksternet, <a href="http://commons.wikimedia.org/wiki/File:Signal_Sampling.png">http://commons.wikimedia.org/wiki/File:Signal_Sampling.png</a>,
 Public Domain<br>
+PCM Graph, Ktims, <a href="http://commons.wikimedia.org/wiki/File:Pcm.svg">http://commons.wikimedia.org/wiki/File:Pcm.svg</a>, CC-BY-SA<br>
+Clipping Graph, David Batley, <a href="http://en.wikipedia.org/wiki/File:Clipping.svg">http://en.wikipedia.org/wiki/File:Clipping.svg</a>, CC-BY-SA<br>
 Undercover, Citizen Nyx, <a href="http://ccmixter.org/files/nyx/13086">http://ccmixter.org/files/nyx/13086</a>,  CC-BY<br>
 Independance Day, DoKashiteru, <a href="http://ccmixter.org/files/nyx/13086">http://ccmixter.org/files/nyx/13086</a>, CC-BY<br>
 
