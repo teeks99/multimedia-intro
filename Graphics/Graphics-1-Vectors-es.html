@@ -1,15 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  <title>Gráficos - 1 - Gráficos Vectoriales</title>
-
-  
-</head><body>
+<html><head><title>Gráficos - 1 - Gráficos Vectoriales</title></head><body>
 <h2 class="western">Gráficos Vectoriales</h2>
 
 <p>A diferencia de las imágenes raster (fotografías, cubierta en la
-Unidad Uno) gráficos vectoriales (vector graphics) no se trata de
+Unidad Uno) gráficos vectoriales (vector graphics) no son de
 píxeles dispuestos en
-una cuadrícula con valores diferentes.&nbsp; En vez de gráficos
+una cuadrícula con valores diferentes.&nbsp; En vez de eso, los gráficos
 vectoriales se almacenan como conjuntos de instrucciones que una
 computadora puede ejecutar para volver a crear un gráfico. </p>
 
@@ -19,66 +15,69 @@ computadora puede ejecutar para volver a crear un gráfico. </p>
 <ol>
 
   <li>
-    <p>Crear un círculo con un centro de 3 unidades por encima del
-centro, y un radio de 2 unidades. </p>
+    <p>Crea un círculo con un centro a 3 unidades de distancia arriba del centro de la imagen, y con un radio de 2 unidades. </p>
   </li>
   <li>
     <p>Rellene el círculo de color amarillo.</p>
   </li>
   <li>
-    <p>Crear una línea de 2 unidades por debajo del centro de 3
-unidades por encima y por dos unidades a la izquierda del centro.</p>
+    <p>Crea una línea desde el punto ubicado a 2 unidades debajo del centro de la imagen y a 3
+unidades encima dos unidades a la izquierda del centro de la imagen.<br>
+</p>
   </li>
   <li>
-    <p>Crear una línea de 2 unidades por debajo del centro de 3
-unidades por encima y por dos unidades a la derecha del centro.</p>
+    <p>Crea una línea desde el punto ubicado a 2
+unidades debajo del centro de la imagen y a 3 unidades encima dos
+unidades a la derecha del centro de la imagen.<br>
+</p>
   </li>
 </ol>
 
-<p>Si hubiera un programa que podría ejecutar este cript muy sencillo,
-puede llamar a la pantalla el texto siguiente:</p>
+<p>Si hubiera un programa que pudiera ejecutar este script muy sencillo, podría mostrar en la pantalla lo siguiente:<br>
+</p>
 
 <p style="text-align: center;"><img src="VectorGraphics/SimpleScriptOutput.png" alt="SimpleScriptOutput.png"></p>
 
 <p> </p>
 
-<p>Lo bueno de esto es que nunca lo más probable es que mirar realmente
-en la secuencia de comandos de la computadora crea, al igual que usted
-no tendrá&nbsp; que ir a la matriz de píxeles y los canales que se
-almacenan en una fotografía.&nbsp; Sin embargo, si usted desea
-conseguir avanzada, que sería posible (y un poco más fácil de editar
-una imagen de mapa bits).&nbsp; En su lugar, vamos a utilizar las
-herramientas que convierten las cosas que dibujar con el ratón y el
+<p>Lo bueno de esto es que, lo más probable, nunca tendrás que ver la
+secuencia de comandos que la computadora crea, al igual que
+no tienes que ver la descripción de píxeles y canales que se
+almacenan en una fotografía.&nbsp; Sin embargo, si desearas trabajar a
+un nivel más avanzado, esto sería posible (y un poco más fácil que
+editar
+una imagen raster).&nbsp; En lugar de estudiar comandos, vamos a
+utilizar las
+herramientas que convierten las cosas que dibujamos con el ratón y el
 teclado en una de estas secuencias de comandos que el equipo puede
-seguir cuando se quiere volver a producir una imagen para ver en la
-pantalla (la&nbsp; pantalla es en realidad un mapa de bits). Entonces,
-cuando todos se hacen, podemos hacer que se ejecute el secuencia de
-comandos de nuevo para producir otra trama gráficos que se pueden
+seguir cuando se quiera volver a producir una imagen para verse en la
+pantalla (la&nbsp; pantalla es en realidad un mapa de bits). Luego,
+cuando hayamos terminado, podremos hacer que se ejecute la secuencia de
+comandos de nuevo para producir otra imagen gráficas que se podrá
 guardar en un archivo PNG. </p>
 
-<p>También es posible que esta secuencia de comandos para incluir una
+<p>También es posible que esta secuencia de comandos incluya una
 cierta cantidad de tiempo que debe transcurrir antes de que algo
-sucede.&nbsp; Esto permite que para las animaciones, y algunos ejemplos
-sencillos sería tener un moviemiento palo cifra a través de la imagen o
-tener un rebote de la pelota.</p>
-
-Una de las beneficios muy importantes
+suceda.&nbsp; Esto abre paso a animaciones; algunos ejemplos
+sencillos serían tener una persona dibujada en palitos moviéndose a través de la imagen, o ver el rebote de una pelota.</p>
+Uno de las beneficios muy importantes
 de las imágenes vectoriales es que todos los comandos de la imagen son
-relativos.&nbsp; Si usted necesita para aumentar el tamaño de la
-imagen, sólo tiene que cambiar las unidades que todos los comandos se
-aplican.&nbsp; En el ejemplo anterior, una unidad equivale a
-aproximadamete 10 píxeles, pere esto podría ser fácilmente modificado
-para que un píxel es igual a 20 píxeles o incluso 100 píxeles.&nbsp; La
+relativos.&nbsp; Si usted necesita aumentar el tamaño de la
+imagen, sólo tiene que cambiar las unidades que se aplican a todos los
+comandos.&nbsp; En el ejemplo anterior, una unidad equivale a
+aproximadamete 10 píxeles, pero esto podría ser fácilmente modificado
+para que una unidad sea igual a 20 píxeles o incluso 100 píxeles.&nbsp;
+La
 imagen automáticamente escala hasta el nuevo tamaño sin perder calidad,
-la imagen se quedará crujiente y no podrás ver los artefactors de
-píxeles.&nbsp; Esto es lo contrario de la cantidad de fotos de trabajo,
-allí si usted fuera a tratar de escala de la foto hasta el doble o diez
-veces el tamaño original, verá problemas aparecen en la imagen.<br>
+y no revela cuadrículos de pixeles al agrandarse.&nbsp; Esto es lo
+contrario de la forma en que trabajan las fotografías: si usted fuera a
+tratar de escalar una foto al doble o diez
+veces el tamaño original, aparecerán muchos problemas en la imagen.<br>
 
 <br>
 
-He aquí un ejemplo con nuestra imagen simple.&nbsp; En cada caso,
-el gráfico vectoral está a la izquierda y la trama es el gráfico de la
+He aquí un ejemplo de la diferencia entre gráficos vetoriales y fotos raster, usando nuestra imagen simple.&nbsp; En cada caso,
+el gráfico vectorial está a la izquierda y la foto raster a la
 derecha.&nbsp; <br>
 
 <br>
@@ -90,67 +89,63 @@ Una unidad equivale a 10 pixeles.<br>
 Una unidad equivale a 20 pixeles.<br>
 
 <img src="VectorGraphics/SimpleScriptOutput-Vector2.png" alt="SimpleScriptOutput-Vector2.png"><img src="VectorGraphics/SimpleScriptOutput-RasterScale2.png" alt="SimpleScriptOutput-RasterScale2.png"><br>
-
 Una
-unidad equivale a 100 pixeles.&nbsp; (Este se redjo a una sola unidad
-equivale a 40 píxeles por el navegador web para adaptarse a la
-pantalla, si quieres verlo como botón derecho del ratón de tamaño
-completo en él y verlo por separado.) <br>
+unidad equivale a 100 pixeles.&nbsp; (El navegador web reduce esta
+image a 40 pixeles por unidad para adaptarse al tamaño de la pantalla;
+si quieres ver la imagen completa usa el botón derecho del ratón y
+selecciona la opción para ver la imagen por separado.) <br>
 
-<img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-Vector10.png" alt="SimpleScriptOutput-Vector10.png"><img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-RasterScale10.png" alt="SimpleScriptOutput-RasterScale10.png"><br>
-
-Usted
-puede ver que a medida que hablamos en la sección de fotos, el mapa de
-bits gráficos no se escala hasta el tamaño grande muy bien.&nbsp; Sin
-embargo, el gráfico vectorial sigue buscando lisa y limpia en cualquier
+<img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-Vector10.png" alt="SimpleScriptOutput-Vector10.png"><img style="width: 400px; height: 400px;" src="VectorGraphics/SimpleScriptOutput-RasterScale10.png" alt="SimpleScriptOutput-RasterScale10.png"><br>Puedes ver que como aprendimos en la sección de fotos, la grafica raster no se escala hasta el tamaño grande muy bien.&nbsp; Sin
+embargo, el gráfico vectorial sigue viéndose lisa y limpia en cualquier
 tamaño.<br>
 
 <br>
-
-Además de la amplicación limpia, gráficos vectoriales generalmente
-ocupan menos espacio.&nbsp; En una imagen de mapa de bits, los datos
+Además de la amplicación limpia, los gráficos vectoriales generalmente
+ocupan menos espacio.&nbsp; En una imagen de mapa de bits (raster), los
+datos
 necesitan ser almacenados por cada píxel (en tres o cuatro
-canales).&nbsp; Si usted tiene imágenes de gran tamaño, esto puede ser
+canales).&nbsp; Si usted tiene imágenes de gran tamaño, esto pueden ser
 de millones de bytes.&nbsp; Los gráficos vectoriales en cambio sólo
-almacenan la información necesaria para tomar las formas y poner color
-en ellos.&nbsp; Para el ejemplo anterior, esto es sólo cuatro comandos,
+almacenan la información necesaria para crear las formas y ponerles
+color.&nbsp; Para el ejemplo anterior, esto son sólo cuatro comandos,
 cada uno tomando sólo unos pocos bytes.&nbsp; Hay cosas que usted puede
 hacer para crear gráficos vectoriales muy complicado, pero por lo
-general van a ser mucho más pequeños que sus contrapartes de la trama.<br>
+general van a ser mucho más pequeños que sus contrapartes rasterizados.<br>
 
 <br>
 
-La otra cosa muy bueno de gráficos vectoriales es que cuando se
-está utilizando programas gráficos como Inkscape o Illustrator para
-editar, es muy fácil para seleccionar objetos.&nbsp; Para las fotos
-hemos tenido algunos problemas reales en la selección de diferentes
+La otra cosa muy buena sobre los gráficos vectoriales es que cuando se
+están utilizando programas gráficos como Inkscape o Illustrator para
+editar, es muy fácil seleccionar objetos.&nbsp; Para las fotos
+hemos tenido algunos problemas en la selección de diferentes
 objetos (como el avión y el brazo de la estatua).&nbsp; Sin embargo, ya
-que en gráficos vectoriales para crear los comandos de cada objeto se
-almacenan, al hacer clic sobre un objeto, es fácil para el programa de
-adivinar qué objeto que está tratando de seleccionar.&nbsp; A
-continuación, puede modificar fácilmente que el objeto de cambiar el
-tamaño, rotar, o e moverlo.<br>
+que en gráficos vectoriales los comandos que crean cada objeto se
+almacenan, al hacer clic sobre un objeto, es fácil para el programa
+adivinar se objeto que está tratando de seleccionar.&nbsp; A
+continuación, puede modificar fácilmente el objeto cambiar el
+tamaño, rotarlo, o moverlo, por ejemplo.<br>
 
 <h3 class="western">Formatos de Archivo</h3>
 
 <p>El formato de archivo principal actualmente en uso es SVG o
-Scaleable Vector Graphics (Gráficos Vectorales Escalables, ver: <a href="http://es.wikipedia.org/wiki/SVG">http://es.wikipedia.org/wiki/SVG</a>)
+Scaleable Vector Graphics (Gráficos Vectoriales Escalables, ver: <a href="http://es.wikipedia.org/wiki/SVG">http://es.wikipedia.org/wiki/SVG</a>)
 que es un tipo de archivo legible por humanos llamado XML (eXtensible
-Markup Language - lenguaje de marcas extesible, ver: <a href="http://es.wikipedia.org/wiki/XML">http://es.wikipedia.org/wiki/XML</a>).&nbsp;
-A pesar de XML y SVG son legibles, no se los lee directamente como
-parte de este material.&nbsp; SVG es compatible con la mayoría de
+Markup Language - lenguaje extensible de marcado, ver: <a href="http://es.wikipedia.org/wiki/XML">http://es.wikipedia.org/wiki/XML</a>).&nbsp;
+A pesar de que XML y SVG son legibles, no los estaremos levendo directamente como
+parte de este material.&nbsp; El SVG es compatible con la mayoría de
 programas de dibujo vectorial, sin embargo, todavía no es soportado por
-todos de los navegadores web (aunque esto está cambiando
+todos los navegadores web (aunque esto está cambiando
 rápidamente).&nbsp; Si sólo desea utilizar las imágenes en páginas web,
 lo mejor es convertirlos a formato Portable Network Graphics (PNG), que
 es un formato de mapa de bits sin pérdidas. </p>
-
-El formato de otros grandes de gráficos vectoriales es la EPS o
-Encapsulated Post Script (Post Script encapsulado).&nbsp; Post Scrit es
-un tipo de archivo utilizado para la impresión (en especial impresión
-industrial), y las imágenes EPS están diseñados para ser fácilmente
-colocado dentro de un documento Post Script.&nbsp; Este formato ha sido
-todo mucho más tiempo que SVG, y es compatible con muchas más
-herramientas (sobre todo los de edad).&nbsp; Del mismo modo, no se
+El otro formato mayor de gráficos vectoriales es el EPS o
+Encapsulated Post Script (Post Script encapsulado).&nbsp; Post Script
+es
+un tipo de archivo utilizado para la impresión (especialmente impresión
+industrial), y las imágenes EPS están diseñadas para ser fácilmente
+colocadas dentro de un documento Post Script.&nbsp; Este formato ha
+existido por mucho más tiempo que el SVG, y es compatible con muchas
+más
+herramientas (sobre todo las más antiguas).&nbsp; Del mismo modo, no se
 recomienda para su uso con los navegadores web.&nbsp;
 </body></html>
