@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.0 r9654"
    sodipodi:docname="BezierRectangle-final.svg"
-   inkscape:export-filename="/home/tomkent/src/multimedia-intro/VectorGraphics/BezierRectangle-final-es.png"
+   inkscape:export-filename="/home/tomkent/src/multimedia-intro/Graphics/VectorGraphics/BezierRectangle-final-es.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -68,7 +68,7 @@
        id="text3942"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3944"></tspan></text>
+         id="tspan3944" /></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -119,7 +119,7 @@
          x="350.67535"
          y="490.39407"
          id="tspan3964"
-         style="font-size:32px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:URW Chancery L;-inkscape-font-specification:URW Chancery L Bold Italic">es</tspan><tspan
+         style="font-size:32px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:URW Chancery L;-inkscape-font-specification:URW Chancery L Bold Italic">hay</tspan><tspan
          sodipodi:role="line"
          x="350.67535"
          y="530.39404"
