@@ -1,1 +1,29 @@
-Cutting Audio<br><br><br>
+<h2>Cutting Audio</h2>
+<br>
+One of the most basic functions that audacity is used for is cutting
+parts out of an audio track, and optionally adding that part into a new
+audio track.&nbsp; <br>
+<br>
+Lets try cutting with an audio clip (<a href="Audio/Cough.flac">download
+now</a>) that has a sound in it you would like to remove.&nbsp; In this
+case when the person speaking coughs in the middle of his introduction.<br>
+<br>
+To start the cutting process, listen to the track and watch where on
+the waveform the cursor is when the un-desired sound starts and
+ends.&nbsp; Then, in selection mode, drag the mouse cursor over the
+area containing the waveform for the undesired sound.&nbsp; In this
+case, there is a small pause after the cough, so we will want to remove
+some of that as well.<br>
+<br>
+<img style="width: 905px; height: 582px;" src="AudioScreen/Audacity-Cut.png" alt="Audacity-Cut.png"><br>
+<br>
+Once you have the area selected, click the cut button (or press Ctrl+x,
+or select cut from the edit menu).&nbsp; You will then end up with just
+the desired audio in your track, like the undesired audio was never
+even there.<br>
+<br>
+<img src="AudioScreen/Audacity-AfterCut.png" alt="Audacity-AfterCut.png"><br>
+<br>
+<h3>Adding Audio</h3>
+The next step after being able to remove audio, is to be able to add in
+audio from a different source.&nbsp; Continuing with our example from the previous section, we will add in the subject saying "Welcome" between when he says hello and his name.&nbsp; Here is <a href="Audio/Welcome.flac">a clip</a> of him saying "Welcome".<br><br>To add this clip into the project, go to File-&gt;Import-&gt;Audio... and then select the file from your hard disk.<br><br><img src="AudioScreen/Audacity-Import.png" alt="Audacity-Import.png"><br><br>Once you have it in your project, you can try playing it.&nbsp; You will notice that the audio from both clips plays at the same time, over each other.&nbsp; We don't want that, instead we want the "Welcome" audio to go in between the "Hello" and the name.&nbsp; To do that, lets select the recording of "Welcome" from the bottom track, and select copy.<br><img src="AudioScreen/Audacity-Copy.png" alt="Audacity-Copy.png"><br>Then we will move the cursor line to the appropriate spot in the top track by clicking there and then click the paste button.&nbsp; At this point, we don't need the bottom track anymore, so we can close it.<br><img src="AudioScreen/Audacity-PasteClose.png" alt="Audacity-PasteClose.png"><br><br>Now listen to your track and see how it sounds.&nbsp; One possible catch is that if the spacing between the sections isn't natural, it may sound weird.&nbsp; This is easy to fix by re-doing the process and copying more space from the second track into the first.&nbsp; If you take too much, it is easy to fix by cutting out a little bit of space.<br><br><h3>Silencing</h3>Being the finicky editor that you are, you've decided that you want to remove the "Welcome" clip again, but you don't want to cut it out, instead you want to leave empty space (silence) there, so that a live announcer could put in his/her own welcome.&nbsp; To do this, we'll use the silence too.&nbsp; First, we'll select the audio we want to silence, just like if we were going to cut or copy it.&nbsp; Then we will select Edit -&gt; Silence Audio from the menu.<br><img src="AudioScreen/Audacity-Silence.png" alt="Audacity-Silence.png"><br><br>Once this tool has run, you will see that the waveform for the area selected has been set to zero.&nbsp; If you listen to the audio, there is a nice gap for someone else to talk into where the "Welcome" was previously.<br><img src="AudioScreen/Audacity-Silenced.png" alt="Audacity-Silenced.png"><br><br>
