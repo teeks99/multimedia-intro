@@ -1,29 +1,25 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Audio - 3 - Conversion</title></head><body>
+<html><head>
+  <title>Audio - 3 - Conversion</title>
+
+  
+</head><body>
 <h2>Converting Audio<br>
-
 </h2>
-
 
 Converting audio in Ubunt is extremely easy.&nbsp; First, download a <a href="Audio/sintel_trailer-audio.wav">sample audio clip</a>, which is
 encoded in the uncompressed WAV format.&nbsp; Next, open the sound
 converter application.<br>
 
-
 <img src="AudioScreen/SoundConverter.png" alt="SoundConverter.png"><br>
 
-
 <br>
-
 
 Then lets open the file we downloaded in Sound Converter.<br>
 
-
 <img src="AudioScreen/SoundConverter-example.png" alt="SoundConverter-example.png"><br>
 
-
 <br>
-
 
 Sound converter is an application that will let you convert one audio
 format to another one.&nbsp; You can load in a single file, or many
@@ -32,9 +28,7 @@ select
 the type of format you want to convert to and other details, use the
 prefrences menu.<br>
 
-
 <br>
-
 
 The first item in the preferences menu is the option to change where
 the converted files are placed.&nbsp; For a single file such as this,
@@ -44,12 +38,9 @@ directory.&nbsp;
 However, if you were going to convert your whole music library at once,
 you may want to utilize this option to help you sort it.<br>
 
-
 <img src="AudioScreen/SoundConverter-folder.png" alt="SoundConverter-folder.png"><br>
 
-
 <br>
-
 
 Naming files is similar.&nbsp; For a single file that we need in a
 different
@@ -57,24 +48,18 @@ format, just change the suffix (from .wav to something else: .flac,
 .ogg, .mp3).&nbsp; If you were doing a lot of files, you might want to
 utilize these options.<br>
 
-
 <img src="AudioScreen/SoundConverter-filename.png" alt="SoundConverter-filename.png"><br>
 
-
 <br>
-
 
 The next option is the format.&nbsp; We're going to convert this into
 FLAC,
 OGG-Vorbis, and MP3 formats.&nbsp; It is already a WAV so no need to do
 that, and with the above formats, we don't really have a need for AAC.<br>
 
-
 <img src="AudioScreen/SoundConverter-type.png" alt="SoundConverter-type.png"><br>
 
-
 <br>
-
 
 The final option is the ability to re-sample to a different
 frequency.&nbsp;
@@ -88,41 +73,29 @@ rates that you need to join together.&nbsp; In that case you could
 convert
 them all to the highest rate (so none of them would be cut down).<br>
 
-
 <img src="AudioScreen/SoundConverter-resample.png" alt="SoundConverter-resample.png"><br>
 
-
 <br>
 
-
 <br>
-
 
 For our first conversion, go ahead and select FLAC (Free Lossless Audio
 Codec).<br>
 
-
 <img src="AudioScreen/SoundConverter-flac.png" alt="SoundConverter-flac.png"><br>
 
-
 <br>
-
 
 Then close the preferences dialog and click "Convert".&nbsp; <br>
 
-
 <img src="AudioScreen/SoundConverter-convert.png" alt="SoundConverter-convert.png"><br>
 
-
 <br>
-
 
 After a couple seconds it should finish, and you're new .flac file will
 be out right next to the .wav file you started with.<br>
 
-
 <br>
-
 
 Next lets go and make a file in the Ogg-Vorbis format.&nbsp; Go back
 into
@@ -131,12 +104,9 @@ this
 format there is a new option that wasn't there for the FLAC option,
 that is the Quality option.&nbsp; <br>
 
-
 <img src="AudioScreen/SoundConverter-oggQuality.png" alt="SoundConverter-oggQuality.png"><br>
 
-
 <br>
-
 
 There are several different pre-set values for quality (this program
 won't let you dictate your own).&nbsp; Each of these corresponds with a
@@ -148,9 +118,7 @@ the encoder how agressive to be when running the lossy
 compression.&nbsp; The FLAC format didn't have this because it is
 lossless, every FLAC conversion is perfect.<br>
 
-
 <br>
-
 
 For OGG files 192kbps (kilo bits per second) is usually considered so
 good that the human ear can't tell the difference for most
@@ -160,33 +128,24 @@ setting.&nbsp; If bandwidth or storage space are a concern for you
 normal or low and get a much smaller file, but it might not sound as
 good.<br>
 
-
 <br>
-
 
 So using the "High" quality setting, lets run this conversion.<br>
 
-
 <img src="AudioScreen/SoundConverter-ogg.png" alt="SoundConverter-ogg.png"><br>
-
 
 <br>
 
-
 The next conversion is to the, very common, MP3 format.&nbsp; <br>
 
-
 <img src="AudioScreen/SoundConverter-mp3Bitrate.png" alt="SoundConverter-mp3Bitrate.png"><br>
-
 
 MP3 has an additional setting that OGG doesn't have here, the ability
 to change how the bitrate is applied to the stream of data.&nbsp; There
 are three options here, but we will only focus on two (with the other
 two, there isn't a need for using Average Bitrate).&nbsp; <br>
 
-
 <br>
-
 
 Variable Bit Rate (VBR) is great because it allows the encoder for the
 format to lower the bitrate in portions of the recording where there
@@ -197,9 +156,7 @@ approximately the same size file as if it wasn't using VBR, but the
 audio will be better.&nbsp; (<a href="http://en.wikipedia.org/wiki/Variable_bitrate">http://en.wikipedia.org/wiki/Variable_bitrate</a>
 <a href="http://es.wikipedia.org/wiki/Tasa_de_bits_variable">http://es.wikipedia.org/wiki/Tasa_de_bits_variable</a>)<br>
 
-
 <br>
-
 
 Constant Bit Rate (CBR) is what you have when you don't use VBR to
 encode the audio.&nbsp; Every single part of the recording uses the
@@ -208,9 +165,7 @@ better resulting sound, but some older devices won't work with VBR, so
 you'd need to encode with CBR for them. (<a href="http://en.wikipedia.org/wiki/Constant_bitrate">http://en.wikipedia.org/wiki/Constant_bitrate</a>
 <a href="http://es.wikipedia.org/wiki/Tasa_de_bits_constante">http://es.wikipedia.org/wiki/Tasa_de_bits_constante</a>)<br>
 
-
 <br>
-
 
 Since the MP3 format isn't as good at compressing the audio as Ogg
 Vorbis (or WMA or AAC for that matter), we need to use a bitrate of
@@ -218,30 +173,22 @@ Vorbis (or WMA or AAC for that matter), we need to use a bitrate of
 difference with uncompressed audio.&nbsp; This can be selected with the
 "Very High" quality setting.<br>
 
-
 <br>
 
-
 <img src="AudioScreen/SoundConverter-mp3.png" alt="SoundConverter-mp3.png"><br>
-
 
 No go ahead and run the final conversion and you'll have succesfully
 made your conversion to all the major formats.<br>
 
-
 <br>
-
 
 Just to show the differences between encoding types and bitrates, I've
 created the following chart.&nbsp; Go ahead and download the samples
 and see if you can tell the difference between them.<br>
 
-
 <br>
 
-
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-
 
   <tbody>
     <tr>
@@ -265,7 +212,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">100%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio.wav">sintel_trailer-audio.wav</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio.wav">sintel_trailer-audio.wav</a><br>
       </td>
     </tr>
     <tr>
@@ -277,7 +224,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">47%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio.flac">sintel_trailer-audio.flac</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio.flac">sintel_trailer-audio.flac</a><br>
       </td>
     </tr>
     <tr>
@@ -289,7 +236,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">4.0%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-64k.ogg">sintel_trailer-audio-64k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-64k.ogg">sintel_trailer-audio-64k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -300,7 +247,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">6.0%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-96k.ogg">sintel_trailer-audio-96k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-96k.ogg">sintel_trailer-audio-96k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -311,7 +258,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">7.6%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-128k.ogg">sintel_trailer-audio-128k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-128k.ogg">sintel_trailer-audio-128k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -322,7 +269,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">12%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-192k.ogg">sintel_trailer-audio-192k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-192k.ogg">sintel_trailer-audio-192k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -333,7 +280,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">16%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-256k.ogg">sintel_trailer-audio-256k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-256k.ogg">sintel_trailer-audio-256k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -344,7 +291,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">28%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-500k.ogg">sintel_trailer-audio-500k.ogg</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-500k.ogg">sintel_trailer-audio-500k.ogg</a><br>
       </td>
     </tr>
     <tr>
@@ -356,7 +303,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">4.3%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-64k-CBR.mp3">sintel_trailer-audio-64k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-64k-CBR.mp3">sintel_trailer-audio-64k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -367,7 +314,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">6.4%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-96k-CBR.mp3">sintel_trailer-audio-96k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-96k-CBR.mp3">sintel_trailer-audio-96k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -378,7 +325,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">8.6%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-128k-CBR.mp3">sintel_trailer-audio-128k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-128k-CBR.mp3">sintel_trailer-audio-128k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -389,7 +336,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">13%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-192k-CBR.mp3">sintel_trailer-audio-192k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-192k-CBR.mp3">sintel_trailer-audio-192k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -400,7 +347,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">17%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-256k-CBR.mp3">sintel_trailer-audio-256k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-256k-CBR.mp3">sintel_trailer-audio-256k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -411,7 +358,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">21%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-320k-CBR.mp3">sintel_trailer-audio-320k-CBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-320k-CBR.mp3">sintel_trailer-audio-320k-CBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -423,7 +370,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">7.2%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-64k-VBR.mp3">sintel_trailer-audio-64k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-64k-VBR.mp3">sintel_trailer-audio-64k-VBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -434,7 +381,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">8.3%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-96k-VBR.mp3">sintel_trailer-audio-96k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-96k-VBR.mp3">sintel_trailer-audio-96k-VBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -445,7 +392,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">9.5%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-128k-VBR.mp3">sintel_trailer-audio-128k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-128k-VBR.mp3">sintel_trailer-audio-128k-VBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -456,7 +403,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">11%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-192k-VBR.mp3">sintel_trailer-audio-192k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-192k-VBR.mp3">sintel_trailer-audio-192k-VBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -467,7 +414,7 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">13%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-256k-VBR.mp3">sintel_trailer-audio-256k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-256k-VBR.mp3">sintel_trailer-audio-256k-VBR.mp3</a><br>
       </td>
     </tr>
     <tr>
@@ -478,22 +425,18 @@ and see if you can tell the difference between them.<br>
       </td>
       <td style="vertical-align: top;">14%<br>
       </td>
-      <td style="vertical-align: top;"><a href="Audio/sintel_trailer-audio-320k-VBR.mp3">sintel_trailer-audio-320k-VBR.mp3</a><br>
+      <td style="vertical-align: top;"><a href="Audio/sintel_trailer_conversions/sintel_trailer-audio-320k-VBR.mp3">sintel_trailer-audio-320k-VBR.mp3</a><br>
       </td>
     </tr>
   </tbody>
 </table>
 
-
 <br>
 
-
 <br>
-
 
 <h3>
 Bonus #1 - Rip a CD with Sound Juicer</h3>
-
 
 From the early 1990's until about five years ago, the CD was by far the
 most popular way to store and move audio recordings.&nbsp; Because of
@@ -503,9 +446,7 @@ convert to FLAC, Ogg, or MP3 format for use on portable audio devices
 that makes this very easy, Sound Juicer, also know in ubuntu as Audio
 CD Extractor.&nbsp; <br>
 
-
 <br>
-
 
 Once you have the program open, it should automatically detect your CD
 and read the information such as title and author, as well as the name
@@ -514,45 +455,34 @@ change any of the header information, just edit it.&nbsp; For the track
 information, double click on it to edit it.&nbsp; This information is
 what is used to determine the folder structure and file names.<br>
 
-
 <img src="AudioScreen/SoundJuicer-Contents.png" alt="SoundJuicer-Contents.png"><br>
 
-
 <br>
-
 
 To set some of the details on how the CD will be extracted, open the
 Preferences dialogue.&nbsp; <br>
 
-
 <img src="AudioScreen/SoundJuicer-Preferences.png" alt="SoundJuicer-Preferences.png"><br>
-
 
 There are four important items to set here.&nbsp; The first is the root
 folder that everything should be extracted to.&nbsp; This is not where
 the final audio file will go (that comes next), but will contain other
 folders.&nbsp; <br>
 
-
 <br>
-
 
 The next item is the folder hierarchy.&nbsp; How you set this depends
 greatly on how you organize you audio recording collection on the
 computer.&nbsp; Many people will have a folder for each artist, and
 then folders inside that for each album by the artist.&nbsp; <br>
 
-
 <br>
-
 
 Next is the name of the file that will be written for each track.&nbsp;
 Once again this depends greatly on how your recordings are
 organized.&nbsp; <br>
 
-
 <br>
-
 
 Finally is the format that the files will be written to.&nbsp; I
 strongly recommend using FLAC for everything you extract from a
@@ -563,17 +493,13 @@ Converter from the last section to create a copy.&nbsp; That way you
 can alwasy store the original, lossless copy on your computer if you
 ever want a better version in the future.<br>
 
-
 <br>
-
 
 Once you have all the settings figured out, go ahead and hit the
 Extract button on the main window.&nbsp; You will see the extraction
 status on the bottom, and next to each track as it is extracted.&nbsp; <br>
 
-
 <img src="AudioScreen/SoundJuicer-Progress.png" alt="SoundJuicer-Progress.png"><br>
-
 
 While the extraction is taking place, go and look at where the music is
 being written to on your hard disk.&nbsp; If you didn't get the folders
@@ -581,19 +507,14 @@ or filenames right, stop the extraction, delete the files that have
 been extracted so far, then go back to the preferences and fix
 it.&nbsp; <br>
 
-
 <br>
-
 
 Congratualtions you're well on your way to having your music collection
 available on your computer!<br>
 
-
 <br>
 
-
 <h3>Bonus #2 - Create an Audio CD with Brasero</h3>
-
 
 Every now and then you may need to play an audio recording in an
 old-style CD player.&nbsp; Some of the newer types of CD players will
@@ -604,91 +525,66 @@ this for you.&nbsp; Brasero is one that handles everything from
 converting your files (in various formats) to the Audio CD format and
 burn it to a CD all in one step.&nbsp; <br>
 
-
 <br>
-
 
 Simply open Brasero and select "Audio project, Create a traditional
 audio CD".<br>
 
-
 <img src="AudioScreen/Brasero-Project.png" alt="Brasero-Project.png"><br>
 
-
 <br>
-
 
 Then you can click the add button, or simply drag the recordings you
 want into the window. <br>
 
-
 <img src="AudioScreen/Brasero-Import.png" alt="Brasero-Import.png"><br>
 
-
 <br>
-
 
 You can also drag them around in the window to change the order of the
 recordings to suit whatever you would like.<br>
 
-
 <img src="AudioScreen/Brasero-Move.png" alt="Brasero-Move.png"><br>
 
-
 <br>
-
 
 If there isn't adequate information for the recording title or artist,
 click on the recording and select "Edit Information", then enter the
 correct data.<br>
 
-
 <img src="AudioScreen/Brasero-Information.png" alt="Brasero-Information.png"><br>
 
-
 <br>
-
 
 Finally, you can set the title for the whole CD in the box at the
 bottom.&nbsp; Notice the status window below that, which shows how many
 more minutes of audio you can add to this CD before it is full.<br>
 
-
 <img src="AudioScreen/Brasero-Title.png" alt="Brasero-Title.png"><br>
 
-
 <br>
-
 
 When you have everything you want on the CD, in the correct order, and
 with the correct information; go ahead and click the "Burn..." button.<br>
 
-
 <br>
-
 
 That will bring up a dialog where you can set your CD buring
 preferences. <br>
 
-
 <img src="AudioScreen/Brasero-Burn.png" alt="Brasero-Burn.png"><br>
 
-
 <br>
-
 
 Click burn and Brasero will start converting your recordings to the
 Audio CD format, then it will start writing them to the CD.<br>
 
-
 <img src="AudioScreen/Brasero-Status.png" alt="Brasero-Status.png"><br>
 
-
 <br>
-
 
 Once that completes, the disc should eject itself, and you have a brand
 new CD ready for use in an CD player.<br>
 
-
+<br>
 </body></html>
