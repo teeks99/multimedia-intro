@@ -5,6 +5,7 @@
   
 </head><body>
 <h2>Channels</h2>
+
 <h3>
 Stereo Recording</h3>
 
@@ -18,7 +19,9 @@ to record under the Edit -&gt; Preferences -&gt; Devices menu for the
 specific device that will support multi-channel recording.<br>
 
 <br>
+
 <h3>Mixing Audio Sources</h3>
+
 More common than having a single device that records in stereo, is
 having multiple devices recording different sounds.&nbsp; An example
 could be a radio or tv talk show where the host is one channel of
@@ -27,39 +30,183 @@ example would be recording a band playing, where each musician and/or
 insturament has its own track of audio.&nbsp; There are ways to record
 this in audacity (with the help of the JACK audio routing software on
 linux), but we won't go into them here.&nbsp; <br>
+
 <br>
+
 Instead, we'll start with a scenario where there are several
 independant tracks of audio that have already been recorded, and need
 to be edited together into one piece of audio.&nbsp; <br>
-<br>
-There is one track for each person talking, you can download them here and here.&nbsp; Below is a transcript of the audio:<br>
-<br>
-L: Hi Tom<br>
-T: Hi Laura<br>
-L: How are you doing?<br>
-T: I'm fine, how are you?<br>
-L: Fine as well.&nbsp; What are you doing now?<br>
-T: I'm reading a book, why?<br>
-L: Do you want to go to the zoo with me?<br>
-T: Sure, that sounds fun.<br>
-<br>
-L: Hola Tom<br>
-T: Hola Laura<br>
-L: Como estas?<br>
-T: Estoy bien, y tu?<br>
-L: Estoy bien tambien.&nbsp; Que haces horita?<br>
-T: Estoy leyendo un libro.&nbsp; Por que?<br>
-L: Quieres ir al zoologico con mi?<br>
-T: Por supuesto, eso suena divertido. <br>
-<br>
-Mixing audio sources - alternative to copy-paste<br>
-Name tracks<br>
 
 <br>
 
-Adding silence, duplicating, etc<br>
+There is one track for each person talking, you can download them <a href="Audio/MalePart-NoNoise-Start.flac">here</a> (<a href="Audio/MalePart-NoNoise-Start-es.flac">es</a>)
+and <a href="Audio/FemalePart-NoNoise.flac">here</a> (<a href="Audio/FemalePart-NoNoise-es.flac">es</a>).&nbsp; Below is a
+transcript of
+the audio:<br>
 
 <br>
+
+F: Hi there<br>
+
+M: Hi<br>
+
+F: How are you doing?<br>
+
+M: I'm fine, how are you?<br>
+
+F: Fine as well.&nbsp; What are you doing now?<br>
+
+M: I'm reading a book, why?<br>
+
+F: Do you want to go to the zoo with me?<br>
+
+M: Sure, that sounds fun.<br>
+
+<br>
+
+M: Hola <br>
+
+H: Hola <br>
+
+M: Como estas?<br>
+
+H: Estoy bien, y tu?<br>
+
+M: Estoy bien tambien.&nbsp; Que haces ahorita?<br>
+
+H: Estoy leyendo un libro.&nbsp; Por que?<br>
+
+M: Quieres ir al parque zoologico con migo?<br>
+
+H: Si, que divertido. <br>
+
+<br>
+
+Once you have the first clip open in audacity, open the second one by
+going to File -&gt; Import -&gt; Audio... and selecting the second clip
+from your hard drive.&nbsp; Now they should both be open, try playing
+them back together by pushing the play button.&nbsp; <br>
+
+<img src="AudioScreen/Audacity-TwoTracks.png" alt="Audacity-TwoTracks.png"><br>
+
+You'll notice that they don't line up.&nbsp; The two subjects are
+talking over each other.&nbsp; This is a common occourance when
+recording multi-track audio, as each track may not start the recording
+at the same spot.&nbsp; To fix this we will have to synchronize (sync)
+them manually.&nbsp; But before we do that, lets give these tracks
+names so we can keep track of them (this is even more important when
+you have lots of tracks), to do this, click on the drop down arrow for
+the track, and select Name.&nbsp; For the female track name it "Female"
+and for the male track, name it "Male".&nbsp; <br>
+
+<img src="AudioScreen/Audacity-LabelSelection.png" alt="Audacity-LabelSelection.png"><br>
+
+<br>
+
+<img src="AudioScreen/Audacity-LabelName.png" alt="Audacity-LabelName.png"><br>
+
+In addition, now would be a good time to save the audacity project as a
+.aup file and directory.&nbsp; <br>
+
+<img src="AudioScreen/Audacity-TwoTracksReady.png" alt="Audacity-TwoTracksReady.png"><br>
+
+<br>
+
+<br>
+
+<h3>Shift Tool</h3>
+
+Now we're ready to sync the audio so that the final result has the two
+subjects talking to each other at the correct times.&nbsp; Select the
+Time Shift Tool from just below and to the right of the selection tool.<br>
+
+<img src="AudioScreen/Audacity-TimeShiftTool.png" alt="Audacity-TimeShiftTool.png"><br>
+
+<br>
+
+Then it is as simple as clicking on the track you want to move, and
+dragging it to the correct spot.&nbsp; In this case, lets move the male
+track (because the female track talks first).&nbsp; Just move it so
+that on the waveform the first male response lines up in the gap
+between the first and second female responses.<br>
+
+<br>
+
+<img src="AudioScreen/Audacity-ShiftMale.png" alt="Audacity-ShiftMale.png"><br>
+
+<br>
+
+If you try playing it back at this point you will notice that it starts
+out lined up, but then later on in the recording it gets out of
+wack.&nbsp; There are several possible reasons this could happen, but
+in this case it is because these tracks were done in two seperate
+takes, with only one person's voice being recorded each time.&nbsp;
+Because they had no frame of reference the same tempo wasn't kept both
+times.&nbsp;&nbsp; To fix this, we will have to add in extra space to
+the blank areas to make up the difference.&nbsp; Simply click at the
+spot where you want to add space to put the cursor there, the select
+Generate -&gt; Silence, then type the number of seconds you want to add
+(try something small like 0.5 to start with, you may need to select a
+different option from the drop down to pick a unit that has fractions
+of seconds, such as hh:mm:ss+hundredths) and click OK.&nbsp; <br>
+
+<br>
+
+<img src="AudioScreen/Audacity-InsertSilence.png" alt="Audacity-InsertSilence.png"><br>
+
+<br>
+
+Listen to the result to see if it sounds better, if it needs more go
+back and do it again.&nbsp; Repeat for each section that doesn't line
+up, moving
+from left to right in the two tracks.&nbsp; If you were to start at the
+right and move to the left, each change you made would throw off those
+that you had done previously.<br>
+
+<img src="AudioScreen/Audacity-CorrectSpacing.png" alt="Audacity-CorrectSpacing.png"><br>
+
+<br>
+
+Another way to sync audio is to do it from the begenning.&nbsp; This
+time the two subjects were recorded in the same take, from two
+different microphones.&nbsp; <br>
+<h3>Too Much Audio</h3>
+
+You may have noticed that in some cases the male microphone picked up
+the female talking and the female microphone picked up the male
+talking.&nbsp; This is a farily common occourance.&nbsp; We want to
+remove this, because if the same audio shows up at a time that is even
+a split second different, it can drastically change the final audio
+(possibly sound like an echo or reverberation).&nbsp; Below are the
+areas in this clip where this is happening.<br>
+
+<br>
+
+<img src="AudioScreen/Audacity-WrongChannel.png" alt="Audacity-WrongChannel.png"><br>
+
+<br>
+
+One way to fix this would be to use the "Silence Audio" functionality
+that we used in the last section.&nbsp; Its usefulness is obvious here,
+if we were to simply cut out the additional audio from the tracks,
+their duration would change, and it wouldn't be possible to match them
+up.&nbsp; Instead, we can go, select each area and then run "Silence
+Audio".&nbsp; <br>
+
+<br>
+
+Another option to fix this would be to use the Envelope Tool.&nbsp; The
+Envelope Tool allows you to create a graphical envelope around the
+waveform which indicates the volume for that area.&nbsp; This allows
+you to simply turn down the volume only for areas that we don't want to
+hear, while leaving other areas normal.&nbsp; <br>
+
+<h3>Creating a stereo track</h3>
+
+Now that we have two good tracks, one for each speaker, one thing we
+can set them up to output a stereo track that has one person talking
+from each channel.&nbsp; That would make it sound like one person is
+taking from the left and the other is talking from the right.<br>
 
 <br>
 
