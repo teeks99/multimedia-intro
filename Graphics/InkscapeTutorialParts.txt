@@ -1,0 +1,61 @@
+Basic
+
+Inkscape opens a separate document window for each document. You can navigate among them using your window manager (e.g. by Alt+Tab), or you can use the Inkscape shortcut, Ctrl+Tab, which will cycle through all open document windows. (Create a new document now and switch between it and this document for practice.) Note: Inkscape treats these windows like tabs in a web browser, this means the Ctrl+Tab shortcut only works with documents running in the same process. If you open multiple files from a file browser or launch more than one Inkscape process from an icon it will not work.
+
+You can use the keyboard to move (arrow keys), scale (< and > keys), and rotate ([ and ] keys) objects. Default moves and scales are by 2 px; with Shift, you move by 10 times that. Ctrl+> and Ctrl+< scale up or down to 200% or 50% of the original, respectively.  Default rotates are by 15 degrees; with Ctrl, you rotate by 90 degrees.
+
+Note: Linux users may not get the expected results with the Alt+arrow and a few other key combinations if their Window Manager catches those key events before they reach the inkscape application. One solution would be to change the WM's configuration accordingly.
+
+[If you are on Linux, you might find that Alt+click does not work properly.  Instead, it might be moving the whole Inkscape window.  This is because your window manager has reserved Alt+click for a different action.  The way to fix this is to find the Window Behavior configuration for your window manager, and either turn it off, or map it to use the Meta key (aka Windows key), so Inkscape and other applications may use the Alt key freely.] 
+
+
+Advanced
+
+Yet another set of paste commands, Paste Size, scales the selection to match the desired size attribute of the clipboard object(s). There are a number  of commands for pasting size and are as follows: Paste Size, Paste Width, Paste Height,  Paste Size Separately, Paste Width Separately, and Paste Height Separately.  
+
+Paste Size scales the whole selection to match the overall size of the clipboard  object(s). Paste Width/Paste Height scale the  whole selection horizontally/vertically so that it matches the width/height of the clipboard object(s). These commands honor the scale ratio lock on the Selector Tool controls bar (between W and H fields), so that when that lock is pressed, the other dimension of the selected object is scaled in the same proportion; otherwise the other dimension is unchanged.  The commands containing “Separately” work similarly to the above described commands, except that they scale each selected object separately to make it match the size/width/height of the clipboard object(s).  
+
+Clipboard is system-wide - you can copy/paste objects between different Inkscape instances as well as between Inkscape and other applications (which must be able to handle SVG on the clipboard to use this). 
+
+You will see a number of gray square nodes on the path. These nodes can be selected by click, Shift+click, or by dragging a rubberband - exactly like objects are selected by the Selector tool. You can also click a  path segment to automatically select the adjacent nodes. Selected nodes become highlighted and show their node handles - one or two small circles connected to each selected node by straight lines. The ! key inverts node selection in the current subpath(s) (i.e. subpaths with at least one  selected node); Alt+! inverts in the entire path. 
+
+You can delete nodes with Del or Ctrl+Alt+Click. When deleting nodes it will try to retain the shape of the path, if you desire for the handles of the adjacent nodes to be retracted (not retaining the shape) you can  delete with Ctrl+Del. Additionally, you can duplicate (Shift+D) selected nodes. The path can be broken (Shift+B) at the selected nodes, or if you select two endnodes on one path, you can join them (Shift+J). 
+
+Any shape or text object can be converted to path (Shift+Ctrl+C). This operation does not change the appearance of the object but removes all capabilities specific to its type (e.g. you can't round the corners of a rectangle or edit the text anymore); instead, you can now edit its nodes. Here are two stars - the left one is kept a shape and the right one is converted to path. Switch to node tool and compare their editability when selected: 
+
+Like other tools, Text tool can select objects of its own type - text objects -so you can click to select and position the cursor in any existing text object (such as this paragraph). 
+
+Of course you could just convert your text to path (Shift+Ctrl+C) and move the letters as regular path objects. However, it is much more convenient to keep text as text - it remains editable, you can try different fonts without removing the kerns and spacing, and it takes much less space in the saved file. The only disadvantage to the “text as text” approach is that you need to have the original font installed on any system where you want to open that SVG document. 
+
+
+Calligraphy
+
+If you have a tablet and would like to utilize the sensitivity features, you will need to configure your device. This configuration will only need to be performed once and  the settings are saved. To enable this support you must have the tablet plugged in prior to starting inkscape and then proceed to open the Input Devices...  dialog through the File menu. With this dialog open you can choose the preferred device and settings for your tablet pen. Lastly, after choosing those settings, switch to the Calligraphy tool and toggle the toolbar buttons for pressure and tilt. From now on, Inkscape will remember those settings on startup. 
+
+The Inkscape calligraphy pen can be sensitive to the velocity of the stroke (see “Thinning” below), so if you are using a mouse, you'll probably want to zero this parameter. 
+
+Switch to the Calligraphy tool by pressing Ctrl+F6, pressing the C  key, or by clicking on its toolbar button. On the top toolbar, you will  notice there are 8 options: Width & Thinning; Angle & Fixation; Caps; Tremor, Wiggle & Mass. There are also two buttons to toggle tablet Pressure and Tilt sensitivity on and off (for drawing tablets). 
+
+This pair of options control the width of your pen. The width can vary from 1 to 100 and (by default) is measured in units relative to the size of your editing window, but independent of zoom. This makes sense, because the  natural “unit of measure” in calligraphy is the range of your hand's movement, and it is therefore convenient to have the width of your pen nib in constant  ratio to the size of your “drawing board” and not in some real units which  would make it depend on zoom. This behavior is optional though, so it can be changed for those who would prefer absolute units regardless of zoom. To switch to this mode, use the checkbox on the tool's Preferences page (you can open it by double-clicking the tool button). 
+
+For fun, set Width and Thinning both to 100 (maximum) and draw with  jerky movements to get strangely naturalistic, neuron-like shapes:  
+
+Each traditional calligraphy style has its own prevalent pen angle. For example, the Unicial hand uses the angle of 25 degrees. More complex hands and more experienced calligraphers will often vary the angle while drawing, and Inkscape makes this possible by pressing up and down arrow keys or with a tablet that supports the tilt sensitivity feature. For beginning calligraphy lessons, however, keeping the angle constant will work best. Here are examples of strokes drawn at different angles (fixation = 100): 
+
+Tremor is intended to give a more natural look to the calligraphy strokes. Tremor is adjustable in the Controls bar with values ranging from 0.0 to 1.0. It will  affect your strokes producing anything from slight unevenness to wild blotches and  splotches. This significantly expands the creative range of the tool. 
+
+Wiggle & Mass
+Diferente al ancho y al ángulo, estos dos últimos parámetros definen como "siente" la herramienta, más allá de como afectan su salida visual. A razón de esto en esta sección no habrán ilustraciones; en vez de esto intente usted mismo para poder tener una mejor idea de lo que hacen estos parámetros.
+
+Wiggle is the resistance of the paper to the movement of the pen. The default is at minimum (0), and increasing this parameter makes paper “slippery”: if the mass is big, the pen tends to run away on sharp turns; if the mass is zero, high wiggle makes the pen to wiggle wildly. 
+
+In physics, mass is what causes inertia; the higher the mass of the Inkscape calligraphy tool, the more it lags behind your mouse pointer and the more it smoothes out sharp turns and quick jerks in your stroke. By default this value is quite small (2) so that the tool is fast and responsive, but you can increase mass to get slower and smoother pen. 
+
+
+Tips
+
+While in the Text tool, pressing Ctrl+U toggles between Unicode and normal mode. In Unicode mode, each group of 4 hexadecimal digits you type becomes a single Unicode character, thus allowing you to enter arbitrary symbols (as long as you know their Unicode codepoints and the font supports them). To finish the Unicode input,  press Enter. For example, Ctrl+U 2 0 1 4 Enter inserts an em-dash (—). To quit the Unicode mode without inserting anything press Esc. 
+
+Selecting the original
+When you have a text on path, a linked offset, or a clone, their source object/path may be difficult to select because it may be directly underneath, or made invisible and/or locked. The magic key Mayus+D will help you; select the text, linked offset, or clone, and press Mayus+D to move selection to the corresponding path, offset source, or clone original.
+
