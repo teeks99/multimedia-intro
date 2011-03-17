@@ -1,9 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  <title>Audio - 6 - Channels</title>
-
-  
-</head><body>
+<html><head><title>Audio - 6 - Channels</title></head><body>
 <h2>Channels</h2>
 
 <h3>
@@ -166,10 +162,31 @@ that you had done previously.<br>
 <img src="AudioScreen/Audacity-CorrectSpacing.png" alt="Audacity-CorrectSpacing.png"><br>
 
 <br>
+<h3>Synch with Audio Marker</h3>
+
 
 Another way to sync audio is to do it from the begenning.&nbsp; This
 time the two subjects were recorded in the same take, from two
-different microphones.&nbsp; <br>
+different microphones.&nbsp; You can download the two seperate tracks <a href="Audio/MalePart-2-mono.flac">here</a> and <a href="Audio/FemalePart-2-mono.flac">here</a>.<br>
+<img src="AudioScreen/Audacity-SyncTracks.png" alt="Audacity-SyncTracks.png"><br>
+When you play them back, you'll notice that they both have a loud sharp
+sound towards the begenning.&nbsp; This sound was intentionally made
+(can be done with a professional clap-board or just by clapping your
+hands once) so that the two tracks could be synchronized starting at
+this point.&nbsp; <br>
+<br>
+Its easy to synchronize them now.&nbsp; Just zoom in on the part with
+the sudden sound, and move the tracks with the Time Shift Tool until
+the sound matches exactly.<br>
+<img src="AudioScreen/Audacity-SyncMatch.png" alt="Audacity-SyncMatch.png"><br>
+<br>
+Now (or when you're all done with your other editing if you prefer) you
+can cut the exact same amount (use the selection editor at the bottom,
+select zero for the start and the same length in both tracks) of sound
+off the front of both recordings to get to a starting place that is
+after the clap.&nbsp; It was only there for synchronization, and we
+don't want it in the final recording.<br>
+<img src="AudioScreen/Audacity-SyncCutFront.png" alt="Audacity-SyncCutFront.png"><br>
 <h3>Too Much Audio</h3>
 
 You may have noticed that in some cases the male microphone picked up
@@ -182,7 +199,7 @@ areas in this clip where this is happening.<br>
 
 <br>
 
-<img src="AudioScreen/Audacity-WrongChannel.png" alt="Audacity-WrongChannel.png"><br>
+<img style="width: 959px; height: 581px;" src="AudioScreen/Audacity-WrongChannel.png" alt="Audacity-WrongChannel.png"><br>
 
 <br>
 
@@ -203,11 +220,37 @@ hear, while leaving other areas normal.&nbsp; <br>
 <br>
 To apply it, switch to the Envelope Tool, immediately to the right of the selection tool.<br>
 <img src="AudioScreen/Audacity-EnvelopeTool.png" alt="Audacity-EnvelopeTool.png"><br>
-<br>
-The envelope tool works by applying control points to the volume at
+<br>The envelope tool works by applying control points to the volume at
 specific points in time.&nbsp; Each time you apply a control point by
 clicking on the waveform, it creates four handles that allow you to
-adjust the volume.&nbsp; <br>
+adjust the volume.&nbsp; By default (for 100% volume) on control point
+is at each of the -100%, -50%, 50%,&nbsp; and 100% levels.&nbsp; You
+can grab any of these points and move it up or down to change the
+volume level at that point.&nbsp; <br>
+<br>
+The first thing I do when I start using the envelope tool is to set
+control points (that aren't going to move) for the portions of audio I
+don't want to change.&nbsp; Here are the "fixed" control points,
+applied to the male voice.<br>
+<img src="AudioScreen/Audacity-EnvelopeMaleFixed.png" alt="Audacity-EnvelopeMaleFixed.png"><br>
+<br>
+After the fixed points are applied, its easy to take the envelope down
+to zero in sections between them.&nbsp; Just click on it to create a
+control point, and drag it all the way down towards the center.&nbsp;
+As you drag it down, you will see the envelope form a curve from your
+new control point, up to the control points around the good audio,
+giving you a smooth transition (this is more important if you aren't
+completely silencing the audio).<br>
+<br>
+Here are the results after the envelope tool has been applied to silence the other sounds out of the male track.<br>
+<img src="AudioScreen/Audacity-EnvelopeMaleFinished.png" alt="Audacity-EnvelopeMaleFinished.png"><br>
+<br>
+The envelope tool is even more useful where you want to constantly
+change the levels of sound for different tracks relative to each
+other.&nbsp; For instance if you have a band where each instrument is
+in its own track, it is easy to use the envelope tool to lower the
+sound from the drums during a portion of the song where you want the
+soloist to come through clearly.&nbsp; <br>
 
 <h3>Creating a stereo track</h3>
 
@@ -215,7 +258,35 @@ Now that we have two good tracks, one for each speaker, one thing we
 can set them up to output a stereo track that has one person talking
 from each channel.&nbsp; That would make it sound like one person is
 taking from the left and the other is talking from the right.<br>
-
 <br>
+Audacity is smart, in that when it exports the project, it will
+automatically create a stereo file.&nbsp; All we need to do is control
+how much volume comes out of each channel for each track.&nbsp; In the
+tools for the track, to the left of the waveform, there is a slider
+with a L and a R on it (for Left and Right).&nbsp; We can move the
+slider for the femal voice to the left and the male voice to the right,
+so that it sounds like the female talker is off to the left and the
+male talker is on the other side.&nbsp; <br>
+<br>
+It is not necessary to move the slider all the way over, in fact it is
+often better to leave a bit of each track coming out the opposite
+channel.&nbsp; This is because, in nature sound from a person talking
+directly to your left or right will have sound wrap around your head
+(and bounce off things) and arrive at the opposite ear.&nbsp; If the
+listener was wearing headphones and all the audio was coming from only
+one side, it would sound unnatural.<br>
+<br>
+Here's an example with the settings changed for different channels.<br>
+<img src="AudioScreen/Audacity-StereoChannels.png" alt="Audacity-StereoChannels.png"><br>
+<br>Another quick tip.&nbsp; When the audio was recorded, the
+microphone used by the femal picked up a bit stronger and her channel
+is a bit louder.&nbsp; To make them match each other better, the volume
+slider (the one with the "-" and "+") was lowered a bit for her
+channel.&nbsp; The other problem with this audio is that the male's
+microphone picked up a lot of background noise, and that needs to be
+removed, we'll work on that in the next section!<br>
+<br>
+<br>
+
 
 </body></html>
