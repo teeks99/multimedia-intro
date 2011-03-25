@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Test Podcast</title>
+        <description>This is a test showing a good podcast.</description>
+        <link>http://mediaintro.teeks99.com/podcast/</link>
+        <lastBuildDate>Fri, 25 Mar 2011 09:55:12 -0400 </lastBuildDate>
+ 
+        <item>
+                <title>Episode 002 - Hello Again</title>
+                <description>I give an introduction to the episode and say hello again.</description>
+                <link>http://mediaintro.teeks99.com/podcast/ep002_notes.html</link>
+                <guid>http://mediaintro.teeks99.com/podcast/ep002_notes.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:55:12 -040 </pubDate>
+                <enclosure>http://mediaintro.teeks99.com/podcast/TestPodcast-ep002.mp3</enclosure>
+        </item>
+        <item>
+                <title>Episode 001 - Hello</title>
+                <description>I give an introduction to the episode and say hello</description>
+                <link>http://mediaintro.teeks99.com/podcast/ep001_notes.html</link>
+                <guid>http://mediaintro.teeks99.com/podcast/ep001_notes.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:20:42 -040 </pubDate>
+                <enclosure>http://mediaintro.teeks99.com/podcast/TestPodcast-ep001.mp3</enclosure>
+        </item>
+ 
+</channel>
+</rss>
