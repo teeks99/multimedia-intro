@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Podcast de Prueba</title>
+        <description>Esta es una prueba que demuestra un buen podcast.</description>
+        <link>http://mediaintro.teeks99.com/podcast/</link>
+        <pubDate>Fri, 25 Mar 2011 09:55:12 -0400 </pubDate>
+        <lastBuildDate>Fri, 25 Mar 2011 09:55:12 -0400 </lastBuildDate>
+ 
+        <item>
+                <title>Episode 002 - Bienvenido otra vez</title>
+                <description>Le doy una introducción al episodio y dar la bienvenida otra vez.</description>
+                <link>http://mediaintro.teeks99.com/podcast/ep002_notes-es.html</link>
+                <guid>http://mediaintro.teeks99.com/podcast/ep002_notes-es.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:55:12 -0400 </pubDate>
+                <enclosure url="http://mediaintro.teeks99.com/podcast/TestPodcast-es-ep002.mp3" length="75285" type="audio/mpeg" />
+        </item>
+        <item>
+                <title>Episode 001 - Bienvenido</title>
+                <description>Le doy una introducción al episodio y dar la bienvenida.</description>
+                <link>http://mediaintro.teeks99.com/podcast/ep001_notes-es.html</link>
+                <guid>http://mediaintro.teeks99.com/podcast/ep001_notes-es.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:20:42 -0400 </pubDate>
+                <enclosure url="http://mediaintro.teeks99.com/podcast/TestPodcast-es-ep001.mp3" length="74454" type="audio/mpeg" />
+        </item>
+ 
+</channel>
+</rss>
