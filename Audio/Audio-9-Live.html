@@ -67,24 +67,109 @@ QuickTime media player.&nbsp; However, the Darwin Media Server has been
 released as open source, and is freely available.&nbsp; In addition to
 working with QuickTime video, it can work with some of the bigger
 Audio/Video standards (H.264, MPEG-4 Part 2, 3gp).&nbsp; <br>
-<h3>Taking to Guests</h3>
-
-
-Voice over IP (VoIP) - Skype, SIP<br>
-
-Mumble <br>
-Big Blue Button<br>
-
-
+<h3>Talking to Guests</h3>
+So now you have the audio and video from your show being pumped out
+over the internet, however it is still just you and whoever is sitting
+with you where you are recording.&nbsp; Wouldn't it be nice if you
+could have guests or even other hosts join you on the show, live from
+all around the world?&nbsp; Thanks to the great ability of computers to
+send audio and video to each other that is possible!&nbsp; (This is
+also all possible even if you aren't doing a live stream, you can still
+use all this for recording a non-live podcast/videocast.)<br>
 <br>
+The most basic way to have someone join in is to use one of several
+Voice over IP (VoIP) options.&nbsp; Voice over IP basically a computer
+based replacement for phone calls.&nbsp; Instead of sending your voice
+as a voltage over a copper wire to your telephone company, the computer
+sends your voice as a stream of bits to the recipiant over the
+interent.&nbsp; The most popular version of VoIP that can be use for
+making audio (or video) shows is Skype.&nbsp; Skype allows you to join
+one or more people into a call.&nbsp; From there you can record the
+output of the call onto your computer or send it directly out on your
+stream.&nbsp;&nbsp; Unfortunately skype has some limitations that keep
+it from interacting with other software besides the official skype
+client.&nbsp; If you want an option that allows you to have the freedom
+to use many different types of VoIP software, there is a standard that
+most of the other ones (besides Skype) follow.&nbsp; That is called
+Sesssion Initiation Protocol (SIP).&nbsp; SIP is a very full-featured
+protocol that has all sorts of great features like call-forwarding and
+voicemail built into it.&nbsp; The Empathy (Instant Messaging) client
+that comes with Ubuntu can have the telepathy-sofiasip plugin installed
+to be a very good SIP client.&nbsp; Also in Empathy is the ability to
+use Video/Voice chat across GoogleTalk/Jabber servers.&nbsp; This is a
+good alternative to skype as well.<br>
+<br>The Skype/SIP/Instant Messanger have some support for multiple
+users talking to each other, but it is not their specality, and they
+are generally limited to only a few users at a time.&nbsp; Sometimes
+you might want to have a large group of people in the show where anyone
+(or limited groups thereof) can talk to each other.&nbsp; Mumble is a
+group voice chat application that was designed for use by groups of
+people playing computer games, but will work very well for any kind of
+group chat.&nbsp; To get this setup, you need to install the
+mumble-server (called murmur) somewhere on the network that all the
+users can get to, then have each user run the mumble client
+application.&nbsp; It is possible to create multiple channels on the
+server, so you can have multiple different groups chatting.&nbsp; <br>
+<br>
+There isn't anything similar that works with large group conversations
+over video.&nbsp; This is because it is easy to hear multiple different
+people at the same time (or at least close to the same time), but you
+can't easily watch several different video displays at once.&nbsp; The
+closest application that allows for this is Big Blue Button (<a href="http://bigbluebutton.org">http://bigbluebutton.org</a>).&nbsp;
+Big Blue Button was built for use in virtual classrooms, where all the
+students have a web-cam (or at least microphone) and there is a teacher
+that can control who is talking at any given time.&nbsp; This same
+setup can work well for a show, the host (or possibly a technican)
+would replace the teacher as the one who controls what video stream is
+being sent out to everyone, and the students would be replaced with
+guests on the show.&nbsp; This uses flash streaming video for the
+client that each user needs, so it is very easy for everyone to setup.<br>
+<h3>Tieing it all together with JACK</h3>
+So now that you have a bunch of different streams of audio coming into
+your computer, and a stream to send it out on, you need a way to link
+up that input with the output.&nbsp; JACK is a set of software that
+allows you to do just that.&nbsp; The easiest way to think of JACK is
+as a set of virtual patch cables, where you can take the audio output
+of one program and feed it to a different program.&nbsp; Then you can
+take that output and feed it to a third program.&nbsp; JACK is somewhat
+complicated to setup, and a bit beyond the scope of things here, but it
+is an amazing resource if you need something to tie all your audio
+together.<br>
 <h3>
 
 Interacting with the Audiance</h3>
-
-
-IRC<br>
-
-Twitter/Identica<br>
+Now that you have the media for your live stream all setup, the only
+other thing to think about is the other stuff that is supporting
+it.&nbsp; Generally it is important to have a web page that has
+information about your stream, such as what is on right now, and what
+the future schedule is.&nbsp; <br>
+<br>
+Another nice to have part of experience is a way to use text for the
+audiance to talk to the hosts and guests, as well as each other.&nbsp;
+This is generally done by creating an Internet Relay Chant (IRC) chat
+room.&nbsp; This could be on an IRC server that is specific to the show
+(with the option to have more than one chat room) or on another public
+IRC server, where there is a room specifically set aside for this
+show.&nbsp; Since not all users have an IRC client on their computer,
+it is highly recommended that you make one available embedded in the
+website as well.&nbsp; There are several out there that allow users to
+login to the IRC chat by just going to a web-page, without having to
+download anything to their computer.<br><br>
+The other option for interacting with the audiance is to use Twitter
+(or the open-source alternative Identica).&nbsp; On these sites you
+could tell users to use a specific hashtag (#CoolShow) in their posts,
+this way anyone can quickly see all the comments going back and fourth
+about the show.&nbsp; <br>
+<br>
+Either IRC or Twitter/Identica is a great way to interact with the
+audiance.&nbsp; A common way to do this is to ask a question on the
+live stream, and then request that the audiance write their responses
+back.&nbsp; Anothe method is to tell the audiance to post questions
+they have for a guest using one of these methods, then the host can
+read the question outloud to the guest.<br>
+<br>
+<br>
+That should be enough good tips to get you started on your live stream... good luck!<br>
 
 <br>
 
