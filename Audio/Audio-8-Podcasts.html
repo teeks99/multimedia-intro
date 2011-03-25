@@ -229,11 +229,9 @@ data type which makes the RSS into a podcast feed.<br>
 <span style="font-family: monospace;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &lt;pubDate&gt;Wed, 23 Mar 2011 14:55:12 -040 &lt;/pubDate&gt;<br>
-<span style="color: rgb(144, 10, 160);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;enclosure&gt;http://example.com/media/ep002.mp3&lt;/enclosure&gt;</span><br style="font-family: monospace; color: rgb(144, 10, 160);">
-</span>
-<span style="font-family: monospace;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
+<span style="color: rgb(144, 10, 160);"></span></span></big><big style="color: rgb(144, 10, 160);"><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;enclosure url="http://example.com/media/ep002.mp3" lenght="3456789" type="audio/mpeg" /&gt;</span></big><br style="font-family: monospace; color: rgb(144, 10, 160);">
+<big><span style="font-family: monospace;"><span style="color: rgb(144, 10, 160);"></span></span><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
@@ -253,7 +251,7 @@ about.&lt;/description&gt;</span><br style="font-family: monospace;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &lt;pubDate&gt;Tue, 22 Mar 2011 13:20:42 -040 &lt;/pubDate&gt;<br>
 </span></big><big style="color: rgb(144, 10, 160);"><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;enclosure&gt;http://example.com/media/ep001.mp3&lt;/enclosure&gt;</span></big><br style="font-family: monospace; color: rgb(144, 10, 160);">
+&lt;enclosure url="http://example.com/media/ep001.mp3" lenght="1234567" type="audio/mpeg" /&gt;</span></big><br style="font-family: monospace; color: rgb(144, 10, 160);">
 <big><span style="font-family: monospace; color: rgb(144, 10, 160);"></span>
 <span style="font-family: monospace;">
 
@@ -267,10 +265,10 @@ about.&lt;/description&gt;</span><br style="font-family: monospace;">
 &lt;/rss&gt;<br>
 <br>
 </span></big>You can see that we added the "enclosure" data type to
-each item.&nbsp; The enclosure is simply a URL for a media file on a
-webserver and isn't actually "enclosed" in the feed.&nbsp; Beyond that,
-we change the title and link for each item a little bit, to better fit
-the concept that we are sending out episodic audio content.&nbsp; <br>
+each item.&nbsp; The enclosure data type doesn't have any actual data
+that goes in it, just three attributes that need to be set:&nbsp; the
+location of the media file, the size of the media file (in bytes), and
+the type (for mp3s this is audio/mpeg).<br>
 <h3>Show Notes</h3>
 You may have been wondering what the link in each item points to, since
 the audio is contained in the enclosure.&nbsp; In this case you
