@@ -76,7 +76,7 @@ time.&nbsp; The way this happens, it that the waves of the frequencies
 will either work together to make that particular part stronger, or go
 against each other to make a part weaker. <br>
 
-Below is two sounds, 2.333kHz on top and 2.000kHz in the middle, which,
+Below are two sounds, 2.333kHz on top and 2.000kHz in the middle, which,
 when added together, make the sound on the bottom:<br>
 
 <img src="AudioScreen/DualToneExample.png" alt="DualToneExample.png"><br>
@@ -237,7 +237,7 @@ One of the factors that determines how good a digital audio file sounds
 to a human ear is the number of bits used to store the value of the
 voltage that was converted to a digital signal.&nbsp; When we worked
 with images, we used 8-bits for each of our three color channels
-(24-bits color).&nbsp; Here the most common format you will see is
+(24-bit color).&nbsp; Here the most common format you will see is
 16-bit which gives you 2^16 or 65,536 different possible values for
 each A-D conversion.&nbsp; This is what is used in things like CDs and
 iPods, however when audio professionals work in recording studios, they
@@ -258,29 +258,29 @@ like noise or muted sounds in your audio recording. <br>
 
 <br>
 
-In addition to 16 and 24 bit storage, there a method of storage called
+In addition to 16 and 24 bit storage, there is a method of storage called
 "floating point".&nbsp; Floating point takes up 32-bits per sample, but
 is used differently.&nbsp; 24-bits of the data are used to store a
 value for the sample, the remaining 8 bits are used as an exponent.
 This means that floating point values can represent extremely tiny
 changes in value that are close to zero. It also means there is
 effectively no upper boundary on the scale (in either the positive or
-negative direction).&nbsp; As an example of this can be found in the
+negative direction).&nbsp; An example of this can be found in the
 image of the 2kHz tone above in the PCM section.&nbsp; Notice that on
 the left, the scale goes from -1.0 to +1.0, instead of something like 0
 to 65535.&nbsp;&nbsp; This is the typical way that floating point
 values are written.&nbsp; In floating point, the signal is free to go
-above those limits without loss.&nbsp; Because of this, floating point
+above 1.0 or below -1.0 without loss (there is no clipping in floating point).&nbsp; Because of this, floating point
 values are often used during the recording and/or editing process. <br>
 
 <h4>Sample Frequency</h4>
-
 The other major component that affects how a digital audio recording
 sounds is the number of A to D samples that are taken every second,
 also know as the frequency.&nbsp; This number is usually denoted in
 Hertz (Hz) which simply means "cycles per second".&nbsp;&nbsp; The most
-important aspect to choosing a sample frequency is the Nyquist theorem,
-which states that the accurately re-produce a sound, you need to have a
+important aspect to choosing a sample frequency is the Nyquist
+theorem.&nbsp; The Nyquist theorem states that to accurately re-produce
+a sound, you need to have a
 sample rate that is twice as high as the highest frequency you need to
 re-produce.&nbsp; As was explained before, the human ear can typically
 hear frequencies up to about 20,000Hz or 20kHz.&nbsp; This means that
@@ -301,27 +301,25 @@ goes outside the neighborhood or any time on a cell phone the audio is
 digitized at an 8kHz frequency. This sounds alright when you just need
 to hear what the person on the other end is saying, but would sound
 awful if you tried to listen to a musical performance digitized at
-8kHz.&nbsp; In this day and age however, and audio engineer would only
+8kHz.&nbsp; In this day and age however, an audio engineer would only
 look at using a sample frequency lower than 40kHz if there were serious
 bandwidth or storage constraints.&nbsp; For this course we will use at
 least 44.1kHz or 48kHz audio.<br>
 
-<h4>Endianess</h4>
+<h4>Endianness</h4>
 
-Endianess is an artifact of the growth of computer technologies in
+Endianness is an artifact of the growth of computer technologies in
 different organizations at the same time.&nbsp; This refers to the way
 bytes are stored in a computers memory.&nbsp; The details of it aren't
 important for digital media creation, just know that there are two
 different formats: Big-Endian and Little-Endian.&nbsp; By themselves
-they aren't compatible, but it is trivial to convert between them.<br>
-
-<br>
+they aren't compatible, but it is trivial for software programs to convert between them.<br>
 
 <h4>Channels</h4>
 
 The channels used in digital audio are different from how channels were
 used in images.&nbsp; In this case, each channel is a completely
-separate recording, that just happens to be set to play back (and often
+separate recording, that just happens to be set to play back (and is often
 recorded) at the same time.&nbsp; The channels are usually used to
 represent the direction that the audio can come from.&nbsp; <br>
 
