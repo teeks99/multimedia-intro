@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Test Podcast</title>
+        <description>This is a test showing a good podcast.</description>
+        <pubDate>Fri, 25 Mar 2011 09:55:12 -0400 </pubDate>
+        <lastBuildDate>Fri, 25 Mar 2011 09:55:12 -0400 </lastBuildDate>
+ 
+        <item>
+                <title>Episode 002 - Welcome Again</title>
+                <description>I give an introduction to the episode and say welcome again.</description>
+                <guid>http://mediaintro.teeks99.com/podcast/ep002_notes.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:55:12 -0400 </pubDate>
+                <enclosure url="file:///home/tomkent/src/multimedia-intro/podcast/TestPodcast-ep002.mp3" length="75285" type="audio/mpeg" />
+        </item>
+        <item>
+                <title>Episode 001 - Welcome</title>
+                <description>I give an introduction to the episode and say welcome</description>
+                <guid>http://mediaintro.teeks99.com/podcast/ep001_notes.html</guid>
+                <pubDate>Fri, 25 Mar 2011 09:20:42 -0400 </pubDate>
+                <enclosure url="file:///home/tomkent/src/multimedia-intro/podcast/TestPodcast-ep001.mp3" length="74454" type="audio/mpeg" />
+        </item>
+ 
+</channel>
+</rss>
