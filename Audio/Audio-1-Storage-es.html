@@ -1,9 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  <title>Audio - 1 - Audio Storage</title>
-
-  
-</head><body>
+<html><head><title>Audio - 1 - Audio Storage</title></head><body>
 <h2 class="western">Introduction to Audio Storage</h2>
 
 <h3>Sound<br>
@@ -12,48 +8,57 @@
 <p>Sound moving through the air is composed of small changes in air
 pressure that move rapidly (at the speed of sound, 1,230 km/h at sea
 level) out from the source.&nbsp; In our ears there is a small membrane
-and a set of bones that is succeptible to these tiny (and very rapid)
+and a set of bones that is capable of sensing these tiny (and very rapid)
 changes in pressure.&nbsp; Here is a graph of what the pressure
-recorded near by a set of hands clapping one time looks like (this was
+recorded near by a set of hands clapping one time looks like.&nbsp; This sample was
 recorded by a microphone over 5/100ths of a second or 0.05
-seconds.&nbsp; Listen to the
-<a href="Audio/Clap.flac">audio file</a>, save to your computer and
-open in VLC or Audacity):<br>
+seconds.&nbsp; To listen to the
+<a href="Audio/Clap.flac">audio file</a>, save it to your computer and
+open in VLC or Audacity:<br>
 <img style="width: 863px; height: 354px;" src="AudioScreen/Clap.png" alt="Clap.png"><br>
-As you can see, a sound that we think of as one instantaneous event, is
+As you can see in the above graph (called a "waveform"), a sound that
+we think of as one instantaneous event, is
 actually composed of several different changes in pressure.&nbsp;
-Spikes above the middle of the graph indicate higher pressure, and
-below the graph indicate lower pressure.&nbsp; We can use a microphone
+Spikes above the middle of the graph indicate higher pressure and
+below the graph indicate lower pressure.&nbsp; Areas where the curve
+goes further away from the center of the graph (both higher and lower)
+are loud.&nbsp; Areas where the curve stays close to the center are
+quiet.&nbsp; In this graph the loudest part of the clap is at the
+beginning, then it trails off over time (remember the entire graph
+above is only 5/100ths of a second).&nbsp; <br>
+</p>
+<p>We used a microphone
 to record these changes in pressure.&nbsp; A microphone has a component
-that is succeptible to tiny differences in pressure (like a very small
+that is susceptible to tiny differences in pressure (like a very small
 balloon) and couples that with a component that can change the amount
-of electrical voltage moving through a circut.&nbsp; There are many
+of electrical voltage moving through a circuit.&nbsp; There are many
 different methods for doing this, but the end result is that all
 microphones convert the changes in pressure that pass over them into
 changes in electrical voltage that can be sent down a wire into a
 recording device, in this case a computer. <br>
 </p>
 
-<p>Because sound generally
+
+<p>Sound generally
 doesn't move any air, it simply compresses/decompresses it to
-higher/lower pressure for a split second at a time, the pressure
+higher/lower pressure for a split second at a time.&nbsp; Because of this, the pressure
 changes above and below the curve must balance out.&nbsp; Each time the
 pressure goes through all the phases: go up above the curve, come back
-down to the curve, continue down below the curve, and finall come back
+down to the curve, continue down below the curve, and finally come back
 up to
 the curve; making one complete loop, this is called a cycle.&nbsp; The
 number of cycles per second
 that the sound does this is is called the rate, the unit for which is
 Hertz, abbreviated Hz.&nbsp; So if a particular sound is at 500 cycles
 per second, we call that 500Hz.&nbsp; We can also use the standard
-metric pre-fixes for it.&nbsp; A sound at 31,000 Hz could be written as
+metric prefixes for it.&nbsp; A sound at 31,000 Hz could be written as
 31kHz.&nbsp; Just for a reference, the human ear can detect sounds from
 approximately 20Hz up to 20kHz.&nbsp; <br>
 </p>
 
 The way we hear the frequency is as different tones.&nbsp; It is
 possible that we will have a tone with only a single frequency.&nbsp;
-An example of that is below with a 2kHz frequency and the lenght of the
+An example of that is below with a 2kHz frequency and the length of the
 graph is only 0.01 seconds long:<br>
 
 <img src="AudioScreen/2kHz.png" alt="2kHz.png"><br>
@@ -71,13 +76,13 @@ time.&nbsp; The way this happens, it that the waves of the frequencies
 will either work together to make that particular part stronger, or go
 against each other to make a part weaker. <br>
 
-Below is two sounds, 2.333kHz on top and 2.000kHz in the middle, which,
+Below are two sounds, 2.333kHz on top and 2.000kHz in the middle, which,
 when added together, make the sound on the bottom:<br>
 
 <img src="AudioScreen/DualToneExample.png" alt="DualToneExample.png"><br>
 
 <p>You can see in this image, that where the high and low parts of the
-wave are together and line up, the wave's get bigger.&nbsp; Where they
+wave are together and line up, the waves get bigger.&nbsp; Where they
 don't line up, they cancel each other out, and become smaller.&nbsp;
 This <a href="Audio/DualToneDemo.flac">audio file</a> will play all
 three tones, first 2.333kHz, then 2.000kHz, then the combination of
@@ -87,22 +92,29 @@ correct duration, you can make any sound imaginable.<br>
 
 <p>As we saw before, when we combine different frequencies, it changes
 the height of the waves, this height (both positive and negative) is
-called the amplitude, and represents how loud the sound is.&nbsp; The
-higher the waves go, the louder the sounnd you will hear.&nbsp; This
-scale is generally measured in decibles (dB).&nbsp; They range from
-zero (0dB) being the quietest sound perceptable to the human ear (at
-1kHz), to 194dB being the loudest sound that the earth's atmophere can
-carry.&nbsp; Some examples in between: calm breathing 10dB, a normal
-conversation 40-60dB, TV at a normal level 60dB, a busy roadway 80dB, a
+called the amplitude, and represents how loud the sound is, also known
+as its intensity.&nbsp; The
+higher the waves go, the louder or more intense the sound you will
+hear.&nbsp; This
+scale is generally measured in decibels (dB).&nbsp; They range from
+zero (0dB) being the quietest sound perceptible to the human ear (at
+1kHz), to 194dB being the loudest sound that is possible to create in
+the earth's atmosphere.&nbsp; Some examples in between: calm breathing
+10dB, a normal
+conversation 40-60dB, TV at a normal level 60dB, a busy roadway 85dB, a
 jack hammer 100dB, a jet engine 130dB, and a rifle being shot
-160db.&nbsp; <br>
-</p>
-
-<p>For an example, lets look at <a href="Audio/sintel_trailer-audio.wav">this audio track</a>,
+160db.&nbsp;&nbsp;</p><span style="font-style: italic;">Warning on hearing damage:</span><br style="font-style: italic;">
+<span style="font-style: italic;">Loud sounds, especially when heard
+over periods of time, can permenantly damage part of the human
+ear.&nbsp; If you spend long periods of time (8-10hrs/day for 6 months)
+near a busy roadway (85dB) or if you spend even a few minutes near a
+jet engine (130dB), you could do serious, permant damage your hearing.</span><br>
+<p>To see an example of how the different intensities of sound show up on a graph, lets look at <a href="Audio/sintel_trailer-audio.wav">this
+audio track</a>,
 from the trailer for the open source movie sintel, in audacity.&nbsp;
-As it plays, you can see that the louder parts show higher peaks on the
+As it plays, you can see that the louder parts show higher peaks (and lower lows) on the
 intensity scale.&nbsp; If you want to watch the video that goes with it
-first, you can get that <a href="Audio/addmoviehere">here</a>.<br>
+first, you can get that <a href="../Video/Clips/sintel_trailer-480p-x264-1200k-faac-192k.mp4">here</a>.<br>
 </p>
 
 <h3>Pulse Code Modulation - Wave Properties</h3>
@@ -117,14 +129,14 @@ the last few above.&nbsp;Mathematically this is called being continuous
 </p>
 
 <p>For example, this is a possible (even typical) graph of sound:<br>
-<img src="Audio/ContinuousGraph.png" alt="ContinuousGraph.png"><br>
+<img style="width: 556px; height: 376px;" src="Audio/ContinuousGraph.png" alt="ContinuousGraph.png"><br>
 </p>
 
-<p>This is inpossible, the pressure can not instantaneously jump from
+<p>This is impossible, the pressure can not instantaneously jump from
 one value to another:<br>
 <img src="Audio/PressureJumpGraph.png" alt="PressureJumpGraph.png"><br>
 <br>
-This is inpossible, there is always some amount of pressure (even if
+This is impossible, there is always some amount of pressure (even if
 that amount is zero), it can never not be there:<br>
 <img src="Audio/TimeJumpGraph.png" alt="TimeJumpGraph.png"><br>
 </p>
@@ -136,7 +148,7 @@ that amount is zero), it can never not be there:<br>
 </h4>
 
 <p>When we make an analog recording of a sound, say on a cassette tape
-or vinal record, we are recording the change in voltage output by the
+or vinyl record, we are recording the change in voltage output by the
 microphone of the continuous changes in the pressure.&nbsp; However,
 digital devices (Compact Disc (CD), computer, cell phone, etc.) are not
 capable of storing this continuous data.&nbsp; For a digital device,
@@ -169,7 +181,7 @@ level of light in a room, or as complicated as controlling a car's
 engine when you push the gas pedal.&nbsp; <br>
 </p>
 
-<p>TODO: picture of A-&gt;D-&gt;processing/storage-&gt;D-&gt;A cycle<br>
+<p><img style="width: 981px; height: 422px;" src="A-D-Graphics/A-D-A_Flow-es.png" alt="A-D-A_Flow.png">
 </p>
 
 <p>For more on these A-D and D-A conversions check out these articles:<br>
@@ -190,14 +202,14 @@ conversion on a voltage signal, it needs to store that data digitally,
 even if only for a moment while it is transfered to another device, in
 general this is called Quantization (<a href="http://en.wikipedia.org/wiki/Quantization_%28signal_processing%29">http://en.wikipedia.org/wiki/Quantization_(signal_processing)</a>
 <a href="http://es.wikipedia.org/wiki/Cuantificaci%F3n_digital">http://es.wikipedia.org/wiki/Cuantificación_digital</a>).
-There are many ways to do this, but the most comon one used for audio
+There are many ways to do this, but the most common one used for audio
 is called Pulse-Code-Modulation.&nbsp; <br>
 
 <a href="http://en.wikipedia.org/wiki/Pulse_code_modulation">http://en.wikipedia.org/wiki/Pulse_code_modulation</a><br>
 
 <a href="http://es.wikipedia.org/wiki/Modulaci%F3n_por_impulsos_codificados">http://es.wikipedia.org/wiki/Modulación_por_impulsos_codificados</a><br>
 
-Pulse code modulation works by taking a sample at a certian rate (a set
+Pulse code modulation works by taking a sample at a certain rate (a set
 of pulses every X microseconds) and storing the value as a "code" on a
 scale.&nbsp; <br>
 
@@ -222,13 +234,13 @@ sample of the audio was taken. <br>
 <h4>Bits Per Sample</h4>
 
 One of the factors that determines how good a digital audio file sounds
-to a human ear is the numbre of bits used to store the value of the
-voltage that was converted to a digital signal.&nbsp; When we worked
+to a human ear is the number of bits used to store the value of the
+voltage that was converted to a digital signal.&nbsp; This is often referred to as the sample depth.&nbsp; When we worked
 with images, we used 8-bits for each of our three color channels
-(24-bits color).&nbsp; Here the most comon format you will see is
+(24-bit color).&nbsp; Here the most common format you will see is
 16-bit which gives you 2^16 or 65,536 different possible values for
 each A-D conversion.&nbsp; This is what is used in things like CDs and
-iPods, however when audio professionals work in recoring studios, they
+iPods, however when audio professionals work in recording studios, they
 often use 24-bit values (2^24 or 16,777,216 possible values) for richer
 sounds.&nbsp; Using less bits will sometimes cause the audio to not
 re-produce the sounds very well because anything that falls outside the
@@ -246,31 +258,31 @@ like noise or muted sounds in your audio recording. <br>
 
 <br>
 
-In addition to 16 and 24 bit storage, there a method of storage called
+In addition to 16 and 24 bit storage, there is a method of storage called
 "floating point".&nbsp; Floating point takes up 32-bits per sample, but
 is used differently.&nbsp; 24-bits of the data are used to store a
 value for the sample, the remaining 8 bits are used as an exponent.
 This means that floating point values can represent extremely tiny
 changes in value that are close to zero. It also means there is
 effectively no upper boundary on the scale (in either the positive or
-negative direction).&nbsp; As an example of this can be found in the
+negative direction).&nbsp; An example of this can be found in the
 image of the 2kHz tone above in the PCM section.&nbsp; Notice that on
 the left, the scale goes from -1.0 to +1.0, instead of something like 0
 to 65535.&nbsp;&nbsp; This is the typical way that floating point
 values are written.&nbsp; In floating point, the signal is free to go
-above those limits without loss.&nbsp; Because of this, floating point
+above 1.0 or below -1.0 without loss (there is no clipping in floating point).&nbsp; Because of this, floating point
 values are often used during the recording and/or editing process. <br>
 
 <h4>Sample Frequency</h4>
-
 The other major component that affects how a digital audio recording
-sounds is the numbre of A to D samples that are taken every second,
+sounds is the number of A to D samples that are taken every second,
 also know as the frequency.&nbsp; This number is usually denoted in
 Hertz (Hz) which simply means "cycles per second".&nbsp;&nbsp; The most
-important aspect to choosing a sample frequency is the Nyquist theorem,
-which states that the accurately re-produce a sound, you need to have a
+important aspect to choosing a sample frequency is the Nyquist
+theorem.&nbsp; The Nyquist theorem states that to accurately re-produce
+a sound, you need to have a
 sample rate that is twice as high as the highest frequency you need to
-re-produce.&nbsp; As was explained before, the human ear can typicall
+re-produce.&nbsp; As was explained before, the human ear can typically
 hear frequencies up to about 20,000Hz or 20kHz.&nbsp; This means that
 the minimum frequency that we need to accurately re-produce sound is
 40kHz.&nbsp; However there also needs to be some extra room to filter
@@ -278,7 +290,7 @@ out any stray (non-audible) frequencies, so the most common recording
 frequencies are 44.1kHz for CD audio, and 48kHz for typical digital
 audio.&nbsp; There are also some formats specially designed for
 recording that go to 96kHz or beyond, and this is to allow for the
-creation of even better filters for the non-audible freqiencies.&nbsp; <br>
+creation of even better filters for the non-audible frequencies.&nbsp; <br>
 
 <br>
 
@@ -289,27 +301,25 @@ goes outside the neighborhood or any time on a cell phone the audio is
 digitized at an 8kHz frequency. This sounds alright when you just need
 to hear what the person on the other end is saying, but would sound
 awful if you tried to listen to a musical performance digitized at
-8kHz.&nbsp; In this day and age however, and audio engineer would only
+8kHz.&nbsp; In this day and age however, an audio engineer would only
 look at using a sample frequency lower than 40kHz if there were serious
 bandwidth or storage constraints.&nbsp; For this course we will use at
 least 44.1kHz or 48kHz audio.<br>
 
-<h4>Endianess</h4>
+<h4>Endianness</h4>
 
-Endianess is an artifact of the growth of computer technoligies in
+Endianness is an artifact of the growth of computer technologies in
 different organizations at the same time.&nbsp; This refers to the way
 bytes are stored in a computers memory.&nbsp; The details of it aren't
 important for digital media creation, just know that there are two
 different formats: Big-Endian and Little-Endian.&nbsp; By themselves
-they aren't compatible, but it is trivial to convert between them.<br>
-
-<br>
+they aren't compatible, but it is trivial for software programs to convert between them.<br>
 
 <h4>Channels</h4>
 
 The channels used in digital audio are different from how channels were
 used in images.&nbsp; In this case, each channel is a completely
-seperate recording, that just happens to be set to play back (and often
+separate recording, that just happens to be set to play back (and is often
 recorded) at the same time.&nbsp; The channels are usually used to
 represent the direction that the audio can come from.&nbsp; <br>
 
@@ -327,8 +337,8 @@ The more advanced format is called surround sound, which is generally
 listed has having 5.1 channels.&nbsp; The five main channels are
 front-left and front-right (these same as stereo, and are used when
 there are only stereo outputs available), front-center, back-left, and
-back-right.&nbsp; The .1 channel, is called the Low Frequencey Effects
-channel and is designed for use with subwoofers that only produce
+back-right.&nbsp; The .1 channel, is called the Low Frequency Effects
+channel and is designed for use with sub-woofers that only produce
 sounds from 3-120Hz.&nbsp; Because of this low frequency, it is
 possible to use a much lower sample frequency with this channel.&nbsp;
 However most computer hardware just treats this as its own complete
@@ -336,6 +346,7 @@ channel, hence computers that support surround sound are often said to
 have six channel sound instead of just 5.1.&nbsp; (<a href="http://en.wikipedia.org/wiki/Surround_sound">http://en.wikipedia.org/wiki/Surround_sound</a>
 <a href="http://es.wikipedia.org/wiki/Surround">http://es.wikipedia.org/wiki/Surround</a>)<br>
 
-<br>
+<h2><br>
+</h2>
 
 </body></html>

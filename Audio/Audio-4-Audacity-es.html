@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Audio - 4 - Audacity, Recording and Playback</title></head><body>
+<h2>Audacity - Recording and Playback</h2>
+Audacity is a professional grade audio editor and recorder.&nbsp; It is
+relatively easy to get started with, but has many complicated and
+powerful features available to professionals.<br>
+<br>
+<h3>
+Import audio</h3>
+The first thing you need to start using audacity is some audio.&nbsp;
+There are two ways to get audio into audacity, record it from a
+microphone (more on that in a bit) or import an existing track.&nbsp;
+For now, lets use the import feature to get <a href="Audio/sintel_trailer-audio.flac">this FLAC encoded track</a> into audacity.<br>
+<br>
+Once you've saved the file to the disk, open Audacity and select File
+-&gt; Import -&gt; Audio... and choose the file from your disk.&nbsp;
+It will take a second to convert the file from FLAC to the native
+editing format (44.1kHz, 32-bit float), then you will see its
+"waveform" in the window.<br>
+<br>
+<img src="AudioScreen/Audacity-Open-es.png" alt="Audacity-Open-es.png"><br>
+<br>
+<h3>Play Back Audio</h3>
+Once you have it open, you can play it back to hear what it sounds
+like.&nbsp; Just click the green play button, to start.&nbsp; The blue
+pause button to the left of the play button will halt the
+playback.&nbsp; The yellow stop button to the right of the play button
+will stop playback and re-set it to the beginning.<br>
+<img src="AudioScreen/Audacity-Play-es.png" alt="Audacity-Play-es.png"><br>
+You will see that the cursor moves along with the audio as it is
+played.&nbsp; Just under the play button is a slider that will let you
+control the volume of the playback.&nbsp; On the same line as the play
+button, but further to the right you will see two green bars (labeled
+L&amp;R for Left and Right channels) which show the level of volume
+that is being played at that instant.&nbsp; <br>
+<h3>
+Zoom in and out.</h3>
+If you want to understand better what exact part of a waveform you are
+working with (this will be very important when we get into editing),
+you will need the ability to zoom in on small parts of the track.&nbsp;
+There are several different ways to do this in audacity.&nbsp; The
+first is in selection mode (when the selection cursor icon is active,
+to the right of the record button).&nbsp; To zoom in selection mode
+click on the track at the spot that you want to zoom in (this will put
+a vertical line at that spot), then click the magnifying glass with the
+plus sign (+) on it until you are close enough. <br>
+<img src="AudioScreen/Audacity-SelectionCursor-es.png" alt="Audacity-SelectionCursor-es.png"><br>
+If you want, you can move the vertical line in between any of the zoom
+steps, or zoom back out (the button to the left of the zoom in button,
+with the minus sign on it), move it and zoom back in.&nbsp; <br>
+<br>
+Sometimes you have a particular section that is important, and want to
+zoom in to the point that the section of interest fills the
+screen.&nbsp; It might take several tries to get it just right by
+picking a spot, zooming in, updating the spot, etc.&nbsp; However,
+there is an easier way.&nbsp; To start we will use the selection tool
+to make a selection.&nbsp; Click the start of the section you are
+interested in and drag the cursor to the end of the section.&nbsp; As
+you move, the area you are selecting will be come darker gray,
+indicating that it is selected.&nbsp; <br>
+<img src="AudioScreen/Audacity-Selection-es.png" alt="Audacity-Selection-es.png"><br>
+Once you have the correct area selected, we simply click the "Fit
+Selection" button, which is immediately to the right of the zoom out
+button.<br>
+<img src="AudioScreen/Audacity-FitSelection-es.png" alt="Audacity-FitSelection-es.png"><br>
+You will then see that your selection takes up the whole screen.&nbsp;
+If you ever want to get back to seeing the whole project at the same
+time, you can click the "Fit Project" button, immediately to the right
+of the Fit Section button.<br>
+<br>
+The other way to zoom in and out is to use the zoom tool mode.&nbsp;
+You can enter this mode by clicking on the magnifying glass under the
+cursor button for the selection mode (just to the right of the record
+button).&nbsp; In this mode you can zoom in simply by clicking on a
+spot you want to see closer, and zoom out from a spot by left
+clicking.&nbsp; To zoom in on a particular selection, right click and
+drag across the section, you will see dotted lines for the beginning
+and end of the section.&nbsp; Unlike when in selection mode, this will
+not create a selection (dark gray) but simply zoom to that area.<br>
+<img src="AudioScreen/Audacity-ZoomTool-es.png" alt="Audacity-ZoomTool-es.png"><br>
+<br>
+<h3>
+
+Record audio</h3>
+
+
+The other way to get audio into audacity is to record it.&nbsp; First,
+lets remove the track we imported previously.&nbsp; Just click the "X"
+in the upper left corner of the track's window.&nbsp; Now you should
+have a blank audacity window to record into.&nbsp; When you are ready,
+push the record button then start talking into your microphone.&nbsp; <br>
+<img src="AudioScreen/Audacity-Record-es.png" alt="Audacity-Record-es.png"><br>
+This time you will see the cursor be a bit ahead of the graph showing
+the waveform.&nbsp; That is because it takes the computer a short
+amount of time to process the audio it is recording and display
+it.&nbsp; Be aware that the location of the cursor is where you are at
+in the timeline, not where the graph of the waveform is showing
+up.&nbsp; <br>
+<br>
+You will also notice that there are two bars (red this time) to the
+right of where the volume was displayed during playback.&nbsp; This
+shows the level of volume of the audio being recorded at that
+instant.&nbsp; <br>
+<br>
+Finally, there is a slider under the record button that allows you to
+change the strength that the microphone records at.&nbsp; Unfortunately
+if you are running Ubuntu, this won't work.&nbsp; Instead, set this in
+the operating system's (not Audacity) Sound Preferences on the Input tab.<br>
+<h3>Save AUP (AUdacity Project) File</h3>
+
+Now that we have the start of an audio project we will want to work
+with, we need to save the project so we can open it later.&nbsp; To
+save the entire project, go to File -&gt; Save Project As...&nbsp; When
+you pick a file name with the .aup extension, audacity will
+automatically create a directory (aka folder) at the same location as the .aup file,
+with the same name as what is before the .aup.&nbsp; This directory
+contains the actual audio data so <span style="font-weight: bold;">it is very important</span>.&nbsp;
+Do not delete this while trying to cleanup a directory.&nbsp; If you
+move the .aup file to a different location, you need to move this
+directory as well.&nbsp; <br>
+<h3>
+Export Audio Files</h3>
+
+At this point we could go on editing our project, adding more audio,
+etc. During this process we would be continuously saving the .aup file
+(in case our computer crashes).&nbsp;&nbsp; In the end though, we want
+to get our final result back out in a format that we can listen to
+(WAV, FLAC, OGG-Vorbis, MP3, etc).&nbsp; Unfortunately, AUP files are not
+something that you can listen to in a media player, they are a special
+audacity format (similar to XCF files for the GIMP).&nbsp; To create
+the more normal file types, we will use the "Export" function.&nbsp; Go
+to File -&gt; Export and select the type of file you would like from
+the drop down on the bottom (FLAC is the recommended format), then
+enter a file name and click "Save".<br>
+<br>
+
+<br>
+</body></html>

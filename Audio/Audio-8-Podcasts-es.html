@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Audio - 8 - Podcasts</title></head><body>
+<h2>Podcasts</h2>
+
+Currently, the most common method of distributing audio programs (this works for video programs as well) on the
+internet is through podcasts.&nbsp; The way a podcast works for a user is that they run a podcast client (iTunes, Juice - <a href="http://juicereceiver.sourceforge.net">http://juicereceiver.sourceforge.net</a>, gPodder - <a href="http://gpodder.org/">http://gpodder.org/</a>,
+Google Listen, etc) which periodically checks a "feed" for new
+material.&nbsp; When the client sees that there is new material
+available, it automatically downloads it to the computer, and when it
+is ready it presents it to the user so that they can listen to
+it.&nbsp; This setup has worked so well because it is very simple for
+the user.&nbsp; They don't have to go out to any websites to download
+material (or wait while it downloads), it is already there on their
+computer.&nbsp; Some of the more advanced clients will even support
+synchronizing the feed onto a portable media player such as an iPod or
+MP3 player.<br>
+<br>
+On the content producer's side, the most important part is creating the
+feed that all the clients check.&nbsp; This feed simply consists of a
+file enumerating all the episodes of the show.&nbsp; This file contains
+information about each episode as well as a link to the content for
+that episode (usually mp3, but ogg is also common).&nbsp; Both the file
+for the feed and the content that it point to are usually simply files
+that are available for downloading from a web server.&nbsp; On a
+periodic basis the client applications will go to the URL for this file
+on the web-server, download it, and see if it contains anything
+new.&nbsp; To facilitate all this work, the format of the feed's file
+is specifically defined.<br>
+<br>
+<h3>
+XML Overview</h3>
+
+The file is of a special format called Really Simple Syndication or
+RSS, with enclosures.&nbsp; RSS is in turn a type of XML file (the
+other type of XML we have seen in this course is SVG) where each piece
+of data is contained within tags that specify what type of data it
+is.&nbsp; <br>
+<br>
+Here is a very basic example of an XML file:<br>
+<br><big><span style="font-family: monospace;">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;users&gt;&nbsp; </span><span style="color: rgb(0, 153, 0); font-family: monospace;">&lt;!-- This is the list of users in the system --&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp; &lt;user&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;name&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Joe</span><span style="font-family: monospace;">&lt;/name&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;address&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">1234 Hill St.</span><span style="font-family: monospace;">&lt;/address&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;phone </span><span style="color: red; font-family: monospace;">type="local"</span><span style="font-family: monospace;">&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">456-7890</span><span style="font-family: monospace;">&lt;/phone&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp; &lt;/user&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp; &lt;user&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;name&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Jane</span><span style="font-family: monospace;">&lt;/name&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+&nbsp;&nbsp;&nbsp; &lt;address&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">4321 Hill St.</span><span style="font-family: monospace;">&lt;/address&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+&nbsp;&nbsp;&nbsp; &lt;phone </span><span style="color: red; font-family: monospace;">type="long_distance"</span><span style="font-family: monospace;">&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">1-123-555-555</span><span style="font-family: monospace;">&lt;/phone&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp; &lt;/user&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;/users&gt;</span></big><br>
+<br>
+XML is defined by data types, each of which starts with a tag that
+contains its name, such as &lt;address&gt; and ends with a tag that has
+a slash "/" and then the name of the type, such as
+&lt;/address&gt;.&nbsp; You can see that each type of data can have
+three things that it contains: more types of data, <span style="color: rgb(51, 102, 255);">the actual data</span>, and <span style="color: red;">attributes of the data</span>, the last two of which I have marked in blue and red so you can see what they are.&nbsp; In addition, there are <span style="color: rgb(0, 153, 0);">comments</span>
+which can be anywhere.&nbsp; Comments always start with "&lt;!--" and
+continue until they reach "--&gt;" to signify the end of the
+comment.&nbsp; <br>
+<br><a href="http://en.wikipedia.org/wiki/XML">
+http://en.wikipedia.org/wiki/XML<br>
+</a><a href="http://es.wikipedia.org/wiki/XML">
+http://es.wikipedia.org/wiki/XML<br>
+</a>
+<br>
+<h3>
+RSS Feed Definition</h3>
+Getting back to RSS, it is just a specific format of XML.&nbsp; RSS is
+used for Podcasts, but it can also be used for all kinds of other feeds
+such as blogs, news articles, photo streams, etc.&nbsp; The basic XML
+layout of RSS is the following (when used for a blog), read through it
+so that you understand what the tags used in it are referring to.<br>
+<br><big><span style="font-family: monospace;">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;rss version="2.0"&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;channel&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Blog&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;What's going on in my life.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://example.com/blog/&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;lastBuildDate&gt;Wed, 23 Mar 2011 14:55:12 -0400 &lt;/lastBuildDate&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;title&gt;Funny Post&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;description&gt;This was really funny.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://</span></big><big><span style="font-family: monospace;">example</span></big><big><span style="font-family: monospace;">.com/posts/FunnyItem.html&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;guid&gt;00002&lt;/guid&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;pubDate&gt;Wed, 23 Mar 2011 14:55:12 -040 &lt;/pubDate&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;title&gt;A serious post&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;description&gt;This is some stuff I've been thinking
+about.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://</span></big><big><span style="font-family: monospace;">example</span></big><big><span style="font-family: monospace;">.com/posts/SeriousItem.html&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;guid&gt;00001&lt;/guid&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;pubDate&gt;Tue, 22 Mar 2011 13:20:42 -040 &lt;/pubDate&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;
+</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;/channel&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;/rss&gt;</span></big><br>
+<br>
+In this case, we are using five data types for the channel: title,
+description, link, lastBuildData, and item.&nbsp; In turn the item data
+type has five of its own data types: title, description, link, guid,
+and pubDate.&nbsp; This is not a complete list of all the possible data
+types that can be used in RSS, there are several more.&nbsp; For the
+complete list and explanation, see the RSS specification:
+http://www.rssboard.org/rss-specification<br>
+<br>
+<span style="font-weight: bold;">The Channel</span><br style="font-weight: bold;">
+title - The title for the feed<br>
+description - A description of what the feed contains.&nbsp; This can
+be long or short and should be useful for a user to determine if they
+would find the feed contents interesting.&nbsp; <br>
+link - This is a link to a page that contains general information about
+the feed (not about any specific item in it).&nbsp; For instance this
+could be a link to an archive of past items.<br>
+lastBuildDate - When the feed was last modified.<br>
+item - Each item contains further information about one specific episode, post, article, etc.<br>
+<br>
+<span style="font-weight: bold;">An Item</span><br>
+title - The title of this item<br>
+description - A description of what is in this item, this could be very
+long.&nbsp; For a blog or news article this could even contain the
+entire textual contents.&nbsp; For a podcast, this may contain notes
+about the show.<br>
+link - This is a link to the item's page<br>
+guid - This must be something that uniquely identifies this item.&nbsp;
+Once you publish a feed with a certain chunk of text here, you may
+never use this again.&nbsp; This is used by the client to determine if
+it has already seen this item (and won't need to download it again).<br>
+pubDate - The date and time that this item was added to the feed.<br>
+<br><a href="http://en.wikipedia.org/wiki/RSS">
+http://en.wikipedia.org/wiki/RSS<br>
+</a><a href="http://es.wikipedia.org/wiki/RSS">
+http://es.wikipedia.org/wiki/RSS<br>
+</a><a href="http://www.xul.fr/en-xml-rss.html">
+http://www.xul.fr/en-xml-rss.html</a> - Tutorial on building RSS<br>
+<h3>Podcast Specific</h3>
+The above RSS example wasn't actually for a podcast, because there
+weren't any audio files in it, it was something that would be more
+typical for a blog.&nbsp; Below is another example, that adds a key
+data type which makes the RSS into a podcast feed.<br>
+<br>
+<big><span style="font-family: monospace;">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;rss version="2.0"&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;channel&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Podcast&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;What's going on in my life.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://example.com/blog/&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;lastBuildDate&gt;Wed, 23 Mar 2011 14:55:12 -0400 &lt;/lastBuildDate&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;title&gt;Episode 002 - Funny Story&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;description&gt;This was really funny.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://</span></big><big><span style="font-family: monospace;">example</span></big><big><span style="font-family: monospace;">.com/shows/ep002_notes.html&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;guid&gt;00002&lt;/guid&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;pubDate&gt;Wed, 23 Mar 2011 14:55:12 -040 &lt;/pubDate&gt;<br>
+<span style="color: rgb(144, 10, 160);"></span></span></big><big style="color: rgb(144, 10, 160);"><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;enclosure url="http://example.com/media/ep002.mp3" lenght="3456789" type="audio/mpeg" /&gt;</span></big><br style="font-family: monospace; color: rgb(144, 10, 160);">
+<big><span style="font-family: monospace;"><span style="color: rgb(144, 10, 160);"></span></span><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;title&gt;Episode 001 - A serious post&lt;/title&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;description&gt;This is some stuff I've been thinking
+about.&lt;/description&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;link&gt;http://</span></big><big><span style="font-family: monospace;">example</span></big><big><span style="font-family: monospace;">.com/shows/ep001_notes.html&lt;/link&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;guid&gt;00001&lt;/guid&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;pubDate&gt;Tue, 22 Mar 2011 13:20:42 -040 &lt;/pubDate&gt;<br>
+</span></big><big style="color: rgb(144, 10, 160);"><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;enclosure url="http://example.com/media/ep001.mp3" lenght="1234567" type="audio/mpeg" /&gt;</span></big><br style="font-family: monospace; color: rgb(144, 10, 160);">
+<big><span style="font-family: monospace; color: rgb(144, 10, 160);"></span>
+<span style="font-family: monospace;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/item&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&nbsp;
+</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;/channel&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+&lt;/rss&gt;<br>
+<br>
+</span></big>You can see that we added the "enclosure" data type to
+each item.&nbsp; The enclosure data type doesn't have any actual data
+that goes in it, just three attributes that need to be set:&nbsp; the
+location of the media file, the size of the media file (in bytes), and
+the type (for mp3s this is audio/mpeg).<br>
+<h3>Show Notes</h3>
+You may have been wondering what the link in each item points to, since
+the audio is contained in the enclosure.&nbsp; In this case you
+wouldn't strictly need a link data type for these items, but when you
+are creating a podcast it is usually a very good idea to have a web
+page that goes with each episode.&nbsp; This web page is usually called
+the "show notes" and contains information about what is happening in
+the audio.&nbsp; For instance it could contain name (and links to)
+songs that were played, information about guests that were interviewed,
+links to topics that were discussed, etc.&nbsp; We won't get too far
+into that now, since we haven't gotten to the section on web page
+creation yet, just know that it is an important part of having a
+podcast.<br>
+<h3>
+Podcast Generators</h3>
+
+If you don't want to mess around with creating your own RSS feeds
+(though doing it yourself is highly recommended) there are also several
+organizations that will take care of all that for you.&nbsp; Try
+searching google for "podcast hosting".&nbsp; If you just want the
+tools to generate the RSS feed, seach google for "podcast
+generator".&nbsp; There is at least one free software generator that is
+available, you can get it at: <a href="http://podcastgen.sourceforge.net/">http://podcastgen.sourceforge.net/</a><br>
+
+<br>
+
+<h3>
+Find Podcasts</h3>
+Once you have your podcast feed all set, you can give out the URL to
+anyone you'd like.&nbsp; However, you may also be interested in getting
+a bigger audience, that requires publishing your podcast in a directory
+of podcasts where people can go to find them.&nbsp; The biggest
+directory of podcasts is the iTunes store (they have special data that
+needs to be added into the feed though) but there are several others
+that are also good to get into.&nbsp; <br>
+<br><a href="http://www.apple.com/itunes/podcasts/">
+http://www.apple.com/itunes/podcasts/<br>
+</a><a href="http://podcast.com/">
+http://podcast.com/<br>
+</a><a href="http://www.podcastalley.com/">
+http://www.podcastalley.com/<br>
+</a><a href="http://www.podomatic.com/">
+http://www.podomatic.com/</a><br>
+<h3>
+Getting Podcasts in gPodder</h3>
+The best client software for podcasts is gPodder.&nbsp; It is available
+on Linux (Ubuntu and others), Windows, and Mac, and makes it very easy
+to stay up to date with your podcasts.&nbsp; <br><br>
+To start, open up gPodder and go to Subscriptions -&gt; Add Podcast By URL.<br>
+<img src="AudioScreen/gPodder-Basic-es.png" alt="gPodder-Basic-es.png"><br>
+<br>
+Once you have that open, go to the main page for the podcast: <a href="http://mediaintro.teeks99.com/podcast/">http://mediaintro.teeks99.com/podcast/</a>
+from there you will see a link for the Podcast's RSS feed.&nbsp; Right
+click on it and copy it, then paste it into the box in gPodder.<br>
+<img src="AudioScreen/gPodder-Add-es.png" alt="gPodder-Add-es.png"><br>
+<br>
+Now gPodder will go out and get all the information about the
+feed.&nbsp; It will find out that there are two episodes available for
+download and prompt you to start downloading.<br>
+<img src="AudioScreen/gPodder-Download-es.png" alt="gPodder-Download-es.png"><br>
+<br>
+Once the download is complete, it will show you the available audio to listen to.&nbsp; <br>
+<img src="AudioScreen/gPodder-Ready-es.png" alt="gPodder-Ready-es.png"><br>
+<br>
+At this point gPodder will keep checking the feed for more episodes on
+a regular basis.&nbsp; Additionally, you could set it up so that it
+will automatically synchronize the podcasts to your MP3 player.&nbsp; <br>
+</body></html>
