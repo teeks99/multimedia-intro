@@ -424,7 +424,7 @@ Mac and comes built in with Windows 7.&nbsp; It is also available for
 playing video on the web with the current version of the Flash
 plugin.&nbsp; It is also being supported with HTML 5 video in Internet
 Explorer (version 9) and Safari.&nbsp; There are also plugins to get it
-working in Firefox.&nbsp; In addition to its consumer use, there is a
+working in Firefox and Chrome.&nbsp; In addition to its consumer use, there is a
 lossless option to H.264, which is useful for storing video during
 editing or for archival purposes. <a href="http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC</a>
 <a href="http://es.wikipedia.org/wiki/H.264/MPEG-4_AVC">http://es.wikipedia.org/wiki/H.264/MPEG-4_AVC</a><br>
@@ -434,8 +434,9 @@ Google (which bought the company that created it) into the public
 domain, for use as a royalty-free codec.&nbsp; It is available by
 itself for use inside many different formats/containers, but is also
 the only video codec supported by the WebM video format.&nbsp; This
-format is almost as powerful as H.264, and is generally viewed as
-competitive with it.&nbsp; This codec is available natively for use in
+format is almost as powerful as H.264, and as its software gets
+improved is getting closer to matching it.&nbsp; This codec is
+available natively for use in
 HTML 5 video in Firefox, Chrome, and Opera web browsers, and can be run
 in Internet Explorer with a plugin.&nbsp; It will also be available in
 the next major release of the Flash plugin. <a href="http://en.wikipedia.org/wiki/VP8">http://en.wikipedia.org/wiki/VP8</a>
@@ -456,8 +457,274 @@ decode video in it.&nbsp; Because of these limitations, it is only used
 as a format for storing video during editing and for archival purposes,
 and in studios with powerful computers.&nbsp; <a href="http://en.wikipedia.org/wiki/Dirac_%28video_compression_format%29">http://en.wikipedia.org/wiki/Dirac_(video_compression_format)</a>
 <a href="http://es.wikipedia.org/wiki/Dirac_%28c%F3dec%29">http://es.wikipedia.org/wiki/Dirac_(códec)</a><br>
-
+<span style="font-weight: bold;">FFV 1</span> - This is a codec that
+only compresses losslessly, for use during editing and
+production.&nbsp; It was created as part of the ffmpeg/libav
+project.&nbsp; It is generally faster and has better compression than
+all the lossless codecs except x264's lossless encoders.<br>
+<h3>Video Quality</h3>
+Here are some results from running on the sintel animated clip.&nbsp; All results are in kbps (thousand bits per second)<br>
 <br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">Codec<br>
+      </td>
+      <td style="vertical-align: top;">1080p Almost Perfect<br>
+      </td>
+      <td style="vertical-align: top;">1080p Good<br>
+      </td>
+      <td style="vertical-align: top;">480p Almost Perfect<br>
+      </td>
+      <td style="vertical-align: top;">480p Good<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">raw video<br>
+      </td>
+      <td style="vertical-align: top;">(880000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ffv1 (lossless)<br>
+      </td>
+      <td style="vertical-align: top;">(107000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-lossless_max<br>
+      </td>
+      <td style="vertical-align: top;">(48000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-lossless_medium<br>
+      </td>
+      <td style="vertical-align: top;">(50000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-lossless_ultrafast<br>
+      </td>
+      <td style="vertical-align: top;">(61000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-veryslow-2p<br>
+      </td>
+      <td style="vertical-align: top;">7000<br>
+      </td>
+      <td style="vertical-align: top;">1000<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-medium-2p<br>
+      </td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-ultrafast-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-veryslow-1p<br>
+      </td>
+      <td style="vertical-align: top;">11000<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-medium-1p<br>
+      </td>
+      <td style="vertical-align: top;">12000<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">x264-ultrafast-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">vp8-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">vp8-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">theora-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">theora-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg4-2p (part 2)<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg4-1p (part 2)<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mjpeg-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mjpeg-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg2-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg2-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Quality at different speeds: <meta http-equiv="content-type" content="text/html; charset=utf-8"><a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html</a>
 
 <h4>Audio in Videos</h4>The audio codecs used are many of the same ones
 that were covered in the last unit on audio editing, so here we are
