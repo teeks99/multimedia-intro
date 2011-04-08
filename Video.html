@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Unit Four - Video</title></head><body>
+<html><head><title>Unit Four - Video</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>
 <h1 class="western">Unit Four -- Video </h1>
 
 Video, especiall digital video, is becoming increasingly more
@@ -89,7 +91,7 @@ names that go with them.<br>
 
 <a href="http://en.wikipedia.org/wiki/Aspect_ratio_%28image%29">http://en.wikipedia.org/wiki/Aspect_ratio_(image)</a><br>
 
-<a href="http://es.wikipedia.org/wiki/Relaci%F3n_de_aspecto">http://es.wikipedia.org/wiki/Relación_de_aspecto</a><br>
+<a href="http://es.wikipedia.org/wiki/Relaci%F3n_de_aspecto">http://es.wikipedia.org/wiki/Relaciï¿½n_de_aspecto</a><br>
 
 <h3>Interlacing</h3>
 
@@ -117,7 +119,7 @@ always be progressive scan (it helps it compress better).<br>
 
 <a href="http://en.wikipedia.org/wiki/Interlaced_video">http://en.wikipedia.org/wiki/Interlaced_video</a><br>
 
-<a href="http://es.wikipedia.org/wiki/Exploraci%F3n_entrelazada">http://es.wikipedia.org/wiki/Exploración_entrelazada</a><br>
+<a href="http://es.wikipedia.org/wiki/Exploraci%F3n_entrelazada">http://es.wikipedia.org/wiki/Exploraciï¿½n_entrelazada</a><br>
 
 <h3>Frame Rates</h3>
 
@@ -146,7 +148,7 @@ Here are some common frame rates in use, in frames per second:<br>
 60 - Digital Video</p>
 
 <p><a href="http://en.wikipedia.org/wiki/Frame_rate">http://en.wikipedia.org/wiki/Frame_rate</a><br>
-<a href="http://es.wikipedia.org/wiki/Im%E1genes_por_segundo">http://es.wikipedia.org/wiki/Imágenes_por_segundo</a><br>
+<a href="http://es.wikipedia.org/wiki/Im%E1genes_por_segundo">http://es.wikipedia.org/wiki/Imï¿½genes_por_segundo</a><br>
 </p>
 
 <h3>Pixel Formats</h3>
@@ -355,7 +357,7 @@ interframe compression is several pages long.&nbsp; <br>
 
 <br>
 
-<a href="http://es.wikipedia.org/wiki/C%F3dec_de_v%EDdeo">http://es.wikipedia.org/wiki/Códec_de_vídeo</a><br>
+<a href="http://es.wikipedia.org/wiki/C%F3dec_de_v%EDdeo">http://es.wikipedia.org/wiki/Cï¿½dec_de_vï¿½deo</a><br>
 
 <br>
 
@@ -456,14 +458,27 @@ finished and takes a huge amount of computing power to encode and
 decode video in it.&nbsp; Because of these limitations, it is only used
 as a format for storing video during editing and for archival purposes,
 and in studios with powerful computers.&nbsp; <a href="http://en.wikipedia.org/wiki/Dirac_%28video_compression_format%29">http://en.wikipedia.org/wiki/Dirac_(video_compression_format)</a>
-<a href="http://es.wikipedia.org/wiki/Dirac_%28c%F3dec%29">http://es.wikipedia.org/wiki/Dirac_(códec)</a><br>
+<a href="http://es.wikipedia.org/wiki/Dirac_%28c%F3dec%29">http://es.wikipedia.org/wiki/Dirac_(cï¿½dec)</a><br>
 <span style="font-weight: bold;">FFV 1</span> - This is a codec that
 only compresses losslessly, for use during editing and
 production.&nbsp; It was created as part of the ffmpeg/libav
 project.&nbsp; It is generally faster and has better compression than
 all the lossless codecs except x264's lossless encoders.<br>
 <h3>Video Quality</h3>
-Here are some results from running on the sintel animated clip.&nbsp; All results are in kbps (thousand bits per second)<br>
+Here are some results from running on the sintel animated clip.&nbsp;
+All results are in kbps (thousand bits per second).&nbsp; The clip was
+built from lossless .png files of each frame.&nbsp; The video is
+1920x854 (we'll call this 1080p even though it is not) and 960x428
+(we'll call this 480p even though it is not).&nbsp; The 480p video has
+1/4 the size (pixels) of the 1080p video.&nbsp; These values were all
+determined by watching the videos output with them (and many other
+candidates), to try to determine what met the various levels of
+quality. Because of this, the results are subjective, but should give
+you a good feeling for the power of the various codecs, when used with
+the default settings.&nbsp; raw video, ffv1, mpeg4, mjpeg, and mpeg2
+were all encoded with the encoders inside the ffmpeg too.&nbsp; The
+other encoders that were used are: libx264 (with various pre-set
+configurations), libvpx, and libtheora.<br>
 <br>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
@@ -486,9 +501,9 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
       <td style="vertical-align: top;">n/a<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">(234000)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">n/a<br>
       </td>
     </tr>
     <tr>
@@ -498,53 +513,53 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
       <td style="vertical-align: top;">n/a<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">(31500)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">n/a<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-lossless_max<br>
+      <td style="vertical-align: top;">h.264-lossless_max<br>
       </td>
       <td style="vertical-align: top;">(48000)<br>
       </td>
       <td style="vertical-align: top;">n/a<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">(18000)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">n/a<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-lossless_medium<br>
+      <td style="vertical-align: top;">h.264-lossless_medium<br>
       </td>
       <td style="vertical-align: top;">(50000)<br>
       </td>
       <td style="vertical-align: top;">n/a<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">(15000)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">n/a<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-lossless_ultrafast<br>
+      <td style="vertical-align: top;">h.264-lossless_ultrafast<br>
       </td>
       <td style="vertical-align: top;">(61000)<br>
       </td>
       <td style="vertical-align: top;">n/a<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">(14000)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">n/a<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-veryslow-2p<br>
+      <td style="vertical-align: top;">h.264-veryslow-2p<br>
       </td>
       <td style="vertical-align: top;">7000<br>
       </td>
-      <td style="vertical-align: top;">1000<br>
+      <td style="vertical-align: top;">2000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -552,11 +567,11 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-medium-2p<br>
+      <td style="vertical-align: top;">h.264-medium-2p<br>
       </td>
       <td style="vertical-align: top;">8000<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">2500<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -564,11 +579,11 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-ultrafast-2p<br>
+      <td style="vertical-align: top;">h.264-ultrafast-2p<br>
       </td>
       <td style="vertical-align: top;">not possible<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">6000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -576,11 +591,11 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-veryslow-1p<br>
+      <td style="vertical-align: top;">h.264-veryslow-1p<br>
       </td>
       <td style="vertical-align: top;">11000<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">2500<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -588,11 +603,11 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-medium-1p<br>
+      <td style="vertical-align: top;">h.264-medium-1p<br>
       </td>
       <td style="vertical-align: top;">12000<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">3000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -600,11 +615,11 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">x264-ultrafast-1p<br>
+      <td style="vertical-align: top;">h.264-ultrafast-1p<br>
       </td>
       <td style="vertical-align: top;">not possible<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">7000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -615,7 +630,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">vp8-2p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">3000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -626,7 +641,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">vp8-1p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">4000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -637,7 +652,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">theora-2p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">6000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -648,7 +663,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">theora-1p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">9000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -659,7 +674,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mpeg4-2p (part 2)<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">6000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -670,7 +685,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mpeg4-1p (part 2)<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">8000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -681,7 +696,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mjpeg-2p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">15000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -692,7 +707,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mjpeg-1p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">17000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -703,7 +718,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mpeg2-2p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">8000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -714,7 +729,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
       <td style="vertical-align: top;">mpeg2-1p<br>
       </td>
       <td style="vertical-align: top;">not possible</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">10000<br>
       </td>
       <td style="vertical-align: top;"><br>
       </td>
@@ -724,7 +739,7 @@ Here are some results from running on the sintel animated clip.&nbsp; All result
   </tbody>
 </table>
 <br>
-Quality at different speeds: <meta http-equiv="content-type" content="text/html; charset=utf-8"><a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html</a>
+Quality at different speeds: <a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html</a>
 
 <h4>Audio in Videos</h4>The audio codecs used are many of the same ones
 that were covered in the last unit on audio editing, so here we are
