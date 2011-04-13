@@ -1,116 +1,119 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Audio - 2 - Formats</title></head><body>
-<h2>Formats</h2>Audio can be stored in either an uncompressed format,
-or a compressed format.&nbsp; Unlike photos though, these do not always
-signify that it is a lossless or lossy recording.&nbsp; For example, an
-audio recording could be stored in an uncompressed format, but its
-sample frequency could be lowered to get into that format, making it
-lossy.&nbsp; Likewise, there are compressed formats that are lossless,
-where they make the size of the data smaller, while still retaining all
-the information about the audio.&nbsp; Finally, there are compressed
-and lossy formats, these are the most common for use among consumers of
-audio.<br>
+<h2>Formatos</h2>El audio se puede almacenar ya sea en un formato no
+comprimido (uncompressed format), o en un formato comprimido
+(compressed format).&nbsp; A diferencia de las fotos, sin embargo,
+estos formatos no siempre significan que la grabación es una con
+pérdida o sin pérdida.&nbsp; Por ejemplo, una grabación de audio se
+podría almacenar en un formato no comprimido, pero su frecuencia del
+saple se puede reducir para que quepa en ese formato, produciendo un
+audio con pérdida.&nbsp; Del mismo modo, hay formatos comprimidos que
+también son sin pérdida, los cuales reducen el tamaño del archivo
+manteniendo toda la información del audio.&nbsp; Finalmente, hay
+formatos comprimidos y con pérdida; estos son los más comunes entre los
+consumidores de audio.<br>
 
 
-<h3>Uncompressed Formats</h3>
+<h3>Formatos no commprimidos</h3>
 
 
-<p>Digital audio has a few, very common uncompressed formats that it
-can use.&nbsp; They take PCM audio with the parameters described above,
-and wrap it up into a neat file.&nbsp; The two main formats you will
-find are CD Audio and WAV.&nbsp;You will often find other formats that
-simply
-specify a PCM type (linear, mu-Law, A-Law), a size (8-bit, 16-bit,
-24-bit,
-etc), signed or unsigned, a frequency (32, 44.1, 48), endianess (big or
-little), number of channels, and bit-rate.&nbsp; </p>
+<p>Los formatos no comprimidos que se pueden usar para audio digital
+son pocos pero muy comunes.&nbsp; Estos formatos toman el audio PCM con
+los parámetros descritos en la sección anterior, y los envuelven en un
+archivo limpio.&nbsp; Los dos formatos principales que vas a encontrar
+son CD Audio y WAV.&nbsp; también podrás encontrar otros formatos que
+simplemente especifican un tipo de PCM (linear, mu-Law, A-Law), un
+tamaño (8-bit, 16-bit, 24-bit, etc.), firmado o no firmado, una
+frecuencia (32kHz, 44.1kHz, 48kHz), endianidad (grande o pequeña),
+número de canales, y bit-rate. </p>
 
-<p>CD Audio - The most common format you will find is CD audio, it is
-uncompressed audio.&nbsp; This format is 16-bit, Linear Pulse Code
-Modulation (L-PCM), signed data, running at a 44.1kHz sampling rate,
-with two channels of audio (stereo).&nbsp; It runs at 146KB/s.&nbsp; <br>
-</p>
-
-WAV - Unlike CD Audio, that specifies exact parameters, WAV files are
-capable of containing many different formats, however the most common
-one that it contains is identical to the CD audio format: 16-bit,
-L-PCM, signed, 44.1kHz.&nbsp; WAV files are almost always found with
-uncompressed data, however it is possible to use compression inside
-them.<br>
+<p>CD Audio - El formato más común que vas a encontrar es CD Audio, y
+es audio no comprimido.&nbsp; Este formato es de 16-bit, Modulación
+Linear de Código de Pulso (L-PCM), con data firmada, un sampling rate
+de 44.1kHz, y dos canales de audio (audio estéreo).&nbsp; Opera a1411kbps.
+ </p>
+WAV - A diferencia del CD Audio, que especifica parámetros exactos, los
+archivos WAV son capaces de contener muchos formatos distintos.&nbsp;
+El formato más comun dentro de un archivo WAV es idéntico al del
+formato del CD Audio: 16-bit, L-PCM, firmado, 44.1kHz.&nbsp; Los
+archivos WAV casi siempre se encuentran con data no comprimida, aunque
+es posible usar compresión en este formato.<br>
 <br>
-AUP - This is the format that is used internally by audacity.&nbsp;
-When you save a project in audacity, it creates a file with a .aup
-extension as well as a directory with the same name which stores all
-your raw audio.&nbsp; By default this is 44.1kHz 32-bit float data, but
-that can be changed in the preferences.<br>
+AUP - Este es el formato que Audacity usa internamente.&nbsp; Cuando
+guardas un projecto en Audacity, el programa crea un archivo con
+extensión .aup así como un directorio con el mismo nombre, el cual
+almacena todo tu audio original.&nbsp; La data almacenada es de 32-bit
+a 44.1kHz, per esto se puede cambiar en las prefrencias.<br>
 
+<h3>Formatos Comprimidos</h3>El audio digital puede ocupar mucho
+espacio. Por ejemplo, mirando a un CD Audio típico: samples de 16-bit
+multiplicado por 44.1kHz por dos canales nos da 1,411,200
+bits/segundo.&nbsp; Esto es igual a 176,400Bytes/s o 176KB/s o
+10.6MB/min o 635MB/hr.&nbsp; Estos números pareceran mínimos cuando
+estudiemos el tamaño de archivos de video en la próxima sección, pero
+aún así tienen mucha data para almacenarse, especialmente cuando mucho
+de ese espacio es básicamente redundante. <br>
 <br>
-
-<h3>Compressed Formats</h3>Digital audio can take up quite a bit of
-space.&nbsp; Lets look at
-typical CD audio: 16-bit samples multiplied by 44.1kHz multiplied by
-two channels gives 1,411,200 bits/second.&nbsp; This is equal to
-176,400 Bytes/second or 176KB/s or 10.6MB/min or 635MB/hr.&nbsp; These
-numbers will look nice and tame when we get to the raw video rates in
-the next section, but they are still a lot to store, especially when a
-lot of that space is basically redundant.&nbsp; There are a few
-compression formats that use lossless compression, so that no
-information is lost.&nbsp; The leading one of these is called FLAC, but
-there are also others from Apple and Microsoft.&nbsp; When using a
-lossless compression format, you can typically compress the audio down
-to about half of the original size.&nbsp; However, the
-majority of audio formats are lossy formats.&nbsp; The are used for
-everything from the audio on your DVD and BluRay disk, to MP3 players
-like the iPod and cellphones, and even podcasts and skype.&nbsp; When
-using some of the better lossy compression formats, you can
-usually re-produce the audio so that it sounds almost excatly the same,
-using only about 10-20% of the original size.
-
-<p>MP2 - Stands for MPEG-1 audio, layer 2.&nbsp; Often used in
-broadcasting.<br>
+Como resultado, hay varios formatos comprimidos que usan compresión sin
+pérdida, de manera que no se pierda nada de informaión.&nbsp; El
+formato líder en esta categoría se llama FLAC, pero hay otros formatos
+creados por Apple y Microsoft.&nbsp; Al usar un formato de compresión
+sin pérdida, puedes típicamente comprimir el audio hasta alrededor de
+la mitad del tamaño original.<br>
+<br>
+La mayoría de los formatos de audio, sin embargo, son formatos con
+pérdida.&nbsp; Tienen todo tipo de usos, desde el audio en tu disco DVD
+o BluRay, a equipos de MP3 como el iPod y teléfonos móbiles, y hasta
+podcasts y Skype.&nbsp; Al usar algunos de los mejores formatos de
+compresión, usualmente se puede reproducir el audio para que suene casi
+exactamente igual que el original, usando solamente el 10% o 20% del
+tamaño del archivo original.
+<p>MP2 - Es audio MPEG-1, capa 2.&nbsp; Usado comúnmente para transisiones de radio o television.<br>
 </p>
 
-<p>MP3 - Stands for MPEG-1 audio, layer 3.&nbsp; This is the most
-popular audio format, as is evidenced by the number of MP3 players
-available at electronics stores.&nbsp; Almost all computers and
-consumer audio players can play this format.&nbsp; However, this format
-is older and Vorbis, AAC, and WMA all offer superior compression ratios
-for the same quality audio.<br>
+<p>MP3 - Es audio MPEG-1, capa 3.&nbsp; Este es el formato de audio más
+popular, evidenciado por la gran cantidad de equipos de MP3 disponibles
+en tiendas de electrónicos. Casi todas los computadores y reproductores
+de audio son compatibles con este formato.&nbsp; Sin embargo, este
+formato es antiguo y los formatos Vorbis, AAC, y WMA ofrecen
+proporciones de compresión superiores para audio de igual calidad. <br>
 </p>
 
-<p>AC3 - This is also known as Dolby Digital sound, made popular by its
-use in movie theaters.&nbsp; It is used on many DVDs and supports 5.1
-channel sound.&nbsp; <br>
+<p>AC3 - Este formato también se conoce como sonido Dolby Digital,
+hecho popular por su uso en teatros de cine.&nbsp; Se usa en muchos
+DVDs y puede reproducir sonido de 5.1 canales.<br>
 </p>
 
-<p>FLAC - Free Lossless Audio Codec.&nbsp; This audio format was made
-to take uncompressed formats and shrink them down, without losing any
-quality at all.&nbsp; Audio in this format can be converted back to an
-uncompressed format, and the resulting file would be identical to the
-original uncompressed file.&nbsp; This is often used for editing and
-archival, where you want to be sure not to lose any information.&nbsp;
-Files are usually about half the size of an uncompressed file.&nbsp;
-This format is open source, and free of royalties, so it can be used
-anywhere.<br>
+<p>FLAC - Free Lossless Audio Codec (Codec de Audio Libre y Sin
+Pérdida).&nbsp; Este formato de audio fue creado para tomar formatos no
+comprimidos y reducirlos, sin perder nada de su calidad original.&nbsp;
+El audio en este formato se puede convertir de vuelta a un formato no
+comprimido, y el archivo final sería identico al archivo original no
+comprimido.&nbsp; Esto se usa comúnmente para editar y almacenar audio,
+cuando quieres asegurarte de no perder nadad de información durante el
+proceso de producción.&nbsp; Los archivos son usualmente alrededor de
+la mitad del tamaño del archivo no comprimido. Este formato es de
+código abierto, y libre de regalías, así que se puede usar en cualquier
+lugar.<br>
 </p>
 
-<p>Ogg/Vorbis - This is the leading open source compressed audio
-format.&nbsp; Its compression is approximately twice as good as MP3, and
-on par with AAC or WMA compression.&nbsp; This is the official standard for audio used in web pages.<br>
+<p>Ogg/Vorbis - Este es el formato líder comprimido de código abierto.
+Su compresión es aproximadamente dos veces mejor que el MP3, y a la par
+con compresión AAC y WMA.&nbsp; Este es el estándar oficial para audio
+usado en páginas web.<br>
 </p>
 
-<p>AAC - Advanced Audio Codec&nbsp; This is Apple's primary audio
-codec. It is available on Macintosh, in iTunes, and on
-iPods/iPhones.&nbsp; <br>
+<p>AAC - Advanced Audio Codec (Codec de Audio Avanzado)&nbsp; Este es
+el codigo de audio principal de Apple.&nbsp; Está disponible en
+computadores Macintosh, en iTunes, y en iPods/iPhones.<br>
 </p>
 
-<p>WMA - Windows Media Audio.&nbsp; This is Microsoft's primary audio
-codec.&nbsp; It is available on Windows computers and many portable
-devices.<br>
+<p>WMA - Windows Media Audio (Audio de Media de Windows).&nbsp; Este es
+el codec de audio principal de Microsoft. Está disponible en
+computadores Windows y en muchos equipos portátiles de audio.&nbsp; <br>
 </p>
-
-Speex - This is a codec that was developed specifically for compressing
-human voices.&nbsp; It is not a high fidelity codec, and should not be
-used with music or sound effects, but is good at accurately
-re-producing the human voice.
+Speex - Este es un codec de audio que se desarrolló específicamente
+para comprimir voces humanas.&nbsp; No es un codec de alta fidelidad, y
+no se debe usar con música o efectos de sonido, pero es bueno para
+reproducir una voz humana con precisión.
 </body></html>
