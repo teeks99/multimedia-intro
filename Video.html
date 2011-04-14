@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Unit Four - Video</title>
 
+
   
 
   
@@ -361,10 +362,6 @@ interframe compression is several pages long.&nbsp; <br>
 <br>
 
 <a href="http://es.wikipedia.org/wiki/C%F3dec_de_v%EDdeo">http://es.wikipedia.org/wiki/Códec_de_vídeo</a><br>
-
-<br>
-
-TODO: Get rough compression ratio for each codec.<br>
 
 <br>
 
@@ -751,7 +748,7 @@ configurations), libvpx, and libtheora.<br>
 
 <br>
 
-Quality at different speeds: <a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html</a> (Institute) <br>
+Quality at different speeds: <a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/vid_test/sintel_speed_demo/sintel_clip.html</a> (Institute) <br>
 <br>
 Another way to compare the different codecs it to look at one clip,
 where each codec encodes at the same rate, and see the differences in
@@ -784,16 +781,17 @@ WMA - Used in microsoft video files<br>
 
 <h2>Handbrake&nbsp;</h2>
 
+Open a segment of the movie in a lossless format, and show how it can
+be used for simple compression<br>
+
+
+<br>
+http://www.archive.org/download/BigBuckBunny/big-buck-bunny-NTSC.iso<br>
 Open Big Buck Bunny .iso and show DVD -&gt; File options<br>
 
 Add subtitles to elephants dream?<br>
 
-<br>
-
-Open a segment of the movie in a lossless format, and show how it can
-be used for simple compression<br>
-
-<br>
+<br><br>
 
 <h2>FFMpeg</h2>
 
@@ -801,31 +799,55 @@ List all container formats: ffmpeg -formats<br>
 
 List all codecs: ffmpeg -codecs<br>
 
-List all pixel types: ffmpeg -pix_fmts<br>
-
-List all filters that can be applied: ffmpeg -filters<br>
 
 <br>
 
 ffmpeg [input] [video options] [audio options] [output]<br>
-
-ffmpeg -i InputVideo.mpg -vcodec mpeg2 -vb 4000k -acodec mp2 -ab 192k
-OutputVideo.mpg<br>
-
-ffmpeg -i InputVideo.mpg -vcodec libx264 -vpre normal -vb 800k -acodec
-libfaac -ab 128k OutputVideo.mkv<br>
+<br>
+ffmpeg -i InputVideo.mpg ...[video options] [audio options] [output]<br>
+ffmpeg -i InputVideoTrack.mpg -i InputAudioTrack.wav ...[video options] [audio options] [output]<br>
+<br>
+ffmpeg [input]  -vcodec mpeg2 -b 3000k ...[audio options] [output]<br>
+ffmpeg [input]  -vcodec libtheora -b 3000k ...[audio options] [output]<br>
+ffmpeg [input]  -vcodec libx264 -vpre medium -b 3000k ...[audio options] [output]<br>
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s hd480 ...[audio options] [output]<br>
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s hd720 ...[audio options] [output]<br>
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s 1280x720 ...[audio options] [output]<br>
+<br>
+ffmpeg [input] [video options]  -acodec flac ...[output]<br>
+ffmpeg [input] [video options]  -acodec libmp3lame -ab 256k ...[output]<br>
+ffmpeg [input] [video options]  -acodec libvorbis -ab 192k ...[output]<br>
+ffmpeg [input] [video options]  -acodec -libfaac -ab 192k ...[output]<br>
 
 <br>
 
-Two pass conversion?<br>
+
+ffmpeg [input] [video options] [audio options] OutputVideo.mkv<br>
+
+
+ffmpeg [input] [video options] [audio options]  OutputVideo.mp4<br>
+ffmpeg [input] [video options] [audio options]  -f dvd OutputVideo.mpg<br>
+
+ffmpeg [input] [video options] [audio options]  -f matroska OutputVideo.vid<br>
+
+ffmpeg [input] [video options] [audio options]  -f mp4 OutputVideo.vid<br>
+ffmpeg [input] [video options] [audio options]  -f avi OutputVideo.vid<br>
+<br>
+The result could look like:<br>
+ffmpeg -i InputVideo.mpg -vcodec mpeg2 -b 3000k -s hd480 -acodec flac OutputVideo.mkv<br>
+
+<br>
+Two Pass Encoding<br>
+ffmpeg -i InputVideo.mpg -pass 1 -vcodec mpeg2 -b 3000k -bt 3000k -an -f rawvideo -y /dev/null<br>
+ffmpeg -i InputVideo.mpg -pass 2 -vcodec mpeg2 -b 3000k -bt 3000k -acodec flac OutputVideo.mkv<br>
 
 <h2>Cutting (Avidemux?)</h2>
 
-<h2>Kdenlive</h2>
+<h2>Multi-Track Editing</h2>
 
 <br>
 
-<h3>Multi-Track Editing</h3>
+<h3>Kdenlive</h3>
 
 <br>
 
