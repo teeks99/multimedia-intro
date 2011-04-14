@@ -1,0 +1,224 @@
+# This is a special JSON file, in that it supports comments that start with a #.  If you want to send this file 
+# across the internet to a 3rd party, you should remove them first as their JSON parser may not accept them.
+
+{
+"input":[
+    {
+        "name":"sintel_clip_small",
+        "files":[
+            "sintel_clip_428p.y4m",
+            "sintel_clip.flac"
+        ],
+        "image_points":[
+            {"sec":"2","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"5","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"7","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"9.560","w":"640","h":"480","x":"60","y":"0"}
+        ]
+    }
+]
+,
+"external_vars":{
+    "FILL_manual_threads":"4"
+}
+,
+"tests":[
+# The first tests are for the almost-lossless category 
+    {
+        "title":"lossless",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET.mkv",
+        "variables":[
+            {
+                "name":"PRESET",
+                "values":[
+                    "lossless_medium"
+                ]
+            }
+        ]
+    },
+    {
+        "title":"x264-2p-veryslow",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre veryslow_firstpass -b RATEk -bt RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre veryslow -b RATEk -bt RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-veryslow-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-veryslow-RATE-2p.mkv",
+        "variables":[
+            {"name":"RATE","values":["1000"]}
+        ]
+    },
+    {
+        "title":"x264-2p-medium",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre medium_firstpass -b RATEk -bt RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre medium -b RATEk -bt RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-medium-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-medium-RATE-2p.mkv",
+        "variables":[
+            {"name":"RATE","values":["1500"]}
+        ]
+    },
+    {
+        "title":"x264-2p-ultrafast",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre ultrafast_firstpass -b RATEk -bt RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre ultrafast -b RATEk -bt RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-ultrafast-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-ultrafast-RATE-2p.mkv",
+        "variables":[
+            {"name":"RATE","values":["3000"]}
+        ]
+    },
+    {
+        "title":"x264-1p-veryslow",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["veryslow"]},
+            {"name":"RATE","values":["1500"]}
+        ]
+    },
+    {
+        "title":"x264-1p-medium",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["medium"]},
+            {"name":"RATE","values":["2000"]}
+        ]
+    },
+    {
+        "title":"x264-1p-ultrafast",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["ultrafast"]},
+            {"name":"RATE","values":["4000"]}
+        ]
+    },
+    {
+        "title":"libvpx-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libvpx"]},
+            {"name":"RATE","values":["2000"]}
+        ]
+    },
+    {
+        "title":"libvpx-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libvpx"]},
+            {"name":"RATE","values":["2500"]}
+        ]
+    },
+    {
+        "title":"libtheora-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libtheora"]},
+            {"name":"RATE","values":["4000"]}
+        ]
+    },
+    {
+        "title":"libtheora-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libtheora"]},
+            {"name":"RATE","values":["4500"]}
+        ]
+    },
+    {
+        "title":"mpeg4-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg4"]},
+            {"name":"RATE","values":["5000"]}
+        ]
+    },
+    {
+        "title":"mpeg4-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg4"]},
+            {"name":"RATE","values":["6000"]}
+        ]
+    },
+    {
+        "title":"mjpeg-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mjpeg"]},
+            {"name":"RATE","values":["9000"]}
+        ]
+    },
+    {
+        "title":"mjpeg-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mjpeg"]},
+            {"name":"RATE","values":["9000"]}
+        ]
+    },
+    {
+        "title":"mpeg2video-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg2video"]},
+            {"name":"RATE","values":["6000"]}
+        ]
+    },
+    {
+        "title":"mpeg2video-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg2video"]},
+            {"name":"RATE","values":["7000"]}
+        ]
+    }
+]
+}

@@ -1,0 +1,56 @@
+# This is a special JSON file, in that it supports comments that start with a #.  If you want to send this file 
+# across the internet to a 3rd party, you should remove them first as their JSON parser may not accept them.
+
+{
+"input":[
+    {
+        "name":"sintel_clip",
+        "files":[
+            "sintel_clip.y4m",
+            "sintel_clip.flac"
+        ],
+        "image_points":[
+            {"sec":"2","w":"640","h":"480","x":"640","y":"150"},
+            {"sec":"5","w":"640","h":"480","x":"675","y":"90"},
+            {"sec":"7","w":"640","h":"480","x":"450","y":"150"},
+            {"sec":"9.560","w":"640","h":"480","x":"390","y":"0"}
+        ]
+    }
+]
+,
+"external_vars":{
+    "FILL_manual_threads":"4"
+}
+,
+# Here you may enter tests.  Each test may have additional variables that will be iterated over to create sub-tests.  
+#INPUT_FILES is the group of files to be added in "-i name1 -i name2" format
+#INPUT_NAME is a special variable, from test_input_files[x]["name"], please no spaces
+"tests":[
+    {
+        "title":"x264-lossless",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET.mkv",
+        "variables":[
+            {
+                "name":"PRESET",
+                "values":[
+                    "lossless_medium"
+                ]
+            }
+        ]
+    },
+    {
+        "title":"x264-2p-veryslow",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre veryslow_firstpass -b RATEk -bt RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre veryslow -b RATEk -bt RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-veryslow-RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-veryslow-RATE-2p.mkv",
+        "variables":[
+            {"name":"RATE","values":["250","500","750","1000","2000","4000","6000","8000","10000"]}
+        ]
+    }
+]
+}

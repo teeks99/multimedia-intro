@@ -1,0 +1,204 @@
+# This is a special JSON file, in that it supports comments that start with a #.  If you want to send this file 
+# across the internet to a 3rd party, you should remove them first as their JSON parser may not accept them.
+
+{
+"input":[
+    {
+        "name":"sintel_clip_small",
+        "files":[
+            "sintel_clip_428p.y4m",
+            "sintel_clip.flac"
+        ],
+        "image_points":[
+            {"sec":"2","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"5","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"7","w":"640","h":"480","x":"60","y":"0"},
+            {"sec":"9.560","w":"640","h":"480","x":"60","y":"0"}
+        ]
+    }
+]
+,
+"external_vars":{
+    "FILL_manual_threads":"4",
+    "FILL_RATE":"4000"
+}
+,
+"tests":[
+# The first tests are for the almost-lossless category 
+
+    {
+        "title":"x264-lossless",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET.mkv",
+        "variables":[
+            {
+                "name":"PRESET",
+                "values":[
+                    "lossless_medium"
+                ]
+            }
+        ]
+    },
+    {
+        "title":"x264-2p-veryslow",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre veryslow_firstpass -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre veryslow -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-veryslow-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-veryslow-FILL_RATE-2p.mkv"
+    },
+    {
+        "title":"x264-2p-medium",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre medium_firstpass -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre medium -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-medium-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-medium-FILL_RATE-2p.mkv"
+    },
+    {
+        "title":"x264-2p-ultrafast",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec libx264 -vpre ultrafast_firstpass -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads -f rawvideo -y /dev/null", 
+            "ffmpeg INPUT_FILES -pass 2 -vcodec libx264 -vpre ultrafast -b FILL_RATEk -bt FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-ultrafast-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-ultrafast-FILL_RATE-2p.mkv"
+    },
+    {
+        "title":"x264-1p-veryslow",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["veryslow"]}
+        ]
+    },
+    {
+        "title":"x264-1p-medium",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["medium"]}
+        ]
+    },
+    {
+        "title":"x264-1p-ultrafast",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec libx264 -vpre PRESET -b FILL_RATEk -an -threads FILL_manual_threads INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-x264-PRESET-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"PRESET","values":["ultrafast"]}
+        ]
+    },
+    {
+        "title":"libvpx-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b FILL_RATEk -bt FILL_RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libvpx"]}
+        ]
+    },
+    {
+        "title":"libvpx-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libvpx"]}
+        ]
+    },
+    {
+        "title":"libtheora-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b FILL_RATEk -bt FILL_RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libtheora"]}
+        ]
+    },
+    {
+        "title":"libtheora-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["libtheora"]}
+        ]
+    },
+    {
+        "title":"mpeg4-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b FILL_RATEk -bt FILL_RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg4"]}
+        ]
+    },
+    {
+        "title":"mpeg4-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg4"]}
+        ]
+    },
+    {
+        "title":"mjpeg-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b FILL_RATEk -bt FILL_RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mjpeg"]}
+        ]
+    },
+    {
+        "title":"mjpeg-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mjpeg"]}
+        ]
+    },
+    {
+        "title":"mpeg2video-2p",
+        "commands":[
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b FILL_RATEk -bt FILL_RATEk -an -threads 0 -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-2p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-2p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg2video"]}
+        ]
+    },
+    {
+        "title":"mpeg2video-1p",
+        "commands":[
+            "ffmpeg INPUT_FILES -vcodec CODEC -b FILL_RATEk -an -threads 0 INPUT_NAME-CODEC-FILL_RATE-1p.mkv"
+        ],
+        "output":"INPUT_NAME-CODEC-FILL_RATE-1p.mkv",
+        "variables":[
+            {"name":"CODEC","values":["mpeg2video"]}
+        ]
+    }
+]
+}
