@@ -1,0 +1,150 @@
+<h2 class="western">Introduction to Video Storage<br>
+</h2>
+
+Digital video is made up of many "frames" of video, where each frame is
+basically a photograph or image, displayed in rapid succession.&nbsp;
+In addition, there is usually one or more tracks of audio that is
+synchronized with the video, and possibly subtitle tracks as
+well.&nbsp; There are a nearly innumerable different number of ways to
+format it, store it, and transmit it.&nbsp; Here we will break it down
+into the different aspects and components and cover some of the basics
+behind how it works.&nbsp; <br>
+
+<h3>Aspect Ratio and Resolution<br>
+</h3>
+
+<p>Video typically comes in two different aspect ratios: 4:3 (the same
+as typical photographs), and 16:9.&nbsp; 4:3 was a common standard for
+televison, but it is being replaced with HD TV which uses the 16:9
+aspect ratio.&nbsp; The wider 16:9 ratio is generally considered better
+for humas to watch.&nbsp; The reason for this is that our eyes are
+towards the side of our head, and this gives us a much wider field of
+view to the sides than it does up and down.&nbsp; The wider aspect
+ratio does a better job at filling that natural field of view.&nbsp; <br>
+</p>
+
+Here are some of the common resolutions used for video and some of the
+names that go with them.<br>
+
+<br>
+
+16:9 formats - HD TV and Internet Video<br>
+
+1920x1080 - 1080p, 1080i, hd1080<br>
+
+1280x720 - 720p, hd720<br>
+
+1024x576 - 576p, WSVGA<br>
+
+854:480 - 480p, hd480<br>
+
+640:360 - 360p<br>
+
+463:240 - 240p<br>
+
+<br>
+
+4:3 formats - old TV and Internet Video<br>
+
+768:576 - 576i, PAL<br>
+
+640:480 - VGA, 480i, NTSC<br>
+
+320:240 - QVGA<br>
+
+<br>
+
+17:9 formats - specifically for movies in theaters and film editing<br>
+
+4096x2160 - 4k<br>
+
+2048x1080 - 2k<br>
+
+<br>
+
+<a href="http://en.wikipedia.org/wiki/Aspect_ratio_%28image%29">http://en.wikipedia.org/wiki/Aspect_ratio_(image)</a><br>
+
+<a href="http://es.wikipedia.org/wiki/Relaci%F3n_de_aspecto">http://es.wikipedia.org/wiki/Relación_de_aspecto</a><br>
+
+<h3>Interlacing</h3>
+
+You may notice that many of the numeric representations for the formats
+have a p or i after the number of lines of resolution.&nbsp; This
+indicates that the video is Progressive scan or Interlaced scan.&nbsp;
+Old, analog televisons used interlaced scan to cut in half the amount
+of data they needed to send.&nbsp; This is commonly called interlacing
+and it works by alternating which lines are broadcast.&nbsp; In one
+frame of video all the odd numbered lines would be broadcast, then in
+the next frame of video, all the even numbered lines would be
+broadcast.&nbsp; If this interlacing of frames happens fast enough it
+tricks the human eye into thinking that they are full frames.&nbsp;
+With one single exception (1080i), all the modern video formats are
+progressive scan.&nbsp; The 1080i format was really just used as a
+marketing gimmick to tell people that they are getting 1080 quality
+video on their TVs without having to processes full 1080p video.&nbsp;
+In reality, 720p video will look just as good if not better than 1080i
+video, especially for high-motion action scenes.&nbsp; When creating
+videos, interlacing should only be used if the video is primairly
+targeting a analog broadcast television.&nbsp; Digital video should
+always be progressive scan (it helps it compress better).<br>
+
+<br>
+
+<a href="http://en.wikipedia.org/wiki/Interlaced_video">http://en.wikipedia.org/wiki/Interlaced_video</a><br>
+
+<a href="http://es.wikipedia.org/wiki/Exploraci%F3n_entrelazada">http://es.wikipedia.org/wiki/Exploración_entrelazada</a><br>
+
+<h3>Frame Rates</h3>
+
+The number of frames shown per second, also known as the "Frame Rate"
+is another variable when creating video.&nbsp;&nbsp; Typically in this
+course we will be <br>
+
+using 30fps (Frames Per Second), unless the source material is
+something different.<br>
+
+<br>
+
+The faster the frame rate is, the more smoothly it will seem that the
+video is.&nbsp; (Example with 30fps and same video at 5fps...action
+sequence)<br>
+
+<br>
+
+Here are some common frame rates in use, in frames per second:<br>
+
+<p>23.976 - NTSC film (24/1.001)<br>
+24 - Typical for film<br>
+25 - PAL television/film<br>
+29.97 - NTSC television (30/1.001)<br>
+30 - Digital Video<br>
+60 - Digital Video</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Frame_rate">http://en.wikipedia.org/wiki/Frame_rate</a><br>
+<a href="http://es.wikipedia.org/wiki/Im%E1genes_por_segundo">http://es.wikipedia.org/wiki/Imágenes_por_segundo</a><br>
+</p>
+
+<h3>Pixel Formats</h3>
+
+<p>There are a lot of different formats used to store the pixels (it
+can also be referred to as the color space) and it gets very
+complicated, so we're not going to go too far into it.&nbsp; A quick
+overview, when we worked on the photo unit, we assumed that everything
+was represented in terms of its RGB values (8 bits each, for a total of
+24 bits).&nbsp; That format is also common in video, however there are
+many more.&nbsp; Most are defined in terms of YUV, this defines a
+Luminance (brightness and darkness) channel and two different chroma
+(color) channels, this can roughly re-produce all the colors of the 24
+bit RGB.&nbsp; However, when the human eye sees an image, it is mostly
+looking at the lightness and darkness (luminance) of it, and though the
+color is important it doesn't take a large amount of color to make it
+seem fully colored.&nbsp; Because the color information isn't as
+important to the eye, some of these formats take out some of that
+information to save space.&nbsp; Common formats you will see are
+YUV4:2:2 (16 bits), YUV4:1:1 (12 bits), and YUV4:2:0 (12 bits).&nbsp;
+Don't worry about what the numbers mean, just be aware that they are
+out there.&nbsp; <br>
+</p>
+
+<a href="http://en.wikipedia.org/wiki/YUV">http://en.wikipedia.org/wiki/YUV</a><br>
+<a href="http://es.wikipedia.org/wiki/YUV">http://es.wikipedia.org/wiki/YUV</a>
