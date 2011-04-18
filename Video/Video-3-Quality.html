@@ -1,0 +1,287 @@
+<h3>Video Quality</h3>
+
+Here are some results from running on the sintel animated clip.&nbsp;
+All results are in kbps (thousand bits per second).&nbsp; The clip was
+built from lossless .png files of each frame.&nbsp; The video is
+1920x854 (we'll call this 1080p even though it is not) and 960x428
+(we'll call this 480p even though it is not).&nbsp; The 480p video has
+1/4 the size (pixels) of the 1080p video.&nbsp; These values were all
+determined by watching the videos output with them (and many other
+candidates), to try to determine what met the various levels of
+quality. Because of this, the results are subjective, but should give
+you a good feeling for the power of the various codecs, when used with
+the default settings.&nbsp; raw video, ffv1, mpeg4, mjpeg, and mpeg2
+were all encoded with the encoders inside the ffmpeg too.&nbsp; The
+other encoders that were used are: libx264 (with various pre-set
+configurations), libvpx, and libtheora.<br>
+
+<a name="CodecQuality"></a><br>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">Codec<br>
+      </td>
+      <td style="vertical-align: top;">1080p Almost Perfect<br>
+      </td>
+      <td style="vertical-align: top;">1080p Good<br>
+      </td>
+      <td style="vertical-align: top;">480p Almost Perfect<br>
+      </td>
+      <td style="vertical-align: top;">480p Good<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">raw video<br>
+      </td>
+      <td style="vertical-align: top;">(880000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;">(234000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ffv1 (lossless)<br>
+      </td>
+      <td style="vertical-align: top;">(107000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;">(31500)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-lossless_max<br>
+      </td>
+      <td style="vertical-align: top;">(48000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;">(18000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-lossless_medium<br>
+      </td>
+      <td style="vertical-align: top;">(50000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;">(15000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-lossless_ultrafast<br>
+      </td>
+      <td style="vertical-align: top;">(61000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+      <td style="vertical-align: top;">(14000)<br>
+      </td>
+      <td style="vertical-align: top;">n/a<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-veryslow-2p<br>
+      </td>
+      <td style="vertical-align: top;">7000<br>
+      </td>
+      <td style="vertical-align: top;">2000<br>
+      </td>
+      <td style="vertical-align: top;">4000<br>
+      </td>
+      <td style="vertical-align: top;">1000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-medium-2p<br>
+      </td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+      <td style="vertical-align: top;">2500<br>
+      </td>
+      <td style="vertical-align: top;">4500<br>
+      </td>
+      <td style="vertical-align: top;">1500<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-ultrafast-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible<br>
+      </td>
+      <td style="vertical-align: top;">6000<br>
+      </td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+      <td style="vertical-align: top;">3000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-veryslow-1p<br>
+      </td>
+      <td style="vertical-align: top;">11000<br>
+      </td>
+      <td style="vertical-align: top;">2500<br>
+      </td>
+      <td style="vertical-align: top;">4500<br>
+      </td>
+      <td style="vertical-align: top;">1500<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-medium-1p<br>
+      </td>
+      <td style="vertical-align: top;">12000<br>
+      </td>
+      <td style="vertical-align: top;">3000<br>
+      </td>
+      <td style="vertical-align: top;">5000<br>
+      </td>
+      <td style="vertical-align: top;">2000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">h.264-ultrafast-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible<br>
+      </td>
+      <td style="vertical-align: top;">7000<br>
+      </td>
+      <td style="vertical-align: top;">10000<br>
+      </td>
+      <td style="vertical-align: top;">4000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">vp8-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">3000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">2000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">vp8-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">4000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">2500<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">theora-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">6000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">4000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">theora-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">9000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">4500<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg4-2p (part 2)<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">6000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">5000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg4-1p (part 2)<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">6000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mjpeg-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">15000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mjpeg-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">17000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg2-2p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">8000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">6000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mpeg2-1p<br>
+      </td>
+      <td style="vertical-align: top;">not possible</td>
+      <td style="vertical-align: top;">10000<br>
+      </td>
+      <td style="vertical-align: top;">not possible
+      </td>
+      <td style="vertical-align: top;">7000<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+Quality at different speeds: <a href="http://jp2-s1/sys/sintel_speed_demo/sintel_clip.html">http://jp2-s1/vid_test/sintel_speed_demo/sintel_clip.html</a> (Institute) <br>
+<br>
+Another way to compare the different codecs it to look at one clip,
+where each codec encodes at the same rate, and see the differences in
+the result:<br>
+480p at 4000kbps<br>
