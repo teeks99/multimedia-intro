@@ -1,5 +1,128 @@
-<h2>Handbrake&nbsp;</h2>Handbrake is a video transcoder that can take in video of one format (typical computer video, but also DVD or BluRay format) and output a video in one of several popular formats.<br><br>To show the conversion in action, we are going to open <a href="http://jp2-s1/vid_test/sintel_clip_x264-lossless-flac.mkv">this</a> (Institute Only) lossless segment of the sintel trailer, and use Handbrake to make a compressed version of it.<br><br>Lets start up Handbrake.<br><img src="Screen/Handbrake.png" alt="Handbrake.png"><br>Click the Source button and load the video we want to convert.<br><br>Once the video is loaded, you will see a lot of the information on the screen populated.<br><img src="Screen/Handbrake-Loaded.png" alt="Handbrake-Loaded.png"><br>The "Source:" section contains information about our video.&nbsp; In this case, it says it is 10 seconds long, and there is only one chapter and angle.&nbsp; For videos coming off of a DVD or BluRay this may have multiple chapters and/or angles.<br><br>The "Destination" has the file we will write the output to.&nbsp; The only two options are MP4 (MPEG 4) or MKV (Matroska).&nbsp; For MP4, it is possible to check the "Web optimized" box.&nbsp; This puts information about the video in the front of the file, so if you put it on a web-page it can start playing before the entire video has been downloaded.<br><br>On the summary tab, there is information about the input video, specifically dimensions (which give the aspect ratio) and the frame rate.&nbsp; <br><br>Going to the video tab gives us options for compressing the video. <br><br><br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Video - 4 - Handbrake</title>
+
+  
+</head><body>
+<h2>Handbrake&nbsp;</h2>
+
+Handbrake is a video transcoder that can take in video of one format
+(typical computer video, but also DVD or BluRay format) and output a
+video in one of several popular formats.<br>
+
+<br>
+
+To show the conversion in action, we are going to open <a href="http://jp2-s1/vid_test/sintel_clip_x264-lossless-flac.mkv">this</a>
+(Institute Only) lossless segment of the sintel trailer, and use
+Handbrake to make a compressed version of it.<br>
+
+<br>
+
+Lets start up Handbrake.<br>
+
+<img src="Screen/Handbrake.png" alt="Handbrake.png"><br>
+
+Click the Source button and load the video we want to convert.<br>
+
+<br>
+
+Once the video is loaded, you will see a lot of the information on the
+screen populated.<br>
+
+<img src="Screen/Handbrake-Loaded.png" alt="Handbrake-Loaded.png"><br>
+
+The "Source:" section contains information about our video.&nbsp; In
+this case, it says it is 10 seconds long, and there is only one chapter
+and angle.&nbsp; For videos coming off of a DVD or BluRay this may have
+multiple chapters and/or angles.<br>
+
+<br>
+
+The "Destination" has the file we will write the output to.&nbsp; The
+only two options are MP4 (MPEG 4) or MKV (Matroska).&nbsp; For MP4, it
+is possible to check the "Web optimized" box.&nbsp; This puts
+information about the video in the front of the file, so if you put it
+on a web-page it can start playing before the entire video has been
+downloaded.<br>
+
+<br>
+
+On the summary tab, there is information about the input video,
+specifically dimensions (which give the aspect ratio) and the frame
+rate.&nbsp; <br>
+
+<br>
+
+Going to the video tab gives us options for compressing the video. <br>
+
+<img style="width: 979px; height: 704px;" src="Screen/Handbrake-Video.png" alt="Handbrake-Video.png"><br>
+
+The video codec options that are available are: H.264, MPEG 4 (Part 2),
+and Theora (not availble with MP4).&nbsp; To the right, there are
+options for specifying how the encoder should determine the size of the
+file.&nbsp; You can set the average bit-rate that you desire, or you
+can set the size of the final file you would like and the encoder will
+figure out what bit-rate it can use.&nbsp; When either of these options
+are set, you can enable 2-Pass encoding with the check-box on the left.
+There is also a third option which is to set the quality of the final
+video.&nbsp; Smaller numbers mean higher quality and higher file size,
+lower numbers are lower quality and file size.&nbsp; <br>
+
+<br>
+
+<img src="Screen/Handbrake-Audio.png" alt="Handbrake-Audio.png"><br>
+
+On the Audio tab are the options for encoding each track of
+audio.&nbsp; Handbrake will allow you to put multiple tracks of audio
+into one file (multiple languages, a track with the director's
+comentary, etc) that the viewer can then select while they are watching
+the video.&nbsp; For each track of audio, a codec (AAC, MP3, Vorbis
+(only available in MKV format), or AC3) can be selected along with a
+bit-rate.&nbsp; <br>
+
+<br>
+
+<img src="Screen/Handbrake-Subtitles.png" alt="Handbrake-Subtitles.png"><br>
+
+The subtitles page is similar to the audio page, in that you can have
+several subtitle tracks built in to the single video file.&nbsp; You
+can use any subtitles from the source, or add external ones from a .srt
+file.&nbsp; <br>
+
+<br>
+
+<img src="Screen/Handbrake-Dimensions.png" alt="Handbrake-Dimensions.png"><br>
+
+By clicking the Picture Settings button at the top of the application,
+it is possible to change the dimensions of the video, by cropping or
+stretching the video.&nbsp; <br>
+
+<br>
+
+<img src="Screen/Handbrake-Filters.png" alt="Handbrake-Filters.png"><br>
+
+Finally, by going to the filters tab of the pictures settings, it is
+possible to apply some simple filters.&nbsp; The most important of
+which would be "Deinterlace" which will fix interlaced video for use on
+a computer screen.&nbsp; <br>
+
+<br>
+
+Once you have all the settings correct, hit the Start button at the
+top, and the encoding will start.&nbsp; You will see the status of the
+encoding along the bottom.<br>
+
+<img src="Screen/Handbrake-Encoding.png" alt="Handbrake-Encoding.png"><br>
+
+<br>
+
+<br>
+
+<br>
+
 http://www.archive.org/download/BigBuckBunny/big-buck-bunny-NTSC.iso<br>
+
 Open Big Buck Bunny .iso and show DVD -&gt; File options<br>
 
 Add subtitles to elephants dream?
+</body></html>
