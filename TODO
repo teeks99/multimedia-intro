@@ -1,0 +1,81 @@
+===== Text Errata/Bugs to fix =====
+fix quotes in reconocimiento
+typo in rasterazation vocab
+missing part of first inkscape tutorial translation
+diagrams "texto texto"
+bold audio vocab
+audio vocab Pista - unna
+callladas sound 
+
+===== Text Main =====
+=== Video ===
+3 ffmpeg
+    example to make mpeg4-mp3 result?
+4 avidemux
+    example with cutting out title
+    example only saving old man
+5 multi-track
+    explanation of multi-track: cross-fade video, composite, more?
+    kdenlive
+    joining multiple clips and audio
+    transitions?
+    ....more??
+6 DVD creation
+    use kdenlive
+7 YouTube creation
+    good settings
+    upload
+    online settings
+8 Screen Capture
+    gtk-recordmydesktop
+
+=== Web Pages ===
+
+1 Web Architecture
+    Servers and Network
+    Structured Documents, Links
+
+2 Basic Page
+    Pictures Links
+    Basic HTML
+
+3 Kompozer
+    Other formatting?
+
+===== Future Improvements =====
+Intro
+    add dia in place of scribus, sound juicer?, sound recorder?, gtk-record my desktop? 
+Graphics
+    switch creative exercise 1&2
+    Inkscape tranlations into seperate .svg and baseline
+    explain what type of submission in each (svg vs. png) and that I will show PNGs for the creative exercise to the class to vote on
+Audio
+    Explain dBs log scale
+    Re-record two track without names
+    fix 2kHz graph so that it has 20 waves over .01 sec (or 10 waves over .005 sec?) 
+    JACK Example?
+    like photo- can't scale up quality to higher bit-rate
+    example of audio bit-rate clipping (8-bit depth?)
+Video
+    Fix sintel clip audio offset
+    ffmpeg commands text format
+
+===== translations =====
+(en -> es)
+Audio
+    sections 4, 5, 6, 7, 8, 9
+Video
+    sections 1, 2, (more coming)
+Web
+    none ready
+
+Stuff not in the text, but good reference material
+Inkscape Tutorial - Mostly there, some sections aren't...get section translations into the baseline
+Wikipedia
+    Video_compression
+    Video_codec
+    Digital-to-analog_converter
+    audio compressor
+GIMP Manual - Major chunks not translated
+Handbrake Interface
+Kdenlive Manual?
