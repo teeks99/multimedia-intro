@@ -1,0 +1,102 @@
+<h2>FFMpeg</h2>FFMpeg is an extremely powerful tool for converting
+video from one format into another format.&nbsp; All major codecs are
+supported, and even a lot of more obscure ones.&nbsp; Unfortunately,
+the only way to use this tool directly is by typing in commands on the
+command line.&nbsp; <br>
+<br>
+To enter commands, you need to start a "Terminal" program.&nbsp; In
+Ubuntu you can get to it by going to Applications -&gt; Accessories
+-&gt; Terminal.<br>
+<br>
+Once there, you can type commands to run programs.&nbsp; (Two
+important, but non ffmpeg-related commands: ls - lists out all the
+files in the directory you are currently in, and "cd" - changes the
+directory for example type "cd Downloads" from your home directory to
+get into the Downloads directory)<br>
+<br>
+The first two things you can do with FFmpeg are to list out the formats
+and codecs that this copy supports.&nbsp; This may change based on what
+is installed on your computer, so it is best to check these before
+running a command, to make sure you have the correct support available.<br>
+List all container formats: ffmpeg -formats<br>
+
+List all codecs: ffmpeg -codecs<br>
+
+
+<br>
+To convert a video, simply run the command "ffmpeg" with four additional parts:<br>
+
+ffmpeg [input] [video options] [audio options] [output]<br>
+<br>
+The input part is composed of a "-i" and the name of the video you have
+that you want to convert to something else.&nbsp; You could have more
+than one of these input files (each one gets its own "-i") if for
+example you have a video with an audio track in a seperate file.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg -i InputVideo.mpg ...[video options] [audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg -i InputVideoTrack.mpg -i InputAudioTrack.wav ...[video options] [audio options] [output]</span><br style="font-family: FreeMono;">
+
+<br>The video options are where you specify the codec (with the
+"-vcodec" option) and bit-rate (with the "-b" option). In addition you
+can specify a video preset ("-vpre") which is essential for x264
+encoding, and you can specify a size ("-s") with either a standard size
+reference or the format WIDTHxHEIGTH. <br>
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg [input]  -vcodec mpeg2 -b 3000k ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input]  -vcodec libtheora -b 3000k ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input]  -vcodec libx264 -vpre medium -b 3000k ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s hd480 ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s vga ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input]  -vcodec mpeg2 -b 3000k -s 1280x720 ...[audio options] [output]</span><big><br>
+</big>
+<br>
+The audio options are where you specify the audio codec ("-acodec") and bit-rate ("-ab").&nbsp; <br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options]  -acodec flac ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options]  -acodec libmp3lame -ab 256k ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options]  -acodec libvorbis -ab 192k ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options]  -acodec -libfaac -ab 192k ...[output]</span><br>
+
+<br>
+The output is where you specify the filename that the converted video
+will go into.&nbsp; Usually the extension of the filename (.mkv, .mp4,
+.avi, etc) will allow the program to determine what format the file
+will be written as, however if it is ambiguious or you want to use
+format that isn't tied to that file extension, you can use "-f" and the
+format name.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+
+
+ffmpeg [input] [video options] [audio options] OutputVideo.mkv</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+
+
+ffmpeg [input] [video options] [audio options]  OutputVideo.mp4</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options] [audio options]  -f dvd OutputVideo.mpg</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+
+ffmpeg [input] [video options] [audio options]  -f matroska OutputVideo.vid</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+
+ffmpeg [input] [video options] [audio options]  -f mp4 OutputVideo.vid</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [input] [video options] [audio options]  -f avi OutputVideo.vid</span><br>
+<br>
+The result could look like:<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg -i InputVideo.mpg -vcodec mpeg2 -b 3000k -s hd480 -acodec flac OutputVideo.mkv</span><br>
+
+<br>
+Two Pass Encoding<br>
+It is possible to use ffmpeg for two-pass encoding.&nbsp; The important
+part is to call it twice, once with the "-pass 1" paramater and once it
+finishes run it a second time with the "-pass 2" paramater.&nbsp; On
+Ubuntu, you can do a couple additional things on the first pass to
+speed it up: "-an" specifies that there is no audio codec to be
+run.&nbsp; "-f" rawvideo keeps it from trying to pack it into a special
+format, just to throw away.&nbsp; The "-y" /dev/null specifies that the
+output will go into the special null file, which means that it just
+disappears instead of having to send data to the hard disk.&nbsp; In addition when running two pass, we add the "-bt" paramater which tells the codec how much the bit-rate can change.&nbsp; It will usually work well to set it the same as the bit-rate.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg -i InputVideo.mpg -pass 1 -vcodec mpeg2 -b 3000k -bt 3000k -an -f rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg -i InputVideo.mpg -pass 2 -vcodec mpeg2 -b 3000k -bt 3000k -acodec flac OutputVideo.mkv</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+<br>
+That's all there is to using FFMpeg, not too complicated.<br>
+<br>
+Now lets do a couple examples using FFMpeg....<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg -i sintel_clip_x264-lossless_flac.mkv -pass 1 -vcodec libx264 -vpre slow_firstpass -b 1200k -bt 1200k -an -f rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg -i sintel_clip_x264-lossless_flac.mkv -pass 2 -vcodec libx264 -vpre slow -b 1200k -bt 1200k -acodec libfaac -ab 192k output.mp4</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><br>As a bonus, we can set it up so that it can be run from a website, and the video will start to play before the download has finished:<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">qt-faststart output.mp4 webvid.mp4</span><br><br>
