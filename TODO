@@ -11,11 +11,7 @@ callladas sound
 === Video ===
 2 Handbrake
     DVD example (with multi-audio, multi-sub, etc) 
-3 ffmpeg
-    example to make mpeg4-mp3 result?
-4 avidemux
-    example with cutting out title
-    example only saving old man
+
 5 multi-track
     explanation of multi-track: cross-fade video, composite, more?
     kdenlive
@@ -61,6 +57,8 @@ Audio
 Video
     Fix sintel clip audio offset
     ffmpeg commands text format
+    ffmpeg example to make mpeg4-mp3 result?
+    ffmpeg subtitles?
     find a good home for bigger video clips?
 General
     Move photo and intro sections into their own folders
