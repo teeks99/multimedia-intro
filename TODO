@@ -9,6 +9,8 @@ callladas sound
 
 ===== Text Main =====
 === Video ===
+2 Handbrake
+    DVD example (with multi-audio, multi-sub, etc) 
 3 ffmpeg
     example to make mpeg4-mp3 result?
 4 avidemux
@@ -59,6 +61,12 @@ Audio
 Video
     Fix sintel clip audio offset
     ffmpeg commands text format
+    find a good home for bigger video clips?
+General
+    Move photo and intro sections into their own folders
+    Convert HTML to docbook? (or other) format, gen HTML from that
+    Push text to wikiversity...other sites?
+    Push moodle course to ???
 
 ===== translations =====
 (en -> es)
