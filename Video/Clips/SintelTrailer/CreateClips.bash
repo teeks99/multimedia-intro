@@ -4,13 +4,17 @@
 # Download pre-requisites (the raw files), you´ll need to uncomment these.
 # Get Video
 #wget http://media.xiph.org/sintel/sintel_trailer-1080-png.tar.gz
-#tar -xzvf sintel_trailer-1080-png.tar.gz
+#tar -xzvf sintel_trailer-1080-png.tar.gz # Creates directory 1080/
 
 # Get Audio
 #wget http://media.xiph.org/sintel/sintel_trailer-audio.flac
+#cp -l ../../../Audio/Audio/sintel_trailer-audio.flac .
 
 # Crop down the PNGs to the resolution of the video
 ffmpeg -i 1080/sintel_trailer_2k_%04d.png -vf crop=1920:816:0:132 -vcodec rawvideo -pix_fmt yuv444p sintel_trailer.y4m
+
+# Covert to a not super-huge format
+ffmpeg -i sintel_trailer.y4m -vcodec libx264 -vpre lossless_max sintel_trailer-lossless_max.mkv
 
 #  We want the whole thing, but at low-res
 ffmpeg -i sintel_trailer.y4m -i sintel_trailer-audio.flac -pass 1 -vcodec libx264 -vpre slow_firstpass -s 960x408 -b 1200k -bt 1200k -an -f rawvideo -y /dev/null
