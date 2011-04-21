@@ -40,3 +40,22 @@ ffmpeg -i sintel_clip.y4m -vcodec rawvideo -s 960x408 -pix_fmt yuv444p sintel_cl
 
 # Lossy
 ffmpeg -i sintel_trailer-408p-mpeg4-mp3.mp4 -ss 7.0 -t 10.0 -vcodec copy -acodec copy sintel_clip-408p-mpeg4-mp3.mp4
+
+
+# === Create Example Encodings ===
+run_encoding(){
+    mkdir -p $1
+    cp FFMpegTester.py jquery-1.5.2.js $1.json $1/
+    cp -l sintel_clip.y4m sintel_clip-408p.y4m sintel_clip.flac $1/
+    cd $1
+    python FFMpegTester.py --input=$1.json --html
+    cd ..
+}
+run_encoding sintel_constant_demo
+run_encoding sintel_good
+run_encoding sintel_perfect
+run_encoding sintel_rate_demo
+run_encoding sintel_small_good
+run_encoding sintel_small_perfect
+
+

@@ -13,5 +13,10 @@ Video/Clips/SintelTrailer/sintel_clip.y4m
 Video/Clips/SintelTrailer/sintel_clip-x264-lossless-flac.mkv
 Video/Clips/SintelTrailer/sintel_clip-408p.y4m
 Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-mp3.mp4
-
+Video/Clips/SintelTrailer/sintel_constant_demo/*
+Video/Clips/SintelTrailer/sintel_good/*
+Video/Clips/SintelTrailer/sintel_perfect/*
+Video/Clips/SintelTrailer/sintel_rate_demo/*
+Video/Clips/SintelTrailer/sintel_small_good/*
+Video/Clips/SintelTrailer/sintel_small_perfect/*
 
