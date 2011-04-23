@@ -1,60 +1,33 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Audio - 6 - Channels</title></head><body>
-<h2>Channels</h2>
+<h2>Canales</h2>
 
-<h3>
-Stereo Recording</h3>
+<h3>Grabación en Stereo</h3>La mayoria de los microfonos comunes
+solamente pueden grabar en un solo canal (mono). Por esta razón, no es
+útil el intentar grabar ese sonido en una grabación estéreo, ya que no
+se ganará ningún nuevo detalle del audio y, al reproducirse, el audio
+sonará exactamente igual que una grabación mono. Dicho esto, hay
+micrófonos disponibles que sí hacen grabaciones en dos canales. Si
+tienes uno de estos, puedes ajustar el número de canales a grabarse
+dentro del menú Editar -&gt; Preferencias -&gt; Equipos, para el equipo
+específico que soporte grabaciones con canales múltiples.<br>
 
-Most consumer level microphones will only record in one channel of
-audio (mono), so it is just a waste of space to record that input to a
-stereo recording, you don't gain any new detail in the audio and it
-will sound exactly the same as a mono recording when played back.&nbsp;
-That said, there are microphones available that do record two
-channels.&nbsp; If you require this, you can set the number of channels
-to record under the Edit -&gt; Preferences -&gt; Devices menu for the
-specific device that will support multi-channel recording.<br>
+<h3>Cómo mezclar varias fuentes de audio</h3>En vez de tener un sólo
+equipo capaz de hacer grabackiones estéreo, es más común tener
+multiples equipos grabando sonidos distintos simultáneamente. Un
+ejemplo puede ser una programma de radio o televisión en el cual el
+anfitrión tiene un canal de audio y cada invitado tiene su propio canal
+de audio también. Otro ejemplo puede ser una grabación de una banda de
+música tocando en vivo, en la cual cada músico o instrumento tiene su
+propio canal de audio. Hay maneras de hacer estas grabaciones en
+Audacity (con la ayuda del programa de routing de audio JACK en Linux),
+pero no las vamos a estuidar en este curso.<br>
+<br>Al contrario, vamos a comenzar con un escenario en el que hay
+varias pistas de audio independientes que ya se han grabado
+previamente, y necesitan ser editadas para que formen un sólo proyecto
+de audio.<br>
 
-<h3>Mixing Audio Sources</h3>
-
-More common than having a single device that records in stereo, is
-having multiple devices recording different sounds.&nbsp; An example
-could be a radio or tv talk show where the host is one channel of
-audio, and each guest has their own channel of audio.&nbsp; Another
-example would be recording a band playing, where each musician and/or
-instrument has its own track of audio.&nbsp; There are ways to record
-this in audacity (with the help of the JACK audio routing software on
-linux), but we won't go into them here.&nbsp; <br>
-
-<br>
-
-Instead, we'll start with a scenario where there are several
-independent tracks of audio that have already been recorded, and need
-to be edited together into one piece of audio.&nbsp; <br>
-
-<br>
-
-There is one track for each person talking, you can download them <a href="Audio/MalePart-NoNoise-Start.flac">here</a> (<a href="Audio/MalePart-NoNoise-Start-es.flac">es</a>)
-and <a href="Audio/FemalePart-NoNoise.flac">here</a> (<a href="Audio/FemalePart-NoNoise-es.flac">es</a>).&nbsp; Below is a
-transcript of
-the audio:<br>
-
-<br>
-
-F: Hi there<br>
-
-M: Hi<br>
-
-F: How are you doing?<br>
-
-M: I'm fine, how are you?<br>
-
-F: Fine as well.&nbsp; What are you doing now?<br>
-
-M: I'm reading a book, why?<br>
-
-F: Do you want to go to the zoo with me?<br>
-
-M: Sure, that sounds fun.<br>
+<br>Hay una pista para cada persona que habla en esta grabación, y las puedes descargar <a href="Audio/MalePart-NoNoise-Start-es.flac">aquí</a> y <a href="Audio/FemalePart-NoNoise-es.flac">aquí</a>. La siguiente es una transcripción del audio:<br>
 
 <br>
 
@@ -62,45 +35,44 @@ M: Hola <br>
 
 H: Hola <br>
 
-M: Como estas?<br>
+M: ¿Como estas?<br>
 
-H: Estoy bien, y tu?<br>
+H: Estoy bien, ¿y tu?<br>
 
-M: Estoy bien tambien.&nbsp; Que haces ahorita?<br>
+M: Estoy bien tambien.&nbsp; ¿Que haces ahorita?<br>
 
-H: Estoy leyendo un libro.&nbsp; Por que?<br>
+H: Estoy leyendo un libro.&nbsp; ¿Por que?<br>
 
-M: Quieres ir al parque zoologico con migo?<br>
+M: ¿Quieres ir al parque zoologico con migo?<br>
 
 H: Si, que divertido. <br>
 
-<br>
+<br>Una vez tengas la primera pista abierta en Audacity, abre la
+segunda seleccionando Archivo -&gt; Importar -&gt; Audio... y
+seleccionando la segunda pista en tu disco duro. Ahora que las dos
+están en el proyecto, intenta reproducir el sonido haciendo clic en el
+botón de Reproducir.<br>
 
-Once you have the first clip open in audacity, open the second one by
-going to File -&gt; Import -&gt; Audio... and selecting the second clip
-from your hard drive.&nbsp; Now they should both be open, try playing
-them back together by pushing the play button.&nbsp; <br>
-
-<img src="AudioScreen/Audacity-TwoTracks-es.png" alt="Audacity-TwoTracks-es.png"><br>
-
-You'll notice that they don't line up.&nbsp; The two subjects are
-talking over each other.&nbsp; This is a common occourrence when
-recording multi-track audio, as each track may not start the recording
-at the same spot.&nbsp; To fix this we will have to synchronize (sync)
-them manually.&nbsp; But before we do that, lets give these tracks
-names so we can keep track of them (this is even more important when
-you have lots of tracks), to do this, click on the drop down arrow for
-the track, and select Name.&nbsp; For the female track name it "Female"
-and for the male track, name it "Male".&nbsp; <br>
+<img src="AudioScreen/Audacity-TwoTracks-es.png" alt="Audacity-TwoTracks-es.png"><br>Te
+darás cuenta de que el audio no está alineado: los dos personajes están
+hablando uno sobre el otro. Esta es una ocurrencia común al hacer
+grabaciones con múltiples canales, ya que cada pista no necesariamente
+comenzó su grabacion en el mismo momento. Para resolver esto tendremos
+que sincronizar (sync) las pistas manualmente. Pero antes de hacer
+esto, pongámosle nombre a cada pista para poder mantenerlas a la vista
+(sto será aún más importante cuando tengas muchas pistas). Para hacer
+esto, haz clic en la flecha que indica hacia abajo en la esquina
+superior izquierda de la pista, y selecciona la opción de Nombre...
+Para la pista de la mujer, llámala "Mujer", y para el hombre, llámala
+"Hombre".<br>
 
 <img src="AudioScreen/Audacity-LabelSelection-es.png" alt="Audacity-LabelSelection-es.png"><br>
 
 <br>
 
-<img src="AudioScreen/Audacity-LabelName-es.png" alt="Audacity-LabelName-es.png"><br>
-
-In addition, now would be a good time to save the audacity project as a
-.aup file and directory.&nbsp; <br>
+<img src="AudioScreen/Audacity-LabelName-es.png" alt="Audacity-LabelName-es.png"><br>Hecho
+esto, es una buena oportunidad ahora para guardar el projecto de
+audacity en el disco duro en formato .aup con su respectivo directorio.<br>
 
 <img src="AudioScreen/Audacity-TwoTracksReady-es.png" alt="Audacity-TwoTracksReady-es.png"><br>
 
@@ -108,91 +80,79 @@ In addition, now would be a good time to save the audacity project as a
 
 <br>
 
-<h3>Shift Tool</h3>
-
-Now we're ready to sync the audio so that the final result has the two
-subjects talking to each other at the correct times.&nbsp; Select the
-Time Shift Tool from just below and to the right of the selection tool.<br>
+<h3>Herramienta de Desplazamiento</h3>Ahora estamos listos para
+sincronizar el audio de manera que el resultado final tenga a los dos
+personajes hablando entre ellos al tiempo correcto. Selecciona la
+Herramienta de Desplazamiento en el Tiempo que está justo debajo y a la
+derecha de la Herramienta de Selección.<br>
 
 <img src="AudioScreen/Audacity-TimeShiftTool-es.png" alt="Audacity-TimeShiftTool-es.png"><br>
 
-<br>
-
-Then it is as simple as clicking on the track you want to move, and
-dragging it to the correct spot.&nbsp; In this case, lets move the male
-track (because the female track talks first).&nbsp; Just move it so
-that on the waveform the first male response lines up in the gap
-between the first and second female responses.<br>
+<br>Luego, será tan simple como hacer clic en la pista que quieres
+move, y arrastarla hasta el lugar indicado. En este caso, movamos la
+pista del Hombre (porque la mujer habla primero). Simplemente mueve la
+pista para que en la gráfica de forma de onda, la primera respuesta del
+hombre se alínee con el espacio entre la primera y la segunda respuesta
+de la mujer.<br>
 
 <br>
 
 <img src="AudioScreen/Audacity-ShiftMale-es.png" alt="Audacity-ShiftMale-es.png"><br>
 
-<br>
-
-If you try playing it back at this point you will notice that it starts
-out lined up, but then later on in the recording it gets out of
-wack.&nbsp; There are several possible reasons this could happen, but
-in this case it is because these tracks were done in two separate
-takes, with only one person's voice being recorded each time.&nbsp;
-Because they had no frame of reference the same tempo wasn't kept both
-times.&nbsp;&nbsp; To fix this, we will have to add in extra space to
-the blank areas to make up the difference.&nbsp; Simply click at the
-spot where you want to add space to put the cursor there, the select
-Generate -&gt; Silence, then type the number of seconds you want to add
-(try something small like 0.5 to start with, you may need to select a
-different option from the drop down to pick a unit that has fractions
-of seconds, such as hh:mm:ss+hundredths) and click OK.&nbsp; <br>
+<br>Si intentas reproducir el sonido ahora, te darás cuenta de que el
+sonido comienza alineado, pero luego pierde orden a lo largo de la
+grabación. Hay varias razones posibles para esto, pero en este caso es
+porque estas pistas fueron tomadas en dos intentos diferentes, con la
+voz de una sola persona siendo grabada cada vez. Ya que no hubo punto
+de referencia, el ritmo - o el tempo - de la conversación no se mantuvo
+fijo. Para arreglar esto, tendremos que añadir espacio adicional a las
+áreas en blando para acomodar la diferencia. Simplemente haz clic en el
+punto en el que quieras añadir espacio, selecciona Generar -&gt;
+Silencio, y luego escribe el número de segundos que quieres añadir
+(intenta algo pequeño como 0.5 segundos para empezar; tal vez necesites
+seleccionar una opción distinta de la que se ofrece en el menú para
+seleccionar una unidad que tenga fracciones de segundos, como
+hh:mm:ss+centésmimas), luego haz click OK.<br>
 
 <br>
 
 <img src="AudioScreen/Audacity-InsertSilence-es.png" alt="Audacity-InsertSilence-es.png"><br>
 
+<br>Escucha el sonido para ver si se oye mejor. Si necesitas más
+espacio, vuelve al paso anterior y añade más. Repite esto para cada
+sección que no esté bien alineada, avanzado de izquierda a derecha para
+cada pista. (Si empezaras de derecha a izquierda, cada cambio que
+hicieras sería descartado por los que ya hubieras hecho anteriormente.)<br>
 <br>
 
-Listen to the result to see if it sounds better, if it needs more go
-back and do it again.&nbsp; Repeat for each section that doesn't line
-up, moving
-from left to right in the two tracks.&nbsp; If you were to start at the
-right and move to the left, each change you made would throw off those
-that you had done previously.<br>
+<img src="AudioScreen/Audacity-CorrectSpacing-es.png" alt="Audacity-CorrectSpacing-es.png"><span style="font-weight: bold;">C</span><h3>Cómo Sincronizar con un Audio Marker</h3>Otra
+forma de sincronizar audio es haciéndo esto desde el principio. Esta
+vez los dos personajes fueron grabados en la misma toma, usando
+microonos distintos. Puedes descargar las dos pistas distintas <a href="Audio/MalePart-2-mono-es.flac">aquí</a> y <a href="Audio/FemalePart-2-mono-es.flac">aquí</a>.<br>
 
-<img src="AudioScreen/Audacity-CorrectSpacing-es.png" alt="Audacity-CorrectSpacing-es.png"><br>
+<img src="AudioScreen/Audacity-SyncTracks-es.png" alt="Audacity-SyncTracks-es.png"><br>Cuando
+reproduzcas este sonido, notarás que ambos tienen un sonido alto y
+agudo al principio. esto suena como si se hubiera hecho
+intencionalmente (se puede hacer con equipo profesional o simplemente
+aplaudiendo una sola vez con tus manos) para que las dos pistas se
+pudieran sincronizar empezando en este punto.<br>
 
-<br>
-
-<h3>Synch with Audio Marker</h3>
-
-Another way to sync audio is to do it from the beginning.&nbsp; This
-time the two subjects were recorded in the same take, from two
-different microphones.&nbsp; You can download the two separate tracks <a href="Audio/MalePart-2-mono.flac">here</a> and <a href="Audio/FemalePart-2-mono.flac">here</a>.<br>
-
-<img src="AudioScreen/Audacity-SyncTracks-es.png" alt="Audacity-SyncTracks-es.png"><br>
-
-When you play them back, you'll notice that they both have a loud sharp
-sound towards the beginning.&nbsp; This sound was intentionally made
-(can be done with a professional clap-board or just by clapping your
-hands once) so that the two tracks could be synchronized starting at
-this point.&nbsp; <br>
-
-<br>
-
-Its easy to synchronize them now.&nbsp; Just zoom in on the part with
-the sudden sound, and move the tracks with the Time Shift Tool until
-the sound matches exactly.<br>
+<br>Es fácil de sincronizarlas ahora. Simplemente acércate a la parte
+con el sonido agudo, y mueve las pistas usando la Herramienta de
+Desplazamiento hasta que el sonido sea exactamente el mismo en cada
+pista.<br>
 
 <img src="AudioScreen/Audacity-SyncMatch-es.png" alt="Audacity-SyncMatch-es.png"><br>
 
-<br>Now (or when you're all done with your other editing if you prefer) you
-can cut the exact same amount (use the selection editor at the bottom,
-select zero for the start and the same length in both tracks) of sound
-off the front of both recordings. This will give you a starting place
-that is
-after the clap.&nbsp; It was only there for synchronization, and we
-don't want it in the final recording.&nbsp; To make sure you get the exact
-same amount of the front cut off both, use the selection editor on the
-bottom (with hundredths of seconds) and then use the cut button (or
-Ctrl+x).<br>
+<br>Ahora (o cunado hayas terminado con toda tu edición, si prefieres)
+puedes cortar exactamente la misma cantidad de sonido de ambas
+grabaciones (usa el editor de selección en la parte de abajo de la
+pantalla, selecciona cero para el comienzo y la misma longitud para
+ambas pistas). Esto te dará un punto de partida que ocurre justo
+después del aplauso. El aplauso sólo estaba ahí para la sincronización,
+y no lo deseamos en la grabación final. Para asegurarte de que
+exactamente la misma cantidad de espacio se recorte de cada pista, usa
+el editor de selección y usa el botón de Cortar (Ctrl+x).<br>
 
 <img src="AudioScreen/Audacity-SyncCutFront-es.png" alt="Audacity-SyncCutFront-es.png"><br>
 

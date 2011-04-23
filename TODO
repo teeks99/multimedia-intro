@@ -54,6 +54,7 @@ Audio
     JACK Example?
     like photo- can't scale up quality to higher bit-rate
     example of audio bit-rate clipping (8-bit depth?)
+    When explaining why the two tracks were off (two takes) say "like when recording a band"
 Video
     Fix sintel clip audio offset
     ffmpeg commands text format
