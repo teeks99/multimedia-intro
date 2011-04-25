@@ -156,134 +156,111 @@ el editor de selección y usa el botón de Cortar (Ctrl+x).<br>
 
 <img src="AudioScreen/Audacity-SyncCutFront-es.png" alt="Audacity-SyncCutFront-es.png"><br>
 
-<h3>Too Much Audio</h3>
-
-You may have noticed that in some cases the male microphone picked up
-the female talking and the female microphone picked up the male
-talking.&nbsp; This is a fairly common occurrence.&nbsp; We want to
-remove this, because if the same audio shows up at a time that is even
-a split second different, it can drastically change the final audio
-(possibly sound like an echo or reverberation).&nbsp; Below are the
-areas in this clip where this is happening.<br>
-
-<br>
+<h3>Demasiado Audio</h3>Tal vez hayas notado que en algunos casos el
+micrófono del hombre grabó un poco de la mujer hablando y el micrófono
+de la mujer también capturó un poco de la voz del hombre mientras
+hablaba. Esto es una ocurrencia muy común, pero queremos removerla,
+porque si el mismo audio aparece aunque sea un microsegundo aparte,
+puede cambiar la calidad del sonido final drásticamente (puede sonar
+commo un eco o una reverberación). Las siguientes son áreas en nuestro
+clip de audio donde esto ocurre:<br>
 
 <img src="AudioScreen/Audacity-WrongChannel-es.png" alt="Audacity-WrongChannel-es.png"><br>
 
-<br>
+<br>Una manera de resolver esto podría ser usando la función de
+"Silenciar Audio" que usamos en la sección anterior. Su utilidad es
+obvia aquí, ya que si fueramos simplemente a recortar el audio
+adicional de nuestras pistas, la duración de las pistas cambiaría, y no
+sería posible coordinar las dos voces. En cambio, con esta función
+podemos seleccionar cada porción de audio y luego aplicar el "Silenciar
+Audio".<br>
 
-One way to fix this would be to use the "Silence Audio" functionality
-that we used in the last section.&nbsp; Its usefulness is obvious here,
-if we were to simply cut out the additional audio from the tracks,
-their duration would change, and it wouldn't be possible to match them
-up.&nbsp; Instead, we can go, select each area and then run "Silence
-Audio".&nbsp; <br>
+<br>Otra opción para resolver esto es la Herramienta de Envolvente.
+Esta herramiente te permite crear un envolvente gráfico alrededor de la
+forma de audio, el cual indica el volúmen para esa área. Esto te
+permite simplemente bajar el volumen de una pista solamente para áreas
+que no quieras escuchar, mientras las demás áreas se mantienen al
+volumen normal.<br>
 
-<br>
-
-Another option to fix this would be to use the Envelope Tool.&nbsp; The
-Envelope Tool allows you to create a graphical envelope around the
-waveform which indicates the volume for that area.&nbsp; This allows
-you to simply turn down the volume only for areas that we don't want to
-hear, while leaving other areas normal.&nbsp; <br>
-
-<br>
-
-To apply it, switch to the Envelope Tool, immediately to the right of
-the selection tool.<br>
+<br>Para aplicar esto, cambia tu modo a la Herramienta de Envolvente, inmediatamente a la derecha de la Herramienta de Selección.<br>
 
 <img src="AudioScreen/Audacity-EnvelopeTool-es.png" alt="Audacity-EnvelopeTool-es.png"><br>
 
-<br>
-The envelope tool works by applying control points to the volume at
-specific points in time.&nbsp; Each time you apply a control point by
-clicking on the waveform, it creates four handles that allow you to
-adjust the volume.&nbsp; The four control points adjust the levels for
-100%, -100%, -50%, 50%,&nbsp; of the volume.&nbsp; You
-can grab any of these points and move it up or down to change the
-volume level at that point.&nbsp; If you leave the 100% point at the
-top of the graph or the 50% point at the middle line nothing will
-change.<br>
+<br>Esta herramienta funciona aplicando puntos de control al volumen a
+diferentes puntos de tiempo. Cada vez que aplicas un punto de contror
+haciendo clic en la gráfica de onda, la herramienta creará cuatro
+puntos de tiempo. Cada vez que aplicas un punto de controlar haciendo
+clic en la gráfica de onda, la herramienta creará cuatro puntos
+flotantes que te permiten ajustar el volumen. Los cuatro puntos de
+control ajustan los niveles a 100%, -100%, 50%, y -50% del volumen
+original. Puedes arrastrar cualquier de estos puntos y moverlos hacia
+arriba o hacia abajo para cambiar el nivel del volumen en ese punto. Si
+mantienes el punto de 100% en la parte de arriba de la gráfica, o el
+punto de 50% en la linea media, nada cambiará.<br>
 
-<br>
-
-The first thing I do when I start using the envelope tool is to set
-control points (that aren't going to move) for the portions of audio I
-don't want to change.&nbsp; Here are the "fixed" control points,
-applied to the male voice.<br>
+<br>Lo primero que yo hago cuando uso la herramienta de envolvente es
+establecer puntos de control (que no se van a mover) para las porciones
+de audio que no quiero cambiar. Aquí están los puntos de control
+"fijos", aplicados a la voz del hombre: <br>
 
 <img src="AudioScreen/Audacity-EnvelopeMaleFixed-es.png" alt="Audacity-EnvelopeMaleFixed-es.png"><br>
 
-<br>
+<br>Una vez los puntos fijos son aplicados, es fácil arrastrar el
+envolvente hasta cero entre medio de esos puntos. Sólo haz clic en esas
+zonas para crear un nuevo punto de control, y&nbsp; arrástralo hacia el
+centro de la gráfica. A medida que lo arrastras, verás que el
+envolvente forma una curva desde tu nuevo punto de control hasta los
+puntos de control de tu audio bueno, dándonos una transición fluida
+hacia el silencio (esto sería aún más importante si no estuvieras
+silenciando el audio completamente).<br>
 
-After the fixed points are applied, its easy to take the envelope down
-to zero in sections between them.&nbsp; Just click on it to create a
-new control point, and drag it all the way down towards the center.&nbsp;
-As you drag it down, you will see the envelope form a curve from your
-new control point, up to the control points around the good audio,
-giving you a smooth transition (this is more important if you aren't
-completely silencing the audio).<br>
-
-<br>
-
-Here are the results after the envelope tool has been applied to
-silence the other sounds out of the male track.<br>
+<br>Aquí están los resultados luego de que la herramienta de envolvente
+se ha aplicado para silenciar los sonidos innecesarios dentro de la
+pista del hombre:<br>
 
 <img src="AudioScreen/Audacity-EnvelopeMaleFinished-es.png" alt="Audacity-EnvelopeMaleFinished-es.png"><br>
 
-<br>
+<br>La herramienta de envolvente es aún más útil cunado quieres cambiar
+los niveles de sonido constantemente para distintas pistas que se
+relacionan unas con otras. Por ejemplo, si tuvieras una banda en la que
+cada instrumento está en su propia pista, es fácil usar la herramienta
+de envolvente para bajar el volumen del sonido de la precusión durante
+una porción de la canción en la que quiere que el solista se escuche
+más claramente.<br>
 
-The envelope tool is even more useful where you want to constantly
-change the levels of sound for different tracks relative to each
-other.&nbsp; For instance if you have a band where each instrument is
-in its own track, it is easy to use the envelope tool to lower the
-sound from the drums during a portion of the song where you want the
-soloist to come through clearly.&nbsp; <br>
+<h3>Cómo crear una pista estéreo</h3>Ahora que tenemos dos pistas de
+buena calidad, una para cada hablante, podemos combinarlas para que
+formen una pista estéreo que tenga a un hablante en cada uno de los dos
+canales. Esto dará la impresión, al escucharse, de que una persona está
+hablando desde la derecha, y la otra habla desde la izquierdad. <br>
+<br>Audacity es inteligente en que cuando exporta el proyecto,
+automáticamente crea un archivo estéreo. Todo lo que tenemos que hacer
+es controlar cuánto volumen sale por cada canal de cada pista. En las
+herramientas para la pista, que están a la izquierda de la gráfica de
+onda, hay un deslizador con una L y una R (para "Left"/Izquierda y
+"Right"/Derecha). Podemos mover el deslizador para la voz femenina
+hacia la izquierda, y el deslizador para la voz masculina hacia la
+derecha, de manera que suene como si la mujer estuviera hablando desde
+la izquierda y el hombre desde el otro lado.<br>
+<br>No es necesario mover el deslizador hasta el extremo; de hecho, es
+mejor dejar que un poco de cada pista salga por el canal opuesto. Esto
+es porque, en la vida real, el sonido que llega de una persona que te
+está hablando desde la derecha (por ejemplo) va a entrar en su mayoría
+por tu oído derecho, pero parte del sonido va a ir alrededor de tu
+cabeza (y a rebotar en otras superficies) y entrará por tu oído
+izquierdo. Si quien escuche este audio estuviera usando audífonos y
+todo el audio entrara sólo por un lado, no sonaría como algo natural.<br>
 
-<h3>Creating a stereo track</h3>
-
-Now that we have two good tracks, one for each speaker, we
-can set them up to output a stereo track that has one person talking
-from each channel.&nbsp; That would make it sound like one person is
-taking from the left and the other is talking from the right.<br>
-
-<br>
-
-Audacity is smart, in that when it exports the project, it will
-automatically create a stereo file.&nbsp; All we need to do is control
-how much volume comes out of each channel for each track.&nbsp; In the
-tools for the track, to the left of the waveform, there is a slider
-with a L and a R on it (for Left and Right).&nbsp; We can move the
-slider for the female voice to the left and the male voice to the right,
-so that it sounds like the female talker is off to the left and the
-male talker is on the other side.&nbsp; <br>
-
-<br>
-
-It is not necessary to move the slider all the way over, in fact it is
-often better to leave a bit of each track coming out the opposite
-channel.&nbsp; This is because, in nature sound from a person talking
-directly to your left or right will have sound wrap around your head
-(and bounce off things) and arrive at the opposite ear.&nbsp; If the
-listener was wearing headphones and all the audio was coming from only
-one side, it would sound unnatural.<br>
-
-<br>
-
-Here's an example with the settings changed for different channels.<br>
+<br>Aquí hay un ejemplo de los parámetros cambiados para los distintos canales:<br>
 
 <img src="AudioScreen/Audacity-StereoChannels-es.png" alt="Audacity-StereoChannels-es.png"><br>
 
-<br>
-
-Another quick tip.&nbsp; When the audio was recorded, the
-microphone used by the female picked up a bit stronger and her channel
-is a bit louder.&nbsp; To make them match each other better, the volume
-slider (the one with the "-" and "+") was lowered a bit for her
-channel.&nbsp; The other problem with this audio is that the male's
-microphone picked up a lot of background noise, and that needs to be
-removed, we'll work on that in the next section!<br>
-
-<br><br>
+<br>Otra sugerencia: Cuando el audio se grabó, el micrófono usado por
+la mujer capturó un poco más de intensidad, y su canal suena un poco
+más alto. Para que ambos canales estén más balanceados, usa el
+deslizador de volumen (el que tiene los signos "-" y "+") y redúcelo un
+poco en el canal de la mujer. El otro problema con el audio es que el
+micrófono del hombre capturó mucho sonido de trasfondo, y necesitamso
+removerlo... ¡pero eso lo haremos en la próxima sección!<br>
 
 </body></html>
