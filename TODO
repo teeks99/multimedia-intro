@@ -9,23 +9,24 @@ callladas sound
 
 ===== Text Main =====
 === Video ===
-2 Handbrake
+4 Handbrake
     DVD example (with multi-audio, multi-sub, etc) 
 
-5 multi-track
+7 multi-track
     explanation of multi-track: cross-fade video, composite, more?
     kdenlive
     joining multiple clips and audio
     transitions?
     ....more??
-6 DVD creation
+    Get Video tutorial: http://www.youtube.com/user/kalerolinex#grid/user/C5352FB1B3F614CF
+? Screen Capture
+    gtk-recordmydesktop
+? DVD creation
     use kdenlive
-7 YouTube creation
+? Online + Live creation
     good settings
     upload
     online settings
-8 Screen Capture
-    gtk-recordmydesktop
 
 === Web Pages ===
 
@@ -43,6 +44,8 @@ callladas sound
 ===== Future Improvements =====
 Intro
     add dia in place of scribus, sound juicer?, sound recorder?, gtk-record my desktop? 
+Photos
+    Get video tutorial: http://www.youtube.com/user/kalerolinex#grid/user/BE85E16A4F1CE661
 Graphics
     switch creative exercise 1&2
     Inkscape tranlations into seperate .svg and baseline
@@ -70,9 +73,9 @@ General
 ===== translations =====
 (en -> es)
 Audio
-    sections 4, 5, 6, 7, 8, 9
+    sections 6, 7, 8, 9
 Video
-    sections 1, 2, (more coming)
+    sections 1, 2, 3 (more coming)
 Web
     none ready
 
