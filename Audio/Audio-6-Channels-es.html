@@ -1,8 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Audio - 6 - Channels</title></head><body>
+<html><head>
+  <title>Audio - 6 - Canales</title>
+
+  
+</head><body>
 <h2>Canales</h2>
 
-<h3>Grabación en Stereo</h3>La mayoria de los microfonos comunes
+<h3>Grabación en Stereo</h3>
+
+La mayoria de los microfonos comunes
 solamente pueden grabar en un solo canal (mono). Por esta razón, no es
 útil el intentar grabar ese sonido en una grabación estéreo, ya que no
 se ganará ningún nuevo detalle del audio y, al reproducirse, el audio
@@ -12,7 +18,9 @@ tienes uno de estos, puedes ajustar el número de canales a grabarse
 dentro del menú Editar -&gt; Preferencias -&gt; Equipos, para el equipo
 específico que soporte grabaciones con canales múltiples.<br>
 
-<h3>Cómo mezclar varias fuentes de audio</h3>En vez de tener un sólo
+<h3>Cómo mezclar varias fuentes de audio</h3>
+
+En vez de tener un sólo
 equipo capaz de hacer grabackiones estéreo, es más común tener
 multiples equipos grabando sonidos distintos simultáneamente. Un
 ejemplo puede ser una programma de radio o televisión en el cual el
@@ -22,12 +30,20 @@ música tocando en vivo, en la cual cada músico o instrumento tiene su
 propio canal de audio. Hay maneras de hacer estas grabaciones en
 Audacity (con la ayuda del programa de routing de audio JACK en Linux),
 pero no las vamos a estuidar en este curso.<br>
-<br>Al contrario, vamos a comenzar con un escenario en el que hay
+
+<br>
+
+Al contrario, vamos a comenzar con un escenario en el que hay
 varias pistas de audio independientes que ya se han grabado
 previamente, y necesitan ser editadas para que formen un sólo proyecto
 de audio.<br>
 
-<br>Hay una pista para cada persona que habla en esta grabación, y las puedes descargar <a href="Audio/MalePart-NoNoise-Start-es.flac">aquí</a> y <a href="Audio/FemalePart-NoNoise-es.flac">aquí</a>. La siguiente es una transcripción del audio:<br>
+<br>
+
+Hay una pista para cada persona que habla en esta grabación, y las
+puedes descargar <a href="Audio/MalePart-NoNoise-Start-es.flac">aquí</a>
+y <a href="Audio/FemalePart-NoNoise-es.flac">aquí</a>. La siguiente es
+una transcripción del audio:<br>
 
 <br>
 
@@ -47,13 +63,17 @@ M: ¿Quieres ir al parque zoologico con migo?<br>
 
 H: Si, que divertido. <br>
 
-<br>Una vez tengas la primera pista abierta en Audacity, abre la
+<br>
+
+Una vez tengas la primera pista abierta en Audacity, abre la
 segunda seleccionando Archivo -&gt; Importar -&gt; Audio... y
 seleccionando la segunda pista en tu disco duro. Ahora que las dos
 están en el proyecto, intenta reproducir el sonido haciendo clic en el
 botón de Reproducir.<br>
 
-<img src="AudioScreen/Audacity-TwoTracks-es.png" alt="Audacity-TwoTracks-es.png"><br>Te
+<img src="AudioScreen/Audacity-TwoTracks-es.png" alt="Audacity-TwoTracks-es.png"><br>
+
+Te
 darás cuenta de que el audio no está alineado: los dos personajes están
 hablando uno sobre el otro. Esta es una ocurrencia común al hacer
 grabaciones con múltiples canales, ya que cada pista no necesariamente
@@ -70,7 +90,9 @@ Para la pista de la mujer, llámala "Mujer", y para el hombre, llámala
 
 <br>
 
-<img src="AudioScreen/Audacity-LabelName-es.png" alt="Audacity-LabelName-es.png"><br>Hecho
+<img src="AudioScreen/Audacity-LabelName-es.png" alt="Audacity-LabelName-es.png"><br>
+
+Hecho
 esto, es una buena oportunidad ahora para guardar el projecto de
 audacity en el disco duro en formato .aup con su respectivo directorio.<br>
 
@@ -80,7 +102,9 @@ audacity en el disco duro en formato .aup con su respectivo directorio.<br>
 
 <br>
 
-<h3>Herramienta de Desplazamiento</h3>Ahora estamos listos para
+<h3>Herramienta de Desplazamiento</h3>
+
+Ahora estamos listos para
 sincronizar el audio de manera que el resultado final tenga a los dos
 personajes hablando entre ellos al tiempo correcto. Selecciona la
 Herramienta de Desplazamiento en el Tiempo que está justo debajo y a la
@@ -88,7 +112,9 @@ derecha de la Herramienta de Selección.<br>
 
 <img src="AudioScreen/Audacity-TimeShiftTool-es.png" alt="Audacity-TimeShiftTool-es.png"><br>
 
-<br>Luego, será tan simple como hacer clic en la pista que quieres
+<br>
+
+Luego, será tan simple como hacer clic en la pista que quieres
 move, y arrastarla hasta el lugar indicado. En este caso, movamos la
 pista del Hombre (porque la mujer habla primero). Simplemente mueve la
 pista para que en la gráfica de forma de onda, la primera respuesta del
@@ -99,7 +125,9 @@ de la mujer.<br>
 
 <img src="AudioScreen/Audacity-ShiftMale-es.png" alt="Audacity-ShiftMale-es.png"><br>
 
-<br>Si intentas reproducir el sonido ahora, te darás cuenta de que el
+<br>
+
+Si intentas reproducir el sonido ahora, te darás cuenta de que el
 sonido comienza alineado, pero luego pierde orden a lo largo de la
 grabación. Hay varias razones posibles para esto, pero en este caso es
 porque estas pistas fueron tomadas en dos intentos diferentes, con la
@@ -118,33 +146,45 @@ hh:mm:ss+centésmimas), luego haz click OK.<br>
 
 <img src="AudioScreen/Audacity-InsertSilence-es.png" alt="Audacity-InsertSilence-es.png"><br>
 
-<br>Escucha el sonido para ver si se oye mejor. Si necesitas más
+<br>
+
+Escucha el sonido para ver si se oye mejor. Si necesitas más
 espacio, vuelve al paso anterior y añade más. Repite esto para cada
 sección que no esté bien alineada, avanzado de izquierda a derecha para
 cada pista. (Si empezaras de derecha a izquierda, cada cambio que
 hicieras sería descartado por los que ya hubieras hecho anteriormente.)<br>
+
 <br>
 
-<img src="AudioScreen/Audacity-CorrectSpacing-es.png" alt="Audacity-CorrectSpacing-es.png"><span style="font-weight: bold;">C</span><h3>Cómo Sincronizar con un Audio Marker</h3>Otra
+<img src="AudioScreen/Audacity-CorrectSpacing-es.png" alt="Audacity-CorrectSpacing-es.png"><span style="font-weight: bold;">C</span>
+<h3>Cómo Sincronizar con un Audio Marker</h3>
+
+Otra
 forma de sincronizar audio es haciéndo esto desde el principio. Esta
 vez los dos personajes fueron grabados en la misma toma, usando
 microonos distintos. Puedes descargar las dos pistas distintas <a href="Audio/MalePart-2-mono-es.flac">aquí</a> y <a href="Audio/FemalePart-2-mono-es.flac">aquí</a>.<br>
 
-<img src="AudioScreen/Audacity-SyncTracks-es.png" alt="Audacity-SyncTracks-es.png"><br>Cuando
+<img src="AudioScreen/Audacity-SyncTracks-es.png" alt="Audacity-SyncTracks-es.png"><br>
+
+Cuando
 reproduzcas este sonido, notarás que ambos tienen un sonido alto y
 agudo al principio. esto suena como si se hubiera hecho
 intencionalmente (se puede hacer con equipo profesional o simplemente
 aplaudiendo una sola vez con tus manos) para que las dos pistas se
 pudieran sincronizar empezando en este punto.<br>
 
-<br>Es fácil de sincronizarlas ahora. Simplemente acércate a la parte
+<br>
+
+Es fácil de sincronizarlas ahora. Simplemente acércate a la parte
 con el sonido agudo, y mueve las pistas usando la Herramienta de
 Desplazamiento hasta que el sonido sea exactamente el mismo en cada
 pista.<br>
 
 <img src="AudioScreen/Audacity-SyncMatch-es.png" alt="Audacity-SyncMatch-es.png"><br>
 
-<br>Ahora (o cunado hayas terminado con toda tu edición, si prefieres)
+<br>
+
+Ahora (o cunado hayas terminado con toda tu edición, si prefieres)
 puedes cortar exactamente la misma cantidad de sonido de ambas
 grabaciones (usa el editor de selección en la parte de abajo de la
 pantalla, selecciona cero para el comienzo y la misma longitud para
@@ -156,7 +196,9 @@ el editor de selección y usa el botón de Cortar (Ctrl+x).<br>
 
 <img src="AudioScreen/Audacity-SyncCutFront-es.png" alt="Audacity-SyncCutFront-es.png"><br>
 
-<h3>Demasiado Audio</h3>Tal vez hayas notado que en algunos casos el
+<h3>Demasiado Audio</h3>
+
+Tal vez hayas notado que en algunos casos el
 micrófono del hombre grabó un poco de la mujer hablando y el micrófono
 de la mujer también capturó un poco de la voz del hombre mientras
 hablaba. Esto es una ocurrencia muy común, pero queremos removerla,
@@ -167,7 +209,9 @@ clip de audio donde esto ocurre:<br>
 
 <img src="AudioScreen/Audacity-WrongChannel-es.png" alt="Audacity-WrongChannel-es.png"><br>
 
-<br>Una manera de resolver esto podría ser usando la función de
+<br>
+
+Una manera de resolver esto podría ser usando la función de
 "Silenciar Audio" que usamos en la sección anterior. Su utilidad es
 obvia aquí, ya que si fueramos simplemente a recortar el audio
 adicional de nuestras pistas, la duración de las pistas cambiaría, y no
@@ -175,18 +219,25 @@ sería posible coordinar las dos voces. En cambio, con esta función
 podemos seleccionar cada porción de audio y luego aplicar el "Silenciar
 Audio".<br>
 
-<br>Otra opción para resolver esto es la Herramienta de Envolvente.
+<br>
+
+Otra opción para resolver esto es la Herramienta de Envolvente.
 Esta herramiente te permite crear un envolvente gráfico alrededor de la
 forma de audio, el cual indica el volúmen para esa área. Esto te
 permite simplemente bajar el volumen de una pista solamente para áreas
 que no quieras escuchar, mientras las demás áreas se mantienen al
 volumen normal.<br>
 
-<br>Para aplicar esto, cambia tu modo a la Herramienta de Envolvente, inmediatamente a la derecha de la Herramienta de Selección.<br>
+<br>
+
+Para aplicar esto, cambia tu modo a la Herramienta de Envolvente,
+inmediatamente a la derecha de la Herramienta de Selección.<br>
 
 <img src="AudioScreen/Audacity-EnvelopeTool-es.png" alt="Audacity-EnvelopeTool-es.png"><br>
 
-<br>Esta herramienta funciona aplicando puntos de control al volumen a
+<br>
+
+Esta herramienta funciona aplicando puntos de control al volumen a
 diferentes puntos de tiempo. Cada vez que aplicas un punto de contror
 haciendo clic en la gráfica de onda, la herramienta creará cuatro
 puntos de tiempo. Cada vez que aplicas un punto de controlar haciendo
@@ -198,14 +249,18 @@ arriba o hacia abajo para cambiar el nivel del volumen en ese punto. Si
 mantienes el punto de 100% en la parte de arriba de la gráfica, o el
 punto de 50% en la linea media, nada cambiará.<br>
 
-<br>Lo primero que yo hago cuando uso la herramienta de envolvente es
+<br>
+
+Lo primero que yo hago cuando uso la herramienta de envolvente es
 establecer puntos de control (que no se van a mover) para las porciones
 de audio que no quiero cambiar. Aquí están los puntos de control
 "fijos", aplicados a la voz del hombre: <br>
 
 <img src="AudioScreen/Audacity-EnvelopeMaleFixed-es.png" alt="Audacity-EnvelopeMaleFixed-es.png"><br>
 
-<br>Una vez los puntos fijos son aplicados, es fácil arrastrar el
+<br>
+
+Una vez los puntos fijos son aplicados, es fácil arrastrar el
 envolvente hasta cero entre medio de esos puntos. Sólo haz clic en esas
 zonas para crear un nuevo punto de control, y&nbsp; arrástralo hacia el
 centro de la gráfica. A medida que lo arrastras, verás que el
@@ -214,13 +269,17 @@ puntos de control de tu audio bueno, dándonos una transición fluida
 hacia el silencio (esto sería aún más importante si no estuvieras
 silenciando el audio completamente).<br>
 
-<br>Aquí están los resultados luego de que la herramienta de envolvente
+<br>
+
+Aquí están los resultados luego de que la herramienta de envolvente
 se ha aplicado para silenciar los sonidos innecesarios dentro de la
 pista del hombre:<br>
 
 <img src="AudioScreen/Audacity-EnvelopeMaleFinished-es.png" alt="Audacity-EnvelopeMaleFinished-es.png"><br>
 
-<br>La herramienta de envolvente es aún más útil cunado quieres cambiar
+<br>
+
+La herramienta de envolvente es aún más útil cunado quieres cambiar
 los niveles de sonido constantemente para distintas pistas que se
 relacionan unas con otras. Por ejemplo, si tuvieras una banda en la que
 cada instrumento está en su propia pista, es fácil usar la herramienta
@@ -228,12 +287,17 @@ de envolvente para bajar el volumen del sonido de la precusión durante
 una porción de la canción en la que quiere que el solista se escuche
 más claramente.<br>
 
-<h3>Cómo crear una pista estéreo</h3>Ahora que tenemos dos pistas de
+<h3>Cómo crear una pista estéreo</h3>
+
+Ahora que tenemos dos pistas de
 buena calidad, una para cada hablante, podemos combinarlas para que
 formen una pista estéreo que tenga a un hablante en cada uno de los dos
 canales. Esto dará la impresión, al escucharse, de que una persona está
 hablando desde la derecha, y la otra habla desde la izquierdad. <br>
-<br>Audacity es inteligente en que cuando exporta el proyecto,
+
+<br>
+
+Audacity es inteligente en que cuando exporta el proyecto,
 automáticamente crea un archivo estéreo. Todo lo que tenemos que hacer
 es controlar cuánto volumen sale por cada canal de cada pista. En las
 herramientas para la pista, que están a la izquierda de la gráfica de
@@ -242,7 +306,10 @@ onda, hay un deslizador con una L y una R (para "Left"/Izquierda y
 hacia la izquierda, y el deslizador para la voz masculina hacia la
 derecha, de manera que suene como si la mujer estuviera hablando desde
 la izquierda y el hombre desde el otro lado.<br>
-<br>No es necesario mover el deslizador hasta el extremo; de hecho, es
+
+<br>
+
+No es necesario mover el deslizador hasta el extremo; de hecho, es
 mejor dejar que un poco de cada pista salga por el canal opuesto. Esto
 es porque, en la vida real, el sonido que llega de una persona que te
 está hablando desde la derecha (por ejemplo) va a entrar en su mayoría
@@ -251,11 +318,16 @@ cabeza (y a rebotar en otras superficies) y entrará por tu oído
 izquierdo. Si quien escuche este audio estuviera usando audífonos y
 todo el audio entrara sólo por un lado, no sonaría como algo natural.<br>
 
-<br>Aquí hay un ejemplo de los parámetros cambiados para los distintos canales:<br>
+<br>
+
+Aquí hay un ejemplo de los parámetros cambiados para los distintos
+canales:<br>
 
 <img src="AudioScreen/Audacity-StereoChannels-es.png" alt="Audacity-StereoChannels-es.png"><br>
 
-<br>Otra sugerencia: Cuando el audio se grabó, el micrófono usado por
+<br>
+
+Otra sugerencia: Cuando el audio se grabó, el micrófono usado por
 la mujer capturó un poco más de intensidad, y su canal suena un poco
 más alto. Para que ambos canales estén más balanceados, usa el
 deslizador de volumen (el que tiene los signos "-" y "+") y redúcelo un
@@ -263,4 +335,5 @@ poco en el canal de la mujer. El otro problema con el audio es que el
 micrófono del hombre capturó mucho sonido de trasfondo, y necesitamso
 removerlo... ¡pero eso lo haremos en la próxima sección!<br>
 
+<br>
 </body></html>
