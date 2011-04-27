@@ -61,6 +61,7 @@ Audio
     When explaining why the two tracks were off (two takes) say "like when recording a band"
     Zoom using ctrl + scroll wheel
     In the tracks section, add a third (background music) track that plays in both L&R
+    Use mute/silencio button when copying from one track tot he other
 Video
     Fix sintel clip audio offset
     ffmpeg commands text format
