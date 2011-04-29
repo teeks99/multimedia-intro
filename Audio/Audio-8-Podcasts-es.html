@@ -1,89 +1,76 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Audio - 8 - Podcasts</title></head><body>
-<h2>Podcasts</h2>
-
-Currently, the most common method of distributing audio programs (this works for video programs as well) on the
-internet is through podcasts.&nbsp; (<a href="http://en.wikipedia.org/wiki/Podcast">http://en.wikipedia.org/wiki/Podcast</a>&nbsp; <a href="http://es.wikipedia.org/wiki/Podcast">http://es.wikipedia.org/wiki/Podcast</a>)The way a podcast works for a user is that they run a podcast client (iTunes, Juice - <a href="http://juicereceiver.sourceforge.net/">http://juicereceiver.sourceforge.net</a>, gPodder - <a href="http://gpodder.org/">http://gpodder.org/</a>,
-Google Listen, etc) which periodically checks a "feed" for new
-material.&nbsp; When the client sees that there is new material
-available, it automatically downloads it to the computer, and when it
-is ready it presents it to the user so that they can listen to
-it.&nbsp; This setup has worked so well because it is very simple for
-the user.&nbsp; They don't have to go out to any websites to download
-material (or wait while it downloads), it is already there on their
-computer.&nbsp; Some of the more advanced clients will even support
-synchronizing the feed onto a portable media player such as an iPod or
-MP3 player.<br>
-<br>
-On the content producer's side, the most important part is creating the
-feed that all the clients check.&nbsp; This feed simply consists of a
-file enumerating all the episodes of the show.&nbsp; This file contains
-information about each episode as well as a link to the content for
-that episode (usually mp3, but ogg is also common).&nbsp; Both the file
-for the feed and the content that it point to are usually simply files
-that are available for downloading from a web server.&nbsp; On a
-periodic basis the client applications will go to the URL for this file
-on the web-server, download it, and see if it contains anything
-new.&nbsp; To facilitate all this work, the format of the feed's file
-is specifically defined.<br>
-<br>
-<h3>
-XML Overview</h3>
-
-The file is of a special format called Really Simple Syndication or
-RSS, with enclosures.&nbsp; RSS is in turn a type of XML file (the
-other type of XML we have seen in this course is SVG) where each piece
-of data is contained within tags that specify what type of data it
-is.&nbsp; <br>
-<br>
-Here is a very basic example of an XML file:<br>
-<br>
-[Note to Jesús: please translate everything in this section except the first line]<br><big><span style="font-family: monospace;">
+<h2>Podcasts</h2>Actualmente, el método más común para distribuir
+programas de audio (así como programas de video) es en el internet a
+través de podcasts (<a href="http://en.wikipedia.org/wiki/Podcast">http://en.wikipedia.org/wiki/Podcast</a>&nbsp; <a href="http://es.wikipedia.org/wiki/Podcast">http://es.wikipedia.org/wiki/Podcast</a>). La manera en la que un podcast trabaja para un usario es cuando el usuario utiliza un cliente de podcasts (iTunes, Juice - <a href="http://juicereceiver.sourceforge.net/">http://juicereceiver.sourceforge.net</a>, gPodder - <a href="http://gpodder.org/">http://gpodder.org/</a>,
+Google Listen, etc) que verifica periódicamente en búsqueda de
+"alimentadores" (feeds) de material nuevo. Cuando el cliente ve que hay
+material nuevo disponible, lo descarga automáticamente al computador, y
+cuando está listo lo presenta al usuario para que se pueda escuchar.
+Este formato ha resultado muy poplar porque es muy simple para el
+usuario. No hace falta ir a ningún sitio web para descargar material, o
+esperar mientras descarga, ya que en el momento en que el usuario se da
+cuenta que hay material nuevo, ya está descargado al computador.
+Algunos de los clientes de podcasts más avanzados también pueden
+sincronizar el alimentador a un reproductor de media portátil como un
+iPod o equipo MP3.<br>
+<br>Para el productor del contenido, la parte más importante es es
+crear un alimentador (feed) que todos los clientes puedan leer. Este
+"feed" consiste simplemente de un archivo enumerando todos los
+episodios del show. Este archivo contiene información sobre cada
+episodio así como un enlace al contenido de ese episodio (usulmente
+MP3, aunque Ogg también es común). tanto el archivo para el "feed" como
+el contenido al cual es dirigido usualmente son archivos que están
+disponibles para descargarse de un servidor de web. Periódicamente las
+aplilcaciones clientes irán al URL de este archivo en el servidor, lo
+descargarán, y verán si contiene algo nuevo. Para facilitar todo este
+trabajo, el formato del archivo para el alimentador está definido
+específicamente.<br>
+<h3>Básicos de XML</h3>El archivo es de un formato especial llamado
+"Really Simple Syndication" o RSS (Sindicación Muy Simple). Rss es un
+tipo de archivo XML (el otro tipo de archivo XML que hemos visto en
+este curso es el SVG para imágenes), en el cual cada pieza de data está
+contenida dentro de etiquetas que especifican qué tipo de data es. <br>
+<br>Aquí hay un ejemplo muy básico de un archivo XML:Here is a very basic example of an XML file:<br>
+<br><big><span style="font-family: monospace;">
 &lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&lt;users&gt;&nbsp; </span><span style="color: rgb(0, 153, 0); font-family: monospace;">&lt;!-- This is the list of users in the system --&gt;</span><br style="font-family: monospace;">
+&lt;usuarios&gt;&nbsp; </span><span style="color: rgb(0, 153, 0); font-family: monospace;">&lt;!-- Esta es la lista de usarios en el sistema --&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp; &lt;user&gt;</span><br style="font-family: monospace;">
+&nbsp; &lt;usuario&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp;&nbsp;&nbsp; &lt;name&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Joe</span><span style="font-family: monospace;">&lt;/name&gt;</span><br style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;nombre&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Juan</span><span style="font-family: monospace;">&lt;/nombre&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp;&nbsp;&nbsp; &lt;address&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">1234 Hill St.</span><span style="font-family: monospace;">&lt;/address&gt;</span><br style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;direccion&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">1234 Calle Vista</span><span style="font-family: monospace;">&lt;/direccion&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp;&nbsp;&nbsp; &lt;phone </span><span style="color: red; font-family: monospace;">type="local"</span><span style="font-family: monospace;">&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">456-7890</span><span style="font-family: monospace;">&lt;/phone&gt;</span><br style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;telefono </span><span style="color: red; font-family: monospace;">tipo="local"</span><span style="font-family: monospace;">&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">456-7890</span><span style="font-family: monospace;">&lt;/telefono&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp; &lt;/user&gt;</span><br style="font-family: monospace;">
+&nbsp; &lt;/usuario&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp; &lt;user&gt;</span><br style="font-family: monospace;">
+&nbsp; &lt;usuario&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-&nbsp;&nbsp;&nbsp; &lt;name&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Jane</span><span style="font-family: monospace;">&lt;/name&gt;</span><br style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;nombre&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">Maria</span><span style="font-family: monospace;">&lt;/nombre&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;"></span></big><big><span style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;direccion&gt;4321</span><span style="color: rgb(51, 102, 255); font-family: monospace;"> Calle Vista</span><span style="font-family: monospace;">&lt;/direccion&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-
-&nbsp;&nbsp;&nbsp; &lt;address&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">4321 Hill St.</span><span style="font-family: monospace;">&lt;/address&gt;</span><br style="font-family: monospace;">
+&nbsp;&nbsp;&nbsp; &lt;telefono </span><span style="color: red; font-family: monospace;">tipo="larga_distancia"</span><span style="font-family: monospace;">&gt;<span style="color: rgb(51, 102, 255);">1-123-555-555</span></span><span style="color: rgb(51, 102, 255); font-family: monospace;"></span><span style="font-family: monospace;">&lt;/telefono&gt;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;"></span></big><big><span style="font-family: monospace;"></span><span style="font-family: monospace;">&nbsp; &lt;/usuario&gt;</span><br style="font-family: monospace;">
 <span style="font-family: monospace;">
-
-&nbsp;&nbsp;&nbsp; &lt;phone </span><span style="color: red; font-family: monospace;">type="long_distance"</span><span style="font-family: monospace;">&gt;</span><span style="color: rgb(51, 102, 255); font-family: monospace;">1-123-555-555</span><span style="font-family: monospace;">&lt;/phone&gt;</span><br style="font-family: monospace;">
-<span style="font-family: monospace;">
-&nbsp; &lt;/user&gt;</span><br style="font-family: monospace;">
-<span style="font-family: monospace;">
-&lt;/users&gt;</span></big><br>
-<br>
-XML is defined by data types, each of which starts with a tag that
-contains its name, such as &lt;address&gt; and ends with a tag that has
-a slash "/" and then the name of the type, such as
-&lt;/address&gt;.&nbsp; You can see that each type of data can have
-three things that it contains: more types of data, <span style="color: rgb(51, 102, 255);">the actual data</span>, and <span style="color: red;">attributes of the data</span>, the last two of which I have marked in blue and red so you can see what they are.&nbsp; In addition, there are <span style="color: rgb(0, 153, 0);">comments</span>
-which can be anywhere.&nbsp; Comments always start with "&lt;!--" and
-continue until they reach "--&gt;" to signify the end of the
-comment.&nbsp; <br>
-<br><a href="http://en.wikipedia.org/wiki/XML">
+&lt;/usuarios&gt;</span></big><br>
+<br>El XML está definido por tipos de data, cada uno de los cuales
+comienza con una etiqueta que contiene su nombre, como
+&lt;direccion&gt; y termina con una etiqueta que tiene un diagonal "/"
+y luego el nombre del tipo, como &lt;/direccion&gt;. Puedes ver que
+cada tipo de data puede contener tres cosas: mas tipos de data, <span style="color: rgb(51, 102, 255);">la data actual</span>, y <span style="color: red;">atributos de la data</span>.&nbsp; Estos dos ultimos los he marcado en azul y en rojo para que pueda ver qué son. Además, hay <span style="color: rgb(0, 153, 0);">comentarios</span>
+que pueden estar en cualquier lugar. Estos comentarios siempre
+comienzan con "&lt;!--"y continúan hasta que encuentren un "--&gt;" que
+indica el final del comentario.<br><a href="http://en.wikipedia.org/wiki/XML">
 http://en.wikipedia.org/wiki/XML<br>
 </a><a href="http://es.wikipedia.org/wiki/XML">
 http://es.wikipedia.org/wiki/XML<br>
 </a>
 <br>
-<h3>
-RSS Feed Definition</h3>
-Getting back to RSS, it is just a specific format of XML.&nbsp; RSS is
+<h3>Definición de un Feed RSS</h3>Getting back to RSS, it is just a specific format of XML.&nbsp; RSS is
 used for Podcasts, but it can also be used for all kinds of other feeds
 such as blogs, news articles, photo streams, etc.&nbsp; The basic XML
 layout of RSS is the following (when used for a blog), read through it
