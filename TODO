@@ -62,6 +62,7 @@ Audio
     Zoom using ctrl + scroll wheel
     In the tracks section, add a third (background music) track that plays in both L&R
     Use mute/silencio button when copying from one track tot he other
+    Add instructions for linking/unlinking two (or more) tracks, useful when moving one to match the other
 Video
     Fix sintel clip audio offset
     ffmpeg commands text format
