@@ -17,10 +17,7 @@ get into the Downloads directory)<br>
 The first two things you can do with FFmpeg are to list out the formats
 and codecs that this copy supports.&nbsp; This may change based on what
 is installed on your computer, so it is best to check these before
-running a command, to make sure you have the correct support available.<br>
-List all container formats: ffmpeg -formats<br>
-
-List all codecs: ffmpeg -codecs<br>
+running a command, to make sure you have the correct support available.<br>To list all container formats type: ffmpeg -formats<br>To list all codecs type: ffmpeg -codecs<br>
 
 
 <br>
@@ -38,9 +35,9 @@ ffmpeg -i InputVideoTrack.mpg -i InputAudioTrack.wav ...[video options] [audio o
 
 <br>The video options are where you specify the codec (with the
 "-vcodec" option) and bit-rate (with the "-b" option). In addition you
-can specify a video preset ("-vpre") which is essential for x264
-encoding, and you can specify a size ("-s") with either a standard size
-reference or the format WIDTHxHEIGTH. <br>
+can specify a video preset ("-vpre") which x264
+encoding won't run without (some easy presets: slow, medium, fast), and you can specify a size ("-s") with either a standard size
+reference or the format WIDTHxHEIGHT. <br>
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg [input]  -vcodec mpeg2 -b 3000k ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg [input]  -vcodec libtheora -b 3000k ...[audio options] [output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
@@ -66,7 +63,7 @@ will go into.&nbsp; Usually the extension of the filename (.mkv, .mp4,
 .avi, etc) will allow the program to determine what format the file
 will be written as, however if it is ambiguous or you want to use
 format that isn't tied to that file extension, you can use "-f" and the
-format name.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+format name.&nbsp; (These commands will all output the video file in the same directory you are currently in.)<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 
 ffmpeg [input] [video options] [audio options] OutputVideo.mkv</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
