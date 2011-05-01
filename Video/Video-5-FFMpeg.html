@@ -64,7 +64,7 @@ ffmpeg [input] [video options]  -acodec -libfaac -ab 192k ...[output]</span><br>
 The output is where you specify the filename that the converted video
 will go into.&nbsp; Usually the extension of the filename (.mkv, .mp4,
 .avi, etc) will allow the program to determine what format the file
-will be written as, however if it is ambiguious or you want to use
+will be written as, however if it is ambiguous or you want to use
 format that isn't tied to that file extension, you can use "-f" and the
 format name.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
@@ -86,14 +86,14 @@ ffmpeg -i InputVideo.mpg -vcodec mpeg2 -b 3000k -s hd480 -acodec flac OutputVide
 <br>
 Two Pass Encoding<br>
 It is possible to use ffmpeg for two-pass encoding.&nbsp; The important
-part is to call it twice, once with the "-pass 1" paramater and once it
-finishes run it a second time with the "-pass 2" paramater.&nbsp; On
+part is to call it twice, once with the "-pass 1" parameter and once it
+finishes run it a second time with the "-pass 2" parameter.&nbsp; On
 Ubuntu, you can do a couple additional things on the first pass to
 speed it up: "-an" specifies that there is no audio codec to be
 run.&nbsp; "-f" rawvideo keeps it from trying to pack it into a special
 format, just to throw away.&nbsp; The "-y" /dev/null specifies that the
 output will go into the special null file, which means that it just
-disappears instead of having to send data to the hard disk.&nbsp; In addition when running two pass, we add the "-bt" paramater which tells the codec how much the bit-rate can change.&nbsp; It will usually work well to set it the same as the bit-rate.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+disappears instead of having to send data to the hard disk.&nbsp; In addition when running two pass, we add the "-bt" parameter which tells the codec how much the bit-rate can change.&nbsp; It will usually work well to set it the same as the bit-rate.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg -i InputVideo.mpg -pass 1 -vcodec mpeg2 -b 3000k -bt 3000k -an -f rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg -i InputVideo.mpg -pass 2 -vcodec mpeg2 -b 3000k -bt 3000k -acodec flac OutputVideo.mkv</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 <br>
