@@ -62,4 +62,8 @@ run_encoding sintel_rate_demo
 run_encoding sintel_small_good
 run_encoding sintel_small_perfect
 
+# === Create example of slow frame rate ===
+ffmpeg -i sintel_clip-408p-mpeg4-mp3.mp4 -vcodec mpeg4 -b 6000k -r 30 -an sintel_clip-408p-mpeg4-30fps.mkv
+ffmpeg -i sintel_clip-408p-mpeg4-mp3.mp4 -vcodec mpeg4 -b 6000k -r 5 -an sintel_clip-408p-mpeg4-5fps.mkv
+
 
