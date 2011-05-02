@@ -19,6 +19,9 @@ Video/Clips/SintelTrailer/sintel_perfect/*
 Video/Clips/SintelTrailer/sintel_rate_demo/*
 Video/Clips/SintelTrailer/sintel_small_good/*
 Video/Clips/SintelTrailer/sintel_small_perfect/*
+# Frame Rate
+Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-30fps.mkv
+Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-5fps.mkv
 
 ## Big Buck Bunny ##
 # Base
@@ -28,7 +31,9 @@ Video/Clips/BigBuckBunny/BigBuckBunny-DVDMaster-5_1-FLAC.zip
 Video/Clips/BigBuckBunny/BigBuckBunny-stereo.flac
 
 # Compositing Clips
+Video/Clips/BigBuckBunny/Intro.mkv
+Video/Clips/BigBuckBunny/BunnyPrep.mkv
 Video/Clips/BigBuckBunny/RedSquirrel.mkv
 Video/Clips/BigBuckBunny/GraySquirrel.mkv
 Video/Clips/BigBuckBunny/FlyingSquirrel.mkv
-Video/Clips/BigBuckBunny/BunnyPrep.mkv
+

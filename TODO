@@ -10,9 +10,6 @@ grab'andolo audio in audio 4
 
 ===== Text Main =====
 === Video ===
-4 Handbrake
-    DVD example (with multi-audio, multi-sub, etc) 
-
 7 multi-track
     explanation of multi-track: cross-fade video, composite, more?
     kdenlive
@@ -64,11 +61,13 @@ Audio
     Use mute/silencio button when copying from one track tot he other
     Add instructions for linking/unlinking two (or more) tracks, useful when moving one to match the other
 Video
-    Fix sintel clip audio offset
+    Fix sintel clip audio offset, possible problem video not 24fps?
     ffmpeg commands text format
     ffmpeg example to make mpeg4-mp3 result?
     ffmpeg subtitles?
     find a good home for bigger video clips?
+    Handbrake DVD example (with multi-titles, multi-audio, multi-sub, etc) 
+    http://en.wikipedia.org/wiki/Non-linear_editing_system
 General
     Move photo and intro sections into their own folders
     Convert HTML to docbook? (or other) format, gen HTML from that
