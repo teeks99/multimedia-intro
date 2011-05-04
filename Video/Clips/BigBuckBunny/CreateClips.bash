@@ -9,6 +9,8 @@
 #wget http://media.xiph.org/BBB/BigBuckBunny-DVDMaster-5_1-FLAC.zip
 #wget http://media.xiph.org/BBB/BigBuckBunny-stereo.flac
 
+# A random background music track
+#wget http://ccmixter.org/contests/freestylemix/hisboyelroy/freestylemix_-_hisboyelroy_-_Revolve.mp3
 
 # Intro
 ffmpeg -i big_buck_bunny_480p_stereo.ogg -ss 00:00:30.250 -t 17 -vcodec mpeg4 -b 6000k -acodec libfaac -ab 192k Intro.mkv
