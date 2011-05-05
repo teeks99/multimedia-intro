@@ -1,7 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Audio - 9 - Live Audio (and Video)</title></head><body>
+<html><head>
+  <title>Audio - 9 - Live Audio (and Video)</title>
+
+  
+</head><body>
 <h2>Audio (y Video) Live Streams (en Vivo)<br>
-</h2>Además de los podcasts, la otra manera en que shows de audio se
+</h2>
+
+Además de los podcasts, la otra manera en que shows de audio se
 distribuyen por internet es live streams (en vivo). En un live stream,
 el audio se transmite a los oyentes en vivo. Cuando el anfitrión del
 show dice algo, todos los que están conectados al stream lo oyen a la
@@ -12,16 +18,20 @@ vamos a estudiar algunos de los elementos básicos. Además, ya que los
 conceptos que dominan streams de video en vivo son muy similares a los
 conceptos de audio en vivo, tambié vamos a estudiarlos aquí, aunque
 todavía no hemos cubierto la unidad de video en este curso.<br>
-<h3>
 
-Live Streams</h3>Lo primero que necesitas para crear un show de
+<h3>
+Live Streams</h3>
+
+Lo primero que necesitas para crear un show de
 audio/video en vivo es una manera de transmitir tu show al usuario. Hay
 muchos formatos con soporte para live streams. Para cada uno de estos
 formatos hay compañías que proveen uso de sus servidores, ya sea libre
 de costo (en programas que incluyen anuncios comerciales) o a la venta,
 permitiéndote transmitir audio/video en este formato. Las siguientes
 son las opciones más populares: <br>
+
 <br>
+
 <span style="font-weight: bold;">Shoutcast/Icecast</span> - Este es el
 portal de audio streaming más popular. (Icecast puede soportar video,
 pero no muy comúnmente). Hay literalmente miles de audio streams de
@@ -34,146 +44,177 @@ capabilidades del software de shoutcast. Es fácil de usar y libre de
 costo. Al momento, Icecast y Shoutcast son usados por una cantidad
 similar de usarios. Icecast es la solución recomendada si sólo quieres
 transmitir audio.<br>
-<span style="font-weight: bold;">Real Time Messaging Protocol (RTMP) / Flash Streaming</span>
-- Currently Flash audio/video streaming is very popular on the
-internet.&nbsp; The biggest reason that it has become so popular is
-that almost all web browsers have the flash player built into them, so
-no additional software was needed to start watching the streams.&nbsp;
-There are several services that provide this for free the most popular
-of which are Ustream (<a href="http://ustream.tv">http://ustream.tv</a>) and Justin.tv (<a href="http://justin.tv">http://justin.tv</a>).&nbsp;
-These allow you to connect a microphone/camera or complete audio/video
-feed to their streaming application and broadcast, for free with ads on
-the internet, without having to setup any hardware or software
-yourself.&nbsp; For a begenning experiment with streaming on the web,
-this is a quick and easy way to get started.&nbsp; There are also more
-professional products that allow for streaming of RTMP which allow you
-to run your own server.&nbsp; Adobe, being the maker of the Flash
-software and RTMP protocol has the most popular server, in its Adobe
-Flash Streaming server.&nbsp; However, there is an open source
-competitor that is completely free to use and easy to setup called Red5
-(<a href="http://red5.org">http://red5.org</a>).<br>
-<span style="font-weight: bold;"></span><span style="font-weight: bold;">Windows Media Server</span>
-- This is the server software that is used to stream Windows Media
-audio and video to Windows Media Player clients.&nbsp; Unfortunately
-this really only works well if all the users have Microsoft Windows, as
-it isn't directly supported on Mac or Linux.<br>
-<span style="font-weight: bold;">Helix/Real Media</span> - Real Media
-was the number one streaming media solution before any of the other
-solutions on this list, however it has fallen behind the other
-options.&nbsp; Today it is used mostly in corporate settings.<br>
-<span style="font-weight: bold;">Quicktime / Darwin Media Server (Apple QuickTime)</span>
-- Both these options are products of Apple, built to work with the
-QuickTime media player.&nbsp; However, the Darwin Media Server has been
-released as open source, and is freely available.&nbsp; In addition to
-working with QuickTime video, it can work with some of the bigger
-Audio/Video standards (H.264, MPEG-4 Part 2, 3gp).&nbsp; <br>
-<h3>Talking to Guests</h3>
-So now you have the audio and video from your show being pumped out
-over the internet, however it is still just you and whoever is sitting
-with you where you are recording.&nbsp; Wouldn't it be nice if you
-could have guests or even other hosts join you on the show, live from
-all around the world?&nbsp; Thanks to the great ability of computers to
-send audio and video to each other that is possible!&nbsp; (This is
-also all possible even if you aren't doing a live stream, you can still
-use all this for recording a non-live podcast/videocast.)<br>
-<br>
-The most basic way to have someone join in is to use one of several
-Voice over IP (VoIP) options.&nbsp; Voice over IP is basically a
-computer-based replacement for phone calls.&nbsp; Instead of sending
-your voice
-as a voltage over a copper wire to your telephone company, the computer
-sends your voice as a stream of bits to the recipient over the
-internet.&nbsp; The most popular version of VoIP that can be use for
-making audio (or video) shows is Skype.&nbsp; Skype allows you to join
-one or more people into a call.&nbsp; From there you can record the
-output of the call onto your computer or send it directly out on your
-stream.&nbsp;&nbsp; Unfortunately skype has some limitations that keep
-it from interacting with other software besides the official skype
-client.&nbsp; If you want an option that allows you to have the freedom
-to use many different types of VoIP software, there is a standard that
-most of the other ones (besides Skype) follow.&nbsp; That is called
-Sesssion Initiation Protocol (SIP).&nbsp; SIP is a very full-featured
-protocol that has all sorts of great features like call-forwarding and
-voicemail built into it.&nbsp; The Empathy (Instant Messaging) client
-that comes with Ubuntu can have the telepathy-sofiasip plugin installed
-to be a very good SIP client.&nbsp; Also in Empathy is the ability to
-use Video/Voice chat across GoogleTalk/Jabber servers.&nbsp; This is a
-good alternative to skype as well.<br>
-<br>The Skype/SIP/Instant Messenger have some support for multiple
-users talking to each other, but it is not their specialty, and they
-are generally limited to only a few users at a time.&nbsp; Sometimes
-you might want to have a large group of people in the show where anyone
-(or limited groups thereof) can talk to each other.&nbsp; Mumble is a
-group voice chat application that was designed for use by groups of
-people playing computer games, but will work very well for any kind of
-group chat.&nbsp; To get this setup, you need to install the
-mumble-server (called murmur) somewhere on the network that all the
-users can get to, then have each user run the mumble client
-application.&nbsp; It is possible to create multiple channels on the
-server, so you can have multiple different groups chatting.&nbsp; <br>
-<img src="AudioScreen/Mumble-Record-es.png" alt="Mumble-Record-es.png"><br>
-<br>
-There isn't anything similar that works with large group conversations
-over video.&nbsp; This is because it is easy to hear multiple different
-people at the same time (or at least close to the same time), but you
-can't easily watch several different video displays at once.&nbsp; The
-closest application that allows for this is Big Blue Button (<a href="http://bigbluebutton.org">http://bigbluebutton.org</a>).&nbsp;
-Big Blue Button was built for use in virtual classrooms, where all the
-students have a web-cam (or at least microphone) and there is a teacher
-that can control who is talking at any given time.&nbsp; This same
-setup can work well for a show, the host (or possibly a technician)
-would replace the teacher as the one who controls what video stream is
-being sent out to everyone, and the students would be replaced with
-guests on the show.&nbsp; This uses flash streaming video for the
-client that each user needs, so it is very easy for everyone to setup.<br>
-<h3>Tying it all together with JACK</h3>
-So now that you have a bunch of different streams of audio coming into
-your computer, and a stream to send it out on, you need a way to link
-up that input with the output.&nbsp; JACK is a set of software that
-allows you to do just that.&nbsp; The easiest way to think of JACK is
-as a set of virtual patch cables, where you can take the audio output
-of one program and feed it to a different program.&nbsp; Then you can
-take that output and feed it to a third program.&nbsp; JACK is somewhat
-complicated to setup, and a bit beyond the scope of things here, but it
-is an amazing resource if you need something to tie all your audio
-together.<br>
-<h3>
 
-Interacting with the Audience</h3>
-Now that you have the media for your live stream all setup, the only
-other thing to think about is the other stuff that is supporting
-it.&nbsp; Generally it is important to have a web page that has
-information about your stream, such as what is on right now, and what
-the future schedule is.&nbsp; <br>
+<span style="font-weight: bold;">Real Time Messaging Protocol (RTMP) /
+Flash Streaming</span>
+- Actualmente, streaming de audio/video por Flash es muy popular en el
+internet. La mayor razón por la que se ha vuelto tan popular es que
+casi todos los navegadores web están construidos con el reproductor de
+flash integrado. No hace falta ningún software adicional para comenzar
+a ver o escuchar los streams. Hay varios servicios que proveen streams
+en flash libre de costo; entre estos, los más populares son Ustream (<a href="http://ustream.tv">http://ustream.tv</a>) y Justin.tv (<a href="http://justin.tv">http://justin.tv</a>). Estos te permiten
+conectar un micrófono/cámara o un alimentador de audio/video a sus
+programas de streaming y transmitir -- libre de costo con anuncios
+integrados -- en el internet, sin tener que instalar ningún equipo o
+ningún software adicional. Esta es una forma fácil de comenzar a
+experimentar con streaming. Hay también más productos profesionales que
+permiten streaming de RTMP, lo cual te permite operar tu propio
+servidor. Adobe, siendo el creador del software de Flash y del protocol
+RTMP, tiene el servidor más popular llamado Adobe Flash Streaming. Sin
+embargo, hay un competidor de código abierto que es completamente libre
+de costo y fácil de instalar llamado Red5
+(<a href="http://red5.org">http://red5.org</a>).<br>
+
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">Windows
+Media Server</span>
+- Este es el software de servidor usado para hacer streams de audio y
+video de formato Windows Media para programas clientes de Windows Media
+Player. Desafortunadamente este software sólo trabaja bien si todos los
+usuarios tienen Microsoft Windows, ya que no tiene soporte en Mac o
+Linux.<br>
+
+<span style="font-weight: bold;">Helix/Real Media</span> - Real Media
+solía ser la mejor solución para streaming antes de que cualquiera de
+las otras opciones surgieran en el mercado. Sin embargo, desde hace
+tiempo se ha quedado atrás, y actualmente es mayormente usado por sólo
+algunas corporaciones. <br>
+
+<span style="font-weight: bold;">Quicktime / Darwin Media Server (Apple
+QuickTime)</span>
+- Estas dos opciones son productos de Apple, construidas para trabajar
+con el programa QuickTime. Sin embargo, el Darwin Media Server es una
+alternativa de código abierto y disponible libre de costo. Además de
+trabajar con video Quicktime, también puede trabajar con algunos de los
+formatos de video/audio de mayor calidad (H.264, MPEG-4 Part 2,
+3gp).&nbsp; <br>
+
+<h3>Hablando con Visitantes</h3>
+
+Ahora tienes el audio y video de tu show saliendo hacia el resto del
+internet, pero todavía eres sólo tú y quien sea que está sentado
+contigo donde estás grabando. No sería bueno si otros invitados o hasta
+otros anfitriones pudieran juntarse contigo en el mismo show, en vivo
+desde cualquier lugar en el mundo? Gracias a la gran abilidad de
+computadores para enviar audio y video entre usuarios, esto es posible!
+(Todo esto también es posible aún si no estás haciendo un stream en
+vivo; puedes usar las siguientes herramientas para grabar podcasts o
+videocasts y transmitirlas más adelante).<br>
+
 <br>
-Another part that is nice to have is a way to use text for the
-audience to talk to the hosts and guests, as well as each other.&nbsp;
-This is generally done by creating an Internet Relay Chant (IRC) chat
-room.&nbsp; (<a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">http://en.wikipedia.org/wiki/Internet_Relay_Chat</a>
-<a href="http://es.wikipedia.org/wiki/Internet_Relay_Chat">http://es.wikipedia.org/wiki/Internet_Relay_Chat</a>) This could be on an
-IRC server that is specific to the show
-(with the option to have more than one chat room) or on another public
-IRC server, where there is a room specifically set aside for this
-show.&nbsp; Since not all users have an IRC client on their computer,
-it is highly recommended that you make one available embedded in the
-website as well.&nbsp; There are several out there that allow users to
-login to the IRC chat by just going to a web-page, without having to
-download anything to their computer.<br><br>
-The other option for interacting with the audience is to use Twitter
-(or the open-source alternative Identica).&nbsp; On these sites you
-could tell users to use a specific hashtag (#CoolShow) in their posts,
-this way anyone can quickly see all the comments going back and fourth
-about the show.&nbsp; <br>
+
+La manera más básica de lograr que alguien pueda hablar contigo es
+usando una de varias opcioness de Voz sobre IP (Voice over IP, o VoIP).
+VoIP es básicamente un reemplazo en tu computador para llamadas
+teléfonicas. En vez de enviar tu voz como una carga eléctrica a través
+de un alambre de cobre hacia tu compañía teléfonica, el computador
+envía tu voz como un stream de bits al recipiente a través del
+internet. La versión más popular de VoIP que se puede usar para crear
+shows de audio o video es Skype. Skype te permite comunicarte con una o
+más personas en la misma llamada. Desde ahí puedes grabar la llamada a
+tu comutador o enviarlo directamente a un stream. Desafortunadamente,
+Skype tiene algunas limitaciones que evitan que interactúe con otro
+software aparte del cliente oficial de Skype. Si quieres una opción que
+te permita tener la libertad de usar varios tipos de software de VoIP,
+hay un standard usado por la mayoría de estos otros programas (excepto
+Skype). Este formato llama el Session Initiation Protocol (Protocol de
+Iniciación de Sesión, o SIP). El SIP es un protocol con muchas
+capabilidades incluyendo reenvío de llamadas y buzón de voz. El cliente
+Empathy (Instant Messaging) que viene con Ubuntu puede trabajar con el
+plugin telepathy-sofiasip para convertirse en un muy buen cliente de
+SIP. tambien en Empathy está la abilidad de usar chat en video/voz a
+través de los servidores Google Talk o Jabber. Esta es una buena
+alternativa a Skype también. <br>
+
 <br>
-Either IRC or Twitter/Identica is a great way to interact with the
-audience.&nbsp; A common way to do this is to ask a question on the
-live stream, and then request that the audience write their responses
-back.&nbsp; Another method is to tell the audience to post questions
-they have for a guest using one of these methods, then the host can
-read the question aloud to the guest.<br>
+
+Los programas Skype/SIP/Instant Messenger tienen cierto soporte para
+múltiples usuarios hablando entre ellos en la misma llamada, pero esta
+no es su especialidad, y por lo general están limitados a sólo un poco
+de usuarios a la vez. A veces tal vez quieras tener un grupo más grande
+de personas en el show de forma tal que cualquier persona (o grupos
+específicos) pueda hablar entre sí. Mumble es una aplicación de chat
+grupal que fue diseñada para uso por grupos de personas usando juegos
+de computador, pero funciona muy bien para cualquier tipo de chat de
+grupo. Para usar Mumble, necesitas instalar el mumble-server (llamado
+murmur) en algún lugar en el network donde todos los usuarios puedan
+accesarlo, y luego hacer que cada usuario abra el cliente de Mumble. Es
+posible crear varios canales en el servidor, de manera que diferentes
+grupos puedan hablar entre sí.<br>
+
+<img src="AudioScreen/Mumble-Record-es.png" alt="Mumble-Record-es.png"><br>
+
 <br>
+No hay ningún otro programa similar que trabaje con conversaciones de
+grupo con video. Esto es porque es fácil escuchar a muchas personas
+diferentes al mismo tiempo, pero no es fácil ver múltiples instancias
+de video a la misma vez. La aplicacion que se acerca más a esta
+capabilidad es Big Blue Button&nbsp; (<a href="http://bigbluebutton.org">http://bigbluebutton.org</a>).&nbsp;
+Este programa se contruyó para uso en salones de clase virtuales, en
+los que todos los estudiantes tienen una webcam (o al menos un
+micrófono) y el rofesor puede controlar quién habla a cualquier momento
+determinado. Esta misma configuracion puede trabajar bien para un show,
+en el cual el anfitrión jugaría el papel del profesor siendo quien
+control a cuál stream de video se envía al resto de los invitados del
+show. Big Blue Button usa streaming flash de video, por lo que es fácil
+de configurar por cualquier usuario.<br>
+
+<h3>Conectando todo con JACK</h3>
+Ahora que tienes muchos streams de audio llegando a tu computador, y
+solo un stream con el que enviar audio hacia afuera, necesitas una
+manera de conectar las entradas con la salida. JACK es un conjunto de
+software que te permite hacer precisamente esto. La manera más facil de
+entender al JACK es pensando en un conjunto de cables virtuales,
+configurados de forma tal que puedes tomar la salida de un programa y
+alimentarla hacia otro programa. Luego puedes tomar esa nueva salida y
+alimentarla a un tercer programa. JACK es un poco complicado para
+configurar, y un poco más allá del enfoque de nuestro curso, pero es un
+recurso increíble si necesitas algo con lo que conectar todos tus
+sistemas de audio.<br>
+
+<img src="http://qjackctl.sourceforge.net/image/qjackctlPatchbayForm1.png">
 <br>
-That should be enough good tips to get you started on your live stream... good luck!<br>
+
+<br>
+
+<h3>Interactuando con la Audiencia</h3>
+Ahora que tienes el software para tu stream en vivo bien configurado,
+la única otra cosa en la que hay que pensar es el resto de los recursos
+que pueden apoyar un buen show en vivo. Por lo general es importante
+tener una página web qe tenga información sobre tu stream, como por
+ejemplo qué show está en el calendario para hoy y para fechas futuras.<br>
+
+<br>
+Otra parte que es útil tener es una manera de usar texto para que la
+audiencia pueda hablar con los anfitriones e invitados, así como con el
+resto de la audiencia. Esto se logra por lo general usando un salón de
+chat de formato Internet Relay Chat (IRC) (<a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">http://en.wikipedia.org/wiki/Internet_Relay_Chat</a>
+<a href="http://es.wikipedia.org/wiki/Internet_Relay_Chat">http://es.wikipedia.org/wiki/Internet_Relay_Chat</a>).
+Esto se puede hacer usando un servidor IRC específico para el show (con
+la opción de tener más de un salón de chat simultáneamente), o en un
+servidor IRC público, en el cual hay un salón especificado para tu
+show. Ya que no todos los usuarios tendrán un programa cliente IRC en
+sus computadors, se recomienda que configures un cliente dentro de tu
+página web. Hay varias maneras de permitir que usuarios se registren al
+chat IRC a través de la página web sin tener que descargar nada a sus
+computadores.<br>
+<br>
+La otra opción para interactuar con la audiencia es usando Twitter (o
+la alternativa de código abierto llamada Identica). En estos sitios
+puedes decirles a los usuarios que utilicen hashtags (#) específicos
+(por ejemplo #BuenShow) en sus comentarios. De esta manera cualquier
+persona puede ver rápidamente todos los comentarios entrando durante el
+show.<br>
+
+<br>
+Tanto IRC como Twitter/Identica es una manera muy buena de interactuar
+con la audiencia. Una manera común de hacer esto es haciendo una
+pregunta en el stream, y pidiéndole a la audiencia que escriban sus
+respuestas y las envíen. Otro método es decirle a la audiencia que
+escriban preguntas que tengan para el invitado usando uno de estos
+servicios, y luego el anfitrión puede leer la pregunta en vivo. <br>
+
+<br>
+Estos deben ser suficientes sugerencias para que comienzes a crear tu show en vivo...buena suerte!<br>
 
 <br>
 
