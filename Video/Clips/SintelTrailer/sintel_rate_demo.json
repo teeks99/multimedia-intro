@@ -6,7 +6,7 @@
     {
         "name":"sintel_clip",
         "files":[
-            "sintel_clip.y4m",
+            "sintel_clip-lossless.mkv",
             "sintel_clip.flac"
         ],
         "image_points":[
