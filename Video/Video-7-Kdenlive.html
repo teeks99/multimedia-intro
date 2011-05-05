@@ -1,16 +1,522 @@
-<h2>Kdenlive</h2>Unlike Handbrake or Avidemux, Kdenlive is a full-featured editor suitable for much more than making clips of video or converting other videos. This has support for bringing together dozens of clips of video (in different formats), multiple tracks of audio and video displaying together and transitioning from one to the other, and rendering finished video in to many different formats.&nbsp; Throughout this section we will be doing all these things, and when you're done you'll be all set to create your own full-featured videos!<br><br><h3>Getting Started</h3>When you first open Kdenlive (if someone in that user profile hasn't done it before you) you will be prompted for a folder where your project's files will reside. It is important to pick a good folder here, because when you actually go to save the project, this folder won't change, all that specifies is where you save the .kdenlive project file all the other data still is stored here.&nbsp; But don't worry if you didn't pick a good one the first time or need to change it. If you want to change the default location, that can be done in Settings -&gt; Configure Kdenlive... -&gt; Environment -&gt; Default Folders in the Project Folder box. <br>However, if you have already started a project, you can change the location of the Folder containing it in Project -&gt; Project Settings in the Project Folder box. Also in the Project Settings dialogue, we can select the format we want our final video to be in, in this case lets choose VGA Widescreen NTSC.&nbsp; This will give us 854x480 (16:9) resolution, 30000/1001 (or 29.97) frames per second, progressive video.<br><br>Also, before we start the editing, lets create and save our project file. Since we've already got our project in the folder we want, we can probably just name the project something descriptive and save it there. In the future we could have other projects that we save here also, which could share resources (videos, images, audio, etc) with this project, saving space.<br><br>Ok, with that out of the way, lets get started! The first thing you'll want to do is import some clips.&nbsp; You can get the ones we'll be using for this project here:<br>Intro.mkv<br>BunnyPrep.mkv<br>RedSquirrel.mkv<br>GraySquirrel.mkv<br>FlyingSquirrel.mkv<br>BigBuckBunny-stereo.flac<br>freestylemix_-_hisboyelroy_-_Revolve.mp3<br><br>Download all of those to your hard disk.&nbsp; Then in Kdenlive with the "Project Tree" visible, click the button just above to Add Clip.&nbsp; Use this dialog to select each of the files.<br><img style="width: 429px; height: 248px;" src="Screen/Kdenlive-LoadClips.png" alt="Kdenlive-LoadClips.png"><br><br><img src="Screen/Kdenlive-ClipsReady.png" alt="Kdenlive-ClipsReady.png"><br><br>We can create folders within our project to organize all our clips. Just right click inside the project tree and select Create Folder. Lets make three and name them Videos, Audio, and Text.&nbsp; Go ahead and drag the clips into the appropriate folder.<br><img src="Screen/Kdenlive-Folders.png" alt="Kdenlive-Folders.png"><br><br>Now we're all set to create our first video. First drag the Intro clip down into the Video 1 track at the bottom. Then put the BunnyPrep clip immediately after it in the same track.<br><img style="width: 1056px; height: 796px;" src="Screen/Kdenlive-TwoClips.png" alt="Kdenlive-TwoClips.png"><br><br>Now that we've got our first cut of a video, we can watch it in the Project Monitor. Just click the play button.<br><img style="width: 1048px; height: 794px;" src="Screen/Kdenlive-ProjectMonitor.png" alt="Kdenlive-ProjectMonitor.png"><br>Notice the line (just like in Audacity) that follows the video across the timeline.<br><br>Once we've checked out our video and everything looks good, we need to "render" it to a file. I'll talk more about what rendering means later, but for now just know that it takes what you saw in the project monitor and outputs it to a file format of your choice.&nbsp; Click the Render button to get started.<br><img src="Screen/Kdenlive-BasicRender.png" alt="Kdenlive-BasicRender.png"><br>In the render dialogue, we're going to select a type of "File rendering" from the drop-down box. We'll pick a name for our file. I input "BasicClip.mp4".&nbsp; Then select MPEG-4 from the list of encoding types, and we'll use the 6000k (only a single pass for now, to speed things up).&nbsp; When you're all set, hit the "Render to File" button.<br><img src="Screen/Kdenlive-Rendering.png" alt="Kdenlive-Rendering.png"><br>Once the file is done rendering, you can go out to the directory you saved it in, and open it in a video player to see how it looks.<br><br>Picking Clips<br><br><br><br>Use Big Buck Bunny<br>
-Simple Cuts, re-order scenes?<br>
-Create Intro Title, Credits, License<br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Video - 7 - Kdenlive</title>
 
-Color Clip (black) with title, fade to intro scene?<br>
-Creating clips with the clip monitor<br>
-Picture in Picture, rodents throwning while the rabbit is getting hit, all "actors" on the same page at the same time<br>
-&nbsp;&nbsp;&nbsp; Take the three clips of the squirrles (from longest
-to shortest) and have them composited in to a screen with text saying
-"The Villans". One below, two above. Show the left-right centering, and
-for the top two how to manually adjust the left-right and up-down
-spacing. <br>
-Fade transition<br>
+  
+</head><body>
+<h2>Kdenlive</h2>
+
+Unlike Handbrake or Avidemux, Kdenlive is a full-featured editor
+suitable for much more than making clips of video or converting other
+videos. This has support for bringing together dozens of clips of video
+(in different formats), multiple tracks of audio and video displaying
+together and transitioning from one to the other, and rendering
+finished video in to many different formats.&nbsp; Throughout this
+section we will be doing all these things, and when you're done you'll
+be all set to create your own full-featured videos!<br>
+
 <br>
-Blue/Green Screen Example???<br>
-Multi-part tutorial in espanol: http://www.youtube.com/user/kalerolinex#g/c/C5352FB1B3F614CF
+
+<h3>Getting Started</h3>
+
+When you first open Kdenlive (if someone in that user profile hasn't
+done it before you) you will be prompted for a folder where your
+project's files will reside. It is important to pick a good folder
+here, because when you actually go to save the project, this folder
+won't change, all that specifies is where you save the .kdenlive
+project file all the other data still is stored here.&nbsp; But don't
+worry if you didn't pick a good one the first time or need to change
+it. If you want to change the default location, that can be done in
+Settings -&gt; Configure Kdenlive... -&gt; Environment -&gt; Default
+Folders in the Project Folder box. <br>
+
+However, if you have already started a project, you can change the
+location of the Folder containing it in Project -&gt; Project Settings
+in the Project Folder box. Also in the Project Settings dialogue, we
+can select the format we want our final video to be in, in this case
+lets choose VGA Widescreen NTSC.&nbsp; This will give us 854x480 (16:9)
+resolution, 30000/1001 (or 29.97) frames per second, progressive video.<br>
+
+<br>
+
+Also, before we start the editing, lets create and save our project
+file. Since we've already got our project in the folder we want, we can
+probably just name the project something descriptive and save it there.
+In the future we could have other projects that we save here also,
+which could share resources (videos, images, audio, etc) with this
+project, saving space.<br>
+
+<br>
+
+Ok, with that out of the way, lets get started! The first thing you'll
+want to do is import some clips.&nbsp; You can get the ones we'll be
+using for this project here (samples from Big Buck Bunny, watch the
+whole thing <a href="Clips/BigBuckBunny/big_buck_bunny_480p_h264.mov">here</a>):<br>
+
+Intro.mkv<br>
+
+BunnyPrep.mkv<br>
+
+BunnyRelax.mkv<br>
+
+RedSquirrel.mkv<br>
+
+GraySquirrel.mkv<br>
+
+FlyingSquirrel.mkv<br>
+
+BigBuckBunny-stereo.flac<br>
+
+freestylemix_-_hisboyelroy_-_Revolve.mp3<br>
+
+<br>
+
+Download all of those to your hard disk.&nbsp; Then in Kdenlive with
+the "Project Tree" visible, click the button just above to Add
+Clip.&nbsp; Use this dialog to select each of the files.<br>
+
+<img style="width: 429px; height: 248px;" src="Screen/Kdenlive-LoadClips.png" alt="Kdenlive-LoadClips.png"><br>
+
+<br>
+
+<img src="Screen/Kdenlive-ClipsReady.png" alt="Kdenlive-ClipsReady.png"><br>
+
+<br>
+
+We can create folders within our project to organize all our clips.
+Just right click inside the project tree and select Create Folder. Lets
+make three and name them Videos, Audio, and Text.&nbsp; Go ahead and
+drag the clips into the appropriate folder.<br>
+
+<img src="Screen/Kdenlive-Folders.png" alt="Kdenlive-Folders.png"><br>
+
+<br>
+
+Now we're all set to create our first video. First drag the Intro clip
+down into the Video 1 track at the bottom. Then put the BunnyPrep clip
+immediately after it in the same track.<br>
+
+<img style="width: 1056px; height: 796px;" src="Screen/Kdenlive-TwoClips.png" alt="Kdenlive-TwoClips.png"><br>
+
+<br>
+
+Now that we've got our first cut of a video, we can watch it in the
+Project Monitor. Just click the play button.<br>
+
+<img style="width: 1048px; height: 794px;" src="Screen/Kdenlive-ProjectMonitor.png" alt="Kdenlive-ProjectMonitor.png"><br>
+
+Notice the line (just like in Audacity) that follows the video across
+the timeline.<br>
+
+<br>
+
+Once we've checked out our video and everything looks good, we need to
+"render" it to a file. I'll talk more about what rendering means later,
+but for now just know that it takes what you saw in the project monitor
+and outputs it to a file format of your choice.&nbsp; Click the Render
+button to get started.<br>
+
+<img src="Screen/Kdenlive-BasicRender.png" alt="Kdenlive-BasicRender.png"><br>
+
+In the render dialogue, we're going to select a type of "File
+rendering" from the drop-down box. We'll pick a name for our file. I
+input "BasicClip.mp4".&nbsp; Then select MPEG-4 from the list of
+encoding types, and we'll use the 6000k (only a single pass for now, to
+speed things up).&nbsp; When you're all set, hit the "Render to File"
+button.<br>
+
+<img src="Screen/Kdenlive-Rendering.png" alt="Kdenlive-Rendering.png"><br>
+
+Once the file is done rendering, you can go out to the directory you
+saved it in, and open it in a video player to see how it looks.<br>
+
+<br>
+
+<h3>Picking Clips and Transitions</h3>
+
+<br>
+
+For this section, lets use a couple of the parts where the Bunny is
+preparing for the fight, and put them around the scene from the end
+where he's relaxing in the field.<br>
+
+<br>
+
+<br>
+
+To start, in the Project Tree, click on the "BunnyPrep.mkv" clip. This
+clip will then show up in the Clip Monitor. <br>
+
+<img src="Screen/Kdenlive-ClipMonitor.png" alt="Kdenlive-ClipMonitor.png"><br>
+
+<br>
+
+From here you can use the play/pause button along with the forward and
+back buttons to view all throughout the clip. Also, like Avidemux there
+are two buttons that let you pick a start/end point ("[" and
+"]").&nbsp; Lets use this to create a selection of the scene when the
+bunny enters the forrest and pulls down the vine.&nbsp; If you have
+trouble getting the start and ending just right, you can use the clock
+to move one frame back or forward.&nbsp; The clocks format is
+"hh:mm:ss;frame" , we need from about 00:00:09;27-00:00:17;03 -- just
+over 7 seconds. <br>
+
+<img src="Screen/Kdenlive-ClipSelection.png" alt="Kdenlive-ClipSelection.png"><br>
+
+<br>
+
+Once you have the selection in the clip monitor, click on the video and
+drag it down to one of the video tracks in the timeline below.<br>
+
+<img src="Screen/Kdenlive-ClipToTimeline.png" alt="Kdenlive-ClipToTimeline.png"><br>
+
+<br>
+
+Now lets add a couple more clips to that track of video.&nbsp; Next,
+take the entire BunnyRelax.mkv clip and copy it down to the timeline.
+For our third clip, lets select another portion from the BunnyPrep.mkv
+clip, when he is putting on his face paint
+(00:00:47;22-00:00:51;01).&nbsp; Now we should have all three clips
+loaded in the Video 1 track:<br>
+
+<img src="Screen/Kdenlive-TransitionClipsReady.png" alt="Kdenlive-TransitionClipsReady.png"><br>
+
+<br>
+
+A quick aside - Get to Know the Toolbar<br>
+
+<img src="Screen/Kdenlive-Toolbar.png" alt="Kdenlive-Toolbar.png"><br>
+
+From Left to Right:<br>
+
+Normal Mode - When you put a new clip on a track's timeline, it can
+only be put into empty space long enough to fit it.<br>
+
+Overwrite Mode - When you put a clip on a track's timeline, it will
+overwrite you put it over.<br>
+
+Insert Mode - When you put a clip on a track's timeline, it will push
+the other clips to make room for the new one.<br>
+
+<br>
+
+Selection Tool - Normal, you can drag clips around with this.<br>
+
+Razor Tool - Any time you click a video in the timeline, it will split
+that video into two pieces at the point you clicked.<br>
+
+Spacer Tool - Moves the clip you click on and all the clips to the
+right of it in that track, useful for creating empty space to add a new
+clip.<br>
+
+<br>
+
+Fit zoom to project - Click this will make the whole project visible in
+the timeline.<br>
+
+Zoom Out - See more/further.<br>
+
+Zoom Slider - A quick way to see how close you are zoomed, drag this if
+you know how far you want to zoom quickly.<br>
+
+Zoom In - See less/closer.<br>
+
+<br>
+
+Split audio and video automatically - When you put a clip of video on
+the timeline that has an audio track, this will move the audio to its
+own track.<br>
+
+Show video thumbnails - Shows the start and end frame (if there is
+room) of each clip.<br>
+
+Show audio thumbnails - Shows the audio waveform in the bottom of the
+clip.<br>
+
+Show marker comments - If you put markers into your clips with notes,
+this will make them visible.<br>
+
+Snap - When you place a clip on the timeline close to another clip
+(possible in a different track) this will move the new one so that it
+lines up with the existing one.<br>
+
+Current Location In Timeline - The time or frame number where the
+cursor (and Project Monitor) is on the timeline.<br>
+
+Time Format Selector - Use this to convert from the format
+hh:mm:ss;frame to the frame number.<br>
+
+<br>
+
+So now that we've got all those tools, lets go back to our clips. <br>
+
+<br>
+
+If we watch the video we have so far from the start, in the project
+monitor (if your project monitor ever doesn't work well, you can always
+render the video to a file, possibly at a smaller resolution to go
+faster, and watch it in another player), we notice that there is a very
+sudden jump at the transition between each of the three clips.&nbsp; A
+lot of the time this is the best way to do a transition, that is to
+just have it jump from one clip to the next one.&nbsp; When you watch
+many television shows: sitcoms, news programs, commercials; they all
+have many jumps (sometimes dozens in a minute) from one clip (or camera
+angle) to the next.&nbsp; This is perfectly normal, and our eye is used
+to making the transition, so it doesn't bother us. Take a minute to go
+back and watch the BunnyPrep.mkv clip from the begenning, and count the
+number of times that the view changes.&nbsp; (Go now!)&nbsp; Amazing
+isn't it?&nbsp; In that short clip (just over a minute long) there were
+22 different jumps!&nbsp; The first time we watch that, we may have
+only noticed a couple that were major scene changes.&nbsp; <br>
+
+<br>
+
+Anyway, getting back to our current clip, transitions that just jump
+from one clip to the next are usually fine, but these clips were
+especially chosen for this project because they don't easily go
+together...the jump between them is just too jarring.&nbsp; Instead, we
+need to add a transition effect to make moving between them more
+smooth.&nbsp; <br>
+
+<br>
+
+We're going to start by overlapping these videos a little bit.&nbsp; To
+do this, we'll move the middle video down to track 2, and move it a bit
+to the left. Then we'll pull the third clip even more to the left so
+they all overlap.<br>
+
+<img src="Screen/Transition-Overlap.png" alt="Transition-Overlap.png"><br>
+
+You'll notice if you watch in the project monitor that right now when
+there are two clips overlapping, the one from the Video 1 track is the
+only one that you can see (it has higher priority).<br>
+
+<br>
+
+Now we need to apply the transition between the videos.&nbsp; To do
+that, hover your mouse over the bottom right corner of the first clip.
+You see a small green triangle show up:<br>
+
+<img src="Screen/Transition-Triangle.png" alt="Transition-Triangle.png"><br>
+
+Click on that triangle will automatically create a transition between
+the two clips for you.&nbsp; By default it creates the Dissolve
+transition, which usually the only transition you would want to
+use.&nbsp; In addition, it brings up the Transition tab for setting the
+details of the transition.<br>
+
+<img src="Screen/Transition-Dissolve.png" alt="Transition-Dissolve.png"><br>
+
+There are two settings for the dissolve transition, which track the
+transition applies to (Auto is usually good at guessing, but here we
+could manually set it to "2" to be sure) and "Reverse". Usually a
+transition will start with the lower number track, and transition to
+the higher number track (it doesn't look at which track is overlapping
+another track).&nbsp; In this case, however, we have track one playing
+and want to transition to track two (transition from a higher number to
+a lower number) so we need to reverse it.&nbsp; <br>
+
+<br>
+
+There are many different types of transitions, 95% of which you will
+never use. The one that people think is fun to use (but is really bad
+for everyone else watching) is the Wipe transition (use
+spariningly!).&nbsp; Here you can play with the different ones and
+their settings to see what is available.<br>
+
+<br>
+
+Next, we want to apply a transition from the second clip to the third
+clip. If we hover the lower left corner of the third clip, we will see
+the green triangle. Clicking on it will automatically add the dissolve
+transition for us. In this case, we're transitioning from track 2 up to
+track 1 so there is no need to reverse the order.<br>
+
+<img src="Screen/Transition-Complete.png" alt="Transition-Complete.png"><br>
+
+<br>
+
+You should now be able to watch the whole video and see the
+translations in the project monitor.&nbsp; If you want, you can also
+render this file out and see it in a different video player.<br>
+
+<br>
+
+Adding Text<br>
+
+<br>
+
+To add a Title (or Credits) to our video is easy with kdenlive. Right
+click on our Text folder in the Project Tree and select Add Title
+Clip.&nbsp; This will bring up a window where you can type in text (or
+put photos and graphics).&nbsp; <br>
+
+<img src="Screen/Title-TextEntry.png" alt="Title-TextEntry.png"><br>
+
+<br>
+
+Once you're done, you can change the name in the Project Tree by double
+clicking on the existing name.<br>
+
+<img src="Screen/Title-ChangeName.png" alt="Title-ChangeName.png"><br>
+
+<br>
+
+Now we want to add this title to our movie, but first, we should make
+some room.&nbsp; Select all the clips that we have (and the Dissolve
+transitions) and move it all down a line, so that track 1 is
+free.&nbsp; Now we can add our Bunny title to the front.&nbsp; Notice
+that it automatically makes a transition of the "Composite" type.
+(Composite is a catch-all term for having multiple videos up at once).<br>
+
+<img src="Screen/Title-Applied.png" alt="Title-Applied.png"><br>
+
+<br>
+
+One other thing we can do, is add a transition to the begenning of the
+first video clip, so that the video starts out black, and then fades
+in.&nbsp; To do that, select the video in the timeline (now in track
+2). Then right click on it, and select Add Effect -&gt; Fade -&gt; Fade
+from Black.&nbsp; <br>
+
+<img src="Screen/Title-FadeIn.png" alt="Title-FadeIn.png"><br>
+
+This will put a triangle over the upper right corner of that clip in
+the timeline. You can drag this triangle left or right to make the fade
+take a shorter or longer amount of time.<br>
+
+<br>
+
+We can also make Titles that don't go over video (they just have a
+black background, which is the default).&nbsp; For example we can
+create a credits &amp; license title to go at the end of the video. <br>
+
+<img src="Screen/Title-Credits.png" alt="Title-Credits.png"><br>
+
+Then just put it in track one after the last video ends.<br>
+
+<img src="Screen/Title-CreditsPlaced.png" alt="Title-CreditsPlaced.png"><br>
+
+When you're happy with your video at this point, you can go ahead and
+render it, and watch it in another video player.<br>
+
+<h3>Basic Compositing</h3>
+
+Compositing is what is used to have multiple source clips show up in a
+single video at the same time. There are lots of different uses for
+this. The one we saw in the last section was to overlay text on top of
+video. In this section, we'll use the compositing tools in Kdenlive to
+have three different videos play in different parts of the screen.<br>
+
+<br>
+
+First, lets make a couple more Titles.&nbsp; One that just says "Vs."
+and one that says "The Villans".&nbsp; Now we'll move our credits off
+to the right in the timeline and add these two new titles in between
+them, the Vs. one should be short, and "The Villans" one a bit longer.<br>
+
+<br>
+
+Before we add these to our timeline, lets create a new track. Right
+click on the Video 3 track and select insert new. We want to put the
+new video track after track 3.<br>
+
+<img src="Screen/Composite-Track.png" alt="Composite-Track.png"><br>
+
+<br>
+
+Now go ahead and put the Vs. title into the timeline.&nbsp; When you
+put the Villans title in, put it into the new track.&nbsp; You will
+need to move the credits out of the way.<br>
+
+<img src="Screen/Composite-Titles.png" alt="Composite-Titles.png"><br>
+
+<br>
+
+Now that we have our titles setup, lets add the video clips we want to
+use. Put FlyingSquirrel.mkv, GraySquirrle.mkv, RedSquirrel.mkv into
+tracks 1-3.<br>
+
+&nbsp;Align them so that they all end right when the credits start.
+(You may need to move the credits and stretch the villans to fit
+FlyingSquirrel.mkv).<br>
+
+<img src="Screen/Composite-Clips.png" alt="Composite-Clips.png"><br>
+
+<br>
+
+Now we're going to start compositing. Right click on the FlyingSquirrel
+clip in the timeline and select Add Transition -&gt; Composite.&nbsp;
+Then stretch out the transition so that it covers the entire clip (same
+length as the villans clip).<br>
+
+<img src="Screen/Composite-ApplyLength.png" alt="Composite-ApplyLength.png"><br>
+
+<br>
+
+Now (if you click on the composite under the FlyingSquirrel clip) you
+will see the transitions tab show up, with the composite settings in
+it. This particular composite is for track one, and we will composite
+it over track four, so from the "with track" dropdown, select Video 4.
+For any composite, it is possible to have several times throughout the
+composite where it behaves differently. These are called keyframes (not
+to be confused with keyframes created by a codec when encoding video).
+Each keyframe specifies what the composite will be doing until the next
+keyframe (or the end). In this case, we just want the video to play in
+a smaller box the whole time, so we don't need any keyframes except the
+one that is automatically created at the start of the composite. To get
+to this one, hit the left arrow button just under the timeline in the
+composite settings.<br>
+
+<img src="Screen/Composite-Start.png" alt="Composite-Start.png"><br>
+
+<br>
+
+Now we're at the start keyframe, we can start applying our
+settings.&nbsp; The first thing we want to do is lower the size from
+100% to 30%.&nbsp; You will see that this changed the yellow outline in
+the Project Monitor. This yellow outline is where our video will be
+put, the red dotted outline is where the video frame is.<br>
+
+<img src="Screen/Composite-LineUp.png" alt="Composite-LineUp.png"><br>
+
+Lets move the video to the bottom, just below the text in the
+center.&nbsp; We also want to use the button to ensure the our video is
+lined up in the center of the frame.<br>
+
+<br>
+
+Now we can go and do the same thing for the next two videos, except put
+them above the text, to the left and right.&nbsp; (Note the "Y" value
+of where you put each clip, and adjust manually so they line up
+perfectly).<br>
+
+<img src="Screen/Composite-AllThree.png" alt="Composite-AllThree.png"><br>
+
+<br>
+
+We've got all our video together, and you can view it in the Project
+Monitor. The only problem is that our audio is somewhat jumpy. The
+reason for this is we are just using the audio that came with each
+track, and they don't fit well together (the titles don't even have
+audio). What we can do is mute all our tracks (just click the speaker
+icon under the label for each track), and just add in our seperate
+audio track down in Audio 1, and size it to fit.&nbsp; Maybe add a
+Effect -&gt; Fade -&gt; Fade In/Out to the audio too.<br>
+
+<img src="Screen/Composite-Audio.png" alt="Composite-Audio.png"><br>
+
+Now we're all finished with our big clip!&nbsp; Go ahead and render it
+and watch it in a video player.<br>
+
+<br>
+
+Advanced Compositing<br>
+
+&nbsp;&nbsp;&nbsp; Blue/Green Screen Example???<br>
+
+<br>
+
+Multi-part tutorial in espanol:
+http://www.youtube.com/user/kalerolinex#g/c/C5352FB1B3F614CF
+</body></html>
