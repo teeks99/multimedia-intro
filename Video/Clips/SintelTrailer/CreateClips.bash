@@ -13,25 +13,21 @@
 # Crop down the PNGs to the resolution of the video
 #Too Big: ffmpeg -i 1080/sintel_trailer_2k_%04d.png -vf crop=1920:816:0:132 -vcodec rawvideo -pix_fmt yuv444p sintel_trailer.y4m
 # Covert to a not super-huge format
-ffmpeg -i 1080/sintel_trailer_2k_%04d.png -vf crop=1920:816:0:132 -vcodec libx264 -vpre lossless_max -pix_fmt yuv444p sintel_trailer-lossless_max.mkv
+ffmpeg -i 1080/sintel_trailer_2k_%04d.png -vf crop=1920:816:0:132 -vcodec libx264 -vpre lossless_max -pix_fmt yuv444p -r 24 sintel_trailer-lossless.mkv
 
 #  We want the whole thing, but at low-res
-ffmpeg -i sintel_trailer-lossless_max.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec libx264 -vpre slow_firstpass -s 960x408 -b 1200k -bt 1200k -an -f rawvideo -y /dev/null
-ffmpeg -i sintel_trailer-lossless_max.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec libx264 -vpre slow -s 960x408 -b 1200k -bt 1200k -acodec libfaac -ab 192k output.mp4
+ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec libx264 -vpre slow_firstpass -s 960x408 -b 1200k -bt 1200k -an -f rawvideo -y /dev/null
+ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec libx264 -vpre slow -s 960x408 -b 1200k -bt 1200k -acodec libfaac -ab 192k output.mp4
 qt-faststart output.mp4 sintel_trailer-408p-x264_slow2p-1200k-faac-192k.mp4
 rm output.mp4
 rm *log*
 
 #  Same thing, but mpeg4-mp3
-ffmpeg -i sintel_trailer-lossless_max.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -an -f rawvideo -y /dev/null
-ffmpeg -i sintel_trailer-lossless_max.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -acodec libmp3lame -ab 256k sintel_trailer-408p-mpeg4-mp3.mp4
+ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -an -f rawvideo -y /dev/null
+ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -acodec libmp3lame -ab 256k sintel_trailer-408p-mpeg4-mp3.mp4
 
 # === For this exercise, we´re going to use seconds 7.0-17.0 (10sec) ===
-# Clip the audio, this still doesn´t line up correctly, but its not our fault.  The stuff on the site doesn´t lineup.
 ffmpeg -i sintel_trailer-audio.flac -ss 7.0 -t 10.0 -acodec flac sintel_clip.flac
-
-
-# Cropping off black space at top and bottom
 ffmpeg -i sintel_trailer-lossless.mkv -ss 7.0 -t 10.0 -vcodec libx264 -vpre lossless_max -pix_fmt yuv444p sintel_clip-lossless.mkv
 
 # 408p (~480p) y4m
