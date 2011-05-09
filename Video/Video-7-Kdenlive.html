@@ -1,5 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><title>Video - 7 - Kdenlive</title></head><body>
+<html><head>
+  <title>Video - 7 - Kdenlive</title>
+
+  
+</head><body>
 <h2>Kdenlive</h2>
 
 Unlike Handbrake or Avidemux, Kdenlive is a full-featured editor
@@ -49,21 +53,21 @@ want to do is import some clips.&nbsp; You can get the ones we'll be
 using for this project here (samples from Big Buck Bunny, watch the
 whole thing <a href="Clips/BigBuckBunny/big_buck_bunny_480p_h264.mov">here</a>):<br>
 
-Intro.mkv<br>
+<a href="Clips/BigBuckBunny/Intro.mkv">Intro.mkv</a><br>
 
-BunnyPrep.mkv<br>
+<a href="Clips/BigBuckBunny/BunnyPrep.mkv">BunnyPrep.mkv</a><br>
 
-BunnyRelax.mkv<br>
+<a href="Clips/BigBuckBunny/BunnyRelax.mkv">BunnyRelax.mkv</a><br>
 
-RedSquirrel.mkv<br>
+<a href="Clips/BigBuckBunny/RedSquirrel.mkv">RedSquirrel.mkv</a><br>
 
-GraySquirrel.mkv<br>
+<a href="Clips/BigBuckBunny/GraySquirrel.mkv">GraySquirrel.mkv</a><br>
 
-FlyingSquirrel.mkv<br>
+<a href="Clips/BigBuckBunny/FlyingSquirrel.mkv">FlyingSquirrel.mkv</a><br>
 
-BigBuckBunny-stereo.flac<br>
+<a href="Clips/BigBuckBunny/BigBuckBunny-stereo.flac">BigBuckBunny-stereo.flac</a><br>
 
-freestylemix_-_hisboyelroy_-_Revolve.mp3<br>
+<a href="Clips/BigBuckBunny/freestylemix_-_hisboyelroy_-_Revolve.mp3">freestylemix_-_hisboyelroy_-_Revolve.mp3</a><br>
 
 <br>
 
@@ -504,9 +508,10 @@ Effect -&gt; Fade -&gt; Fade In/Out to the audio too.<br>
 
 Now we're all finished with our big clip!&nbsp; Go ahead and render it
 and watch it in a video player.<br>
-<h3>
 
+<h3>
 Advanced Compositing</h3>
+
 Another type of compositing involves making part of a video
 transparent, and then putting it over another video. This allows you to
 give the subject (in the first video) a background that is different
@@ -516,49 +521,73 @@ Screen". It is called "Green Screen" because the easiest way to do this
 is to have the subject stand in front of a completely green background,
 then use the video editing software to remove the color green from the
 video.<br>
+
 <img style="width: 640px; height: 480px;" alt="Green Screen Setup" src="http://upload.wikimedia.org/wikipedia/commons/d/d9/ChromaKeyGreenScreen.jpg"><br>
 
 <br>
-Here we'll take a clip of a <a href="Clips/GreenScreenSample.mp4">person in front of a green screen</a>, and put him in front of a background of <a href="Clips/winter_clouds.mpg">some clouds</a>.
+
+Here we'll take a clip of a <a href="Clips/GreenScreenSample.mp4">person
+in front of a green screen</a>, and put him in front of a background of
+<a href="Clips/winter_clouds.mpg">some clouds</a>.
 First, lets get them loaded into Kdenlive. Then select the portion of
 the first clip where he's in front of a green screen (00:00:00;15 -
 00:00:05;04) and put that in track Video 1. Then load the second clip
 in track Video 2, and shorten it down so it is the same length.<br>
+
 <img src="Screen/Chroma-Clips.png" alt="Chroma-Clips.png"><br>
+
 <br>
+
 Next, we're going to add an effect to the first track. Right click on
 it Add Effect -&gt; Alpha manipulation -&gt; Blue Screen. This will
 bring up the blue screen dialogue in the effects tab. On this tab,
 there is an eyedropper button that you can use to select the background
 color that we want to eliminate. Click it, then select the green color
 close to the subject.<br>
+
 <img src="Screen/Chroma-SelectColor.png" alt="Chroma-SelectColor.png"><br>
+
 <br>
+
 <br>
+
 <img src="Screen/Chroma-Color.png" alt="Chroma-Color.png"><br>
+
 <br>
+
 Now we have our key all set to remove the green background from the
 first clip. We just need to composite in the second clip.&nbsp; Hover
 in the bottom-left corner of the first clip to get a green triangle,
 then click it to add a transition. Stretch out the transition to cover
 the whole clip, and change it from a Dissolve transition to a
 Composite. <br>
+
 <img src="Screen/Chroma-Composite.png" alt="Chroma-Composite.png"><br>
+
 <br>
+
 <br>
+
 Looking pretty good.&nbsp; All that's left now is a few cleanup things.
 First, the background video is 640x480, so if we try to show it at a
 bigger resolution than that, it won't look good, so lets set the
 project down to that size.&nbsp; Project -&gt; Project Settings -&gt;
 Project Profile: VGA NTSC. <br>
+
 <br>
+
 Also, the subject is taking up a large portion of the image. While we
 have the composite selecte, we can resize and/or move his image down a
 little so his face is only tow thirds of the way up.<br>
+
 <img src="Screen/Chroma-Cleanup.png" alt="Chroma-Cleanup.png"><br>
+
 <br>
+
 That's all. Go ahead and render it to a file and view it for yourself.<br>
+
 <br>
+
 When you view your rendered video, you may notice some minor things.
 His sholders are a bit broken up, there is some green on his face, etc.
 These are because this sample of video had a bunch of compression
@@ -566,4 +595,6 @@ applied to it after it was recorded. When you do green screen editing,
 it is important to get the un-compressed video before it goes through
 other processing steps. This will help the keying correctly pick out
 the background color (which it didn't do a great job of here). <br>
+
+<br>
 </body></html>
