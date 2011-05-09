@@ -1,3 +1,9 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Video - 2 - Formats</title>
+
+  
+</head><body>
 <h2>Codec and Container Overview</h2>
 
 <h3>Containers</h3>
@@ -83,7 +89,9 @@ extremely similar to Apple's Quick Time MOV container, and is used by
 iTunes for videos.&nbsp; The most typical format for this container is
 to contain MPEG4-AVC/H.264 video and AAC audio.&nbsp; It is supported
 by the Flash player in web browsers, and by the Internet Explorer and
-Safari web browsers for HTML 5 video. <a href="http://en.wikipedia.org/wiki/MPEG-4_Part_14">http://en.wikipedia.org/wiki/MPEG-4_Part_14</a>
+Safari web browsers for HTML 5 video where it uses progressive
+downloading so the video can start playing before it is completely
+downloaded. <a href="http://en.wikipedia.org/wiki/MPEG-4_Part_14">http://en.wikipedia.org/wiki/MPEG-4_Part_14</a>
 <a href="http://es.wikipedia.org/wiki/MPEG-4_Parte_14">http://es.wikipedia.org/wiki/MPEG-4_Parte_14</a><br>
 
 <span style="font-weight: bold;">Matroska (MKV)</span>
@@ -163,17 +171,17 @@ specifics here, but it is the details of how a codec does this that
 separates each of the modern codecs from its peers, and these details
 are very complicated.&nbsp; Just to give one example, the list of
 patents that are used in the (fairly old) MPEG-2 standard for
-interframe compression is several pages long.&nbsp;&nbsp;</p><p><a href="http://en.wikipedia.org/wiki/Video_compression">http://en.wikipedia.org/wiki/Video_compression</a><br>
+interframe compression is several pages long.&nbsp;&nbsp;</p>
 
+<p><a href="http://en.wikipedia.org/wiki/Video_compression">http://en.wikipedia.org/wiki/Video_compression</a><br>
+<a href="http://en.wikipedia.org/wiki/Video_compression_picture_types">http://en.wikipedia.org/wiki/Video_compression_picture_types</a><br>
+</p>
 
-<a href="http://en.wikipedia.org/wiki/Video_compression_picture_types">http://en.wikipedia.org/wiki/Video_compression_picture_types</a><br></p><p>
-
-
-<a href="http://en.wikipedia.org/wiki/Video_codec">http://en.wikipedia.org/wiki/Video_codec</a><br>
-
-
+<p><a href="http://en.wikipedia.org/wiki/Video_codec">http://en.wikipedia.org/wiki/Video_codec</a><br>
 <a href="http://es.wikipedia.org/wiki/C%F3dec_de_v%EDdeo">http://es.wikipedia.org/wiki/Códec_de_vídeo</a>
-</p><span style="font-weight: bold;">Raw</span> - Not compressed with a
+</p>
+
+<span style="font-weight: bold;">Raw</span> - Not compressed with a
 codec.&nbsp; There are still various types of raw formatting, the most
 common probably being DV Video, which often comes from digital
 camcorders.<br>
@@ -213,12 +221,17 @@ altogether, and it uses H.264 or WebM/VP8<br>
 
 <span style="font-weight: bold;">MPEG 4 Part 2 (aka DivX, XVID, MS
 MPEG4v3)</span> - This was the first major use of the MPEG 4
-standard.&nbsp; One of the original implementations was done by Microsoft and
+standard.&nbsp; One of the original implementations was done by
+Microsoft and
 is called Microsoft MPEG 4 Version 3, however it wasn't actually
 compatible with the baseline MPEG 4 Part 2.&nbsp; However, that didn't
 stop a project called DivX from copying this codec and giving it away
-freely. From there a group created an open source version of the same thing called Xvid.&nbsp; Thus these popular encoders MS MPEG 4v3, DivX and Xvid are all MPEG 4 Part 2 (but not necessairly compliant with all the standard). Between DivX and Xvid, many of the
-videos that were available for download on the internet were at one time (and a
+freely. From there a group created an open source version of the same
+thing called Xvid.&nbsp; Thus these popular encoders MS MPEG 4v3, DivX
+and Xvid are all MPEG 4 Part 2 (but not necessairly compliant with all
+the standard). Between DivX and Xvid, many of the
+videos that were available for download on the internet were at one
+time (and a
 good number still are) encoded in MPEG 4 Part 2.&nbsp; The reason for
 its popularity is that it was a large step up (approximately 40%
 smaller files) from MPEG 2. <a href="http://en.wikipedia.org/wiki/MPEG-4_Part_2">http://en.wikipedia.org/wiki/MPEG-4_Part_2</a>
@@ -272,39 +285,49 @@ and in studios with powerful computers.&nbsp; <a href="http://en.wikipedia.org/w
 only compresses losslessly, for use during editing and
 production.&nbsp; It was created as part of the ffmpeg/libav
 project.&nbsp; It is generally faster and has better compression than
-all the lossless codecs except x264's lossless encoders.<br><h4>Two Pass Encoding</h4>
+all the lossless codecs except x264's lossless encoders.<br>
+
+<h4>Two Pass Encoding</h4>
+
 <p>The amount of compression that can happen to video depends very much
-what is going on in the video.&nbsp; If there is a lot of motion (a lot of
+what is going on in the video.&nbsp; If there is a lot of motion (a lot
+of
 pixels change between frames) like a fight scene in a movie then it
-will be tough for the encoder to store all that data in a small area.&nbsp;
+will be tough for the encoder to store all that data in a small
+area.&nbsp;
 Or, if there isn't a lot of motion for instance when the people in the
 video are talking, and only their lips are moving, it is easy for
 modern video encoders to just update the few pixels that are changing
-and to leave everything else alone.&nbsp; All modern video encoders allow
+and to leave everything else alone.&nbsp; All modern video encoders
+allow
 for some amount of Variable Bit-Rate encoding, where, as was discussed
 in the audio section, certain parts of a clip can use more bits and
 other parts less, making it easier for the encoder to create something
-that looks good, while keeping the total file size the same.&nbsp; The trick
+that looks good, while keeping the total file size the same.&nbsp; The
+trick
 with video however is that it can't load large portions of the video
 into the computers memory (like it can with audio) to figure out where
-the hard/easy portions are.&nbsp; To facilitate this, two pass encoding has
+the hard/easy portions are.&nbsp; To facilitate this, two pass encoding
+has
 been developed. <br>
 </p>
-<p>Two pass encoding runs the encoder over the video clip twice.&nbsp; On
+
+<p>Two pass encoding runs the encoder over the video clip twice.&nbsp;
+On
 the first pass, no usable file is created, but the encoder records
 (into a separate log file) which spots in the video could use more bits
-and which could use less.&nbsp; Armed with this information, the encoder is
-run for a second pass at the clip.&nbsp; This time it knows ahead of time
+and which could use less.&nbsp; Armed with this information, the
+encoder is
+run for a second pass at the clip.&nbsp; This time it knows ahead of
+time
 where it can skimp on the bits and where it needs to use extra.&nbsp;
 Obviously, this won't work on live video, as the entire clip (or at
 least a large portion of it) isn't available to look through before it
-needs to start sending out the final, encoded, version.&nbsp; However, for
+needs to start sending out the final, encoded, version.&nbsp; However,
+for
 video files that are created to playback or distribute later, this is a
 much more efficient way of working.&nbsp; <br>
 </p>
-
-
-
 
 <h3>Audio in Videos</h3>
 
@@ -326,3 +349,4 @@ Vorbis - Often used with Theora or VP8/WebM video<br>
 FLAC - The most standard lossless formate used in video archiving<br>
 
 WMA - Used in Microsoft video files
+</body></html>
