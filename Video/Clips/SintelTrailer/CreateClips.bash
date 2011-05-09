@@ -39,6 +39,8 @@ ffmpeg -i sintel_clip-lossless.mkv -vcodec libx264 -vpre lossless_max -s 960x408
 # Lossy
 ffmpeg -i sintel_trailer-408p-mpeg4-mp3.mp4 -ss 7.0 -t 10.0 -vcodec copy -acodec copy sintel_clip-408p-mpeg4-mp3.mp4
 
+# Muxed file
+ffmpeg -i sintel_trailer-lossless-flac.mkv -ss 7.0 -t 10.0 -vcodec copy -acodec copy -scodec copy sintel_clip-lossless-flac.mkv -scodec copy -newsubtitle
 
 # === Create Example Encodings ===
 run_encoding(){
