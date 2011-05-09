@@ -5,13 +5,14 @@ Video/Clips/SintelTrailer/1080*
 Video/Clips/SintelTrailer/sintel_trailer-audio.flac
 # Full Trailer Builds
 Video/Clips/SintelTrailer/sintel_trailer.y4m
+Video/Clips/SintelTrailer/sintel_trailer-lossless.mkv
 Video/Clips/SintelTrailer/sintel_trailer-408p-x264_slow2p-1200k-faac-192k.mp4
 Video/Clips/SintelTrailer/sintel_trailer-408p-mpeg4-mp3.mp4
+Video/Clips/SintelTrailer/sintel_trailer-lossless-flac.mkv
 # Clip Builds
 Video/Clips/SintelTrailer/sintel_clip.flac
-Video/Clips/SintelTrailer/sintel_clip.y4m
-Video/Clips/SintelTrailer/sintel_clip-x264-lossless-flac.mkv
-Video/Clips/SintelTrailer/sintel_clip-408p.y4m
+Video/Clips/SintelTrailer/sintel_clip-lossless.mkv
+Video/Clips/SintelTrailer/sintel_clip-lossless-408p.mkv
 Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-mp3.mp4
 Video/Clips/SintelTrailer/sintel_constant_demo/*
 Video/Clips/SintelTrailer/sintel_good/*

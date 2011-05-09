@@ -26,6 +26,9 @@ rm *log*
 ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -an -f rawvideo -y /dev/null
 ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -acodec libmp3lame -ab 256k sintel_trailer-408p-mpeg4-mp3.mp4
 
+# Create a fully-muxed MKV
+"mkvmerge" -o "sintel_trailer-lossless-flac.mkv"  "--language" "0:eng" "--track-name" "0:Main Audio" "--default-track" "0:yes" "--forced-track" "0:no" "-a" "0" "-D" "-S" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer-audio.flac" "--language" "0:eng" "--default-track" "0:no" "--forced-track" "0:no" "-s" "0" "-D" "-A" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer_en.srt" "--language" "0:spa" "--default-track" "0:no" "--forced-track" "0:no" "-s" "0" "-D" "-A" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer_es.srt" "--default-track" "1:no" "--forced-track" "1:no" "--display-dimensions" "1:1920x816" "-d" "1" "-A" "-S" "-T" "--no-chapters" "sintel_trailer-lossless.mkv" "--track-order" "0:0,1:0,2:0,3:1"
+
 # === For this exercise, we´re going to use seconds 7.0-17.0 (10sec) ===
 ffmpeg -i sintel_trailer-audio.flac -ss 7.0 -t 10.0 -acodec flac sintel_clip.flac
 ffmpeg -i sintel_trailer-lossless.mkv -ss 7.0 -t 10.0 -vcodec libx264 -vpre lossless_max -pix_fmt yuv444p sintel_clip-lossless.mkv
