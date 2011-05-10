@@ -51,11 +51,11 @@ ffmpeg [input]  -vcodec mpeg2 -b 3000k -s vga ...[audio options] [output]</span>
 ffmpeg [input]  -vcodec mpeg2 -b 3000k -s 1280x720 ...[audio options] [output]</span><big><br>
 </big>
 <br>
-The audio options are where you specify the audio codec ("-acodec") and bit-rate ("-ab").&nbsp; <br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+The audio options are where you specify the audio codec ("-acodec") and bit-rate ("-ab").&nbsp; It is also possible to specify no audio ("-an") to get only video in the output file.<br><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg [input] [video options]  -acodec flac ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg [input] [video options]  -acodec libmp3lame -ab 256k ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg [input] [video options]  -acodec libvorbis -ab 192k ...[output]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);"><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
-ffmpeg [input] [video options]  -acodec -libfaac -ab 192k ...[output]</span><br>
+ffmpeg [input] [video options]  -acodec libfaac -ab 192k ...[output]<br>ffmpeg [input] [video options] -an ...[output]</span><br>
 
 <br>
 The output is where you specify the filename that the converted video
