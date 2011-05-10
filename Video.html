@@ -164,43 +164,79 @@ same color) and put in a different background.<br>
 <br>
 
 <h2>Quiz (Sections 1-3)</h2>
+
 1 - What is the most common wide screen aspect ratio?<br>
+
 a) 4:3<br>
+
 b) 16:9<br>
+
 c) 8:6<br>
+
 d) 10:3<br>
+
 <br>
+
 2 - What was the most common video aspect ratio before the 1990s?<br>
+
 a) 2:3<br>
+
 b) 4:3<br>
+
 c) 10:5<br>
+
 d) 2:1<br>
+
 <br>
+
 3 - What is the most common aspect ratio for professional films?<br>
+
 a) 4:3<br>
+
 b) 10:3<br>
+
 c) 2:6<br>
+
 d) 17:9<br>
 
 <br>
 
-4 - Interlacing doubles the number of lines of video that are sent every frame.<br>
+4 - Interlacing doubles the number of lines of video that are sent
+every frame.<br>
+
 a) True<br>
+
 b) False<br>
+
 <br>
-5 - Interlacing makes digital video harder to compress and larger in size.<br>
+
+5 - Interlacing makes digital video harder to compress and larger in
+size.<br>
+
 a) True<br>
+
 b) False<br>
+
 <br>
+
 6 - What frame rate will we prefer to use in this class?<br>
+
 a) 23.976 fps<br>
+
 b) 24 fps<br>
+
 c) 25 fps<br>
+
 d) 29.97 fps<br>
+
 e) 30 fps<br>
+
 f) 48 fps<br>
+
 g) 60 fps<br>
+
 <br>
+
 7 - What frame rate will provide the most natural looking picture?<br>
 
 a) 23.976 fps<br>
@@ -216,41 +252,77 @@ e) 30 fps<br>
 f) 48 fps<br>
 
 g) 60 fps<br>
+
 <br>
+
 8 - What frame rate will provide the lowest bit-rate<br>
+
 a) 5 fps<br>
+
 b) 24 fps<br>
+
 c) 30 fps<br>
+
 d) 48 fps<br>
+
 c) 60 fps<br>
+
 <br>
+
 9 - What pixel format will we prefer to use in this class?<br>
+
 a) YUV 444<br>
+
 b) RGB<br>
+
 c) YUV 422<br>
+
 d) YUV 555<br>
+
 <br>
+
 10 - How many bits doe YUV 422 use for each pixel?<br>
+
 a) 4<br>
+
 b) 8<br>
+
 c) 12<br>
+
 d) 16<br>
+
 e) 24<br>
+
 f) 32<br>
+
 <br>
-11 - What open source, royalty free container format will we prefer to use in this class?<br>
+
+11 - What open source, royalty free container format will we prefer to
+use in this class?<br>
+
 a) Audio Video Interleave (AVI)<br>
+
 b) MPEG-TS<br>
+
 c) QuickTime (MOV)<br>
+
 d) Matroska (MKV)<br>
+
 <br>
-12 - MPEG 4 Containers support progressive downloading, where you can start playing the clip before it has finished downloading?<br>
+
+12 - MPEG 4 Containers support progressive downloading, where you can
+start playing the clip before it has finished downloading?<br>
+
 a) True<br>
+
 b) False<br>
+
 <br>
+
 13 - WebM is a open source, royalty free container that is supported
 natively by several web browsers, for use when putting video in
 web-pages.<br>
+
 a) True<br>
 
 b) False<br>
@@ -258,76 +330,203 @@ b) False<br>
 <br>
 
 14 - Raw 1080p Video uses approximately how much storage per hour?<br>
+
 a) 5 MB<br>
+
 b) 50 MB<br>
+
 c) 500 MB<br>
+
 d) 5 GB<br>
+
 e) 50 GB<br>
+
 f) 500 GB<br>
+
 g) 5 TB<br>
+
 <br>
-15 - Which codec can usually compress video to the smallest size while keeping the quality of the video high?<br>
+
+15 - Which codec can usually compress video to the smallest size while
+keeping the quality of the video high?<br>
+
 a) MPEG 2<br>
+
 b) XviD (MPEG 4 Part 2)<br>
+
 c) H.264 (MPEG 4 Part 10)<br>
+
 d) VP8<br>
+
 <br>
+
 16 - When running H.264 with the most agressive settings, it is
 possible to compress 1080p video down to 2,000kbps (250KB/s) and still
 have a good quality.<br>
+
 a) True<br>
 
-
 b) False<br>
+
 <br>
+
 17 - Two pass encoding allows the codec to find areas that are hard to
 compress the first time, then use extra storage space to compress them
 the second time.<br>
+
 a) True<br>
 
-
 b) False<br>
+
 <br>
+
 18 - For the WebM format, the WebM (a derrivative of Matroska) conainer
 is used with the VP8 video codec and what audio codec to create an open
 source, royalty free format for use in web pages?<br>
+
 a) MP3<br>
+
 b) AAC<br>
+
 c) Vorbis<br>
+
 d) WMA<br>
-<br>
-<br>
-<br>
-
-Handbrake Activity<br>
 
 <br>
 
-FFMpeg Activity<br>
+<h2>Handbrake Activity</h2>
+
+Use Handbrake to re-compress <a href="Video/Clips/SintelTrailer/sintel_trailer-lossless-flac.mkv">this
+video file</a> into MP4, H.264, AAC with
+spanish subtitles.&nbsp; <br>
+
+Do not submit the final video, rather send: The settings used for audio
+and video quality/bit-rate, the name of the output file, and the size
+(in bytes) of the output file.<br>
+
+<h2>FFMpeg Activity</h2>
+
+Use ffmpeg to re-compress <a href="Video/Clips/SintelTrailer/sintel_trailer-lossless-flac.mkv">this
+video file</a> with the MPEG 4 codec at
+6000kbps with no audio. <br>
+
+Do not submit the final video, rather, copy and past the output from
+the two following commands:<br>
+
+ls -l NameOfYourFile<br>
+
+ffmpeg -i NameOfYourFile<br>
+
+<h2>Avidemux Activity</h2>
+
+Use Avidemux to save (using MPEG4 ASP and MP3 codecs) only the section
+from <a href="Video/Clips/SinteTrailer/sintel_trailer-408p-mpeg4-mp3.mp4">this
+video</a> where the dragon is flying around the tower and grabs the
+smaller dragon. <br>
 
 <br>
 
-Avidemux Activity<br>
+Submit the clip of video that you saved.<br>
+
+<h2>Kdenlive Activity</h2>
+
+Edit the videos we took from Montero together to form an introduction
+to the city. Add title slides where necessary. At the end provide
+credits (filming Thomas Kent and Ana Beatriz Beltran Leon) and a
+license for your film.<br>
 
 <br>
 
-Kdenlive Activity<br>
+Render the file and show to the professor for grading.<br>
+
+<h2>Screen Grab Activity</h2>
+
+Record a video of yourself opening on of the games from the
+applications menu and playing it. As you do each step, explain what you
+are doing. The video should be approximately thirty seconds in length.<br>
+<br>
+Submit your Ogg/Theora Video file.<br>
 
 <br>
 
-Screen Grab Activity<br>
+<h2>Final Activity - Video Tutorial Creation</h2>
+
+For the final activity of the video section, you will be creating a
+video tutorial of one of the previous sections, editing it, and
+uploading it to YouTube. Pick from the following list of
+activities/tools we have learned in
+this class, and walk through using the tool explaining what you are
+doing as you do it. <br>
 
 <br>
 
-DVD Activity<br>
+Photos<br>
+
+Gimp: rotate, crop, and resize<br>
+
+Gimp: remove redeye<br>
+
+Gimp: select an object to remove from the background<br>
+
+Gimp: use layers to add an object behind another object<br>
+
+Gimp: use the curves dialog to lighten one picture and darken another<br>
+
+Gimp: fix facial blemishes using the heal and smudge tools<br>
+
+Inkscape: create all the basic shapes<br>
+
+Inkscape: demonstrate beizer curves<br>
+
+Inkscape: explain z-order and selection<br>
+
+Inkscape: make text follow a path<br>
+
+Dia: create a basic flowchart<br>
+
+Audacity: record Audio<br>
+
+Audacity: cut and add silence to tracks<br>
+
+Audacity: align multiple tracks<br>
+
+Audacity: remove background noise from a track<br>
+Audacity: add amplification and fade in/out a track<br>
+
+Handbrake: converting a video<br>
+
+FFMpeg: converting a video<br>
+
+Avidemux: cliping a section out of a video<br>
+
+Kdenlive: adding videos to the project and the timeline<br>
+
+Kdenlive: using the clip monitor to add a portion of a video to the
+timeline<br>
+
+Kdenlive: using the dissolve and fade transitions<br>
+
+Kdenlive: compositing multiple videos on the screen<br>
 
 <br>
 
-YouTube Activity<br>
+Once you have recorded all your clips in the desktop recorder, use
+Kdenlive to edit them together into one video. Finally add a title at
+the begenning of the video with an introduction to your tutorial and
+another at the end giving yourself credit as well as providing
+attribution for any other works (images, audio, etc) you have
+encorporated into your video and a license for your work.<br>
 
 <br>
 
+When your video is complete, render it in a format that is suitable for
+uploading to YouTube and write down all the other information for
+youtube (title, description, tags, etc).&nbsp; <br>
+
 <br>
+
+Submit your information with this assignment and work with the teacher
+to upload your video to YouTube.<br>
 
 <br>
 
