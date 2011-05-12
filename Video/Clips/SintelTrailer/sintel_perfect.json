@@ -19,7 +19,7 @@
 ]
 ,
 "external_vars":{
-    "FILL_manual_threads":"4"
+    "FILL_manual_threads":"0"
 }
 ,
 # Here you may enter tests.  Each test may have additional variables that will be iterated over to create sub-tests.  
@@ -36,7 +36,7 @@
     {
         "title":"lossless",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -an -threads 0 INPUT_NAME-CODEC-lossless.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -an INPUT_NAME-CODEC-lossless.mkv"
         ],
         "output":"INPUT_NAME-CODEC-lossless.mkv",
         "variables":[

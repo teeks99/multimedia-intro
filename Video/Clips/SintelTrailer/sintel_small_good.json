@@ -19,7 +19,7 @@
 ]
 ,
 "external_vars":{
-    "FILL_manual_threads":"4"
+    "FILL_manual_threads":"0"
 }
 ,
 "tests":[
@@ -108,8 +108,8 @@
     {
         "title":"libvpx-2p",
         "commands":[
-            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
-            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-2p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
         "variables":[
@@ -120,7 +120,7 @@
     {
         "title":"libvpx-1p",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-1p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
         "variables":[
@@ -131,8 +131,8 @@
     {
         "title":"libtheora-2p",
         "commands":[
-            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
-            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-2p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
         "variables":[
@@ -143,7 +143,7 @@
     {
         "title":"libtheora-1p",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-1p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
         "variables":[
@@ -154,8 +154,8 @@
     {
         "title":"mpeg4-2p",
         "commands":[
-            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
-            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-2p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
         "variables":[
@@ -166,7 +166,7 @@
     {
         "title":"mpeg4-1p",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-1p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
         "variables":[
@@ -177,8 +177,8 @@
     {
         "title":"mjpeg-2p",
         "commands":[
-            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
-            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-2p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
         "variables":[
@@ -189,7 +189,7 @@
     {
         "title":"mjpeg-1p",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-1p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
         "variables":[
@@ -200,8 +200,8 @@
     {
         "title":"mpeg2video-2p",
         "commands":[
-            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -threads 0 -f rawvideo -y /dev/null",
-            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-2p.mkv"
+            "ffmpeg INPUT_FILES -pass 1 -vcodec CODEC -b RATEk -bt RATEk -an -f rawvideo -y /dev/null",
+            "ffmpeg INPUT_FILES -pass 2 -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-2p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-2p.mkv",
         "variables":[
@@ -212,7 +212,7 @@
     {
         "title":"mpeg2video-1p",
         "commands":[
-            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an -threads 0 INPUT_NAME-CODEC-RATE-1p.mkv"
+            "ffmpeg INPUT_FILES -vcodec CODEC -b RATEk -an INPUT_NAME-CODEC-RATE-1p.mkv"
         ],
         "output":"INPUT_NAME-CODEC-RATE-1p.mkv",
         "variables":[
