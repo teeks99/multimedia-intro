@@ -61,6 +61,7 @@ Video
     find a good home for bigger video clips?
     Handbrake DVD example (with multi-titles, multi-audio, multi-sub, etc) 
     http://en.wikipedia.org/wiki/Non-linear_editing_system
+    In example of composite with 3 videos, use composite over black instead of track 4
 General
     Move photo and intro sections into their own folders
     Convert HTML to docbook? (or other) format, gen HTML from that
