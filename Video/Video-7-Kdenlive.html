@@ -126,17 +126,13 @@ button.<br>
 Once the file is done rendering, you can go out to the directory you
 saved it in, and open it in a video player to see how it looks.<br>
 
-<br>
-
 <h3>Picking Clips and Transitions</h3>
 
-<br>
+
 
 For this section, lets use a couple of the parts where the Bunny is
 preparing for the fight, and put them around the scene from the end
-where he's relaxing in the field.<br>
-
-<br>
+where he's relaxing in the field.&nbsp; (Remove everything else from the timeline.)<br>
 
 <br>
 
@@ -161,7 +157,7 @@ frames differently, these times are 00:00:08;08-00:00:14;08)<br>
 
 <br>
 
-Once you have the selection in the clip monitor, click on the video and
+Once you have the selection in the clip monitor, click on the picture in the video and
 drag it down to one of the video tracks in the timeline below.<br>
 
 <img src="Screen/Kdenlive-ClipToTimeline.png" alt="Kdenlive-ClipToTimeline.png"><br>
@@ -180,12 +176,12 @@ loaded in the Video 1 track:<br>
 <img src="Screen/Kdenlive-TransitionClipsReady.png" alt="Kdenlive-TransitionClipsReady.png"><br>
 
 <br>
+<h4>
 
-A quick aside - Get to Know the Toolbar<br>
+A quick aside - Get to Know the Toolbar</h4>
 
-<img src="Screen/Kdenlive-Toolbar.png" alt="Kdenlive-Toolbar.png"><br>
 
-From Left to Right:<br>
+<img src="Screen/Kdenlive-Toolbar.png" alt="Kdenlive-Toolbar.png"><br>The toolbar is along the bottom of the Kdenlive main window, the buttons from left to right:<br>
 
 Normal Mode - When you put a new clip on a track's timeline, it can
 only be put into empty space long enough to fit it.<br>
@@ -261,7 +257,7 @@ many television shows: sitcoms, news programs, commercials; they all
 have many jumps (sometimes dozens in a minute) from one clip (or camera
 angle) to the next.&nbsp; This is perfectly normal, and our eye is used
 to making the transition, so it doesn't bother us. Take a minute to go
-back and watch the BunnyPrep.mkv clip from the begenning, and count the
+back and watch the BunnyPrep.mkv clip from the beginning, and count the
 number of times that the view changes.&nbsp; (Go now!)&nbsp; Amazing
 isn't it?&nbsp; In that short clip (just over a minute long) there were
 22 different jumps!&nbsp; The first time we watch that, we may have
@@ -299,7 +295,7 @@ You see a small green triangle show up:<br>
 
 Click on that triangle will automatically create a transition between
 the two clips for you.&nbsp; By default it creates the Dissolve
-transition, which usually the only transition you would want to
+transition, which is usually the only transition you would want to
 use.&nbsp; In addition, it brings up the Transition tab for setting the
 details of the transition.<br>
 
@@ -308,18 +304,18 @@ details of the transition.<br>
 There are two settings for the dissolve transition, which track the
 transition applies to (Auto is usually good at guessing, but here we
 could manually set it to "2" to be sure) and "Reverse". Usually a
-transition will start with the lower number track, and transition to
-the higher number track (it doesn't look at which track is overlapping
+transition will start with a track lower on the timeline, and transition to
+the higher track (it doesn't look at which track is overlapping
 another track).&nbsp; In this case, however, we have track one playing
-and want to transition to track two (transition from a higher number to
-a lower number) so we need to reverse it.&nbsp; <br>
+and want to transition to track two (transition from a higher to
+a lower) so we need to reverse it.&nbsp; <br>
 
 <br>
 
 There are many different types of transitions, 95% of which you will
 never use. The one that people think is fun to use (but is really bad
 for everyone else watching) is the Wipe transition (use
-spariningly!).&nbsp; Here you can play with the different ones and
+sparingly!).&nbsp; Here you can play with the different ones and
 their settings to see what is available.<br>
 
 <br>
@@ -367,13 +363,13 @@ that it automatically makes a transition of the "Composite" type.
 
 <img src="Screen/Title-Applied.png" alt="Title-Applied.png"><br>
 
-<br>
+<br><meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
 
 One other thing we can do, is add a transition to the begenning of the
 first video clip, so that the video starts out black, and then fades
 in.&nbsp; To do that, select the video in the timeline (now in track
 2). Then right click on it, and select Add Effect -&gt; Fade -&gt; Fade
-from Black.&nbsp; <br>
+from Black (or just Video Effect -&gt; Fade from Black in older versions).&nbsp; <br>
 
 <img src="Screen/Title-FadeIn.png" alt="Title-FadeIn.png"><br>
 
@@ -402,20 +398,22 @@ Compositing is what is used to have multiple source clips show up in a
 single video at the same time. There are lots of different uses for
 this. The one we saw in the last section was to overlay text on top of
 video. In this section, we'll use the compositing tools in Kdenlive to
-have three different videos play in different parts of the screen.<br>
+have three different videos play in different parts of the screen and insert that into our existing clip video on the timeline.<br>
 
 <br>
 
-First, lets make a couple more Titles.&nbsp; One that just says "Vs."
-and one that says "The Villans".&nbsp; Now we'll move our credits off
-to the right in the timeline and add these two new titles in between
-them, the Vs. one should be short, and "The Villans" one a bit longer.<br>
 
-<br>
-
-Before we add these to our timeline, lets create a new track. Right
+Before we add anything to our timeline, lets create a new track. Right
 click on the Video 3 track and select insert new. We want to put the
 new video track after track 3.<br>
+<br>
+Now, lets make a couple more Titles.&nbsp; One that just says "Vs."
+and one that says "The Villans".&nbsp; Now we'll move our credits off
+to the right in the timeline and add these two new titles in between
+our existing video and the credits, the Vs. one should be short, and
+"The Villans" one a bit longer.<br>
+
+<br>
 
 <img src="Screen/Composite-Track.png" alt="Composite-Track.png"><br>
 
@@ -431,9 +429,7 @@ need to move the credits out of the way.<br>
 
 Now that we have our titles setup, lets add the video clips we want to
 use. Put FlyingSquirrel.mkv, GraySquirrle.mkv, RedSquirrel.mkv into
-tracks 1-3.<br>
-
-&nbsp;Align them so that they all end right when the credits start.
+tracks 1-3 (in that order).&nbsp; Align them so that they all end right when the credits start.
 (You may need to move the credits and stretch the villans to fit
 FlyingSquirrel.mkv).<br>
 
