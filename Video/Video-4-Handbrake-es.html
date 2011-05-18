@@ -1,112 +1,85 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Video - 4 - Handbrake</title></head><body>
-<h2>Handbrake&nbsp;</h2>
+<h2>Handbrake&nbsp;</h2>Handbrake es un transcodificador de video que
+puede obtener video en un formato (video de computador típico, así como
+formatos DVD o BluRay) y producir video en uno de varios formatos
+populares.<br>
 
-Handbrake is a video transcoder that can take in video of one format
-(typical computer video, but also DVD or BluRay format) and output a
-video in one of several popular formats.<br>
+<br>Para demonstrar la conversión en acción, vamos a abrir <a href="Clips/SintelTrailer/sintel_clip-lossless-flac.mkv">este</a> segmento sin pérdida del trailer de sintel, y vamos a usar Handbrake para crear una versión comprimida de este segmento. <br>
+<br>Comencemos abriendo Handbrake.<br>
 
-<br>
+<img src="Screen/Handbrake.png" alt="Handbrake.png"><br>Haz clic en el botón de Source y sube el video que quieres convertir.<br>
 
-To show the conversion in action, we are going to open <a href="Clips/SintelTrailer/sintel_clip-lossless-flac.mkv">this</a> lossless segment of the sintel trailer, and use
-Handbrake to make a compressed version of it.<br>
+<br>Una vez el video está en el programa, se poblarán muchos de los campos de información en la pantalla.<br>
 
-<br>
+<img src="Screen/Handbrake-Loaded.png" alt="Handbrake-Loaded.png"><br>La
+sección de "Source" contiene información sobre nuestro video. En este
+caso, dice que la duración es de 10 segundos, y que hay un sólo
+capítulo y un sólo ángulo. Para videos que provienen de un DVD o BluRay
+estos campos pueden mostrar múltiples capítulos y/o ángulos.<br>
 
-Lets start up Handbrake.<br>
+<br>El "Destination" tiene el archivo en el cual vamos a grabar el
+producto. Las únicas dos opciones son MP4 (MPEG 4) o MKV (Matroska).
+Para MP4, es posible markar la opción de "Web optimized". Esto inserta
+información sobre el video al frente del archivo, de manera que si
+pones el video en una página web el video puede comenzar antes de que
+el archivo completo se haya descargado.<br>
+<br>En la pestaña del "Summary" hay información sobre el video original, específicamente sus dimensiones y el frame rate.<br>
 
-<img src="Screen/Handbrake.png" alt="Handbrake.png"><br>
+<br>Al seleccionar la pestaña de "Video" observamos las opciones para comprimir el video: <br>
 
-Click the Source button and load the video we want to convert.<br>
-
-<br>
-
-Once the video is loaded, you will see a lot of the information on the
-screen populated.<br>
-
-<img src="Screen/Handbrake-Loaded.png" alt="Handbrake-Loaded.png"><br>
-
-The "Source:" section contains information about our video.&nbsp; In
-this case, it says it is 10 seconds long, and there is only one chapter
-and angle.&nbsp; For videos coming off of a DVD or BluRay this may have
-multiple chapters and/or angles.<br>
-
-<br>
-
-The "Destination" has the file we will write the output to.&nbsp; The
-only two options are MP4 (MPEG 4) or MKV (Matroska).&nbsp; For MP4, it
-is possible to check the "Web optimized" box.&nbsp; This puts
-information about the video in the front of the file, so if you put it
-on a web-page it can start playing before the entire video has been
-downloaded.<br>
-
-<br>
-
-On the summary tab, there is information about the input video,
-specifically dimensions (which give the aspect ratio) and the frame
-rate.&nbsp; <br>
+<img style="width: 979px; height: 704px;" src="Screen/Handbrake-Video.png" alt="Handbrake-Video.png"><br>Las
+opciones del codec de video disponibles son: H.264, MPEG4 (parte 2) y
+Theora (no disponible con MP4). A la derecha, hay opciones para
+especificar cómo el codificador debe determinar el tamaño del archivo.
+Puedes establecer el bit-rate promedio que deseas, o puedes determinar
+el tamaño del archivo final que desearías y el codificador luego
+determinará cuál bit-rate puede usar. Cuando se escoge una de estas dos
+opciones, puedes permitir el "2-pass encoding" marcando esa opción a la
+izquierda. Hay también una tercera opción que es la de establecer la
+calidad del video final. Números menores significan mayor calidad y
+mayor tamaño de archivo; números más bajos significan menor calidad y
+menor tamaño de archivo.<br>
 
 <br>
 
-Going to the video tab gives us options for compressing the video. <br>
-
-<img style="width: 979px; height: 704px;" src="Screen/Handbrake-Video.png" alt="Handbrake-Video.png"><br>
-
-The video codec options that are available are: H.264, MPEG 4 (Part 2),
-and Theora (not available with MP4).&nbsp; To the right, there are
-options for specifying how the encoder should determine the size of the
-file.&nbsp; You can set the average bit-rate that you desire, or you
-can set the size of the final file you would like and the encoder will
-figure out what bit-rate it can use.&nbsp; When either of these options
-are set, you can enable 2-Pass encoding with the check-box on the left.
-There is also a third option which is to set the quality of the final
-video.&nbsp; Smaller numbers mean higher quality and higher file size,
-lower numbers are lower quality and file size.&nbsp; <br>
+<img src="Screen/Handbrake-Audio.png" alt="Handbrake-Audio.png"><br>En
+el pestaña de "Audio" están las opciones para codificar cada pista de
+audio. Handbrake te permite poner múltiples pistas de audio en un mismo
+archivo (múltiples idiomas, una pista par el comentario del director,
+etc.) que el usuario puede seleccionar mientras está viendo el video.
+Para cada pista de audio, un codificador (AAC, MP3, Vorbis-sólo
+disponible in MKV, o AC3) se pueden seleccionar al igual que el
+bit-rate.<br>
 
 <br>
 
-<img src="Screen/Handbrake-Audio.png" alt="Handbrake-Audio.png"><br>
-
-On the Audio tab are the options for encoding each track of
-audio.&nbsp; Handbrake will allow you to put multiple tracks of audio
-into one file (multiple languages, a track with the director's
-commentary, etc) that the viewer can then select while they are watching
-the video.&nbsp; For each track of audio, a codec (AAC, MP3, Vorbis
-(only available in MKV format), or AC3) can be selected along with a
-bit-rate.&nbsp; <br>
+<img src="Screen/Handbrake-Subtitles.png" alt="Handbrake-Subtitles.png"><br>La
+página de subtítulos es similar a la página de audio, en que te permite
+tener varias versiones de subtítulos en un mismo archivo de video.
+Puedes utilizar cualquier subtítulo que haya venido del archivo
+original, o añadir subtítulos externos usando un archivo .srt.<br>
 
 <br>
 
-<img src="Screen/Handbrake-Subtitles.png" alt="Handbrake-Subtitles.png"><br>
-
-The subtitles page is similar to the audio page, in that you can have
-several subtitle tracks built in to the single video file.&nbsp; You
-can use any subtitles from the source, or add external ones from a .srt
-file.&nbsp; <br>
+<img src="Screen/Handbrake-Dimensions.png" alt="Handbrake-Dimensions.png"><br>Al
+hacer clic en el botón de "Picture Settings" en la parte superior de la
+pantalla, es posibel cambiar las dimensiones del video, recortándo o
+estirando la imagen.<br>
 
 <br>
 
-<img src="Screen/Handbrake-Dimensions.png" alt="Handbrake-Dimensions.png"><br>
+<img src="Screen/Handbrake-Filters.png" alt="Handbrake-Filters.png"><br>Finalmente,
+al ir al tab de "Filters" dentro de los "Pictures Settings" es posible
+aplicar algunos filtros. El filtro de mayor importancia sería
+"Deinterlace" (Desentrelazar), el cual adaptaría video entrelazado para
+su uso en una pantalla de computador. Una vez selecciones Deinterlace,
+necesitas activarlo; usualmente la opción de "Fast" es suficiente, pero
+si quieres mayor calidad puedes usar una de las otras opciones. <br>
 
-By clicking the Picture Settings button at the top of the application,
-it is possible to change the dimensions of the video, by cropping or
-stretching the video.&nbsp; <br>
-
-<br>
-
-<img src="Screen/Handbrake-Filters.png" alt="Handbrake-Filters.png"><br>
-Finally, by going to the filters tab of the pictures settings, it is
-possible to apply some simple filters.&nbsp; The most important of
-which would be "Deinterlace" which will fix interlaced video for use on
-a computer screen.&nbsp; Once you select Deinterlace, you need to then
-turn it on, usually the "Fast" setting is sufficient, but if you want
-really good quailty you can use one of the other settings.<br>
-
-<br>
-
-Once you have all the settings correct, hit the Start button at the
-top, and the encoding will start.&nbsp; You will see the status of the
-encoding along the bottom.<br>
+<br>Una vez tengas todas las especificaciones deseadas, haz clic en el
+botón de "Start" para comenzar la codificación. Podrás ver el status
+del proceso en la parte inferior de la pantalla del programa.<br>
 
 <img src="Screen/Handbrake-Encoding.png" alt="Handbrake-Encoding.png"><br>
 
