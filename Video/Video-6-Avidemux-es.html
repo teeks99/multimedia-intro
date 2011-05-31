@@ -1,93 +1,29 @@
-
-<h2>Cutting with Avidemux</h2>
-Avidemux is a very simple video editor and converter.&nbsp; Unlike
-handbrake or ffmpeg, it has only limited support for multiple channels
-of audio/video/subtitles.&nbsp; Also, its codec support is more limited
-than ffmpeg's (but it has more than handbrake).&nbsp; Additionally, it
-was originally written to work with files in the Microsoft Windows AVI
-format, because of this other formats/codecs do not work properly in
-special circumstances.&nbsp; <br>
-<br>
-Even though this is a simple tool, with some annoying errors, it is
-very useful for times when you have a clip of video and want to either
-remove a section from it, or take only a section of it and save it as a
-separate file.&nbsp; Starting with our <a href="Clips/SintelTrailer/sintel_clip-408p-mpeg4-mp3.mp4">clip from
-sintel</a>, we're going to try out both of these simple operations.<br>
-<br>
-Lets start by opening the clip in the Avidemux program:<br>
+<h2>Recortando Clips con Avidemux</h2>Avidemux es un editor y convertidor simple de video. A diferencia de Handbrake y FFMpeg, solo tiene soporte limitado para canales múltiples de audio/video/subtítulos. Además, su soporte de codecs es más limitado que el de ffmpeg (pero mayor que handbrake). Por último, fue creado originalmente para trabajar con archivos en el formato AVI de Microsoft Windows, por lo que otros formatos/codecs no trabajan propiamente en circumstancias especiales. <br>
+<br>A pesar de que es una herramienta muy simple, con algunos errores críticos, es muy útil para las veces en las que tengas un clip de un video y quieras remover una sección del video o tomar sólo una sección del mismo y guardarla en un archivo aparte. Comenzado con nuestro <a href="Clips/SintelTrailer/sintel_clip-408p-mpeg4-mp3.mp4">clip de sintel</a>, vamos a hacer ambas operaciones. <br><br>Comenzemos abriendo el clip en Avidemux:<br>
 <img src="Screen/Avidemux-Open-es.png" alt="Avidemux-Open.png"><br>
-<h3>Cutting a Clip<br>
-</h3>
-Next we'll set the encoding parameters from the drop-down menus on the
-left.&nbsp; We'll just MPEG-4 ASP (avcodec), MP3 (lame), and MP4.&nbsp;
-Whenever we click the save button, it will save our current selection
-(after asking us for a file name) by encoding the selection to this
-format.&nbsp; This can be a time-consuming process for large files, so
-it is possible to just set it to "copy", in which case it won't
-re-encode the video, however this can sometimes lead to errors.<br>
+<h3>Recortando un Clip<br>
+</h3>Vamos a establecer los parámetros de codificación desde los menús a la izquierda. Para este ejercicio vamos a usar MPEG-4 ASP (avcodec), MP3 (lame), y MP4. Cunado hagamos clic en el botón de guardar, el programa va a guardar la actual selección (luego de pedirnos un nombre de archivo) codificando nuestra selección al formato indicado. Esto puede ser un proceso que tome largo tiempo para archivos grandes, asi que es posible escoger sólo "copiar", en cuyo caso el programa no va a re-codificar el video; sin embargo esto puede conducir a errores.<br>
 <img style="width: 1150px; height: 606px;" src="Screen/Avidemux-Encoding-es.png" alt="Avidemux-Encoding.png"><br>
 <br>
-<br>
-For our first example, we want to make the movie a bit shorter, by
-cutting out the black area around the introduction title.&nbsp; We'll
-use the "Next Keyframe" button to advance the video until we can see
-the title:<br>
+<br>Para nuestro primer ejemplo, queremos que la película sea más corta, recortando el área oscura alrededor del título de introducción. Vamos a usar el botón de "Next Keyframe" (siguiente keyframe) para avanzar el video hasta que podamos ver el título:<br>
 <img src="Screen/Avidemux-ForwardKeyframe-es.png" alt="Avidemux-ForwardKeyframe.png"><br>
-<br>
-But we want to start cutting *before* we see the title, so we'll go
-backwards one keyframe:<br>
-<img src="Screen/Avidemux-BackKeyframe-es.png" alt="Avidemux-BackKeyframe.png"><br>
-This will leave us on an entirely black screen.&nbsp; If we go back any
-further we will start to see the outline of the previous scene.<br>
-<br>
-Now we will select this as the starting point of our selection:<br>
-<img src="Screen/Avidemux-SelStart-es.png" alt="Avidemux-SelStart.png"><br>
-Once we have the starting point, we can use the "next keyframe" button
-to advance to where we're not seeing black anymore, and again back-up
-so we have only the black screen.<br>
-<br>
-Now we want to mark the end of our selection:<br>
+<br>Pero queremos comenzar a recortar <span style="font-weight: bold;">antes</span> de ver el título, así que vamos a ir una imagen hacia atras:<br>
+<img src="Screen/Avidemux-BackKeyframe-es.png" alt="Avidemux-BackKeyframe.png"><br>Esto nos deja en un pantalla completamente oscura. Si retrocedemos más vamos a comezar a ver la silueta de la escena previa.<br>
+<br>Ahora queremos selecciona este como el punto de partida de nuestra selección:<br>
+<img src="Screen/Avidemux-SelStart-es.png" alt="Avidemux-SelStart.png"><br>Una vez tenemos el punto de partida, podemos usar el botón de "Next Keyframe" para avanzar hasta donde no vemos nada más del color negro, y luego continuar hasta que volvemos a ver la pantalla completamente oscura.<br>
+<br>Ahora queremos marcar el punto final de nuestra selección:<br>
 <img src="Screen/Avidemux-SelEnd-es.png" alt="Avidemux-SelEnd.png"><br>
-<br>
-Finally, we're ready to cut the unwanted part out of the video:<br>
+<br>Finalmente, estamos listos para cortar la parte no deseada de nuestro video:<br>
 <img src="Screen/Avidemux-Cut-es.png" alt="Avidemux-Cut.png"><br>
-<br>
-Now we want to save our video, without the black section.&nbsp; We
-can't simply click the save button now, because that only will save our
-selection, and since we just removed the selection from the video,
-there is currently no selection to save!&nbsp; We want to make a
-selection of the entire video.&nbsp; It easy, just go to the start of
-the clip:<br>
-<img src="Screen/Avidemux-Start-es.png" alt="Avidemux-Start.png"><br>
-Once there, hit the button to mark the start of the selection.<br>
-<br>
-Now we want to go to the end of the clip:<br>
-<img src="Screen/Avidemux-End-es.png" alt="Avidemux-End.png"><br>
-And we'll hit the button for the end of the selection.&nbsp; This will
-give us a selection of the whole clip.<br>
-<br>
-Now we can hit the save button, and specify the file that where we want
-to put the output.<br>
-<img src="Screen/Avidemux-SaveFull-es.png" alt="Avidemux-SaveFull.png"><br>
-That's all!<br>
-<br>
-<h3>Saving a Single Segment</h3>
-For our next exercise, we'll go and pick out just the video containing
-the old man and save that segment to a file.&nbsp; <br>
-<br>
-Just like last time, we can use the "Next Keyframe" and "Previous
-Keyframe" buttons to find where it starts.&nbsp; Then mark that as the
-start of our selection.&nbsp; Then we can advance to just past where he
-finishes.&nbsp; In this case the keyframe that occours immediately (one
-frame) after where he is present in the video doesn't contain him, but
-the girl.&nbsp; Instead of going back to the previous keyframe, and
-then having to move forward several frames in the video, we can just go
-to the keyframe with the girl, then go back just one frame:<br>
-<img src="Screen/Avidemux-BackFrame-es.png" alt="Avidemux-BackFrame.png"><br>
-At this point we have the final frame on the screen and we can go ahead
-and hit the button to make this the end of our selection.<br>
-<br>
-Now that we have a selection of just the video that we want, we can hit
-the save button and select the filename we want to save the section as.<br>
+<br>Ahora queremos guardar nuestro video, sin la sección oscura. No nos servirá sólo hacer clic en el botón de guardar, porque eso solamente va a guardar nuestra selección, y ya que acabamos de remover la selección del video, al momento no hay ninguna selección que guardar! Queremos hacer una selección del video entero. Es fácil, simplemente ve al comienzo del clip:<br>
+<img src="Screen/Avidemux-Start-es.png" alt="Avidemux-Start.png"><br>Y selecciona el botón para marcar el comienzo de la selección.<br>
+<br>Ahora queremos ir al final del clip:<br>
+<img src="Screen/Avidemux-End-es.png" alt="Avidemux-End.png"><br>Y vamos a oprimir el botón para marcar el final de la selección. Esto nos va a dar una selección del clip entero. <br>
+<br>Ahora podemos hacer clic en el botón de guardar, y especificar el archivo en el cual queremos almacenar el video final.<br>
+<img src="Screen/Avidemux-SaveFull-es.png" alt="Avidemux-SaveFull.png"><br>¡Eso es todo!<br>
+<h3>Grabando un Segmento Individual</h3>Para nuestro próximo ejercicio, vamos a escojer sulamente el video que contiene al hombre viejo y guardar ese segmento en un archivo aparte.<br>
+<br>Al igual que en el ejercicio anterior, podemos usar los botones de "next keyframe" y "previous keyframe" (keyframe anterior) para encontrar el lugar en el que nuestro clip comienza. En este punto podemos marcar el comienzo de nuestra selección. Luego podemos avanzar hasta justo después de que la escena con el hombre termina. En este caso la imagen que ocurre inmediatamente después de esto contiene no al hombre, sino a la niña. En vez de retroceder a la imagen anterior y luego tener que avanzar varias imagenes en el video, podemos simplemente ir a la imagen con la niña y leugo retroceder sólo una imagen:<br>
+<img src="Screen/Avidemux-BackFrame-es.png" alt="Avidemux-BackFrame.png"><br>En este punto tenemos la última imagen en la pantalla y podemos oprimir el botón para marcar el final de la selección. <br>
+<br>Ahora que tenemos una selección del video que queremos, podemos oprimir el botón de guardar y seleccionar el nombre del archivo que queremos para este video.<br>
 <img src="Screen/Avidemux-SaveSelection-es.png" alt="Avidemux-SaveSelection.png"><br>
 <br>
