@@ -137,14 +137,14 @@ rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: 
 
 <br>Eso es todo lo que hay que saber para operar FFMpeg. No es tan complicado.<br>
 
-<br>Ahora intentemos un par de ejemplos usando FFMpeg...<br>
+<br>Ahora intentemos un ejemplo usando FFMpeg...<br>
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg
--i sintel_clip_x264-lossless_flac.mkv -pass 1 -vcodec libx264 -vpre
+-i sintel_clip_x264-lossless-flac.mkv -pass 1 -vcodec libx264 -vpre
 slow_firstpass -b 1200k -bt 1200k -an -f rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg
--i sintel_clip_x264-lossless_flac.mkv -pass 2 -vcodec libx264 -vpre
+-i sintel_clip_x264-lossless-flac.mkv -pass 2 -vcodec libx264 -vpre
 slow -b 1200k -bt 1200k -acodec libfaac -ab 192k output.mp4</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <br>Como bono, puedes configurar el programa para que pueda correr
