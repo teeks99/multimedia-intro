@@ -11,13 +11,6 @@ iTundes Video 2
 dobre -> double video 2
 
 ===== Text Main =====
-=== Video ===
-Activities???
-10 Online + Live creation
-    good settings
-    upload
-    online settings
-
 === Web Pages ===
 
 1 Web Architecture
@@ -30,6 +23,11 @@ Activities???
 
 3 Kompozer
     Other formatting?
+
+4 Interaction
+    Forms
+    Server Databases
+    Javascript
 
 ===== Future Improvements =====
 Intro
@@ -53,9 +51,7 @@ Audio
     Use mute/silencio button when copying from one track tot he other
     Add instructions for linking/unlinking two (or more) tracks, useful when moving one to match the other
 Video
-    Fix sintel clip audio offset, possible problem video not 24fps?
     ffmpeg commands text format
-    ffmpeg example to make mpeg4-mp3 result?
     ffmpeg subtitles?
     find a good home for bigger video clips?
     Handbrake DVD example (with multi-titles, multi-audio, multi-sub, etc) 
@@ -69,10 +65,8 @@ General
 
 ===== translations =====
 (en -> es)
-Audio
-    sections 6, 7, 8, 9
 Video
-    sections 1, 2, 3 (more coming)
+    sections 7, 8, make images: 9, 10
 Web
     none ready
 
