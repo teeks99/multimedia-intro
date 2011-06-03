@@ -26,6 +26,9 @@ rm *log*
 ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 1 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -an -f rawvideo -y /dev/null
 ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -pass 2 -vcodec mpeg4 -s 960x408 -b 2400k -bt 2400k -acodec libmp3lame -ab 256k sintel_trailer-408p-mpeg4-mp3.mp4
 
+# Muxed w/o subtitles
+ffmpeg -i sintel_trailer-lossless.mkv -i sintel_trailer-audio.flac -vcodec copy -acodec copy sintel_trailer-ffmpeg.mkv
+
 # Create a fully-muxed MKV
 "mkvmerge" -o "sintel_trailer-lossless-flac.mkv"  "--language" "0:eng" "--track-name" "0:Main Audio" "--default-track" "0:yes" "--forced-track" "0:no" "-a" "0" "-D" "-S" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer-audio.flac" "--language" "0:eng" "--default-track" "0:no" "--forced-track" "0:no" "-s" "0" "-D" "-A" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer_en.srt" "--language" "0:spa" "--default-track" "0:no" "--forced-track" "0:no" "-s" "0" "-D" "-A" "-T" "--no-global-tags" "--no-chapters" "sintel_trailer_es.srt" "--default-track" "1:no" "--forced-track" "1:no" "--display-dimensions" "1:1920x816" "-d" "1" "-A" "-S" "-T" "--no-chapters" "sintel_trailer-lossless.mkv" "--track-order" "0:0,1:0,2:0,3:1"
 
@@ -38,6 +41,9 @@ ffmpeg -i sintel_clip-lossless.mkv -vcodec libx264 -vpre lossless_max -s 960x408
 
 # Lossy
 ffmpeg -i sintel_trailer-408p-mpeg4-mp3.mp4 -ss 7.0 -t 10.0 -vcodec copy -acodec copy sintel_clip-408p-mpeg4-mp3.mp4
+
+# Muxed w/o subtitles
+ffmpeg -i sintel_clip-lossless.mkv -i sintel_clip.flac -vcodec copy -acodec copy sintel_clip-ffmpeg.mkv
 
 # Muxed file
 ffmpeg -i sintel_trailer-lossless-flac.mkv -ss 7.0 -t 10.0 -vcodec copy -acodec copy -scodec copy sintel_clip-lossless-flac.mkv -scodec copy -newsubtitle
