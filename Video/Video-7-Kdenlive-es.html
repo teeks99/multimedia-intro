@@ -306,114 +306,101 @@ título con créditos y licencia para que aparezca al final del video.<br>
 estés satisfecho con tu video hasta este punto, puedes procesarlo a un
 archivo y verlo en otro programa de video en tu computador.<br>
 
-<h3>Basic Compositing</h3>
+<h3>Composición Básica</h3>Una composición de videos ocurre cuando
+mútiples clips aparecen en un video a la misma vez. Hay una variedad de
+usos para esto. Uno de los usos que vimos en la sección anterior es el
+de sobreponer texto sobre un video existente. En esta sección, vamos a
+usar las herramientas de commposición de Kdenlive para hacer que tres
+video diferentas aparezcan en tres partes distintas de la pantalla, y
+luego vamos a insertar esa coposición dentro de un clip ya existente en
+nuestra secuencia del proyecto. <br>
 
-Compositing is what is used to have multiple source clips show up in a
-single video at the same time. There are lots of different uses for
-this. The one we saw in the last section was to overlay text on top of
-video. In this section, we'll use the compositing tools in Kdenlive to
-have three different videos play in different parts of the screen and insert that into our existing clip video on the timeline.<br>
-
-<br>
-
-
-Before we add anything to our timeline, lets create a new track. Right
-click on the Video 3 track and select insert new. We want to put the
-new video track after track 3.<br>
-<br>
-Now, lets make a couple more Titles.&nbsp; One that just says "Vs."
-and one that says "The Villans".&nbsp; Now we'll move our credits off
-to the right in the timeline and add these two new titles in between
-our existing video and the credits, the Vs. one should be short, and
-"The Villans" one a bit longer.<br>
+<br>Antes de añadir objetos nuevos a nuestra secuencia, vamos a crear
+una pista nueva. Haz clic-derecho en la pista Video 3 y selecciona
+"Insertar Nueva". Queremos colocar la nueva pista de video justo
+después de Video 3.<br>
+<br>Ahora, creemos un par de títulos. Uno de ellos solo dirá "Vs.", y
+el otro dirá "Los Villanos". Ahora mueve los créditos hacia la derecha
+en la secuencia y añade estos dos nuevos títulos entre el video ya
+existente y los créditos. El título de "Vs." debe ser corto y el de
+"Los Villanos" un poco más largo.<br>
 
 <br>
 
 <img src="Screen/Composite-Track.png" alt="Composite-Track.png"><br>
 
-<br>
-
-Now go ahead and put the Vs. title into the timeline.&nbsp; When you
-put the Villans title in, put it into the new track.&nbsp; You will
-need to move the credits out of the way.<br>
+<br>Ahora puedes poner el título "Vs." dentro de la secuencia. Cuando
+coloces el título de los villanos, colócalo en la pista nueva que
+creamos. Vas a tener que mover los créditos para crear suficiente
+espacio.<br>
 
 <img src="Screen/Composite-Titles-es.png" alt="Composite-Titles.png"><br>
 
-<br>
-
-Now that we have our titles setup, lets add the video clips we want to
-use. Put FlyingSquirrel.mkv, GraySquirrle.mkv, RedSquirrel.mkv into
-tracks 1-3 (in that order).&nbsp; Align them so that they all end right when the credits start.
-(You may need to move the credits and stretch the villans to fit
-FlyingSquirrel.mkv).<br>
+<br>Ahora que tenemos nuestros títulos, vamos a añadir los clips de
+video que queremos usar. Coloca FlyingSquirrel.mkv, GraySquirrle.mkv,
+RedSquirrel.mkv en las pistas 1-3 (en ese orden). Alínealos de manera
+que todos terminen justo cuando los créditos comienzan. (Tal vez tengas
+que mover los créditos y estirar los villanos para que
+FlyingSquirrel.mkv quepa en el espacio.)<br>
 
 <img src="Screen/Composite-Clips-es.png" alt="Composite-Clips.png"><br>
 
-<br>
-
-Now we're going to start compositing. Right click on the FlyingSquirrel
-clip in the timeline and select Add Transition -&gt; Composite.&nbsp;
-Then stretch out the transition so that it covers the entire clip (same
-length as the villans clip).<br>
+<br>Ahora vamos a comenzar a componer. Haz clic-derecho en el clip de
+FlyingSquirrel y selecciona Añadir Transicion -&gt; Componer. Luego
+estira la transición para que cubra el clip entero (tan largo como el
+clip de los villanos).<br>
 
 <img src="Screen/Composite-ApplyLength-es.png" alt="Composite-ApplyLength.png"><br>
 
-<br>
-
-Now (if you click on the composite under the FlyingSquirrel clip) you
-will see the transitions tab show up, with the composite settings in
-it. This particular composite is for track one, and we will composite
-it over track four, so from the "with track" dropdown, select Video 4.
-For any composite, it is possible to have several times throughout the
-composite where it behaves differently. These are called keyframes (not
-to be confused with keyframes created by a codec when encoding video).
-Each keyframe specifies what the composite will be doing until the next
-keyframe (or the end). In this case, we just want the video to play in
-a smaller box the whole time, so we don't need any keyframes except the
-one that is automatically created at the start of the composite. To get
-to this one, hit the left arrow button just under the timeline in the
-composite settings.<br>
+<br>Ahora, si haces clic en la composición debajo del clip del
+FlyingSquirrel, vas a ver el pastaña de transiciones aparecer, con las
+opciones de la composición. Esta composición en particular es para la
+pista 1, y vamos a componerla sobre la pista 4, así que desde el menú
+"con pista", selecciona Video 4. Para cualquier composición, es posible
+que hayan ocasiones a lo largo de la composición en las que el video se
+comporte distinto. Estas son llamadas "keyframes" (diferentes a las
+"keyframes" creadas por un codec al codificar video). Cada "keyframe"
+especifica lo que la composición va a hacer hasta el comienzo del
+próximo keyframe (o hasta el final del clip). En este caso, solo
+queremos que el video aparezca en un recuadro pequeño durante todo el
+tiempo, así que no tenemos que añadir ningún "keyframe" excepto el que
+ya se ha creado automáticamente al crear la composición. Para llegar a
+este "keyframe", oprime el botón de la flecha hacia la izquierda justo
+debajo de la secuencia en las opciones de composición.<br>
 
 <img src="Screen/Composite-Start-es.png" alt="Composite-Start.png"><br>
 
-<br>
+<br>Ahora que estamos en el keyframe inicial, podemos comenzar a
+aplicar nuestras preferencias. Lo primero que queremos hacer es reducir
+el tamaño de 100% a 30%. Vas a ver que esto cambió el borde amarillo
+del Monitor del proyecto. Este borde amarillo es donde nuestro video va
+a aparecer; el borde rojo entrecortado es donde la imagen de video se
+encuentra.<br>
 
-Now we're at the start keyframe, we can start applying our
-settings.&nbsp; The first thing we want to do is lower the size from
-100% to 30%.&nbsp; You will see that this changed the yellow outline in
-the Project Monitor. This yellow outline is where our video will be
-put, the red dotted outline is where the video frame is.<br>
+<img src="Screen/Composite-LineUp-es.png" alt="Composite-LineUp.png"><br>Mueve
+el video hacia abajo, justo debajo del texto en el centro. También
+queremoms usar el botón de alineamiento para asegurar que el video está
+alineado con el centro de la imagen.<br>
 
-<img src="Screen/Composite-LineUp-es.png" alt="Composite-LineUp.png"><br>
-
-Lets move the video to the bottom, just below the text in the
-center.&nbsp; We also want to use the button to ensure the our video is
-lined up in the center of the frame.<br>
-
-<br>
-
-Now we can go and do the same thing for the next two videos, except put
-them above the text, to the left and right.&nbsp; (Note the "Y" value
-of where you put each clip, and adjust manually so they line up
-perfectly).<br>
+<br>Ahora podemos hacer lo mismo para los próximos dos videos, excepto
+que los colocaremos sobre el texto, a la izquierda y a la derecha (Nota
+el valor "Y" de donde pongas cada clip, y ajústalo manualmente para que
+se alíneen perfectamente.)<br>
 
 <img src="Screen/Composite-AllThree-es.png" alt="Composite-AllThree.png"><br>
 
-<br>
+<br>Ahora tenemos todos nuestro videos asignados, y puedes ver la
+composición en el Monitor del proyecto. El único problema es que
+nuestro audio está un poco desatunado. La razón para esto es que solo
+estamos usando el audio que vino con cada pista, y la combinación no se
+ajusta bien (los títulos ni siquiera tienen audio). Lo que queremos es
+silenciar todas las pistas (haciendo clic en el icono de los parlantes
+debajo del nombre de cada pista) y simplemente añadir nuestra pista de
+audio por separado en la pista Audio 1, y ajustar la duración del audio
+para que quepa en el video. Tal vez puedes añadir un Efecto -&gt;
+Fundido -&gt; Fundido entrante/saliente al audio tambien.<br>
 
-We've got all our video together, and you can view it in the Project
-Monitor. The only problem is that our audio is somewhat jumpy. The
-reason for this is we are just using the audio that came with each
-track, and they don't fit well together (the titles don't even have
-audio). What we can do is mute all our tracks (just click the speaker
-icon under the label for each track), and just add in our seperate
-audio track down in Audio 1, and size it to fit.&nbsp; Maybe add a
-Effect -&gt; Fade -&gt; Fade In/Out to the audio too.<br>
-
-<img src="Screen/Composite-Audio-es.png" alt="Composite-Audio.png"><br>
-
-Now we're all finished with our big clip!&nbsp; Go ahead and render it
-and watch it in a video player.<br>
+<img src="Screen/Composite-Audio-es.png" alt="Composite-Audio.png"><br>Ahora terminamos con nuestro gran clip! Procésalo a un archivo para poderlo ver en un reproductor de video.<br>
 
 <h3>
 Advanced Compositing</h3>
