@@ -402,43 +402,34 @@ Fundido -&gt; Fundido entrante/saliente al audio tambien.<br>
 
 <img src="Screen/Composite-Audio-es.png" alt="Composite-Audio.png"><br>Ahora terminamos con nuestro gran clip! Procésalo a un archivo para poderlo ver en un reproductor de video.<br>
 
-<h3>
-Advanced Compositing</h3>
+<h3>Composición Avanzada</h3>Otro tipo de composición envuelve volver
+un video transparente y luego colocarlo sobre otro video. Esto te
+permite darle a tu sujeto (en el primer video) un trasfondo que es
+diferente de donde el sujeto en realidad se encuentra.&nbsp; Esto es
+llamado típicamente una composición de "Green Screen" (pantalla verde),
+pero también se el puede referir como "Chroma Keying" o una "Blue
+Screen" (pantalla azul). Se le llama "pantalla verde" porque la forma
+más facil de componer esto es hacer que el sujeto se ubique al frente
+de un trasfondo completamente verde, y luego usar el program a editor
+de video para remover el color verde del video.<img style="width: 640px; height: 480px;" alt="Green Screen Setup" src="http://upload.wikimedia.org/wikipedia/commons/d/d9/ChromaKeyGreenScreen.jpg"><br>
 
-Another type of compositing involves making part of a video
-transparent, and then putting it over another video. This allows you to
-give the subject (in the first video) a background that is different
-from where they really are. This is typically called a "Green Screen"
-setup, but could also be referred to as "Chroma Keying" or a "Blue
-Screen". It is called "Green Screen" because the easiest way to do this
-is to have the subject stand in front of a completely green background,
-then use the video editing software to remove the color green from the
-video.<br>
-
-<img style="width: 640px; height: 480px;" alt="Green Screen Setup" src="http://upload.wikimedia.org/wikipedia/commons/d/d9/ChromaKeyGreenScreen.jpg"><br>
-
-<br>
-
-Here we'll take a clip of a <a href="Clips/GreenScreenSample.mp4">person
-in front of a green screen</a>, and put him in front of a background of
-<a href="Clips/winter_clouds.mpg">some clouds</a>.
-First, lets get them loaded into Kdenlive. Then select the portion of
-the first clip where he's in front of a green screen (00:00:00;15 -
-00:00:05;04) and put that in track Video 1. Then load the cloud clip
-in track Video 2, and shorten it down so it is the same length.<br>
+<br>Aquí valos a obtener un clip de una <a href="Clips/GreenScreenSample.mp4">persona frente a una pantalla verde</a>, y colocarlo alfrente de un trasfondo con <a href="Clips/winter_clouds.mpg">algunas nubes</a>.
+Primero, importa estos clips a un nuevo proyecto de Kdenlive. Luego
+selecciona la porción del primer clip en la cual el sujeto está frente
+a la pantalla verde (00:00:00;15 -
+00:00:05;04) y coloca esta selección en la pista Video 1. Luego coloca
+el clip de las nubes en la pista Video 2, y recórtalo para que tenga la
+misma duración que el Video 1.<br>
 
 <img src="Screen/Chroma-Clips-es.png" alt="Chroma-Clips.png"><br>
 
-<br>
-
-Next, we're going to add an effect to the first track. Right click on
-it Add Effect -&gt; Alpha manipulation -&gt; Blue Screen (or Add Video Effect -&gt; Blue Screen in older versions). This will
-bring up the blue screen dialogue in the effects tab. On this tab,
-there is an eyedropper button that you can use to select the background
-color that we want to eliminate. Click it, then select the green color
-close to the subject.<br>
-
-<img src="Screen/Chroma-SelectColor-es.png" alt="Chroma-SelectColor.png"><br>
+<br>Ahora vamos a añadir un efecto a la primera pista. Haz clic-derecho
+en Añadir Efecto -&gt; Manipulación de Alpha -&gt; Pantalla Azul. Esto
+va a producir el recuadro de la pantalla azul en el tab de efectos. En
+este tab, hay un botón con un icono de un ojo que puedes usar para
+seleccionar el color de trasfondo que quieres eliminar. Haz clic en
+este botón y luego selecciona el color verde más cerca posible al
+sujeto.<img src="Screen/Chroma-SelectColor-es.png" alt="Chroma-SelectColor.png"><br>
 
 <br>
 
@@ -446,49 +437,40 @@ close to the subject.<br>
 
 <img src="Screen/Chroma-Color-es.png" alt="Chroma-Color.png"><br>
 
-<br>
-
-Now we have our key all set to remove the green background from the
-first clip. We just need to composite in the second clip.&nbsp; Hover
-in the bottom-left corner of the first clip to get a green triangle,
-then click it to add a transition. Stretch out the transition to cover
-the whole clip, and change it from a Dissolve transition to a
-Composite. <br>
+<br>Ahora tenemos nuestras opciones establecidas para remover el
+trasfondo verde del primer clip. Sólo tenemos que componer el segundo
+clip dentro del primero. Pasa el cursor sobre la esquina inferior
+izquierda del primer clip para generar un triángulo verde, y haz clic
+en el triángulo para añadir una transición. Estira la transición para
+que cubra el clip entero, y cambia la transición de Disolver a
+Componer. <br>
 
 <img src="Screen/Chroma-Composite-es.png" alt="Chroma-Composite.png"><br>
 
 <br>
 
-<br>
+<br>Se ve bastante bien. Lo único que valta es limpiar la imagen un
+poco. Primero, el video de trasfonde es de resolución 640x480, así que
+si queremos que se muestre en una resolución más alta, no se va a ver
+bien, así que reduzcamos el proyecto a ese tamaño. Proyecto -&gt;
+Opciones del Proyecto -&gt; Perfil del Proyecto: VGA NTSC.<br>
 
-Looking pretty good.&nbsp; All that's left now is a few cleanup things.
-First, the background video is 640x480, so if we try to show it at a
-bigger resolution than that, it won't look good, so lets set the
-project down to that size.&nbsp; Project -&gt; Project Settings -&gt;
-Project Profile: VGA NTSC. <br>
-
-<br>
-
-Also, the subject is taking up a large portion of the image. While we
-have the composite selected, we can resize and/or move his image down a
-little so his face is only tow thirds of the way up.<br>
+<br>Además, el sujeto está ocupando una gran porción de la imagen.
+Mientras tenemos la composición seleccionada, podemos reducir el tamaño
+o mover la imagen del sujeto un poco para que su cara esté ubicada a
+dos tercios del camino hacia arriba.<br>
 
 <img src="Screen/Chroma-Cleanup-es.png" alt="Chroma-Cleanup.png"><br>
 
-<br>
+<br>Eso es todo. Procesa el video a un archivo y míralo en un reproductor de video!<br>
 
-That's all. Go ahead and render it to a file and view it for yourself.<br>
-
-<br>
-
-When you view your rendered video, you may notice some minor things.
-His sholders are a bit broken up, there is some green on his face, etc.
-These are because this sample of video had a bunch of compression
-applied to it after it was recorded. When you do green screen editing,
-it is important to get the un-compressed video before it goes through
-other processing steps. This will help the keying correctly pick out
-the background color (which it didn't do a great job of here). <br>
-
-<br>
+<br>Cuando veas tu video procesado, tal vez notes algunos detalles
+menores. Los hombros del sujeto están un poco recortados, hay un poco
+de verde en su rostro, etc. Esto ocurre porque este video de ejemplo
+recibió mucha compresión luego de ser grabado. Cuando hagas edición de
+pantalla verde, es importante que obtengas el video original
+no-comprimido antes de que pase por otros procesos. Esto le ayudará al
+programa a seleccionar correctamente el color de trasfondo (algo que no
+hizo perfectamente en nuestro ejercicio).<br>
 
 </body></html>
