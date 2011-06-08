@@ -24,6 +24,9 @@ Video/Clips/SintelTrailer/sintel_small_perfect/*
 # Frame Rate
 Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-30fps.mkv
 Video/Clips/SintelTrailer/sintel_clip-408p-mpeg4-5fps.mkv
+# FFMpeg Examples (without subtitles)
+Video/Clips/SintelTrailer/sintel_clip-ffmpeg.mkv
+Video/Clips/SintelTrailer/sintel_trailer-ffmpeg.mkv
 
 ## Big Buck Bunny ##
 # Base
@@ -45,4 +48,5 @@ Video/Clips/BigBuckBunny/FlyingSquirrel.mkv
 ## Other ##
 Video/Clips/GreenScreenSample.mp4
 Video/Clips/winter_clouds.mpg
+Video/Clips/big-buck-bunny-NTSC.iso
 
