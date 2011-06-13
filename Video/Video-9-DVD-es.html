@@ -1,70 +1,60 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Video - 9 - DVD Creation</title></head><body>
-<h2>DVD Creation</h2>
+<h2>Creación de DVDs</h2>
+
+Aunque el formato DVD ya tiene veinte años de edad y ha sudo
+sobrepasado por tecnología más moderna (BluRay y luego video por
+internet), es aún un formato muy común. Hay muchos reproductores de
+video en el mercado y en muchos hogares que pueden presentar DVDs.<br>
+
+<br>Del mismo modo que el Audio CD es un formato especial (no es igual
+que tener archivos de audio copiados a un CD), un DVD también es un
+formato especial. Hay pocos reproductores que pueden presentar
+películas que simplemente se han copiado a un disco DVD; la mayoría
+requieren que el video esté en el formato especial "DVD-Video". este
+formato consiste de un contenedor DVD-Video que envuelve el video
+codificado con el codec MPEG-2. Uno o varios archivos de video se
+pueden almacenar en el DVD, cada uno en su propia archivo ".VOB". El
+formato DVD-Video también permite crear cosas como menús, títulos,
+capítulos, subtítulos opcionales, pistas de audio opcioales, y pistas
+de video alternas. El formato ".IFO" (y el backup de este formato
+llamado .BUP) es usado para almacenar la data (códigos de tiempo,
+opciones, etc.) para todas estas capacidades. El siguiente es un mapa
+visual de un contenedor DVD-Video estándar.<br>
 
 <br>
 
-Even though the DVD is twenty years old, and has been largely surpassed
-by newer technology (BluRay, and then online video) it is still a very
-common format. There are many players on the market and in homes that
-can play a DVD.<br>
+<img src="DVD-Video_Layout-FirstVideo.png" alt="DVD-Video_Layout-FirstVideo.png"><br>El
+archivo .VOB que está circulado en rojo es el primer archivo .VOB que
+usualmente contiene el video. El archivo .VOB inmediatamente encima de
+éste (VTS_01_0.VOB) usualmente va a contener un menú. El VMG significa
+Video ManaGery y VTS significa Video Title Set. Todos estos archivos
+están dentro del directorio VIDEO_TS en el disco. El directorio
+AUDIO_TS no es usado en el formato DVD-Video; es sólo para discos de
+audio de alta definición. <br>
 
-<br>
+<br>La mayoría de los DVDs comerciales vienen con algún tipo de
+encripción. Este sistema usualmente viene con el nombre CSS (Content
+Scrambling System) y te impide copiar el video en el DVD a tu
+computador sin tener un decodificador especial. Estos decodificadores
+son ampliamente disponibles, pero es ilegal operarlos en algunos
+países. Sin embargo, cuando creas tu propio DVD no hay razón para
+aplicar CSS al mismo. Ya que hay muchos decodificadores disponibles,
+CSS no va a prevenir que alguien copie tu video. Sin embargo, para los
+videos que vas a crear en este curso, probablemente no vas a querer
+impedir que los copien de todas maneras.<br>
 
-Just like an Audio CD is a special format (not simply audio files
-copied onto a CD), a DVD is also a special format.&nbsp; There are a
-few players that will play movies that have simply been copied onto a
-DVD, but there are many that require it to be in the special
-"DVD-Video" format. This format consists of a special DVD-Video
-container that wraps video encoded with the MPEG2 codec.&nbsp; One or
-more video files may be stored on the DVD, each in its own .VOB file.
-The DVD-Video format also allows for things such as menus, titles,
-chapters, optional subtitles, optional audio tracks, and alternate
-video tracks.&nbsp; The .IFO (and the backup of the .IFO called the
-.BUP) is used to store the data (time codes, options, etc.) for all
-these different features. Below is the layout of a standard DVD-Video
-container.<br>
+<h3>Creación de VOB en Kdenlive</h3>Crear un archivo VOB para poner en
+tu DVD es fácil en Kdenlive. Comencemos abriendo el projecto que
+creamos en el Tema 7 con el video del conejo.<br>
 
-<br>
+<br>Ahora, ve a procesar el video. Aquí, en vez de escojer un archivo
+para procesar, escoge DVD en el menú de formatos. Vas a necesitar
+escoger una de las opciones de procesamiento a 16:9 para este video
+(recomiendo que escogas 2-pass). Elije un nombre para este trabajo (no
+te preocupes por la parte del VTS por ahora) y procesa el video.<br>
 
-<img src="DVD-Video_Layout-FirstVideo.png" alt="DVD-Video_Layout-FirstVideo.png"><br>
-
-The .VOB file that is circled in red is the first .VOB file that will
-usually contain the video. The .VOB file immediately above it
-(VTS_01_0.VOB will usually contain a menu).&nbsp; The VMG stands for
-Video ManaGer and the VTS stands for Video Title Set.&nbsp; All these
-files are within the VIDEO_TS directory on the disk.&nbsp; The AUDIO_TS
-directory isn't used with the DVD-Video format, it is only for high
-definition audio discs. <br>
-
-<br>
-
-Most commercial DVDs come with a form of encryption built in to them.
-This system usually goes by the name CSS (Content Scrambling System)
-and prevents you from being able to copy video on the DVD to your
-computer without a special decoder.&nbsp; These decoders are widely
-available, but are illegal to operate in some countries.&nbsp; However,
-when you create your own DVDs there is no reason to apply CSS to
-them.&nbsp; Since there are many decoders available, it won't stop
-people from copying your video, but for the videos you create with this
-course, you probably don't want to stop them anyway.<br>
-
-<br>
-
-<h3>Kdenlive Vob Creation</h3>
-
-Making the VOB file to put on your DVD is easy in Kdenlive.&nbsp; Lets
-start by opening the project we created with the bunny in it.&nbsp; <br>
-
-<br>
-
-Then, go to render the video. Here, instead of choosing a file render,
-choose DVD from the drop down menu. You'll need to chose one of the
-16:9 rendering options for this video (I'd recommend 2-pass).&nbsp;
-Give your vob a name (don't worry about the VTS stuff now) and render
-it. <br>
-
-<img style="width: 862px; height: 709px;" src="Screen/DVD-KdenliveRender-es.png" alt="DVD-KdenliveRender.png"><br>
+<img style="width: 690px; height: 670px;" src="Screen/DVD-KdenliveRender-es.png" alt="DVD-KdenliveRender.png"><br>
 
 <br>
 
