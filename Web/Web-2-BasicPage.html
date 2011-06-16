@@ -30,7 +30,7 @@ Here's an example page:<br>
 &nbsp;&nbsp;&nbsp; &lt;h1&gt;Introduction&lt;/h1&gt;<br>
 
 &nbsp;&nbsp;&nbsp; &lt;p&gt;Some text that makes up a
-paragraph&lt;/p&gt;<br>
+&lt;b&gt;paragraph&lt;/b&gt;&lt;/p&gt;<br>
 
 &nbsp;&nbsp;&nbsp; &lt;img src="exampleImage.png"&gt;<br>
 
@@ -56,7 +56,7 @@ will look something like this:<br>
     <tr>
       <td style="vertical-align: top;">
       <h1>Introduction</h1>
-      <p>Some text that makes up a paragraph</p>
+      <p>Some text that makes up a <b>paragraph</b></p>
       <img src="exampleImage.png">
       <p>Some more text with a link to <a href="http://www.google.com/">Google</a></p>
       </td>
@@ -68,6 +68,45 @@ will look something like this:<br>
 
 You can see it on its own page by following this <a href="ExamplePage.html">link</a>.<br>
 
+<br>
+
+Here's what the various tags in the above example represent:<br>
+
+&lt;html&gt;...&lt;/html&gt; - That all the text within these tags
+should be used by the web browser as the code for the page.<br>
+
+&lt;head&gt;...&lt;/head&gt; - The header of the page. This area can
+contain information about the page such as the title or other items
+that aren't actually displayed within the page.<br>
+
+&lt;title&gt;...&lt;/title&gt; - The title of the page, this is usually
+displayed in the top of the browser window (or in the tab) while the
+page is being viewed.<br>
+
+&lt;body&gt;...&lt;/body&gt; - The main portion or body of the page.
+This is where the code that is being displayed will go.<br>
+
+&lt;h1&gt;...&lt;/h1&gt; - Level 1 Header, this is used to make the
+start of a text section with a large font. You can use any number from
+h1 through h6 for progressively smaller headers.<br>
+
+&lt;p&gt;...&lt;/p&gt; - A paragraph of text.&nbsp; Put your writing
+(and images, links, formatting, etc. inside here.<br>
+&lt;b&gt;...&lt;/b&gt; - Makes the text <span style="font-weight: bold;">bold</span>. Other formatting options are &lt;u&gt; for <span style="text-decoration: underline;">underline</span> and &lt;i&gt; for <span style="font-style: italic;">italics</span>.<br>
+&lt;img src="ImageName.jpg"&gt; - Puts an image on the page. There are
+a lot of other options that can be used to modify the image that can be
+added on, but this is all you need to display the image.<br>
+&lt;a href="OtherPage.html"&gt;text...&lt;/a&gt; - Creates a link to
+another page.&nbsp; The part in the quotes after the href= is the link
+to the other page. It can be a complete link such as
+"http://media-intro.teeks99.com/Web/ExamplePage.html" or it can be a
+link that is relative to where the current page is in the directory
+hiarchy of the server.&nbsp; If the other page is in the same folder,
+it could be just "ExamplePage.html".&nbsp; If it is in a subfolder it
+could look like "FolderName/ExamplePage.html", if it is in a folder
+higher up it would be "../ExamplePage.html".&nbsp; The text that comes
+between the closing bracket (&gt;) and the end of the link (&lt;/a&gt;)
+is the text that will appear blue and underlined on the page.<br>
 <br>
 
 <br>
