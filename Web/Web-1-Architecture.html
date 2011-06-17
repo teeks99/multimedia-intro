@@ -1,9 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  <title>Web - 1 - Architecture</title>
-
-  
-</head><body>
+<html><head><title>Web - 1 - Architecture</title></head><body>
 <h2>Web Architecture</h2>
 
 The Internet and World Wide Web (or just Web for short) form the
@@ -36,25 +32,53 @@ many other pages, which in turn can link to many other pages and so
 on. Some of these pages can even have links back to the original
 page. If you were to draw out a map of all these links between
 pages, the map could look very much like a spider web. <br>
+<br>
 
-<h3>Servers and Network</h3>
 
 When a user browses to a web page, such as http://www.google.com, the
 user's web browser goes out and converts the URL or Uniform
-Resource Locator into an address for a server computer. The
+Resource Locater into an address for a server computer. The
 browser then sends a message to this server computer asking for the
 page to display. Each of the other items that is referenced by
-this HTML document are then downloaded as well, independantly from the
+this HTML document are then downloaded as well, independently from the
 original HTML document. Because of this, to download and display a
 single web page, dozens or hundreds of connections must be made to the
 server. Additionally, there is nothing to stop the creator of the
 HTML document to reference an image or other object on a server
-seperate from the server that has the HTML document. One example
+separate from the server that has the HTML document. One example
 of this is Google's Image Search, when you find images, you are on a
 google page, but inside that page's HTML, there is a reference to the
 image from the result page so you can see it before you completely go
 to that site.
 <br>
 
+<h3>Web Servers<br>
+</h3>Each server doesn't know anything about the HTML files that it
+sends out. Rather, it just has a directory full of files that is the
+web site, when a user's web browser asks for the file, it simply sends
+a copy of that file back. There is also a special file called
+index.html (some servers use a different name, but this will usually
+work) that will be the default that is returned.&nbsp; When your web
+browser asks a website for "http://www.google.com/FileName.html", the
+browser will go to the server at the address "www.google.com" and ask
+for the file in the top directory, symbolized by the single slash (/),
+called "FileName.html".&nbsp; However, if the user just types in
+"http://www.google.com/" the server will automatically send back the
+index.html file (just like if the user entered
+"http://www.google.com/index.html¨), since there is no file&nbsp;
+specified after the slash.&nbsp; (If the user doesn't enter the slash,
+the web browser is smart enough to add it for them.) <br>
+
+<br>
+For a web server, it doesn't do anything different if the user asks for
+"http://servername.com/file.html" or
+"http://servername.com/image.jpg".&nbsp; In both cases the server
+(located at the address "servername.com") just goes and grabs a file
+off its hard disk and sends it back to the user's web browser. This
+makes it easy for the person designing the web pages, because they can
+simply put all the files they need for the site in a directory on the
+server, and then tell the server that is the "root" directory which
+will be used when a user types in a slash (/) after the server's
+address.<br>
 <br>
 </body></html>
