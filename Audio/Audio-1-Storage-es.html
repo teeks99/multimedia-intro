@@ -351,10 +351,10 @@ Solo porque haga falta al menos 40kHz para poder grabar todo lo que
 el oído puede escuchar no significa que las frecuencias menores no
 tengan uso.&nbsp; Por ejemplo con los teléfonos, cada vez que una
 llamada de un teléfono fijo sale del vecindario, o cada llamada de
-teléfono móvil se digitaliza a 8kHz.&nbsp; esto suena bien cuando todo
+teléfono móvil se digitaliza a 8kHz. Esto suena bien cuando todo
 sólo hace falta escuchar lo que la persona al otro lado está diciendo,
 pero sonaría terrible si trataras de escuchar un concierto musical
-digitalizado a 8kHz.&nbsp; En nuestros diás, sin embargo, un ingeniero
+digitalizado a 8kHz. En nuestros diás, sin embargo, un ingeniero
 de audio podría atreverse a usar una frecuencia menor de 40kHz si
 hubieran severas limitaciones de ancho de banda o de espacio para
 almacenamiento.&nbsp; Para este curso usaremos a lo mínimo audio de
@@ -364,28 +364,28 @@ almacenamiento.&nbsp; Para este curso usaremos a lo mínimo audio de
 
 La endianidad (endianness) es un
 artefacto del crecimiento de las tecnologías de sistemas en diferentes
-organizaciones simultáneamente.&nbsp; Esto tiene que ver con la manera
-en que los bytes se almacenan en la memoria de un computador.&nbsp; Los
+organizaciones simultáneamente. Esto tiene que ver con la manera
+en que los bytes se almacenan en la memoria de un computador. Los
 detales de esto no son importantes para la creación de audio digital,
 sólo importa saber que hay dos formatos diferentes: el Big-Endian y el
-Little-Endian.&nbsp; No son compatibles por sí solos, pero programas de
+Little-Endian. No son compatibles por sí solos, pero programas de
 software pueden convertirlos fácilmente.<br>
 
 <h4>Canales</h4>
 
 Los canales (channels) usados en audio digital son
-diferentes de como los canales se usan en imágenes.&nbsp; en este caso,
+diferentes de como los canales se usan en imágenes. En este caso,
 cada canal es una grabación completamente separada, que simplemente se
 ajustá para que se escuche (y muchas veces se grabó) a la misma
-vez.&nbsp; Los canales usualmente se usan para representar la dirección
+vez. Los canales usualmente se usan para representar la dirección
 de la cual puede provenir el audio (desde la derecha o desde la
 izquierda, por ejemplo).<br>
 
 <br>
 
 El audio estéreo tiene dos canales, un canal izquierdo y un canal
-derecho.&nbsp; esto permite crear sonidos que parece que provenieran de
-una dirección o de la otra.&nbsp; Los CDs y la radio FM usan sonido
+derecho. Esto permite crear sonidos que parece que provenieran de
+una dirección o de la otra. Los CDs y la radio FM usan sonido
 estéreo. (<a href="http://en.wikipedia.org/wiki/Stereo_sound">http://en.wikipedia.org/wiki/Stereo_sound</a>
 <a href="http://es.wikipedia.org/wiki/Sonido_estereof%F3nico">http://es.wikipedia.org/wiki/Sonido_estereofónico</a>)<br>
 
@@ -393,14 +393,14 @@ estéreo. (<a href="http://en.wikipedia.org/wiki/Stereo_sound">http://en.wikipedi
 
 El formato más avanzado se llama sonido envolvente (surround
 sound), que por lo general se describe como si tuviera 5.1
-canales.&nbsp; Los cinco canales principales son delante-izquierda y
+canales. Los cinco canales principales son delante-izquierda y
 delante-derecha (igual que en estéreo, y se usan cuando sólo hay
 salidas estéreo disponibles), delante-centro, detrás-izquierda, y
-detrás-derecha.&nbsp; El 0.1 canale es llamado el canal de efectos de
+detrás-derecha. El 0.1 canale es llamado el canal de efectos de
 baja frecuencia y está diseñado para uso con sub-woofers que sólo
 producen sonidos de 3-120Hz.&nbsp; dada esta baja frecuencia, es
 posible usar una frecuencia de sample mucho más baja con este
-canal.&nbsp; Sin embargo, la mayoría de los equipos de computador sólo
+canal. Sin embargo, la mayoría de los equipos de computador sólo
 tratan este canal como su propio canal separado, y por eso los
 computadores que usan surround sound se suele decir que tienen sies
 canales en vez de sólo 5.1,&nbsp; (<a href="http://en.wikipedia.org/wiki/Surround_sound">http://en.wikipedia.org/wiki/Surround_sound</a>
