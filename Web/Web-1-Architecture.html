@@ -1,84 +1,79 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Web - 1 - Architecture</title></head><body>
-<h2>Web Architecture</h2>
+<h2>Web Architecture</h2>El internet y la World Wide Web ("la Web") son
+la base de todas las formas de comunicación moderna. La Web es sólo uno
+de muchos tipos de servicios disponibles en el Internet (otros servicos
+son: correo electrónico, IM, grupos de noticias, transferencia de
+archivos, "secure shell", acceso remoto, y muchos otros). La web
+consiste de páginas mantenidas por varias organizaciones y
+corporaciones privadas. Algunas de estas páginas, como
+http://google.com, http://facebook.com, http://wikipedia.org, etc.,
+contienen texto, imágenes, audio, videos, y animaciones; además tienen
+soporte para enviar y recibir data de los usuarios de esas páginas. Los
+usuarios pueden navegar las páginas usando un navegador web como
+Firefox.<br>
 
-The Internet and World Wide Web (or just Web for short) form the
-backbone of all types of modern communications. The Web is just
-one of many types of services that is available on the internet (some
-others are: e-mail, instant messaging, newsgroups, file transfer,
-secure shell, remote desktop and many more). The Web consists of
-pages maintained by various private and corporate organizations. Some
-of these like http://google.com, http://facebook.com,
-http://wikipeida.org, etc contain text, images, audio, videos, and
-animations; in addition, they can support sending and receiving data
-from users of their pages. Users "browse" pages using a web
-browser such as Firefox.<br>
+<h3>Documentos Estructurados, Enlaces</h3>
+Las páginas Web están escritas en un idioma de programación llamado
+HTML, o "HyperText Markup Language", así como otras tecnologías
+asociadas.&nbsp; El documento HTML que el usuario recibe al accesar una
+página contiene el texto de la página así como enlaces a otro material
+necesario para presentar la página. Este otro material puede incluir
+imágenes, sonido, video, secuencias de comandos ("scripts") y más.<br>
 
-<h3>Structured Documents, Links</h3>
+<br>Además de todo lo que hace que una página web se vea y actúe de
+forma interesante, la página también puede contener enlaces a otras
+páginas. Estos enlaces es lo que hace que las páginas formen una "Web",
+o "red" en español. Cada página puede enlazar a muchas otras páginas,
+las cuales pueden enlazar a otras páginas adicionales por su cuenta.
+Algunas de estas páginas pueden hasta tener enlaces de regreso a la
+página original. Si fueras a dibujar un mapa de todos estos enlaces
+entre páginas, el mapa se parecería mucho a una telaraña (spider "web",
+"web" de un araña). <br>
+<br>Cuando un usuario navega a una página web como
+http://www.google.com, el navegador del usuario toma el URL o Uniform
+Resource Locator (Localizador de Recurso Uniforme) y lo convierte en
+una dirección a un computer server, o servidor. El navegador luego
+envía un mesaje a este servidor solicitando la página que se va a
+presentar. Cada uno de los otros elementos de la pagina que aparecen en
+el documento HTML son luego descargados independientemente del
+documento HTML original. Por esta razón, es necesario que ocurran
+dozenas o cientos de conecciones al servidor de modo que se puedan
+descargar todos los elementos para una sola página web. Además, un
+diseñador puede referenciar una imagen u otro objeto localizado en un
+servidor distinto al servidor que contiene el documento HTML. Un
+ejemplo de esto es Google Imágenes; cuando encuentras imágenes, estás
+en una página web de Google, pero dentro de el HTML de esa página hay
+una referencia a la imagen de la página original de manera que puedas
+ver la imagen antes de navegar a ese otro sitio web.<br>
 
-Web pages are written in a programming language called HTML or
-HyperText Markup Language, as well as some other associated
-technologies. The HTML document that the user gets for each page
-contains the text of the page, as well as links to other material
-needed to display the page. This other material can include images,
-sound, video, style sheets, scripts and more.<br>
+<h3>Servidores Web<br>
+</h3>Un servidor no tiene conocimiento sobre los archivos HTML que
+envía. En lugar de esto, el servidor tiene un directorio lleno de
+archivos que componen el sitio web. Cuando un navegador web solicita un
+archivo, el servidor envía una copia de ese archivo de vuelta al
+navegador del usuario. También existe un archivo especial llamado
+"index.html" (algunos servidores usan un nombre distinto, pero
+index.html usualmente funciona), el cual será&nbsp; el archivo enviado
+más comúnmente. Cuando tu navegador le solicita a un sitio web la
+página "http://google.com/NombreDeArchivo.html", el navegador irá al
+servidor localizado en la dirección "google.com" y solicitará el
+archivo en el directorio principal, simbolizado por una diagonal (/),
+llamado "NombreDeArchivo.html". Sim embargo, si el usuario solamente
+escribe "http://google.com/", el servidor automaticamente enviará el
+archivo index.html (idéntico a si el usuario hubiera escrito
+"http://google.com/index.html", ya que no hay ningún archivo escrito
+luego de la diagonal. (Lo mismo ocurre aunque el usuario no escriba la
+diagonal; el navegador la añade automáticamente.)<br>
 
-<br>
-
-In addition to all the stuff that makes the page look and act
-interesting, the page may also contain links to other web pages. These
-links are what make the pages into a "web". Each page can link to
-many other pages, which in turn can link to many other pages and so
-on. Some of these pages can even have links back to the original
-page. If you were to draw out a map of all these links between
-pages, the map could look very much like a spider web. <br>
-<br>
-
-
-When a user browses to a web page, such as http://www.google.com, the
-user's web browser goes out and converts the URL or Uniform
-Resource Locater into an address for a server computer. The
-browser then sends a message to this server computer asking for the
-page to display. Each of the other items that is referenced by
-this HTML document are then downloaded as well, independently from the
-original HTML document. Because of this, to download and display a
-single web page, dozens or hundreds of connections must be made to the
-server. Additionally, there is nothing to stop the creator of the
-HTML document to reference an image or other object on a server
-separate from the server that has the HTML document. One example
-of this is Google's Image Search, when you find images, you are on a
-google page, but inside that page's HTML, there is a reference to the
-image from the result page so you can see it before you completely go
-to that site.
-<br>
-
-<h3>Web Servers<br>
-</h3>Each server doesn't know anything about the HTML files that it
-sends out. Rather, it just has a directory full of files that is the
-web site, when a user's web browser asks for the file, it simply sends
-a copy of that file back. There is also a special file called
-index.html (some servers use a different name, but this will usually
-work) that will be the default that is returned.&nbsp; When your web
-browser asks a website for "http://www.google.com/FileName.html", the
-browser will go to the server at the address "www.google.com" and ask
-for the file in the top directory, symbolized by the single slash (/),
-called "FileName.html".&nbsp; However, if the user just types in
-"http://www.google.com/" the server will automatically send back the
-index.html file (just like if the user entered
-"http://www.google.com/index.html¨), since there is no file&nbsp;
-specified after the slash.&nbsp; (If the user doesn't enter the slash,
-the web browser is smart enough to add it for them.) <br>
-
-<br>
-For a web server, it doesn't do anything different if the user asks for
-"http://servername.com/file.html" or
-"http://servername.com/image.jpg".&nbsp; In both cases the server
-(located at the address "servername.com") just goes and grabs a file
-off its hard disk and sends it back to the user's web browser. This
-makes it easy for the person designing the web pages, because they can
-simply put all the files they need for the site in a directory on the
-server, and then tell the server that is the "root" directory which
-will be used when a user types in a slash (/) after the server's
-address.<br>
-<br>
+<br>Para un servidor, no hay diferencia entre
+"http://nombredelservidor.com/archivo.html" o
+"http://nombredelservidor.com/imagen.jpg". En ambos casos, el servidor
+(localizado en la dirección "nombredelservidor.com" simplemente toma el
+archivo de su disco duro y lo envía al navegador web del usuario. Esto
+facilita el trabajo del diseñador de la página web, y ya que el
+diseñador puede poner todos los archivos que necesita para el sitio en
+un directorio en el servidor, y luego indicarle al servidor que el
+directorio "root" será el directorio principal usado cuando un usuario
+escriba una diagonal (/) luego de la dirección del servidor. <br>
 </body></html>
