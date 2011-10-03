@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Web - 2 - HTML</title></head><body>
+<h2>Basic HTML</h2>
+
+HTML in its modern form is a type of XML (similar to SVG and RSS that
+we've covered in other chapters, see the <a href="../Audio/Audio-8-Podcasts.html">RSS page</a> for more
+details).&nbsp; It has only a few required types, and a bunch more that
+are optional and give it various properties.<br>
+
+<br>
+
+Here's an example page:<br>
+
+<br>
+
+&lt;html&gt;<br>
+
+&nbsp; &lt;head&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;title&gt;Example Page&lt;/title&gt;<br>
+
+&nbsp; &lt;/head&gt;<br>
+
+&nbsp; &lt;body&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;h1&gt;Introduction&lt;/h1&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Some text that makes up a
+&lt;b&gt;paragraph&lt;/b&gt;&lt;/p&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;img src="exampleImage.png"&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Some more text with a link to &lt;a
+href="http://www.google.com"&gt;Google&lt;/a&gt;&lt;/p&gt;<br>
+
+&nbsp; &lt;/body&gt;<br>
+
+&lt;/html&gt;<br>
+
+<br>
+
+<br>
+
+When your web-browser gets this HTML, it will process it and the result
+will look something like this:<br>
+
+<br>
+
+<table style="text-align: left; width: 300px; height: 172px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <h1>Introduction</h1>
+      <p>Some text that makes up a <b>paragraph</b></p>
+      <img src="exampleImage.png">
+      <p>Some more text with a link to <a href="http://www.google.com/">Google</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+You can see it on its own page by following this <a href="ExamplePage.html">link</a>.<br>
+
+<br>
+
+Here's what the various tags in the above example represent:<br>
+
+&lt;html&gt;...&lt;/html&gt; - That all the text within these tags
+should be used by the web browser as the code for the page.<br>
+
+&lt;head&gt;...&lt;/head&gt; - The header of the page. This area can
+contain information about the page such as the title or other items
+that aren't actually displayed within the page.<br>
+
+&lt;title&gt;...&lt;/title&gt; - The title of the page, this is usually
+displayed in the top of the browser window (or in the tab) while the
+page is being viewed.<br>
+
+&lt;body&gt;...&lt;/body&gt; - The main portion or body of the page.
+This is where the code that is being displayed will go.<br>
+
+&lt;h1&gt;...&lt;/h1&gt; - Level 1 Header, this is used to make the
+start of a text section with a large font. You can use any number from
+h1 through h6 for progressively smaller headers.<br>
+
+&lt;p&gt;...&lt;/p&gt; - A paragraph of text.&nbsp; Put your writing
+(and images, links, formatting, etc. inside here.<br>
+&lt;b&gt;...&lt;/b&gt; - Makes the text <span style="font-weight: bold;">bold</span>. Other formatting options are &lt;u&gt; for <span style="text-decoration: underline;">underline</span> and &lt;i&gt; for <span style="font-style: italic;">italics</span>.<br>
+&lt;img src="ImageName.jpg"&gt; - Puts an image on the page. There are
+a lot of other options that can be used to modify the image that can be
+added on, but this is all you need to display the image.<br>
+&lt;a href="OtherPage.html"&gt;text...&lt;/a&gt; - Creates a link to
+another page.&nbsp; The part in the quotes after the href= is the link
+to the other page. It can be a complete link such as
+"http://media-intro.teeks99.com/Web/ExamplePage.html" or it can be a
+link that is relative to where the current page is in the directory
+hiarchy of the server.&nbsp; If the other page is in the same folder,
+it could be just "ExamplePage.html".&nbsp; If it is in a subfolder it
+could look like "FolderName/ExamplePage.html", if it is in a folder
+higher up it would be "../ExamplePage.html".&nbsp; The text that comes
+between the closing bracket (&gt;) and the end of the link (&lt;/a&gt;)
+is the text that will appear blue and underlined on the page.<br>
+<br>
+
+With just these few simple tags, you can make huge and complex web
+sites.&nbsp; There's a lot more useful features (line breaks, tables,
+forms, audio, video, and more) that are also part of HTML that you can
+check out once you get these basics down.&nbsp; <br>
+<br>
+Beyond simple HTML there are HTML styles and Cascading Style Sheets
+(CSS). These are used to control the look of pages and even whole sites
+in greater detail. Then to add functionality to sites, so that
+something can happen on the page when you click a button, there is a
+programming language called Java Script that is immensely powerful.
+Because of their complexity, these topics won't be covered here,
+instead we will concentrate on the basics above so that we can create
+simple but useful web-pages.&nbsp; <br>
+<br>
+<br>
+
+</body></html>
