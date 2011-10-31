@@ -1,15 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>Web - 2 - HTML</title></head><body>
-<h2>Basic HTML</h2>
+<h2>Introducción Básica al HTML</h2>HTML en su forma modern es un tipo
+de XML (parecido a los contenedores SVG y RSS que hemos discutido en
+otros capítulos -- ia a la <a href="../Audio/Audio-8-Podcasts-es.html">página sobre RSS</a>
+apra más detalles).&nbsp; Requiere sólo un par de elementos, y acepta
+muchos otros elementos opcionales que le pueden añadir varias
+propiedades al archivo.<br>
 
-HTML in its modern form is a type of XML (similar to SVG and RSS that
-we've covered in other chapters, see the <a href="../Audio/Audio-8-Podcasts.html">RSS page</a> for more
-details).&nbsp; It has only a few required types, and a bunch more that
-are optional and give it various properties.<br>
-
-<br>
-
-Here's an example page:<br>
+<br>El siguiente es un ejemplo de HTML para una página web:<br>
 
 <br>
 
@@ -17,20 +15,20 @@ Here's an example page:<br>
 
 &nbsp; &lt;head&gt;<br>
 
-&nbsp;&nbsp;&nbsp; &lt;title&gt;Example Page&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;title&gt;Ejemplo Pagina&lt;/title&gt;<br>
 
 &nbsp; &lt;/head&gt;<br>
 
 &nbsp; &lt;body&gt;<br>
 
-&nbsp;&nbsp;&nbsp; &lt;h1&gt;Introduction&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;h1&gt;Introduccíon&lt;/h1&gt;<br>
 
-&nbsp;&nbsp;&nbsp; &lt;p&gt;Some text that makes up a
-&lt;b&gt;paragraph&lt;/b&gt;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Algo texto que constitute un
+&lt;b&gt;párrafo&lt;/b&gt;&lt;/p&gt;<br>
 
-&nbsp;&nbsp;&nbsp; &lt;img src="exampleImage.png"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;img src="ejemploImagen.png"&gt;<br>
 
-&nbsp;&nbsp;&nbsp; &lt;p&gt;Some more text with a link to &lt;a
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Algo texto con un enlace a &lt;a
 href="http://www.google.com"&gt;Google&lt;/a&gt;&lt;/p&gt;<br>
 
 &nbsp; &lt;/body&gt;<br>
@@ -39,10 +37,7 @@ href="http://www.google.com"&gt;Google&lt;/a&gt;&lt;/p&gt;<br>
 
 <br>
 
-<br>
-
-When your web-browser gets this HTML, it will process it and the result
-will look something like this:<br>
+<br>Cuando su navigador web tiene esta HTML, el procesará el y el resultado será algo como esto:<br>
 
 <br>
 
@@ -51,73 +46,66 @@ will look something like this:<br>
   <tbody>
     <tr>
       <td style="vertical-align: top;">
-      <h1>Introduction</h1>
-      <p>Some text that makes up a <b>paragraph</b></p>
+      <h1>Introduccíon</h1>
+      <p>Algo texto que constitute un <b>párrafo</b></p>
       <img src="exampleImage.png">
-      <p>Some more text with a link to <a href="http://www.google.com/">Google</a></p>
+      <p>Algo texto con un enlace a <a href="http://www.google.com/">Google</a></p>
       </td>
     </tr>
   </tbody>
 </table>
 
-<br>
+<br>Puedes ver esta página en tu navegador a través de <a href="ExamplePage.html">este enlace</a>.<br>
 
-You can see it on its own page by following this <a href="ExamplePage.html">link</a>.<br>
+<br>En el ejemplo anterior se usaron las siguientes etiquetas (tags), con los comandos que representan: <br>
 
-<br>
+&lt;html&gt;...&lt;/html&gt; - Todo el texto entre estos tags debe ser usado por el navegador como el código para la página web.<br>
+&lt;head&gt;...&lt;/head&gt; - El encabezado del la página. Esta area
+puede contener información sobre la página como por ejemplo el título o
+otros elementos que no se muestran cuando la página aparece en el
+navegador.<br>
+&lt;title&gt;...&lt;/title&gt; - El título de la página; usualmente se
+muestra en la barra superior del navegador (o en uno de los tabs)
+mientras se está viendo la página. <br>
+&lt;body&gt;...&lt;/body&gt; - La porción principal o el cuerpo de la
+página. Aquí es donde se coloca el código que se va a mostrar.<br>
+&lt;h1&gt;...&lt;/h1&gt; - Encabezado Nivel 1; esto se usa para indicar
+el comienzo de una sección de texto con un tamaño grande de texto.
+Puedes usar cualquier número del 1 al 6 -- el tamaño de texto disminuye
+con cada número. <br>
 
-Here's what the various tags in the above example represent:<br>
-
-&lt;html&gt;...&lt;/html&gt; - That all the text within these tags
-should be used by the web browser as the code for the page.<br>
-
-&lt;head&gt;...&lt;/head&gt; - The header of the page. This area can
-contain information about the page such as the title or other items
-that aren't actually displayed within the page.<br>
-
-&lt;title&gt;...&lt;/title&gt; - The title of the page, this is usually
-displayed in the top of the browser window (or in the tab) while the
-page is being viewed.<br>
-
-&lt;body&gt;...&lt;/body&gt; - The main portion or body of the page.
-This is where the code that is being displayed will go.<br>
-
-&lt;h1&gt;...&lt;/h1&gt; - Level 1 Header, this is used to make the
-start of a text section with a large font. You can use any number from
-h1 through h6 for progressively smaller headers.<br>
-
-&lt;p&gt;...&lt;/p&gt; - A paragraph of text.&nbsp; Put your writing
-(and images, links, formatting, etc. inside here.<br>
-&lt;b&gt;...&lt;/b&gt; - Makes the text <span style="font-weight: bold;">bold</span>. Other formatting options are &lt;u&gt; for <span style="text-decoration: underline;">underline</span> and &lt;i&gt; for <span style="font-style: italic;">italics</span>.<br>
-&lt;img src="ImageName.jpg"&gt; - Puts an image on the page. There are
-a lot of other options that can be used to modify the image that can be
-added on, but this is all you need to display the image.<br>
-&lt;a href="OtherPage.html"&gt;text...&lt;/a&gt; - Creates a link to
-another page.&nbsp; The part in the quotes after the href= is the link
-to the other page. It can be a complete link such as
-"http://media-intro.teeks99.com/Web/ExamplePage.html" or it can be a
-link that is relative to where the current page is in the directory
-hiarchy of the server.&nbsp; If the other page is in the same folder,
-it could be just "ExamplePage.html".&nbsp; If it is in a subfolder it
-could look like "FolderName/ExamplePage.html", if it is in a folder
-higher up it would be "../ExamplePage.html".&nbsp; The text that comes
-between the closing bracket (&gt;) and the end of the link (&lt;/a&gt;)
-is the text that will appear blue and underlined on the page.<br>
-<br>
-
-With just these few simple tags, you can make huge and complex web
-sites.&nbsp; There's a lot more useful features (line breaks, tables,
-forms, audio, video, and more) that are also part of HTML that you can
-check out once you get these basics down.&nbsp; <br>
-<br>
-Beyond simple HTML there are HTML styles and Cascading Style Sheets
-(CSS). These are used to control the look of pages and even whole sites
-in greater detail. Then to add functionality to sites, so that
-something can happen on the page when you click a button, there is a
-programming language called Java Script that is immensely powerful.
-Because of their complexity, these topics won't be covered here,
-instead we will concentrate on the basics above so that we can create
-simple but useful web-pages.&nbsp; <br>
+&lt;p&gt;...&lt;/p&gt; - Un párrafo de texto. Incluye aquí tu redacción, así como imágenes, enlaces, y otro formateo.<br>
+&lt;b&gt;...&lt;/b&gt; - Muestra el texto en <span style="font-weight: bold;">negrillas (bold)</span>. Otras opciones son &lt;u&gt; para <span style="text-decoration: underline;">subrayar (underline)</span> y &lt;i&gt; para <span style="font-style: italic;">itálicos (italics)</span>. Makes the text <span style="font-weight: bold;">bold</span>. Other formatting options are &lt;u&gt; for <span style="text-decoration: underline;">underline</span> and &lt;i&gt; for <span style="font-style: italic;">italics</span>.<br>
+&lt;img src="ImagenNombre.jpg"&gt; - Coloca una imagen en la página.
+Hay muchas otras opciones que se pueden añadir para modificar la
+imagen, pero esto es todo lo que necesitas para mostrar la imagen de
+por sí. <br>
+&lt;a href="OtraPagina.html"&gt;text...&lt;/a&gt; - Crea un enlace a
+otra página. La parte dentro de las comillas luego del href= es el
+enlace a la otra página. Puede ser un enlace completo como
+"http://media-intro.teeks99.com/Web/ExamplePage.html" o puede ser un
+enlace relativo a donde la página actual se encuentra dentro de la
+jerarquía del directorio del servidor. Si la otra pagina se encuentra
+en la misma carpeta, el texto para el enlace puede ser simplemente
+"EjemploPage.html". Si se encuentra en una subcarpeta, el texto podría
+ser "NombreDeCarpeta/EjemploPagina.html", si está en una carpeta
+superior en la jeraquía, podría ser "../EjemploPage.html". El texto que
+va entre del bracket final (&gt;) y el final del enlace (&lt;/a&gt;) es
+el texto que aparece en azul y subrayado en la página.<br>
+<br>Con estos simples tags, puedes hacer sitios web inmensos y de gran
+complejidad. Hay muchas otras propiedades útiles (tablas, formas,
+audio, video, y más) que también son parte del lenguaje HTML que puedes
+usar una vez tengas control de estas propiedades básicas.<br>
+<br>Ademas de HTML simple también hay varios otros estilos de HTML
+asícomo Cascading Style Sheets (CSS). Estas son usadas para controlar
+la apariencia de las páginas y hasta de sitios web enteros a mayor
+detalle. Luego, para añadir funcionalidad a un sitio web de manera que
+algo ocurra cuando haces clic en un botón, existe un idioma de
+programación llamado Java Script con inmenso poder para controlar
+sitios web. Por su complejidad, estos temas no se cubrirán en este
+curso; en su lugar, nos vamos a concentrar en los aspectos básicos de
+diseño de páginas web para poder crear páginas tanto simples como
+útiles.<br>
 <br>
 <br>
 
