@@ -56,7 +56,7 @@ a un tamaño estándar o con el formato ANCHOxALTO.<br>
 ffmpeg [</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">entrada</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">] -vcodec libtheora -b 3000k ...</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">[opciones de audio] [salida]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
-ffmpeg [</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">entrada</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">] -vcodec libx264 -vpre medium -b 3000k ...</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">[opciones de audio] [salida]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
+ffmpeg [</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">entrada</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">] -vcodec libx264 -preset medium -b 3000k ...</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">[opciones de audio] [salida]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 ffmpeg [</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">entrada</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">] -vcodec mpeg2 -b 3000k -s hd480 ...</span><span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">[opciones de audio] [salida]</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
@@ -140,11 +140,11 @@ rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: 
 <br>Ahora intentemos un ejemplo usando FFMpeg...<br>
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg
--i sintel_clip-ffmpeg.mkv -pass 1 -vcodec libx264 -vpre
+-i sintel_clip-ffmpeg.mkv -pass 1 -vcodec libx264 -preset
 slow_firstpass -b 1200k -bt 1200k -an -f rawvideo -y /dev/null</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <span style="font-family: FreeMono; background-color: rgb(204, 204, 204);">ffmpeg
--i sintel_clip-ffmpeg.mkv -pass 2 -vcodec libx264 -vpre
+-i sintel_clip-ffmpeg.mkv -pass 2 -vcodec libx264 -preset
 slow -b 1200k -bt 1200k -acodec libfaac -ab 192k output.mp4</span><br style="font-family: FreeMono; background-color: rgb(204, 204, 204);">
 
 <br>Como bono, puedes configurar el programa para que pueda correr
